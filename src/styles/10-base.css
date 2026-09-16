@@ -142,3 +142,13 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:12px;heigh
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.001ms !important;transition-duration:.001ms !important}
 }
+
+/* axis toggle: Order | Years, and the disabled state for calendar controls */
+.axis-toggle{display:flex;gap:0;flex:none;border:1px solid var(--line-2);border-radius:var(--r-1);
+  overflow:hidden;background:var(--bg-2)}
+.ax{background:transparent;border:none;border-radius:0;padding:5px 10px;
+  font-size:var(--fs-1);color:var(--ink-3);font-weight:600}
+.ax+.ax{border-left:1px solid var(--line-2)}
+.ax:hover{background:var(--card-bg-hover);color:var(--ink-0)}
+.ax.on{background:var(--ink-0);color:var(--surface)}
+.eras.disabled,#zoom.disabled{opacity:.35;pointer-events:none}

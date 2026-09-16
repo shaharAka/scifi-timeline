@@ -118,3 +118,6 @@
 .news-hit{fill:transparent;cursor:pointer}
 .news-row:hover .news-row-head{fill:var(--ink-0)}
 .news-row:hover .news-row-date{fill:var(--ink-2)}
+
+/* the fork zone: a faint band marking where worlds stop sharing our history */
+.fork-zone{fill:var(--chart-band)}

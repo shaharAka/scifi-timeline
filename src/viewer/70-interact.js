@@ -15,7 +15,9 @@ function attachInteractions(svg){
     if(drag){
       var dx = ev.clientX - drag.x0, dy = (ev.clientY || 0) - (drag.y0 || 0);
       drag.moved = Math.max(drag.moved, Math.abs(dx), Math.abs(dy));
-      panTime(drag.c0, dx);
+      /* Order mode: x is sequence and always fills the width, so there is
+         nothing to pan along it. Dragging still moves the tree vertically. */
+      if(axisMode === "years") panTime(drag.c0, dx);
       panY = drag.p0 + dy;
       renderChart();
       return;
@@ -55,14 +57,17 @@ function attachInteractions(svg){
     var mx = (ev.clientX - rect.left) * (W / (rect.width || W));
     var my = ((ev.clientY || 0) - rect.top) * (Hv / (rect.height || Hv));
     var dX = ev.deltaX || 0, dY = ev.deltaY || 0;
-    if(ev.shiftKey || Math.abs(dX) > Math.abs(dY)){
+    if(axisMode === "years" && (ev.shiftKey || Math.abs(dX) > Math.abs(dY))){
       panTime(view.c, -(ev.shiftKey ? dY : dX));
       renderChart();
       return;
     }
+    /* In order mode only the lane pitch responds: wheel changes Z, and the
+       cursor's x is irrelevant because x is not a quantity. */
     zoomAt(Math.exp(dY * (ev.ctrlKey ? 0.01 : 0.0016)), mx, my);
   };
   svg.ondblclick = function(ev){
+    if(axisMode !== "years") return;      /* there is no year to zoom to */
     var rect = svg.getBoundingClientRect();
     var at = yearForPx((ev.clientX - rect.left) * (W / rect.width));
     view.c = view.c + (at - view.c) * 0.6;
@@ -137,18 +142,38 @@ function cursorMove(ev, svg){
   if(!cursorEls || ev.clientX == null) return;
   var x = svgX(ev, svg);
   if(x < LANE_R || x > W - PAD_R){ cursorHide(); return; }
-  var year = yearForPx(x);
   var lanes = (lastLayout && lastLayout.lanes) || [];
-  var forked = 0;
-  lanes.forEach(function(ln){ if(ln.l.divergence.year <= year) forked++; });
-  var label;
-  if(year > NOW) label = fmtYear(year) + "  \u00b7  " + (Math.round(year) - NOW) + " years ahead";
-  else label = fmtYear(year) + "  \u00b7  " + forked + " of " + lanes.length + " worlds have forked";
+  var year = yearForPx(x);
+  var head, label;
+  if(axisMode === "order"){
+    /* The x-axis is sequence, so a year under the cursor is meaningless. What
+       the column means is what has already happened there. */
+    var nx = AX ? AX.now : x;
+    var forked = 0;
+    lanes.forEach(function(ln){ if(ln.l.divergence.year <= NOW) forked++; });
+    if(x > nx){
+      head = "after today";
+      label = "  \u00b7  what has not happened yet";
+    } else if(AX && AX.caption && x >= AX.caption.zoneA && x <= AX.caption.zoneB){
+      head = "the fork zone";
+      label = "  \u00b7  " + forked + " worlds leave our history here";
+    } else {
+      head = "before today";
+      label = "  \u00b7  " + forked + " of " + lanes.length + " worlds have left";
+    }
+  } else {
+    var forkedY = 0;
+    lanes.forEach(function(ln){ if(ln.l.divergence.year <= year) forkedY++; });
+    head = fmtYear(year);
+    label = (year > NOW)
+      ? "  \u00b7  " + (Math.round(year) - NOW) + " years ahead"
+      : "  \u00b7  " + forkedY + " of " + lanes.length + " worlds have forked";
+  }
   var c = cursorEls;
   c.line.setAttribute("x1", x); c.line.setAttribute("x2", x);
   c.text.textContent = "";
-  var y1 = sEl("tspan", null, "n"); y1.textContent = fmtYear(year);
-  var y2 = sEl("tspan", null, "m"); y2.textContent = label.slice(fmtYear(year).length);
+  var y1 = sEl("tspan", null, "n"); y1.textContent = head;
+  var y2 = sEl("tspan", null, "m"); y2.textContent = label;
   c.text.appendChild(y1); c.text.appendChild(y2);
   var tw = label.length * 6.3 + 18;
   var px = clamp(x - tw/2, LANE_R, W - PAD_R - tw);

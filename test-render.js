@@ -179,7 +179,7 @@ const ids = [
   "zoom", "zin", "zout", "reset", "allev", "embedded-data",
   /* dashboard furniture, added when the page became a converging dashboard */
   "eras", "cards", "drawer", "panes", "dchart", "converge", "plate", "backdrop",
-  "news-list", "panel-news", "btn-news",
+  "news-list", "panel-news", "btn-news", "axis-toggle",
   /* the single-canvas explorer: the side panel and its three modes */
   "panel-index", "panel-world", "panel-about", "tags", "brand", "btn-worlds", "btn-about",
   "pclose-index", "pclose-about", "hero-title", "hero-lede", "notes", "legend-hint", "sec-worlds-blurb",
@@ -194,9 +194,24 @@ store["find"].value = "";
 store["zoom"].value = "330";
 store["allev"].textContent = "Show all event labels";
 
+/* Axis toggle and era presets are static markup in src/page.html. The harness
+   scrapes them further down so it drives the real controls, not copies. */
+const axisButtons = [
+  { axis: "order" }, { axis: "years" },
+].map((d, i) => {
+  const b = new El("button");
+  b.setAttribute("data-axis", d.axis);
+  if (i === 0) b.classList.add("on");
+  return b;
+});
+
 /* Era presets are read out of the real markup further down, so the harness can
    never drift out of sync with the page's actual buttons. */
 const eraButtons = [];
+
+const axisHost = new El("div");
+axisButtons.forEach((b) => axisHost.appendChild(b));
+axisHost.querySelectorAll = El.prototype.querySelectorAll;
 
 const documentElement = new El("html");
 const document = {
@@ -207,7 +222,12 @@ const document = {
   createElement(tag) { return new El(tag); },
   createElementNS(ns, tag) { return new El(tag, ns); },
   addEventListener() {},
-  querySelectorAll(sel) { return sel === ".era" ? eraButtons : []; },
+  querySelectorAll(sel) {
+    if (sel === ".era") return eraButtons;
+    if (sel === ".ax") return axisButtons;
+    return [];
+  },
+  getElementById(id) { return store[id] || null; },
   querySelector(sel) { return this.querySelectorAll(sel)[0] || null; },
 };
 document.body.appendChild(store["chartbody"]);

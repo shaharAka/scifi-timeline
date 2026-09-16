@@ -206,6 +206,45 @@ function colorVars(hex){
   return "--c-light:var(--g-" + String(hex).replace("#","") + "-light)";
 }
 
+
+/* ============================================================ axis toggle */
+/* Order is the default; Years is the evidence view. Switching rebuilds the
+   axis and re-renders - nothing about the data changes. */
+function setAxis(mode, persist){
+  axisMode = (mode === "years") ? "years" : "order";
+  Array.prototype.forEach.call(document.querySelectorAll(".ax"), function(b){
+    b.classList.toggle("on", b.getAttribute("data-axis") === axisMode);
+  });
+  /* Horizontal zoom and pan have no meaning when x is sequence, so the
+     calendar controls are disabled rather than hidden: a control that vanishes
+     looks like a bug, a greyed one explains itself. */
+  var blocked = (axisMode === "order");
+  ["eras", "zoom"].forEach(function(id){
+    var el = document.getElementById(id);
+    if(!el) return;
+    el.classList.toggle("disabled", blocked);
+    el.setAttribute("aria-disabled", blocked ? "true" : "false");
+  });
+  if(persist){ try{ localStorage.setItem("scifi-timeline-axis", axisMode); }catch(e){} }
+  /* Each mode needs its own framing. Years fits the whole calendar - fitting
+     only the home era at 1958-2042 hides almost every fork, which looks like
+     the switch broke the chart. Order always fills the width and only needs to
+     fit vertically. */
+  if(axisMode === "years") fitEverything();
+  else fitAll();
+}
+
+function renderAxisToggle(){
+  var buttons = document.querySelectorAll(".ax");
+  if(!buttons.length) return;
+  Array.prototype.forEach.call(buttons, function(b){
+    b.onclick = function(){ setAxis(b.getAttribute("data-axis"), true); };
+  });
+  var stored = null;
+  try{ stored = localStorage.getItem("scifi-timeline-axis"); }catch(e){}
+  setAxis(stored || axisMode, false);
+}
+
 function on(id, evt, fn){ var el = document.getElementById(id); if(el) el[evt] = fn; }
 
 function init(){
@@ -213,6 +252,7 @@ function init(){
   NOW = new Date().getFullYear();
 
   renderAtlasCopy();
+  renderAxisToggle();
   renderStats();
   renderEras();
   renderChips();

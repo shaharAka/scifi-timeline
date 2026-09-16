@@ -164,7 +164,8 @@ function renderChart(yOverride){
   var lo = view.c - view.hs, hi = view.c + view.hs;
   var left = LANE_R, right = W - PAD_R;
   var ty = lay.trunkY;
-  var nx = pxFor(NOW);
+  buildAxis(list, left, right);
+  var nx = AX.now;
   var budget = labelBudget(view.hs * 2);
 
   /* bundles: a faint band and a label at the outer corner */
@@ -200,18 +201,40 @@ function renderChart(yOverride){
   sideLabel(PAD_Y * Z, ty - TRUNK_BAND * Z, "above", {label:"AHEAD OF US", sub:"worlds whose stories run past today"});
   sideLabel(ty + TRUNK_BAND * Z, H - PAD_Y * Z, "below", {label:"BEHIND AND BESIDE US", sub:"pasts that went otherwise, secrets under this one"});
 
-  /* axis on the trunk */
-  var target = Math.max(3, Math.min(14, Math.round(W / 150)));
-  niceTicks(lo, hi, target).forEach(function(t, i){
-    if(t === 0) return;
-    var x = pxFor(t);
-    if(x < left + 6 || x > right - 6) return;
-    gGrid.appendChild(sEl("line", {x1:x, y1:0, x2:x, y2:Hv}, "gridline"));
-    gTrunk.appendChild(sEl("line", {x1:x, y1:ty-5, x2:x, y2:ty+5}, "axis-tick"));
-    var tx = sEl("text", {x:x, y:ty+19, "text-anchor":"middle"}, "axis-label" + (i%2 === 0 ? " major" : ""));
-    tx.textContent = fmtYear(t);
-    gTrunk.appendChild(tx);
-  });
+  /* Axis chrome. In Years mode these are year ticks, which is the evidence.
+     In Order mode there is no year scale to tick - position means sequence - so
+     the same slot under the trunk says what the two directions mean instead. */
+  if(AX.mode === "years"){
+    var target = Math.max(3, Math.min(14, Math.round(W / 150)));
+    niceTicks(lo, hi, target).forEach(function(t, i){
+      if(t === 0) return;
+      var x = pxFor(t);
+      if(x < left + 6 || x > right - 6) return;
+      gGrid.appendChild(sEl("line", {x1:x, y1:0, x2:x, y2:Hv}, "gridline"));
+      gTrunk.appendChild(sEl("line", {x1:x, y1:ty-5, x2:x, y2:ty+5}, "axis-tick"));
+      var tx = sEl("text", {x:x, y:ty+19, "text-anchor":"middle"},
+                   "axis-label" + (i%2 === 0 ? " major" : ""));
+      tx.textContent = fmtYear(t);
+      gTrunk.appendChild(tx);
+    });
+  } else {
+    /* the fork zone: where worlds stop sharing our history */
+    if(AX.caption){
+      var z = AX.caption;
+      gGrid.appendChild(sEl("rect",
+        {x:z.zoneA, y:0, width:Math.max(0, z.zoneB - z.zoneA), height:Hv}, "fork-zone"));
+      var zl = sEl("text", {x:(z.zoneA + z.zoneB) / 2, y:ty + 42, "text-anchor":"middle"},
+                   "axis-label major");
+      zl.textContent = z.text;
+      gTrunk.appendChild(zl);
+    }
+    var bl = sEl("text", {x:nx - 12, y:ty + 19, "text-anchor":"end"}, "axis-label major");
+    bl.textContent = "\u2190 beats before today";
+    gTrunk.appendChild(bl);
+    var al = sEl("text", {x:nx + 12, y:ty + 19, "text-anchor":"start"}, "axis-label major");
+    al.textContent = "beats after today \u2192";
+    gTrunk.appendChild(al);
+  }
 
   /* trunk: solid up to today, faint beyond */
   var trunkEnd = clamp(nx, left, right);
@@ -288,6 +311,7 @@ function renderChart(yOverride){
     view:view, NOW:NOW, W:W, H:Hv, sceneH:H, NOWX:nx, LANE_R:LANE_R, trunkY:ty, Z:Z, panY:panY,
     zoomBy:zoomBy, fit:fitAll,
     pxFor:pxFor, yearForPx:yearForPx, render:renderChart,
+    axis:function(){ return AX; }, axisMode:function(){ return axisMode; },
     visibleYears:function(){ return { from:yearForPx(LANE_R), to:yearForPx(W-12) }; },
     focusYear:function(year, halfSpan){
       view.c = year;
@@ -312,7 +336,7 @@ function renderBranch(ln, lay, budget, left, right, nx){
   var dv = l.divergence.year, evs = l.events;
   var lastYear = dv;
   evs.forEach(function(e){ if(e.year > lastYear) lastYear = e.year; });
-  var dxRaw = pxFor(dv), endRaw = pxFor(lastYear);
+  var dxRaw = AX.fork(l), endRaw = AX.end(l);
   var out = side;                                  /* direction away from the trunk */
   var titleY = side < 0 ? y - 8 : y + 17;
   var labelY = side < 0 ? y + 13 : y - 6;
@@ -322,8 +346,10 @@ function renderBranch(ln, lay, budget, left, right, nx){
   var hit = sEl("rect", {x:hitX0, y:y - halfLane, width:Math.max(0, right - hitX0), height:lay.gap}, "hit");
   hit.setAttribute("data-lane", l.id);
 
-  if(dxRaw > right - 24){
-    /* this world has not forked yet in the visible window */
+  if(AX.mode === "years" && dxRaw > right - 24){
+    /* this world has not forked yet in the visible window. In Order mode this
+       cannot happen - every world is placed on canvas by construction - so the
+       edge marker is a Years-mode affordance. */
     /* The edge marker names a world that has not forked yet in this window. It is
        an affordance for panning, not an identity, so it only appears once there is
        room for it; at the widest zoom it is noise stacked against the edge. */
@@ -413,7 +439,7 @@ function renderBranch(ln, lay, budget, left, right, nx){
   var onBranch = evs.filter(function(e){ return e.year >= dv; });
   var chosen = onBranch.map(function(e){
     return { e:e, score:(e.importance||1)*1000 - Math.abs(e.year - view.c)/400 };
-  }).filter(function(o){ var x = pxFor(o.e.year); return x >= left + 4 && x <= right - 4; })
+  }).filter(function(o){ var x = AX.x(l, o.e); return x >= left - 4 && x <= right + 4; })
     .sort(function(a,b){ return b.score - a.score; });
   var budgetLeft = (lay.lod >= 2 || l === sel || l.id === hoverId) ? budget : 0;
   chosen.forEach(function(o){
@@ -423,7 +449,7 @@ function renderBranch(ln, lay, budget, left, right, nx){
   });
 
   onBranch.forEach(function(e){
-    var x = pxFor(e.year);
+    var x = AX.x(l, e);
     if(x < left - 2 || x > right + 2) return;
     var imp = e.importance || 1;
     var r = (imp >= 3 ? 4.4 : imp === 2 ? 3.2 : 2.1) * lay.nodeScale;
@@ -434,7 +460,7 @@ function renderBranch(ln, lay, budget, left, right, nx){
   chosen.filter(function(o){ return o.want; })
         .sort(function(a,b){ return a.e.year - b.e.year; })
         .forEach(function(o){
-    var e = o.e, x = pxFor(e.year);
+    var e = o.e, x = AX.x(l, e);
     var title = e.title || "";
     if(title.length > 40) title = title.slice(0,39) + "…";
     var yr = fmtYearFull(e.year);
@@ -456,7 +482,7 @@ function renderBranch(ln, lay, budget, left, right, nx){
 
   g.appendChild(hit);
   onBranch.forEach(function(e){
-    var x = pxFor(e.year);
+    var x = AX.x(l, e);
     if(x < left - 2 || x > right + 2) return;
     var cir = sEl("circle", {cx:x, cy:y, r:8, fill:"transparent", "pointer-events":"all"});
     cir.setAttribute("data-ev", l.id + "|" + evs.indexOf(e));
@@ -475,7 +501,7 @@ function renderPrehistory(ln, lay, host, left, right){
   var any = false;
   l.events.forEach(function(e, i){
     if(e.year >= dv) return;
-    var x = pxFor(e.year);
+    var x = AX.x(l, e);
     if(x < left - 2 || x > right + 2) return;
     any = true;
     var cy = ty + ln.side * 7;

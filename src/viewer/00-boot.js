@@ -45,6 +45,10 @@ function boot(d){
       return;
     }
     ATLAS = DATA.atlas;
+    /* the atlas may name its default axis; Order is ours */
+    if(ATLAS && (ATLAS.defaultAxis === "years" || ATLAS.defaultAxis === "order")){
+      axisMode = ATLAS.defaultAxis;
+    }
     init();
   }catch(e){
     window.__bootError = (e && e.stack) || String(e);
