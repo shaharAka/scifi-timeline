@@ -140,9 +140,14 @@ granularity is set by the use: fine enough that a real headline lands in one
 bin, shared enough that several worlds pass through it, and consequential
 enough that what follows is worth reading.
 
-The vocabulary is not fixed in advance and not shaped by heuristics. It is
-discovered from the events by the model (`tools/bin-events.py`), which is told
-the project and the target above and left to judge the level of generality.
+The vocabulary is not fixed in advance and not shaped by heuristics. Two model
+runs over the whole set fragmented it (54 bins, a third of them one world),
+because a bin's definition was written from the first event that created it;
+so the current 32 bins were built by hand from all 237 events with the use
+above in mind, and every bin spans at least three worlds. `tools/bin-events.py`
+remains the way to bin a NEW world's events into the existing vocabulary
+(the model is told the project and the target and left to judge); grow the
+vocabulary by editing `data/bins.json`, deliberately.
 `data/bins.json` is the result and the thing to argue with; each bin carries a
 definition in world-neutral terms and an example real headline that would
 belong to it. News items (`data/news.json`) are binned with the same

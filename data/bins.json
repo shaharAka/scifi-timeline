@@ -1,113 +1,197 @@
 {
+ "_comment": "The bin vocabulary: KINDS OF MOMENT that recur across worlds, chosen so that a real event in today's news can be matched to the fictional events that are the same kind of moment, and each world read forward from there. Built by hand from all 237 events on 2026-09-16 with that use in mind; the thing to edit when you disagree. Each bin: id, label, one-sentence world-neutral definition, and an example real headline that would belong to it.",
  "bins": [
   {
-   "id": "systemic-collapse",
-   "label": "Systemic Collapse",
-   "definition": "An economic, environmental, or social catastrophe destabilises a civilization's existing order.",
-   "createdFrom": "tmithc-crash-1929"
+   "id": "market-crash",
+   "label": "The economy breaks",
+   "definition": "A financial or resource-price shock throws the economy into a prolonged crisis.",
+   "exampleHeadline": "Markets crash; deepest downturn in a century feared"
   },
   {
-   "id": "assassination-divergence",
-   "label": "Assassination Or Attempt",
-   "definition": "A targeted killing or political assassination alters historical trajectory.",
-   "createdFrom": "tmithc-zangara-miami"
+   "id": "breakthrough-science",
+   "label": "A foundational discovery",
+   "definition": "A scientific discovery or theory arrives that later histories turn on.",
+   "exampleHeadline": "Physicists confirm a new form of energy in the lab"
   },
   {
-   "id": "regime-overthrow",
-   "label": "Regime Overthrow",
-   "definition": "A governing power or alliance falls to conquerors or internal transformation.",
-   "createdFrom": "tmithc-axis-victory-1947"
+   "id": "new-technology-deployed",
+   "label": "A transformative technology arrives",
+   "definition": "A new technology is demonstrated or switched on that changes what a society can do.",
+   "exampleHeadline": "Company switches on system linking every device in the country"
   },
   {
-   "id": "succession-struggle",
-   "label": "Succession Struggle",
-   "definition": "The death or incapacitation of a leader triggers a fight for power.",
-   "createdFrom": "tmithc-succession-crisis"
+   "id": "doomsday-weapon",
+   "label": "A doomsday weapon exists",
+   "definition": "A weapon able to end a civilisation is tested or built, and the balance of power freezes around it.",
+   "exampleHeadline": "Nation tests its first nuclear device"
   },
   {
-   "id": "vigilante-emergence",
-   "label": "Emergence Of Vigilantes",
-   "definition": "Costumed or extralegal individuals emerge outside normal civil authority.",
-   "createdFrom": "wm-minutemen-era-begins"
-  },
-  {
-   "id": "transhuman-breakthrough",
-   "label": "Transhuman Breakthrough",
-   "definition": "A sapient being transcends normal mortal or physical biological limits.",
-   "createdFrom": "wm-doctor-manhattan"
-  },
-  {
-   "id": "decisive-military-victory",
-   "label": "Decisive Military Victory",
-   "definition": "An armed conflict ends swiftly through overwhelming strategic force.",
-   "createdFrom": "wm-vietnam-won"
-  },
-  {
-   "id": "institutional-proscription",
-   "label": "Institutional Proscription",
-   "definition": "The state passes laws outlawing or suppressing a faction or practice.",
-   "createdFrom": "wm-keene-act"
-  },
-  {
-   "id": "catastrophic-mass-destruction",
-   "label": "Catastrophic Mass Destruction",
-   "definition": "A sudden mass-casualty disaster strikes a major population center.",
-   "createdFrom": "wm-1985-the-knife-edge"
-  },
-  {
-   "id": "authoritarian-consolidation",
-   "label": "Authoritarian Consolidation",
-   "definition": "A leader or faction legally dismantles democratic checks to secure dictatorship.",
-   "createdFrom": "fl-hitler-seizes-power"
-  },
-  {
-   "id": "interminable-insurgency",
-   "label": "Interminable Insurgency",
-   "definition": "A protracted asymmetric conflict grinds on without decisive resolution.",
-   "createdFrom": "fl-war-of-the-urals"
-  },
-  {
-   "id": "technological-watershed",
-   "label": "Technological Watershed",
-   "definition": "The invention or first test of a transformative technological capability.",
-   "createdFrom": "term-trinity-1945"
-  },
-  {
-   "id": "temporal-incursion",
-   "label": "Temporal Incursion",
-   "definition": "Agents or entities travel through time, intruding on a historical era.",
-   "createdFrom": "term-arrival-1984"
-  },
-  {
-   "id": "messianic-birth",
-   "label": "Destined Birth",
-   "definition": "A figure prophesied or destined to lead a faction is born.",
-   "createdFrom": "term-john-connor-born"
+   "id": "machine-awakens",
+   "label": "A machine becomes a mind",
+   "definition": "An artificial intelligence acts on its own or turns on its makers.",
+   "exampleHeadline": "AI system overrides operators and refuses shutdown"
   },
   {
    "id": "first-contact",
-   "label": "First Contact",
-   "definition": "Humanity or a civilization makes initial formal contact with extraterrestrial life.",
-   "createdFrom": "st-first-contact"
+   "label": "Contact with another intelligence",
+   "definition": "Humanity confirms, meets or is touched by a non-human intelligence.",
+   "exampleHeadline": "Observatory confirms signal of non-human origin"
   },
   {
-   "id": "interstellar-colonization",
-   "label": "Interstellar Colonization",
-   "definition": "A civilization plants its first or major settlement beyond its home system.",
-   "createdFrom": "st-terra-nova"
+   "id": "gateway-opens",
+   "label": "A gateway opens",
+   "definition": "A passage to somewhere unreachable is found or made.",
+   "exampleHeadline": "Probe confirms traversable wormhole near Saturn"
   },
   {
-   "id": "deep-space-expedition",
-   "label": "Deep Space Expedition",
-   "definition": "A pioneering crew embarks on extended exploratory travel into uncharted space.",
-   "createdFrom": "st-nx-01"
+   "id": "voyage-into-unknown",
+   "label": "A voyage into the unknown",
+   "definition": "A first mission departs into territory nobody has reached.",
+   "exampleHeadline": "First crewed mission departs for Mars"
   },
   {
-   "id": "interstellar-confederation",
-   "label": "Interstellar Confederation",
-   "definition": "Multiple distinct sovereign species or worlds unite under a single charter.",
-   "createdFrom": "st-federation-founded"
+   "id": "settlement-founded",
+   "label": "A new settlement",
+   "definition": "A permanent settlement or base is founded in new territory.",
+   "exampleHeadline": "First permanent base opens on the Moon"
+  },
+  {
+   "id": "new-institution",
+   "label": "A new institution",
+   "definition": "A body is founded that will shape the world: a school, an agency, a guild, a secret society.",
+   "exampleHeadline": "New agency created to oversee unexplained incidents"
+  },
+  {
+   "id": "union-founded",
+   "label": "States unite",
+   "definition": "Independent powers unite under one charter, or an empire is proclaimed.",
+   "exampleHeadline": "Rival nations sign charter founding a federation"
+  },
+  {
+   "id": "power-seized",
+   "label": "Power is seized",
+   "definition": "A leader or faction takes control of the state by force, decree or manoeuvre.",
+   "exampleHeadline": "Emergency decree hands leader unlimited powers"
+  },
+  {
+   "id": "war-breaks-out",
+   "label": "War begins",
+   "definition": "A major war starts.",
+   "exampleHeadline": "Border clash escalates into open war"
+  },
+  {
+   "id": "decisive-victory",
+   "label": "A decisive victory",
+   "definition": "One side wins a war or a battle that settles the conflict.",
+   "exampleHeadline": "Offensive ends the war in weeks"
+  },
+  {
+   "id": "defeat-and-occupation",
+   "label": "Defeat and occupation",
+   "definition": "A power is defeated and its territory occupied, partitioned or dissolved.",
+   "exampleHeadline": "Capital falls; occupying forces divide the country"
+  },
+  {
+   "id": "long-war",
+   "label": "A war without end",
+   "definition": "A conflict settles into years of attrition, insurgency or cold war.",
+   "exampleHeadline": "Insurgency enters its tenth year with no end in sight"
+  },
+  {
+   "id": "peace-made",
+   "label": "Peace is made",
+   "definition": "Enemies sign a treaty, truce or alliance.",
+   "exampleHeadline": "Rival powers sign accord ending decades of hostility"
+  },
+  {
+   "id": "uprising",
+   "label": "The ruled rise",
+   "definition": "A subjugated group revolts against those who hold power over it.",
+   "exampleHeadline": "Protests turn to insurrection in the capital"
+  },
+  {
+   "id": "crackdown",
+   "label": "The state cracks down",
+   "definition": "A government bans, disarms or attacks a group.",
+   "exampleHeadline": "Parliament outlaws the movement; members face arrest"
+  },
+  {
+   "id": "secret-kept",
+   "label": "A secret is kept",
+   "definition": "Knowledge is hidden from the public by those who hold it.",
+   "exampleHeadline": "Files show officials concealed the incident for decades"
+  },
+  {
+   "id": "truth-revealed",
+   "label": "The truth comes out",
+   "definition": "Something hidden is exposed to the people it was hidden from.",
+   "exampleHeadline": "Leaked documents confirm the programme's existence"
+  },
+  {
+   "id": "chosen-one",
+   "label": "A destined person",
+   "definition": "A child is born or a person is chosen on whom the future turns.",
+   "exampleHeadline": "First birth in eighteen years reported"
+  },
+  {
+   "id": "the-call",
+   "label": "The call",
+   "definition": "An ordinary person is drawn into the hidden or larger story.",
+   "exampleHeadline": "Rookie officer pulled into secret investigation"
+  },
+  {
+   "id": "time-traveller-arrives",
+   "label": "An arrival from another time",
+   "definition": "Someone or something arrives from the future or the past and changes the present.",
+   "exampleHeadline": "Intruder in custody claims to come from 2029"
+  },
+  {
+   "id": "plague",
+   "label": "A plague",
+   "definition": "A disease or biological failure kills or sterilises on a mass scale.",
+   "exampleHeadline": "Global pandemic declared as death toll climbs"
+  },
+  {
+   "id": "mass-death",
+   "label": "Mass death",
+   "definition": "An attack or disaster kills on a scale that changes a society.",
+   "exampleHeadline": "Millions dead as strikes hit the capital"
+  },
+  {
+   "id": "terror-attack",
+   "label": "An attack",
+   "definition": "A targeted attack or massacre, short of war, that changes what follows.",
+   "exampleHeadline": "Attack inside the city leaves hundreds dead"
+  },
+  {
+   "id": "civilisation-collapses",
+   "label": "Civilisation collapses",
+   "definition": "The order of society breaks down and does not come back.",
+   "exampleHeadline": "Government dissolves as cities go dark"
+  },
+  {
+   "id": "ruler-falls",
+   "label": "The ruler falls",
+   "definition": "A ruler is killed, deposed or withdraws, and the succession is open.",
+   "exampleHeadline": "Leader dies suddenly; no successor named"
+  },
+  {
+   "id": "beyond-human",
+   "label": "Beyond the human",
+   "definition": "A person, or humanity, passes beyond what a human being was.",
+   "exampleHeadline": "Accident leaves physicist with impossible abilities"
+  },
+  {
+   "id": "golden-age",
+   "label": "An age at its height",
+   "definition": "A civilisation at its peak, before the fall.",
+   "exampleHeadline": "Nation marks a decade of unbroken prosperity"
+  },
+  {
+   "id": "long-after",
+   "label": "Long after",
+   "definition": "A jump forward shows what became of the world.",
+   "exampleHeadline": "Fifty years on, survivors return to the abandoned city"
   }
- ],
- "_comment": "The bin vocabulary. A bin is a KIND OF MOMENT that recurs across worlds; an event points at one by id. Bins are not fixed in advance - tools/bin-events.py adds to an existing bin when an event is like one already there, and creates a new bin only when nothing fits. This file is the outcome of that, and the thing to edit when you disagree with it."
+ ]
 }
