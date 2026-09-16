@@ -127,6 +127,60 @@ function accessible(hex){
     .toString(16).slice(1);
 }
 
+
+/* ---- Moments: naming the columns -------------------------------------------
+   The strip above the tree holds one label per kind of moment. Its height is
+   computed from the labels themselves - how wide they measure and how many rows
+   that forces - rather than fixed, because a fixed strip is a guess about a
+   vocabulary that changes. Nothing here caps how many kinds get named: if the
+   labels need nine rows they get nine, and if they need one they get one.
+   Row assignment lives here, pre-layout, so layout() can ask for the height and
+   the draw pass can reuse the same rows rather than re-deriving them. */
+var MOMENT_LABEL_FONT = '700 10px Inter, system-ui, sans-serif';
+var momentRowsCache = null;
+
+function momentLabelWidth(text){
+  var c = momentLabelWidth._c;
+  if(c === undefined){
+    try{
+      c = document.createElement("canvas").getContext("2d");
+      if(c) c.font = MOMENT_LABEL_FONT;
+    }catch(e){ c = null; }
+    momentLabelWidth._c = c;
+  }
+  if(c) return c.measureText(text).width + 16;
+  /* No canvas (the headless harness): a character-width estimate, stated as one
+     so it is not mistaken for measurement. */
+  return text.length * 5.6 + 16;
+}
+
+/* Assign each kind to the first row where its label clears its neighbours.
+   Shorter names first: they are the ones that fit, and a long name that ends up
+   unplaced should not have taken a short one's slot. */
+function momentHeadRows(cols){
+  var items = cols.map(function(c){
+    var text = c.spec.label || c.bin;
+    return { c:c, text:text, w:momentLabelWidth(text) };
+  }).sort(function(a, b){ return a.w - b.w; });
+  var rows = [];
+  items.forEach(function(it){
+    for(var r = 0; ; r++){
+      var taken = rows[r] || (rows[r] = []);
+      var clash = false;
+      for(var k = 0; k < taken.length; k++){
+        if(Math.abs(taken[k].cx - it.c.cx) < (taken[k].w + it.w) / 2){ clash = true; break; }
+      }
+      if(!clash){
+        taken.push({ cx:it.c.cx, w:it.w });
+        it.c._row = r;                  /* recorded for the draw pass */
+        return;
+      }
+    }
+  });
+  var n = rows.length;
+  return { rows:n, height:n ? n * 12 + 14 : 0 };
+}
+
 function renderChart(yOverride){
   W = measureW();
   var svg = document.getElementById("chart");
@@ -254,7 +308,7 @@ function renderChart(yOverride){
       /* Convergence gets a mark of its own. Shade alone was too quiet for the
          one thing this view exists to show: how many worlds meet on this kind
          of moment, and so how many futures a match would return. */
-      if(c.worlds.size >= 2){
+      {
         var capW = Math.min(Math.max(0, c.x1 - c.x0) - 8, 4 + c.worlds.size * 1.7);
         var capY = PAD_Y * Z + (lay.head || 0) - 12;
         var cap = sEl("rect",
@@ -266,7 +320,7 @@ function renderChart(yOverride){
         cap.appendChild(ct);
         gGrid.appendChild(cap);
       }
-      if(c.worlds.size >= 7) tops.push(c);
+      tops.push(c);                     /* every kind is a candidate for a name */
     });
     /* Headers are placed by collision, not by a width threshold. A band wide
        enough on average still produces labels far wider than itself, so the
@@ -274,32 +328,21 @@ function renderChart(yOverride){
        are laid out on rows with a short lead down to each band, inside the
        strip layout() reserved. A kind that cannot be placed is left unlabelled
        rather than overprinted - its band still carries its name on hover. */
-    if(tops.length){
-      var ROWS = 3;
-      var rows = [];
-      var placedCount = 0;
-      tops.slice(0, 14).forEach(function(c){
-        var text = (c.spec.label || c.bin);
-        var w = 5.6 * text.length + 22;
-        var row = 0;
-        for(;;){
-          if(row >= ROWS){ row = -1; break; }
-          var taken = rows[row] || [];
-          var clash = false;
-          for(var k = 0; k < taken.length; k++){
-            if(Math.abs(taken[k].cx - c.cx) < (taken[k].w + w) / 2){ clash = true; break; }
-          }
-          if(!clash) break;
-          row++;
-        }
-        if(row < 0) return;                 /* no room: better unlabelled than unreadable */
-        (rows[row] = rows[row] || []).push({ cx:c.cx, w:w });
-        placedCount++;
-        var ly = 9 + row * 11;
+    /* The rows were assigned before layout so it could size the strip; this
+       draws them. Same computation, not a second one that could disagree. */
+    if(tops.length && momentRowsCache){
+      var placed = momentHeadRows(tops);
+      cols.forEach(function(c){
+        if(c._row === undefined) return;
+      });
+      tops.forEach(function(c){
+        var r = c._row;
+        if(r === undefined) return;
+        var ly = 9 + r * 12;
         gGrid.appendChild(sEl("line",
-          {x1:c.cx, y1:ly + 4, x2:c.cx, y2:MOMENT_HEAD_H - 2}, "moment-lead"));
+          {x1:c.cx, y1:ly + 4, x2:c.cx, y2:(lay.head || 0) - 1}, "moment-lead"));
         var lab = sEl("text", {x:c.cx, y:ly, "text-anchor":"middle"}, "moment-head");
-        lab.textContent = text + " \u00b7 " + c.worlds.size;
+        lab.textContent = (c.spec.label || c.bin) + " \u00b7 " + c.worlds.size;
         gGrid.appendChild(lab);
       });
     }
@@ -380,9 +423,15 @@ function renderChart(yOverride){
      the plane. Sit the cap beside the line rather than centred on it, so the
      plane stays legible and the header is not overprinted. */
   var capX = clamp(nx, left + 52, right - 52);
-  var capAnchor = "middle";
-  if(AX && AX.mode === "moments" && capX + 46 < right - 4){ capAnchor = "start"; capX += 5; }
-  var nt = sEl("text", {x:capX, y:14, "text-anchor":capAnchor}, "now-cap");
+  var capAnchor = "middle", capY = 14;
+  if(AX && AX.mode === "moments"){
+    /* Moments fills the top strip with column labels, so the today cap drops to
+       the crown of the tree and sits beside the plane rather than on it. */
+    capY = PAD_Y * Z + (lay.head || 0) + 11;
+    if(nx + 46 < right - 4){ capAnchor = "start"; capX = nx + 5; }
+    else { capAnchor = "end"; capX = nx - 5; }
+  }
+  var nt = sEl("text", {x:capX, y:capY, "text-anchor":capAnchor}, "now-cap");
   nt.textContent = offscreen ? ("TODAY " + NOW + (nx < 0 ? " ←" : " →")) : ("TODAY " + NOW);
   if(offscreen) nt.setAttribute("opacity", "0.5");
   gNow.appendChild(nt);

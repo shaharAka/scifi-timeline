@@ -56,6 +56,3 @@ var REDUCED = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion
 
 /* The bin vocabulary, straight from the payload. */
 var BINS = [];
-
-/* Height reserved above the tree for the Moments column labels. */
-var MOMENT_HEAD_H = 40;   /* 3 label rows + the convergence capsules */

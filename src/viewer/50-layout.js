@@ -43,8 +43,13 @@ function layout(list){
   var gap = LANE_GAP * Z, bgap = BUNDLE_GAP * Z, band = TRUNK_BAND * Z;
   /* Moments labels its columns above the tree. The trunk line is a thicket of
      branch titles, so a header placed down there is read through them whatever
-     row it takes; reserving a strip at the top is the only clear ground. */
-  var head = (typeof AX !== "undefined" && AX && AX.mode === "moments") ? MOMENT_HEAD_H : 0;
+     row it takes; reserving a strip at the top is the only clear ground. How
+     tall that strip is comes from the labels themselves - see momentHeadRows. */
+  var head = 0;
+  if(typeof AX !== "undefined" && AX && AX.mode === "moments" && AX.columns){
+    momentRowsCache = momentHeadRows(AX.columns);
+    head = momentRowsCache.height;
+  }
   var pad = PAD_Y * Z + head;
 
   function sideHeight(bundles){
