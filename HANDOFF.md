@@ -40,6 +40,7 @@ python3 test-fixture.py && node test-viewer.js && node test-render.js timeline.h
 | `src/viewer/*.js` | The viewer, one concern per file, concatenated in filename order into one IIFE. | Yes — this is the app |
 | `data/atlas.json` | Page copy and era presets for this atlas. Validated by the build. | Yes |
 | `DESIGN.md` | Design language, chart anatomy, extension guide. | When the design changes |
+| `BRIEF-order-axis.md` | The next piece of work: the Order and Moments views, phased. | As phases land |
 | `data/parts/*.json` | The editable dataset, one file per archetype. | Yes — this is the data |
 | `data/parts/worlds/*.json` | World dossiers, one file per research pass. | Yes |
 | `data/groups.json` | Archetype display order. | Yes |
@@ -371,39 +372,47 @@ Change these only on purpose.
 
 Nothing is broken. In rough priority order:
 
-1. **Owner review of the new canvas.** The single-canvas layout, the palette
-   and the hover language landed in one day and were checked at 1500×950 only.
-   Open it at the owner's real window size, hit every era preset, zoom in and
-   out, open Worlds → a world → About, and note anything crowded or unreadable.
-   The top bar wraps to two rows below ~1400px and drops the long brand text
-   below ~1180px; judge whether that is acceptable.
-2. **The amber "contradicted" rule is questionable.** `overtaken()` flags every
+1. **The Order axis - see `BRIEF-order-axis.md`.** The owner's direction after
+   the legibility pass: the picture should be about how things are *ordered*,
+   not *when* they happen; convergence happens where different worlds pass
+   through the same kind of moment. The brief specifies three views in build
+   order - Order (no data change, do first), Moments (needs a `stage` on every
+   event), and an optional likeness sort - and keeps Years as the evidence
+   view. Start there.
+2. **Owner review, round two - done, re-check.** The halves of the canvas now
+   carry meaning (above = ahead of us, below = behind and beside us) and are
+   labelled on the left edge; bundles are tinted and barred in their colour;
+   branches are solid up to today and dashed beyond; the trunk says "← the
+   past" and "the future →"; the page opens on the fork cluster, not the whole
+   dataset. Keep going in that direction: if it is not legible without
+   hovering, name it on the canvas.
+3. **The amber "contradicted" rule is questionable.** `overtaken()` flags every
    non-publication event dated 1990–today, so the Hidden History bundle carries
    amber rings on nearly every 1990s beat. Whether a secret history counts as
    "contradicted by real history" is a data decision: either narrow the rule
    (e.g. only `epoch: far-future` lineages, or an explicit `historyContradicts`
    per event) or keep it and say so in the legend. Do not change the meaning of
    amber without updating DESIGN.md §2.
-3. **Label collisions at high zoom.** One event label row per lane and a
+4. **Label collisions at high zoom.** One event label row per lane and a
    claim-a-slot rule keep labels apart at fit zoom; when zoomed far in, labels
    from neighbouring lanes can still touch where forks stack at the same year.
    A second row becomes affordable once `LANE_GAP * Z` exceeds ~48px - gate it
    on that, not on a fixed pitch.
-4. **No remote.** `git remote -v` is empty. Upstreaming to GitHub is the natural
+5. **No remote.** `git remote -v` is empty. Upstreaming to GitHub is the natural
    next step, and since the page is pure static it deploys to Pages with no server.
-5. **The old copy still exists** at `/Users/shahar/Documents/isramarket/timeline`,
+6. **The old copy still exists** at `/Users/shahar/Documents/isramarket/timeline`,
    untracked inside the isramarket repo. It is **stale**, not a backup, and
    predates the tree chart entirely. Delete it, or at least `.gitignore` it there.
-6. **The dataset is 24 worlds.** The schema, grouping, layout and panel are built
+7. **The dataset is 24 worlds.** The schema, grouping, layout and panel are built
    to take more without code changes (see DESIGN.md §5). Candidates that fit the
    existing archetypes include Alien, Blade Runner, Neuromancer, The Culture,
    Babylon 5, Battlestar Galactica, A Canticle for Leibowitz, Childhood's End.
    Past ~30 worlds the fit zoom drops below the title level of detail; add a
    collapse-by-archetype affordance before that, not a smaller pitch.
-7. **No accessibility audit** beyond `prefers-reduced-motion` support. The
+8. **No accessibility audit** beyond `prefers-reduced-motion` support. The
    canvas is mouse-and-keyboard (arrows pan, +/- zoom, 0 fit, Esc back) but not
    screen-reader described; the panel's dossier text is the accessible path.
-8. **No mobile layout.** The camera works with touch (pointer events), but the
+9. **No mobile layout.** The camera works with touch (pointer events), but the
    top bar and the 480px panel are designed for a desktop window.
 
 ---
@@ -416,7 +425,7 @@ built on, and there are no external services, secrets, or environment variables.
 
 If you are resuming with an agent, the useful opening instruction is:
 
-> Read HANDOFF.md, then DESIGN.md, README.md and data/SCHEMA.md. Run
+> Read HANDOFF.md, then DESIGN.md, BRIEF-order-axis.md, README.md and data/SCHEMA.md. Run
 > `python3 build-data.py` and the three test suites to confirm the baseline
 > before changing anything. Edit `src/` and `data/`, never `timeline.html`.
 > After any visual change, open timeline.html in a real browser and walk the

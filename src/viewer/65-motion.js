@@ -17,6 +17,20 @@ function branchDressing(svg){
     function(n){ out.push(n); });
   return out;
 }
+/* Future segments are dashed by a CSS rule, which outranks a presentation
+   attribute; so the animation arms the inline style as well (inline wins). */
+function armDash(n, len, off){
+  n.setAttribute("stroke-dasharray", len); n.setAttribute("stroke-dashoffset", off);
+  if(n.style){ n.style.strokeDasharray = String(len); n.style.strokeDashoffset = String(off); }
+}
+function setOffset(n, off){
+  n.setAttribute("stroke-dashoffset", String(off));
+  if(n.style) n.style.strokeDashoffset = String(off);
+}
+function disarmDash(n){
+  n.removeAttribute("stroke-dasharray"); n.removeAttribute("stroke-dashoffset");
+  if(n.style){ n.style.strokeDasharray = ""; n.style.strokeDashoffset = ""; }
+}
 function pathLen(n){
   try{ if(n.getTotalLength) return Math.max(40, n.getTotalLength()); }catch(e){}
   return W * 1.5;
@@ -35,20 +49,20 @@ function growIn(){
   var paths = branchPaths(svg), dress = branchDressing(svg);
   if(!paths.length) return;
   var L = paths.map(pathLen), start = paths.map(forkFraction);
-  paths.forEach(function(n, i){ n.setAttribute("stroke-dasharray", L[i]); n.setAttribute("stroke-dashoffset", L[i]); });
+  paths.forEach(function(n, i){ armDash(n, L[i], L[i]); });
   dress.forEach(function(n){ n.setAttribute("opacity", "0"); });
   var t0 = performance.now(), DUR = 1500;
   function frame(now){
     var p = clamp((now - t0) / DUR, 0, 1);
     paths.forEach(function(n, i){
       var local = clamp((p - start[i]*0.45) / 0.55, 0, 1);
-      n.setAttribute("stroke-dashoffset", String(L[i] * (1 - (1 - Math.pow(1 - local, 3)))));
+      setOffset(n, L[i] * (1 - (1 - Math.pow(1 - local, 3))));
     });
     var dp = clamp((p - 0.45) / 0.55, 0, 1);
     dress.forEach(function(n){ n.setAttribute("opacity", String(dp)); });
     if(p < 1) requestAnimationFrame(frame);
     else {
-      paths.forEach(function(n){ n.removeAttribute("stroke-dasharray"); n.removeAttribute("stroke-dashoffset"); });
+      paths.forEach(disarmDash);
       dress.forEach(function(n){ n.removeAttribute("opacity"); });
     }
   }
@@ -61,7 +75,7 @@ function playConvergence(){
   var paths = branchPaths(svg), dress = branchDressing(svg);
   if(!paths.length) return;
   var L = paths.map(pathLen);
-  paths.forEach(function(n, i){ n.setAttribute("stroke-dasharray", L[i]); n.setAttribute("stroke-dashoffset", "0"); });
+  paths.forEach(function(n, i){ armDash(n, L[i], 0); });
 
   playing = true;
   var btn = document.getElementById("converge");
@@ -70,7 +84,7 @@ function playConvergence(){
   svg.classList.add("converging");
 
   function done(){
-    paths.forEach(function(n){ n.removeAttribute("stroke-dasharray"); n.removeAttribute("stroke-dashoffset"); });
+    paths.forEach(disarmDash);
     dress.forEach(function(n){ n.removeAttribute("opacity"); });
     svg.classList.remove("converging");
     playing = false; btn.classList.remove("on");
@@ -86,14 +100,14 @@ function playConvergence(){
       var p = t / IN;
       paths.forEach(function(n, i){
         var local = clamp((p - seed[i]*0.4) / 0.6, 0, 1);
-        n.setAttribute("stroke-dashoffset", String(L[i] * (1 - Math.pow(1 - local, 2))));
+        setOffset(n, L[i] * (1 - Math.pow(1 - local, 2)));
       });
       dress.forEach(function(n){ n.setAttribute("opacity", String(Math.max(0, 1 - p*1.7))); });
     } else if(t < IN + HOLD){
       dress.forEach(function(n){ n.setAttribute("opacity", "0"); });
     } else if(t < IN + HOLD + OUT){
       var p2 = (t - IN - HOLD) / OUT, e2 = Math.pow(p2, 0.6);
-      paths.forEach(function(n, i){ n.setAttribute("stroke-dashoffset", String(L[i] * (1 - e2))); });
+      paths.forEach(function(n, i){ setOffset(n, L[i] * (1 - e2)); });
       dress.forEach(function(n){ n.setAttribute("opacity", String(Math.min(1, p2*1.6))); });
     } else { done(); return; }
     requestAnimationFrame(frame);

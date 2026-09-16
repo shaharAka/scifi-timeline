@@ -25,13 +25,17 @@
 #chart.converging .trunk-glow{stroke-width:26;stroke:var(--trunk);opacity:.42}
 
 /* bundles = archetypes */
-.bundle-band{fill:var(--chart-band)}
+.bundle-band{opacity:.055}
+.bundle-bar{opacity:.85}
+.side-label{fill:var(--ink-3);font-size:10.5px;font-weight:750;letter-spacing:.2em;font-family:var(--font-mono);pointer-events:none}
+.side-label.sub{fill:var(--ink-4);font-size:9px;font-weight:500;letter-spacing:.08em}
 .bundle-label{font-size:10px;font-weight:750;letter-spacing:.14em;text-transform:uppercase}
 .bundle-label .n{font-weight:500;opacity:.6}
 
 /* branches = worlds */
 .branch .halo{fill:none;stroke-width:10;opacity:.14;stroke-linecap:round;transition:opacity var(--t-fast)}
 .branch .core{fill:none;stroke-width:2.2;stroke-linecap:round}
+.branch .core.future{stroke-dasharray:5 5;stroke-linecap:butt}
 .branch .fork{stroke:var(--bg-2);stroke-width:1.6}
 .branch .node{stroke:var(--bg-2);stroke-width:1}
 .branch .node.minor{opacity:.55}

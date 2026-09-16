@@ -49,7 +49,9 @@ function layout(list){
   }
   var hAbove = sideHeight(perSide["-1"]), hBelow = sideHeight(perSide["1"]);
   var trunkY = pad + hAbove + band;
-  var height = trunkY + band + hBelow + pad;
+  /* the axis year labels hang under the trunk, so the lower half starts a
+     little further away than the upper one; this is screen pixels, not scaled */
+  var height = trunkY + band + TRUNK_BELOW_EXTRA + hBelow + pad;
 
   var lanes = [], bundles = [];
 

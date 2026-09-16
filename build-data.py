@@ -130,6 +130,11 @@ def check_group(name, g):
             err("%s: group.%s is required" % (name, key))
     if g.get("color") and not re.match(r"^#[0-9a-fA-F]{6}$", g["color"]):
         err("%s: group.color must be a #rrggbb hex, got %r" % (name, g["color"]))
+    # which half of the canvas this archetype lives in; the halves carry meaning
+    # (see data/atlas.json 'sides'), so every group should say
+    if g.get("side") not in ("above", "below"):
+        warn("%s: group.side should be 'above' or 'below'; %r will be balanced automatically"
+             % (name, g.get("side")))
     return g
 
 

@@ -218,12 +218,15 @@ function init(){
   renderChips();
   renderTags();
   W = measureW(); Hv = measureH();
-  fitEverything();
+  /* Open on the fork cluster, where the argument is legible; the whole dataset
+     is one preset away (Full reach). Opening on everything squashed twenty
+     forks into a hundred pixels and hid the grouping. */
+  fitAll();
   renderCards();
 
   on("zin", "onclick", function(){ zoomBy(0.7, CAM_MS); });
   on("zout", "onclick", function(){ zoomBy(1.4, CAM_MS); });
-  on("reset", "onclick", function(){ fitEverything(); });
+  on("reset", "onclick", function(){ fitAll(); });
   on("zoom", "oninput", function(){
     var target = clampSpan(SPAN_MIN * Math.pow(SPAN_MAX/SPAN_MIN, Number(this.value)/1000));
     zoomBy(target / view.hs, 0);

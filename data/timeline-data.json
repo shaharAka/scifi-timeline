@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-09-16T18:43:15Z",
+  "generated": "2026-09-16T19:03:31Z",
   "source": "data/parts/*.json",
   "lineages": 24,
   "events": 237,
@@ -18,7 +18,8 @@
    "tagline": "The world is already stranger than we know — the truth is simply classified.",
    "question": "Where are the aliens, wizards and vampires hiding in the present day?",
    "divergenceMechanism": "A secret breach of the consensus world, kept off the record and running underneath ordinary history.",
-   "color": "#9d7bff"
+   "color": "#9d7bff",
+   "side": "below"
   },
   {
    "id": "alternate-past",
@@ -26,7 +27,8 @@
    "tagline": "History took a different turn inside living memory, and the story is set downstream of it.",
    "question": "What if the war, the revolution or the assassination had gone the other way?",
    "divergenceMechanism": "An explicit counterfactual in the 19th or 20th century that rewrites the world the story inhabits.",
-   "color": "#3fd19a"
+   "color": "#3fd19a",
+   "side": "below"
   },
   {
    "id": "post-industrial-collapse",
@@ -34,7 +36,8 @@
    "tagline": "Our civilisation ends in a single generation, and the survivors inherit the ruins.",
    "question": "What grows in the wreckage of the industrial world?",
    "divergenceMechanism": "A discrete catastrophe inside the 20th or 21st century destroys the industrial order.",
-   "color": "#ff6b4a"
+   "color": "#ff6b4a",
+   "side": "above"
   },
   {
    "id": "near-future-branch",
@@ -42,7 +45,8 @@
    "tagline": "The world is ours, and then one discovery or one invention pushes it off our track.",
    "question": "How does our own century become the first chapter of the story?",
    "divergenceMechanism": "A single breakthrough or contact event inside our own century, reached from a recognisably present-day world.",
-   "color": "#2dd4e6"
+   "color": "#2dd4e6",
+   "side": "above"
   },
   {
    "id": "far-future-space-opera",
@@ -50,7 +54,8 @@
    "tagline": "Humanity survives the next ten thousand years and spreads across the galaxy.",
    "question": "What does a galactic civilisation thousands of years downstream of us look like?",
    "divergenceMechanism": "A founding rupture — often no longer remembered — after which humanity's future runs millennia beyond our own.",
-   "color": "#f472d0"
+   "color": "#f472d0",
+   "side": "above"
   }
  ],
  "lineages": [
@@ -6561,8 +6566,8 @@
   "headline": "Every one of these histories",
   "headlineAccent": "converges on today",
   "lede": "Twenty-four science-fiction worlds, each pinned to the **real calendar** rather than its own. Every one of them rode along our history, broke away at one dated moment, and is drawn right up to the line where ==we are now==. Grouped by **how** they break with us rather than by genre - because that is what decides whether a world is hiding underneath this one, downstream of a war we won, or waiting ten thousand years ahead.",
-  "trunkLabel": "REAL HISTORY",
-  "futureLabel": "the years none of us have reached",
+  "trunkLabel": "REAL HISTORY   ← the past",
+  "futureLabel": "the future →   the years none of us have reached",
   "eras": [
    {
     "label": "Around now",
@@ -6611,6 +6616,16 @@
     "**Confidence is recorded per event.** High means the fiction states it outright; medium means it was inferred or computed from a stated anchor; low means sources genuinely conflict - usually a book-versus-film or canon-level disagreement - and the competing claim is written out in the event note rather than quietly resolved.",
     "**Editing it.** The dataset lives beside this file: one JSON file per archetype under `data/parts/`, world dossiers under `data/parts/worlds/`, the page copy in `data/atlas.json`, and the contract in `data/SCHEMA.md`. Run `python3 build-data.py` to validate and rebuild; it refuses to build on bad data, assembles the viewer from `src/`, and embeds the result here."
    ]
+  },
+  "sides": {
+   "above": {
+    "label": "AHEAD OF US",
+    "sub": "worlds whose stories run past today"
+   },
+   "below": {
+    "label": "BEHIND AND BESIDE US",
+    "sub": "pasts that went otherwise, secrets under this one"
+   }
   }
  }
 }

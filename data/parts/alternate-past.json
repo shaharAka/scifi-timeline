@@ -5,7 +5,8 @@
   "tagline": "History took a different turn inside living memory, and the story is set downstream of it.",
   "question": "What if the war, the revolution or the assassination had gone the other way?",
   "divergenceMechanism": "An explicit counterfactual in the 19th or 20th century that rewrites the world the story inhabits.",
-  "color": "#3fd19a"
+  "color": "#3fd19a",
+  "side": "below"
  },
  "lineages": [
   {

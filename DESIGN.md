@@ -25,9 +25,20 @@ So the picture is a **tree**, not a table:
   smooth curve and settles into its own lane, above or below. Its events are
   nodes on that branch. Where a branch runs off the right edge, a chevron says
   it continues; where it ends, a small hollow cap says the story stops here.
+- **Two halves that mean something.** Above the trunk: *ahead of us*, the
+  worlds whose stories run past today (near-future branches, collapses, space
+  opera). Below: *behind and beside us*, pasts that went otherwise and secrets
+  under the present (alternate pasts, hidden histories). Each archetype picks
+  its half with `group.side` in its part file, and the halves are named along
+  the left edge in rotated type, with the copy in `data/atlas.json -> sides`.
 - **Bundles.** Worlds that break with history the same way (the archetypes)
-  occupy adjacent lanes on the same side, under a faint band and a small
-  heading. Colour belongs to the archetype and to nothing else.
+  occupy adjacent lanes in their half, under a faint band tinted in the
+  archetype's colour, with a colour bar in the left gutter and a small heading.
+  Colour belongs to the archetype and to nothing else.
+- **Solid is behind us, dashed is ahead.** Every branch is solid up to today
+  and dashed beyond it, and the trunk itself turns dotted past today. Whatever
+  is dashed has not happened in any history. The trunk's own labels say which
+  way is which: "← the past" at its start, "the future →" past today.
 - **Today** is a vertical plane of white light through everything. A white node
   marks every branch that passes through it: those are the futures we are still
   waiting on. An amber dashed ring marks an event real history has already
@@ -62,7 +73,10 @@ zooms around the cursor and moves two things together: the time window
 (`view.hs`) and the lane pitch (`Z`), so the tree behaves like one picture
 rather than a chart with a separate horizontal scale. Horizontal scroll or
 shift+scroll slides along time. **Fit** (or the `0` key) frames the home era
-with the whole tree in the viewport. Level of detail follows the lane pitch on
+with the whole tree in the viewport, and the page opens there: on the fork
+cluster, where the argument is legible. The whole dataset is the *Full reach*
+preset, one click away. Opening on everything was tried and squashed twenty
+forks into a hundred pixels; do not go back to it. Level of detail follows the lane pitch on
 screen: below 24px the event labels go, below 15px the titles go too, and a
 hovered or selected branch always keeps its labels.
 
@@ -182,10 +196,11 @@ PAD_Y ─┘
 - **Fork curve**: a cubic from the trunk to the lane over `CURVE_W * sqrt(Z)`
   pixels, shortened for branches that end sooner. The title sits just past the
   curve.
-- **Sides**: each archetype is placed on the side with fewer lanes so far, in
-  `data/groups.json` order. A group may pin itself with `"side": "above"` or
-  `"below"` in its part file; use that when a new archetype unbalances the
-  picture.
+- **Sides** carry meaning (above = ahead of us, below = behind and beside us),
+  so every archetype should declare `"side": "above"` or `"below"` in its part
+  file; the build warns when one does not and balances it by lane count. The
+  left gutter (`LANE_R` = 44px) is reserved for the rotated half labels and the
+  bundle colour bars; branches that enter from the left start at its edge.
 - **Order on a side**: the world that forks earliest sits outermost, between
   bundles and within a bundle. A later fork then curves to an inner lane
   without crossing an earlier branch's flat run. Crossings only occur across

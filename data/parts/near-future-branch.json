@@ -5,7 +5,8 @@
   "tagline": "The world is ours, and then one discovery or one invention pushes it off our track.",
   "question": "How does our own century become the first chapter of the story?",
   "divergenceMechanism": "A single breakthrough or contact event inside our own century, reached from a recognisably present-day world.",
-  "color": "#2dd4e6"
+  "color": "#2dd4e6",
+  "side": "above"
  },
  "lineages": [
   {

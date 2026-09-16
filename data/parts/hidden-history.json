@@ -5,7 +5,8 @@
   "tagline": "The world is already stranger than we know — the truth is simply classified.",
   "question": "Where are the aliens, wizards and vampires hiding in the present day?",
   "divergenceMechanism": "A secret breach of the consensus world, kept off the record and running underneath ordinary history.",
-  "color": "#9d7bff"
+  "color": "#9d7bff",
+  "side": "below"
  },
  "lineages": [
   {

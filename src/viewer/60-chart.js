@@ -169,14 +169,36 @@ function renderChart(yOverride){
 
   /* bundles: a faint band and a label at the outer corner */
   lay.bundles.forEach(function(b){
-    gBundles.appendChild(sEl("rect", {x:0, y:b.y0, width:W, height:Math.max(0, b.y1 - b.y0)}, "bundle-band"));
+    var bh = Math.max(0, b.y1 - b.y0);
+    gBundles.appendChild(paintC(sEl("rect", {x:0, y:b.y0, width:W, height:bh}, "bundle-band"), "fill", b.g.color));
+    gBundles.appendChild(paintC(sEl("rect", {x:left - 14, y:b.y0 + 2, width:3, height:Math.max(0, bh - 4), rx:1.5}, "bundle-bar"), "fill", b.g.color));
+    /* headings sit above their band on both halves; the layout leaves extra
+       room under the trunk so the innermost lower heading clears the axis row */
     var ly = b.y0 - 7;
-    var t = paintC(sEl("text", {x:left, y:ly}, "bundle-label"), "fill", b.g.color);
+    var t = paintC(sEl("text", {x:left - 14, y:ly}, "bundle-label"), "fill", b.g.color);
     t.textContent = b.g.name + "  ";
     var n = sEl("tspan", null, "n"); n.textContent = String(b.count);
     t.appendChild(n);
     gBundles.appendChild(t);
   });
+
+  /* the two halves of the canvas carry meaning; say so along the left edge */
+  var sidesCopy = (ATLAS && ATLAS.sides) || {};
+  function sideLabel(y0, y1, key, fallback){
+    var h = y1 - y0;
+    if(h < 110) return;
+    var cy = (y0 + y1) / 2, copy = sidesCopy[key] || fallback;
+    var t = sEl("text", {x:11, y:cy, "text-anchor":"middle", transform:"rotate(-90 11 " + cy.toFixed(1) + ")"}, "side-label");
+    t.textContent = copy.label;
+    gBundles.appendChild(t);
+    if(h >= 260 && copy.sub){
+      var u = sEl("text", {x:22, y:cy, "text-anchor":"middle", transform:"rotate(-90 22 " + cy.toFixed(1) + ")"}, "side-label sub");
+      u.textContent = copy.sub;
+      gBundles.appendChild(u);
+    }
+  }
+  sideLabel(PAD_Y * Z, ty - TRUNK_BAND * Z, "above", {label:"AHEAD OF US", sub:"worlds whose stories run past today"});
+  sideLabel(ty + TRUNK_BAND * Z, H - PAD_Y * Z, "below", {label:"BEHIND AND BESIDE US", sub:"pasts that went otherwise, secrets under this one"});
 
   /* axis on the trunk */
   var target = Math.max(3, Math.min(14, Math.round(W / 150)));
@@ -202,7 +224,7 @@ function renderChart(yOverride){
   }
   var trunkLabel = (ATLAS && ATLAS.trunkLabel) || "REAL HISTORY";
   if(trunkEnd > left + 150){
-    var tl = sEl("text", {x:left + 2, y:ty - 14}, "trunk-label");
+    var tl = sEl("text", {x:left + 4, y:ty - 14}, "trunk-label");
     tl.textContent = trunkLabel;
     gTrunk.appendChild(tl);
   }
@@ -306,7 +328,7 @@ function renderBranch(ln, lay, budget, left, right, nx){
        an affordance for panning, not an identity, so it only appears once there is
        room for it; at the widest zoom it is noise stacked against the edge. */
     var gh = sEl("text", {x:right - 2, y:titleY, "text-anchor":"end",
-                          opacity: lay.lod >= 2 ? "1" : "0"}, "ghost");
+                          opacity: lay.lod >= 1 ? "1" : "0"}, "ghost");
     gh.textContent = l.title + " forks in " + fmtYearFull(dv) + " →";
     g.appendChild(gh);
     g.appendChild(hit);
@@ -315,7 +337,7 @@ function renderBranch(ln, lay, budget, left, right, nx){
 
   var endX = clamp(endRaw, left, right);
   var continues = endRaw > right;
-  var flatStart, d;
+  var flatStart, d, cw = 0;
   if(dxRaw < left){
     flatStart = left;
     d = "M" + left + " " + y + " L" + endX + " " + y;
@@ -332,7 +354,21 @@ function renderBranch(ln, lay, budget, left, right, nx){
     g.appendChild(paintC(sEl("line", {x1:left, y1:ty, x2:Math.min(dxRaw, right), y2:ty}, "shared"), "stroke", color));
   }
   g.appendChild(paintC(sEl("path", {d:d}, "halo"), "stroke", color));
-  g.appendChild(paintC(sEl("path", {d:d}, "core"), "stroke", color));
+  /* The part of a branch that lies beyond today has not happened, in any
+     history: it is drawn dashed. Solid = behind us, dashed = ahead of us. */
+  if(lastYear <= NOW || nx >= endX){
+    g.appendChild(paintC(sEl("path", {d:d}, "core"), "stroke", color));
+  } else if(dv >= NOW || nx <= flatStart || nx <= left){
+    g.appendChild(paintC(sEl("path", {d:d}, "core future"), "stroke", color));
+  } else {
+    var dSolid = (dxRaw < left)
+      ? "M" + left + " " + y + " L" + nx.toFixed(1) + " " + y
+      : "M" + dxRaw.toFixed(1) + " " + ty +
+        " C" + (dxRaw + cw*0.55).toFixed(1) + " " + ty + "," + (dxRaw + cw*0.45).toFixed(1) + " " + y + "," +
+        flatStart.toFixed(1) + " " + y + " L" + nx.toFixed(1) + " " + y;
+    g.appendChild(paintC(sEl("path", {d:dSolid}, "core"), "stroke", color));
+    g.appendChild(paintC(sEl("path", {d:"M" + nx.toFixed(1) + " " + y + " L" + endX.toFixed(1) + " " + y}, "core future"), "stroke", color));
+  }
 
   if(continues){
     g.appendChild(paintC(sEl("path", {

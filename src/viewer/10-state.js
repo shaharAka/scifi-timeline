@@ -7,10 +7,11 @@ var H = 400;              /* height of the laid-out scene at the current zoom */
 
 /* chart geometry at zoom 1 - see DESIGN.md "Chart anatomy". Everything vertical
    scales with Z, so the scene's y coordinates are simply Z times these. */
-var LANE_R = 14;          /* left drawable edge (published for tests) */
+var LANE_R = 44;          /* left drawable edge (published for tests); the gutter holds the side labels and bundle bars */
 var PAD_R = 14;           /* right drawable edge inset */
 var PAD_Y = 34;           /* top/bottom padding; the outermost bundle heading sits in it */
 var TRUNK_BAND = 42;      /* clear space either side of the trunk for the axis */
+var TRUNK_BELOW_EXTRA = 16; /* unscaled extra under the trunk: the year labels live there */
 var LANE_GAP = 38;        /* lane pitch */
 var BUNDLE_GAP = 22;      /* extra space between archetype bundles; the bundle label lives here */
 var CURVE_W = 76;         /* horizontal length of the fork curve */
