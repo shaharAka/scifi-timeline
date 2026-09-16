@@ -684,6 +684,18 @@ attempt("moments graph invariants", () => {
   check(named.size === ax.columns.length,
     `${named.size} of ${ax.columns.length} kinds of moment are named on canvas`);
 
+  /* No lane furniture. The archetype bands and the AHEAD OF US / BEHIND AND
+     BESIDE US labels describe shelves a branch sits on, and the graph has no
+     shelves - every world passes through a circle whatever its dates. */
+  const FURNITURE = ["bundle-band", "bundle-label", "side-label",
+                     "trunk-core", "trunk-glow", "trunk-future",
+                     "trunk-label", "arc-rule", "axis-caption", "fork-zone"];
+  const furniture = svgNodes().filter((n) => n.classList
+    && FURNITURE.some((c) => n.classList.contains(c)));
+  check(furniture.length === 0,
+    `${furniture.length} piece(s) of tree furniture drawn in the graph: ` +
+    furniture.slice(0, 4).map((n) => n.getAttribute("class")).join(", "));
+
   /* an arc exists for every transition the worlds actually make, counted from
      the data rather than from the drawing */
   const want = new Set();
@@ -707,6 +719,10 @@ attempt("moments graph invariants", () => {
   let wrong = 0;
   ax.columns.forEach((c) => { if (c.worlds.size !== (expect[c.bin] || 0)) wrong++; });
   check(wrong === 0, `${wrong} circle(s) miscount the worlds that pass through`);
+
+  /* the fork-zone caption is a claim about dates; the moments axis has no zone */
+  const zone = svgNodes().filter((n) => n.classList && n.classList.contains("zone"));
+  check(zone.length === 0, `${zone.length} fork-zone caption(s) drawn in the graph`);
 
   const shared = svgNodes().filter((n) => n.classList && n.classList.contains("shared"));
   soft(`moments graph: ${circles.length} kinds, ${arcs.length} transitions, ` +

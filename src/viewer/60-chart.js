@@ -230,8 +230,12 @@ function renderChart(yOverride){
   var budget = labelBudget(AX.mode === 'years' ? view.hs * 2 : 0,
                            AX.mode === 'years' ? null : lay.lod);
 
-  /* bundles: a faint band and a label at the outer corner */
-  lay.bundles.forEach(function(b){
+  /* Archetype bands and the two half-canvas labels describe LANES: which shelf
+     a branch sits on, and whether it runs past today. The Moments graph has no
+     lanes - a circle is a kind of moment, and every world passes through it
+     whatever its dates - so the bands are not drawn there. They were overlay
+     from the tree view, labelling nothing. */
+  if(!graphMode()) lay.bundles.forEach(function(b){
     var bh = Math.max(0, b.y1 - b.y0);
     gBundles.appendChild(paintC(sEl("rect", {x:0, y:b.y0, width:W, height:bh}, "bundle-band"), "fill", b.g.color));
     gBundles.appendChild(paintC(sEl("rect", {x:left - 14, y:b.y0 + 2, width:3, height:Math.max(0, bh - 4), rx:1.5}, "bundle-bar"), "fill", b.g.color));
@@ -260,8 +264,10 @@ function renderChart(yOverride){
       gBundles.appendChild(u);
     }
   }
-  sideLabel(PAD_Y * Z, ty - TRUNK_BAND * Z, "above", {label:"AHEAD OF US", sub:"worlds whose stories run past today"});
-  sideLabel(ty + TRUNK_BAND * Z, H - PAD_Y * Z, "below", {label:"BEHIND AND BESIDE US", sub:"pasts that went otherwise, secrets under this one"});
+  if(!graphMode()){
+    sideLabel(PAD_Y * Z, ty - TRUNK_BAND * Z, "above", {label:"AHEAD OF US", sub:"worlds whose stories run past today"});
+    sideLabel(ty + TRUNK_BAND * Z, H - PAD_Y * Z, "below", {label:"BEHIND AND BESIDE US", sub:"pasts that went otherwise, secrets under this one"});
+  }
 
   /* Axis chrome. In Years mode these are year ticks, which is the evidence.
      In Order mode there is no year scale to tick - position means sequence - so
@@ -346,22 +352,12 @@ function renderChart(yOverride){
         gGrid.appendChild(lab);
       });
     }
-    /* The arc is the point of this view, so it is stated rather than left to be
-       inferred: columns are ordered by where their events fall in their worlds'
-       own sequences, so reading right is reading later into a story. Column
-       positions are the mean, so the axis is a tendency, not a promise. */
-    var ay = ty + 20;
-    gTrunk.appendChild(sEl("line",
-      {x1:left + 6, y1:ay, x2:right - 6, y2:ay}, "arc-rule"));
-    var a1 = sEl("text", {x:left, y:ay - 5, "text-anchor":"start"}, "axis-label major");
-    a1.textContent = "\u25c0 tends to come earlier";
-    gTrunk.appendChild(a1);
-    var a2 = sEl("text", {x:right, y:ay - 5, "text-anchor":"end"}, "axis-label major");
-    a2.textContent = "tends to come later \u25b6";
-    gTrunk.appendChild(a2);
   } else {
-    /* the fork zone: where worlds stop sharing our history */
-    if(AX.caption){
+    /* the fork zone: where worlds stop sharing our history. Guarded on the
+       shape, not just on caption being set: the Moments axis carries a caption
+       of its own, and reading it here drew a kinds-of-moment string as if it
+       described a zone that does not exist in that view. */
+    if(AX.caption && AX.caption.zoneA !== undefined){
       var z = AX.caption;
       gGrid.appendChild(sEl("rect",
         {x:z.zoneA, y:0, width:Math.max(0, z.zoneB - z.zoneA), height:Hv}, "fork-zone"));
@@ -382,29 +378,34 @@ function renderChart(yOverride){
     gTrunk.appendChild(al);
   }
 
-  /* trunk: solid up to today, faint beyond */
+  /* The trunk is real history drawn once through the middle of the tree, solid
+     to today and faint beyond. The graph has no trunk - its kinds of moment are
+     not a line and its x is not a date - so the line, its two labels and the
+     year-axis caption are all tree furniture and are not drawn there. */
   var trunkEnd = clamp(nx, left, right);
-  if(trunkEnd > left + 1){
+  if(!graphMode() && trunkEnd > left + 1){
     gTrunk.appendChild(sEl("line", {x1:left, y1:ty, x2:trunkEnd, y2:ty}, "trunk-glow"));
     gTrunk.appendChild(sEl("line", {x1:left, y1:ty, x2:trunkEnd, y2:ty, stroke:"url(#trunkGrad)"}, "trunk-core"));
   }
-  if(trunkEnd < right - 1){
+  if(!graphMode() && trunkEnd < right - 1){
     gTrunk.appendChild(sEl("line", {x1:trunkEnd, y1:ty, x2:right, y2:ty}, "trunk-future"));
   }
   var trunkLabel = (ATLAS && ATLAS.trunkLabel) || "REAL HISTORY";
-  if(trunkEnd > left + 150){
+  if(!graphMode() && trunkEnd > left + 150){
     var tl = sEl("text", {x:left + 4, y:ty - 14}, "trunk-label");
     tl.textContent = trunkLabel;
     gTrunk.appendChild(tl);
   }
-  if(right - trunkEnd > 260){
+  if(!graphMode() && right - trunkEnd > 260){
     var fl = sEl("text", {x:trunkEnd + 14, y:ty - 14}, "trunk-label faint");
     fl.textContent = (ATLAS && ATLAS.futureLabel) || "the years none of us have reached";
     gTrunk.appendChild(fl);
   }
-  var cap = sEl("text", {x:right, y:Hv - 8, "text-anchor":"end"}, "axis-caption");
-  cap.textContent = "real-world year · symmetric-log axis, stretched around today";
-  gGrid.appendChild(cap);
+  if(!graphMode()){
+    var cap = sEl("text", {x:right, y:Hv - 8, "text-anchor":"end"}, "axis-caption");
+    cap.textContent = "real-world year \u00b7 symmetric-log axis, stretched around today";
+    gGrid.appendChild(cap);
+  }
 
   /* the present day */
   if(nx > -30 && nx < W + 30){
