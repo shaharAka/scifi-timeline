@@ -654,11 +654,10 @@ attempt("axis switch round-trip", () => {
 });
 
 
-/* ---- Moments: the graph of kinds of moment --------------------------------
-   The primary view draws a DIFFERENT picture from the line-shaped ones: one
-   circle per kind of moment, one arc for each way a story moves between two
-   kinds, and a name on the arcs that more than one world takes. There are no
-   lanes and no per-event targets here, so the assertions are about the graph. */
+/* ---- Moments: the graph of kinds of moment, anchored on us ------------------
+   One circle per kind, roads between kinds, and our own history as the main
+   line: the kinds we have reached, in first-visit order, with every fiction
+   riding that line until its fork. No lanes and no per-event targets here. */
 attempt("moments graph invariants", () => {
   setModeVia("moments");
   const t = debug();
@@ -668,25 +667,55 @@ attempt("moments graph invariants", () => {
   const binned = t.lineages.some((l) => l.events.some((e) => e.bin));
   if (!binned) { soft("moments: no binned events in this payload, skipped"); return; }
   check(ax.columns.length > 0, "moments axis produced no columns");
+  const G = t.graph();
+  if (!G) throw new Error("the graph was not placed");
 
-  /* the graph is drawn, and it is a graph: circles and arcs, not lanes */
+  /* the graph is drawn, and it is a graph: circles and roads, not lanes */
   const circles = svgNodes().filter((n) => n.getAttribute("data-moment-node") !== null);
   const arcs = svgNodes().filter((n) => n.getAttribute("data-edge") !== null);
-  check(circles.length === ax.columns.length,
-    `${circles.length} circles drawn for ${ax.columns.length} kinds of moment`);
-  check(arcs.length > 0, "the graph drew no arcs between kinds");
+  check(circles.length === G.nodes.length,
+    `${circles.length} circles drawn for ${G.nodes.length} kinds of moment`);
+  check(G.nodes.length >= ax.columns.length,
+    "a kind a world passes through has no circle");
+  check(arcs.length === G.edges.length, `${arcs.length} roads drawn for ${G.edges.length} placed`);
 
-  /* every kind is named on the canvas - the rules say nothing readable only on
-     hover, and here the name is the label beside the circle */
+  /* every kind is named on the canvas */
   const named = new Set(svgNodes()
     .filter((n) => n.classList && n.classList.contains("moment-node-label"))
     .map((n) => String(n.textContent)));
-  check(named.size === ax.columns.length,
-    `${named.size} of ${ax.columns.length} kinds of moment are named on canvas`);
+  check(named.size === G.nodes.length,
+    `${named.size} of ${G.nodes.length} kinds of moment are named on canvas`);
 
-  /* No lane furniture. The archetype bands and the AHEAD OF US / BEHIND AND
-     BESIDE US labels describe shelves a branch sits on, and the graph has no
-     shelves - every world passes through a circle whatever its dates. */
+  /* the main line is our history: its kinds in first-visit order, left to right,
+     all on one y; the kinds only fiction reached sit off that line */
+  const real = t.real();
+  if (real && real.events && real.events.length) {
+    const firstVisit = [];
+    real.events.forEach((e) => { if (e.bin && !firstVisit.includes(e.bin)) firstVisit.push(e.bin); });
+    check(G.main.join(",") === firstVisit.join(","), "the main line is not our first-visit order");
+    const mains = G.nodes.filter((n) => n.onMain);
+    for (let i = 1; i < mains.length; i++) {
+      check(mains[i].x > mains[i - 1].x, `main-line kind ${mains[i].id} is not right of ${mains[i - 1].id}`);
+      check(Math.abs(mains[i].y - mains[0].y) < 0.01, "a main-line kind left the line");
+    }
+    G.nodes.filter((n) => !n.onMain).forEach((n) => {
+      check(Math.abs(n.y - G.midY) > 20, `${n.id} is only in fiction but sits on our line`);
+    });
+    const lines = svgNodes().filter((n) => n.classList && n.classList.contains("main-line"));
+    check(lines.length === 1, `${lines.length} main lines drawn, expected 1`);
+    check(!!G.today, "no today node: our last kind was not placed");
+    check(svgNodes().some((n) => n.classList && n.classList.contains("today-ring")), "today is not ringed");
+    /* every real beat is a clickable dot at its kind's circle */
+    const hits = svgNodes().filter((n) => n.getAttribute("data-real") !== null);
+    check(hits.length === real.events.filter((e) => e.bin).length,
+      `${hits.length} real-beat dots for ${real.events.filter((e) => e.bin).length} binned beats`);
+    /* a strand for every world that shares any of our kinds before its fork */
+    const strands = svgNodes().filter((n) => n.classList && n.classList.contains("strand"));
+    check(strands.length === G.strands.length, `${strands.length} strands drawn for ${G.strands.length}`);
+    G.strands.forEach((s) => check(s.x1 >= s.x0, `${s.l.id}: strand runs backwards`));
+  }
+
+  /* no lane furniture in the graph */
   const FURNITURE = ["bundle-band", "bundle-label", "side-label",
                      "trunk-core", "trunk-glow", "trunk-future",
                      "trunk-label", "arc-rule", "axis-caption", "fork-zone"];
@@ -696,20 +725,20 @@ attempt("moments graph invariants", () => {
     `${furniture.length} piece(s) of tree furniture drawn in the graph: ` +
     furniture.slice(0, 4).map((n) => n.getAttribute("class")).join(", "));
 
-  /* an arc exists for every transition the worlds actually make, counted from
-     the data rather than from the drawing */
+  /* a road exists for every post-fork transition the worlds make, counted from
+     the data; pre-fork transitions are the strand, not roads */
   const want = new Set();
   t.lineages.forEach((l) => {
+    const dv = l.divergence.year;
     const seq = [];
     l.events.forEach((e) => {
-      if (e.bin && (seq.length === 0 || seq[seq.length - 1] !== e.bin)) seq.push(e.bin);
+      if (e.bin && G.at[e.bin] && (seq.length === 0 || seq[seq.length - 1].bin !== e.bin)) seq.push({ bin: e.bin, year: e.year });
     });
-    for (let i = 1; i < seq.length; i++) want.add(seq[i - 1] + "\u0000" + seq[i]);
+    for (let i = 1; i < seq.length; i++) if (seq[i].year >= dv) want.add(seq[i - 1].bin + "|" + seq[i].bin);
   });
-  check(arcs.length === want.size,
-    `${arcs.length} arcs drawn for ${want.size} transitions in the data`);
+  check(arcs.length === want.size, `${arcs.length} roads drawn for ${want.size} transitions in the data`);
 
-  /* a circle's world count is the number of worlds that pass through that kind */
+  /* a circle's count is the number of worlds that pass through that kind */
   const expect = {};
   t.lineages.forEach((l) => {
     const here = new Set();
@@ -717,16 +746,13 @@ attempt("moments graph invariants", () => {
     here.forEach((b) => { expect[b] = (expect[b] || 0) + 1; });
   });
   let wrong = 0;
-  ax.columns.forEach((c) => { if (c.worlds.size !== (expect[c.bin] || 0)) wrong++; });
+  G.nodes.forEach((n) => { if (n.worlds.size !== (expect[n.id] || 0)) wrong++; });
   check(wrong === 0, `${wrong} circle(s) miscount the worlds that pass through`);
 
-  /* the fork-zone caption is a claim about dates; the moments axis has no zone */
   const zone = svgNodes().filter((n) => n.classList && n.classList.contains("zone"));
   check(zone.length === 0, `${zone.length} fork-zone caption(s) drawn in the graph`);
-
-  const shared = svgNodes().filter((n) => n.classList && n.classList.contains("shared"));
-  soft(`moments graph: ${circles.length} kinds, ${arcs.length} transitions, ` +
-       `${shared.length} of them taken by more than one world`);
+  soft(`moments graph: ${G.main.length} kinds on our line, ${G.nodes.length - G.main.length} only in fiction, ` +
+       `${G.edges.length} roads, ${G.sharedEdges} shared, ${G.strands.length} strands`);
 });
 
 /* ---- news -> futures: the reason the view exists --------------------------- */
@@ -778,6 +804,19 @@ attempt("news to futures", () => {
   const cards = host ? host.querySelectorAll(".fx-card") : [];
   check(cards.length === fx.length,
     `panel drew ${cards.length} future card(s) for ${fx.length} worlds`);
+  /* clicking the circle itself does the same, and names the years it happened to us */
+  const node = svgNodes().find((x) => x.getAttribute("data-moment-node") === busiest.bin);
+  check(!!node && !!node.onclick, "the matched kind's circle is not clickable");
+  if (node && node.onclick) {
+    node.onclick({ stopPropagation() {} });
+    const again = store["news-list"].querySelectorAll(".fx-card");
+    check(again.length === fx.length, `circle click drew ${again.length} cards for ${fx.length} worlds`);
+    check(store["drawer"].getAttribute("data-mode") === "news", "circle click did not open the panel");
+    const g = debug().graph();
+    const n = g.nodes.find((k) => k.id === busiest.bin);
+    if (n && n.years.length) check(/Happened to us/.test(String(store["news-list"].innerHTML)),
+      "a kind we have been through did not say when it happened to us");
+  }
 
   t.clearMatch();
   check(!t.litBin(), "clearing the match left it lit");
@@ -800,8 +839,8 @@ attempt("real history on every axis", () => {
   for (const mode of ["moments", "order", "years"]) {
     setModeVia(mode);
     const hits = svgNodes().filter((n) => n.getAttribute("data-real") !== null);
-    check(hits.length === real.events.length,
-      `${mode}: ${hits.length} real beats drawn for ${real.events.length}`);
+    const expectN = mode === "moments" ? real.events.filter((e) => e.bin).length : real.events.length;
+    check(hits.length === expectN, `${mode}: ${hits.length} real beats drawn for ${expectN}`);
     const xs = hits.map((n) => parseFloat(n.getAttribute("cx")));
     check(xs.every((v) => !isNaN(v)), `${mode}: a real beat has no x`);
     /* Beats must stay in year order and must not collapse into a pile. They
@@ -810,6 +849,16 @@ attempt("real history on every axis", () => {
        adjacent years legitimately share one, and two beats in the same year
        always do (February and October 1917). Demanding unique x would be
        demanding that the calendar not be a calendar. */
+    if (mode === "moments") {
+      /* in the graph a beat sits at its kind's circle: check that, not year order */
+      const G = t.graph();
+      hits.forEach((n, i) => {
+        const e = real.events.find((y) => y.id === n.getAttribute("data-real"));
+        const node = e && G.at[e.bin];
+        check(!!node && Math.abs(xs[i] - node.x) < 30, `${mode}: ${e && e.year} is not at its kind's circle`);
+      });
+      continue;
+    }
     const ordered = hits
       .map((n, i) => ({ x: xs[i], e: real.events.find((y) => y.id === n.getAttribute("data-real")) }))
       .filter((o) => o.e)

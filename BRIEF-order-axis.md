@@ -200,30 +200,38 @@ law / state / inside / national / political, power up, openness down). A
 technology, an enemy - would separate them. Add it to `data/facets.json` and
 to every event before adding worlds, not after.
 
-### 2.3 The picture
+### 2.3 The picture (built 2026-09-17: the graph, anchored on us)
 
-- Columns are bins, ordered left to right by the mean position of their
-  events within their worlds' sequences (an arc the events produce
-  themselves), each with a header (`THE TRUTH COMES OUT · 12 worlds`) and a
-  faint band. Today is **not** a column in this
-  view: it is the vertical plane still, placed by the atlas's `todayStage`
-  (default `regime`, the column most worlds are "at" now; make it data).
-- Each branch visits its stages **in canonical order**, ties broken by year,
-  so no branch runs backwards. The world's own chronology is preserved in the
-  tooltip ("beat 4 of 11 in this world's order") and in the Years view.
-- A branch's node in a column is one event; several events in one stage
-  stack as a short vertical cluster on the branch.
-- **Convergence is the column's density.** The header count, and a soft glow
-  on the band proportional to how many worlds pass through it. Hovering a
-  column header lights every branch through it and dims the rest (reuse
-  `setBranchHover` with a set, or add `setBranchHoverMany`).
-- Forks: every branch leaves the trunk at its first binned event's column.
-- **News → futures**, the reason the view exists: choosing a news item in the
-  News panel selects its bin, lights every branch through that column, and
-  draws each of those branches from that node forward at full strength, dimming
-  what came before. The panel lists the futures side by side: for each world,
-  the next three or four beats after the match, with their bins, so the reader
-  can see what followed where, and where the futures agree.
+The Moments view is a graph, not a set of lanes: one circle per kind of moment,
+a road for every way a story moves between two kinds. What anchors it is our
+own history.
+
+- **The main line is us.** The kinds our history has passed through are laid
+  left to right in the order we first reached them (22 of the 33), joined by a
+  single heavy line in the trunk colour and marked "US". Under each circle: the
+  years it happened to us ("war begins: 1914 1939 2003 …") and one small dot per
+  visit. Today is a ring on the last kind we reached.
+- **Only in fiction.** The kinds no real beat has reached sit off the line,
+  above and below, at the x where they tend to fall in a story, labelled "only
+  in fiction". Every fictional future is our line plus one or more of these.
+- **Strands.** Each world rides our line until its fork: a thin line in its
+  colour alongside the main line, from the first of our kinds it shares to the
+  last before its divergence, ending in a dot. Clicking a strand opens the world.
+- **Roads.** A transition between two kinds, made after a world has forked, is
+  drawn once as an arc weighted by how many worlds take it: shared roads heavy
+  and named, private ones faint, dashed where they lie ahead of today. Pre-fork
+  transitions are not roads; they are the strand.
+- **Clicking a circle** lights the worlds that share that kind of moment (their
+  roads stay bright, everything else recedes) and opens the panel with, for each
+  world, the moment it had there and what followed, plus the years it happened
+  to us. **Clicking a real-beat dot** runs the situation match on that beat.
+- Circle size follows the number of worlds through it; the count is printed in
+  the circle. No lane furniture is drawn in this view.
+
+Code: `src/viewer/57-graph.js` (`placeMomentsGraph`, `drawMomentGraph`); the
+axis that supplies the columns is `56-moments.js`; lighting and the panel are
+`88-futures.js`. Level of detail on the main line is the open problem: at 22
+kinds the labels alternate above and below and still touch at 1500px.
 
 ### 2.4 Code and tests
 

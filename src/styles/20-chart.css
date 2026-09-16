@@ -149,3 +149,23 @@
 .moment-node-label{font-size:var(--fs-1);font-weight:700;fill:var(--ink-0);
   paint-order:stroke;stroke:var(--bg);stroke-width:3px;stroke-linejoin:round}
 .moment-node-count{font-size:var(--fs-0);fill:var(--ink-4)}
+
+/* Moments graph, anchored on us */
+.main-line-glow{fill:none;stroke:var(--trunk-glow);stroke-width:14;stroke-linecap:round}
+.main-line{fill:none;stroke:var(--trunk);stroke-width:3.2;stroke-linecap:round}
+.main-line-label{font-size:10px;font-weight:800;letter-spacing:.16em;fill:var(--trunk);font-family:var(--font-mono)}
+.strand-line{stroke-width:1.6;opacity:.75}
+.strand-end{opacity:.95}
+.strand:hover .strand-line{stroke-width:3;opacity:1}
+.graph-edge{fill:none;stroke:var(--ink-4);opacity:.16}
+.graph-edge.shared{stroke:var(--ink-2);opacity:.6}
+.graph-edge.future{stroke-dasharray:6 5}
+.graph-edge-label{font-size:8.5px;fill:var(--ink-3);font-weight:600}
+.graph-node .moment-ring{stroke:var(--line-3);stroke-width:1.3}
+.graph-node.on-main .moment-ring{stroke:var(--trunk);stroke-width:2.2}
+.moment-node-n{font-size:8.5px;font-weight:700;fill:var(--ink-2);font-family:var(--font-mono)}
+.moment-years{font-size:8.5px;fill:var(--trunk);font-family:var(--font-mono);letter-spacing:.02em}
+.real-dot{fill:var(--surface);stroke:var(--trunk);stroke-width:1.4}
+.real-hit:hover + .real-dot{fill:var(--trunk)}
+.today-ring{fill:none;stroke:var(--now);stroke-width:1.6}
+.graph-now{font-size:11px}

@@ -153,6 +153,10 @@ function renderFutures(item, futures){
     + (known ? '' : ' <i>(not in the vocabulary)</i>')
     + ' &middot; ' + n + (n === 1 ? ' world' : ' worlds') + ' pass through it.</p>';
   if(spec && spec.definition) body += '<p class="fx-def">' + esc(spec.definition) + '</p>';
+  if(item.years && item.years.length){
+    body += '<p class="fx-us">Happened to us: ' + item.years.map(function(e){
+      return '<b>' + esc(String(e.year)) + '</b> ' + esc(e.title); }).join(' \u00b7 ') + '</p>';
+  }
   if(!n){
     host.innerHTML = head + body + '<p class="fx-none">No world in the atlas '
       + 'passes through this kind of moment yet.</p></div>';
@@ -163,7 +167,7 @@ function renderFutures(item, futures){
     body += '<div class="fx-card">'
       + '<div class="fx-world" data-lid="' + esc(f.world.id) + '">' + esc(f.world.title)
       + '<span class="fx-at">beat ' + f.matchedAt + ' of ' + f.of + '</span></div>'
-      + '<div class="fx-match">' + esc(f.matched.title) + '</div>';
+      + '<div class="fx-match"><span class="fx-yr">' + fmtYear(f.matched.year) + '</span> ' + esc(f.matched.title) + '</div>';
     if(!f.after.length){
       body += '<div class="fx-end">nothing binned follows this in this world</div>';
     } else {

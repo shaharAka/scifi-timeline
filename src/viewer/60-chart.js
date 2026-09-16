@@ -352,7 +352,7 @@ function renderChart(yOverride){
         gGrid.appendChild(lab);
       });
     }
-  } else {
+  } else if(!graphMode()){
     /* the fork zone: where worlds stop sharing our history. Guarded on the
        shape, not just on caption being set: the Moments axis carries a caption
        of its own, and reading it here drew a kinds-of-moment string as if it
@@ -408,7 +408,8 @@ function renderChart(yOverride){
   }
 
   /* the present day */
-  if(nx > -30 && nx < W + 30){
+  /* the graph places today on the last kind we reached and draws its own cap */
+  if(!graphMode() && nx > -30 && nx < W + 30){
     gPlane.appendChild(sEl("rect", {x:nx-26, y:0, width:52, height:Hv, fill:"url(#nowGrad)"}));
     var nl = sEl("line", {x1:nx, y1:0, x2:nx, y2:Hv}, "now-line");
     if(!REDUCED) nl.classList.add("now-pulse");
@@ -430,8 +431,10 @@ function renderChart(yOverride){
   var nt = sEl("text", {x:capX, y:capY, "text-anchor":capAnchor}, "now-cap");
   nt.textContent = offscreen ? ("TODAY " + NOW + (nx < 0 ? " ←" : " →")) : ("TODAY " + NOW);
   if(offscreen) nt.setAttribute("opacity", "0.5");
-  gNow.appendChild(nt);
-  renderNewsBand(gNow, nx, 0, Hv);
+  if(!graphMode()){
+    gNow.appendChild(nt);
+    renderNewsBand(gNow, nx, 0, Hv);
+  }
 
   /* branches and the real history each one leans on */
   var targets = {};
@@ -489,6 +492,7 @@ function renderChart(yOverride){
     clearMatch:function(){ return clearMatch(); },
     futuresFor:function(id, n){ return futuresFor(id, n); },
     renderFutures:function(item, fx){ return renderFutures(item, fx); },
+    graph:function(){ return momentGraphCache; },
     litBin:function(){ return litBin; },
     litWorlds:function(){ return litWorlds; },
     real:function(){ return REAL; },

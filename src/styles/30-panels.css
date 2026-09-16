@@ -158,6 +158,8 @@ table.ev .iu{font-size:11px;color:var(--ink-3);display:block;margin-top:2px}
 .fx-world:hover{color:var(--trunk)}
 .fx-at{font-weight:400;color:var(--ink-4);font-size:var(--fs-0)}
 .fx-match{margin:3px 0 6px;font-size:var(--fs-1);color:var(--trunk);font-weight:600}
+.fx-us{font-size:var(--fs-1);color:var(--ink-2);margin:0 0 10px;line-height:1.5}
+.fx-us b{color:var(--trunk);font-family:var(--font-mono)}
 .fx-next{margin:0;padding-left:16px;font-size:var(--fs-1);color:var(--ink-2)}
 .fx-next li{margin:2px 0}
 .fx-yr{color:var(--ink-4);font-variant-numeric:tabular-nums}
