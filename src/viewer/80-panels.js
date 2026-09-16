@@ -29,7 +29,7 @@ function renderStats(){
     stat("Stated outright", conf + "%", byConf.high + " of " + total + " rated high", conf, "var(--ok)") +
     stat("Contested", byConf.low, "sources disagree", Math.round(100*byConf.low/total), "var(--bad)") +
     stat("Dossiers", covered + "/" + DATA.lineages.length, "worlds to step into",
-         Math.round(100*covered/Math.max(1, DATA.lineages.length)), "#2dd4e6");
+         Math.round(100*covered/Math.max(1, DATA.lineages.length)), "var(--trunk)");
 
   requestAnimationFrame(function(){
     Array.prototype.forEach.call(document.querySelectorAll(".stat .bar span"), function(s){
@@ -86,12 +86,12 @@ function renderCards(){
   list.forEach(function(l){
     if(l.group !== lastGroup){
       lastGroup = l.group;
-      html += '<div class="cards-head" style="color:' + l._g.color + '">' + esc(l._g.name) + '</div>';
+      html += '<div class="cards-head" style="color:var(--g-' + l._g.color.replace('#','') + '-light)">' + esc(l._g.name) + '</div>';
     }
     var w = l._w || {};
     var ys = l.events.map(function(e){ return e.year; });
     var a = frac(Math.min.apply(null, ys)), b = frac(Math.max.apply(null, ys));
-    html += '<button class="card' + (sel === l ? ' on' : '') + '" data-lid="' + l.id + '" style="--c:' + l._g.color + '">' +
+    html += '<button class="card' + (sel === l ? ' on' : '') + '" data-lid="' + l.id + '" style="' + colorVars(l._g.color) + '">' +
       '<span class="edge"></span>' +
       '<div class="ttl">' + esc(l.title) + ' <span class="meta">' + mediumLabel(l.medium) +
         ' &middot; ' + esc(l.creator || '') + ' &middot; forks ' + fmtYearFull(l.divergence.year) + '</span></div>' +

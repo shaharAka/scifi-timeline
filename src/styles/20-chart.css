@@ -22,7 +22,7 @@
 .trunk-label{fill:var(--ink-2);font-size:10px;font-weight:750;letter-spacing:.18em;font-family:var(--font-mono)}
 .trunk-label.faint{fill:var(--ink-4);font-weight:600}
 #chart.converging .trunk-core{stroke-width:3.4}
-#chart.converging .trunk-glow{stroke-width:26;stroke:rgba(190,208,255,.42)}
+#chart.converging .trunk-glow{stroke-width:26;stroke:var(--trunk);opacity:.42}
 
 /* bundles = archetypes */
 .bundle-band{fill:var(--chart-band)}
@@ -70,7 +70,7 @@
 /* the scrubber: a year readout that follows the pointer along the trunk */
 .cursor{pointer-events:none}
 .cursor-line{stroke:var(--ink-3);stroke-width:1;stroke-dasharray:2 3}
-.cursor-pill{fill:rgba(12,10,23,.94);stroke:var(--line-3)}
+.cursor-pill{fill:var(--tip-bg);stroke:var(--line-3)}
 .cursor-text{fill:var(--ink-1);font-size:10.5px;font-family:var(--font-mono)}
 .cursor-text .n{fill:var(--now);font-weight:700}
 .cursor-text .m{fill:var(--ink-3)}
@@ -101,3 +101,66 @@
 #chart.lod-1 .ev-label,#chart.lod-0 .ev-label{display:none}
 #chart.lod-0 .bundle-label{font-size:9px}
 #chart.lod-0 .branch .core{stroke-width:1.6}
+
+/* ---------------------------------------------------------------------------
+   Archetype colour, per element.
+   The data carries one colour per archetype, tuned for a dark ground. Each
+   element that takes that colour also carries --c-dark (the data's value) and
+   --c-light (a darkened variant that clears WCAG AA on paper). Defining fill
+   and stroke HERE, in the stylesheet, is what makes the switch work: a CSS
+   declaration outranks the SVG presentation attribute the chart also sets.
+   --------------------------------------------------------------------------- */
+.bundle-label{fill:var(--c-light,var(--ink-2))}
+.shared{stroke:var(--c-light,var(--line-2))}
+.halo{stroke:var(--c-light,var(--line-2))}
+.core{stroke:var(--c-light,var(--line-2))}
+.continues{stroke:var(--c-light,var(--line-2))}
+.cap{stroke:var(--c-light,var(--line-2))}
+.fork{fill:var(--c-light,var(--line-2))}
+.node{fill:var(--c-light,var(--ink-2))}
+.branch .title{fill:var(--c-light,var(--ink-1))}
+
+/* ---------------------------------------------------------------------------
+   The selected world's art plate, a soft field behind the chart. Deliberately
+   faint: the chart is the argument and the plate is the atmosphere. The image
+   is GENERATED ART, which the caption says out loud - this project's claim is
+   that its provenance is legible, so it must not quietly pass as documentary.
+   --------------------------------------------------------------------------- */
+.plate{
+  position:absolute;inset:0;background-size:cover;background-position:center 38%;
+  opacity:0;transition:opacity var(--t-slow) var(--ease-out);pointer-events:none;
+  filter:saturate(.9);
+}
+.plate.on{opacity:1}
+
+.artline{display:flex;align-items:baseline;gap:8px;min-width:0;flex:1 1 auto}
+.artline .credit{
+  font-size:var(--fs-0);color:var(--ink-3);white-space:nowrap;overflow:hidden;
+  text-overflow:ellipsis;font-family:var(--font-mono);
+}
+.dhero{position:relative;margin:0 0 14px;border:1px solid var(--line-1);border-radius:var(--r-2);
+  overflow:hidden;background:var(--card-bg)}
+.dhero img{display:block;width:100%;height:172px;object-fit:cover}
+.dhero .cap{position:absolute;left:0;right:0;bottom:0;padding:14px 10px 6px;
+  font-size:var(--fs-0);color:#fff;font-family:var(--font-mono);
+  background:linear-gradient(180deg,transparent,rgba(12,14,18,.72))}
+.plate.on{opacity:var(--plate-opacity,.15);mix-blend-mode:var(--plate-blend,normal)}
+
+/* ---------------------------------------------------------------------------
+   The real-world counterpart: an actual photograph of the real object, place or
+   event a fiction leans on, sitting next to the illustrative plate. Labelled
+   "photograph" and carrying its licence and author, because that is what the
+   attribution licences require and because the distinction from generated art
+   is the honest thing to keep visible.
+   --------------------------------------------------------------------------- */
+.pd{margin:18px 0 0;border:1px solid var(--line-1);border-radius:var(--r-2);overflow:hidden;
+  background:var(--card-bg)}
+.pd img{display:block;width:100%;height:150px;object-fit:cover}
+.pd .body{padding:10px 12px 12px}
+.pd .kick{font-size:var(--fs-0);letter-spacing:var(--track);text-transform:uppercase;
+  font-weight:750;color:var(--ink-3);margin:0 0 4px}
+.pd .cap{font-size:var(--fs-2);color:var(--ink-1);margin:0 0 4px;line-height:1.45}
+.pd .why{font-size:var(--fs-1);color:var(--ink-2);margin:0 0 8px;line-height:1.5}
+.pd .attr{font-size:var(--fs-0);color:var(--ink-3);font-family:var(--font-mono);
+  margin:0;line-height:1.5}
+.pd .attr a{color:var(--ink-2)}

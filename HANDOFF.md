@@ -58,6 +58,32 @@ not change.
 
 ---
 
+
+### Visual design and imagery (added after the tree rewrite)
+
+- **Five switchable themes**, light by default: paper, chalk, atlas, blueprint,
+  dusk. Defined in `src/styles/themes/*.css`, selected by `data/atlas.json ->
+  themes`, chosen at runtime by the Style picker, remembered in localStorage.
+  `DESIGN.md` §2 is the contract; the build and the test suite both check that
+  every declared theme exists and carries an archetype colour variant.
+- **Two kinds of image, never blurred together.** `assets/` holds generated
+  illustrative plates (one per world, from `tools/gen-art.py`), and `assets/pd/`
+  holds real photographs of real objects, fetched from Wikimedia Commons by
+  `tools/fetch-pd.py` with the licence verified at fetch time. The drawer labels
+  each accordingly and links the author and licence.
+- **Never reference the 2K sources directly.** Run `tools/derive-art.py`; the
+  page uses `assets/derived/<id>-lg.jpg` (1000px) and `-sm.jpg` (560px).
+
+The 2K source plates are **gitignored** (73 MB, regenerable); `assets/derived/`
+and `assets/` `*-CREDITS.json` are committed, so a fresh clone renders fully.
+
+```bash
+python3 tools/gen-art.py --list        # what plates exist / are missing
+python3 tools/gen-art.py --only dune   # generate one (needs GEMINI_API_KEY in .env)
+python3 tools/derive-art.py --check    # derived sizes present?
+python3 tools/fetch-pd.py --check      # real counterparts present?
+```
+
 ## 2. How the pipeline works
 
 ```

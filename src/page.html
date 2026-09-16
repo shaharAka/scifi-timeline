@@ -37,6 +37,8 @@
   <div class="bar row2">
     <span class="lbl">Archetype</span>
     <div class="chips" id="chips"></div>
+    <span class="lbl">Style</span>
+    <div id="themes" class="themes"></div>
     <span class="grow"></span>
     <button id="allev" class="small">Show all event labels</button>
   </div>
@@ -44,6 +46,7 @@
 
 <main class="canvas">
   <div id="chartbody">
+    <div id="plate" class="plate" aria-hidden="true"></div>
     <canvas id="backdrop"></canvas>
     <svg id="chart" xmlns="http://www.w3.org/2000/svg"></svg>
   </div>

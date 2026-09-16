@@ -1,0 +1,84 @@
+{
+  "_comment": "Art direction per world. Prompts describe TECHNIQUE, ERA, PALETTE and MOOD only - never a franchise's characters, vessels, logos or named places. Verified working: the model accepts these and returns 1970s-paperback-style plates that are thematically right without reproducing anything. One world costs ~26s and ~2.4MB at 2K.",
+  "defaults": {
+    "aspectRatio": "4:3",
+    "negative": "no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up"
+  },
+  "worlds": {
+    "dune": {
+      "prompt": "A vast arid desert at dusk under a hazy ochre sky, immense dunes receding to the horizon, a single tiny human figure with a staff for scale, heat shimmer, fine sand haze. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, restrained ochre and umber palette, soft airbrush gradients, no outlines. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "star-wars": {
+      "prompt": "A scavenged industrial outpost on a pale desert plain at sunset, low domed structures and antenna masts, a small weathered freighter on legs, dust and warm haze, two faint suns low in the sky. Painted in the style of a 1970s airbrushed paperback cover: matte flat colour, sandy ochres against a dusty rose sky, worn and used-looking machinery, no gloss. Wide panoramic composition, adventurous and slightly melancholy."
+    },
+    "star-trek": {
+      "prompt": "A clean optimistic orbital view: a blue-white planet curving across frame, a thin bright atmosphere line, a slender elegant vessel silhouetted small against it, sunlight from frame left. Painted as 1960s concept-art gouache: smooth blended gradients, soft edges, cool blues with a warm highlight, faintly retro and smooth. Wide panoramic composition, serene and forward-looking."
+    },
+    "foundation": {
+      "prompt": "An immense grey civic plaza on a city-world, terraced megastructures receding into haze, a lone cloaked figure crossing the empty stone, overcast flat light, monumental scale. Painted in the style of a 1950s magazine illustration: muted greys and dusty golds, precise but soft-edged, restrained and austere. Wide panoramic composition, imperious and cold."
+    },
+    "warhammer-40000": {
+      "prompt": "A colossal gothic cathedral-fortress on a polluted industrial world, spires and buttresses lost in smog, ranks of tiny figures on a processional ramp, banners too distant to read, sickly amber light through dust. Painted as a 1980s British fantasy illustration: dense detail, heavy dark outlines, desaturated browns and bone with one bilious green accent. Wide panoramic composition, oppressive and grandiose."
+    },
+    "the-matrix": {
+      "prompt": "A rain-slicked empty city street at night, sheer towers of dark glass, wet asphalt reflecting sodium light, sickly green cast over everything, extreme perspective down the canyon of buildings, no people. Rendered as a late-1990s digital composite: high contrast, cold green-black palette, hard specular highlights, clinical and slightly unreal. Wide panoramic composition, uneasy and sterile."
+    },
+    "terminator": {
+      "prompt": "A wrecked urban intersection at night, burned-out vehicle frames and twisted rebar, smoke drifting, moonlight through broken concrete, no living figures, cold blue-grey with one dull orange fire glow. Rendered in the style of a 1980s airbrushed action-movie poster: slick dark gradients, hard rim light, chrome and ash palette. Wide panoramic composition, menacing and clinical."
+    },
+    "planet-of-the-apes": {
+      "prompt": "A rugged coastline of eroded cliffs at harsh midday, surf breaking on dark rocks, sparse wind-bent vegetation, an empty wilderness with no settlement visible, bleached bone and sea-grey palette. Painted in the style of a 1960s adventure-magazine illustration: broad brush, high contrast, warm sand against cold sea, dramatic but matter-of-fact. Wide panoramic composition, desolate and strange."
+    },
+    "mad-max": {
+      "prompt": "An endless flat desert highway vanishing to a point, heat distortion on the tarmac, rusted wreckage half-buried at the roadside, dust storm on the horizon, bleached blue sky grading to orange. Painted as a 1980s exploitation-film poster: harsh high-contrast airbrush, ochre and rust palette, wide empty composition, no figures. Wide panoramic composition, harsh and kinetic."
+    },
+    "fallout": {
+      "prompt": "A retro-futurist suburban street preserved under dust, a family sedan with tail fins and a chrome bumper, boxy 1950s architecture, a distant mushroom cloud on the horizon under a brown sky. Painted as a 1950s advertising illustration gone wrong: cheerful pastel palette, clean commercial rendering, optimistic shapes, quietly horrific content. Wide panoramic composition, cheerful and dreadful at once."
+    },
+    "twelve-monkeys": {
+      "prompt": "A frozen abandoned city square seen from above, snow drifted against shuttered storefronts, bare trees, no footprints, flat grey winter light. Painted in the style of a cold-war documentary illustration: restricted palette of grey, white and dust blue, precise and unemotional, empty streets. Wide panoramic composition, silent and abandoned."
+    },
+    "children-of-men": {
+      "prompt": "A grey overcast English city street under heavy rain, tall terraced buildings, wet cobbles, boarded shopfronts and faded paintwork, an empty bus shelter, no people. Painted in the style of a 1970s British social-realist illustration: sludgy greens and greys, soft rain-blurred edges, deeply melancholic. Wide panoramic composition, worn and resigned."
+    },
+    "interstellar": {
+      "prompt": "A failing agricultural landscape: rows of blighted crops under a flat overcast sky, a lone farmhouse and a pickup truck, dust hanging in the air, everything faded and drained. Painted as a 1930s dust-bowl documentary illustration: muted earth tones, soft light, unromantic, wide and empty. Wide panoramic composition, elegiac."
+    },
+    "the-expanse": {
+      "prompt": "A small industrial spacecraft under thrust in hard sunlight against the limb of a rocky planet, no atmospheric haze, harsh specular highlights, deep black shadow, thin panel lines and radiator fins. Rendered as a 1970s NASA technical illustration: precise and engineered, muted greys and blues with one warm accent, documentary rather than dramatic. Wide composition, matter-of-fact."
+    },
+    "2001-space-odyssey": {
+      "prompt": "A vast featureless white interior corridor with a single glowing rectangular floor of light receding to a vanishing point, perfectly clean, symmetrical, no figures, no shadow. Rendered in the style of 1960s minimal conceptual set design: pure white and black with one saturated accent, geometric, immaculate. Wide symmetrical composition, serene and inhuman."
+    },
+    "contact": {
+      "prompt": "A huge radio telescope dish at dusk in a desert valley, the structure silhouetted against a deep blue sky with first stars, faint horizon glow, no figures. Painted as a 1990s scientific-atlas illustration: cool blues and pale metallics, precise engineering detail, calm and attentive. Wide panoramic composition, expectant."
+    },
+    "x-files": {
+      "prompt": "An empty grey government corridor at night, identical doors receding, flickering fluorescent strip lighting, worn linoleum, no people, a single unattended chair. Rendered in the style of a 1990s institutional documentary illustration: cold desaturated palette, flat light, bureaucratic and anonymous. Wide composition, quietly sinister."
+    },
+    "men-in-black": {
+      "prompt": "A vast grey arrivals hall with endless rows of identical benches and ceiling strip lights, polished floor, no people, an absurd sense of scale. Rendered as a 1960s architectural illustration: clean flat greys and pale blue, precise perspective, municipal and deadpan. Wide symmetrical composition, mundane and faintly comic."
+    },
+    "harry-potter": {
+      "prompt": "A crooked old stone street of narrow shopfronts at night, gas lamps, leaded windows, chimney pots and uneven rooftops, wet cobbles, warm light spilling onto the street from within. Painted as a classic British children's-book illustration: warm browns and amber, hand-drawn line and wash, cosy and slightly dilapidated. Wide composition, inviting."
+    },
+    "buffy": {
+      "prompt": "A small California town high school at night, low mission-style buildings and a flat lawn, a single lit window, palm trees and a water tower silhouetted against a deep indigo sky. Painted in the style of a 1990s American television key art: flat graphic colour, moody blue-violet with warm window light, restrained and slightly camp. Wide composition."
+    },
+    "his-dark-materials": {
+      "prompt": "A foggy Victorian riverside at dawn, stone bridges and spires receding into mist, gaslights still burning, moored narrowboats, no figures. Painted as a romantic Victorian oil study: luminous grey-gold atmosphere, soft painterly edges, deeply atmospheric and scholarly. Wide panoramic composition, mysterious."
+    },
+    "man-in-the-high-castle": {
+      "prompt": "A monumental authoritarian civic square in a 1940s modernist style, vast stone columns and stepped facades, enormous unreadable banners hanging between buildings, empty pavement, overcast light. Painted as a 1940s propaganda poster: flattened perspective, restricted palette of grey, oxblood red and black, monumental scale. Wide symmetric composition, oppressive."
+    },
+    "watchmen": {
+      "prompt": "A rain-soaked 1980s New York street corner at night, neon signs, steam from vents, litter in the gutter, a payphone and a newsstand, no people. Rendered in the style of a 1980s graphic-novel panel: heavy black linework, limited palette of dirty yellow, cyan and magenta, oppressive detail. Wide composition, grim and urban."
+    },
+    "fatherland": {
+      "prompt": "A monumental neo-classical government boulevard in a European capital, vast stone facades and bronze eagles, trees in regimented rows, empty and pristine, cold grey daylight. Painted as a 1960s architectural illustration: flat precise colour, pale stone and dark green, terrifyingly orderly. Wide symmetric composition, chilling."
+    },
+    "buffy-sunnydale": {
+      "prompt": "A quiet Californian suburban street at dusk, single-storey houses with dry lawns, a station wagon in a driveway, long shadows, hills on the horizon, no people. Painted in the style of a 1990s American realist illustration: flat muted colour, warm evening light, ordinary and faintly uneasy. Wide composition."
+    }
+  }
+}

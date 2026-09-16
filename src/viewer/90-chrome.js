@@ -136,6 +136,64 @@ function renderAtlasCopy(){
   }
 }
 
+
+
+/* Inline markup cannot read a per-element custom property the way the chart
+   does, so each place that colours something by archetype declares both
+   variants inline and lets the theme pick. Keep this the only way an archetype
+   colour reaches markup - it is what makes light themes legible. */
+function colorVars(hex){
+  return '--c-dark:' + esc(hex) + ';--c-light:var(--g-' + String(hex).replace('#','') + '-light)';
+}
+
+/* ============================================================ style picker */
+/* Themes are pure CSS: each one is an html[data-theme="..."] block in
+   src/styles/themes/. Everything here does is stamp that attribute, remember
+   the choice, and repaint the few things drawn to canvas rather than styled. */
+var THEME_KEY = "scifi-timeline-theme";
+
+function themeList(){
+  return (ATLAS && ATLAS.themes) || [];
+}
+function applyTheme(id, persist){
+  var list = themeList();
+  if(!list.length) return;
+  var ok = list.some(function(t){ return t.id === id; });
+  if(!ok) id = list[0].id;
+  document.documentElement.setAttribute("data-theme", id);
+  if(persist){ try{ localStorage.setItem(THEME_KEY, id); }catch(e){} }
+  Array.prototype.forEach.call(document.querySelectorAll(".theme-btn"), function(b){
+    b.classList.toggle("on", b.getAttribute("data-theme-id") === id);
+  });
+  /* the starfield is painted to a canvas, so a theme change must redraw it */
+  backdropKey = "";
+  renderChart();
+}
+function themeInitial(){
+  var list = themeList();
+  if(!list.length) return null;
+  var stored = null;
+  try{ stored = localStorage.getItem(THEME_KEY); }catch(e){}
+  if(stored && list.some(function(t){ return t.id === stored; })) return stored;
+  return (ATLAS && ATLAS.defaultTheme) || list[0].id;
+}
+function renderThemes(){
+  var host = document.getElementById("themes");
+  if(!host) return;
+  var list = themeList();
+  if(list.length < 2){ host.style.display = "none"; return; }
+  host.innerHTML = list.map(function(t){
+    return '<button class="theme-btn" data-theme-id="' + esc(t.id) + '" title="' +
+      esc(t.note || t.label) + '">' +
+      '<span class="sw" style="background:' + esc(t.swatch || "#fff") + '"></span>' +
+      esc(t.label) + '</button>';
+  }).join("");
+  Array.prototype.forEach.call(host.querySelectorAll(".theme-btn"), function(b){
+    b.onclick = function(){ applyTheme(b.getAttribute("data-theme-id"), true); };
+  });
+  applyTheme(themeInitial(), false);
+}
+
 function on(id, evt, fn){ var el = document.getElementById(id); if(el) el[evt] = fn; }
 
 function init(){
@@ -143,6 +201,7 @@ function init(){
   NOW = new Date().getFullYear();
 
   renderAtlasCopy();
+  renderThemes();
   renderStats();
   renderEras();
   renderChips();

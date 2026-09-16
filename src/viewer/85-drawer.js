@@ -7,6 +7,7 @@ function openWorld(id){
   /* always land on the world pane: arriving at a new world with the previous
      world's tab still selected is disorienting */
   activeTab = "world";
+  setPlate(id);
   renderChart();
   renderDrawer();
   setPanel("world");
@@ -14,6 +15,7 @@ function openWorld(id){
 }
 
 function closeWorld(){
+  setPlate(null);
   sel = null;
   renderChart();
   setPanel(panelMode === "world" ? "index" : panelMode);
@@ -27,6 +29,7 @@ function markCard(){
 }
 
 function renderDrawer(){
+  var art = sel ? artFor(sel.id) : null;
   var d = document.getElementById("panel-world");
   if(!d) return;
   if(!sel){ d.innerHTML = ""; return; }
@@ -35,10 +38,12 @@ function renderDrawer(){
   d.innerHTML =
     '<div class="phead"><button class="ghost" id="dback">&larr; All worlds</button>' +
       '<button class="ghost" id="dclose">Close</button></div>' +
+    (art ? '<figure class="dhero"><img src="' + esc(art.lg || art.full) + '" alt="">' +
+      '<figcaption class="cap">' + esc(artCredit(art)) + '</figcaption></figure>' : '') +
     '<div class="dhead"><div>' +
       '<h2 class="dtitle">' + esc(l.title) + '</h2>' +
       '<div class="dmeta">' +
-        '<span class="pill" style="border-color:' + g.color + ';color:' + g.color + '">' + esc(g.name) + '</span>' +
+        '<span class="pill" style="' + colorVars(g.color) + ';border-color:var(--c-light);color:var(--c-light)">' + esc(g.name) + '</span>' +
         '<span>' + mediumLabel(l.medium) + '</span><span>&middot;</span>' +
         '<span>' + esc(l.creator || '') + '</span><span>&middot;</span>' +
         '<span>first released ' + esc(l.originYear || '?') + '</span><span>&middot;</span>' +
@@ -92,7 +97,7 @@ function worldPane(l, w){
   if(!w || !w.setting){
     return '<div class="pane on"><p style="color:var(--ink-3);font-size:13px">' +
       'No dossier has been written for this world yet &mdash; only its chronology is charted.</p>' +
-      deltaHtml(l) + '</div>';
+      deltaHtml(l) + pdBlock(l.id) + '</div>';
   }
   var themes = (w.themes || []).map(function(t){ return '<span class="tag">' + esc(t) + '</span>'; }).join(" ");
   var tags = (w.tags || []).map(function(t){
@@ -108,7 +113,7 @@ function worldPane(l, w){
         (w.mood ? '<div class="fact"><dt>Register</dt><dd>' + esc(w.mood) + '</dd></div>' : '') +
         '<div class="fact"><dt>Themes</dt><dd>' + themes + '</dd></div>' +
         '<div class="fact"><dt>Tags</dt><dd>' + tags + '</dd></div>' +
-      '</dl>' + deltaHtml(l) +
+      '</dl>' + deltaHtml(l) + pdBlock(l.id) +
     '</div><div>' +
       tileSection("Places that matter", w.locations) +
       tileSection("Who holds power", w.factions) +
@@ -118,7 +123,7 @@ function worldPane(l, w){
 
 function deltaHtml(l){
   var dv = l.divergence;
-  return '<div class="delta" style="border-color:' + l._g.color + ';margin-top:14px">' +
+  return '<div class="delta" style="' + colorVars(l._g.color) + ';border-color:var(--c-light);margin-top:14px">' +
     '<span class="dl">Breaks from our history in ' + fmtYearFull(dv.year) + '</span>' +
     esc(dv.delta || '') +
     (dv.note ? '<div style="font-size:11.5px;color:var(--ink-3);margin-top:7px;font-style:italic">' +
@@ -144,7 +149,7 @@ function connectionsHtml(w){
     conns.map(function(c){
       var other = DATA.lineages.filter(function(x){ return x.id === c.id; })[0];
       var nm = other ? other.title : c.id;
-      var col = other ? other._g.color : "#5f7cc4";
+      var col = other ? "var(--g-" + other._g.color.replace('#','') + "-light)" : "var(--ink-2)";
       return '<div class="tile link" data-goto="' + esc(c.id) + '">' +
         '<div class="n" style="color:' + col + '">' + esc(nm) + ' &rarr;</div>' +
         '<div class="b">' + esc(c.note || '') + '</div></div>';
@@ -196,6 +201,71 @@ function revealIn(){
 /* ============================================================ mini chart */
 /* The drawer's own branch: the same grammar as the big chart, one world. */
 
+
+/* Provenance for an art plate, in one line, always visible. Generated plates are
+   labelled as generated: this atlas records confidence per event and a
+   conversion per dating system, so it cannot quietly present invented imagery
+   as documentary. */
+function artCredit(art){
+  if(!art) return "";
+  if(art.kind === "generated"){
+    return "Illustrative plate, generated with " + (art.model || "an image model") +
+           " - not a still from any adaptation.";
+  }
+  return art.credit || art.note || "Openly licensed image.";
+}
+
+/* The plate for a world, or null when no art exists for it. */
+/* The real-world counterpart for a world, or null. */
+function pdFor(id){
+  return (DATA && DATA.pd && DATA.pd[id]) || null;
+}
+
+function pdBlock(id){
+  var m = pdFor(id);
+  if(!m) return "";
+  /* CC BY requires credit AND a licence reference, so both are linked rather
+     than merely named. */
+  var attr = [];
+  if(m.author) attr.push(esc(m.author));
+  if(m.license){
+    attr.push(m.licenseUrl
+      ? '<a href="' + esc(m.licenseUrl) + '" target="_blank" rel="noopener">' + esc(m.license) + '</a>'
+      : esc(m.license));
+  }
+  if(m.sourcePage){
+    attr.push('<a href="' + esc(m.sourcePage) + '" target="_blank" rel="noopener">' +
+      esc(String(m.sourceTitle || "source").replace(/^File:/, "")) + '</a>');
+  }
+  var attrLine = attr.join(" \u00b7 ");
+  return '<figure class="pd">' +
+    '<img src="' + esc(m.file) + '" alt="' + esc(m.caption || "") + '" loading="lazy">' +
+    '<div class="body">' +
+      '<p class="kick">Photograph \u2014 the real counterpart</p>' +
+      (m.caption ? '<p class="cap">' + esc(m.caption) + '</p>' : '') +
+      (m.why ? '<p class="why">' + esc(m.why) + '</p>' : '') +
+      '<p class="attr">' + attrLine + '</p>' +
+    '</div></figure>';
+}
+
+function artFor(id){
+  return (DATA && DATA.art && DATA.art[id]) || null;
+}
+
+/* Soft field behind the chart for the selected world. */
+function setPlate(id){
+  var host = document.getElementById("plate");
+  if(!host) return;
+  var art = id ? artFor(id) : null;
+  if(!art || !art.sm){
+    host.classList.remove("on");
+    host.style.backgroundImage = "";
+    return;
+  }
+  host.style.backgroundImage = "url('" + art.sm + "')";
+  host.classList.add("on");
+}
+
 function drawMini(svg, l, color){
   var box = svg.parentElement;
   var w = Math.max(320, (box ? box.clientWidth : 600) - 8);
@@ -230,9 +300,9 @@ function drawMini(svg, l, color){
   var d = "M" + dx + " " + ty + " C" + (dx + cw*0.55) + " " + ty + "," + (dx + cw*0.45) + " " + by + "," +
           (dx + cw) + " " + by + " L" + (w - 22) + " " + by;
   var g = sEl("g", null, "branch");
-  g.appendChild(sEl("path", {d:d, stroke:color}, "halo"));
-  g.appendChild(sEl("path", {d:d, stroke:color}, "core"));
-  g.appendChild(sEl("circle", {cx:dx, cy:ty, r:3.8, fill:color}, "fork"));
+  g.appendChild(paintC(sEl("path", {d:d}, "halo"), "stroke", color));
+  g.appendChild(paintC(sEl("path", {d:d}, "core"), "stroke", color));
+  g.appendChild(paintC(sEl("circle", {cx:dx, cy:ty, r:3.8}, "fork"), "fill", color));
   svg.appendChild(g);
 
   svg.appendChild(sEl("line", {x1:nx, y1:14, x2:nx, y2:h-24}, "now-line"));

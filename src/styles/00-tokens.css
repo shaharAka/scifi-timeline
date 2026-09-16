@@ -1,44 +1,66 @@
 /* ============================================================================
-   Design tokens - the whole visual language in one place.
-   Palette: a violet-black night ground, five neutral inks, a WARM ivory trunk
-   (real history reads as sunlight), pure white only for today, cool archetype
-   colours from the data. Amber is reserved for 'contradicted by real history'.
-   Everything else in src/styles/ refers to these; nothing else hard-codes a
-   colour, a duration or a radius. Archetype colours are NOT here: they live in
-   the data (data/parts/<archetype>.json -> group.color), because they mean
-   something and change when the dataset does.
+   Structural tokens - the things that do NOT change between themes, plus the
+   light default. Every colour here is overridden by a file in src/styles/themes/;
+   this file is the fallback so the page is never unstyled.
+
+   Rules that hold in every theme:
+   - Colour is meaning, never decoration. The archetype colours come from the
+     data (group.color) and are the only saturated hues on the canvas.
+   - The trunk (real history) is the one thing drawn once, so it gets the
+     strongest warm or dark line on the page. Today is the only element allowed
+     to be pure white or pure black.
+   - No gradient text. No glow shadows. No coloured edge stripes. Those read as
+     generated filler and were removed deliberately - see DESIGN.md.
    ========================================================================== */
 :root{
-  /* --- surfaces: one very dark blue-black, then glass panels on top ------- */
-  --bg:#07060e;
-  --bg-2:#0c0a17;
-  --panel:rgba(15,12,30,.72);
-  --panel-solid:#0e0b1c;
-  --line-1:#1b1a33;   /* hairline borders */
-  --line-2:#2b2a4d;   /* borders that must read */
-  --line-3:#45437a;   /* leaders, hover borders */
+  /* ---- surfaces -------------------------------------------------------- */
+  --bg:#faf8f4;            /* page */
+  --bg-2:#f2efe8;          /* cards, tooltips, the paper stock */
+  --surface:#ffffff;       /* the canvas itself, the brightest plane */
+  --panel:rgba(255,255,255,.86);
+  --panel-solid:#ffffff;
+  --line-1:#e0dcd2;        /* hairline */
+  --line-2:#c9c4b7;        /* must read */
+  --line-3:#a9a396;        /* leaders, hover */
 
-  /* --- ink: five steps, never pure white except the present day ---------- */
-  --ink-0:#f7f5fb;
-  --ink-1:#ebe8f5;
-  --ink-2:#aca8c6;
-  --ink-3:#716d92;
-  --ink-4:#46436a;
+  /* ---- ink: five steps -------------------------------------------------- */
+  --ink-0:#14161a;
+  --ink-1:#2b2f36;
+  --ink-2:#5b6169;
+  --ink-3:#878d95;
+  --ink-4:#adb2b8;
 
-  /* --- the shared axis --------------------------------------------------- */
-  --trunk:#f4e7c3;                    /* real history: warm ivory, the one thing drawn once */
-  --trunk-dim:#4d4636;                /* the years we have not reached */
-  --trunk-glow:rgba(255,214,150,.26);
-  --now:#ffffff;                      /* the only pure white on the page */
-  --now-glow:rgba(255,255,255,.18);
+  /* ---- the shared axis -------------------------------------------------- */
+  --trunk:#8a6a2f;         /* real history: deep warm ochre ink on paper */
+  --trunk-dim:#c4b393;     /* the years we have not reached */
+  --trunk-glow:rgba(138,106,47,.16);
+  --now:#14161a;           /* today - the darkest thing on a light page */
+  --now-glow:rgba(20,22,26,.10);
 
-  /* --- meaning colours (not decoration) ---------------------------------- */
-  --flag:#ffcf5c;                     /* real history has since contradicted this */
-  --ok:#34d399;
-  --warn:#ffd166;
-  --bad:#f87171;
+  /* ---- meaning colours -------------------------------------------------- */
+  --flag:#a8750a;          /* real history has since contradicted this */
+  --ok:#2f8f5b;
+  --warn:#a8750a;
+  --bad:#b4453c;
 
-  /* --- type ---------------------------------------------------------------- */
+  /* ---- chrome ----------------------------------------------------------- */
+  --bg-wash:none;                       /* themeable page texture */
+  --card-bg:rgba(20,22,26,.03);
+  --card-bg-hover:rgba(20,22,26,.055);
+  --tip-bg:#ffffff;
+  --tip-shadow:0 8px 24px rgba(20,22,26,.13);
+  --panel-shadow:-12px 0 32px rgba(20,22,26,.09);
+  --stat-track:rgba(20,22,26,.08);
+  --track-bg:rgba(20,22,26,.07);
+  --accent:#3f6ea8;                     /* focus rings, the one interactive blue */
+  --slider-thumb:#ffffff;
+
+  /* ---- chart ------------------------------------------------------------ */
+  --chart-grid:rgba(20,22,26,.07);
+  --chart-band:rgba(20,22,26,.028);
+  --chart-ghost:#9aa0a8;
+
+  /* ---- type ------------------------------------------------------------- */
   --font-sans:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
   --font-mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
   --fs-0:10px;
@@ -48,24 +70,20 @@
   --fs-4:16px;
   --fs-5:19px;
   --fs-6:27px;
-  --track:.11em;                      /* letter-spacing for uppercase labels */
+  --track:.11em;
 
-  /* --- shape --------------------------------------------------------------- */
-  --r-1:9px;
-  --r-2:13px;
-  --r-3:16px;
+  /* ---- shape: modest radii only. Nothing pill-shaped, nothing 16px. ----- */
+  --r-1:4px;
+  --r-2:6px;
+  --r-3:8px;
 
-  /* --- motion -------------------------------------------------------------- */
+  /* ---- motion ----------------------------------------------------------- */
   --ease-out:cubic-bezier(.22,.68,.24,1);
   --t-fast:.16s;
   --t-base:.32s;
   --t-slow:.6s;
 
-  /* --- chart --------------------------------------------------------------- */
-  --chart-grid:#141226;
-  --chart-band:rgba(255,255,255,.02);
-
-  /* --- legacy aliases (older rules still refer to these) ------------------ */
+  /* ---- legacy aliases --------------------------------------------------- */
   --ink:var(--ink-1);
   --ink2:var(--ink-2);
   --ink3:var(--ink-3);

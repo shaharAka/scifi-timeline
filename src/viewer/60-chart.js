@@ -45,11 +45,28 @@ function claimRoom(key, x0, x1, pad){
 /* A static field of faint stars behind the SVG. Painted once per size, never
    per frame, and skipped entirely where canvas is unavailable (tests). */
 
+/* Which ground is under the stars decides whether there ARE stars. A faint
+   field reads as depth on a dark page and as dirt on a light one, so light
+   themes get a clean sheet and the chart carries the whole picture. */
+function themeIsDark(){
+  try{
+    var probe = getComputedStyle(document.documentElement).getPropertyValue("--bg").trim();
+    var m = probe.match(/^#([0-9a-f]{6})$/i);
+    if(m){
+      var v = parseInt(m[1], 16);
+      var r = (v >> 16) & 255, g = (v >> 8) & 255, b = v & 255;
+      return (0.2126*r + 0.7152*g + 0.0722*b) < 110;
+    }
+  }catch(e){}
+  return false;
+}
+
 var backdropKey = "";
 function drawBackdrop(w, h){
   var cv = document.getElementById("backdrop");
   if(!cv || !cv.getContext) return;
-  var key = w + "x" + h;
+  var dark = themeIsDark();
+  var key = w + "x" + h + (dark ? "-dark" : "-light");
   if(key === backdropKey) return;
   backdropKey = key;
   var dpr = Math.min(2, window.devicePixelRatio || 1);
@@ -58,6 +75,7 @@ function drawBackdrop(w, h){
   if(!ctx) return;
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   ctx.clearRect(0, 0, w, h);
+  if(!dark) return;
   var seed = 1234567;
   function rnd(){ seed = (seed * 1103515245 + 12345) & 0x7fffffff; return seed / 0x7fffffff; }
   var n = Math.round((w * h) / 2600);
@@ -65,12 +83,49 @@ function drawBackdrop(w, h){
     var x = rnd()*w, y = rnd()*h, r = rnd();
     var rad = r < 0.85 ? 0.6 : r < 0.97 ? 1.1 : 1.7;
     var a = 0.12 + rnd()*0.35;
-    ctx.fillStyle = "rgba(232,226,245," + a.toFixed(3) + ")";
+    ctx.fillStyle = "rgba(232,226,245," + a.toFixed(3) + ")";  /* starfield: dark ground only */
     ctx.beginPath(); ctx.arc(x, y, rad, 0, Math.PI*2); ctx.fill();
   }
 }
 
 /* ============================================================ chart */
+
+
+/* Colours that carry meaning come from the data, and each archetype needs a
+   variant that works on a light ground and on a dark one. So every element that
+   takes an archetype colour gets it through a per-element custom property, with
+   both variants attached, and the theme decides which one wins. Inline style
+   (not a presentation attribute) because var() is reliable there. */
+function paintC(node, prop, color){
+  /* Deliberately does NOT set fill/stroke inline. An inline declaration would
+     outrank the theme's stylesheet rule, pinning the element to the dark-ground
+     colour - which is exactly the bug this replaced. The stylesheet decides
+     which variant wins; this only publishes both to the element. */
+  node.style.setProperty("--c-dark", color);
+  node.style.setProperty("--c-light", accessible(color));
+  return node;
+}
+/* Darken toward black, preserving hue, until the colour clears WCAG AA on paper. */
+function accessible(hex){
+  var m = /^#([0-9a-f]{6})$/i.exec(String(hex || ""));
+  if(!m) return hex;
+  function lin(c){ c/=255; return c<=0.03928 ? c/12.92 : Math.pow((c+0.055)/1.055, 2.4); }
+  function lum(r,g,b){ return 0.2126*lin(r)+0.7152*lin(g)+0.0722*lin(b); }
+  function contrast(r,g,b){
+    var a = lum(r,g,b), bg = lum(250,248,244);
+    var hi = Math.max(a,bg), lo = Math.min(a,bg);
+    return (hi+0.05)/(lo+0.05);
+  }
+  var v = parseInt(m[1],16), r = (v>>16)&255, g = (v>>8)&255, b = v&255;
+  if(contrast(r,g,b) >= 4.5) return hex;
+  var lo = 0, hi = 1;
+  for(var i=0;i<24;i++){
+    var k = (lo+hi)/2;
+    if(contrast(Math.round(r*k), Math.round(g*k), Math.round(b*k)) >= 4.5) lo = k; else hi = k;
+  }
+  var rr = Math.round(r*lo), gg = Math.round(g*lo), bb = Math.round(b*lo);
+  return "#" + ((1<<24) + (rr<<16) + (gg<<8) + bb).toString(16).slice(1);
+}
 
 function renderChart(yOverride){
   W = measureW();
@@ -94,9 +149,10 @@ function renderChart(yOverride){
 
   var defs = sEl("defs");
   var grad = sEl("linearGradient", {id:"nowGrad", x1:"0", x2:"1", y1:"0", y2:"0"});
-  grad.appendChild(sEl("stop", {offset:"0", "stop-color":"#ffffff", "stop-opacity":"0"}));
-  grad.appendChild(sEl("stop", {offset:"0.5", "stop-color":"#ffffff", "stop-opacity":"0.16"}));
-  grad.appendChild(sEl("stop", {offset:"1", "stop-color":"#ffffff", "stop-opacity":"0"}));
+  /* stop-color must be a token so the today-plane reads on light and dark alike */
+  grad.appendChild(sEl("stop", {offset:"0", style:"stop-color:var(--now)", "stop-opacity":"0"}));
+  grad.appendChild(sEl("stop", {offset:"0.5", style:"stop-color:var(--now)", "stop-opacity":"0.22"}));
+  grad.appendChild(sEl("stop", {offset:"1", style:"stop-color:var(--now)", "stop-opacity":"0"}));
   defs.appendChild(grad);
   var tgrad = sEl("linearGradient", {id:"trunkGrad", x1:"0", x2:"1", y1:"0", y2:"0"});
   tgrad.appendChild(sEl("stop", {offset:"0", style:"stop-color:var(--trunk)", "stop-opacity":"0.55"}));
@@ -122,7 +178,7 @@ function renderChart(yOverride){
   lay.bundles.forEach(function(b){
     gBundles.appendChild(sEl("rect", {x:0, y:b.y0, width:W, height:Math.max(0, b.y1 - b.y0)}, "bundle-band"));
     var ly = b.y0 - 7;
-    var t = sEl("text", {x:left, y:ly, fill:b.g.color}, "bundle-label");
+    var t = paintC(sEl("text", {x:left, y:ly}, "bundle-label"), "fill", b.g.color);
     t.textContent = b.g.name + "  ";
     var n = sEl("tspan", null, "n"); n.textContent = String(b.count);
     t.appendChild(n);
@@ -275,19 +331,20 @@ function renderBranch(ln, lay, budget, left, right, nx){
     if(endX > flatStart) d += " L" + endX.toFixed(1) + " " + y;
   }
   if(dxRaw > left + 1){
-    g.appendChild(sEl("line", {x1:left, y1:ty, x2:Math.min(dxRaw, right), y2:ty, stroke:color}, "shared"));
+    g.appendChild(paintC(sEl("line", {x1:left, y1:ty, x2:Math.min(dxRaw, right), y2:ty}, "shared"), "stroke", color));
   }
-  g.appendChild(sEl("path", {d:d, stroke:color}, "halo"));
-  g.appendChild(sEl("path", {d:d, stroke:color}, "core"));
+  g.appendChild(paintC(sEl("path", {d:d}, "halo"), "stroke", color));
+  g.appendChild(paintC(sEl("path", {d:d}, "core"), "stroke", color));
 
   if(continues){
-    g.appendChild(sEl("path", {d:"M" + (right+3) + " " + (y-4) + " L" + (right+8) + " " + y + " L" + (right+3) + " " + (y+4),
-      fill:"none", stroke:color, "stroke-width":"1.6"}));
+    g.appendChild(paintC(sEl("path", {
+      d:"M" + (right+3) + " " + (y-4) + " L" + (right+8) + " " + y + " L" + (right+3) + " " + (y+4),
+      fill:"none", "stroke-width":"1.6"}, "continues"), "stroke", color));
   } else if(endX > flatStart + 2 || dxRaw < left){
-    g.appendChild(sEl("circle", {cx:endX, cy:y, r:3.4, stroke:color}, "cap"));
+    g.appendChild(paintC(sEl("circle", {cx:endX, cy:y, r:3.4}, "cap"), "stroke", color));
   }
   if(dxRaw >= left){
-    g.appendChild(sEl("circle", {cx:dxRaw, cy:ty, r:3.8, fill:color}, "fork"));
+    g.appendChild(paintC(sEl("circle", {cx:dxRaw, cy:ty, r:3.8}, "fork"), "fill", color));
   }
   if(dv < NOW && lastYear > NOW && nx > flatStart && nx < endX){
     g.appendChild(sEl("circle", {cx:nx, cy:y, r:2.8}, "cross"));
@@ -330,7 +387,7 @@ function renderBranch(ln, lay, budget, left, right, nx){
     if(x < left - 2 || x > right + 2) return;
     var imp = e.importance || 1;
     var r = (imp >= 3 ? 4.4 : imp === 2 ? 3.2 : 2.1) * lay.nodeScale;
-    g.appendChild(sEl("circle", {cx:x, cy:y, r:r, fill: imp >= 2 ? color : "#8b9bbd"}, "node" + (imp < 2 ? " minor" : "")));
+    g.appendChild(sEl("circle", {cx:x, cy:y, r:r, fill: "var(--chart-ghost)"}, "node" + (imp < 2 ? " minor" : "")));
     if(overtaken(e)) g.appendChild(sEl("circle", {cx:x, cy:y, r:r + 3.6}, "flag"));
   });
 
@@ -382,7 +439,7 @@ function renderPrehistory(ln, lay, host, left, right){
     if(x < left - 2 || x > right + 2) return;
     any = true;
     var cy = ty + ln.side * 7;
-    g.appendChild(sEl("circle", {cx:x, cy:cy, r:(e.importance||1) >= 3 ? 2.8 : 2.1, fill:color}, "node"));
+    g.appendChild(paintC(sEl("circle", {cx:x, cy:cy, r:(e.importance||1) >= 3 ? 2.8 : 2.1}, "node"), "fill", color));
     var cir = sEl("circle", {cx:x, cy:cy, r:7, fill:"transparent", "pointer-events":"all"});
     cir.setAttribute("data-ev", l.id + "|" + i);
     cir.style.cursor = "pointer";

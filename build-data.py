@@ -16,6 +16,7 @@ from datetime import datetime, timezone
 ROOT = os.path.dirname(os.path.abspath(__file__))
 PARTS = os.path.join(ROOT, "data", "parts")
 WORLDS = os.path.join(PARTS, "worlds")
+ASSETS = os.path.join(ROOT, "assets")
 GROUPS_FILE = os.path.join(ROOT, "data", "groups.json")
 OUT = os.path.join(ROOT, "data", "timeline-data.json")
 HTML = os.path.join(ROOT, "timeline.html")
@@ -158,6 +159,92 @@ def id_looks_prefixed(eid, lid, title):
     if len(head) == 2 and len(subwords) >= 2:
         return head == "".join(s[0] for s in subwords[:2]).lower()
     return False
+
+
+
+def load_art(lineage_ids):
+    """Art plates and their provenance, keyed by lineage id.
+
+    Paths are RELATIVE and the files ship in assets/, so the page keeps working
+    over file:// - a data: URI would add ~4 MB to timeline.html and a fetch would
+    be blocked. `kind` distinguishes a generated plate from a public-domain one;
+    the viewer labels generated art as such, because this project's whole claim
+    is that its provenance is legible.
+    """
+    credits_path = os.path.join(ROOT, "assets", "ART-CREDITS.json")
+    if not os.path.exists(credits_path):
+        return {}
+    try:
+        with open(credits_path, "r", encoding="utf-8") as fh:
+            credits = json.load(fh)
+    except (OSError, json.JSONDecodeError) as exc:
+        err("assets/ART-CREDITS.json is unreadable: %s" % exc)
+        return {}
+    out = {}
+    for wid, meta in credits.items():
+        if wid not in lineage_ids:
+            warn("art plate %r has no matching lineage; it will not be shown" % wid)
+            continue
+        lg = os.path.join(ASSETS, "derived", wid + "-lg.jpg")
+        sm = os.path.join(ASSETS, "derived", wid + "-sm.jpg")
+        entry = {
+            "kind": meta.get("kind", "generated"),
+            "model": meta.get("model"),
+            "prompt": meta.get("prompt"),
+            "note": meta.get("note"),
+        }
+        if os.path.exists(lg):
+            entry["lg"] = "assets/derived/" + wid + "-lg.jpg"
+        if os.path.exists(sm):
+            entry["sm"] = "assets/derived/" + wid + "-sm.jpg"
+        if os.path.exists(os.path.join(ASSETS, wid + ".jpg")):
+            entry["full"] = "assets/" + wid + ".jpg"
+        if "lg" not in entry and "full" not in entry:
+            warn("art plate %r has no derived copy; run tools/derive-art.py" % wid)
+            continue
+        out[wid] = entry
+    return out
+
+
+
+def load_pd(lineage_ids):
+    """Real-world counterpart photographs (public domain / CC attribution).
+
+    These are the opposite of the illustrative plates: actual photographs of the
+    real objects a fiction's chronology leans on. Their licence and author are
+    carried through to the UI, because that is what the attribution licences
+    require and because it is the point of them.
+    """
+    path = os.path.join(ROOT, "assets", "PD-CREDITS.json")
+    if not os.path.exists(path):
+        return {}
+    try:
+        with open(path, "r", encoding="utf-8") as fh:
+            credits = json.load(fh)
+    except (OSError, json.JSONDecodeError) as exc:
+        err("assets/PD-CREDITS.json is unreadable: %s" % exc)
+        return {}
+    out = {}
+    for wid, meta in credits.items():
+        if wid not in lineage_ids:
+            warn("PD counterpart %r has no matching lineage; it will not be shown" % wid)
+            continue
+        rel = meta.get("file") or ("assets/pd/" + wid + ".jpg")
+        if not os.path.exists(os.path.join(ROOT, rel)):
+            warn("PD counterpart for %r is missing on disk (%s)" % (wid, rel))
+            continue
+        out[wid] = {
+            "kind": meta.get("kind", "public-domain"),
+            "file": rel,
+            "caption": meta.get("caption", ""),
+            "why": meta.get("why", ""),
+            "license": meta.get("license", ""),
+            "licenseUrl": meta.get("licenseUrl", ""),
+            "author": meta.get("author", ""),
+            "sourceTitle": meta.get("sourceTitle", ""),
+            "sourcePage": meta.get("sourcePage", ""),
+        }
+    return out
 
 
 def load_worlds(lineage_ids):
@@ -368,13 +455,25 @@ def assemble():
         html = fh.read()
 
     def concat(sub, ext):
-        folder = os.path.join(SRC, sub)
-        names = sorted(n for n in os.listdir(folder) if n.endswith(ext)) if os.path.isdir(folder) else []
+        """Concatenate every .ext under src/<sub>, walking subdirectories.
+
+        Recursing matters for src/styles/themes/: the base token file must load
+        before any theme, and plain filename order gives that for free
+        (00-tokens, 10-base, 20-chart, 30-panels, then themes/10-paper, ...).
+        """
+        root = os.path.join(SRC, sub)
+        names = []
+        if os.path.isdir(root):
+            for dirpath, _dirs, files in os.walk(root):
+                for n in sorted(files):
+                    if n.endswith(ext):
+                        names.append(os.path.relpath(os.path.join(dirpath, n), root))
+        names.sort()
         if not names:
             err("src/%s has no %s files" % (sub, ext))
         chunks = []
         for n in names:
-            with open(os.path.join(folder, n), "r", encoding="utf-8") as fh:
+            with open(os.path.join(root, n), "r", encoding="utf-8") as fh:
                 body = fh.read().rstrip() + "\n"
             if "</script" in body.lower() or "</style" in body.lower():
                 err("src/%s/%s contains a closing script/style tag; it would break the page" % (sub, n))
@@ -383,6 +482,21 @@ def assemble():
 
     css, css_names = concat("styles", ".css")
     js, js_names = concat("viewer", ".js")
+
+    # every theme a stylesheet declares must also be listed in the atlas, or the
+    # picker would offer a theme with no styles behind it
+    declared = set(re.findall(r'html\[data-theme="([a-z0-9-]+)"\]', css))
+    atlas_doc = load_atlas() or {}
+    configured = [t.get("id") for t in (atlas_doc.get("themes") or [])]
+    if configured:
+        for tid in configured:
+            if tid and tid not in declared:
+                err("atlas themes lists %r but no stylesheet defines html[data-theme=\"%s\"]" % (tid, tid))
+        for tid in sorted(declared - set(configured)):
+            warn("stylesheet defines theme %r which the atlas does not list; it is unreachable" % tid)
+    else:
+        warn("atlas has no 'themes' list; the style picker will not be offered")
+
     for marker in ("<!-- @styles -->", "<!-- @scripts -->", EMBED_MARK):
         if marker not in html:
             err("src/page.html is missing the %s marker" % marker)
@@ -473,6 +587,8 @@ def main():
 
     lineage_ids = set(l["id"] for l in lineages)
     worlds = load_worlds(lineage_ids)
+    art = load_art(lineage_ids)
+    pd = load_pd(lineage_ids)
     for lid in sorted(lineage_ids):
         if lid not in worlds:
             warn("lineage %r has no world dossier; its World tab will be empty" % lid)
@@ -485,6 +601,8 @@ def main():
             "events": sum(len(l.get("events", [])) for l in lineages),
             "groups": len(groups),
             "worlds": len(worlds),
+            "art": len(art),
+            "pd": len(pd),
             "note": ("Real-world calendar years throughout. In-universe date systems "
                      "(BBY, AG, GE, stardates, millennium notation) are preserved per event "
                      "in the inUniverse field."),
@@ -492,6 +610,8 @@ def main():
         "groups": groups,
         "lineages": lineages,
         "worlds": [worlds[l["id"]] for l in lineages if l["id"] in worlds],
+        "art": art,
+        "pd": pd,
     }
     if atlas:
         payload["atlas"] = atlas

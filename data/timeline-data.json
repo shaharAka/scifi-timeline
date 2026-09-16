@@ -1,11 +1,13 @@
 {
  "meta": {
-  "generated": "2026-09-16T17:54:29Z",
+  "generated": "2026-09-16T18:29:00Z",
   "source": "data/parts/*.json",
   "lineages": 24,
   "events": 237,
   "groups": 5,
   "worlds": 24,
+  "art": 24,
+  "pd": 9,
   "note": "Real-world calendar years throughout. In-universe date systems (BBY, AG, GE, stardates, millennium notation) are preserved per event in the inUniverse field."
  },
  "groups": [
@@ -6185,6 +6187,325 @@
    "spoilerLevel": "mild"
   }
  ],
+ "art": {
+  "dune": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A vast arid desert at dusk under a hazy ochre sky, immense dunes receding to the horizon, a single tiny human figure for scale, heat shimmer, fine sand haze. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, restrained ochre and umber palette, soft airbrush gradients, no outlines. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable copyrighted characters, no spacecraft from existing films.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/dune-lg.jpg",
+   "sm": "assets/derived/dune-sm.jpg",
+   "full": "assets/dune.jpg"
+  },
+  "star-wars": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A scavenged industrial outpost on a pale desert plain at sunset, low domed structures and antenna masts, a small weathered freighter on legs, dust and warm haze, two faint suns low in the sky. Painted in the style of a 1970s airbrushed paperback cover: matte flat colour, sandy ochres against a dusty rose sky, worn and used-looking machinery, no gloss. Wide panoramic composition, adventurous and slightly melancholy. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/star-wars-lg.jpg",
+   "sm": "assets/derived/star-wars-sm.jpg",
+   "full": "assets/star-wars.jpg"
+  },
+  "star-trek": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A clean optimistic orbital view: a blue-white planet curving across frame, a thin bright atmosphere line, a slender elegant vessel silhouetted small against it, sunlight from frame left. Painted as 1960s concept-art gouache: smooth blended gradients, soft edges, cool blues with a warm highlight, faintly retro and smooth. Wide panoramic composition, serene and forward-looking. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/star-trek-lg.jpg",
+   "sm": "assets/derived/star-trek-sm.jpg",
+   "full": "assets/star-trek.jpg"
+  },
+  "foundation": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "An immense grey civic plaza on a city-world, terraced megastructures receding into haze, a lone cloaked figure crossing the empty stone, overcast flat light, monumental scale. Painted in the style of a 1950s magazine illustration: muted greys and dusty golds, precise but soft-edged, restrained and austere. Wide panoramic composition, imperious and cold. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/foundation-lg.jpg",
+   "sm": "assets/derived/foundation-sm.jpg",
+   "full": "assets/foundation.jpg"
+  },
+  "warhammer-40000": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A colossal gothic cathedral-fortress on a polluted industrial world, spires and buttresses lost in smog, ranks of tiny figures on a processional ramp, banners too distant to read, sickly amber light through dust. Painted as a 1980s British fantasy illustration: dense detail, heavy dark outlines, desaturated browns and bone with one bilious green accent. Wide panoramic composition, oppressive and grandiose. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/warhammer-40000-lg.jpg",
+   "sm": "assets/derived/warhammer-40000-sm.jpg",
+   "full": "assets/warhammer-40000.jpg"
+  },
+  "the-matrix": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A rain-slicked empty city street at night, sheer towers of dark glass, wet asphalt reflecting sodium light, sickly green cast over everything, extreme perspective down the canyon of buildings, no people. Rendered as a late-1990s digital composite: high contrast, cold green-black palette, hard specular highlights, clinical and slightly unreal. Wide panoramic composition, uneasy and sterile. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/the-matrix-lg.jpg",
+   "sm": "assets/derived/the-matrix-sm.jpg",
+   "full": "assets/the-matrix.jpg"
+  },
+  "terminator": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A wrecked urban intersection at night, burned-out vehicle frames and twisted rebar, smoke drifting, moonlight through broken concrete, no living figures, cold blue-grey with one dull orange fire glow. Rendered in the style of a 1980s airbrushed action-movie poster: slick dark gradients, hard rim light, chrome and ash palette. Wide panoramic composition, menacing and clinical. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/terminator-lg.jpg",
+   "sm": "assets/derived/terminator-sm.jpg",
+   "full": "assets/terminator.jpg"
+  },
+  "planet-of-the-apes": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A rugged coastline of eroded cliffs at harsh midday, surf breaking on dark rocks, sparse wind-bent vegetation, an empty wilderness with no settlement visible, bleached bone and sea-grey palette. Painted in the style of a 1960s adventure-magazine illustration: broad brush, high contrast, warm sand against cold sea, dramatic but matter-of-fact. Wide panoramic composition, desolate and strange. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/planet-of-the-apes-lg.jpg",
+   "sm": "assets/derived/planet-of-the-apes-sm.jpg",
+   "full": "assets/planet-of-the-apes.jpg"
+  },
+  "mad-max": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "An endless flat desert highway vanishing to a point, heat distortion on the tarmac, rusted wreckage half-buried at the roadside, dust storm on the horizon, bleached blue sky grading to orange. Painted as a 1980s exploitation-film poster: harsh high-contrast airbrush, ochre and rust palette, wide empty composition, no figures. Wide panoramic composition, harsh and kinetic. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/mad-max-lg.jpg",
+   "sm": "assets/derived/mad-max-sm.jpg",
+   "full": "assets/mad-max.jpg"
+  },
+  "fallout": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A retro-futurist suburban street preserved under dust, a family sedan with tail fins and a chrome bumper, boxy 1950s architecture, a distant mushroom cloud on the horizon under a brown sky. Painted as a 1950s advertising illustration gone wrong: cheerful pastel palette, clean commercial rendering, optimistic shapes, quietly horrific content. Wide panoramic composition, cheerful and dreadful at once. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/fallout-lg.jpg",
+   "sm": "assets/derived/fallout-sm.jpg",
+   "full": "assets/fallout.jpg"
+  },
+  "twelve-monkeys": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A frozen abandoned city square seen from above, snow drifted against shuttered storefronts, bare trees, no footprints, flat grey winter light. Painted in the style of a cold-war documentary illustration: restricted palette of grey, white and dust blue, precise and unemotional, empty streets. Wide panoramic composition, silent and abandoned. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/twelve-monkeys-lg.jpg",
+   "sm": "assets/derived/twelve-monkeys-sm.jpg",
+   "full": "assets/twelve-monkeys.jpg"
+  },
+  "children-of-men": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A grey overcast English city street under heavy rain, tall terraced buildings, wet cobbles, boarded shopfronts and faded paintwork, an empty bus shelter, no people. Painted in the style of a 1970s British social-realist illustration: sludgy greens and greys, soft rain-blurred edges, deeply melancholic. Wide panoramic composition, worn and resigned. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/children-of-men-lg.jpg",
+   "sm": "assets/derived/children-of-men-sm.jpg",
+   "full": "assets/children-of-men.jpg"
+  },
+  "interstellar": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A failing agricultural landscape: rows of blighted crops under a flat overcast sky, a lone farmhouse and a pickup truck, dust hanging in the air, everything faded and drained. Painted as a 1930s dust-bowl documentary illustration: muted earth tones, soft light, unromantic, wide and empty. Wide panoramic composition, elegiac. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/interstellar-lg.jpg",
+   "sm": "assets/derived/interstellar-sm.jpg",
+   "full": "assets/interstellar.jpg"
+  },
+  "the-expanse": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A small industrial spacecraft under thrust in hard sunlight against the limb of a rocky planet, no atmospheric haze, harsh specular highlights, deep black shadow, thin panel lines and radiator fins. Rendered as a 1970s NASA technical illustration: precise and engineered, muted greys and blues with one warm accent, documentary rather than dramatic. Wide composition, matter-of-fact. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/the-expanse-lg.jpg",
+   "sm": "assets/derived/the-expanse-sm.jpg",
+   "full": "assets/the-expanse.jpg"
+  },
+  "2001-space-odyssey": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A vast featureless white interior corridor with a single glowing rectangular floor of light receding to a vanishing point, perfectly clean, symmetrical, no figures, no shadow. Rendered in the style of 1960s minimal conceptual set design: pure white and black with one saturated accent, geometric, immaculate. Wide symmetrical composition, serene and inhuman. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/2001-space-odyssey-lg.jpg",
+   "sm": "assets/derived/2001-space-odyssey-sm.jpg",
+   "full": "assets/2001-space-odyssey.jpg"
+  },
+  "contact": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A huge radio telescope dish at dusk in a desert valley, the structure silhouetted against a deep blue sky with first stars, faint horizon glow, no figures. Painted as a 1990s scientific-atlas illustration: cool blues and pale metallics, precise engineering detail, calm and attentive. Wide panoramic composition, expectant. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/contact-lg.jpg",
+   "sm": "assets/derived/contact-sm.jpg",
+   "full": "assets/contact.jpg"
+  },
+  "x-files": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "An empty grey government corridor at night, identical doors receding, flickering fluorescent strip lighting, worn linoleum, no people, a single unattended chair. Rendered in the style of a 1990s institutional documentary illustration: cold desaturated palette, flat light, bureaucratic and anonymous. Wide composition, quietly sinister. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/x-files-lg.jpg",
+   "sm": "assets/derived/x-files-sm.jpg",
+   "full": "assets/x-files.jpg"
+  },
+  "men-in-black": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A vast grey arrivals hall with endless rows of identical benches and ceiling strip lights, polished floor, no people, an absurd sense of scale. Rendered as a 1960s architectural illustration: clean flat greys and pale blue, precise perspective, municipal and deadpan. Wide symmetrical composition, mundane and faintly comic. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/men-in-black-lg.jpg",
+   "sm": "assets/derived/men-in-black-sm.jpg",
+   "full": "assets/men-in-black.jpg"
+  },
+  "harry-potter": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A crooked old stone street of narrow shopfronts at night, gas lamps, leaded windows, chimney pots and uneven rooftops, wet cobbles, warm light spilling onto the street from within. Painted as a classic British children's-book illustration: warm browns and amber, hand-drawn line and wash, cosy and slightly dilapidated. Wide composition, inviting. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/harry-potter-lg.jpg",
+   "sm": "assets/derived/harry-potter-sm.jpg",
+   "full": "assets/harry-potter.jpg"
+  },
+  "buffy": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A small California town high school at night, low mission-style buildings and a flat lawn, a single lit window, palm trees and a water tower silhouetted against a deep indigo sky. Painted in the style of a 1990s American television key art: flat graphic colour, moody blue-violet with warm window light, restrained and slightly camp. Wide composition. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/buffy-lg.jpg",
+   "sm": "assets/derived/buffy-sm.jpg",
+   "full": "assets/buffy.jpg"
+  },
+  "his-dark-materials": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A foggy Victorian riverside at dawn, stone bridges and spires receding into mist, gaslights still burning, moored narrowboats, no figures. Painted as a romantic Victorian oil study: luminous grey-gold atmosphere, soft painterly edges, deeply atmospheric and scholarly. Wide panoramic composition, mysterious. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/his-dark-materials-lg.jpg",
+   "sm": "assets/derived/his-dark-materials-sm.jpg",
+   "full": "assets/his-dark-materials.jpg"
+  },
+  "man-in-the-high-castle": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A monumental authoritarian civic square in a 1940s modernist style, vast stone columns and stepped facades, enormous unreadable banners hanging between buildings, empty pavement, overcast light. Painted as a 1940s propaganda poster: flattened perspective, restricted palette of grey, oxblood red and black, monumental scale. Wide symmetric composition, oppressive. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/man-in-the-high-castle-lg.jpg",
+   "sm": "assets/derived/man-in-the-high-castle-sm.jpg",
+   "full": "assets/man-in-the-high-castle.jpg"
+  },
+  "watchmen": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A rain-soaked 1980s New York street corner at night, neon signs, steam from vents, litter in the gutter, a payphone and a newsstand, no people. Rendered in the style of a 1980s graphic-novel panel: heavy black linework, limited palette of dirty yellow, cyan and magenta, oppressive detail. Wide composition, grim and urban. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/watchmen-lg.jpg",
+   "sm": "assets/derived/watchmen-sm.jpg",
+   "full": "assets/watchmen.jpg"
+  },
+  "fatherland": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A monumental neo-classical government boulevard in a European capital, vast stone facades and bronze eagles, trees in regimented rows, empty and pristine, cold grey daylight. Painted as a 1960s architectural illustration: flat precise colour, pale stone and dark green, terrifyingly orderly. Wide symmetric composition, chilling. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/fatherland-lg.jpg",
+   "sm": "assets/derived/fatherland-sm.jpg",
+   "full": "assets/fatherland.jpg"
+  }
+ },
+ "pd": {
+  "2001-space-odyssey": {
+   "kind": "public-domain",
+   "file": "assets/pd/2001-space-odyssey.jpg",
+   "caption": "Earthrise, photographed from lunar orbit by Apollo 8, 24 December 1968",
+   "why": "The real photograph of the real achievement the film extrapolates from four years later.",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "author": "Apollo 8 crewmember Bill Anders",
+   "sourceTitle": "File:Earthrise.jpg",
+   "sourcePage": "https://commons.wikimedia.org/wiki/File:Earth-moon.jpg"
+  },
+  "children-of-men": {
+   "kind": "open-license",
+   "file": "assets/pd/children-of-men.jpg",
+   "caption": "The London skyline",
+   "why": "The city the film renders as a fortified, exhausted state in 2027.",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "author": "en:User talk:Mewiki (own work)",
+   "sourceTitle": "File:London Skyline.jpg",
+   "sourcePage": "https://commons.wikimedia.org/wiki/File:London_Skyline.jpg"
+  },
+  "contact": {
+   "kind": "open-license",
+   "file": "assets/pd/contact.jpg",
+   "caption": "The Very Large Array radio telescope, New Mexico",
+   "why": "The real instrument and the real technique the novel's Search for Extra-Terrestrial Intelligence depends on.",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "author": "Daniel Wabyick from San Francisco",
+   "sourceTitle": "File:Very Large Array, New Mexico.jpg",
+   "sourcePage": "https://commons.wikimedia.org/wiki/File:Very_Large_Array,_New_Mexico.jpg"
+  },
+  "dune": {
+   "kind": "open-license",
+   "file": "assets/pd/dune.jpg",
+   "caption": "Sand dunes of the Tadrart Acacus, Libya",
+   "why": "Standing in for Arrakis: the desert ecology Herbert actually researched.",
+   "license": "CC BY-SA 2.5",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+   "author": "Luca Galuzzi",
+   "sourceTitle": "File:Libya 4983 Tadrart Acacus Luca Galuzzi 2007.jpg",
+   "sourcePage": "https://commons.wikimedia.org/wiki/File:Libya_4983_Tadrart_Acacus_Luca_Galuzzi_2007.jpg"
+  },
+  "fallout": {
+   "kind": "public-domain",
+   "file": "assets/pd/fallout.jpg",
+   "caption": "The Trinity test, 16 July 1945",
+   "why": "The real detonation behind the fictional Great War of 2077 and its whole aesthetic.",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "author": "Jack W. Aeby, July 16, 1945, Civilian worker at Los Alamos laboratory, working under the aegis of the Manhattan Project.",
+   "sourceTitle": "File:Trinity shot color.jpg",
+   "sourcePage": "https://commons.wikimedia.org/wiki/File:Trinity_shot_color.jpg"
+  },
+  "interstellar": {
+   "kind": "public-domain",
+   "file": "assets/pd/interstellar.jpg",
+   "caption": "Saturn at equinox, imaged by the Cassini orbiter",
+   "why": "The film routes its wormhole past Saturn, using the real planet as the last familiar landmark.",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "author": "NASA / JPL / Space Science Institute",
+   "sourceTitle": "File:Saturn during Equinox.jpg",
+   "sourcePage": "https://commons.wikimedia.org/wiki/File:Saturn_during_Equinox.jpg"
+  },
+  "star-trek": {
+   "kind": "public-domain",
+   "file": "assets/pd/star-trek.jpg",
+   "caption": "The Blue Marble, photographed by Apollo 17, 7 December 1972",
+   "why": "The image that shaped the optimism the series is built on, taken five years after it first aired.",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "author": "NASA/Apollo 17 crew; taken by either Harrison Schmitt or Ron Evans",
+   "sourceTitle": "File:The Blue Marble (remastered).jpg",
+   "sourcePage": "https://commons.wikimedia.org/wiki/File:The_Blue_Marble_(remastered).jpg"
+  },
+  "the-expanse": {
+   "kind": "open-license",
+   "file": "assets/pd/the-expanse.jpg",
+   "caption": "Mars in true colour, imaged by Rosetta's OSIRIS camera",
+   "why": "The world the series spends two centuries terraforming, photographed as it actually is.",
+   "license": "CC BY-SA 3.0 igo",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/deed.en",
+   "author": "ESA & MPS for OSIRIS Team MPS/UPD/LAM/IAA/RSSD/INTA/UPM/DASP/IDA, CC BY-SA 3.0 IGO",
+   "sourceTitle": "File:OSIRIS Mars true color.jpg",
+   "sourcePage": "https://commons.wikimedia.org/wiki/File:OSIRIS_Mars_true_color.jpg"
+  },
+  "warhammer-40000": {
+   "kind": "public-domain",
+   "file": "assets/pd/warhammer-40000.jpg",
+   "caption": "The Pillars of Creation, imaged by the Hubble Space Telescope",
+   "why": "A real glimpse of the galactic scale the setting claims as its canvas.",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "author": "Credit: NASA, Jeff Hester, and Paul Scowen (Arizona State University)",
+   "sourceTitle": "File:Pillars of Creation.jpg",
+   "sourcePage": "https://commons.wikimedia.org/wiki/File:Eagle_nebula_pillars.jpg"
+  }
+ },
  "atlas": {
   "id": "scifi",
   "title": "Where We Are Now - a converging timeline of science fiction",
@@ -6221,6 +6542,39 @@
    }
   ],
   "defaultEra": 0,
+  "defaultTheme": "paper",
+  "themes": [
+   {
+    "id": "paper",
+    "label": "Paper",
+    "swatch": "#faf8f4",
+    "note": "Warm off-white stock, dark ink, ochre trunk. Reads like a printed reference plate."
+   },
+   {
+    "id": "chalk",
+    "label": "Chalk",
+    "swatch": "#f7f8fa",
+    "note": "Cool near-white, clinical and screen-native. No warm cast."
+   },
+   {
+    "id": "atlas",
+    "label": "Atlas",
+    "swatch": "#f6f0e2",
+    "note": "Aged cream stock with laid-paper ruling and serif display type."
+   },
+   {
+    "id": "blueprint",
+    "label": "Blueprint",
+    "swatch": "#eef2f6",
+    "note": "Pale ground with a fine engineering grid and indigo ink."
+   },
+   {
+    "id": "dusk",
+    "label": "Dusk",
+    "swatch": "#171a1f",
+    "note": "A muted, desaturated dark. Deep blue-grey, bone ink, sand trunk."
+   }
+  ],
   "legendHint": "drag to pan · scroll to zoom · click a branch or card to enter that world",
   "sections": {
    "distribution": {

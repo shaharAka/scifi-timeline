@@ -1,0 +1,56 @@
+{
+  "_comment": "Real-world counterparts for worlds in the atlas. These are NOT illustrative art: each is an actual photograph of the real object, place or event that a fiction's chronology leans on, which is the honest visual companion to a chart whose whole claim is provenance. Every entry is fetched from Wikimedia Commons and its licence verified at fetch time; anything that is neither public domain nor a CC attribution licence is refused rather than guessed at.",
+  "allowLicenses": [
+    "public domain",
+    "cc0",
+    "cc by",
+    "cc by-sa"
+  ],
+  "sources": {
+    "2001-space-odyssey": {
+      "file": "Earthrise.jpg",
+      "caption": "Earthrise, photographed from lunar orbit by Apollo 8, 24 December 1968",
+      "why": "The real photograph of the real achievement the film extrapolates from four years later."
+    },
+    "interstellar": {
+      "file": "Saturn during Equinox.jpg",
+      "caption": "Saturn at equinox, imaged by the Cassini orbiter",
+      "why": "The film routes its wormhole past Saturn, using the real planet as the last familiar landmark."
+    },
+    "the-expanse": {
+      "file": "OSIRIS Mars true color.jpg",
+      "caption": "Mars in true colour, imaged by Rosetta's OSIRIS camera",
+      "why": "The world the series spends two centuries terraforming, photographed as it actually is."
+    },
+    "contact": {
+      "file": "Very Large Array, New Mexico.jpg",
+      "caption": "The Very Large Array radio telescope, New Mexico",
+      "why": "The real instrument and the real technique the novel's Search for Extra-Terrestrial Intelligence depends on."
+    },
+    "dune": {
+      "file": "Libya 4983 Tadrart Acacus Luca Galuzzi 2007.jpg",
+      "caption": "Sand dunes of the Tadrart Acacus, Libya",
+      "why": "Standing in for Arrakis: the desert ecology Herbert actually researched."
+    },
+    "fallout": {
+      "file": "Trinity shot color.jpg",
+      "caption": "The Trinity test, 16 July 1945",
+      "why": "The real detonation behind the fictional Great War of 2077 and its whole aesthetic."
+    },
+    "children-of-men": {
+      "file": "London Skyline.jpg",
+      "caption": "The London skyline",
+      "why": "The city the film renders as a fortified, exhausted state in 2027."
+    },
+    "warhammer-40000": {
+      "file": "Pillars of Creation.jpg",
+      "caption": "The Pillars of Creation, imaged by the Hubble Space Telescope",
+      "why": "A real glimpse of the galactic scale the setting claims as its canvas."
+    },
+    "star-trek": {
+      "file": "The Blue Marble (remastered).jpg",
+      "caption": "The Blue Marble, photographed by Apollo 17, 7 December 1972",
+      "why": "The image that shaped the optimism the series is built on, taken five years after it first aired."
+    }
+  }
+}

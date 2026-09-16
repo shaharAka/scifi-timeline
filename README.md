@@ -92,6 +92,26 @@ makes the groups separate cleanly. Hidden-history branches cluster over the last
 century, alternate-past branches sit in the 1930s–80s, collapses and near-future
 branches pile into the 1990s–2100s, and space opera scatters across millennia.
 
+
+## Look and feel
+
+Five switchable themes, **light by default** — Paper, Chalk, Atlas, Blueprint and
+Dusk — chosen from the **Style** picker and remembered between visits. Each theme
+is one CSS file; `data/atlas.json` lists them and the build refuses to ship if the
+two disagree.
+
+Every world carries two kinds of picture:
+
+- an **illustrative plate** — generated art, labelled as generated in the UI;
+- where a genuine one exists, a **real counterpart** — an actual photograph of the
+  real object, place or event the fiction leans on, from Wikimedia Commons, with
+  its author and licence shown and linked.
+
+The distinction is kept visible on purpose. This atlas records a confidence rating
+for every event and the conversion behind every projected date; it should be
+equally straight about which of its pictures are photographs and which are
+inventions.
+
 ## Reading the axis
 
 The dataset spans roughly 2 billion BCE (The Expanse's ring builders) to 48,000

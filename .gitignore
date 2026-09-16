@@ -2,6 +2,21 @@
 # It is fixture data, not project data - regenerate it with `python3 test-fixture.py`.
 data/.test-fixture.json
 
+# Secrets. GEMINI_API_KEY lives in .env and must never be committed.
+.env
+.env.local
+.env.*.local
+
+# What the page actually loads is committed: assets/derived/ (1000px and 560px
+# plates) and assets/pd/ (real counterparts). The 2K source plates are 73 MB and
+# are regenerable from tools/art-direction.json + GEMINI_API_KEY, so they stay
+# local. ART-CREDITS.json and PD-CREDITS.json ARE committed: they hold the
+# prompts, licences and attribution the page displays.
+assets/*.jpg
+assets/*.jpeg
+assets/*.png
+assets/.cache/
+
 # Python
 __pycache__/
 *.pyc

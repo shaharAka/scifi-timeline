@@ -54,7 +54,7 @@ class El {
     this.attributes = Object.create(null);
     this.children = [];
     this.parentNode = null;
-    this.style = {};
+    this.style = { setProperty(k, v) { this[k] = String(v); }, getPropertyValue(k) { return this[k] || ""; } };
     this._text = "";
     this._listeners = Object.create(null);
     this.clientWidth = 1440;
@@ -178,10 +178,11 @@ const ids = [
   "chart", "chartbody", "tip", "chips", "stats", "sort", "find",
   "zoom", "zin", "zout", "reset", "allev", "embedded-data",
   /* dashboard furniture, added when the page became a converging dashboard */
-  "eras", "cards", "drawer", "panes", "dchart", "converge",
+  "eras", "cards", "drawer", "panes", "dchart", "converge", "plate", "themes", "backdrop",
   /* the single-canvas explorer: the side panel and its three modes */
   "panel-index", "panel-world", "panel-about", "tags", "brand", "btn-worlds", "btn-about",
   "pclose-index", "pclose-about", "hero-title", "hero-lede", "notes", "legend-hint", "sec-worlds-blurb",
+  "themes", "backdrop",
 ];
 const store = Object.create(null);
 ids.forEach((id) => { store[id] = new El(id === "chart" ? "svg" : "div"); });
@@ -196,7 +197,9 @@ store["allev"].textContent = "Show all event labels";
    never drift out of sync with the page's actual buttons. */
 const eraButtons = [];
 
+const documentElement = new El("html");
 const document = {
+  documentElement,
   head: new El("head"),
   body: new El("body"),
   getElementById(id) { return store[id] || null; },
@@ -493,6 +496,132 @@ attempt("dashboard panels populated", () => {
     "archetype chips did not render");
 });
 
+
+
+/* ---- art plates: whatever the build shipped must actually reach the DOM ---- */
+attempt("art plates", () => {
+  const art = payload.art || {};
+  const ids = Object.keys(art);
+  if (!ids.length) { soft("art plates: none in this payload, skipped"); return; }
+  let withArt = 0, pending = 0;
+  for (const id of ids) {
+    /* the build publishes `sm` only once a derived copy exists; a world still
+       mid-derivation has credits but no usable file, and is not a failure */
+    if (!art[id].sm) { pending++; continue; }
+    const t = svgNodes().find((n) => n.getAttribute && n.getAttribute("data-lane") === id);
+    if (!t) { soft(`art: no lane for ${id}`); continue; }
+    chart.onpointerup({ clientX: 5, clientY: 5, pointerId: 1, target: t });
+    const htmlOut = store["panel-world"].innerHTML;
+    const a = art[id];
+    if (!htmlOut.includes(a.lg || a.full)) {
+      throw new Error(`no art plate rendered in the drawer for ${id}`);
+    }
+    /* generated work must be labelled as generated, never presented as a still */
+    if (a.kind === "generated" && !/generated/i.test(htmlOut)) {
+      throw new Error(`generated plate for ${id} is not labelled as generated`);
+    }
+    const plate = store["plate"];
+    if (!plate.classList.contains("on")) {
+      throw new Error(`the ambient plate did not activate for ${id}`);
+    }
+    withArt++;
+  }
+  soft(`art plates: ${withArt}/${ids.length} rendered with attribution` +
+       (pending ? `, ${pending} awaiting a derived copy` : ""));
+  if (payload.lineages.length) closeWorldIfOpen();
+});
+
+
+/* ---- real-world counterparts: PD / openly-licensed, with attribution -------
+   The licence and the author must reach the UI. An openly-licensed photograph
+   shown without attribution is a licence breach, not a missing flourish. */
+attempt("real-world counterparts", () => {
+  const pd = payload.pd || {};
+  const ids = Object.keys(pd);
+  if (!ids.length) { soft("counterparts: none in this payload, skipped"); return; }
+  const ALLOWED = ["public domain", "cc0", "cc by", "cc by-sa"];
+  let shown = 0;
+  for (const id of ids) {
+    const m = pd[id];
+    const bad = !ALLOWED.some((a) => String(m.license || "").toLowerCase().includes(a));
+    if (bad) throw new Error(`counterpart for ${id} has a non-open licence: ${m.license}`);
+
+    const t = svgNodes().find((n) => n.getAttribute && n.getAttribute("data-lane") === id);
+    if (!t) { soft(`counterpart: no lane for ${id}`); continue; }
+    openWorldVia(t);
+    const htmlOut = store["panel-world"].innerHTML;
+    if (!htmlOut.includes(m.file)) {
+      throw new Error(`counterpart image not rendered for ${id}`);
+    }
+    const flat = plainText(htmlOut);
+    if (m.author && !flat.includes(m.author.slice(0, 18))) {
+      throw new Error(`counterpart for ${id} is missing its author attribution`);
+    }
+    if (m.license && !flat.toLowerCase().includes(m.license.toLowerCase().slice(0, 12))) {
+      throw new Error(`counterpart for ${id} is missing its licence`);
+    }
+    /* the UI must not blur the two kinds of image together */
+    if (!/Photograph/.test(htmlOut)) {
+      throw new Error(`counterpart for ${id} is not labelled as a photograph`);
+    }
+    shown++;
+    closeWorldIfOpen();
+  }
+  soft(`counterparts: ${shown}/${ids.length} rendered with licence and author`);
+});
+
+/* ---- style picker: every theme must supply an archetype variant ------------
+   A theme that omits --g-<hex>-light leaves every branch resolving to an
+   undefined fill, which renders as invisible rather than as an error. */
+attempt("theme picker", () => {
+  const host = store["themes"];
+  const btns = host.querySelectorAll(".theme-btn");
+  const declared = (payload.atlas && payload.atlas.themes) || [];
+  if (!declared.length) {
+    /* the fixture payload is data-only; themes are an atlas concern */
+    soft("theme picker: payload carries no atlas, skipped");
+    return;
+  }
+  if (declared.length < 2) throw new Error("atlas declares fewer than two themes");
+  if (btns.length !== declared.length) {
+    throw new Error(`picker rendered ${btns.length} buttons for ${declared.length} themes`);
+  }
+  const css = (html.match(/<style>([\s\S]*?)<\/style>/) || [])[1] || "";
+  const groupColors = payload.groups.map((g) => String(g.color).replace("#", ""));
+  /* scope each theme to its own section: a theme block may contain nested
+     selector rules (the atlas theme does), so a naive brace match stops early */
+  const starts = declared.map((t) => ({
+    id: t.id,
+    at: css.indexOf('html[data-theme="' + t.id + '"]'),
+  }));
+  if (starts.some((x) => x.at < 0)) {
+    throw new Error("no stylesheet section for: " +
+      starts.filter((x) => x.at < 0).map((x) => x.id).join(", "));
+  }
+  const ordered = starts.slice().sort((a, b) => a.at - b.at);
+  for (let i = 0; i < ordered.length; i++) {
+    const from = ordered[i].at;
+    const to = i + 1 < ordered.length ? ordered[i + 1].at : css.length;
+    const section = css.slice(from, to);
+    for (const hex of groupColors) {
+      if (!section.includes(`--g-${hex}-light`)) {
+        throw new Error(`theme ${ordered[i].id} is missing --g-${hex}-light; ` +
+                        `those branches would render invisible`);
+      }
+    }
+  }
+  /* switching must actually stamp the attribute */
+  btns[btns.length - 1].onclick();
+  const applied = documentElement.getAttribute("data-theme");
+  if (applied !== btns[btns.length - 1].getAttribute("data-theme-id")) {
+    throw new Error(`clicking a theme did not apply it (data-theme=${applied})`);
+  }
+  btns[0].onclick();
+  if (documentElement.getAttribute("data-theme") !== btns[0].getAttribute("data-theme-id")) {
+    throw new Error("could not switch back to the default theme");
+  }
+});
+
 /* the convergence sequence must arm every branch and enter its running state.
    The previous interactions leave the view zoomed out, where short branches are
    legitimately not drawn, so restore a known framing first. */
@@ -638,6 +767,8 @@ for (const v of ["0", "1000", "500"]) {
 
 /* ------------------------------ report ------------------------------ */
 
+function openWorldVia(target){ chart.onpointerup({ clientX: 5, clientY: 5, pointerId: 1, target }); }
+function closeWorldIfOpen(){ const b = store["panel-world"].querySelectorAll("#dclose")[0]; if (b && b.onclick) b.onclick(); }
 function escapeRe(s) { return String(s).replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
 /* the page HTML-escapes dossier prose before inserting it, so expectations must
    be escaped the same way before being searched for */

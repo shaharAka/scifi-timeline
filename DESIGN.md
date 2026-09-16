@@ -111,24 +111,44 @@ colours that are *not* tokens are archetype colours, because they are data:
 
 Rules of the palette:
 
-- **One dark ground.** `--bg` is a violet-black. Panels are glass on top of
-  it (`--panel`, blurred). There is no light theme; the chart is a night sky.
-- **Ink is five steps** (`--ink-0` .. `--ink-4`) and nothing on the page is pure
-  white except the present day (`--now`). If something needs to read as "now",
-  it is white; otherwise it is not.
-- **The trunk is warm.** `--trunk` is an ivory (`--trunk-dim`, `--trunk-glow`
-  follow it): real history reads as sunlight, every fiction is a cool colour
-  leaving it, and today is the one pure white. Keep the trunk the only warm
-  neutral on the page.
-- **Meaning colours** are reserved: `--flag` (amber) means "real history has
-  contradicted this", and the `--ok/--warn/--bad` trio is only for confidence
-  ratings and stat bars. Never use amber for decoration.
-- **Archetype colours** come from data and must stay distinguishable from each
-  other, from the trunk and from white at 2px stroke on `--bg`. The current five
-  sit roughly 70 degrees apart: lavender `#9d7bff`, mint `#3fd19a`, coral
-  `#ff6b4a`, cyan `#2dd4e6`, pink `#f472d0`. None is amber (reserved) or ivory
-  (the trunk). When adding an archetype, pick a hue at least 40 degrees from its
-  neighbours and check it against the others on the chart, not in a swatch.
+- **Light is the default.** `--bg` is warm paper, `--surface` is the canvas, ink
+  runs dark. The dark option survives as the `dusk` theme, not as the baseline.
+- **Five themes, one structural token file.** `src/styles/00-tokens.css` holds
+  the light default and everything structural; `src/styles/themes/*.css` override
+  only colour. Each theme is an `html[data-theme="..."]` block and the atlas
+  lists them in `data/atlas.json -> themes`; the build fails if the two disagree.
+  A theme is chosen at runtime by the Style picker and remembered in
+  `localStorage`. **No `html[data-theme]` selector may live outside
+  `src/styles/themes/`** - the theme test scans those files by section, and a
+  stray selector elsewhere silently breaks that scan.
+- **Ink is five steps** (`--ink-0` .. `--ink-4`). `--now` is the present day and
+  is the strongest value on the page in every theme: near-black on light, white
+  on dark.
+- **The trunk carries meaning.** `--trunk` is the one colour that is not an
+  archetype and not ink: real history. Warm ochre on paper, deep blue on chalk,
+  sepia on atlas, indigo on blueprint, sand on dusk. Every fiction is an
+  archetype colour leaving it.
+- **Meaning colours** are reserved: `--flag` means "real history has contradicted
+  this", and `--ok/--warn/--bad` are only for confidence ratings and stat bars.
+  Never use them for decoration.
+- **Archetype colours come from data** and are tuned for a dark ground. Each one
+  is therefore paired with a darkened variant per theme, because on paper the
+  data's values measure 1.7-3.0 contrast - below the 4.5 WCAG AA floor, which
+  made branch labels genuinely unreadable. The pairing is mechanical:
+  `90-chrome.js -> colorVars()` emits `--c-dark` and `--c-light`, and
+  `60-chart.js -> paintC()` does the same per SVG node, where `--c-light` is
+  derived by darkening toward black while preserving hue. **The stylesheet
+  decides which wins** - see the archetype rules at the end of `20-chart.css`.
+  An inline `fill` or `stroke` would outrank those rules and pin every branch to
+  the dark-ground colour; `paintC` therefore sets only the variables.
+
+### What was deliberately removed
+
+Gradient-clipped text, radial-gradient page washes, coloured glow shadows,
+coloured stripes down the left edge of cards, and pill radii. They read as
+generated filler rather than as design, and the archetype colour already carries
+the meaning a stripe was pretending to add. A card shows its archetype with a
+2px top rule instead. If you are tempted to reintroduce one, don't.
 
 Type: one sans for prose and titles, one mono for anything that is a year, an
 axis label, a code-ish tag or a small caps heading. Uppercase headings always
@@ -329,3 +349,36 @@ convergence, open a drawer. The checklist that matters:
 - **Wheel zooms the canvas.** There is no page to scroll any more, so this is
   no longer a trap; horizontal wheel and shift+wheel slide along time.
 - **Generated files are committed** so a fresh clone opens with no build step.
+
+---
+
+## 7. Imagery
+
+Two kinds of picture, deliberately kept distinct in the UI:
+
+| | Source | Provenance shown |
+|---|---|---|
+| **Illustrative plate** | `assets/<id>.jpg`, generated from `tools/art-direction.json` | "Illustrative plate, generated with <model> - not a still from any adaptation." |
+| **Real counterpart** | `assets/pd/<id>.jpg`, fetched from Wikimedia Commons by `tools/fetch-pd.py` | author, licence (linked) and source file |
+
+The derived sizes and both credits files are committed; the 2K sources
+are gitignored (73 MB, regenerable from the prompts). All are referenced by
+**relative path**, not embedded: a data URI
+would add megabytes to `timeline.html`, and a runtime fetch is blocked over
+`file://`.
+
+`tools/gen-art.py` prompts describe **technique, era, palette and mood only** -
+never a franchise's characters, vessels, logos or named places. That keeps the
+output clear of derivative work and is also the only kind of prompt the image
+model will accept.
+
+`tools/fetch-pd.py` verifies the licence of every file **at fetch time** against
+`allowLicenses` in `tools/pd-sources.json` and refuses anything else rather than
+guessing. Attribution is not optional: CC BY requires credit and a licence
+reference, so the drawer links both. Only nine worlds have a real counterpart -
+a photograph is used only where a genuine one exists and is verifiably open, and
+padding coverage with guesses would weaken the pipeline rather than strengthen
+the page.
+
+Derived sizes come from `tools/derive-art.py` (1000px drawer header, 560px canvas
+field); the 2K sources are ~55 MB and must never be referenced directly.

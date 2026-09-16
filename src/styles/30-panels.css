@@ -5,8 +5,8 @@
 /* ---------------------------------------------------------------- the explorer panel */
 .panel{
   position:absolute;top:0;right:0;bottom:0;width:min(480px,94%);z-index:30;
-  background:rgba(14,11,28,.93);backdrop-filter:blur(18px);
-  border-left:1px solid var(--line-2);box-shadow:-30px 0 60px rgba(0,0,0,.45);
+  background:var(--panel-solid);
+  border-left:1px solid var(--line-1);box-shadow:var(--panel-shadow);
   overflow-y:auto;overflow-x:hidden;padding:14px 18px 24px;
   transform:translateX(102%);transition:transform var(--t-base) var(--ease-out);
 }
@@ -14,7 +14,7 @@
 .panel-mode{display:none}
 .panel-mode.on{display:block;animation:fade .32s var(--ease-out)}
 .phead{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:0 0 12px}
-.phead h2{font-size:var(--fs-4);font-weight:660;margin:0;letter-spacing:-.01em}
+.phead h2{font-size:var(--fs-4);font-weight:660;margin:0;letter-spacing:-.01em;color:var(--ink-0)}
 .phint{margin:0 0 12px;color:var(--ink-3);font-size:12.5px;line-height:1.5}
 .chips.tags{margin:0 0 12px}
 
@@ -24,41 +24,41 @@
 .cards-head:first-child{margin-top:0}
 .card{
   --c:var(--line-2);position:relative;text-align:left;cursor:pointer;overflow:hidden;width:100%;
-  background:rgba(255,255,255,.025);border:1px solid var(--line-1);border-radius:11px;
-  padding:9px 12px 10px 14px;transition:border-color var(--t-fast),background var(--t-fast),transform var(--t-fast);
+  background:var(--card-bg);border:1px solid var(--line-1);border-radius:var(--r-2);
+  border-top:2px solid var(--c);
+  padding:9px 12px 10px;transition:border-color var(--t-fast),background var(--t-fast);
   color:var(--ink-1);font:inherit;
 }
-.card:hover{border-color:var(--c);background:rgba(255,255,255,.045);transform:translateX(-2px)}
-.card.on{border-color:var(--c);background:rgba(255,255,255,.05);box-shadow:0 0 24px -10px var(--c)}
-.card .edge{position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--c)}
+.card:hover{background:var(--card-bg-hover);border-color:var(--line-3);border-top-color:var(--c)}
+.card.on{background:var(--card-bg-hover);border-color:var(--line-3);border-top-color:var(--c)}
 .card .ttl{font-size:13.5px;font-weight:650;letter-spacing:-.01em;margin:0 0 2px;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
 .card .meta{font-size:10.5px;color:var(--ink-3);font-weight:500;font-family:var(--font-mono)}
 .card .delta{font-size:var(--fs-1);color:var(--ink-2);line-height:1.4;
   display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
-.card .track{position:relative;height:5px;background:#100e20;border-radius:3px;overflow:hidden;margin-top:8px}
-.card .fill{position:absolute;top:0;bottom:0;border-radius:3px;background:linear-gradient(90deg,transparent,var(--c));opacity:.9}
+.card .track{position:relative;height:4px;background:var(--track-bg);border-radius:2px;overflow:hidden;margin-top:8px}
+.card .fill{position:absolute;top:0;bottom:0;border-radius:2px;background:var(--c);opacity:.85}
 .card .nowmark{position:absolute;top:-1px;bottom:-1px;width:1.5px;background:var(--now);opacity:.85}
 .tag{font-size:var(--fs-0);border:1px solid var(--line-2);border-radius:5px;padding:1px 6px;color:var(--ink-3);
-  background:rgba(255,255,255,.025)}
+  background:var(--card-bg)}
 
 /* ---------------------------------------------------------------- drawer */
 .dhead{padding:0 0 12px;border-bottom:1px solid var(--line-1)}
 .dtitle{font-size:22px;font-weight:680;margin:0 0 6px;letter-spacing:-.022em}
 .dmeta{font-size:12px;color:var(--ink-3);display:flex;gap:9px;flex-wrap:wrap;align-items:center}
-.pill{border:1px solid var(--line-2);border-radius:999px;padding:2px 10px;font-size:11px;color:var(--ink-2)}
+.pill{border:1px solid var(--line-2);border-radius:var(--r-1);padding:2px 8px;font-size:11px;color:var(--ink-2)}
 .tabs{display:flex;gap:4px;padding:10px 0 0;border-bottom:1px solid var(--line-1);flex-wrap:wrap}
-.tab{font-size:var(--fs-2);padding:7px 13px;border-radius:9px 9px 0 0;cursor:pointer;
+.tab{font-size:var(--fs-2);padding:7px 13px;border-radius:var(--r-1) var(--r-1) 0 0;cursor:pointer;
   color:var(--ink-3);border:1px solid transparent;border-bottom:none;background:transparent;
   transition:color var(--t-fast),background var(--t-fast)}
-.tab:hover{color:var(--ink-1);background:rgba(255,255,255,.03)}
-.tab.on{color:var(--ink-0);background:rgba(255,255,255,.06);border-color:var(--line-1);font-weight:620}
+.tab:hover{color:var(--ink-0);background:var(--card-bg)}
+.tab.on{color:var(--ink-0);background:var(--card-bg-hover);border-color:var(--line-1);font-weight:620}
 .panes{padding:14px 0 6px}
 .pane{display:none}
 .pane.on{display:block;animation:fade .32s var(--ease-out)}
 @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .dgrid{display:grid;grid-template-columns:1fr;gap:18px}
-.delta{border-left:3px solid;padding:11px 14px;border-radius:0 10px 10px 0;
-  background:rgba(255,255,255,.04);font-size:13.5px;color:var(--ink-2);line-height:1.6}
+.delta{border-top:2px solid;padding:10px 12px;border-radius:var(--r-2);
+  background:var(--card-bg);font-size:13.5px;color:var(--ink-2);line-height:1.6}
 .delta .dl{font-size:var(--fs-0);text-transform:uppercase;letter-spacing:.1em;font-weight:750;
   color:var(--ink-3);display:block;margin-bottom:4px}
 .prose p{margin:0 0 11px;font-size:13.5px;line-height:1.65;color:var(--ink-2)}
@@ -71,7 +71,7 @@
 table.ev{width:100%;border-collapse:collapse;font-size:var(--fs-2)}
 table.ev th{text-align:left;font-size:var(--fs-0);text-transform:uppercase;letter-spacing:.09em;
   color:var(--ink-3);font-weight:750;padding:0 9px 8px 0;border-bottom:1px solid var(--line-1)}
-table.ev td{padding:9px 9px 9px 0;border-bottom:1px solid rgba(29,41,66,.55);
+table.ev td{padding:9px 9px 9px 0;border-bottom:1px solid var(--line-1);
   vertical-align:top;color:var(--ink-2)}
 table.ev td.y{font-family:var(--font-mono);color:var(--ink-1);white-space:nowrap;
   font-weight:600;font-size:12px}
@@ -79,17 +79,17 @@ table.ev td.t{color:var(--ink-1);font-weight:600}
 table.ev tr:last-child td{border-bottom:none}
 table.ev .iu{font-size:11px;color:var(--ink-3);display:block;margin-top:2px}
 .conf{font-size:var(--fs-0);border-radius:5px;padding:1px 6px;white-space:nowrap}
-.conf.high{background:rgba(52,211,153,.15);color:#6ee7b7}
-.conf.medium{background:rgba(255,209,102,.15);color:var(--flag)}
-.conf.low{background:rgba(248,113,113,.17);color:#fca5a5}
+.conf.high{background:color-mix(in srgb, var(--ok) 14%, transparent);color:var(--ok)}
+.conf.medium{background:color-mix(in srgb, var(--flag) 14%, transparent);color:var(--flag)}
+.conf.low{background:color-mix(in srgb, var(--bad) 14%, transparent);color:var(--bad)}
 .tier{font-size:var(--fs-0);color:var(--ink-3);font-family:var(--font-mono)}
 .enote{font-size:11px;color:var(--ink-3);display:block;margin-top:3px;font-style:italic}
 .tilegrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:9px}
-.tile{background:rgba(255,255,255,.032);border:1px solid var(--line-1);border-radius:11px;padding:11px 13px}
+.tile{background:var(--card-bg);border:1px solid var(--line-1);border-radius:var(--r-2);padding:11px 13px}
 .tile .n{font-size:13px;font-weight:640;color:var(--ink-1);margin-bottom:3px}
 .tile .b{font-size:12px;color:var(--ink-2);line-height:1.5}
 .tile.link{cursor:pointer;transition:.18s}
-.tile.link:hover{border-color:#5f7cc4;background:rgba(95,124,196,.1)}
+.tile.link:hover{border-color:var(--line-3);background:var(--card-bg-hover)}
 .tierlabel{font-size:var(--fs-0);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);
   font-weight:750;margin:20px 0 10px}
 .tierlabel:first-child{margin-top:0}
@@ -100,16 +100,16 @@ table.ev .iu{font-size:11px;color:var(--ink-3);display:block;margin-top:2px}
 
 /* ---------------------------------------------------------------- tooltip */
 #tip{position:fixed;z-index:80;pointer-events:none;opacity:0;max-width:380px;
-  padding:11px 13px 12px;border-radius:11px;background:rgba(9,7,18,.97);
-  border:1px solid var(--line-2);border-left:3px solid var(--c,var(--line-2));
-  box-shadow:0 20px 50px rgba(0,0,0,.65),0 0 30px -10px var(--c,transparent);transition:opacity .12s}
+  padding:11px 13px 12px;border-radius:var(--r-2);background:var(--tip-bg);
+  border:1px solid var(--line-2);border-top:2px solid var(--c,var(--line-2));
+  box-shadow:var(--tip-shadow);transition:opacity .12s}
 #tip.show{opacity:1;animation:tipin .2s var(--ease-out)}
 @keyframes tipin{from{opacity:0;transform:translateY(6px) scale(.985)}to{opacity:1;transform:none}}
 #tip .tt-dist{display:flex;justify-content:space-between;gap:12px;font-size:11px;color:var(--ink-2);margin-top:9px;font-family:var(--font-mono)}
 #tip .tt-dist b{color:var(--ink-0);font-weight:650}
 #tip .tt-bar{position:relative;height:3px;border-radius:2px;background:var(--line-1);margin-top:6px;color:var(--c,var(--ink-3))}
 #tip .tt-bar i{position:absolute;left:0;top:0;bottom:0;border-radius:2px;background:currentColor;opacity:.35}
-#tip .tt-bar span{position:absolute;top:-2.5px;width:8px;height:8px;border-radius:50%;background:currentColor;margin-left:-4px;box-shadow:0 0 8px currentColor}
+#tip .tt-bar span{position:absolute;top:-2.5px;width:8px;height:8px;border-radius:50%;background:currentColor;margin-left:-4px}
 #tip .tt-bar em{position:absolute;top:-4px;bottom:-4px;width:1px;background:var(--now);opacity:.8}
 #tip .tt-h{font-size:13.5px;font-weight:650;color:var(--ink-0);margin-bottom:3px}
 #tip .tt-m{font-size:11px;color:var(--ink-3);margin-bottom:7px}
@@ -124,4 +124,4 @@ table.ev .iu{font-size:11px;color:var(--ink-3);display:block;margin-top:2px}
 .note p:last-child{margin-bottom:0}
 .note b{color:var(--ink-1)}
 .note i{color:var(--ink-2)}
-.note code{color:#a5b4fc;font-family:var(--font-mono);font-size:12px}
+.note code{color:var(--trunk);font-family:var(--font-mono);font-size:12px}
