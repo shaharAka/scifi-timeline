@@ -53,9 +53,7 @@ function renderEras(){
 }
 
 function setDomain(a, b){
-  view.c = (a + b) / 2;
-  view.hs = clampSpan(Math.max(SPAN_MIN, (b - a) / 2));
-  renderChart();
+  tweenTo((a + b) / 2, Math.max(SPAN_MIN, (b - a) / 2), null, CAM_MS);
 }
 
 /* --- camera ---------------------------------------------------------------- */
@@ -63,22 +61,75 @@ function setDomain(a, b){
 /* zoom by factor g (>1 zooms out) keeping the point (mx,my) fixed on screen;
    the time window and the lane pitch move together so the tree behaves like
    one picture */
-function zoomAt(g, mx, my){
+function zoomAt(g, mx, my, ms){
   var at = yearForPx(mx);
   var old = view.hs;
-  view.hs = clampSpan(view.hs * g);
-  var gh = view.hs / old;
-  view.c = at + (view.c - at) * gh;
-  view.c = Math.max(-OFF_CAP, Math.min(OFF_CAP, view.c));
+  var hs1 = clampSpan(view.hs * g);
+  var gh = hs1 / old;
+  var c1 = Math.max(-OFF_CAP, Math.min(OFF_CAP, at + (view.c - at) * gh));
+  /* Lane pitch moves with the zoom, because the tree should behave like one
+     picture. panY is NOT re-anchored to the cursor here: doing that while Z also
+     changes drove the content off the top of the viewport on the first wheel
+     step. Vertical framing is fit()'s job; zoom only changes the pitch. */
   var Zn = clamp(Z / g, Z_MIN, Z_MAX);
-  var ys1 = (my - panY) / Z;         /* scene y at zoom 1 under the cursor */
-  panY = my - ys1 * Zn;
-  Z = Zn;
+  var pan1 = panY;
+  if(ms){
+    var c0 = view.c, h0 = view.hs, z0 = Z, p0 = panY, t0 = performance.now();
+    cancelAnimationFrame(camRaf);
+    (function step(now){
+      var p = Math.min(1, (now - t0) / ms);
+      var e = 1 - Math.pow(1 - p, 3);
+      view.c = c0 + (c1 - c0) * e;
+      view.hs = h0 + (hs1 - h0) * e;
+      Z = z0 + (Zn - z0) * e;
+      panY = p0 + (pan1 - p0) * e;
+      renderChart();
+      if(p < 1) camRaf = requestAnimationFrame(step);
+    })(t0);
+    return;
+  }
+  view.c = c1; view.hs = hs1; Z = Zn; panY = pan1;
   renderChart();
 }
-function zoomBy(g){ zoomAt(g, anchorX(), Hv / 2); }
+function zoomBy(g, ms){ zoomAt(g, anchorX(), Hv / 2, ms); }
 
 /* fit: the home era, and a zoom that puts the whole tree in the viewport */
+/* Open on the WHOLE tree: every world visible at once, at the smallest lane
+   pitch, so the first thing you see is the shape of the argument. Zooming in
+   from here is the reader's move, not the page's. */
+function fitEverything(){
+  view.c = (ATLAS_FULL.from + ATLAS_FULL.to) / 2;
+  view.hs = clampSpan((ATLAS_FULL.to - ATLAS_FULL.from) / 2);
+  var lay0 = layout(visibleLineages());
+  Z = clamp((Hv - 12) / Math.max(1, lay0.height1), Z_MIN, 1.15);
+  panY = 0;
+  renderChart();
+  var host = document.getElementById("eras");
+  if(host) Array.prototype.forEach.call(host.querySelectorAll(".era"), function(x){
+    x.classList.remove("on");
+  });
+}
+
+/* Camera moves are tweened, not snapped: a jump reads as a redraw, a tween
+   reads as moving. Reduced-motion users get the destination directly. */
+var camRaf = 0;
+function tweenTo(c, hs, z, ms){
+  if(REDUCED || !ms){ view.c = c; view.hs = hs; if(z != null) Z = z; renderChart(); return; }
+  cancelAnimationFrame(camRaf);
+  var c0 = view.c, h0 = view.hs, z0 = Z;
+  var hs1 = clampSpan(hs), z1 = (z == null ? z0 : clamp(z, Z_MIN, 1.15));
+  var t0 = performance.now();
+  (function step(now){
+    var p = Math.min(1, (now - t0) / ms);
+    var e = 1 - Math.pow(1 - p, 3);
+    view.c = c0 + (c - c0) * e;
+    view.hs = h0 + (hs1 - h0) * e;
+    Z = z0 + (z1 - z0) * e;
+    renderChart();
+    if(p < 1) camRaf = requestAnimationFrame(step);
+  })(t0);
+}
+
 function fitAll(){
   var h = homeEra();
   view.c = (h.from + h.to) / 2;
@@ -100,12 +151,14 @@ function setPanel(mode){
   var d = document.getElementById("drawer");
   d.setAttribute("data-mode", panelMode);
   d.classList.toggle("open", !!panelMode);
-  ["index","world","about"].forEach(function(m){
+  ["index","news","world","about"].forEach(function(m){
     var el = document.getElementById("panel-" + m);
     if(el) el.classList.toggle("on", m === panelMode);
   });
   var bw = document.getElementById("btn-worlds"), ba = document.getElementById("btn-about");
+  var bn = document.getElementById("btn-news");
   if(bw) bw.classList.toggle("on", panelMode === "index");
+  if(bn) bn.classList.toggle("on", panelMode === "news");
   if(ba) ba.classList.toggle("on", panelMode === "about");
   if(panelMode) d.scrollTop = 0;
 }
@@ -138,60 +191,9 @@ function renderAtlasCopy(){
 
 
 
-/* Inline markup cannot read a per-element custom property the way the chart
-   does, so each place that colours something by archetype declares both
-   variants inline and lets the theme pick. Keep this the only way an archetype
-   colour reaches markup - it is what makes light themes legible. */
+/* Inline markup uses the archetype's single accessible value. */
 function colorVars(hex){
-  return '--c-dark:' + esc(hex) + ';--c-light:var(--g-' + String(hex).replace('#','') + '-light)';
-}
-
-/* ============================================================ style picker */
-/* Themes are pure CSS: each one is an html[data-theme="..."] block in
-   src/styles/themes/. Everything here does is stamp that attribute, remember
-   the choice, and repaint the few things drawn to canvas rather than styled. */
-var THEME_KEY = "scifi-timeline-theme";
-
-function themeList(){
-  return (ATLAS && ATLAS.themes) || [];
-}
-function applyTheme(id, persist){
-  var list = themeList();
-  if(!list.length) return;
-  var ok = list.some(function(t){ return t.id === id; });
-  if(!ok) id = list[0].id;
-  document.documentElement.setAttribute("data-theme", id);
-  if(persist){ try{ localStorage.setItem(THEME_KEY, id); }catch(e){} }
-  Array.prototype.forEach.call(document.querySelectorAll(".theme-btn"), function(b){
-    b.classList.toggle("on", b.getAttribute("data-theme-id") === id);
-  });
-  /* the starfield is painted to a canvas, so a theme change must redraw it */
-  backdropKey = "";
-  renderChart();
-}
-function themeInitial(){
-  var list = themeList();
-  if(!list.length) return null;
-  var stored = null;
-  try{ stored = localStorage.getItem(THEME_KEY); }catch(e){}
-  if(stored && list.some(function(t){ return t.id === stored; })) return stored;
-  return (ATLAS && ATLAS.defaultTheme) || list[0].id;
-}
-function renderThemes(){
-  var host = document.getElementById("themes");
-  if(!host) return;
-  var list = themeList();
-  if(list.length < 2){ host.style.display = "none"; return; }
-  host.innerHTML = list.map(function(t){
-    return '<button class="theme-btn" data-theme-id="' + esc(t.id) + '" title="' +
-      esc(t.note || t.label) + '">' +
-      '<span class="sw" style="background:' + esc(t.swatch || "#fff") + '"></span>' +
-      esc(t.label) + '</button>';
-  }).join("");
-  Array.prototype.forEach.call(host.querySelectorAll(".theme-btn"), function(b){
-    b.onclick = function(){ applyTheme(b.getAttribute("data-theme-id"), true); };
-  });
-  applyTheme(themeInitial(), false);
+  return "--c-light:var(--g-" + String(hex).replace("#","") + "-light)";
 }
 
 function on(id, evt, fn){ var el = document.getElementById(id); if(el) el[evt] = fn; }
@@ -201,21 +203,20 @@ function init(){
   NOW = new Date().getFullYear();
 
   renderAtlasCopy();
-  renderThemes();
   renderStats();
   renderEras();
   renderChips();
   renderTags();
   W = measureW(); Hv = measureH();
-  fitAll();
+  fitEverything();
   renderCards();
 
-  on("zin", "onclick", function(){ zoomBy(0.7); });
-  on("zout", "onclick", function(){ zoomBy(1.4); });
-  on("reset", "onclick", fitAll);
+  on("zin", "onclick", function(){ zoomBy(0.7, CAM_MS); });
+  on("zout", "onclick", function(){ zoomBy(1.4, CAM_MS); });
+  on("reset", "onclick", function(){ fitEverything(); });
   on("zoom", "oninput", function(){
     var target = clampSpan(SPAN_MIN * Math.pow(SPAN_MAX/SPAN_MIN, Number(this.value)/1000));
-    zoomBy(target / view.hs);
+    zoomBy(target / view.hs, 0);
   });
   on("find", "oninput", function(){
     q = this.value.trim().toLowerCase();
@@ -231,6 +232,7 @@ function init(){
     renderChart();
   };
   on("btn-worlds", "onclick", function(){ togglePanel("index"); });
+  on("btn-news", "onclick", function(){ renderNews(); togglePanel("news"); });
   on("btn-about", "onclick", function(){ togglePanel("about"); });
   on("pclose-index", "onclick", function(){ setPanel(""); });
   on("pclose-about", "onclick", function(){ setPanel(""); });

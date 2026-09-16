@@ -14,51 +14,53 @@
    ========================================================================== */
 :root{
   /* ---- surfaces -------------------------------------------------------- */
-  --bg:#faf8f4;            /* page */
-  --bg-2:#f2efe8;          /* cards, tooltips, the paper stock */
-  --surface:#ffffff;       /* the canvas itself, the brightest plane */
-  --panel:rgba(255,255,255,.86);
-  --panel-solid:#ffffff;
-  --line-1:#e0dcd2;        /* hairline */
-  --line-2:#c9c4b7;        /* must read */
-  --line-3:#a9a396;        /* leaders, hover */
+  --bg:#eef2f6;            /* page */
+  --bg-2:#e4eaf1;          /* cards, tooltips, the paper stock */
+  --surface:#f8fbfd;       /* the canvas itself, the brightest plane */
+  --panel:rgba(248,251,253,.9);
+  --panel-solid:#f8fbfd;
+  --line-1:#d2dbe4;        /* hairline */
+  --line-2:#b0bdca;        /* must read */
+  --line-3:#8494a6;        /* leaders, hover */
 
   /* ---- ink: five steps -------------------------------------------------- */
-  --ink-0:#14161a;
-  --ink-1:#2b2f36;
-  --ink-2:#5b6169;
-  --ink-3:#878d95;
-  --ink-4:#adb2b8;
+  --ink-0:#101c28;
+  --ink-1:#22323f;
+  --ink-2:#4a5c6b;
+  --ink-3:#74879a;
+  --ink-4:#9fafbd;
 
   /* ---- the shared axis -------------------------------------------------- */
-  --trunk:#8a6a2f;         /* real history: deep warm ochre ink on paper */
-  --trunk-dim:#c4b393;     /* the years we have not reached */
-  --trunk-glow:rgba(138,106,47,.16);
-  --now:#14161a;           /* today - the darkest thing on a light page */
-  --now-glow:rgba(20,22,26,.10);
+  --trunk:#1d3f6b;         /* real history: deep warm ochre ink on paper */
+  --trunk-dim:#9fb4ca;     /* the years we have not reached */
+  --trunk-glow:rgba(29,63,107,.15);
+  --now:#101c28;           /* today - the darkest thing on a light page */
+  --now-glow:rgba(16,28,40,.1);
 
   /* ---- meaning colours -------------------------------------------------- */
-  --flag:#a8750a;          /* real history has since contradicted this */
-  --ok:#2f8f5b;
-  --warn:#a8750a;
-  --bad:#b4453c;
+  --flag:#8f6408;          /* real history has since contradicted this */
+  --ok:#1f7a55;
+  --warn:#8f6408;
+  --bad:#a03a34;
 
   /* ---- chrome ----------------------------------------------------------- */
-  --bg-wash:none;                       /* themeable page texture */
-  --card-bg:rgba(20,22,26,.03);
-  --card-bg-hover:rgba(20,22,26,.055);
-  --tip-bg:#ffffff;
-  --tip-shadow:0 8px 24px rgba(20,22,26,.13);
-  --panel-shadow:-12px 0 32px rgba(20,22,26,.09);
-  --stat-track:rgba(20,22,26,.08);
-  --track-bg:rgba(20,22,26,.07);
-  --accent:#3f6ea8;                     /* focus rings, the one interactive blue */
-  --slider-thumb:#ffffff;
+  --bg-wash:
+    repeating-linear-gradient(0deg, rgba(29,63,107,.055) 0 1px, transparent 1px 24px),
+    repeating-linear-gradient(90deg, rgba(29,63,107,.055) 0 1px, transparent 1px 24px);                       /* themeable page texture */
+  --card-bg:rgba(16,28,40,.03);
+  --card-bg-hover:rgba(16,28,40,.055);
+  --tip-bg:#f8fbfd;
+  --tip-shadow:0 8px 22px rgba(16,28,40,.13);
+  --panel-shadow:-12px 0 30px rgba(16,28,40,.1);
+  --stat-track:rgba(16,28,40,.08);
+  --track-bg:rgba(16,28,40,.07);
+  --accent:#1d5c9e;                     /* focus rings, the one interactive blue */
+  --slider-thumb:#f8fbfd;
 
   /* ---- chart ------------------------------------------------------------ */
-  --chart-grid:rgba(20,22,26,.07);
-  --chart-band:rgba(20,22,26,.028);
-  --chart-ghost:#9aa0a8;
+  --chart-grid:rgba(16,28,40,.07);
+  --chart-band:rgba(16,28,40,.03);
+  --chart-ghost:#90a2b4;
 
   /* ---- type ------------------------------------------------------------- */
   --font-sans:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
@@ -73,15 +75,30 @@
   --track:.11em;
 
   /* ---- shape: modest radii only. Nothing pill-shaped, nothing 16px. ----- */
-  --r-1:4px;
-  --r-2:6px;
-  --r-3:8px;
+  --r-1:3px;
+  --r-2:4px;
+  --r-3:6px;
 
   /* ---- motion ----------------------------------------------------------- */
   --ease-out:cubic-bezier(.22,.68,.24,1);
   --t-fast:.16s;
   --t-base:.32s;
   --t-slow:.6s;
+
+  /* ---- archetype colours on this ground ---------------------------------
+     The data's values are tuned for a dark page and measure 1.7-3.0 contrast
+     on this pale ground, under the 4.5 AA floor for text, so each is darkened
+     toward black while keeping its hue. One palette now, so these are plain
+     values rather than a per-theme indirection. */
+  --g-9d7bff-light:#6f52bd;
+  --g-3fd19a-light:#1f7355;
+  --g-ff6b4a-light:#b34a32;
+  --g-2dd4e6-light:#16707b;
+  --g-f472d0-light:#a0488a;
+
+  /* how strongly a world's art plate shows behind the chart */
+  --plate-opacity:.13;
+  --plate-blend:normal;
 
   /* ---- legacy aliases --------------------------------------------------- */
   --ink:var(--ink-1);

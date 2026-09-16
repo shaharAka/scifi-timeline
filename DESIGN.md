@@ -111,36 +111,28 @@ colours that are *not* tokens are archetype colours, because they are data:
 
 Rules of the palette:
 
-- **Light is the default.** `--bg` is warm paper, `--surface` is the canvas, ink
-  runs dark. The dark option survives as the `dusk` theme, not as the baseline.
-- **Five themes, one structural token file.** `src/styles/00-tokens.css` holds
-  the light default and everything structural; `src/styles/themes/*.css` override
-  only colour. Each theme is an `html[data-theme="..."]` block and the atlas
-  lists them in `data/atlas.json -> themes`; the build fails if the two disagree.
-  A theme is chosen at runtime by the Style picker and remembered in
-  `localStorage`. **No `html[data-theme]` selector may live outside
-  `src/styles/themes/`** - the theme test scans those files by section, and a
-  stray selector elsewhere silently breaks that scan.
+- **One palette: Blueprint.** `--bg` is a pale cool ground with a faint 24px
+  engineering grid, `--surface` is the canvas, ink runs dark, and the trunk is a
+  deep indigo. The five-theme picker was built, evaluated, and then removed by
+  the owner in favour of this one, so `src/styles/00-tokens.css` is now the whole
+  palette and `src/styles/themes/` is gone. Adding a second palette back means
+  reintroducing that indirection; do it only for a reason.
 - **Ink is five steps** (`--ink-0` .. `--ink-4`). `--now` is the present day and
   is the strongest value on the page in every theme: near-black on light, white
   on dark.
 - **The trunk carries meaning.** `--trunk` is the one colour that is not an
-  archetype and not ink: real history. Warm ochre on paper, deep blue on chalk,
-  sepia on atlas, indigo on blueprint, sand on dusk. Every fiction is an
-  archetype colour leaving it.
+  archetype and not ink: real history. It is a deep indigo here, and every
+  fiction is an archetype colour leaving it.
 - **Meaning colours** are reserved: `--flag` means "real history has contradicted
   this", and `--ok/--warn/--bad` are only for confidence ratings and stat bars.
   Never use them for decoration.
-- **Archetype colours come from data** and are tuned for a dark ground. Each one
-  is therefore paired with a darkened variant per theme, because on paper the
-  data's values measure 1.7-3.0 contrast - below the 4.5 WCAG AA floor, which
-  made branch labels genuinely unreadable. The pairing is mechanical:
-  `90-chrome.js -> colorVars()` emits `--c-dark` and `--c-light`, and
-  `60-chart.js -> paintC()` does the same per SVG node, where `--c-light` is
-  derived by darkening toward black while preserving hue. **The stylesheet
-  decides which wins** - see the archetype rules at the end of `20-chart.css`.
-  An inline `fill` or `stroke` would outrank those rules and pin every branch to
-  the dark-ground colour; `paintC` therefore sets only the variables.
+- **Archetype colours come from data and are darkened at paint time.** They are
+  tuned for a dark ground and measure 1.7-3.0 contrast on this one, below the
+  4.5 WCAG AA floor, which made branch labels genuinely unreadable. `paintC()`
+  in `60-chart.js` darkens toward black while preserving hue until the colour
+  clears AA on `--bg`, and the markup side reads the matching token
+  (`--g-<hex>-light`, defined once in `00-tokens.css`) via `colorVars()`. The
+  test suite verifies every shipped token clears 4.5:1 on the page ground.
 
 ### What was deliberately removed
 

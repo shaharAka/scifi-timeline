@@ -59,13 +59,26 @@ not change.
 ---
 
 
+### News
+
+`data/news.json` is hand-curated: date, headline, summary, source, and the world
+ids it touches. `build-data.py -> load_news()` is strict - a malformed date or an
+unknown world id is an ERROR, not a silent drop, because a chronology claiming a
+research standard must not ship a wrong date. It reaches the page twice: a list in
+the News panel, and a band beside the today line drawn by `87-news.js`.
+
+The band is deliberately anchored to the TODAY line rather than positioned by
+each item's date. On a symmetric-log axis spanning 100,000 years, 2022 to 2026 is
+a fraction of a pixel, so "positioned by date" would be a lie told at sub-pixel
+scale. Each row names its own date instead.
+
 ### Visual design and imagery (added after the tree rewrite)
 
-- **Five switchable themes**, light by default: paper, chalk, atlas, blueprint,
-  dusk. Defined in `src/styles/themes/*.css`, selected by `data/atlas.json ->
-  themes`, chosen at runtime by the Style picker, remembered in localStorage.
-  `DESIGN.md` §2 is the contract; the build and the test suite both check that
-  every declared theme exists and carries an archetype colour variant.
+- **One palette: Blueprint.** A pale cool ground with a faint engineering grid,
+  indigo ink, deep-blue trunk. Five switchable themes were built and evaluated,
+  then removed by the owner in favour of this one, so `src/styles/themes/` no
+  longer exists and `src/styles/00-tokens.css` is the whole palette. `DESIGN.md`
+  §2 is the contract.
 - **Two kinds of image, never blurred together.** `assets/` holds generated
   illustrative plates (one per world, from `tools/gen-art.py`), and `assets/pd/`
   holds real photographs of real objects, fetched from Wikimedia Commons by

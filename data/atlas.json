@@ -35,39 +35,6 @@
   }
  ],
  "defaultEra": 0,
- "defaultTheme": "paper",
- "themes": [
-  {
-   "id": "paper",
-   "label": "Paper",
-   "swatch": "#faf8f4",
-   "note": "Warm off-white stock, dark ink, ochre trunk. Reads like a printed reference plate."
-  },
-  {
-   "id": "chalk",
-   "label": "Chalk",
-   "swatch": "#f7f8fa",
-   "note": "Cool near-white, clinical and screen-native. No warm cast."
-  },
-  {
-   "id": "atlas",
-   "label": "Atlas",
-   "swatch": "#f6f0e2",
-   "note": "Aged cream stock with laid-paper ruling and serif display type."
-  },
-  {
-   "id": "blueprint",
-   "label": "Blueprint",
-   "swatch": "#eef2f6",
-   "note": "Pale ground with a fine engineering grid and indigo ink."
-  },
-  {
-   "id": "dusk",
-   "label": "Dusk",
-   "swatch": "#171a1f",
-   "note": "A muted, desaturated dark. Deep blue-grey, bone ink, sand trunk."
-  }
- ],
  "legendHint": "drag to pan · scroll to zoom · click a branch or card to enter that world",
  "sections": {
   "distribution": {

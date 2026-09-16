@@ -10,37 +10,44 @@
 <div class="app">
 
 <header class="topbar">
-  <div class="bar row1">
+  <div class="bar">
     <div class="brand" id="brand"><span class="brand-a">Every one of these histories</span> <span class="brand-b" id="brand-accent">converges on today</span></div>
-    <button class="nav" id="btn-worlds" title="Browse every world">Worlds</button>
-    <button class="nav" id="btn-about" title="What this is and what to distrust">About</button>
-    <span class="sep"></span>
-    <span class="lbl">Era</span>
-    <div id="eras" class="eras"></div>
-    <span class="sep"></span>
-    <button class="icon" id="zout" title="Zoom out (-)">&minus;</button>
-    <input type="range" id="zoom" min="0" max="1000" value="330" title="Time span">
-    <button class="icon" id="zin" title="Zoom in (+)">+</button>
-    <button class="ghost small" id="reset" title="Fit the whole tree (0)">Fit</button>
-    <span class="sep"></span>
-    <button class="play small" id="converge" title="Every branch withdraws into the history they all share, then grows out again">&#9654; Play convergence</button>
+
+    <nav class="nav-group">
+      <button class="nav" id="btn-worlds" title="Browse every world (W)">Worlds</button>
+      <button class="nav" id="btn-news" title="What has happened lately (N)">News</button>
+      <button class="nav" id="btn-about" title="What this is and what to distrust">About</button>
+    </nav>
+
+    <div class="eras" id="eras"></div>
+
+    <div class="ctl-group" role="group" aria-label="Zoom">
+      <button class="ctl" id="zout" title="Zoom out (-)" aria-label="Zoom out">&minus;</button>
+      <input type="range" id="zoom" min="0" max="1000" value="0" title="Time span" aria-label="Time span">
+      <button class="ctl" id="zin" title="Zoom in (+)" aria-label="Zoom in">+</button>
+      <button class="ctl wide" id="reset" title="Fit the whole tree (0)">Fit</button>
+    </div>
+
+    <button class="ctl wide" id="converge" title="Every branch withdraws into the history they all share, then grows out again">&#9654; Convergence</button>
+
     <span class="grow"></span>
-    <input type="search" id="find" placeholder="Search worlds, tags, events...">
-    <select id="sort">
-      <option value="group">Sort: archetype</option>
-      <option value="divergence">Sort: divergence year</option>
-      <option value="title">Sort: title</option>
-      <option value="events">Sort: most charted</option>
-      <option value="medium">Sort: medium</option>
+
+    <div class="search-wrap">
+      <svg class="s-ico" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5 14 14"/></svg>
+      <input type="search" id="find" placeholder="Search worlds, tags, events" aria-label="Search">
+    </div>
+    <select id="sort" aria-label="Sort order">
+      <option value="group">Archetype</option>
+      <option value="divergence">Divergence year</option>
+      <option value="title">Title</option>
+      <option value="events">Most charted</option>
+      <option value="medium">Medium</option>
     </select>
+    <button class="ctl" id="allev" title="Show every event label, not just the major ones" aria-label="Toggle all event labels">&#9635;</button>
   </div>
-  <div class="bar row2">
+  <div class="bar sub">
     <span class="lbl">Archetype</span>
     <div class="chips" id="chips"></div>
-    <span class="lbl">Style</span>
-    <div id="themes" class="themes"></div>
-    <span class="grow"></span>
-    <button id="allev" class="small">Show all event labels</button>
   </div>
 </header>
 
@@ -58,6 +65,14 @@
       <div class="chips tags" id="tags"></div>
       <p class="phint" id="sec-worlds-blurb">Every row opens the full dossier: what the place is like to live in, who holds power, what the technology does and conspicuously refuses to do, where to begin, and which other worlds it genuinely connects to. The bar is where its charted time sits against today.</p>
       <div class="cards" id="cards"></div>
+    </div>
+    <div class="panel-mode" id="panel-news">
+      <div class="phead">
+        <h2>On today's timeline</h2>
+        <button class="ghost" id="pnclose">Close</button>
+      </div>
+      <p class="phint">Real events that touch these worlds. Each one is marked on the today line, where a fiction's future and our present meet.</p>
+      <div id="news-list"></div>
     </div>
     <div class="panel-mode" id="panel-world"></div>
     <div class="panel-mode" id="panel-about">

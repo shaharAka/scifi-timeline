@@ -57,57 +57,85 @@ h1 .accent{color:var(--trunk)}
 .stat .bar span{display:block;height:100%;border-radius:2px;transition:width 1.1s var(--ease-out)}
 
 /* ---------------------------------------------------------------- toolbar */
+/* One row, quiet groups, no shouting labels. The bar is a surface, not a
+   control panel: controls sit on it rather than inside little boxes. */
+.topbar{padding:10px 12px 0}
 .bar{
-  display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;
-  background:var(--panel);border:1px solid var(--line-1);border-radius:var(--r-2);
-  padding:7px 10px;
+  display:flex;flex-wrap:wrap;gap:6px;align-items:center;
+  background:var(--panel);border:1px solid var(--line-1);border-radius:var(--r-3);
+  padding:6px 8px;
 }
-.bar+.bar{margin-top:6px}
-.bar .sep{width:1px;height:18px;background:var(--line-2);margin:0 2px;flex:none}
-.eras{display:flex;gap:4px;flex:none}
-.lbl{font-size:var(--fs-0);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:750}
+.bar.sub{margin-top:5px;padding:5px 8px;gap:8px;background:transparent;border-color:transparent}
+.bar .sep{width:1px;height:16px;background:var(--line-1);margin:0 2px;flex:none}
+.grow{flex:1 1 auto;min-width:0}
+.lbl{font-size:var(--fs-0);letter-spacing:var(--track);text-transform:uppercase;
+  color:var(--ink-3);font-weight:750;flex:none}
 
-button{font:inherit;font-size:var(--fs-2);color:var(--ink-1);cursor:pointer;white-space:nowrap;flex:none;
-  background:var(--bg-2);border:1px solid var(--line-2);border-radius:var(--r-1);padding:5px 11px;
-  transition:background var(--t-fast),border-color var(--t-fast),color var(--t-fast)}
-button:hover{background:var(--card-bg-hover);border-color:var(--line-3)}
-button:active{transform:translateY(1px)}
-button.on{background:var(--ink-0);border-color:var(--ink-0);color:var(--bg)}
-button.small,.era{padding:4px 9px;font-size:var(--fs-1)}
-button.nav{border-color:var(--line-3)}
-button.ghost{background:transparent}
-button.icon{padding:5px 10px;font-size:13px;line-height:1}
-button.play{border-color:var(--line-3)}
+/* nav: primary destinations, weightier than tools but still quiet */
+.nav-group{display:flex;gap:2px;flex:none}
+button.nav{
+  background:transparent;border:1px solid transparent;border-radius:var(--r-1);
+  padding:5px 10px;color:var(--ink-2);font-weight:550;
+}
+button.nav:hover{background:var(--card-bg-hover);color:var(--ink-0)}
+button.nav.on{background:var(--card-bg-hover);border-color:var(--line-2);color:var(--ink-0)}
+
+/* eras: a segmented control, not four separate buttons */
+.eras{display:flex;gap:0;flex:none;border:1px solid var(--line-1);border-radius:var(--r-1);
+  overflow:hidden;background:var(--bg-2)}
+.era{
+  background:transparent;border:none;border-radius:0;padding:5px 10px;
+  font-size:var(--fs-1);color:var(--ink-3)
+}
+.era+.era{border-left:1px solid var(--line-1)}
+.era:hover{background:var(--card-bg-hover);color:var(--ink-0)}
+.era.on{background:var(--ink-0);color:var(--surface)}
+
+/* a tight cluster for zoom + fit */
+.ctl-group{display:flex;align-items:center;gap:2px;flex:none;
+  border:1px solid var(--line-1);border-radius:var(--r-1);padding:1px;background:var(--bg-2)}
+.ctl{
+  background:transparent;border:1px solid transparent;border-radius:var(--r-1);
+  padding:4px 8px;font-size:var(--fs-1);color:var(--ink-2);line-height:1.4
+}
+.ctl:hover{background:var(--card-bg-hover);color:var(--ink-0)}
+.ctl.on{background:var(--ink-0);color:var(--surface);border-color:var(--ink-0)}
+.ctl.wide{padding:4px 10px}
+.ctl-group .ctl.wide{border-left:1px solid var(--line-1);border-radius:0 var(--r-1) var(--r-1) 0}
+
+button.play{border:1px solid var(--line-1);background:var(--bg-2);color:var(--ink-2);
+  padding:5px 10px;font-size:var(--fs-1)}
+button.play:hover{color:var(--ink-0);border-color:var(--line-3)}
 button.play.on{background:var(--trunk);border-color:var(--trunk);color:var(--surface)}
 
-input[type=search],select{font:inherit;font-size:var(--fs-2);color:var(--ink-1);background:var(--bg-2);flex:none;
-  border:1px solid var(--line-2);border-radius:var(--r-1);padding:5px 9px}
-input[type=search]{flex:1 1 140px;min-width:120px;max-width:260px}
+/* search: one field with a mark, not a boxed input with a label */
+.search-wrap{display:flex;align-items:center;gap:6px;flex:0 1 210px;min-width:130px;
+  border:1px solid var(--line-1);border-radius:var(--r-1);padding:0 8px;background:var(--bg-2)}
+.search-wrap:focus-within{border-color:var(--line-3)}
+.s-ico{width:13px;height:13px;flex:none;fill:none;stroke:var(--ink-3);stroke-width:1.5;
+  stroke-linecap:round}
+input[type=search]{
+  font:inherit;font-size:var(--fs-2);color:var(--ink-0);background:transparent;border:none;
+  padding:5px 0;width:100%;outline:none
+}
 input[type=search]::placeholder{color:var(--ink-3)}
+select{font:inherit;font-size:var(--fs-2);color:var(--ink-2);background:var(--bg-2);flex:none;
+  border:1px solid var(--line-1);border-radius:var(--r-1);padding:5px 7px}
 input:focus-visible,select:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
 
-/* flat track, no gradient, no glow on the thumb */
-input[type=range]{-webkit-appearance:none;appearance:none;height:3px;border-radius:2px;width:96px;flex:none;
-  background:var(--stat-track);outline:none}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:13px;height:13px;border-radius:50%;
+input[type=range]{-webkit-appearance:none;appearance:none;height:3px;border-radius:2px;width:84px;flex:none;
+  background:var(--stat-track);outline:none;margin:0 4px}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:12px;height:12px;border-radius:50%;
   background:var(--slider-thumb);border:1px solid var(--line-3);cursor:pointer}
 
-.chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
-.chip{display:inline-flex;align-items:center;gap:6px;font-size:var(--fs-1);padding:4px 9px;
-  border-radius:var(--r-1);cursor:pointer;border:1px solid var(--line-2);background:transparent;white-space:nowrap;
-  color:var(--ink-2);transition:var(--t-fast)}
-.chip .dot{width:8px;height:8px;border-radius:50%;flex:none}
+/* archetype chips: a dot and a word */
+.chips{display:flex;flex-wrap:wrap;gap:4px;align-items:center}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:var(--fs-1);padding:3px 8px;
+  border-radius:var(--r-1);cursor:pointer;border:1px solid transparent;background:transparent;
+  white-space:nowrap;color:var(--ink-2);transition:var(--t-fast)}
+.chip .dot{width:7px;height:7px;border-radius:50%;flex:none}
 .chip.off{opacity:.34}
-.chip:hover{border-color:var(--line-3);color:var(--ink-0)}
-
-/* ---------------------------------------------------------------- theme picker */
-.themes{display:flex;gap:3px;flex:none}
-.theme-btn{display:inline-flex;align-items:center;gap:6px;padding:4px 8px;font-size:var(--fs-1);
-  border:1px solid var(--line-2);border-radius:var(--r-1);background:transparent;color:var(--ink-2);
-  cursor:pointer;transition:var(--t-fast)}
-.theme-btn:hover{border-color:var(--line-3);color:var(--ink-0)}
-.theme-btn.on{border-color:var(--ink-0);color:var(--ink-0)}
-.theme-btn .sw{width:10px;height:10px;border-radius:2px;flex:none;border:1px solid var(--line-2)}
+.chip:hover{background:var(--card-bg-hover);color:var(--ink-0)}
 
 .reveal{opacity:0;transition:opacity .5s var(--ease-out)}
 .reveal.in{opacity:1}

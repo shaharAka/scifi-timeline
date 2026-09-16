@@ -247,6 +247,73 @@ def load_pd(lineage_ids):
     return out
 
 
+
+def load_news(lineage_ids):
+    """Hand-curated news, keyed for the TODAY line.
+
+    Every item is written by a person and its facts checked, so this loader is
+    strict: a news item with an unparseable date or an unknown world id is an
+    error rather than something silently dropped, because a chronology that
+    claims a research standard cannot quietly ship a wrong date.
+    """
+    path = os.path.join(ROOT, "data", "news.json")
+    if not os.path.exists(path):
+        return []
+    try:
+        with open(path, "r", encoding="utf-8") as fh:
+            doc = json.load(fh)
+    except (OSError, json.JSONDecodeError) as exc:
+        err("data/news.json is unreadable: %s" % exc)
+        return []
+    items = doc.get("items")
+    if not isinstance(items, list):
+        err("data/news.json needs an 'items' list")
+        return []
+    out = []
+    seen = set()
+    for i, it in enumerate(items):
+        tag = "data/news.json item[%d]" % i
+        if not isinstance(it, dict):
+            err("%s is not an object" % tag)
+            continue
+        for key in ("date", "headline", "summary", "source"):
+            if not it.get(key):
+                err("%s is missing %r" % (tag, key))
+        raw = str(it.get("date", ""))
+        if not re.match(r"^\d{4}-\d{2}-\d{2}$", raw):
+            err("%s has a malformed date %r; use YYYY-MM-DD" % (tag, raw))
+            continue
+        try:
+            when = datetime.strptime(raw, "%Y-%m-%d").date()
+        except ValueError as exc:
+            err("%s has an impossible date %r (%s)" % (tag, raw, exc))
+            continue
+        src = it.get("source") or {}
+        if not isinstance(src, dict) or not src.get("url"):
+            err("%s needs source.url" % tag)
+            continue
+        worlds = it.get("worlds") or []
+        if not isinstance(worlds, list):
+            err("%s 'worlds' must be a list" % tag)
+            worlds = []
+        for wid in worlds:
+            if wid not in lineage_ids:
+                err("%s references world %r, which is not in this dataset" % (tag, wid))
+        if raw in seen:
+            warn("%s duplicates the date %s; both will sit on the same marker" % (tag, raw))
+        seen.add(raw)
+        out.append({
+            "date": raw,
+            "year": when.year,
+            "headline": it["headline"],
+            "summary": it.get("summary", ""),
+            "source": {"title": src.get("title", ""), "url": src["url"]},
+            "worlds": [w for w in worlds if w in lineage_ids],
+        })
+    out.sort(key=lambda x: x["date"], reverse=True)
+    return out
+
+
 def load_worlds(lineage_ids):
     """World dossiers from data/parts/worlds/*.json, keyed by lineage id.
 
@@ -483,20 +550,6 @@ def assemble():
     css, css_names = concat("styles", ".css")
     js, js_names = concat("viewer", ".js")
 
-    # every theme a stylesheet declares must also be listed in the atlas, or the
-    # picker would offer a theme with no styles behind it
-    declared = set(re.findall(r'html\[data-theme="([a-z0-9-]+)"\]', css))
-    atlas_doc = load_atlas() or {}
-    configured = [t.get("id") for t in (atlas_doc.get("themes") or [])]
-    if configured:
-        for tid in configured:
-            if tid and tid not in declared:
-                err("atlas themes lists %r but no stylesheet defines html[data-theme=\"%s\"]" % (tid, tid))
-        for tid in sorted(declared - set(configured)):
-            warn("stylesheet defines theme %r which the atlas does not list; it is unreachable" % tid)
-    else:
-        warn("atlas has no 'themes' list; the style picker will not be offered")
-
     for marker in ("<!-- @styles -->", "<!-- @scripts -->", EMBED_MARK):
         if marker not in html:
             err("src/page.html is missing the %s marker" % marker)
@@ -589,6 +642,7 @@ def main():
     worlds = load_worlds(lineage_ids)
     art = load_art(lineage_ids)
     pd = load_pd(lineage_ids)
+    news = load_news(lineage_ids)
     for lid in sorted(lineage_ids):
         if lid not in worlds:
             warn("lineage %r has no world dossier; its World tab will be empty" % lid)
@@ -603,6 +657,7 @@ def main():
             "worlds": len(worlds),
             "art": len(art),
             "pd": len(pd),
+            "news": len(news),
             "note": ("Real-world calendar years throughout. In-universe date systems "
                      "(BBY, AG, GE, stardates, millennium notation) are preserved per event "
                      "in the inUniverse field."),
@@ -612,6 +667,7 @@ def main():
         "worlds": [worlds[l["id"]] for l in lineages if l["id"] in worlds],
         "art": art,
         "pd": pd,
+        "news": news,
     }
     if atlas:
         payload["atlas"] = atlas

@@ -91,28 +91,21 @@ function drawBackdrop(w, h){
 /* ============================================================ chart */
 
 
-/* Colours that carry meaning come from the data, and each archetype needs a
-   variant that works on a light ground and on a dark one. So every element that
-   takes an archetype colour gets it through a per-element custom property, with
-   both variants attached, and the theme decides which one wins. Inline style
-   (not a presentation attribute) because var() is reliable there. */
+/* Colours that carry meaning come from the data. The data's values are tuned
+   for a dark ground, so each is darkened toward black - preserving hue - until
+   it clears WCAG AA on this pale one. That computed value is set directly: with
+   a single palette there is nothing for a per-theme indirection to decide. */
 function paintC(node, prop, color){
-  /* Deliberately does NOT set fill/stroke inline. An inline declaration would
-     outrank the theme's stylesheet rule, pinning the element to the dark-ground
-     colour - which is exactly the bug this replaced. The stylesheet decides
-     which variant wins; this only publishes both to the element. */
-  node.style.setProperty("--c-dark", color);
-  node.style.setProperty("--c-light", accessible(color));
+  node.setAttribute(prop, accessible(color));
   return node;
 }
-/* Darken toward black, preserving hue, until the colour clears WCAG AA on paper. */
 function accessible(hex){
   var m = /^#([0-9a-f]{6})$/i.exec(String(hex || ""));
   if(!m) return hex;
   function lin(c){ c/=255; return c<=0.03928 ? c/12.92 : Math.pow((c+0.055)/1.055, 2.4); }
   function lum(r,g,b){ return 0.2126*lin(r)+0.7152*lin(g)+0.0722*lin(b); }
   function contrast(r,g,b){
-    var a = lum(r,g,b), bg = lum(250,248,244);
+    var a = lum(r,g,b), bg = lum(238,242,246);
     var hi = Math.max(a,bg), lo = Math.min(a,bg);
     return (hi+0.05)/(lo+0.05);
   }
@@ -123,8 +116,8 @@ function accessible(hex){
     var k = (lo+hi)/2;
     if(contrast(Math.round(r*k), Math.round(g*k), Math.round(b*k)) >= 4.5) lo = k; else hi = k;
   }
-  var rr = Math.round(r*lo), gg = Math.round(g*lo), bb = Math.round(b*lo);
-  return "#" + ((1<<24) + (rr<<16) + (gg<<8) + bb).toString(16).slice(1);
+  return "#" + ((1<<24) + (Math.round(r*lo)<<16) + (Math.round(g*lo)<<8) + Math.round(b*lo))
+    .toString(16).slice(1);
 }
 
 function renderChart(yOverride){
@@ -234,6 +227,7 @@ function renderChart(yOverride){
   nt.textContent = offscreen ? ("TODAY " + NOW + (nx < 0 ? " ←" : " →")) : ("TODAY " + NOW);
   if(offscreen) nt.setAttribute("opacity", "0.5");
   gNow.appendChild(nt);
+  renderNewsBand(gNow, nx, 0, Hv);
 
   /* branches and the real history each one leans on */
   var targets = {};
@@ -308,7 +302,11 @@ function renderBranch(ln, lay, budget, left, right, nx){
 
   if(dxRaw > right - 24){
     /* this world has not forked yet in the visible window */
-    var gh = sEl("text", {x:right - 2, y:titleY, "text-anchor":"end", opacity: lay.lod >= 1 ? "1" : "0"}, "ghost");
+    /* The edge marker names a world that has not forked yet in this window. It is
+       an affordance for panning, not an identity, so it only appears once there is
+       room for it; at the widest zoom it is noise stacked against the edge. */
+    var gh = sEl("text", {x:right - 2, y:titleY, "text-anchor":"end",
+                          opacity: lay.lod >= 2 ? "1" : "0"}, "ghost");
     gh.textContent = l.title + " forks in " + fmtYearFull(dv) + " →";
     g.appendChild(gh);
     g.appendChild(hit);
@@ -357,7 +355,13 @@ function renderBranch(ln, lay, budget, left, right, nx){
   var tx = Math.max(left + 4, flatStart + 6);
   var tAttrs = {x:tx, y:titleY};
   if(tx + titleW > right){ tAttrs.x = right - 2; tAttrs["text-anchor"] = "end"; }  /* forks near the right edge hang their title off it */
-  var showTitle = lay.lod >= 1 || l === sel || l.id === hoverId;
+  /* A branch title needs roughly a lane's worth of vertical room. At the widest
+     zoom the pitch is about 16px, so every title would sit on top of the next
+     one and the middle of the chart turned into a wall of words. Below that
+     threshold only the selected and hovered branches name themselves; the rest
+     are identified by the panel and by hovering. */
+  var titleFits = lay.gap >= 19;
+  var showTitle = titleFits || l === sel || l.id === hoverId;
   if(showTitle){
     var tt = sEl("text", tAttrs, "title");
     tt.textContent = shown + "  ";

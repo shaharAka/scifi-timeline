@@ -1,0 +1,34 @@
+{
+  "_comment": "News that is relevant to a chronology pinned to the real calendar. Hand-curated: every item here was written by a person and its facts checked, because this atlas claims a research standard and an automatically scraped feed would undermine that. Each item becomes a marker on the TODAY line, and `worlds` lists the lineages it genuinely touches - that list is a judgement, not a keyword match.",
+  "schema": {
+    "date": "YYYY-MM-DD, when it happened",
+    "headline": "one line",
+    "summary": "2-3 sentences of plain prose",
+    "source": { "title": "publisher", "url": "https://..." },
+    "worlds": ["lineage ids this touches"],
+    "relevantFrom": "optional YYYY-MM-DD; defaults to date"
+  },
+  "items": [
+    {
+      "date": "2026-04-11",
+      "headline": "Artemis II splashes down after a crewed lunar flyby",
+      "summary": "Four astronauts flew around the Moon and back, the first crewed flight beyond low Earth orbit since Apollo 17 in 1972. It is the first crewed flight of the Space Launch System and of the Orion spacecraft.",
+      "source": { "title": "NASA", "url": "https://www.nasa.gov/mission/artemis-ii/" },
+      "worlds": ["interstellar", "contact", "2001-space-odyssey", "the-expanse"]
+    },
+    {
+      "date": "2023-08-23",
+      "headline": "First landing near the lunar south pole",
+      "summary": "India's Chandrayaan-3 puts a lander and rover down at high southern latitude, where water ice is expected in permanently shadowed craters. The date is now marked as National Space Day in India.",
+      "source": { "title": "ISRO", "url": "https://www.isro.gov.in/Chandrayaan3.html" },
+      "worlds": ["the-expanse", "2001-space-odyssey", "interstellar"]
+    },
+    {
+      "date": "2022-12-05",
+      "headline": "A fusion experiment returns more energy than it absorbed",
+      "summary": "The National Ignition Facility achieves scientific breakeven for the first time, with a gain factor of about 1.5. The reaction lasted a fraction of a second and is a long way from a power station.",
+      "source": { "title": "Lawrence Livermore National Laboratory", "url": "https://www.llnl.gov/article/49306/llnl-achieves-fusion-ignition" },
+      "worlds": ["the-expanse", "interstellar", "foundation"]
+    }
+  ]
+}

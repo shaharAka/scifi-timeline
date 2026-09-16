@@ -95,10 +95,10 @@ branches pile into the 1990s–2100s, and space opera scatters across millennia.
 
 ## Look and feel
 
-Five switchable themes, **light by default** — Paper, Chalk, Atlas, Blueprint and
-Dusk — chosen from the **Style** picker and remembered between visits. Each theme
-is one CSS file; `data/atlas.json` lists them and the build refuses to ship if the
-two disagree.
+A single palette: **Blueprint** — a pale cool ground with a faint engineering grid,
+indigo ink, and a deep-blue trunk for real history. It replaced five earlier themes
+after the owner evaluated them. The chart opens **fully zoomed out** on the whole
+tree, and zooming in is a tweened camera move rather than a redraw.
 
 Every world carries two kinds of picture:
 
@@ -111,6 +111,14 @@ The distinction is kept visible on purpose. This atlas records a confidence rati
 for every event and the conversion behind every projected date; it should be
 equally straight about which of its pictures are photographs and which are
 inventions.
+
+## News
+
+`data/news.json` holds real events that touch these worlds — each with a date, a
+headline, a summary, a source link and the worlds it genuinely relates to. They
+appear as a band beside the today line, and as a reading list behind the **News**
+button. The point is the collision: this is the only place on the page where a
+fiction's future and our present occupy the same instant.
 
 ## Reading the axis
 

@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-09-16T18:29:00Z",
+  "generated": "2026-09-16T18:39:27Z",
   "source": "data/parts/*.json",
   "lineages": 24,
   "events": 237,
@@ -8,6 +8,7 @@
   "worlds": 24,
   "art": 24,
   "pd": 9,
+  "news": 3,
   "note": "Real-world calendar years throughout. In-universe date systems (BBY, AG, GE, stardates, millennium notation) are preserved per event in the inUniverse field."
  },
  "groups": [
@@ -6506,6 +6507,54 @@
    "sourcePage": "https://commons.wikimedia.org/wiki/File:Eagle_nebula_pillars.jpg"
   }
  },
+ "news": [
+  {
+   "date": "2026-04-11",
+   "year": 2026,
+   "headline": "Artemis II splashes down after a crewed lunar flyby",
+   "summary": "Four astronauts flew around the Moon and back, the first crewed flight beyond low Earth orbit since Apollo 17 in 1972. It is the first crewed flight of the Space Launch System and of the Orion spacecraft.",
+   "source": {
+    "title": "NASA",
+    "url": "https://www.nasa.gov/mission/artemis-ii/"
+   },
+   "worlds": [
+    "interstellar",
+    "contact",
+    "2001-space-odyssey",
+    "the-expanse"
+   ]
+  },
+  {
+   "date": "2023-08-23",
+   "year": 2023,
+   "headline": "First landing near the lunar south pole",
+   "summary": "India's Chandrayaan-3 puts a lander and rover down at high southern latitude, where water ice is expected in permanently shadowed craters. The date is now marked as National Space Day in India.",
+   "source": {
+    "title": "ISRO",
+    "url": "https://www.isro.gov.in/Chandrayaan3.html"
+   },
+   "worlds": [
+    "the-expanse",
+    "2001-space-odyssey",
+    "interstellar"
+   ]
+  },
+  {
+   "date": "2022-12-05",
+   "year": 2022,
+   "headline": "A fusion experiment returns more energy than it absorbed",
+   "summary": "The National Ignition Facility achieves scientific breakeven for the first time, with a gain factor of about 1.5. The reaction lasted a fraction of a second and is a long way from a power station.",
+   "source": {
+    "title": "Lawrence Livermore National Laboratory",
+    "url": "https://www.llnl.gov/article/49306/llnl-achieves-fusion-ignition"
+   },
+   "worlds": [
+    "the-expanse",
+    "interstellar",
+    "foundation"
+   ]
+  }
+ ],
  "atlas": {
   "id": "scifi",
   "title": "Where We Are Now - a converging timeline of science fiction",
@@ -6542,39 +6591,6 @@
    }
   ],
   "defaultEra": 0,
-  "defaultTheme": "paper",
-  "themes": [
-   {
-    "id": "paper",
-    "label": "Paper",
-    "swatch": "#faf8f4",
-    "note": "Warm off-white stock, dark ink, ochre trunk. Reads like a printed reference plate."
-   },
-   {
-    "id": "chalk",
-    "label": "Chalk",
-    "swatch": "#f7f8fa",
-    "note": "Cool near-white, clinical and screen-native. No warm cast."
-   },
-   {
-    "id": "atlas",
-    "label": "Atlas",
-    "swatch": "#f6f0e2",
-    "note": "Aged cream stock with laid-paper ruling and serif display type."
-   },
-   {
-    "id": "blueprint",
-    "label": "Blueprint",
-    "swatch": "#eef2f6",
-    "note": "Pale ground with a fine engineering grid and indigo ink."
-   },
-   {
-    "id": "dusk",
-    "label": "Dusk",
-    "swatch": "#171a1f",
-    "note": "A muted, desaturated dark. Deep blue-grey, bone ink, sand trunk."
-   }
-  ],
   "legendHint": "drag to pan · scroll to zoom · click a branch or card to enter that world",
   "sections": {
    "distribution": {

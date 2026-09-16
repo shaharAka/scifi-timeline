@@ -16,7 +16,10 @@ var BUNDLE_GAP = 22;      /* extra space between archetype bundles; the bundle l
 var CURVE_W = 76;         /* horizontal length of the fork curve */
 
 /* camera */
-var Z = 1, Z_MIN = 0.28, Z_MAX = 3.2;   /* vertical zoom: lane pitch multiplier */
+var Z = 1, Z_MIN = 0.28, Z_MAX = 3.2;
+/* The whole dataset, as one window: the opening view shows all of it. */
+var ATLAS_FULL = { from:-48000, to:52000 };
+var CAM_MS = 420;                  /* camera tween duration */   /* vertical zoom: lane pitch multiplier */
 var panY = 0;                           /* vertical pan of the scene, px */
 
 /* time axis. ANCHOR is where the view centre sits across the width: 0.5 makes

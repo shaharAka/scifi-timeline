@@ -125,3 +125,18 @@ table.ev .iu{font-size:11px;color:var(--ink-3);display:block;margin-top:2px}
 .note b{color:var(--ink-1)}
 .note i{color:var(--ink-2)}
 .note code{color:var(--trunk);font-family:var(--font-mono);font-size:12px}
+
+/* ---------------------------------------------------------------- news list */
+.news-item{padding:12px 0;border-bottom:1px solid var(--line-1)}
+.news-item:last-child{border-bottom:none}
+.news-date{font-size:var(--fs-0);font-family:var(--font-mono);color:var(--ink-3);
+  letter-spacing:.06em;margin-bottom:3px}
+.news-head{font-size:var(--fs-3);font-weight:640;margin:0 0 5px;color:var(--ink-0);line-height:1.35}
+.news-sum{margin:0 0 8px;font-size:var(--fs-2);color:var(--ink-2);line-height:1.55}
+.news-src{font-size:var(--fs-1);color:var(--accent);text-decoration:none;font-weight:550}
+.news-src:hover{text-decoration:underline}
+.news-worlds{display:flex;flex-wrap:wrap;gap:4px;margin-top:9px}
+.news-world{font:inherit;font-size:var(--fs-1);padding:2px 7px;cursor:pointer;
+  background:transparent;border:1px solid var(--line-2);border-radius:var(--r-1);
+  transition:var(--t-fast)}
+.news-world:hover{border-color:var(--line-3);background:var(--card-bg-hover)}

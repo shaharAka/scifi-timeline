@@ -38,8 +38,7 @@ function renderDrawer(){
   d.innerHTML =
     '<div class="phead"><button class="ghost" id="dback">&larr; All worlds</button>' +
       '<button class="ghost" id="dclose">Close</button></div>' +
-    (art ? '<figure class="dhero"><img src="' + esc(art.lg || art.full) + '" alt="">' +
-      '<figcaption class="cap">' + esc(artCredit(art)) + '</figcaption></figure>' : '') +
+    (art ? '<figure class="dhero"><img src="' + esc(art.lg || art.full) + '" alt=""></figure>' : '') +
     '<div class="dhead"><div>' +
       '<h2 class="dtitle">' + esc(l.title) + '</h2>' +
       '<div class="dmeta">' +
@@ -149,8 +148,9 @@ function connectionsHtml(w){
     conns.map(function(c){
       var other = DATA.lineages.filter(function(x){ return x.id === c.id; })[0];
       var nm = other ? other.title : c.id;
-      var col = other ? "var(--g-" + other._g.color.replace('#','') + "-light)" : "var(--ink-2)";
-      return '<div class="tile link" data-goto="' + esc(c.id) + '">' +
+      var col = other ? "var(--c-light)" : "var(--ink-2)";
+      return '<div class="tile link" data-goto="' + esc(c.id) + '" style="' +
+        (other ? colorVars(other._g.color) + ';' : '') + '">' +
         '<div class="n" style="color:' + col + '">' + esc(nm) + ' &rarr;</div>' +
         '<div class="b">' + esc(c.note || '') + '</div></div>';
     }).join("") + '</div>';
@@ -202,20 +202,10 @@ function revealIn(){
 /* The drawer's own branch: the same grammar as the big chart, one world. */
 
 
-/* Provenance for an art plate, in one line, always visible. Generated plates are
-   labelled as generated: this atlas records confidence per event and a
-   conversion per dating system, so it cannot quietly present invented imagery
-   as documentary. */
-function artCredit(art){
-  if(!art) return "";
-  if(art.kind === "generated"){
-    return "Illustrative plate, generated with " + (art.model || "an image model") +
-           " - not a still from any adaptation.";
-  }
-  return art.credit || art.note || "Openly licensed image.";
-}
-
-/* The plate for a world, or null when no art exists for it. */
+/* No caption is stamped on an illustrative plate. What it is, which model made
+   it and the exact prompt remain recorded in assets/ART-CREDITS.json, which the
+   build carries into the payload, and the method note describes the practice -
+   but the image itself is left clean. */
 /* The real-world counterpart for a world, or null. */
 function pdFor(id){
   return (DATA && DATA.pd && DATA.pd[id]) || null;

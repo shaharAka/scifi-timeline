@@ -86,7 +86,8 @@ function renderCards(){
   list.forEach(function(l){
     if(l.group !== lastGroup){
       lastGroup = l.group;
-      html += '<div class="cards-head" style="color:var(--g-' + l._g.color.replace('#','') + '-light)">' + esc(l._g.name) + '</div>';
+      html += '<div class="cards-head" style="' + colorVars(l._g.color) + ';color:var(--c-light)">' +
+        esc(l._g.name) + '</div>';
     }
     var w = l._w || {};
     var ys = l.events.map(function(e){ return e.year; });
