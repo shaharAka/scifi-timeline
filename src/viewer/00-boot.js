@@ -45,8 +45,10 @@ function boot(d){
       return;
     }
     ATLAS = DATA.atlas;
+    BINS = DATA.bins || [];
     /* the atlas may name its default axis; Order is ours */
-    if(ATLAS && (ATLAS.defaultAxis === "years" || ATLAS.defaultAxis === "order")){
+    if(ATLAS && (ATLAS.defaultAxis === "years" || ATLAS.defaultAxis === "order"
+                 || ATLAS.defaultAxis === "moments")){
       axisMode = ATLAS.defaultAxis;
     }
     init();

@@ -40,7 +40,14 @@ function renderNews(){
       return '<button class="news-world" data-goto="' + esc(wid) + '" style="' +
         colorVars(l._g.color) + ';color:var(--c-light)">' + esc(l.title) + '</button>';
     }).join("");
-    return '<article class="news-item">' +
+    var binId = n.bin || null;
+    var spec = null;
+    (BINS || []).forEach(function(b){ if(b.id === binId) spec = b; });
+    var kind = binId
+      ? '<button class="news-kind" data-bin="' + esc(binId) + '">Read the futures: '
+        + esc(spec ? (spec.label || binId) : binId) + ' \u2192</button>'
+      : '<div class="news-kind none">not matched to a kind of moment yet</div>';
+    return '<article class="news-item' + (binId ? ' matched' : '') + '">' +
       '<div class="news-date">' + esc(fmtNewsDate(n.date)) + '</div>' +
       '<h3 class="news-head">' + esc(n.headline) + '</h3>' +
       '<p class="news-sum">' + esc(n.summary) + '</p>' +
@@ -49,10 +56,19 @@ function renderNews(){
           esc(n.source.title || "source") + ' \u2197</a>'
         : '') +
       (worlds ? '<div class="news-worlds">' + worlds + '</div>' : '') +
+      kind +
     '</article>';
   }).join("");
   Array.prototype.forEach.call(host.querySelectorAll("[data-goto]"), function(b){
     b.onclick = function(){ openWorld(b.getAttribute("data-goto")); };
+  });
+  /* the match: one click reads every world forward from this kind of moment */
+  Array.prototype.forEach.call(host.querySelectorAll("[data-bin]"), function(b){
+    b.onclick = function(){
+      var id = b.getAttribute("data-bin");
+      var item = newsItems().filter(function(n){ return n.bin === id; })[0] || { headline: id, bin: id };
+      matchNews(item);
+    };
   });
 }
 
@@ -79,12 +95,11 @@ function fmtNewsDate(iso){
 function renderNewsBand(parent, nx, top, height){
   var items = newsItems();
   if(!items.length) return;
-  /* In Order mode the whole point of the axis is that today is a column and the
-     beats that have happened sit left of it - the band would be restating the
-     picture on top of it, and the right of the chart is where the post-today
-     forks live, so there is nowhere to put it that does not cover them. The
-     panel keeps every item. */
-  if(AX && AX.mode === "order") return;
+  /* The band belongs to the calendar. In Order the today column already says
+     what has happened; in Moments the x-axis is a kind of moment, so a band of
+     items anchored to the right edge would be attached to nothing. The panel
+     keeps every item, and in Moments the match is what replaces the band. */
+  if(AX && AX.mode !== "years") return;
 
   var w = 250;
   var x = W - w - 14;

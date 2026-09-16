@@ -140,3 +140,25 @@ table.ev .iu{font-size:11px;color:var(--ink-3);display:block;margin-top:2px}
   background:transparent;border:1px solid var(--line-2);border-radius:var(--r-1);
   transition:var(--t-fast)}
 .news-world:hover{border-color:var(--line-3);background:var(--card-bg-hover)}
+
+/* news -> futures: the match, and the futures it returns */
+.news-kind{margin-top:8px;display:inline-block;background:var(--ink-0);color:var(--surface);
+  border:none;border-radius:var(--r-1);padding:5px 9px;font-size:var(--fs-1);font-weight:600}
+.news-kind:hover{background:var(--trunk)}
+.news-kind.none{background:transparent;color:var(--ink-4);font-weight:400;font-style:italic;padding-left:0}
+.news-item.matched{border-top-color:var(--now)}
+.fx-head h3{margin:0 0 6px;font-size:var(--fs-3);line-height:1.25}
+.fx-bin{margin:0 0 4px;font-size:var(--fs-1);color:var(--ink-2)}
+.fx-def{margin:0 0 12px;font-size:var(--fs-1);color:var(--ink-3);font-style:italic}
+.fx-none{margin:0;font-size:var(--fs-1);color:var(--ink-3)}
+.fx-grid{display:flex;flex-direction:column;gap:10px}
+.fx-card{border:1px solid var(--line-1);border-radius:var(--r-1);padding:8px 10px;background:var(--card-bg)}
+.fx-world{display:flex;justify-content:space-between;align-items:baseline;
+  font-weight:700;font-size:var(--fs-1);color:var(--ink-0)}
+.fx-world:hover{color:var(--trunk)}
+.fx-at{font-weight:400;color:var(--ink-4);font-size:var(--fs-0)}
+.fx-match{margin:3px 0 6px;font-size:var(--fs-1);color:var(--trunk);font-weight:600}
+.fx-next{margin:0;padding-left:16px;font-size:var(--fs-1);color:var(--ink-2)}
+.fx-next li{margin:2px 0}
+.fx-yr{color:var(--ink-4);font-variant-numeric:tabular-nums}
+.fx-end{font-size:var(--fs-0);color:var(--ink-4);font-style:italic}

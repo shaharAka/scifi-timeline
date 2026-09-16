@@ -13,11 +13,15 @@
             across a fork zone; beats spread evenly along their branch; today is
             a fixed column. No world is off-canvas and no distance is drawn
             where there is no information.
+     moments  position by KIND of moment: one column per bin, and a branch runs
+            through the columns in canonical order. This is the view the atlas is
+            read from - news today, the worlds that passed through that kind of
+            moment, each read forward.
 
    The years view is the evidence. The order view is the story.
    ========================================================================== */
 
-var axisMode = "order";                    /* overridden by ATLAS.defaultAxis */
+var axisMode = "moments";                  /* the view the atlas is read from; overridden by ATLAS.defaultAxis */
 
 /* Every world in the visible list, placed once per render. */
 var AX = null;
@@ -157,8 +161,8 @@ function axisOrder(list, left, right){
 
 /* Built once per render, for the visible list. */
 function buildAxis(list, left, right){
-  AX = (axisMode === "years")
-    ? axisYears(list, left, right)
-    : axisOrder(list, left, right);
+  if(axisMode === "years")      AX = axisYears(list, left, right);
+  else if(axisMode === "moments") AX = axisMoments(list, left, right);
+  else                          AX = axisOrder(list, left, right);
   return AX;
 }

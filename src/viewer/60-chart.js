@@ -225,6 +225,102 @@ function renderChart(yOverride){
       tx.textContent = fmtYear(t);
       gTrunk.appendChild(tx);
     });
+  } else if(AX.mode === "moments"){
+    /* One band per kind of moment. The header is the kind and how many worlds
+       pass through it - that count IS the convergence, so it is stated, not
+       implied by a shade. */
+    var cols = AX.columns || [];
+    /* No width threshold decides whether headers appear: a band can be wide
+       and its label still be wider, so the only meaningful test is whether two
+       labels collide. Placement below does that test. */
+    /* Convergence is the column's density, so the band is shaded by how many
+       worlds pass through it - the one thing this view exists to show. */
+    var maxW = 1;
+    cols.forEach(function(c){ if(c.worlds.size > maxW) maxW = c.worlds.size; });
+    var tops = [];                        /* the densest kinds, labelled below */
+    cols.forEach(function(c){
+      var band = sEl("rect",
+        {x:c.x0, y:0, width:Math.max(0, c.x1 - c.x0), height:Hv}, "moment-band");
+      band.style.fillOpacity = (0.18 + 0.62 * (c.worlds.size / maxW)).toFixed(3);
+      /* At 54 kinds a band is about 21px, too narrow for a header, so the band
+         carries its own name on hover rather than going nameless. */
+      var ttl = sEl("title");
+      ttl.textContent = (c.spec.label || c.bin) + " \u2014 " + c.worlds.size
+        + (c.worlds.size === 1 ? " world" : " worlds") + ", " + c.hits
+        + (c.hits === 1 ? " event" : " events") + ".\n" + (c.spec.definition || "");
+      band.appendChild(ttl);
+      band.setAttribute("data-moment", c.bin);
+      gGrid.appendChild(band);
+      /* Convergence gets a mark of its own. Shade alone was too quiet for the
+         one thing this view exists to show: how many worlds meet on this kind
+         of moment, and so how many futures a match would return. */
+      if(c.worlds.size >= 2){
+        var capW = Math.min(Math.max(0, c.x1 - c.x0) - 8, 4 + c.worlds.size * 1.7);
+        var capY = PAD_Y * Z + (lay.head || 0) - 12;
+        var cap = sEl("rect",
+          {x:c.cx - capW / 2, y:capY, width:capW, height:3, rx:1.5}, "moment-capsule");
+        cap.style.fillOpacity = (0.35 + 0.65 * (c.worlds.size / maxW)).toFixed(3);
+        var ct = sEl("title");
+        ct.textContent = c.worlds.size + " worlds pass through "
+          + (c.spec.label || c.bin);
+        cap.appendChild(ct);
+        gGrid.appendChild(cap);
+      }
+      if(c.worlds.size >= 7) tops.push(c);
+    });
+    /* Headers are placed by collision, not by a width threshold. A band wide
+       enough on average still produces labels far wider than itself, so the
+       only test that means anything is whether two labels would overlap. They
+       are laid out on rows with a short lead down to each band, inside the
+       strip layout() reserved. A kind that cannot be placed is left unlabelled
+       rather than overprinted - its band still carries its name on hover. */
+    if(tops.length){
+      var ROWS = 3;
+      var rows = [];
+      var placedCount = 0;
+      tops.slice(0, 14).forEach(function(c){
+        var text = (c.spec.label || c.bin);
+        var w = 5.6 * text.length + 22;
+        var row = 0;
+        for(;;){
+          if(row >= ROWS){ row = -1; break; }
+          var taken = rows[row] || [];
+          var clash = false;
+          for(var k = 0; k < taken.length; k++){
+            if(Math.abs(taken[k].cx - c.cx) < (taken[k].w + w) / 2){ clash = true; break; }
+          }
+          if(!clash) break;
+          row++;
+        }
+        if(row < 0) return;                 /* no room: better unlabelled than unreadable */
+        (rows[row] = rows[row] || []).push({ cx:c.cx, w:w });
+        placedCount++;
+        var ly = 9 + row * 11;
+        gGrid.appendChild(sEl("line",
+          {x1:c.cx, y1:ly + 4, x2:c.cx, y2:MOMENT_HEAD_H - 2}, "moment-lead"));
+        var lab = sEl("text", {x:c.cx, y:ly, "text-anchor":"middle"}, "moment-head");
+        lab.textContent = text + " \u00b7 " + c.worlds.size;
+        gGrid.appendChild(lab);
+      });
+    }
+    /* The arc is the point of this view, so it is stated rather than left to be
+       inferred: columns are ordered by where their events fall in their worlds'
+       own sequences, so reading right is reading later into a story. Column
+       positions are the mean, so the axis is a tendency, not a promise. */
+    var ay = ty + 20;
+    gTrunk.appendChild(sEl("line",
+      {x1:left + 6, y1:ay, x2:right - 6, y2:ay}, "arc-rule"));
+    var a1 = sEl("text", {x:left, y:ay - 5, "text-anchor":"start"}, "axis-label major");
+    a1.textContent = "\u25c0 tends to come earlier";
+    gTrunk.appendChild(a1);
+    var a2 = sEl("text", {x:right, y:ay - 5, "text-anchor":"end"}, "axis-label major");
+    a2.textContent = "tends to come later \u25b6";
+    gTrunk.appendChild(a2);
+    if(AX.caption){
+      var mc = sEl("text", {x:right, y:Hv - 26, "text-anchor":"end"}, "axis-label");
+      mc.textContent = AX.caption.text;
+      gTrunk.appendChild(mc);
+    }
   } else {
     /* the fork zone: where worlds stop sharing our history */
     if(AX.caption){
@@ -280,7 +376,13 @@ function renderChart(yOverride){
     gNow.appendChild(nl);
   }
   var offscreen = (nx < 0 || nx > W);
-  var nt = sEl("text", {x:clamp(nx, left + 52, right - 52), y:14, "text-anchor":"middle"}, "now-cap");
+  /* In Moments the column headers share this strip, and a header can land on
+     the plane. Sit the cap beside the line rather than centred on it, so the
+     plane stays legible and the header is not overprinted. */
+  var capX = clamp(nx, left + 52, right - 52);
+  var capAnchor = "middle";
+  if(AX && AX.mode === "moments" && capX + 46 < right - 4){ capAnchor = "start"; capX += 5; }
+  var nt = sEl("text", {x:capX, y:14, "text-anchor":capAnchor}, "now-cap");
   nt.textContent = offscreen ? ("TODAY " + NOW + (nx < 0 ? " ←" : " →")) : ("TODAY " + NOW);
   if(offscreen) nt.setAttribute("opacity", "0.5");
   gNow.appendChild(nt);
@@ -324,6 +426,12 @@ function renderChart(yOverride){
     zoomBy:zoomBy, fit:fitAll,
     pxFor:pxFor, yearForPx:yearForPx, render:renderChart,
     axis:function(){ return AX; }, axisMode:function(){ return axisMode; },
+    bins:function(){ return BINS; },
+    matchNews:function(item){ return matchNews(item); },
+    clearMatch:function(){ return clearMatch(); },
+    futuresFor:function(id, n){ return futuresFor(id, n); },
+    renderFutures:function(item, fx){ return renderFutures(item, fx); },
+    litBin:function(){ return litBin; },
     visibleYears:function(){ return { from:yearForPx(LANE_R), to:yearForPx(W-12) }; },
     focusYear:function(year, halfSpan){
       view.c = year;
@@ -342,8 +450,15 @@ function renderBranch(ln, lay, budget, left, right, nx){
   var l = ln.l, y = ln.y, side = ln.side, color = l._g.color, ty = lay.trunkY;
   var g = sEl("g", null, "branch");
   g.setAttribute("data-lane-group", l.id);
-  if(sel && l !== sel) g.classList.add("dim");
-  if(l === sel) g.classList.add("sel");
+  /* Dimming answers two different questions. Normally it is "which world am I
+     reading". When a news item is matched, it is "which worlds passed through
+     this kind of moment" - and that lights several branches at once, which is
+     the whole point of the Moments view. */
+  var lit = (typeof litBin !== "undefined" && litBin)
+    ? !!(litWorlds && litWorlds[l.id])
+    : (l === sel);
+  if(!lit) g.classList.add("dim");
+  if(lit) g.classList.add("sel");
 
   var dv = l.divergence.year, evs = l.events;
   var lastYear = dv;
@@ -438,6 +553,9 @@ function renderBranch(ln, lay, budget, left, right, nx){
   var showTitle = titleFits || l === sel || l.id === hoverId;
   if(showTitle){
     var tt = sEl("text", tAttrs, "title");
+    /* tagged so a test can assert every world is named, which is the thing
+       that matters - not how many text nodes the axis happens to draw */
+    tt.setAttribute("data-lane-title", l.id);
     tt.textContent = shown + "  ";
     if(lay.lod >= 1){
       var sub = sEl("tspan", null, "sub");

@@ -125,3 +125,15 @@
 /* the fork-zone caption sits on the trunk line, so it needs a ground of its
    own to stay readable against the trunk's own glow */
 .axis-label.zone{paint-order:stroke;stroke:var(--surface);stroke-width:3.5px;stroke-linejoin:round}
+
+/* Moments: one band per kind of moment, headers above the tree */
+.moment-band{fill:var(--chart-band);stroke:var(--line-1);stroke-width:.5}
+.moment-band:hover{fill:var(--now)}
+.moment-lead{stroke:var(--line-2);stroke-width:.5;stroke-dasharray:2 3}
+.moment-head{font-size:var(--fs-0);font-weight:700;fill:var(--ink-1);letter-spacing:.03em}
+.moment-count{font-size:var(--fs-0);fill:var(--ink-4)}
+
+/* the arc: what left-to-right means in Moments */
+.arc-rule{stroke:var(--line-2);stroke-width:.5}
+/* convergence: one capsule per kind, sized by how many worlds pass through it */
+.moment-capsule{fill:var(--now)}

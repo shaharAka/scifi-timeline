@@ -40,7 +40,12 @@ function layout(list){
   perSide["-1"].sort(function(a,b){ return a.earliest - b.earliest; });
   perSide["1"].sort(function(a,b){ return a.earliest - b.earliest; });
 
-  var gap = LANE_GAP * Z, bgap = BUNDLE_GAP * Z, band = TRUNK_BAND * Z, pad = PAD_Y * Z;
+  var gap = LANE_GAP * Z, bgap = BUNDLE_GAP * Z, band = TRUNK_BAND * Z;
+  /* Moments labels its columns above the tree. The trunk line is a thicket of
+     branch titles, so a header placed down there is read through them whatever
+     row it takes; reserving a strip at the top is the only clear ground. */
+  var head = (typeof AX !== "undefined" && AX && AX.mode === "moments") ? MOMENT_HEAD_H : 0;
+  var pad = PAD_Y * Z + head;
 
   function sideHeight(bundles){
     var lanes = 0;
@@ -77,5 +82,5 @@ function layout(list){
   var lod = gap >= 24 ? 2 : gap >= 15 ? 1 : 0;
 
   return { lanes:lanes, bundles:bundles, trunkY:trunkY, height:height, height1:height / Z,
-           gap:gap, lod:lod, nodeScale:clamp(gap / 34, 0.55, 1) };
+           gap:gap, lod:lod, head:head, nodeScale:clamp(gap / 34, 0.55, 1) };
 }

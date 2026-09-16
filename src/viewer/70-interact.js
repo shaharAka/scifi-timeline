@@ -17,7 +17,7 @@ function attachInteractions(svg){
       drag.moved = Math.max(drag.moved, Math.abs(dx), Math.abs(dy));
       /* Order mode: x is sequence and always fills the width, so there is
          nothing to pan along it. Dragging still moves the tree vertically. */
-      if(axisMode === "years") panTime(drag.c0, dx);
+      if(axisMode === "years") panTime(drag.c0, dx);   /* else x is not a quantity */
       panY = drag.p0 + dy;
       renderChart();
       return;

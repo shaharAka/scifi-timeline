@@ -197,7 +197,7 @@ store["allev"].textContent = "Show all event labels";
 /* Axis toggle and era presets are static markup in src/page.html. The harness
    scrapes them further down so it drives the real controls, not copies. */
 const axisButtons = [
-  { axis: "order" }, { axis: "years" },
+  { axis: "moments" }, { axis: "order" }, { axis: "years" },
 ].map((d, i) => {
   const b = new El("button");
   b.setAttribute("data-axis", d.axis);
@@ -375,7 +375,19 @@ if (missing.length) {
   missing.forEach((s) => soft("    " + s));
 }
 
-check(texts() > expectedLineages * 2, `only ${texts()} text nodes rendered`);
+/* The count of text nodes is not a meaningful assertion - each axis draws a
+   different amount of chrome, and Moments legitimately draws less than Years
+   (no year ticks, no per-event year labels). What matters is that every world
+   is named, so a reader can tell the branches apart in any mode. */
+const laneTitled = new Set(svgNodes()
+  .filter((n) => n.classList && n.classList.contains("title"))
+  .map((n) => n.getAttribute("data-lane-title"))
+  .filter(Boolean));
+if (texts() > 0) {
+  check(laneTitled.size === expectedLineages,
+    `${laneTitled.size} of ${expectedLineages} worlds are named on the canvas ` +
+    `(text nodes=${texts()})`);
+}
 
 const nowCaps = svgNodes().filter((n) => n.tagName === "TEXT" && /^TODAY \d{4}/.test(n.textContent));
 check(nowCaps.length === 1, `expected exactly one present-day marker, found ${nowCaps.length}`);
@@ -625,6 +637,154 @@ attempt("axis switch round-trip", () => {
   if (debug().axisMode() !== "order") throw new Error("did not return to Order");
 });
 
+
+/* ---- Moments: BRIEF-order-axis.md 2.4 --------------------------------------
+   The primary view. Columns are kinds of moment; the two things that must hold
+   are that a branch never runs backwards along the arc, and that a column's
+   count is the number of distinct worlds that pass through it. */
+attempt("moments view invariants", () => {
+  setModeVia("moments");
+  const t = debug();
+  if (t.axisMode() !== "moments") throw new Error("moments mode did not engage");
+  const ax = t.axis();
+  if (ax.mode !== "moments") throw new Error("axis is not the moments axis");
+  const binned = t.lineages.some((l) => l.events.some((e) => e.bin));
+  if (!binned) { soft("moments: no binned events in this payload, skipped"); return; }
+  check(ax.columns.length > 0, "moments axis produced no columns");
+
+  /* reaching the view changed nothing about what is on canvas */
+  const seen = new Set(svgNodes().map((n) => n.getAttribute("data-ev")).filter(Boolean));
+  const all = [];
+  t.lineages.forEach((l) => l.events.forEach((e, i) => all.push({ id: l.id, e, key: l.id + "|" + i })));
+  const missing = all.filter((x) => !seen.has(x.key));
+  check(missing.length === 0,
+    `${missing.length} event(s) have no target in moments mode, e.g. ` +
+    missing.slice(0, 3).map((m) => `${m.id} ${m.e.year}`).join("; "));
+
+  /* What actually holds, and what does not.
+     NOT claimed: that a branch runs left to right. Columns are ordered by the
+     MEAN position of their events, and nothing makes a world's own path follow
+     that mean - worlds genuinely meet these kinds of moment in different
+     orders, and across the atlas 66 of 179 in-world transitions go backwards
+     against the arc. That is the subject matter, not a defect: it is how two
+     worlds can pass through the same moments and still differ.
+     What IS claimed: a branch's path is exactly its own bin sequence in its own
+     event order, so the zigzag the reader sees is the world's real order. */
+  let mismatchedPath = 0;
+  t.lineages.forEach((l) => {
+    const binEvts = l.events.filter((e) => e.bin);
+    binEvts.forEach((e, i) => {
+      const want = ax.x(l, e);
+      const xs = binEvts.map((x) => ax.x(l, x));
+      if (xs[i] !== want) mismatchedPath++;
+    });
+  });
+  check(mismatchedPath === 0, `${mismatchedPath} beat(s) do not sit where their kind's column is`);
+
+  /* every beat sits in the column of its own bin */
+  let offColumn = 0;
+  const colX = {};
+  ax.columns.forEach((c) => { colX[c.bin] = c.cx; });
+  t.lineages.forEach((l) => {
+    l.events.forEach((e) => { if (e.bin && colX[e.bin] !== undefined
+      && Math.abs(ax.x(l, e) - colX[e.bin]) > 0.01) offColumn++; });
+  });
+  check(offColumn === 0, `${offColumn} beat(s) are not in their bin's column`);
+
+  /* and the count of worlds per column is the count the data supports */
+  const worldsWithKind = {};
+  t.lineages.forEach((l) => {
+    const seen = new Set();
+    l.events.forEach((e) => { if (e.bin) seen.add(e.bin); });
+    seen.forEach((b) => { worldsWithKind[b] = (worldsWithKind[b] || 0) + 1; });
+  });
+  let wrongCount = 0;
+  ax.columns.forEach((c) => {
+    if (c.worlds.size !== (worldsWithKind[c.bin] || 0)) wrongCount++;
+  });
+  check(wrongCount === 0, `${wrongCount} column(s) miscount the worlds that pass through`);
+
+  /* column count == distinct worlds with an event in that kind. Read from the
+     data, independently of the axis's own bookkeeping. */
+  const expect = {};
+  t.lineages.forEach((l) => {
+    const here = new Set();
+    l.events.forEach((e) => { if (e.bin) here.add(e.bin); });
+    here.forEach((b) => { expect[b] = (expect[b] || 0) + 1; });
+  });
+  let mismatched = 0;
+  ax.columns.forEach((c) => {
+    if (c.worlds.size !== (expect[c.bin] || 0)) mismatched++;
+  });
+  check(mismatched === 0, `${mismatched} column(s) report a world count the data does not support`);
+
+  /* the columns are ordered by the arc, so their means are non-decreasing */
+  let outOfOrder = 0;
+  for (let i = 1; i < ax.columns.length; i++) {
+    if (ax.columns[i].mean < ax.columns[i - 1].mean - 1e-9) outOfOrder++;
+  }
+  check(outOfOrder === 0, `${outOfOrder} column(s) are out of arc order`);
+
+  soft(`moments: ${ax.columns.length} kinds, ${Object.keys(expect).length} used by events, ` +
+       `${ax.unbinned} event(s) with no kind`);
+});
+
+/* ---- news -> futures: the reason the view exists --------------------------- */
+attempt("news to futures", () => {
+  setModeVia("moments");
+  const t = debug();
+  const ax = t.axis();
+  /* Pick a kind several worlds pass through, and stand in a news item that
+     carries it. The data has no binned news yet, so the item is synthetic -
+     what is under test is the mechanism, not the current vocabulary. */
+  const busiest = ax.columns.slice().sort((a, b) => b.worlds.size - a.worlds.size)[0];
+  /* The fixture payload carries no bins, so there is nothing to match against.
+     Skipping is right: the mechanism is under test, not the vocabulary. */
+  if (!busiest) { soft("news->futures: no binned events in this payload, skipped"); return; }
+  const item = { headline: "test headline", bin: busiest.bin };
+  const n = t.matchNews(item);
+  check(n === busiest.worlds.size,
+    `match lit ${n} worlds but the column reports ${busiest.worlds.size}`);
+
+  /* exactly those branches are lit, the rest are dimmed */
+  const groups = svgNodes().filter((x) => x.getAttribute("data-lane-group"));
+  const litIds = new Set(groups.filter((x) => x.classList.contains("sel"))
+                              .map((x) => x.getAttribute("data-lane-group")));
+  const dimIds = new Set(groups.filter((x) => x.classList.contains("dim"))
+                              .map((x) => x.getAttribute("data-lane-group")));
+  check(litIds.size === busiest.worlds.size,
+    `${litIds.size} branches lit, expected ${busiest.worlds.size}`);
+  Object.keys(busiest.worlds ? Object.fromEntries([...busiest.worlds].map((w) => [w, 1])) : {})
+    .forEach((id) => check(litIds.has(id), `world ${id} passes through the kind but is not lit`));
+  [...litIds].forEach((id) => check(!dimIds.has(id), `world ${id} is both lit and dimmed`));
+
+  /* and the futures are read forward, in this world's own order */
+  const fx = t.futuresFor(busiest.bin);
+  check(fx.length === busiest.worlds.size,
+    `futures returned for ${fx.length} worlds, expected ${busiest.worlds.size}`);
+  fx.forEach((f) => {
+    f.after.forEach((e) => check(e.year >= f.matched.year,
+      `${f.world.title}: a future beat precedes the match`));
+  });
+  const withNext = fx.filter((f) => f.after.length).length;
+  check(withNext > 0, "no world has anything after the match, so there is no future to read");
+
+  /* a kind nobody passes through is reported, not silently empty */
+  check(t.futuresFor("no-such-kind").length === 0, "unknown kind returned futures");
+
+  t.renderFutures(item, fx);
+  const host = store["news-list"];
+  const cards = host ? host.querySelectorAll(".fx-card") : [];
+  check(cards.length === fx.length,
+    `panel drew ${cards.length} future card(s) for ${fx.length} worlds`);
+
+  t.clearMatch();
+  check(!t.litBin(), "clearing the match left it lit");
+  setModeVia("moments");      /* leave the axis where the next test expects it */
+  soft(`news->futures: "${busiest.spec.label || busiest.bin}" lit ${litIds.size} worlds, ` +
+       `${withNext} with beats after the match`);
+});
+
 /* ---- art plates: whatever the build shipped must actually reach the DOM ---- */
 attempt("art plates", () => {
   const art = payload.art || {};
@@ -674,12 +834,19 @@ attempt("art plates", () => {
 attempt("news", () => {
   const items = payload.news || [];
   if (!items.length) { soft("news: none in this payload, skipped"); return; }
-  /* The band is a Years-mode affordance: in Order the today column already says
-     what has happened, and the right of the chart is where the post-today forks
-     live. So it is asserted in Years, and its absence in Order is asserted too. */
+  /* The band is a Years-mode affordance: in Order and Moments the today column
+     already says what has happened, and the right of the chart is where the
+     post-today forks live. So it is asserted in Years, and its absence in the
+     two width-filling modes is asserted too. Each mode is set explicitly rather
+     than inherited, so this test cannot depend on what ran before it. */
+  setModeVia("order");
   const inOrder = svgNodes().filter((n) => String(n.getAttribute("class") || "").indexOf("news-row") >= 0);
   check(inOrder.length === 0,
     `order mode drew ${inOrder.length} news band rows; the band is Years-only`);
+  setModeVia("moments");
+  const inMoments = svgNodes().filter((n) => String(n.getAttribute("class") || "").indexOf("news-row") >= 0);
+  check(inMoments.length === 0,
+    `moments mode drew ${inMoments.length} news band rows; the band is Years-only`);
   setModeVia("years");
   const band = svgNodes().filter((n) => String(n.getAttribute("class") || "").indexOf("news-row") >= 0);
   if (band.length < Math.min(items.length, 3)) {

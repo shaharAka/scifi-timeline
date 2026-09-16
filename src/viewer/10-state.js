@@ -34,6 +34,12 @@ var OFF_CAP = 5e9;
 
 var view = { c:1990, hs:160 };
 var sel = null, activeTab = "world";
+
+/* News -> futures. Choosing a news item selects its bin; every world that
+   passed through that kind of moment lights, and each is read forward from
+   there. Empty means no match is active. */
+var litBin = null;
+var litWorlds = null;
 var q = "", tagFilter = null, showAllEvents = false;
 var groupOn = {};
 var anim = { raf:0, from:null, dur:480 };
@@ -47,3 +53,9 @@ var cursorEls = null;     /* the scrubber's svg nodes, rebuilt with the chart */
 var panelMode = "";       /* "" | "index" | "world" | "about" */
 
 var REDUCED = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+
+/* The bin vocabulary, straight from the payload. */
+var BINS = [];
+
+/* Height reserved above the tree for the Moments column labels. */
+var MOMENT_HEAD_H = 40;   /* 3 label rows + the convergence capsules */

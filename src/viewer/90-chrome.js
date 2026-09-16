@@ -217,14 +217,14 @@ function colorVars(hex){
 /* Order is the default; Years is the evidence view. Switching rebuilds the
    axis and re-renders - nothing about the data changes. */
 function setAxis(mode, persist){
-  axisMode = (mode === "years") ? "years" : "order";
+  axisMode = (mode === "years" || mode === "moments") ? mode : "order";
   Array.prototype.forEach.call(document.querySelectorAll(".ax"), function(b){
     b.classList.toggle("on", b.getAttribute("data-axis") === axisMode);
   });
   /* Horizontal zoom and pan have no meaning when x is sequence, so the
      calendar controls are disabled rather than hidden: a control that vanishes
      looks like a bug, a greyed one explains itself. */
-  var blocked = (axisMode === "order");
+  var blocked = (axisMode !== "years");
   ["eras", "zoom"].forEach(function(id){
     var el = document.getElementById(id);
     if(!el) return;
@@ -234,10 +234,10 @@ function setAxis(mode, persist){
   if(persist){ try{ localStorage.setItem("scifi-timeline-axis", axisMode); }catch(e){} }
   /* Each mode needs its own framing. Years fits the whole calendar - fitting
      only the home era at 1958-2042 hides almost every fork, which looks like
-     the switch broke the chart. Order always fills the width and only needs to
-     fit vertically. */
-  if(axisMode === "years") fitEverything();   /* the whole calendar, all forks visible */
-  else fitAll();                              /* vertical fit; x fills the width */
+     the switch broke the chart. Order and Moments both fill the width and need
+     only a vertical fit: their x is not a quantity to zoom. */
+  if(axisMode === "years") fitEverything();
+  else fitAll();
 }
 
 function renderAxisToggle(){
