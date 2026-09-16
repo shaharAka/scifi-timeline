@@ -1,0 +1,113 @@
+{
+ "_comment": "The bin vocabulary. A bin is a KIND OF MOMENT that recurs across worlds; an event points at one by id. Bins are not fixed in advance - tools/bin-events.py adds to an existing bin when an event is like one already there, and creates a new bin only when nothing fits. This file is the outcome of that, and the thing to edit when you disagree with it.",
+ "bins": [
+  {
+   "id": "economic-catastrophe",
+   "label": "economic catastrophe",
+   "definition": "A systemic financial failure that destabilizes society and causes widespread hardship.",
+   "createdFrom": "tmithc-crash-1929"
+  },
+  {
+   "id": "assassination-alters-history",
+   "label": "assassination alters history",
+   "definition": "A successful or failed assassination of a leader shifts the timeline.",
+   "createdFrom": "tmithc-zangara-miami"
+  },
+  {
+   "id": "the-war-is-lost",
+   "label": "the war is lost",
+   "definition": "A major conflict concludes with the defeat of the traditional protagonist-aligned power.",
+   "createdFrom": "tmithc-axis-victory-1947"
+  },
+  {
+   "id": "power-vacuum",
+   "label": "power vacuum",
+   "definition": "The death or incapacity of a leader triggers a struggle for control.",
+   "createdFrom": "tmithc-succession-crisis"
+  },
+  {
+   "id": "emergence-of-new-actors",
+   "label": "emergence of new actors",
+   "definition": "A new category of individual or group begins operating within society.",
+   "createdFrom": "wm-minutemen-era-begins"
+  },
+  {
+   "id": "technological-or-supernatural-ascendance",
+   "label": "technological or supernatural ascendance",
+   "definition": "A breakthrough or event creates a being or tool of immense power.",
+   "createdFrom": "wm-doctor-manhattan"
+  },
+  {
+   "id": "decisive-military-victory",
+   "label": "decisive military victory",
+   "definition": "A conflict is resolved quickly and completely by one side.",
+   "createdFrom": "wm-vietnam-won"
+  },
+  {
+   "id": "state-curtails-freedom",
+   "label": "state curtails freedom",
+   "definition": "A government passes laws to restrict or outlaw a specific group's activities.",
+   "createdFrom": "wm-keene-act"
+  },
+  {
+   "id": "mass-casualty-event",
+   "label": "mass casualty event",
+   "definition": "A sudden disaster or attack kills a large number of people.",
+   "createdFrom": "wm-1985-the-knife-edge"
+  },
+  {
+   "id": "prolonged-guerrilla-conflict",
+   "label": "prolonged guerrilla conflict",
+   "definition": "A war devolves into a long-term, indecisive, and bloody insurgency.",
+   "createdFrom": "fl-war-of-the-urals"
+  },
+  {
+   "id": "diplomatic-normalization",
+   "label": "diplomatic normalization",
+   "definition": "Former enemies attempt to reconcile through state visits or treaties.",
+   "createdFrom": "fl-auschwitz-erased"
+  },
+  {
+   "id": "pivotal-birth",
+   "label": "pivotal birth",
+   "definition": "The arrival of an individual destined to play a central role.",
+   "createdFrom": "term-john-connor-born"
+  },
+  {
+   "id": "founding-of-a-settlement",
+   "label": "founding of a settlement",
+   "definition": "The establishment of a new colony or major permanent outpost.",
+   "createdFrom": "st-terra-nova"
+  },
+  {
+   "id": "dawn-of-exploration",
+   "label": "dawn of exploration",
+   "definition": "The first mission of a new type into unknown territory.",
+   "createdFrom": "st-nx-01"
+  },
+  {
+   "id": "interstate-unification",
+   "label": "interstate unification",
+   "definition": "Independent powers sign a charter to form a single federal body.",
+   "createdFrom": "st-federation-founded"
+  },
+  {
+   "id": "technological-catastrophe",
+   "label": "technological catastrophe",
+   "definition": "The sudden failure of a fundamental technology destabilizes civilization.",
+   "createdFrom": "st-the-burn"
+  },
+  {
+   "id": "the-truth-comes-out",
+   "label": "the truth comes out",
+   "definition": "A hidden reality or secret organization is revealed or discovered.",
+   "createdFrom": "fnd-second-foundation"
+  },
+  {
+   "id": "epilogue-of-continuity",
+   "label": "epilogue of continuity",
+   "definition": "A jump forward in time showing characters in a stable, surviving world.",
+   "createdFrom": "hp-epilogue"
+  }
+ ]
+}

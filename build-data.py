@@ -31,6 +31,7 @@ PHASES = {"prehistory", "fork", "aftermath", "deep"}
 EPOCHS = {"deep-past", "far-future", "present"}
 CONF = {"high", "medium", "low"}
 NOW_YEAR = datetime.now().year
+VOCAB = {}   # bin vocabulary, filled from data/bins.json in main()
 
 
 def tier_of(year):
@@ -319,6 +320,50 @@ def load_news(lineage_ids):
     return out
 
 
+
+def load_bins():
+    """The bin vocabulary: which kinds of moment exist.
+
+    Events point into this by id. A dangling pointer is worse than a missing
+    one - it means an event claims a kind of moment the vocabulary does not
+    define - so an unknown bin is a hard error, not a warning.
+    """
+    path = os.path.join(ROOT, "data", "bins.json")
+    if not os.path.exists(path):
+        warn("data/bins.json missing; events may not carry bins")
+        return {}
+    try:
+        with open(path, "r", encoding="utf-8") as fh:
+            doc = json.load(fh)
+    except (OSError, json.JSONDecodeError) as exc:
+        err("data/bins.json is unreadable: %s" % exc)
+        return {}
+    bins = doc.get("bins")
+    if not isinstance(bins, list):
+        err("data/bins.json needs a 'bins' list")
+        return {}
+    out = {}
+    for i, b in enumerate(bins):
+        tag = "data/bins.json bin[%d]" % i
+        if not isinstance(b, dict):
+            err("%s is not an object" % tag)
+            continue
+        bid = b.get("id")
+        if not bid:
+            err("%s has no id" % tag)
+            continue
+        if not re.match(r"^[a-z0-9]+(-[a-z0-9]+)*$", bid):
+            warn("%s id %r is not lowercase-hyphenated" % (tag, bid))
+        if bid in out:
+            err("%s duplicates id %r" % (tag, bid))
+            continue
+        for key in ("label", "definition"):
+            if not b.get(key):
+                err("%s (%s) is missing %r" % (tag, bid, key))
+        out[bid] = b
+    return out
+
+
 def load_worlds(lineage_ids):
     """World dossiers from data/parts/worlds/*.json, keyed by lineage id.
 
@@ -462,6 +507,9 @@ def check_lineage(name, lin, group_id, seen_ids):
             err("%s: phase %r not in %s" % (tag, e.get("phase"), sorted(PHASES)))
         if e.get("importance") not in (1, 2, 3):
             warn("%s: importance %r should be 1, 2 or 3" % (tag, e.get("importance")))
+        if "bin" in e and e.get("bin") is not None:
+            if e["bin"] not in VOCAB:
+                err("%s: bin %r is not defined in data/bins.json" % (tag, e["bin"]))
         if e.get("confidence") not in CONF:
             err("%s: confidence %r not in %s" % (tag, e.get("confidence"), sorted(CONF)))
 
@@ -565,6 +613,9 @@ def assemble():
 
 
 def main():
+    # the bin vocabulary must be known before any event is checked against it
+    global VOCAB
+    VOCAB = load_bins()
     parts = load_parts()
     order = load_group_order()
 
@@ -663,6 +714,7 @@ def main():
             "art": len(art),
             "pd": len(pd),
             "news": len(news),
+            "bins": len(VOCAB),
             "note": ("Real-world calendar years throughout. In-universe date systems "
                      "(BBY, AG, GE, stardates, millennium notation) are preserved per event "
                      "in the inUniverse field."),
@@ -673,6 +725,7 @@ def main():
         "art": art,
         "pd": pd,
         "news": news,
+        "bins": list(VOCAB.values()),
     }
     if atlas:
         payload["atlas"] = atlas

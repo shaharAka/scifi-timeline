@@ -186,6 +186,30 @@ If a real-world year is contested, pick the best-supported reading, set
 }
 ```
 
+
+## Bins: the kind of moment
+
+`bin` on an event is a pointer into `data/bins.json`: the **kind of moment** it
+is, independent of which world it happens in. It is what makes convergence
+visible - two branches pass through the same column when they share a bin, and
+that is a different claim from sharing a date.
+
+Bins are **not fixed in advance.** `tools/bin-events.py` walks the events, and
+for each one either adds it to an existing bin it resembles or creates a new bin
+when nothing fits. The vocabulary in `data/bins.json` is the outcome of that
+pass, and is meant to be argued with - edit the labels and definitions freely,
+rename ids if you like, and re-run the tool. What matters is that the *events*
+are right.
+
+- One bin per event, or `null` for an event with nothing to depict - a
+  publication date is not a moment in a story.
+- The bin is chosen from the event's own text, never from how famous the year is
+  or how it is usually described.
+- `build-data.py` hard-errors on an event that names a bin which does not exist
+  in `data/bins.json`. A dangling pointer is worse than a missing one.
+- A bin that ends up with a single member is a smell, not an error: it usually
+  means the definition is too narrow. `tools/bin-events.py --report` lists them.
+
 ## World dossiers (optional, one file per research pass under `data/parts/worlds/`)
 
 The timeline says *when* a world sits. A dossier says what it is like to be in
@@ -249,7 +273,7 @@ Rules:
   `franchiseStatus`, `divergence`, `events`, `groupingNote`
 - divergence: `year`, `label`, `delta`, `confidence`
 - event: `id`, `year`, `title`, `description`, `tier`, `phase`, `importance`,
-  `kind`, `confidence`
+  `kind`, `confidence`, `bin`
 
 ## Hard constraints
 

@@ -39,7 +39,9 @@
      "kind": "discovery",
      "inUniverse": null,
      "confidence": "high",
-     "note": "The series treats the real 1947 Roswell incident as the fiction's first true event and never contradicts the public record, only supplements it."
+     "note": "The series treats the real 1947 Roswell incident as the fiction's first true event and never contradicts the public record, only supplements it.",
+     "bin": "the-truth-comes-out",
+     "binWhy": "The discovery of an alien presence begins a long-term secret history."
     },
     {
      "id": "xf-syndicate",
@@ -53,7 +55,9 @@
      "kind": "founding",
      "inUniverse": null,
      "confidence": "medium",
-     "note": "The mythology dates the Syndicate's formation loosely to the years after 1947; 1962 is the best-supported reading from the series' own retellings across the later mytharc episodes."
+     "note": "The mythology dates the Syndicate's formation loosely to the years after 1947; 1962 is the best-supported reading from the series' own retellings across the later mytharc episodes.",
+     "bin": "emergence-of-new-actors",
+     "binWhy": "Power brokers from rival nations form a single secret body."
     },
     {
      "id": "xf-treaty",
@@ -67,7 +71,9 @@
      "kind": "politics",
      "inUniverse": null,
      "confidence": "high",
-     "note": "Merges the treaty and the abduction: both are dated 1973 on screen in the series' flashbacks, and the abduction is the treaty's price paid in the Mulder family."
+     "note": "Merges the treaty and the abduction: both are dated 1973 on screen in the series' flashbacks, and the abduction is the treaty's price paid in the Mulder family.",
+     "bin": "diplomatic-normalization",
+     "binWhy": "A treaty is signed between humans and an alien force with hostages."
     },
     {
      "id": "xf-files-reopened",
@@ -81,7 +87,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
-     "note": "The series' present day is the real present day of its broadcast: the pilot is set in 1993 and the seasons advance roughly with the calendar."
+     "note": "The series' present day is the real present day of its broadcast: the pilot is set in 1993 and the seasons advance roughly with the calendar.",
+     "bin": "emergence-of-new-actors",
+     "binWhy": "Characters begin investigating cases that have been hidden."
     },
     {
      "id": "xf-black-oil",
@@ -95,7 +103,9 @@
      "kind": "discovery",
      "inUniverse": null,
      "confidence": "high",
-     "note": "The film sits between seasons five and six and is set in the summer of 1998."
+     "note": "The film sits between seasons five and six and is set in the summer of 1998.",
+     "bin": "the-truth-comes-out",
+     "binWhy": "The full planetary scale of the alien presence is revealed."
     },
     {
      "id": "xf-mulder-abduction",
@@ -109,7 +119,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
-     "note": ""
+     "note": "",
+     "bin": "assassination-alters-history",
+     "binWhy": "The removal of a central figure shifts the focus of the investigation."
     },
     {
      "id": "xf-colonization-2012",
@@ -123,7 +135,9 @@
      "kind": "disaster",
      "inUniverse": null,
      "confidence": "medium",
-     "note": "2012 is stated on screen as the colonization date, but the invasion never happens on screen between the original run and the 2016 revival, which treats the date as passed and the conspiracy as broken; the fiction's deepest reach therefore stops here."
+     "note": "2012 is stated on screen as the colonization date, but the invasion never happens on screen between the original run and the 2016 revival, which treats the date as passed and the conspiracy as broken; the fiction's deepest reach therefore stops here.",
+     "bin": "the-war-is-lost",
+     "binWhy": "The predicted collapse/invasion date passes without the expected system change."
     },
     {
      "id": "xf-revival",
@@ -137,7 +151,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
-     "note": "Season ten premiered in January 2016 and season eleven in January 2018; both are set in their year of broadcast, which is what keeps this lineage anchored to the present day."
+     "note": "Season ten premiered in January 2016 and season eleven in January 2018; both are set in their year of broadcast, which is what keeps this lineage anchored to the present day.",
+     "bin": "emergence-of-new-actors",
+     "binWhy": "Old conspiracies fragment and new ones begin to operate."
     }
    ],
    "groupingNote": "The X-Files is the archetype's purest case: nothing in public history changes, and the divergence is that a 1947 crash and a 1973 treaty were real and classified. Its events cluster exactly where the conceit requires — five in the 20th century (T3) and three from 1998 onward (T2) — because a secret history has to be old enough to have been buried and recent enough to still be running. The lineage has no T1 event, and that is a true fact about the genre rather than a gap: the mytharc ends at the 2016 revival, so it stops in our near future, and even the date the whole conspiracy was built around — the 2012 colonization — sits in T2 on the real calendar. Nothing in the fiction reaches past the next few decades, so nothing reaches deep time."
@@ -172,7 +188,9 @@
      "kind": "founding",
      "inUniverse": null,
      "confidence": "medium",
-     "note": "The agency's creation is placed in the late 1950s by franchise tie-in material; the films themselves only establish that it predates the 1961 first contact and the 1969 events."
+     "note": "The agency's creation is placed in the late 1950s by franchise tie-in material; the films themselves only establish that it predates the 1961 first contact and the 1969 events.",
+     "bin": "emergence-of-new-actors",
+     "binWhy": "A group forms an agency with total autonomy and oversight."
     },
     {
      "id": "mib-first-contact",
@@ -186,7 +204,9 @@
      "kind": "first-contact",
      "inUniverse": null,
      "confidence": "medium",
-     "note": "The founding year of the agency's mission is fixed by franchise reference rather than stated on screen in the 1997 film."
+     "note": "The founding year of the agency's mission is fixed by franchise reference rather than stated on screen in the 1997 film.",
+     "bin": "diplomatic-normalization",
+     "binWhy": "An encounter leads to a standing policy of Earth as a neutral zone."
     },
     {
      "id": "mib-worlds-fair",
@@ -200,7 +220,9 @@
      "kind": "technology",
      "inUniverse": null,
      "confidence": "medium",
-     "note": "Established in franchise tie-in material and revisited in the films, where the 1964 fairground site is where the first film's climax takes place."
+     "note": "Established in franchise tie-in material and revisited in the films, where the 1964 fairground site is where the first film's climax takes place.",
+     "bin": "the-truth-comes-out",
+     "binWhy": "Alien tech is revealed to be the true nature of human landmarks."
     },
     {
      "id": "mib-arcnet",
@@ -214,7 +236,9 @@
      "kind": "technology",
      "inUniverse": null,
      "confidence": "high",
-     "note": "The third film stages this on the real Apollo 11 launch date of 16 July 1969 and calls it the fixed point on which humanity's survival depends."
+     "note": "The third film stages this on the real Apollo 11 launch date of 16 July 1969 and calls it the fixed point on which humanity's survival depends.",
+     "bin": "technological-or-supernatural-ascendance",
+     "binWhy": "The deployment of a planetary shield provides immense protective power."
     },
     {
      "id": "mib-agent-j",
@@ -228,7 +252,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
-     "note": "The first film's release year is also its story year, keeping the franchise's present identical to the audience's."
+     "note": "The first film's release year is also its story year, keeping the franchise's present identical to the audience's.",
+     "bin": "pivotal-birth",
+     "binWhy": "A new individual is recruited into a secret society."
     },
     {
      "id": "mib-light-of-zartha",
@@ -242,7 +268,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
-     "note": "The second film is set five years after the first, in its own release year."
+     "note": "The second film is set five years after the first, in its own release year.",
+     "bin": "the-truth-comes-out",
+     "binWhy": "The takeover of headquarters forces the restoration of a leader's memory."
     },
     {
      "id": "mib-boris",
@@ -256,7 +284,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
-     "note": "The film is set in its release year before the time jump, and its 1969 sequence is the same fixed point charted above."
+     "note": "The film is set in its release year before the time jump, and its 1969 sequence is the same fixed point charted above.",
+     "bin": "assassination-alters-history",
+     "binWhy": "A time-traveling assassin attempts to shift the timeline by killing a leader."
     },
     {
      "id": "mib-international",
@@ -270,7 +300,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
-     "note": "Set in its release year and noted for giving the franchise its first recruit who was not memory-wiped into the job."
+     "note": "Set in its release year and noted for giving the franchise its first recruit who was not memory-wiped into the job.",
+     "bin": "the-truth-comes-out",
+     "binWhy": "A new recruit uncovers internal infiltration by a hidden group."
     }
    ],
    "groupingNote": "Men in Black runs entirely on concealment: the aliens were always here, the agency was founded in secret, and the public record of the 1960s is left intact while being quietly falsified from the inside. On the real axis it spans 1958 to 2019 — one T4 event for the agency's founding, five T3 events for the 1960s decade the films treat as their origin story, and three T2 events for the beats set in the audience's own century. Its T1 tier is empty because the fiction stops in our near future: for all the galaxy-spanning traffic, no Men in Black story is set more than a few decades past the present, which is exactly what keeps the conceit — they are among us, now, and you have already met one — intact."
@@ -305,7 +337,9 @@
      "kind": "founding",
      "inUniverse": null,
      "confidence": "medium",
-     "note": "The books say only that the school was founded over a thousand years before the 1990s; the conventional c. 990 dating is arithmetic from that statement, and the exact year is a convention rather than a stated fact."
+     "note": "The books say only that the school was founded over a thousand years before the 1990s; the conventional c. 990 dating is arithmetic from that statement, and the exact year is a convention rather than a stated fact.",
+     "bin": "founding-of-a-settlement",
+     "binWhy": "The establishment of a permanent institution that will outlast governments."
     },
     {
      "id": "hp-statute-of-secrecy",
@@ -319,7 +353,9 @@
      "kind": "politics",
      "inUniverse": null,
      "confidence": "high",
-     "note": "Instituted in 1689 and implemented in 1692, the same year as the Salem witch trials; the real trials are the Muggle-side event the wizarding law answers."
+     "note": "Instituted in 1689 and implemented in 1692, the same year as the Salem witch trials; the real trials are the Muggle-side event the wizarding law answers.",
+     "bin": "state-curtails-freedom",
+     "binWhy": "A government passes a law mandating the withdrawal and concealment of a group."
     },
     {
      "id": "hp-grindelwald-defeated",
@@ -333,7 +369,9 @@
      "kind": "war",
      "inUniverse": null,
      "confidence": "high",
-     "note": "The date is given on Dumbledore's Chocolate Frog card and is deliberately the year the real Second World War ended."
+     "note": "The date is given on Dumbledore's Chocolate Frog card and is deliberately the year the real Second World War ended.",
+     "bin": "decisive-military-victory",
+     "binWhy": "A magical war is resolved by the defeat of a dark wizard."
     },
     {
      "id": "hp-potters-attacked",
@@ -347,7 +385,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
-     "note": "Dated by the books' own chronology: Harry is fifteen months old at the attack and turns eleven in 1991."
+     "note": "Dated by the books' own chronology: Harry is fifteen months old at the attack and turns eleven in 1991.",
+     "bin": "assassination-alters-history",
+     "binWhy": "The failed murder of a child destroys a leader and ends a war."
     },
     {
      "id": "hp-letter-arrives",
@@ -361,7 +401,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
-     "note": "The first book opens on Harry's eleventh birthday, 31 July 1991, ten years after the attack that made him the Boy Who Lived."
+     "note": "The first book opens on Harry's eleventh birthday, 31 July 1991, ten years after the attack that made him the Boy Who Lived.",
+     "bin": "the-truth-comes-out",
+     "binWhy": "A character learns they belong to a hidden group with a destiny."
     },
     {
      "id": "hp-chamber-opens",
@@ -375,7 +417,9 @@
      "kind": "disaster",
      "inUniverse": null,
      "confidence": "high",
-     "note": "The second book spans the 1992-1993 school year."
+     "note": "The second book spans the 1992-1993 school year.",
+     "bin": "the-truth-comes-out",
+     "binWhy": "A hidden group's activity begins impacting the visible world."
     },
     {
      "id": "hp-voldemort-returns",
@@ -389,7 +433,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
-     "note": "The third task of the Triwizard Tournament is in June 1995; the denial campaign runs through the 1995-1996 school year."
+     "note": "The third task of the Triwizard Tournament is in June 1995; the denial campaign runs through the 1995-1996 school year.",
+     "bin": "emergence-of-new-actors",
+     "binWhy": "A defunct antagonist returns to activity, initially hidden from the public."
     },
     {
      "id": "hp-battle-of-hogwarts",
@@ -403,7 +449,9 @@
      "kind": "war",
      "inUniverse": null,
      "confidence": "high",
-     "note": "The battle is dated 2 May 1998 by the books' own chronology; it is the last event of the main series' present day."
+     "note": "The battle is dated 2 May 1998 by the books' own chronology; it is the last event of the main series' present day.",
+     "bin": "decisive-military-victory",
+     "binWhy": "The conflict is resolved in a single decisive engagement."
     },
     {
      "id": "hp-epilogue",
@@ -417,7 +465,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
-     "note": "The epilogue sits nineteen years after the battle, which fixes it in 2017 — the year the real-world calendar caught up with the books, and the anchor for this lineage's present day."
+     "note": "The epilogue sits nineteen years after the battle, which fixes it in 2017 — the year the real-world calendar caught up with the books, and the anchor for this lineage's present day.",
+     "binWhy": "It describes a status quo, not a transformative moment.",
+     "bin": "epilogue-of-continuity"
     }
    ],
    "groupingNote": "Harry Potter's present day is ours: Privet Drive, King's Cross and the Ministry's Muggle Prime Minister are all real, and the branch is a concealment treaty rather than a changed history. The 1692 Statute of Secrecy is the load-bearing event — it shares its year with the Salem witch trials, so the fiction explains a real historical atrocity as the reason the magical world went dark — and the story's own branch opens in 1981, ten years before Harry's first letter. On the real axis most of the lineage sits in the 20th century: two T4 events in the deep past, six T3 events for the 1945-1998 span the books actually narrate, and one T2 event for the 2017 epilogue. The T1 tier is empty because the fiction stops there — at the year the real calendar caught up with it — so no magical future has been invented to reach deep time."
@@ -452,7 +502,9 @@
      "kind": "founding",
      "inUniverse": "the age of the Old Ones",
      "confidence": "medium",
-     "note": "The origin is shown in flashback but never dated by the show, so year 1 stands for deep prehistory; the lineage's ancient past is this single event rather than a chain of dated ones."
+     "note": "The origin is shown in flashback but never dated by the show, so year 1 stands for deep prehistory; the lineage's ancient past is this single event rather than a chain of dated ones.",
+     "bin": "technological-or-supernatural-ascendance",
+     "binWhy": "Ritual creates a being of immense power to fight the dark."
     },
     {
      "id": "btvs-sunnydale-arrival",
@@ -466,7 +518,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
-     "note": "Merges the March arrival with the May season finale, as the schema allows only one event per lineage-year pair; the series' first season is set in its broadcast year, and the show's present stays within a year or two of the real calendar for its whole run."
+     "note": "Merges the March arrival with the May season finale, as the schema allows only one event per lineage-year pair; the series' first season is set in its broadcast year, and the show's present stays within a year or two of the real calendar for its whole run.",
+     "bin": "pivotal-birth",
+     "binWhy": "The protagonist begins operations in a new setting."
     },
     {
      "id": "btvs-battle-of-sunnydale",
@@ -480,7 +534,9 @@
      "kind": "war",
      "inUniverse": null,
      "confidence": "high",
-     "note": "The televised series ends in May 2003 and the finale's consequences drive the canonical comics that continue the story."
+     "note": "The televised series ends in May 2003 and the finale's consequences drive the canonical comics that continue the story.",
+     "bin": "decisive-military-victory",
+     "binWhy": "The primary threat is destroyed and the location erased."
     },
     {
      "id": "btvs-harmony-public",
@@ -494,7 +550,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "medium",
-     "note": "The reveal happens in the eighth season of the canonical comics, published 2008-2009; the in-universe date of that season is only pinned by its publication window, so the year is the best-supported reading rather than a stated one."
+     "note": "The reveal happens in the eighth season of the canonical comics, published 2008-2009; the in-universe date of that season is only pinned by its publication window, so the year is the best-supported reading rather than a stated one.",
+     "bin": "the-truth-comes-out",
+     "binWhy": "Rejected diplomatic-normalization because vampires aren't recognized as a state."
     },
     {
      "id": "btvs-magic-goes-dark",
@@ -508,7 +566,9 @@
      "kind": "disaster",
      "inUniverse": null,
      "confidence": "medium",
-     "note": "Placed in the publication year of the eighth season's final arc; the comics' chronology is loose and the season is usually read as spanning about a year and a half after 2003."
+     "note": "Placed in the publication year of the eighth season's final arc; the comics' chronology is loose and the season is usually read as spanning about a year and a half after 2003.",
+     "bin": "technological-catastrophe",
+     "binWhy": "A fundamental force (magic) fails, destabilizing civilization."
     },
     {
      "id": "btvs-fray",
@@ -522,7 +582,9 @@
      "kind": "event",
      "inUniverse": "the 23rd century",
      "confidence": "medium",
-     "note": "The comic places Melaka two hundred years after Buffy's era and firmly in the 23rd century; year 2200 is a midpoint for that convention, not a stated date. On the real axis the 23rd century is T2 — near future, not deep time — so this is the furthest the fiction reaches without ever leaving our next three hundred years."
+     "note": "The comic places Melaka two hundred years after Buffy's era and firmly in the 23rd century; year 2200 is a midpoint for that convention, not a stated date. On the real axis the 23rd century is T2 — near future, not deep time — so this is the furthest the fiction reaches without ever leaving our next three hundred years.",
+     "bin": "pivotal-birth",
+     "binWhy": "A central individual is chosen/called after a long absence."
     }
    ],
    "groupingNote": "Buffy hides its whole cosmology under an ordinary American town: the vampires are real, the Hellmouth is real, and the human world's ignorance is the story's standing joke and its tragedy. The branch never changes the historical record, so the lineage has no documented break with real history — the divergence is the point at which the fiction's present begins in 1997, and the 2009 celebrity reveal is where the secrecy finally fails. It is also the only lineage here whose story genuinely leaves the present century: the canonical comics jump two hundred years to the Slayer of the 23rd century, where magic has become legend, vampires have been reclassified as mutants and the Watchers' Council has decayed into fanatics. That is real narrative distance, and the real axis records it faithfully — the 1997-2003 seasons are T3, the 2009-2010 comics and Fray's 2200 are T2, and only the Slayer line's mythological origin sits in T4. Its T1 tier is empty because the fiction stops short of 2300: the story's own deep future is still, on our calendar, only two centuries away."
@@ -557,7 +619,9 @@
      "kind": "founding",
      "inUniverse": null,
      "confidence": "medium",
-     "note": "Lyra's world's own texts date the beginning of the Church to roughly eighteen centuries before the story; the fiction presents it as a claim made by an angel rather than as a divine act, but gives no firm year."
+     "note": "Lyra's world's own texts date the beginning of the Church to roughly eighteen centuries before the story; the fiction presents it as a claim made by an angel rather than as a divine act, but gives no firm year.",
+     "bin": "power-vacuum",
+     "binWhy": "A new leader seizes control and establishes a long-term order."
     },
     {
      "id": "hdm-magisterium",
@@ -571,7 +635,9 @@
      "kind": "founding",
      "inUniverse": null,
      "confidence": "medium",
-     "note": "The Magisterium is a medieval institution in the books rather than a dated one; the year is an approximation of its establishment as the Church's governing body."
+     "note": "The Magisterium is a medieval institution in the books rather than a dated one; the year is an approximation of its establishment as the Church's governing body.",
+     "bin": "state-curtails-freedom",
+     "binWhy": "The governing body passes laws/doctrines to restrict people."
     },
     {
      "id": "hdm-witch-clans",
@@ -585,7 +651,9 @@
      "kind": "founding",
      "inUniverse": null,
      "confidence": "low",
-     "note": "The witches are ancient and long-lived in the books but their clans are never dated; this year indicates deep medieval background only, and the low confidence reflects that the fiction does not support a specific date."
+     "note": "The witches are ancient and long-lived in the books but their clans are never dated; this year indicates deep medieval background only, and the low confidence reflects that the fiction does not support a specific date.",
+     "bin": "interstate-unification",
+     "binWhy": "Independent groups form a permanent, unified body."
     },
     {
      "id": "hdm-lyra-born",
@@ -599,7 +667,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "medium",
-     "note": "Lyra is twelve when the first book opens, and the first book is set in the mid-1990s, so her birth is arithmetic from a story date that is itself inferred from the novels' contemporary setting."
+     "note": "Lyra is twelve when the first book opens, and the first book is set in the mid-1990s, so her birth is arithmetic from a story date that is itself inferred from the novels' contemporary setting.",
+     "bin": "pivotal-birth",
+     "binWhy": "The arrival of the prophesied child central to the story."
     },
     {
      "id": "hdm-roger-taken",
@@ -613,7 +683,9 @@
      "kind": "discovery",
      "inUniverse": null,
      "confidence": "medium",
-     "note": "The first book is explicitly set contemporary to its writing in the mid-1990s and was published in 1995; the trilogy gives no in-story years, so the story's present is dated by that contemporary setting."
+     "note": "The first book is explicitly set contemporary to its writing in the mid-1990s and was published in 1995; the trilogy gives no in-story years, so the story's present is dated by that contemporary setting.",
+     "bin": "the-truth-comes-out",
+     "binWhy": "Discovery of a clandestine group operating within society."
     },
     {
      "id": "hdm-window-opens",
@@ -627,7 +699,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "medium",
-     "note": "The second book introduces Will in an Oxford that is recognisably ours in the 1990s; the year follows the contemporary setting of the trilogy rather than a stated date."
+     "note": "The second book introduces Will in an Oxford that is recognisably ours in the 1990s; the year follows the contemporary setting of the trilogy rather than a stated date.",
+     "bin": "dawn-of-exploration",
+     "binWhy": "A new type of mission/travel into unknown territory begins."
     },
     {
      "id": "hdm-war-in-heaven",
@@ -641,7 +715,9 @@
      "kind": "war",
      "inUniverse": null,
      "confidence": "medium",
-     "note": "Dated by the third book's publication in 2000 and by the trilogy's mid-1990s start; Lyra's Oxford and The Secret Commonwealth continue the story two and ten years later."
+     "note": "Dated by the third book's publication in 2000 and by the trilogy's mid-1990s start; Lyra's Oxford and The Secret Commonwealth continue the story two and ten years later.",
+     "bin": "the-war-is-lost",
+     "binWhy": "The traditional ruling power (the Authority) is defeated."
     }
    ],
    "groupingNote": "His Dark Materials is the inverse of the other four lineages: the concealment is not a modern cover-up but a whole parallel history, so the honest divergence is deep past rather than a twentieth-century secret. The branch described in the text is the Reformation that never happened — Calvin as Pope, the Magisterium unbroken, no scientific or industrial revolution — which makes the sixteenth century the last point at which Lyra's world and ours share a history. On the real axis the lineage splits into three bands: three events of ancient background in T4, the 1985-1997 beats in T3, and the war at the end of the trilogy in T2, with T1 empty because nothing in the story is set beyond the near future. The tension worth recording is that the story's own arc is inverted relative to ours: by divergence-relative reckoning the 1990s books are the deep end of the branch, more than four centuries past the fork, while the real calendar files them as the recent past — which is exactly why the events carry both a `tier` and a `phase`. Its present day is still our present day, since Will's Oxford is the real 1990s and the story walks between the two."

@@ -39,7 +39,8 @@
      "kind": "discovery",
      "inUniverse": null,
      "confidence": "high",
-     "note": "Real-world background; the fiction itself is silent before 1972."
+     "note": "Real-world background; the fiction itself is silent before 1972.",
+     "binWhy": "Real world history, not a fictional event."
     },
     {
      "id": "pota-icarus-1972",
@@ -53,7 +54,9 @@
      "kind": "technology",
      "inUniverse": null,
      "confidence": "medium",
-     "note": "No on-screen date card. 1972 is derived from the 3978 arrival minus the 2,006 elapsed years the crew log, and from Landon's line about 'the class of '72'."
+     "note": "No on-screen date card. 1972 is derived from the 3978 arrival minus the 2,006 elapsed years the crew log, and from Landon's line about 'the class of '72'.",
+     "bin": "dawn-of-exploration",
+     "binWhy": "The launch of a mission into the unknown."
     },
     {
      "id": "pota-escape-1973",
@@ -67,7 +70,9 @@
      "kind": "first-contact",
      "inUniverse": null,
      "confidence": "high",
-     "note": "The first impossible event in the series, but a closed causal loop rather than a change to human history, which is why this lineage's fork is placed at the 1983 plague instead."
+     "note": "The first impossible event in the series, but a closed causal loop rather than a change to human history, which is why this lineage's fork is placed at the 1983 plague instead.",
+     "bin": "emergence-of-new-actors",
+     "binWhy": "Intelligent apes begin operating within 1970s human society."
     },
     {
      "id": "pota-plague-1983",
@@ -81,7 +86,9 @@
      "kind": "disaster",
      "inUniverse": null,
      "confidence": "medium",
-     "note": "Conquest gives only the relative 'eight years ago' before its 1991 uprising, so 1983 is arithmetic; the same film is frequently misreported as being set in 1983."
+     "note": "Conquest gives only the relative 'eight years ago' before its 1991 uprising, so 1983 is arithmetic; the same film is frequently misreported as being set in 1983.",
+     "bin": "mass-casualty-event",
+     "binWhy": "A biological disaster destabilizes the domestic social order."
     },
     {
      "id": "pota-revolt-1991",
@@ -95,7 +102,9 @@
      "kind": "war",
      "inUniverse": null,
      "confidence": "medium",
-     "note": "Conquest's title card gives 1991 and the internal arithmetic fits (Caesar is eighteen, born in 1973), though some timelines read the film as 1993."
+     "note": "Conquest's title card gives 1991 and the internal arithmetic fits (Caesar is eighteen, born in 1973), though some timelines read the film as 1993.",
+     "bin": "prolonged-guerrilla-conflict",
+     "binWhy": "An internal uprising against the established human industrial order."
     },
     {
      "id": "pota-war-1992",
@@ -109,7 +118,9 @@
      "kind": "war",
      "inUniverse": null,
      "confidence": "low",
-     "note": "Never dated on screen: Battle's Lawgiver places it in the aftermath of Caesar's victory, and that film's 'twelve-year truce' points to about 1992."
+     "note": "Never dated on screen: Battle's Lawgiver places it in the aftermath of Caesar's victory, and that film's 'twelve-year truce' points to about 1992.",
+     "bin": "the-war-is-lost",
+     "binWhy": "Conflict ends with the total ruin of human civilization."
     },
     {
      "id": "pota-battle-2003",
@@ -123,7 +134,9 @@
      "kind": "founding",
      "inUniverse": null,
      "confidence": "low",
-     "note": "Battle states no year; 'ten years after a worldwide series of ape revolutions and a brutal nuclear war' plus the twelve-year truce puts the main story around 2003, while some sources prefer 2001."
+     "note": "Battle states no year; 'ten years after a worldwide series of ape revolutions and a brutal nuclear war' plus the twelve-year truce puts the main story around 2003, while some sources prefer 2001.",
+     "bin": "founding-of-a-settlement",
+     "binWhy": "The establishment of the first Ape City."
     },
     {
      "id": "pota-lawgiver-2670",
@@ -137,7 +150,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
-     "note": "On-screen title card 'North America - 2670 A.D.'; the closing line's '600 years after Caesar's death' contradicts the main story's roughly 2003 setting and is unexplained."
+     "note": "On-screen title card 'North America - 2670 A.D.'; the closing line's '600 years after Caesar's death' contradicts the main story's roughly 2003 setting and is unexplained.",
+     "bin": null,
+     "binWhy": "Historical reality is officially turned into sacred scripture."
     },
     {
      "id": "pota-tv-3085",
@@ -151,7 +166,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "medium",
-     "note": "The date is a chronometer reading that the series itself says may have stopped mid-flight; the 1975 animated series is undated, with fans split between 3479 and 3979."
+     "note": "The date is a chronometer reading that the series itself says may have stopped mid-flight; the 1975 animated series is undated, with fans split between 3479 and 3979.",
+     "bin": "state-curtails-freedom",
+     "binWhy": "New individuals arrive in a world where their kind are livestock."
     },
     {
      "id": "pota-bomb-3955",
@@ -165,7 +182,9 @@
      "kind": "disaster",
      "inUniverse": null,
      "confidence": "low",
-     "note": "Brent states 3955 in dialogue while Taylor's chronometer in the 1968 film reads 3978; the standard rationalisation is that Brent's chronometer was damaged."
+     "note": "Brent states 3955 in dialogue while Taylor's chronometer in the 1968 film reads 3978; the standard rationalisation is that Brent's chronometer was damaged.",
+     "bin": "mass-casualty-event",
+     "binWhy": "A doomsday device destroys the entire planet."
     },
     {
      "id": "pota-taylor-3978",
@@ -179,7 +198,9 @@
      "kind": "discovery",
      "inUniverse": null,
      "confidence": "high",
-     "note": "The ship's on-screen chronometer reads 3978; the 'November 25' date comes from a later novelisation, not from the film."
+     "note": "The ship's on-screen chronometer reads 3978; the 'November 25' date comes from a later novelisation, not from the film.",
+     "bin": "the-truth-comes-out",
+     "binWhy": "A traveler discovers a new, unknown world state."
     }
    ],
    "groupingNote": "The pentalogy is this archetype's purest long form: a catastrophe inside the twentieth century ends the human industrial order, and the films then live inside its ruins, from a Statue of Liberty on a beach to a sacred scroll that remembers humans as vermin. The fork is placed at the 1983 plague rather than the 1991 uprising because 1983 is the first dated change to human history; the revolt, the war and ape rule are all downstream of it, while the series' earlier impossible event, Zira and Cornelius arriving in 1973, is a closed bootstrap loop rather than a break in human history. Tiers: T4 and T2 are nearly empty because the fiction jumps from the 1990s straight to 2670; the only T4 entry is real-world background (Darwin, 1859) and the only T2 entry is Battle's roughly 2003 setting. T1 is where this branch actually lives, at 2670, 3085, 3955 and 3978. The 2011-2017 reboot (Rise, Dawn, War) and Kingdom (2024) are a separate continuity that re-runs the collapse as a 2016 laboratory accident and a simian-flu pandemic, and the 2001 Burton film is a third; neither is mixed into the events above."
@@ -214,7 +235,8 @@
      "kind": "technology",
      "inUniverse": null,
      "confidence": "high",
-     "note": "Real-world background."
+     "note": "Real-world background.",
+     "binWhy": "Real world history, not a fictional event."
     },
     {
      "id": "mm-shock-1973",
@@ -228,7 +250,8 @@
      "kind": "politics",
      "inUniverse": null,
      "confidence": "high",
-     "note": "Real-world background; the fiction's own oil war is dated only in production and tie-in material."
+     "note": "Real-world background; the fiction's own oil war is dated only in production and tie-in material.",
+     "binWhy": "Real world history, not a fictional event."
     },
     {
      "id": "mm-film-1979",
@@ -242,7 +265,8 @@
      "kind": "publication",
      "inUniverse": null,
      "confidence": "high",
-     "note": "Australian release 12 April 1979; the on-screen title card is the first film's only firm dating gesture."
+     "note": "Australian release 12 April 1979; the on-screen title card is the first film's only firm dating gesture.",
+     "binWhy": "Real-world publication date/meta-commentary."
     },
     {
      "id": "mm-oilwar-1983",
@@ -256,7 +280,9 @@
      "kind": "war",
      "inUniverse": null,
      "confidence": "low",
-     "note": "Never stated on screen; see the divergence note. The Mad Max 2 narration does not date the collapse at all, and the often-quoted 'last years of the 20th century' line does not exist in the film."
+     "note": "Never stated on screen; see the divergence note. The Mad Max 2 narration does not date the collapse at all, and the often-quoted 'last years of the 20th century' line does not exist in the film.",
+     "bin": "economic-catastrophe",
+     "binWhy": "Resource failure leads to the collapse of the industrial order."
     },
     {
      "id": "mm-mfp-1984",
@@ -270,7 +296,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
-     "note": "On-screen background signage gives 6 December 1984, the franchise's hardest in-universe date."
+     "note": "On-screen background signage gives 6 December 1984, the franchise's hardest in-universe date.",
+     "bin": "prolonged-guerrilla-conflict",
+     "binWhy": "Law enforcement struggles against violent insurgent gangs."
     },
     {
      "id": "mm-roadwarrior-1987",
@@ -284,7 +312,9 @@
      "kind": "war",
      "inUniverse": null,
      "confidence": "medium",
-     "note": "The three-year gap comes from the official production preamble, not the film; whether the nuclear exchange happens here or between the first two films depends on which continuity you follow."
+     "note": "The three-year gap comes from the official production preamble, not the film; whether the nuclear exchange happens here or between the first two films depends on which continuity you follow.",
+     "bin": "technological-catastrophe",
+     "binWhy": "The world of the old order is completely gone after nuclear war."
     },
     {
      "id": "mm-thunderdome-2002",
@@ -298,7 +328,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "medium",
-     "note": "The fifteen-year gap comes from co-writer Terry Hayes (Starlog, June 1985); the film states no year."
+     "note": "The fifteen-year gap comes from co-writer Terry Hayes (Starlog, June 1985); the film states no year.",
+     "bin": "founding-of-a-settlement",
+     "binWhy": "Establishment of a new, post-apocalyptic town."
     },
     {
      "id": "mm-furyroad-2060",
@@ -312,7 +344,9 @@
      "kind": "event",
      "inUniverse": "Day 12045",
      "confidence": "low",
-     "note": "Miller: the apocalypse 'happens, and you wind up 45-50 years in the future' from a rolling 'next Wednesday'; the tattoo implies about thirty-three years since the Fall; the 2015 comics put their Fall in the 2010s. The year is arithmetic on Miller's figure, not a stated date. Furiosa (2024) runs the fifteen years directly into this film."
+     "note": "Miller: the apocalypse 'happens, and you wind up 45-50 years in the future' from a rolling 'next Wednesday'; the tattoo implies about thirty-three years since the Fall; the 2015 comics put their Fall in the 2010s. The year is arithmetic on Miller's figure, not a stated date. Furiosa (2024) runs the fifteen years directly into this film.",
+     "bin": "state-curtails-freedom",
+     "binWhy": "A new regime controls the wasteland through resource monopoly."
     }
    ],
    "groupingNote": "Mad Max is the archetype stripped to fuel: the world does not end in a war anyone wins, it runs out of oil, and everything after the first film is set among the wreckage of ordinary Australian life, a police interceptor, a refinery, a ruined Sydney. The fork is dated 1983 with low confidence because the collapse is described only in production and tie-in material, while the films' own dating runs from a title card reading 'a few years from now' to on-screen signage reading 6 December 1984. Tiers: this branch has no T1 and never will, because the franchise's furthest era is the Fury Road wasteland roughly forty-five to fifty years past its Fall, so Mad Max simply stops inside our own next century; the T4 entry is real-world background only (the oil age, 1859), and everything the fiction itself depicts from 1973 onward sits in T3 or T2. Miller's repeated insistence that the films have no strict chronology is the honest summary of this lineage's dates."
@@ -347,7 +381,8 @@
      "kind": "discovery",
      "inUniverse": null,
      "confidence": "high",
-     "note": "Real-world background."
+     "note": "Real-world background.",
+     "binWhy": "Real world history, not a fictional event."
     },
     {
      "id": "fo-split-1945",
@@ -361,7 +396,8 @@
      "kind": "technology",
      "inUniverse": null,
      "confidence": "medium",
-     "note": "The Fallout 3 manual states the split is 'after World War II' and never dates it precisely; the Fallout Bible, non-canon since 2011, says the same. The widely repeated claim that the transistor was not invented until 2067 is unsupported by canon."
+     "note": "The Fallout 3 manual states the split is 'after World War II' and never dates it precisely; the Fallout Bible, non-canon since 2011, says the same. The widely repeated claim that the transistor was not invented until 2067 is unsupported by canon.",
+     "binWhy": "A meta-note about a timeline divergence."
     },
     {
      "id": "fo-resource-wars-2052",
@@ -375,7 +411,9 @@
      "kind": "war",
      "inUniverse": null,
      "confidence": "high",
-     "note": ""
+     "note": "",
+     "bin": "economic-catastrophe",
+     "binWhy": "Global resource depletion leads to systemic social and political failure."
     },
     {
      "id": "fo-vaults-2054",
@@ -389,7 +427,9 @@
      "kind": "technology",
      "inUniverse": null,
      "confidence": "high",
-     "note": "The experiment programme is canon across Fallout, Fallout 2, Fallout 3 and Fallout 4; the Vault count is usually given as 122."
+     "note": "The experiment programme is canon across Fallout, Fallout 2, Fallout 3 and Fallout 4; the Vault count is usually given as 122.",
+     "bin": "the-truth-comes-out",
+     "binWhy": "The creation of a massive, secret project with sinister motives."
     },
     {
      "id": "fo-sino-war-2066",
@@ -403,7 +443,9 @@
      "kind": "war",
      "inUniverse": null,
      "confidence": "high",
-     "note": ""
+     "note": "",
+     "bin": "prolonged-guerrilla-conflict",
+     "binWhy": "A long, bloody conflict stripping away diplomatic possibilities."
     },
     {
      "id": "fo-great-war-2077",
@@ -417,7 +459,9 @@
      "kind": "disaster",
      "inUniverse": null,
      "confidence": "high",
-     "note": "Uncontested across Fallout's intro and the Fallout 4 and 76 loading screens. Earlier the same month the Mariposa mutiny begins the Brotherhood of Steel, so 2077 also carries the wasteland's first institution."
+     "note": "Uncontested across Fallout's intro and the Fallout 4 and 76 loading screens. Earlier the same month the Mariposa mutiny begins the Brotherhood of Steel, so 2077 also carries the wasteland's first institution.",
+     "bin": "mass-casualty-event",
+     "binWhy": "Sudden nuclear exchange kills billions."
     },
     {
      "id": "fo-reclamation-2102",
@@ -431,7 +475,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
-     "note": "Fallout 76's setting; later updates advance the in-universe clock only to about 2105."
+     "note": "Fallout 76's setting; later updates advance the in-universe clock only to about 2105.",
+     "bin": "founding-of-a-settlement",
+     "binWhy": "Survivors leave a vault to settle the wreckage."
     },
     {
      "id": "fo-fallout1-2161",
@@ -445,7 +491,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
-     "note": ""
+     "note": "",
+     "bin": "emergence-of-new-actors",
+     "binWhy": "A vault dweller enters the world and changes local history."
     },
     {
      "id": "fo-fallout2-2241",
@@ -459,7 +507,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
-     "note": ""
+     "note": "",
+     "bin": "decisive-military-victory",
+     "binWhy": "The destruction of the last remnant of the old government."
     },
     {
      "id": "fo-fallout3-2277",
@@ -473,7 +523,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
-     "note": ""
+     "note": "",
+     "bin": "technological-or-supernatural-ascendance",
+     "binWhy": "A breakthrough technology makes the wasteland water drinkable."
     },
     {
      "id": "fo-newvegas-2281",
@@ -487,7 +539,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
-     "note": ""
+     "note": "",
+     "bin": "power-vacuum",
+     "binWhy": "Major powers struggle for control of the Hoover Dam."
     },
     {
      "id": "fo-fallout4-2287",
@@ -501,7 +555,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
-     "note": ""
+     "note": "",
+     "bin": "emergence-of-new-actors",
+     "binWhy": "A pre-war individual enters a conflict between major factions."
     },
     {
      "id": "fo-tv-2296",
@@ -515,7 +571,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
-     "note": "Seasons 1 (2024) and 2 (2025-26) are both set in 2296; the showrunners have confirmed that no New Vegas ending has been made canon."
+     "note": "Seasons 1 (2024) and 2 (2025-26) are both set in 2296; the showrunners have confirmed that no New Vegas ending has been made canon.",
+     "bin": "the-truth-comes-out",
+     "binWhy": "A vault dweller is forced into the surface world."
     },
     {
      "id": "fo-house-2381",
@@ -529,7 +587,9 @@
      "kind": "technology",
      "inUniverse": null,
      "confidence": "low",
-     "note": "Conditional dialogue in Fallout: New Vegas, tied to Mr. House's ending: a forecast rather than a depicted event."
+     "note": "Conditional dialogue in Fallout: New Vegas, tied to Mr. House's ending: a forecast rather than a depicted event.",
+     "bin": "dawn-of-exploration",
+     "binWhy": "A planned mission to launch colony ships into space."
     },
     {
      "id": "fo-bigmt-2910",
@@ -543,7 +603,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "low",
-     "note": "A conditional, comedic ending slide in a 2011 DLC, and the only dated canon event after 2297; no canon material exists between those two points."
+     "note": "A conditional, comedic ending slide in a 2011 DLC, and the only dated canon event after 2297; no canon material exists between those two points.",
+     "bin": "decisive-military-victory",
+     "binWhy": "A threat is resolved by a counter-frequency invention."
     }
    ],
    "groupingNote": "Fallout is the archetype at industrial scale: a two-hour nuclear exchange in the twenty-first century ends the world, and the games then catalogue what grows in it, Vaults that were experiments, a Brotherhood founded by a mutineer, ghouls, robots still polishing floors, and new nations built out of scrap. The fork is the War itself rather than the franchise's earlier, deliberately undated split from our history after the Second World War, because this archetype branches on the catastrophe. Tiers: T2 carries almost the whole branch from 2052 to 2296, because the fiction's entire life sits inside our next three centuries; T3 holds only the real-world wartime split and T4 only real-world background (Becquerel, 1896). T1 exists but is thin and shaky, Mr. House's projected colony ships in 2381 and one Old World Blues ending slide dated 2910, with no dated canon at all between 2297 and 2910; those two entries should be read as the branch's far horizon rather than as depicted history."
@@ -578,7 +640,8 @@
      "kind": "technology",
      "inUniverse": null,
      "confidence": "high",
-     "note": "Real-world background; the fiction is silent before the twenty-first century."
+     "note": "Real-world background; the fiction is silent before the twenty-first century.",
+     "binWhy": "Real world history, not a fictional event."
     },
     {
      "id": "matrix-turing-1950",
@@ -592,7 +655,8 @@
      "kind": "discovery",
      "inUniverse": null,
      "confidence": "high",
-     "note": "Real-world background."
+     "note": "Real-world background.",
+     "binWhy": "Real world history, not a fictional event."
     },
     {
      "id": "matrix-1999",
@@ -606,7 +670,8 @@
      "kind": "publication",
      "inUniverse": null,
      "confidence": "high",
-     "note": "Morpheus, on screen: 'You believe it's the year 1999... when in fact it's closer to 2199... we honestly don't know.' US release 31 March 1999."
+     "note": "Morpheus, on screen: 'You believe it's the year 1999... when in fact it's closer to 2199... we honestly don't know.' US release 31 March 1999.",
+     "binWhy": "Real-world publication date/meta-commentary."
     },
     {
      "id": "matrix-renaissance-2090",
@@ -620,7 +685,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
-     "note": "Canonical date text in The Animatrix and the Matrix comics: 'Zion Archive. World History, 2nd RENAISSANCE, 2090-2139'."
+     "note": "Canonical date text in The Animatrix and the Matrix comics: 'Zion Archive. World History, 2nd RENAISSANCE, 2090-2139'.",
+     "bin": "emergence-of-new-actors",
+     "binWhy": "Machines become a new category of political/social actor."
     },
     {
      "id": "matrix-war-2139",
@@ -634,7 +701,9 @@
      "kind": "war",
      "inUniverse": null,
      "confidence": "medium",
-     "note": "2139 is the end of the canonically dated 2090-2139 Second Renaissance range; Wikipedia's Animatrix synopsis says 2148 and fan timelines range into the 2170s."
+     "note": "2139 is the end of the canonically dated 2090-2139 Second Renaissance range; Wikipedia's Animatrix synopsis says 2148 and fan timelines range into the 2170s.",
+     "bin": "prolonged-guerrilla-conflict",
+     "binWhy": "The start of a war between humans and machines."
     },
     {
      "id": "matrix-darkstorm-2145",
@@ -648,7 +717,9 @@
      "kind": "disaster",
      "inUniverse": null,
      "confidence": "medium",
-     "note": "The event is canonical (The Animatrix) but has no official year; about 2145 places it in the war's first decade. Circulating figures such as 2085 or 2098 are reconstructions."
+     "note": "The event is canonical (The Animatrix) but has no official year; about 2145 places it in the war's first decade. Circulating figures such as 2085 or 2098 are reconstructions.",
+     "bin": "technological-catastrophe",
+     "binWhy": "Humanity's attempt to win a war results in global environmental collapse."
     },
     {
      "id": "matrix-neo-2199",
@@ -662,7 +733,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
-     "note": "Spoken on screen by Morpheus as an approximation. Some tie-in reconstructions instead add five prior One-cycles of about a century each and date the films to roughly 2700."
+     "note": "Spoken on screen by Morpheus as an approximation. Some tie-in reconstructions instead add five prior One-cycles of about a century each and date the films to roughly 2700.",
+     "bin": "pivotal-birth",
+     "binWhy": "The One is extracted to challenge the status quo."
     },
     {
      "id": "matrix-resurrections-2259",
@@ -676,7 +749,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "medium",
-     "note": "The sixty-year gap is canonical; 2259 is 2199 plus sixty. Cycle-based reconstructions put this film near 2760, which would move the franchise past 2300, but that reading is not supported by on-screen dialogue."
+     "note": "The sixty-year gap is canonical; 2259 is 2199 plus sixty. Cycle-based reconstructions put this film near 2760, which would move the franchise past 2300, but that reading is not supported by on-screen dialogue.",
+     "bin": "diplomatic-normalization",
+     "binWhy": "A status quo defined by a truce and machine civil peace."
     }
    ],
    "groupingNote": "The Matrix is the archetype running backwards: the world that ends is a simulation of 1999 kept alive as a power plant, and the ruins the survivors inherit are their own cities under a black sky. Humanity loses a war to its own machines, scorches the sky to win it and is farmed in pods while the last free city hides underground, which is the group's mechanism taken to its logical end. The fork is the Machine War's start at 2139, the close of the canonically dated Second Renaissance range; Operation Dark Storm, which actually ends the human world, is undated on screen and placed at about 2145 here. Tiers: there is no T1, because under the dating the films themselves give (Morpheus's 'closer to 2199' plus the canonical sixty-year gap to Resurrections) this branch stops at 2259; only fan reconstructions that add five prior One-cycles push it past 2300, and that reading contradicts the dialogue. T4 is real-world background only (Babbage, 1834) and T3 holds the simulated 1999 alongside Turing's real 1950."
@@ -711,7 +786,8 @@
      "kind": "disaster",
      "inUniverse": null,
      "confidence": "high",
-     "note": "Real-world background; death tolls vary by source."
+     "note": "Real-world background; death tolls vary by source.",
+     "binWhy": "Real world history, not a fictional event."
     },
     {
      "id": "tm-trench-1917",
@@ -725,7 +801,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
-     "note": "On screen; the bullet is the object half of the film's time loop."
+     "note": "On screen; the bullet is the object half of the film's time loop.",
+     "bin": "emergence-of-new-actors",
+     "binWhy": "A time traveler enters a historical conflict."
     },
     {
      "id": "tm-jetee-1962",
@@ -739,7 +817,8 @@
      "kind": "publication",
      "inUniverse": null,
      "confidence": "high",
-     "note": "Real-world publication; La Jetée never dates its Third World War or its future."
+     "note": "Real-world publication; La Jetée never dates its Third World War or its future.",
+     "binWhy": "Publication date of a related film."
     },
     {
      "id": "tm-1990",
@@ -753,7 +832,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
-     "note": "Railly states 'This is 1990'; the opening title card is dated 12 April 1990."
+     "note": "Railly states 'This is 1990'; the opening title card is dated 12 April 1990.",
+     "bin": "emergence-of-new-actors",
+     "binWhy": "A time traveler appears and influences individuals in the past."
     },
     {
      "id": "tm-release-1996",
@@ -768,7 +849,9 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The 2035 scientists state the release date on screen; the Army of the Twelve Monkeys, whose name they blame, are animal-rights activists and a red herring, and the carrier is Goines's assistant, Dr Peters.",
-     "historyContradicts": false
+     "historyContradicts": false,
+     "bin": "mass-casualty-event",
+     "binWhy": "The release of a virus that causes a global catastrophe."
     },
     {
      "id": "tm-toll-1997",
@@ -782,7 +865,9 @@
      "kind": "disaster",
      "inUniverse": null,
      "confidence": "high",
-     "note": "The opening title card states that five billion people will die in 1997, and the film's ending confirms the outbreak is not averted."
+     "note": "The opening title card states that five billion people will die in 1997, and the film's ending confirms the outbreak is not averted.",
+     "bin": "technological-catastrophe",
+     "binWhy": "A virus kills 5 billion people."
     },
     {
      "id": "tm-future-2035",
@@ -796,7 +881,9 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "medium",
-     "note": "2035 is the standard citation and matches the film's 'thirty years' dialogue loosely; the year is never spoken on screen, and a strict reading of the dialogue implies about 2026."
+     "note": "2035 is the standard citation and matches the film's 'thirty years' dialogue loosely; the year is never spoken on screen, and a strict reading of the dialogue implies about 2026.",
+     "bin": "epilogue-of-continuity",
+     "binWhy": "Survivors establish a permanent, sealed underground compound."
     }
    ],
    "groupingNote": "Twelve Monkeys is this archetype in its bleakest form: a plague released in a single afternoon in 1996 has killed five billion people by 1997, and the film's future, a sealed underground Philadelphia in 2035, is the ruins. It belongs here because the industrial world does not fall to war or machines but to a laboratory sample carried onto a plane, and because the survivors' only project is reaching back into the world they lost. The paradoxes are the point and are worth stating together: the timeline is a single immutable loop, the message that sends Cole back is Railly's own 1996 voicemail, the bullet in his leg comes from the antique pistol Jose hands him in 1996, and the child who watches him die at the airport grows up to be him, so the plague is caused rather than prevented, and the film's own metaphor for this is Cole watching a movie that never changes. Note the phase anomaly: Cole's 1917 and 1990 scenes count as prehistory by year but are incursions from the branch's own future. Tiers: T2 holds only 2035 because that is the only future the film ever shows, and there is no T1 at all, since this branch ends thirty-nine years after its fork; T4 is real-world background only (the 1889 pandemic). The 2015-2018 television series is a separate continuity and is not counted here."
