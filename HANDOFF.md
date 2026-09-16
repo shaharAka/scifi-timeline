@@ -8,10 +8,14 @@ the entry point and it tells you what to trust and what will bite you.
   tree…"), on top of `a4ea806` (the researched dataset) and `74c373f` (the first
   handoff).
 - **Remote:** none yet. Local only.
-- **What it is:** a static, dependency-free atlas that pins 24 science-fiction
-  worlds to the real-world calendar as one tree - real history is the trunk,
-  each world a branch leaving it at its divergence year - on a single pannable,
-  zoomable canvas, with a side panel to step inside any world.
+- **What it is:** an atlas of fictional chronologies pinned to the real
+  calendar, read from the present. A reader brings a real event from today's
+  news and asks "in which of these worlds did this kind of thing happen, and
+  what happened next?" The atlas matches the news to the same kind of moment
+  in the fiction and reads each world forward from there: many futures for one
+  present, compared for what followed, in what order, what differed and what
+  repeated. The tree chart, the Order view and the bins all serve that use.
+  More worlds will keep being added, so everything is built to take them.
 - **State:** all three test suites green. 5 archetypes, 24 lineages, 237 events,
   24 world dossiers. The viewer was rebuilt on 2026-09-16: tree chart, `src/`
   modules assembled by the build, design tokens, atlas config, single-canvas

@@ -129,44 +129,40 @@ switch to Years and the same tree reads as evidence for the same claims.
 
 ## 2. Phase 2 — the Moments view
 
-### 2.1 The claim
+### 2.1 The claim, and the use it serves
 
-Fictions converge not on dates but on *kinds of moments*: the thing arrives,
-the war, the collapse, the new regime, the reckoning. If every event carries a
-stage from one small vocabulary, the stages become columns and branches
-visibly pass through the same column when they share a moment. That is what
-"convergence happens when different events occur" looks like.
+The atlas is read from today's news. A real event is matched to the kind of
+moment it is, the worlds that passed through that kind of moment light up, and
+each is read forward from that node: what followed, in what order, how it
+ended. Many futures for one present. Fictions converge not on dates but on
+kinds of moment, so the vocabulary of kinds is the matching key, and its
+granularity is set by the use: fine enough that a real headline lands in one
+bin, shared enough that several worlds pass through it, and consequential
+enough that what follows is worth reading.
+
+The vocabulary is not fixed in advance and not shaped by heuristics. It is
+discovered from the events by the model (`tools/bin-events.py`), which is told
+the project and the target above and left to judge the level of generality.
+`data/bins.json` is the result and the thing to argue with; each bin carries a
+definition in world-neutral terms and an example real headline that would
+belong to it. News items (`data/news.json`) are binned with the same
+vocabulary, which is what makes the match possible.
 
 ### 2.2 The vocabulary
 
-Add `stage` to the event schema (`data/SCHEMA.md`), required, one of:
-
-| stage | meaning | typical events |
-|---|---|---|
-| `origins` | deep background the story leans on | ring builders, founding of Hogwarts |
-| `fork` | the divergence itself | the shot that misses, the recovery at Roswell |
-| `arrival` | the thing arrives or is found | first contact, the signal, the monolith |
-| `secret` | knowledge kept from the world | the cover-up, the Ministry, the Watchers |
-| `awakening` | a power comes into being | Skynet, the Machines, the Guild |
-| `war` | the war, the bomb, the plague | the Great War, Judgment Day, the virus |
-| `collapse` | society falls | the oil war, the wasteland, the Vault opens |
-| `regime` | a new order rules | the Empire, the Party, the Reich |
-| `exodus` | leaving, migrating, colonising | Mars, Terminus, the Endurance |
-| `resistance` | rebellion, return, the fight back | Yavin, the Rebellion, Zion |
-| `reckoning` | the truth out, judgement, the reveal | the Reformation fails, the Mule |
-| `aftermath` | long after; legacy, decline, renewal | the Second Empire, sixty years on |
-
-Rules: one stage per event, chosen from the event's own text, never from how
-famous the year is; `kind: publication` events take `stage: null` and are not
-drawn in this view; the validator hard-errors on an unknown stage and warns
-when a lineage has no `fork`-staged event. Tag all 237 events in
-`data/parts/*.json`; this is a research pass, so record the reasoning in each
-event's `note` where it is not obvious.
+`bin` on every event points into `data/bins.json` (see `data/SCHEMA.md`,
+"Bins"). Publication dates are `null`; real-world events a fiction leans on
+before its fork are binned, because they are where a world's future touches
+ours. When the vocabulary looks wrong, change the task description in the
+tool's prompt or edit `bins.json`, never add rules about bin counts or sizes:
+the model is the one making the call, and it needs the target, not guardrails.
 
 ### 2.3 The picture
 
-- Columns in the canonical order above, left to right, each with a header
-  (`ARRIVAL · 9 worlds`) and a faint band. Today is **not** a column in this
+- Columns are bins, ordered left to right by the mean position of their
+  events within their worlds' sequences (an arc the events produce
+  themselves), each with a header (`THE TRUTH COMES OUT · 12 worlds`) and a
+  faint band. Today is **not** a column in this
   view: it is the vertical plane still, placed by the atlas's `todayStage`
   (default `regime`, the column most worlds are "at" now; make it data).
 - Each branch visits its stages **in canonical order**, ties broken by year,
@@ -178,8 +174,13 @@ event's `note` where it is not obvious.
   on the band proportional to how many worlds pass through it. Hovering a
   column header lights every branch through it and dims the rest (reuse
   `setBranchHover` with a set, or add `setBranchHoverMany`).
-- Forks: every branch leaves the trunk in the `fork` column; within it, rank
-  by divergence year as in Phase 1 so the order of leaving is still legible.
+- Forks: every branch leaves the trunk at its first binned event's column.
+- **News → futures**, the reason the view exists: choosing a news item in the
+  News panel selects its bin, lights every branch through that column, and
+  draws each of those branches from that node forward at full strength, dimming
+  what came before. The panel lists the futures side by side: for each world,
+  the next three or four beats after the match, with their bins, so the reader
+  can see what followed where, and where the futures agree.
 
 ### 2.4 Code and tests
 

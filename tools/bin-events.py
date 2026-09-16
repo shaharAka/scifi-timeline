@@ -89,14 +89,43 @@ def walk_events():
 def bin_lines(bins):
     if not bins:
         return "  (none yet - you are creating the first ones)"
-    return "\n".join("  %-22s %s" % (b["id"], b["definition"]) for b in bins)
+    return "\n".join("  %-22s %s%s" % (b["id"], b["definition"],
+                                        ("  e.g. " + b["exampleHeadline"]) if b.get("exampleHeadline") else "")
+                     for b in bins)
 
 
-PROMPT = """You are building a vocabulary of KINDS OF MOMENT across fictional
-chronologies. You are given every event at once. A bin is a kind of moment that can
-recur in different stories: two events share a bin when a reader would say
-"this is the same kind of thing happening", whatever the world, the scale or
-the year.
+PROMPT = """THE PROJECT
+
+This is an atlas of fictional chronologies pinned to the real calendar. Each
+world shares our history up to a fork, then runs its own course. The atlas is
+read from the present: a reader brings a real event from today's news and asks
+"in which of these worlds did this kind of thing happen, and what happened
+next?" The atlas answers by matching the news to moments in the fiction and
+reading each world forward from that moment - many futures for one present -
+so the reader can compare what followed, in what order, what differed and what
+repeated. More worlds will keep being added; the vocabulary you build now must
+still fit them.
+
+YOUR TASK
+
+Build that matching vocabulary. A BIN is a kind of moment, and it is good to the
+extent that it serves the use above:
+
+- A real event could be an instance of it. Imagine the headline. "A reactor
+  returns more energy than it took", "a state bans a group", "a signal of
+  non-human origin is confirmed", "a leader is killed and no successor is
+  ready" are bins; "the Vulcans land" is not.
+- Several worlds pass through it, so that matching yields futures to compare.
+- What follows it in a world is worth knowing. If the events after this moment
+  say nothing about what might follow in ours, the moment is too small or too
+  vague to be a bin.
+
+Pick the granularity at which a real event and a fictional event would be
+described by the same sentence by someone who knew neither story. Name and
+define bins in world-neutral terms: no setting words (interstellar, esoteric,
+galactic, cybernetic), because the same bin has to fit tomorrow's news and a
+world nobody has added yet. Use everything you know about these works, not only
+the text given.
 
 BINS THAT ALREADY EXIST:
 {existing}
@@ -104,21 +133,21 @@ BINS THAT ALREADY EXIST:
 EVENTS TO BIN:
 {events}
 
-For each event, first say in one clause what kind of moment it is. Then put it
-in the existing bin that fits, or create a new bin if none does. You know these
-works; use that knowledge together with the text. How general a bin should be
-is your judgement to make.
-
-Use `null` for an event that is not a moment in a story at all, such as a
-publication date or a note about how a date was derived.
+For each event, first say in one clause what kind of moment it is, as a
+headline would. Then put it in the existing bin that fits, or create a new one
+if none does. Use `null` for an event that is not a moment in a story at all,
+such as a publication date or a note about how a date was derived. Real-world
+events a fiction leans on before its fork (a crash, a discovery, a test) ARE
+moments and should be binned; they are where a world's future touches ours.
 
 Bin ids are lowercase and hyphenated and name the kind of moment, not the
-incident (`first-contact`, not `the-vulcans-arrive`). A new bin needs a short
-label and a one-sentence definition another world's event could satisfy.
+incident. A new bin needs a short label, a one-sentence definition another
+world's event could satisfy, and one example of a real headline that would
+belong to it.
 
 Reply with JSON only, no prose and no code fence:
 
-{"assignments":[{"event_id":"...","moment":"what kind of moment this is","bin":"existing-or-new-id","new_bin":{"label":"...","definition":"..."} or null,"why":"one short sentence"}]}"""
+{"assignments":[{"event_id":"...","moment":"what kind of moment this is, as a headline","bin":"existing-or-new-id","new_bin":{"label":"...","definition":"...","example_headline":"..."} or null,"why":"one short sentence"}]}"""
 
 
 def call_gemini(events, bins, model, key, thinking="medium"):
@@ -255,9 +284,12 @@ def main():
                     bid = None
             if bid and bid not in known:
                 if isinstance(nb, dict) and nb.get("label"):
-                    bins.append({"id": bid, "label": nb["label"],
-                                 "definition": nb.get("definition", nb["label"]),
-                                 "createdFrom": eid})
+                    entry = {"id": bid, "label": nb["label"],
+                             "definition": nb.get("definition", nb["label"]),
+                             "createdFrom": eid}
+                    if nb.get("example_headline"):
+                        entry["exampleHeadline"] = nb["example_headline"]
+                    bins.append(entry)
                     known.add(bid)
                 else:
                     print("    unknown bin %r for %s and no definition; leaving null"
