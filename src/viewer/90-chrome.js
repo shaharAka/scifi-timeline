@@ -91,7 +91,17 @@ function zoomAt(g, mx, my, ms){
   view.c = c1; view.hs = hs1; Z = Zn; panY = pan1;
   renderChart();
 }
-function zoomBy(g, ms){ zoomAt(g, anchorX(), Hv / 2, ms); }
+/* Zoom about the TODAY line, not about the viewport centre.
+   The centre of a 100,000-year window is early history, where almost nothing
+   happens; every world forks within a couple of centuries of the present. So
+   zooming toward the centre pushed the content off the right edge while
+   magnifying empty space, which read as the chart falling apart. Anchoring on
+   today means zooming in actually magnifies the part being looked at. */
+function zoomBy(g, ms){
+  var nx = pxFor(NOW);
+  var ax = (nx >= LANE_R && nx <= W - 12) ? nx : (LANE_R + (W - 12)) / 2;
+  zoomAt(g, ax, Hv / 2, ms);
+}
 
 /* fit: the home era, and a zoom that puts the whole tree in the viewport */
 /* Open on the WHOLE tree: every world visible at once, at the smallest lane
