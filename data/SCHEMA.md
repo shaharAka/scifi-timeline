@@ -287,3 +287,56 @@ Rules:
 6. No in-universe years anywhere in `year`, `date`, or `title`. If a title needs
    the in-universe name, put it in `inUniverse`.
 7. Emit valid JSON. No comments, no trailing commas, no markdown fences.
+
+## Facets: the moment signature
+
+A single `bin` tells you the kind of moment; it does not tell you whether two
+moments are alike in the way that predicts what follows. Iran 1979 and the
+Enabling Act are both "power is seized" and share no future. So every event
+that is a moment carries `facets`, a structured description on closed axes
+(`data/facets.json`), and matching is done on the facets, with the bin kept
+as the coarse label for headings.
+
+```json
+"facets": {
+  "change": "democracy → dictatorship by emergency law",
+  "mechanism": "law",          "actor": "individual",   "position": "inside",
+  "scope": "national",         "domain": "political",
+  "direction": {"power": 1, "openness": -1, "capability": 0, "population": 0},
+  "preconditions": ["crisis-economic", "street-violence", "weak-institutions"],
+  "outcomes": ["one-party-state", "purge", "war-of-expansion"]
+}
+```
+
+- `change` — one clause, `before → after`, in the event's own terms.
+- `mechanism` — how it happened (law, coup, uprising, invention, discovery,
+  expedition, founding, recruitment, birth, death, accident, disaster, attack,
+  invasion, war, negotiation, disclosure, arrival, consolidation, ...).
+- `actor` — who did it; `position` — where they stood relative to the order
+  they changed: `inside` (the state or an insider), `below` (the ruled),
+  `outside` (a foreign or alien power), `above` (nature, the cosmos).
+- `scope` and `domain` — how far it reached and in what sphere.
+- `direction` — four signed axes: does power concentrate or disperse, does the
+  world open or close, does capability grow or shrink, does population grow or
+  die. Zero when the axis does not move.
+- `preconditions` — the situation it arose from; `outcomes` — what followed
+  at once. Both are tags from the closed lists.
+
+**Matching rule.** To find moments like a given one, compare everything
+*except* `outcomes`: the outcome is what we want to read from the neighbours,
+not match on. `tools/facet-match.py` does this and reports similarity, not just
+rank; anything under about 0.5 means "nothing close".
+
+`facets` is `null` for publication and release dates. The lists in
+`data/facets.json` are closed on purpose: extend them deliberately and the
+build will reject anything else.
+
+## Real history
+
+`data/real-history.json` is our own history as a sequence of moments in the
+same schema: `year`, `title`, `description`, `bin`, `facets`, and optionally
+`newsId` when the beat is one of the items in `data/news.json`. It is the
+trunk's own chronology, the arc every fiction shares up to its fork and the
+tail that today's news extends. Its bins anchor the vocabulary: a bin's
+clearest real instance is the best definition of it. The build checks it like
+any lineage's events and publishes it as `payload.real`.

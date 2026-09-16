@@ -192,6 +192,12 @@
    "label": "Long after",
    "definition": "A jump forward shows what became of the world.",
    "exampleHeadline": "Fifty years on, survivors return to the abandoned city"
+  },
+  {
+   "id": "state-dissolves",
+   "label": "A state dissolves",
+   "definition": "A state or union comes apart into its parts without being conquered.",
+   "exampleHeadline": "Union dissolved as member republics declare independence"
   }
  ]
 }

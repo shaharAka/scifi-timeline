@@ -321,6 +321,98 @@ def load_news(lineage_ids):
 
 
 
+FACETS = {}   # closed facet vocabularies, filled from data/facets.json in main()
+
+
+def load_facets():
+    """Closed vocabularies for the moment signature on each event. A facet value
+    outside its list is a hard error: the whole point of the signature is that
+    real and fictional moments are described on the same axes."""
+    path = os.path.join(ROOT, "data", "facets.json")
+    if not os.path.exists(path):
+        warn("data/facets.json missing; event facets will not be checked")
+        return {}
+    try:
+        with open(path, "r", encoding="utf-8") as fh:
+            doc = json.load(fh)
+    except (OSError, json.JSONDecodeError) as exc:
+        err("data/facets.json is unreadable: %s" % exc)
+        return {}
+    for key in ("mechanism", "actor", "position", "scope", "domain", "preconditions", "outcomes"):
+        if not isinstance(doc.get(key), list) or not doc[key]:
+            err("data/facets.json: %r must be a non-empty list" % key)
+    return doc
+
+
+def check_facets(tag, fx):
+    """Validate one event's facets against data/facets.json. None is allowed
+    (a publication date is not a moment); a missing key is an error."""
+    if fx is None or not FACETS:
+        return
+    if not isinstance(fx, dict):
+        err("%s: facets must be an object or null" % tag)
+        return
+    for key in ("mechanism", "actor", "position", "scope", "domain"):
+        if fx.get(key) not in FACETS.get(key, []):
+            err("%s: facets.%s %r is not in data/facets.json" % (tag, key, fx.get(key)))
+    if not isinstance(fx.get("change"), str) or "\u2192" not in fx["change"]:
+        err("%s: facets.change must be a 'before \u2192 after' clause" % tag)
+    d = fx.get("direction")
+    axes = ["power", "openness", "capability", "population"]
+    if not isinstance(d, dict) or sorted(d) != sorted(axes) or any(d[a] not in (-1, 0, 1) for a in axes):
+        err("%s: facets.direction needs power/openness/capability/population, each -1, 0 or 1" % tag)
+    for key in ("preconditions", "outcomes"):
+        vals = fx.get(key)
+        if not isinstance(vals, list):
+            err("%s: facets.%s must be a list" % (tag, key))
+            continue
+        for v in vals:
+            if v not in FACETS.get(key, []):
+                err("%s: facets.%s tag %r is not in data/facets.json" % (tag, key, v))
+
+
+def load_real_history():
+    """Our own history as a sequence of moments, in the events schema, with bins
+    and facets. Optional; when present it is checked like any lineage's events."""
+    path = os.path.join(ROOT, "data", "real-history.json")
+    if not os.path.exists(path):
+        warn("data/real-history.json missing; the trunk has no beats of its own")
+        return None
+    try:
+        with open(path, "r", encoding="utf-8") as fh:
+            doc = json.load(fh)
+    except (OSError, json.JSONDecodeError) as exc:
+        err("data/real-history.json is unreadable: %s" % exc)
+        return None
+    evs = doc.get("events")
+    if not isinstance(evs, list) or not evs:
+        err("data/real-history.json needs a non-empty 'events' list")
+        return None
+    seen = set()
+    last = None
+    for e in evs:
+        tag = "real-history/%s" % e.get("id")
+        if not e.get("id") or e["id"] in seen:
+            err("%s: missing or duplicate id" % tag)
+        seen.add(e.get("id"))
+        if not isinstance(e.get("year"), int):
+            err("%s: year must be an integer" % tag)
+        elif last is not None and e["year"] < last:
+            err("%s: events must ascend by year" % tag)
+        last = e.get("year") if isinstance(e.get("year"), int) else last
+        for key in ("title", "description"):
+            if not e.get(key):
+                err("%s: %s is required" % (tag, key))
+        if e.get("bin") is not None and e.get("bin") not in VOCAB:
+            err("%s: bin %r is not defined in data/bins.json" % (tag, e.get("bin")))
+        if "facets" not in e:
+            warn("%s: no facets" % tag)
+        else:
+            check_facets(tag, e["facets"])
+    doc.pop("_comment", None)
+    return doc
+
+
 def load_bins():
     """The bin vocabulary: which kinds of moment exist.
 
@@ -510,6 +602,10 @@ def check_lineage(name, lin, group_id, seen_ids):
         if "bin" in e and e.get("bin") is not None:
             if e["bin"] not in VOCAB:
                 err("%s: bin %r is not defined in data/bins.json" % (tag, e["bin"]))
+        if "facets" in e:
+            check_facets(tag, e["facets"])
+        elif e.get("kind") != "publication":
+            warn("%s: no facets" % tag)
         if e.get("confidence") not in CONF:
             err("%s: confidence %r not in %s" % (tag, e.get("confidence"), sorted(CONF)))
 
@@ -616,6 +712,8 @@ def main():
     # the bin vocabulary must be known before any event is checked against it
     global VOCAB
     VOCAB = load_bins()
+    global FACETS
+    FACETS = load_facets()
     parts = load_parts()
     order = load_group_order()
 
@@ -699,6 +797,7 @@ def main():
     art = load_art(lineage_ids)
     pd = load_pd(lineage_ids)
     news = load_news(lineage_ids)
+    real = load_real_history()
     for lid in sorted(lineage_ids):
         if lid not in worlds:
             warn("lineage %r has no world dossier; its World tab will be empty" % lid)
@@ -715,6 +814,7 @@ def main():
             "pd": len(pd),
             "news": len(news),
             "bins": len(VOCAB),
+            "real": len(real["events"]) if real else 0,
             "note": ("Real-world calendar years throughout. In-universe date systems "
                      "(BBY, AG, GE, stardates, millennium notation) are preserved per event "
                      "in the inUniverse field."),
@@ -726,6 +826,8 @@ def main():
         "pd": pd,
         "news": news,
         "bins": list(VOCAB.values()),
+        "facets": FACETS or None,
+        "real": real,
     }
     if atlas:
         payload["atlas"] = atlas

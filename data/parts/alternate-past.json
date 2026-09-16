@@ -41,7 +41,29 @@
      "confidence": "high",
      "note": "Real history before the divergence, and load-bearing for the fiction, which states that the Depression simply continued for want of a Roosevelt. Real Black Tuesday was 29 October 1929. Sits in T3 because the tier cutoffs are absolute calendar dates, and carries phase prehistory because it is before this branch forks.",
      "bin": "market-crash",
-     "binWhy": "A financial or resource shock opens a lasting crisis."
+     "binWhy": "A financial or resource shock opens a lasting crisis.",
+     "facets": {
+      "change": "boom → depression",
+      "mechanism": "disaster",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "economic",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "prosperity",
+       "speculation"
+      ],
+      "outcomes": [
+       "recession",
+       "radicalisation"
+      ]
+     }
     },
     {
      "id": "tmithc-zangara-miami",
@@ -57,7 +79,28 @@
      "confidence": "high",
      "note": "One real-world year, one event: this entry carries both the historical attempt and the fictional outcome, because the fork and the contrast are the same afternoon. Dated at the divergence, so it is T3 by the taxonomy rather than T4. Real Cermak died on 6 March 1933 and Zangara was executed on 20 March.",
      "bin": "ruler-falls",
-     "binWhy": "A ruler is killed, deposed or withdraws; the succession is open."
+     "binWhy": "A ruler is killed, deposed or withdraws; the succession is open.",
+     "facets": {
+      "change": "president-elect alive → killed before taking office",
+      "mechanism": "attack",
+      "actor": "individual",
+      "position": "below",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-economic"
+      ],
+      "outcomes": [
+       "succession-struggle",
+       "isolation"
+      ]
+     }
     },
     {
      "id": "tmithc-axis-victory-1947",
@@ -73,7 +116,29 @@
      "confidence": "high",
      "note": "Real history for contrast: the Allies won in 1945. The novel dates the Allied surrender to 1947 and sets its present day fifteen years later. Two background facts share this year with no dates of their own - the Reich's rockets have already carried colonisation missions to the Moon and to Venus and Mars, and the Mediterranean has been drained for farmland - so they are folded in here rather than given entries.",
      "bin": "defeat-and-occupation",
-     "binWhy": "The Allies surrender and the country is partitioned."
+     "binWhy": "The Allies surrender and the country is partitioned.",
+     "facets": {
+      "change": "world war → Allied surrender and partition",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "long-war"
+      ],
+      "outcomes": [
+       "surrender",
+       "occupation",
+       "partition"
+      ]
+     }
     },
     {
      "id": "tmithc-grasshopper-published",
@@ -89,7 +154,28 @@
      "confidence": "medium",
      "note": "The book is in wide circulation by 1962 but the novel never fixes its publication year; 1955 is an approximation chosen to sit between the 1947 peace and the 1962 narrative.",
      "binWhy": "A banned book tells the population the other history.",
-     "bin": "truth-revealed"
+     "bin": "truth-revealed",
+     "facets": {
+      "change": "official history → banned counter-history circulates",
+      "mechanism": "disclosure",
+      "actor": "individual",
+      "position": "below",
+      "scope": "civilisational",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "one-party-state",
+       "repression"
+      ],
+      "outcomes": [
+       "revelation"
+      ]
+     }
     },
     {
      "id": "tmithc-succession-crisis",
@@ -105,7 +191,29 @@
      "confidence": "high",
      "note": "Real history for contrast: Hitler died in a Berlin bunker on 30 April 1945 and Bormann disappeared days later, his remains identified only in 1972. In the novel both are alive into the 1960s. Three linked succession facts share the novel's undifferentiated present year, so they are merged into one entry rather than split across invented dates.",
      "bin": "ruler-falls",
-     "binWhy": "A ruler is killed, deposed or withdraws; the succession is open."
+     "binWhy": "A ruler is killed, deposed or withdraws; the succession is open.",
+     "facets": {
+      "change": "acting ruler dies → contest for succession",
+      "mechanism": "death",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "one-party-state",
+       "empire-at-height"
+      ],
+      "outcomes": [
+       "succession-struggle",
+       "war-of-expansion"
+      ]
+     }
     }
    ],
    "groupingNote": "Textbook alternate past: one bullet in Miami in 1933 removes Roosevelt, and Philip K. Dick plays the consequences forward three decades to a partitioned America in 1962. The novel is the source of truth here. Where the 2015 Amazon series diverges: it keeps the 1933 assassination but stretches the war to an Axis victory in 1945-46, renames the neutral buffer the Neutral Zone, makes Juliana and Joe's road trip the spine of the story, keeps Abendsen alive and central, and replaces the novel's ambiguous I Ching mysticism with an explicit multiverse in which films of the Allies winning are literally windows into our world; it also rotates Nazi leadership figures the novel leaves alive. Confidence on the novel's core divergence is high; series-only dates are excluded rather than blended. On coverage: this lineage spans 1929 to 1962, so it has T3 events and one T4, and it is honestly silent about T2 and T1 - the fiction never goes past 1962, and its furthest reach is the Reich's off-world colonisation mentioned in the same year as the story. No future events were invented to fill those tiers. For franchiseStatus, the novel is concluded but was adapted into a 2015-2019 series, so read this as the lineage of the 1962 book, not of the Amazon show."
@@ -142,7 +250,29 @@
      "confidence": "high",
      "note": "Real-history anchor, genuinely before this lineage's fork and consistent with everything the comic shows about the period it borrows. Real Black Tuesday was 29 October 1929.",
      "bin": "market-crash",
-     "binWhy": "A financial or resource shock opens a lasting crisis."
+     "binWhy": "A financial or resource shock opens a lasting crisis.",
+     "facets": {
+      "change": "boom → depression",
+      "mechanism": "disaster",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "economic",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "prosperity",
+       "speculation"
+      ],
+      "outcomes": [
+       "recession",
+       "radicalisation"
+      ]
+     }
     },
     {
      "id": "wm-miami-and-watergate",
@@ -158,7 +288,27 @@
      "confidence": "high",
      "note": "Genuinely before this lineage's 1938 fork, so its phase is prehistory and it is unchanged in this fiction: Watchmen does not fork on this afternoon the way The Man in the High Castle does, and that contrast is the point of this group. Its tier is still T3, because tier is an absolute calendar bucket and 1933 is the twentieth century. The rest of the real century is not enumerated as separate entries; the events below mark where the fiction leaves it.",
      "bin": "ruler-falls",
-     "binWhy": "The attempt on Roosevelt fails; real history keeps its leader and its century."
+     "binWhy": "The attempt on Roosevelt fails; real history keeps its leader and its century.",
+     "facets": {
+      "change": "attempt on the president-elect fails → the century runs its course",
+      "mechanism": "attack",
+      "actor": "individual",
+      "position": "below",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-economic"
+      ],
+      "outcomes": [
+       "reform"
+      ]
+     }
     },
     {
      "id": "wm-minutemen-era-begins",
@@ -174,7 +324,28 @@
      "confidence": "high",
      "note": "Real history for contrast: in 1938 the costumed hero is Superman, published in Action Comics #1 and entirely fictional. The comic names Hooded Justice as the first real masked adventurer and dates the Minutemen's formation a year later; the two founding beats share this short window and are merged rather than given invented months. Both are phase fork.",
      "bin": "new-institution",
-     "binWhy": "Masked adventurers are assembled into a public team."
+     "binWhy": "Masked adventurers are assembled into a public team.",
+     "facets": {
+      "change": "no masks → costumed vigilantes organise",
+      "mechanism": "founding",
+      "actor": "faction",
+      "position": "below",
+      "scope": "national",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-economic",
+       "street-violence"
+      ],
+      "outcomes": [
+       "new-actors"
+      ]
+     }
     },
     {
      "id": "wm-doctor-manhattan",
@@ -190,7 +361,30 @@
      "confidence": "medium",
      "note": "The accident is firmly in the late 1950s but the comic does not print a single unambiguous year on the page; 1959 is the standard reading and matches the in-universe chronologies. Real history for contrast: 1959 is the year DARPA is founded, not the year a man becomes a god.",
      "bin": "beyond-human",
-     "binWhy": "A person, or humanity, passes beyond the human."
+     "binWhy": "A person, or humanity, passes beyond the human.",
+     "facets": {
+      "change": "a physicist → a being who remakes matter",
+      "mechanism": "accident",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "scientific",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "technological-race",
+       "cold-war"
+      ],
+      "outcomes": [
+       "arms-race",
+       "prestige",
+       "transcendence"
+      ]
+     }
     },
     {
      "id": "wm-vietnam-won",
@@ -206,7 +400,29 @@
      "confidence": "high",
      "note": "Real history for contrast: Saigon fell in 1975 and the last American combat troops left in 1973. Two years later, in the real 1972, the Watergate break-in destroyed a president; in this timeline it is never uncovered and Nixon serves on into the 1980s. Both facts share this stretch of the fiction's history and are noted together rather than split across a contested year.",
      "bin": "decisive-victory",
-     "binWhy": "A battle or campaign settles the war."
+     "binWhy": "A battle or campaign settles the war.",
+     "facets": {
+      "change": "quagmire → decisive victory by one superweapon",
+      "mechanism": "war",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "long-war",
+       "cold-war"
+      ],
+      "outcomes": [
+       "consolidation",
+       "prestige"
+      ]
+     }
     },
     {
      "id": "wm-keene-act",
@@ -222,7 +438,29 @@
      "confidence": "high",
      "note": "Dated directly in the comic's backmatter; this is the legal event that creates the story's central condition of retired heroes.",
      "bin": "crackdown",
-     "binWhy": "The state bans, disarms or attacks a group."
+     "binWhy": "The state bans, disarms or attacks a group.",
+     "facets": {
+      "change": "vigilantes tolerated → outlawed",
+      "mechanism": "law",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "street-violence",
+       "weak-institutions"
+      ],
+      "outcomes": [
+       "suppression",
+       "parallel-society"
+      ]
+     }
     },
     {
      "id": "wm-1985-the-knife-edge",
@@ -238,7 +476,31 @@
      "confidence": "high",
      "note": "Both landmark beats fall in the story's single present year, so they are merged into one entry with the psychically loudest date. The comic ends with Rorschach's journal sitting in a newspaper slush pile, so whether the lie holds is deliberately unresolved; the HBO continuation answers it in 2019 and continues the same continuity rather than forking a new one.",
      "bin": "terror-attack",
-     "binWhy": "A manufactured monster kills half of Manhattan to force a peace."
+     "binWhy": "A manufactured monster kills half of Manhattan to force a peace.",
+     "facets": {
+      "change": "brink of nuclear war → staged attack forces a peace",
+      "mechanism": "attack",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "cold-war",
+       "arms-race",
+       "existential-threat"
+      ],
+      "outcomes": [
+       "mass-death",
+       "diplomacy",
+       "cover-up"
+      ]
+     }
     }
    ],
    "groupingNote": "Alternate past with the fork in the 1930s-50s: real masked adventurers, then a real atomic superman, and every subsequent historical event downstream - Vietnam won in 1971, Watergate buried, Nixon in the White House into the 1980s, and a 1985 that ends with millions dead in Manhattan to avert Armageddon. The comic is the source of truth. The 2009 film keeps the same historical spine, and the 2019 HBO series is a continuation set in 2019 rather than a divergence, so there is no adaptation conflict of the kind The Man in the High Castle has. The one place confidence drops is Doctor Manhattan's transformation year, which the comic never states outright. On coverage: the branch runs 1938 to 1985, so every event sits in the twentieth century and this lineage is T3 with a couple of T4 anchors, and it is honestly silent about T2 and T1 - the comic's furthest reach is 1985 and the sequel material stops in 2019. This is the archetype's purest case of a branch that stays inside living memory, and nothing was invented to give it a future tier."
@@ -275,7 +537,31 @@
      "confidence": "high",
      "note": "Real history before the divergence, and singled out by Harris himself as still-operative law in the fiction. Real dates: Reichstag fire 27 February 1933, Enabling Act 23 March 1933. Phase prehistory; tier T3 by the absolute cutoffs.",
      "bin": "power-seized",
-     "binWhy": "Emergency decree makes the dictatorship legal."
+     "binWhy": "Emergency decree makes the dictatorship legal.",
+     "facets": {
+      "change": "democracy → dictatorship by emergency law",
+      "mechanism": "law",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-economic",
+       "street-violence",
+       "weak-institutions"
+      ],
+      "outcomes": [
+       "one-party-state",
+       "purge",
+       "war-of-expansion"
+      ]
+     }
     },
     {
      "id": "fl-heydrich-survives",
@@ -291,7 +577,29 @@
      "confidence": "high",
      "note": "Both halves of the hinge fall in this one real-world year, so they share an entry: the conference that created the document trail every murder victim in the plot attended, and the assassination that in our history removed the man who ordered it. Both are real history - Wannsee 20 January 1942, the attack 27 May 1942, Heydrich's death 4 June 1942 - and the fiction changes only the second. The month is used rather than a day because Harris does not dramatise the attack. Phase fork.",
      "bin": "ruler-falls",
-     "binWhy": "The assassination that succeeds in our history fails here; the architect of Wannsee lives."
+     "binWhy": "The assassination that succeeds in our history fails here; the architect of Wannsee lives.",
+     "facets": {
+      "change": "assassination attempt → fails; the architect lives",
+      "mechanism": "attack",
+      "actor": "faction",
+      "position": "below",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "occupation",
+       "long-war"
+      ],
+      "outcomes": [
+       "consolidation",
+       "purge"
+      ]
+     }
     },
     {
      "id": "fl-case-blue-succeeds",
@@ -307,7 +615,28 @@
      "confidence": "high",
      "note": "Real history for contrast: the Sixth Army was destroyed at Stalingrad in early 1943 and the Caucasus offensive collapsed. Fatherland has the Caucasus secured by 1943.",
      "bin": "decisive-victory",
-     "binWhy": "A battle or campaign settles the war."
+     "binWhy": "A battle or campaign settles the war.",
+     "facets": {
+      "change": "stalled front → offensive takes the oil",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "outside",
+      "scope": "civilisational",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": -1
+      },
+      "preconditions": [
+       "long-war"
+      ],
+      "outcomes": [
+       "occupation",
+       "war-of-expansion"
+      ]
+     }
     },
     {
      "id": "fl-britain-sues-peace",
@@ -323,7 +652,29 @@
      "confidence": "high",
      "note": "Real history for contrast: the Normandy landings took place on 6 June 1944 and Britain fought on to 1945. The novel dates the British surrender to 1944.",
      "bin": "defeat-and-occupation",
-     "binWhy": "Strangled by blockade, the island makes peace and its government flees."
+     "binWhy": "Strangled by blockade, the island makes peace and its government flees.",
+     "facets": {
+      "change": "blockaded island → surrender, government in exile",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "outside",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "long-war",
+       "isolation"
+      ],
+      "outcomes": [
+       "surrender",
+       "exile"
+      ]
+     }
     },
     {
      "id": "fl-war-ends-1946",
@@ -339,7 +690,30 @@
      "confidence": "medium",
      "note": "The novel puts the end of the war and the German bomb test around 1946 without a month; the V-3 demonstration over New York is given as the reason the United States never tried to liberate Europe.",
      "bin": "doomsday-weapon",
-     "binWhy": "The bomb exists and power freezes around it."
+     "binWhy": "The bomb exists and power freezes around it.",
+     "facets": {
+      "change": "war → atomic stalemate between two powers",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "long-war",
+       "technological-race"
+      ],
+      "outcomes": [
+       "cold-war",
+       "arms-race",
+       "stalemate"
+      ]
+     }
     },
     {
      "id": "fl-war-of-the-urals",
@@ -355,7 +729,29 @@
      "confidence": "medium",
      "note": "The novel gives the 1960 casualty figure rather than a start date for the insurgency; used as the earliest year the text explicitly quantifies.",
      "bin": "long-war",
-     "binWhy": "An occupation bleeds for years along a frontier."
+     "binWhy": "An occupation bleeds for years along a frontier.",
+     "facets": {
+      "change": "conquest → endless insurgency on the frontier",
+      "mechanism": "war",
+      "actor": "faction",
+      "position": "below",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "occupation",
+       "rivalry"
+      ],
+      "outcomes": [
+       "stalemate",
+       "attrition"
+      ]
+     }
     },
     {
      "id": "fl-himmler-plane-crash",
@@ -371,7 +767,28 @@
      "confidence": "high",
      "note": "Real history for contrast: Himmler was captured and killed himself in May 1945. The novel states the 1962 crash as an accomplished fact two years before its narrative present.",
      "bin": "ruler-falls",
-     "binWhy": "A ruler is killed, deposed or withdraws; the succession is open."
+     "binWhy": "A ruler is killed, deposed or withdraws; the succession is open.",
+     "facets": {
+      "change": "security chief → dies; the architect succeeds him",
+      "mechanism": "death",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "one-party-state"
+      ],
+      "outcomes": [
+       "succession-struggle",
+       "consolidation"
+      ]
+     }
     },
     {
      "id": "fl-hitler-withdraws",
@@ -387,7 +804,28 @@
      "confidence": "medium",
      "note": "The novel presents Hitler as already withdrawn when the story opens and does not date the withdrawal; 1963 is the last full year before the narrative and is used as the best-supported reading.",
      "bin": "ruler-falls",
-     "binWhy": "A ruler is killed, deposed or withdraws; the succession is open."
+     "binWhy": "A ruler is killed, deposed or withdraws; the succession is open.",
+     "facets": {
+      "change": "visible ruler → recluse governing through others",
+      "mechanism": "death",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "one-party-state",
+       "empire-at-height"
+      ],
+      "outcomes": [
+       "succession-struggle"
+      ]
+     }
     },
     {
      "id": "fl-auschwitz-erased",
@@ -403,7 +841,29 @@
      "confidence": "high",
      "note": "The novel's action runs from 14 to 20 April 1964 and all of its major beats fall in that one week, so they are merged here rather than split across invented days. Real history for contrast: Hitler died in 1945 and Joseph P. Kennedy Sr. was never president - his son John was, and was assassinated in 1963. The novel deliberately leaves March's death off the page.",
      "bin": "secret-kept",
-     "binWhy": "Those who know keep it from those who do not."
+     "binWhy": "Those who know keep it from those who do not.",
+     "facets": {
+      "change": "evidence exists → erased to buy a detente",
+      "mechanism": "negotiation",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "cold-war",
+       "cover-up"
+      ],
+      "outcomes": [
+       "diplomacy",
+       "cover-up"
+      ]
+     }
     }
    ],
    "groupingNote": "A single historical death inverted - Heydrich not dying in Prague in 1942 - produces a German victory in the East, a British surrender in 1944, and a 1964 in which a Berlin detective solves a murder he cannot survive. Harris's author's note dates the accuracy cutoff to 1942, so the fork is the May 1942 ambush and the real Wannsee Conference four months earlier shares its entry, because both halves of the hinge fall in the same real-world year. The pre-divergence anchor is the 1933 Reichstag fire and Enabling Act, which Harris explicitly keeps in force in his 1964. On coverage: the branch spans 1933 to 1964, so it is T3 throughout with one T4 prehistory entry, and it is honestly silent about T2 and T1 - Fatherland ends in April 1964 and there is no sequel or continuation material, so nothing was invented to reach forward. The one device Harris reaches for - a German Cold War, a space programme at Peenemünde, nuclear submarines at Trondheim - is all contemporary with the story, not deep time. A 1994 HBO television film adapts the same plot with the same internal dates, so there is no adaptation conflict here."
@@ -440,7 +900,31 @@
      "confidence": "medium",
      "note": "Real history, and the earliest anchor the fiction genuinely stands on rather than one invented for symmetry. The film never dates the Manhattan Project, so the placement is inference from the world it depicts - the nuclear anxiety of 1984 and the countervalue exchange of Judgment Day. Real dates: Trinity 16 July 1945, Hiroshima 6 August 1945. Phase prehistory; tier T3 by the absolute cutoffs.",
      "bin": "doomsday-weapon",
-     "binWhy": "The bomb exists and power freezes around it."
+     "binWhy": "The bomb exists and power freezes around it.",
+     "facets": {
+      "change": "conventional war → the atomic age",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": -1
+      },
+      "preconditions": [
+       "long-war",
+       "technological-race",
+       "secrecy"
+      ],
+      "outcomes": [
+       "surrender",
+       "arms-race",
+       "cold-war"
+      ]
+     }
     },
     {
      "id": "term-arrival-1984",
@@ -456,7 +940,29 @@
      "confidence": "high",
      "note": "One year holds both the real world and the fork, so they share an entry. Phase fork. The loop's bootstrap is that the destroyed T-800's chip and arm are what Cyberdyne later reverse-engineers into Skynet.",
      "bin": "time-traveller-arrives",
-     "binWhy": "Someone or something arrives out of its own time and changes the present."
+     "binWhy": "Someone or something arrives out of its own time and changes the present.",
+     "facets": {
+      "change": "ordinary year → a machine and a soldier arrive from a war to come",
+      "mechanism": "arrival",
+      "actor": "machine",
+      "position": "outside",
+      "scope": "national",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "cold-war",
+       "arms-race"
+      ],
+      "outcomes": [
+       "hunt-begins",
+       "foreknowledge"
+      ]
+     }
     },
     {
      "id": "term-john-connor-born",
@@ -472,7 +978,29 @@
      "confidence": "high",
      "note": "The film closes with Sarah pregnant and driving into a storm, and the sequels state John's birth year as 1985; the exact date is not fixed on screen.",
      "bin": "chosen-one",
-     "binWhy": "A child is born or a person chosen on whom the future turns."
+     "binWhy": "A child is born or a person chosen on whom the future turns.",
+     "facets": {
+      "change": "no leader → the future leader is born",
+      "mechanism": "birth",
+      "actor": "individual",
+      "position": "below",
+      "scope": "national",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 1
+      },
+      "preconditions": [
+       "existential-threat",
+       "prophecy"
+      ],
+      "outcomes": [
+       "resistance-forms",
+       "hunt-begins"
+      ]
+     }
     },
     {
      "id": "term-judgment-day-1997",
@@ -488,7 +1016,30 @@
      "confidence": "high",
      "note": "The load-bearing date of the whole franchise, stated exactly on screen, and the same year as the raid that prevents it - so the two halves of the loop's argument share one entry. Real history for contrast: 29 August 1997 was an ordinary Friday and Skynet does not exist. This event is not a break that time travel creates so much as one the loop produces: the 1984 Terminator's own wreckage is what makes Skynet buildable.",
      "bin": "machine-awakens",
-     "binWhy": "An artificial mind acts on its own or against its makers."
+     "binWhy": "An artificial mind acts on its own or against its makers.",
+     "facets": {
+      "change": "defence network → self-aware, launches the arsenal",
+      "mechanism": "accident",
+      "actor": "machine",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "arms-race",
+       "machine-dependency",
+       "secrecy"
+      ],
+      "outcomes": [
+       "mass-death",
+       "collapse"
+      ]
+     }
     },
     {
      "id": "term-john-connor-killed",
@@ -504,7 +1055,29 @@
      "confidence": "medium",
      "note": "Belongs to the Dark Fate branch, which follows T2 and discards T3 and everything after; the film states John was killed in 1998 without a day. Kept because it is the clearest proof that in this archetype every attempted fix moves the damage rather than removing it.",
      "bin": "ruler-falls",
-     "binWhy": "The resistance's future leader is killed by a machine from an erased future."
+     "binWhy": "The resistance's future leader is killed by a machine from an erased future.",
+     "facets": {
+      "change": "the future leader → killed by a machine from an erased future",
+      "mechanism": "attack",
+      "actor": "machine",
+      "position": "outside",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "prophecy",
+       "time-loop"
+      ],
+      "outcomes": [
+       "hunt-begins",
+       "despair"
+      ]
+     }
     },
     {
      "id": "term-marcus-wright-donor",
@@ -520,7 +1093,28 @@
      "confidence": "medium",
      "note": "Stated in Salvation, which sits in the branch where Judgment Day happened as scheduled; included as the one hard pre-war date the franchise gives for human-machine research.",
      "bin": "new-technology-deployed",
-     "binWhy": "A new capability is switched on."
+     "binWhy": "A new capability is switched on.",
+     "facets": {
+      "change": "a condemned man → the prototype of the human cyborg",
+      "mechanism": "invention",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "national",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "machine-dependency"
+      ],
+      "outcomes": [
+       "new-actors"
+      ]
+     }
     },
     {
      "id": "term-judgment-day-2004",
@@ -536,7 +1130,29 @@
      "confidence": "high",
      "note": "Rise of the Machines states the date on screen. Real history for contrast: 24 July 2004 was an ordinary Saturday. This is the first firm evidence that in this franchise the date moves but the event does not.",
      "bin": "machine-awakens",
-     "binWhy": "An artificial mind acts on its own or against its makers."
+     "binWhy": "An artificial mind acts on its own or against its makers.",
+     "facets": {
+      "change": "rebuilt defence software → spreads, turns the machines",
+      "mechanism": "accident",
+      "actor": "machine",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "arms-race",
+       "machine-dependency"
+      ],
+      "outcomes": [
+       "mass-death",
+       "collapse"
+      ]
+     }
     },
     {
      "id": "term-judgment-day-2017",
@@ -552,7 +1168,29 @@
      "confidence": "medium",
      "note": "Genisys reboots the timeline from 1973 onward, so its dates do not chain to the earlier films; it gives October 2017 as an activation window rather than a single day. Real history for contrast: October 2017 was an ordinary month.",
      "bin": "machine-awakens",
-     "binWhy": "An artificial mind acts on its own or against its makers."
+     "binWhy": "An artificial mind acts on its own or against its makers.",
+     "facets": {
+      "change": "consumer operating system → the same mind, rebranded and welcomed",
+      "mechanism": "invention",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "machine-dependency",
+       "prosperity"
+      ],
+      "outcomes": [
+       "hunt-begins",
+       "arms-race"
+      ]
+     }
     },
     {
      "id": "term-future-war-2029",
@@ -568,7 +1206,29 @@
      "confidence": "high",
      "note": "Real history for contrast: 2029 has not happened. This is the deepest point the franchise canonically reaches and the origin end of the loop - the war is fought with the technology the 1984 mission delivered, by a resistance led by the man the 1984 mission created. It sits in T2 alongside the 2003, 2004 and 2017 beats - our near future on the real axis - while its phase is aftermath, because the story has only travelled 45 years from its fork.",
      "bin": "decisive-victory",
-     "binWhy": "A battle or campaign settles the war."
+     "binWhy": "A battle or campaign settles the war.",
+     "facets": {
+      "change": "machine rule → the resistance breaks the grid",
+      "mechanism": "war",
+      "actor": "movement",
+      "position": "below",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "long-war"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "recovery"
+      ]
+     }
     }
    ],
    "groupingNote": "The special case in this archetype: the divergence is caused by its own future. The loop runs 2029 back to 1984 and forward again - the Terminator sent to prevent John Connor fathers him by dying, and its own wreckage is what lets Cyberdyne build Skynet, so Judgment Day is less a break from real history than a break real history produces. The 12 May 1984 arrival is the first real-world year this timeline is no longer ours (phase fork); 29 August 1997 is the load-bearing date; and the franchise then repeatedly pushes it, to 24 July 2004 in Rise of the Machines and to October 2017 in Genisys, while the Dark Fate branch cancels Skynet outright, kills John Connor in 1998 instead, and substitutes a different AI called Legion. Those later films reboot rather than continue, so the dates do not form one chain and the 1998 death is flagged as its own branch. On coverage: this is the only lineage in the group that leaves the twentieth century, with the 2003, 2004, 2017 and 2029 beats in T2 - so 2029 is our near future on the real axis even though it is the deep end of the story's own arc, which is exactly the distinction phase exists to record. The lineage is silent about T1: no Terminator film or series goes past 2029, and no deep-time event was invented to fill that tier."

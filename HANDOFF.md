@@ -43,6 +43,8 @@ python3 test-fixture.py && node test-viewer.js && node test-render.js timeline.h
 | `src/styles/*.css` | `00-tokens.css` (the design tokens), then base, chart, panels. | Yes |
 | `src/viewer/*.js` | The viewer, one concern per file, concatenated in filename order into one IIFE. | Yes — this is the app |
 | `data/atlas.json` | Page copy and era presets for this atlas. Validated by the build. | Yes |
+| `data/bins.json`, `data/facets.json`, `data/real-history.json` | The kinds of moment, the closed facet vocabularies, and our own history as a sequence of moments. All validated by the build. | Yes - deliberately |
+| `tools/facet-match.py` | Match any moment to its situational neighbours and read them forward. | When the facets change |
 | `DESIGN.md` | Design language, chart anatomy, extension guide. | When the design changes |
 | `BRIEF-order-axis.md` | The next piece of work: the Order and Moments views, phased. | As phases land |
 | `data/parts/*.json` | The editable dataset, one file per archetype. | Yes — this is the data |

@@ -41,7 +41,26 @@
      "confidence": "high",
      "note": "Real-world background; the fiction itself is silent before 1972.",
      "binWhy": "A discovery the rest of the history grows from.",
-     "bin": "breakthrough-science"
+     "bin": "breakthrough-science",
+     "facets": {
+      "change": "fixed species → natural selection published",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [],
+      "outcomes": [
+       "revelation",
+       "fervour"
+      ]
+     }
     },
     {
      "id": "pota-icarus-1972",
@@ -57,7 +76,27 @@
      "confidence": "medium",
      "note": "No on-screen date card. 1972 is derived from the 3978 arrival minus the 2,006 elapsed years the crew log, and from Landon's line about 'the class of '72'.",
      "bin": "voyage-into-unknown",
-     "binWhy": "A first mission leaves for territory nobody has reached."
+     "binWhy": "A first mission leaves for territory nobody has reached.",
+     "facets": {
+      "change": "Earth → a mission flung two thousand years forward",
+      "mechanism": "expedition",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "technological-race"
+      ],
+      "outcomes": [
+       "time-lost"
+      ]
+     }
     },
     {
      "id": "pota-escape-1973",
@@ -73,7 +112,27 @@
      "confidence": "high",
      "note": "The first impossible event in the series, but a closed causal loop rather than a change to human history, which is why this lineage's fork is placed at the 1983 plague instead.",
      "bin": "time-traveller-arrives",
-     "binWhy": "Someone or something arrives out of its own time and changes the present."
+     "binWhy": "Someone or something arrives out of its own time and changes the present.",
+     "facets": {
+      "change": "the present → visited by talking apes from a destroyed future",
+      "mechanism": "arrival",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "national",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [],
+      "outcomes": [
+       "revelation",
+       "hunt-begins",
+       "foreknowledge"
+      ]
+     }
     },
     {
      "id": "pota-plague-1983",
@@ -89,7 +148,26 @@
      "confidence": "medium",
      "note": "Conquest gives only the relative 'eight years ago' before its 1991 uprising, so 1983 is arithmetic; the same film is frequently misreported as being set in 1983.",
      "bin": "plague",
-     "binWhy": "A disease or biological failure strikes on a mass scale."
+     "binWhy": "A disease or biological failure strikes on a mass scale.",
+     "facets": {
+      "change": "pets → all dead; apes brought into homes",
+      "mechanism": "disaster",
+      "actor": "nature",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "biological",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [],
+      "outcomes": [
+       "dependency",
+       "new-actors"
+      ]
+     }
     },
     {
      "id": "pota-revolt-1991",
@@ -105,7 +183,28 @@
      "confidence": "medium",
      "note": "Conquest's title card gives 1991 and the internal arithmetic fits (Caesar is eighteen, born in 1973), though some timelines read the film as 1993.",
      "bin": "uprising",
-     "binWhy": "The ruled revolt against those who hold power over them."
+     "binWhy": "The ruled revolt against those who hold power over them.",
+     "facets": {
+      "change": "enslaved apes → take the cities",
+      "mechanism": "uprising",
+      "actor": "movement",
+      "position": "below",
+      "scope": "civilisational",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "slavery-or-servitude"
+      ],
+      "outcomes": [
+       "civil-war",
+       "collapse"
+      ]
+     }
     },
     {
      "id": "pota-war-1992",
@@ -121,7 +220,28 @@
      "confidence": "low",
      "note": "Never dated on screen: Battle's Lawgiver places it in the aftermath of Caesar's victory, and that film's 'twelve-year truce' points to about 1992.",
      "bin": "civilisation-collapses",
-     "binWhy": "The counter-attack leaves the surface a radioactive ruin."
+     "binWhy": "The counter-attack leaves the surface a radioactive ruin.",
+     "facets": {
+      "change": "revolt → the counter-attack leaves the surface a ruin",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "crisis-legitimacy"
+      ],
+      "outcomes": [
+       "collapse",
+       "mass-death"
+      ]
+     }
     },
     {
      "id": "pota-battle-2003",
@@ -137,7 +257,29 @@
      "confidence": "low",
      "note": "Battle states no year; 'ten years after a worldwide series of ape revolutions and a brutal nuclear war' plus the twelve-year truce puts the main story around 2003, while some sources prefer 2001.",
      "bin": "peace-made",
-     "binWhy": "A truce between species, and a city built on it."
+     "binWhy": "A truce between species, and a city built on it.",
+     "facets": {
+      "change": "war → a walled city and a fragile truce",
+      "mechanism": "negotiation",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "local",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "war-just-ended",
+       "post-collapse"
+      ],
+      "outcomes": [
+       "new-order",
+       "diplomacy"
+      ]
+     }
     },
     {
      "id": "pota-lawgiver-2670",
@@ -153,7 +295,28 @@
      "confidence": "high",
      "note": "On-screen title card 'North America - 2670 A.D.'; the closing line's '600 years after Caesar's death' contradicts the main story's roughly 2003 setting and is unexplained.",
      "bin": "long-after",
-     "binWhy": "A jump forward shows what the world became."
+     "binWhy": "A jump forward shows what the world became.",
+     "facets": {
+      "change": "history → taught as scripture",
+      "mechanism": "consolidation",
+      "actor": "state",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "social",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse"
+      ],
+      "outcomes": [
+       "ignorance",
+       "theocracy"
+      ]
+     }
     },
     {
      "id": "pota-tv-3085",
@@ -169,7 +332,28 @@
      "confidence": "medium",
      "note": "The date is a chronometer reading that the series itself says may have stopped mid-flight; the 1975 animated series is undated, with fans split between 3479 and 3979.",
      "bin": "time-traveller-arrives",
-     "binWhy": "Twentieth-century astronauts arrive in a future that is not theirs."
+     "binWhy": "Twentieth-century astronauts arrive in a future that is not theirs.",
+     "facets": {
+      "change": "the present → astronauts land in an ape-ruled future",
+      "mechanism": "arrival",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "national",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "slavery-or-servitude"
+      ],
+      "outcomes": [
+       "hunt-begins"
+      ]
+     }
     },
     {
      "id": "pota-bomb-3955",
@@ -185,7 +369,29 @@
      "confidence": "low",
      "note": "Brent states 3955 in dialogue while Taylor's chronometer in the 1968 film reads 3978; the standard rationalisation is that Brent's chronometer was damaged.",
      "bin": "mass-death",
-     "binWhy": "An attack or disaster kills on a scale that remakes society."
+     "binWhy": "An attack or disaster kills on a scale that remakes society.",
+     "facets": {
+      "change": "a ruined world → destroyed outright",
+      "mechanism": "attack",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "post-collapse",
+       "religious-fervour"
+      ],
+      "outcomes": [
+       "mass-death",
+       "collapse"
+      ]
+     }
     },
     {
      "id": "pota-taylor-3978",
@@ -201,7 +407,28 @@
      "confidence": "high",
      "note": "The ship's on-screen chronometer reads 3978; the 'November 25' date comes from a later novelisation, not from the film.",
      "bin": "truth-revealed",
-     "binWhy": "The half-buried statue tells him where he has been all along."
+     "binWhy": "The half-buried statue tells him where he has been all along.",
+     "facets": {
+      "change": "a strange planet → recognised as home",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "slavery-or-servitude"
+      ],
+      "outcomes": [
+       "revelation"
+      ]
+     }
     }
    ],
    "groupingNote": "The pentalogy is this archetype's purest long form: a catastrophe inside the twentieth century ends the human industrial order, and the films then live inside its ruins, from a Statue of Liberty on a beach to a sacred scroll that remembers humans as vermin. The fork is placed at the 1983 plague rather than the 1991 uprising because 1983 is the first dated change to human history; the revolt, the war and ape rule are all downstream of it, while the series' earlier impossible event, Zira and Cornelius arriving in 1973, is a closed bootstrap loop rather than a break in human history. Tiers: T4 and T2 are nearly empty because the fiction jumps from the 1990s straight to 2670; the only T4 entry is real-world background (Darwin, 1859) and the only T2 entry is Battle's roughly 2003 setting. T1 is where this branch actually lives, at 2670, 3085, 3955 and 3978. The 2011-2017 reboot (Rise, Dawn, War) and Kingdom (2024) are a separate continuity that re-runs the collapse as a 2016 laboratory accident and a simian-flu pandemic, and the 2001 Burton film is a third; neither is mixed into the events above."
@@ -238,7 +465,26 @@
      "confidence": "high",
      "note": "Real-world background.",
      "binWhy": "A discovery the rest of the history grows from.",
-     "bin": "breakthrough-science"
+     "bin": "breakthrough-science",
+     "facets": {
+      "change": "no oil industry → the oil age begins",
+      "mechanism": "invention",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "national",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [],
+      "outcomes": [
+       "gold-rush",
+       "dependency"
+      ]
+     }
     },
     {
      "id": "mm-shock-1973",
@@ -254,7 +500,28 @@
      "confidence": "high",
      "note": "Real-world background; the fiction's own oil war is dated only in production and tie-in material.",
      "binWhy": "A financial or resource shock opens a lasting crisis.",
-     "bin": "market-crash"
+     "bin": "market-crash",
+     "facets": {
+      "change": "cheap oil → an embargo quadruples the price",
+      "mechanism": "attack",
+      "actor": "state",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "economic",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "rivalry",
+       "resource-dependency"
+      ],
+      "outcomes": [
+       "recession"
+      ]
+     }
     },
     {
      "id": "mm-film-1979",
@@ -270,7 +537,8 @@
      "confidence": "high",
      "note": "Australian release 12 April 1979; the on-screen title card is the first film's only firm dating gesture.",
      "binWhy": "A real-world publication or release date, not a moment in the story.",
-     "bin": null
+     "bin": null,
+     "facets": null
     },
     {
      "id": "mm-oilwar-1983",
@@ -286,7 +554,29 @@
      "confidence": "low",
      "note": "Never stated on screen; see the divergence note. The Mad Max 2 narration does not date the collapse at all, and the often-quoted 'last years of the 20th century' line does not exist in the film.",
      "bin": "war-breaks-out",
-     "binWhy": "A major war starts."
+     "binWhy": "A major war starts.",
+     "facets": {
+      "change": "the last fuel → war for it; the oil majors fail",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "resource-exhaustion",
+       "rivalry"
+      ],
+      "outcomes": [
+       "collapse",
+       "recession"
+      ]
+     }
     },
     {
      "id": "mm-mfp-1984",
@@ -302,7 +592,28 @@
      "confidence": "high",
      "note": "On-screen background signage gives 6 December 1984, the franchise's hardest in-universe date.",
      "bin": "civilisation-collapses",
-     "binWhy": "The rule of law now depends on a handful of cars."
+     "binWhy": "The rule of law now depends on a handful of cars.",
+     "facets": {
+      "change": "the rule of law → depends on a handful of cars",
+      "mechanism": "consolidation",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "resource-exhaustion",
+       "weak-institutions"
+      ],
+      "outcomes": [
+       "collapse"
+      ]
+     }
     },
     {
      "id": "mm-roadwarrior-1987",
@@ -318,7 +629,29 @@
      "confidence": "medium",
      "note": "The three-year gap comes from the official production preamble, not the film; whether the nuclear exchange happens here or between the first two films depends on which continuity you follow.",
      "bin": "civilisation-collapses",
-     "binWhy": "The wars have gone nuclear and the world of three years earlier is gone."
+     "binWhy": "The wars have gone nuclear and the world of three years earlier is gone.",
+     "facets": {
+      "change": "fuel wars → gone nuclear; the old world gone",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "resource-exhaustion",
+       "long-war"
+      ],
+      "outcomes": [
+       "collapse",
+       "scattering"
+      ]
+     }
     },
     {
      "id": "mm-thunderdome-2002",
@@ -334,7 +667,29 @@
      "confidence": "medium",
      "note": "The fifteen-year gap comes from co-writer Terry Hayes (Starlog, June 1985); the film states no year.",
      "bin": "settlement-founded",
-     "binWhy": "A permanent settlement or base is founded."
+     "binWhy": "A permanent settlement or base is founded.",
+     "facets": {
+      "change": "ruins → a methane town with its own law",
+      "mechanism": "founding",
+      "actor": "faction",
+      "position": "below",
+      "scope": "local",
+      "domain": "economic",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "resource-exhaustion"
+      ],
+      "outcomes": [
+       "new-order",
+       "rebuilding"
+      ]
+     }
     },
     {
      "id": "mm-furyroad-2060",
@@ -350,7 +705,29 @@
      "confidence": "low",
      "note": "Miller: the apocalypse 'happens, and you wind up 45-50 years in the future' from a rolling 'next Wednesday'; the tattoo implies about thirty-three years since the Fall; the 2015 comics put their Fall in the 2010s. The year is arithmetic on Miller's figure, not a stated date. Furiosa (2024) runs the fifteen years directly into this film.",
      "bin": "long-after",
-     "binWhy": "A jump forward shows what the world became."
+     "binWhy": "A jump forward shows what the world became.",
+     "facets": {
+      "change": "wasteland → a citadel trading water for fuel",
+      "mechanism": "consolidation",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "local",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "resource-exhaustion"
+      ],
+      "outcomes": [
+       "one-party-state",
+       "resistance-forms"
+      ]
+     }
     }
    ],
    "groupingNote": "Mad Max is the archetype stripped to fuel: the world does not end in a war anyone wins, it runs out of oil, and everything after the first film is set among the wreckage of ordinary Australian life, a police interceptor, a refinery, a ruined Sydney. The fork is dated 1983 with low confidence because the collapse is described only in production and tie-in material, while the films' own dating runs from a title card reading 'a few years from now' to on-screen signage reading 6 December 1984. Tiers: this branch has no T1 and never will, because the franchise's furthest era is the Fury Road wasteland roughly forty-five to fifty years past its Fall, so Mad Max simply stops inside our own next century; the T4 entry is real-world background only (the oil age, 1859), and everything the fiction itself depicts from 1973 onward sits in T3 or T2. Miller's repeated insistence that the films have no strict chronology is the honest summary of this lineage's dates."
@@ -387,7 +764,25 @@
      "confidence": "high",
      "note": "Real-world background.",
      "binWhy": "A discovery the rest of the history grows from.",
-     "bin": "breakthrough-science"
+     "bin": "breakthrough-science",
+     "facets": {
+      "change": "matter inert → uranium emits rays",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [],
+      "outcomes": [
+       "revelation"
+      ]
+     }
     },
     {
      "id": "fo-split-1945",
@@ -403,7 +798,29 @@
      "confidence": "medium",
      "note": "The Fallout 3 manual states the split is 'after World War II' and never dates it precisely; the Fallout Bible, non-canon since 2011, says the same. The widely repeated claim that the transistor was not invented until 2067 is unsupported by canon.",
      "binWhy": "Technology races ahead of society from this point.",
-     "bin": "new-technology-deployed"
+     "bin": "new-technology-deployed",
+     "facets": {
+      "change": "post-war → technology races ahead while society freezes",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "war-just-ended",
+       "technological-race"
+      ],
+      "outcomes": [
+       "dependency",
+       "prestige"
+      ]
+     }
     },
     {
      "id": "fo-resource-wars-2052",
@@ -419,7 +836,29 @@
      "confidence": "high",
      "note": "",
      "bin": "war-breaks-out",
-     "binWhy": "A major war starts."
+     "binWhy": "A major war starts.",
+     "facets": {
+      "change": "scarcity → the powers seize what is left; the UN dissolves",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "resource-exhaustion",
+       "rivalry"
+      ],
+      "outcomes": [
+       "state-dissolves",
+       "war-of-expansion"
+      ]
+     }
     },
     {
      "id": "fo-vaults-2054",
@@ -435,7 +874,29 @@
      "confidence": "high",
      "note": "The experiment programme is canon across Fallout, Fallout 2, Fallout 3 and Fallout 4; the Vault count is usually given as 122.",
      "bin": "secret-kept",
-     "binWhy": "Shelters that are secretly experiments on the people inside them."
+     "binWhy": "Shelters that are secretly experiments on the people inside them.",
+     "facets": {
+      "change": "fear → shelters that are secretly experiments",
+      "mechanism": "law",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "national",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "existential-threat",
+       "arms-race"
+      ],
+      "outcomes": [
+       "shelter-society",
+       "cover-up"
+      ]
+     }
     },
     {
      "id": "fo-sino-war-2066",
@@ -451,7 +912,29 @@
      "confidence": "high",
      "note": "",
      "bin": "war-breaks-out",
-     "binWhy": "A major war starts."
+     "binWhy": "A major war starts.",
+     "facets": {
+      "change": "scarcity → invasion for the last oil; eleven years of war",
+      "mechanism": "invasion",
+      "actor": "state",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "resource-exhaustion",
+       "long-war"
+      ],
+      "outcomes": [
+       "attrition",
+       "arms-race"
+      ]
+     }
     },
     {
      "id": "fo-great-war-2077",
@@ -467,7 +950,31 @@
      "confidence": "high",
      "note": "Uncontested across Fallout's intro and the Fallout 4 and 76 loading screens. Earlier the same month the Mariposa mutiny begins the Brotherhood of Steel, so 2077 also carries the wasteland's first institution.",
      "bin": "mass-death",
-     "binWhy": "An attack or disaster kills on a scale that remakes society."
+     "binWhy": "An attack or disaster kills on a scale that remakes society.",
+     "facets": {
+      "change": "cold war → two hours of nuclear exchange",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "long-war",
+       "resource-exhaustion",
+       "arms-race"
+      ],
+      "outcomes": [
+       "mass-death",
+       "collapse",
+       "shelter-society"
+      ]
+     }
     },
     {
      "id": "fo-reclamation-2102",
@@ -483,7 +990,29 @@
      "confidence": "high",
      "note": "Fallout 76's setting; later updates advance the in-universe clock only to about 2105.",
      "bin": "the-call",
-     "binWhy": "The shelter opens and its people walk out into the world."
+     "binWhy": "The shelter opens and its people walk out into the world.",
+     "facets": {
+      "change": "sealed → the shelter opens and its people walk out",
+      "mechanism": "arrival",
+      "actor": "movement",
+      "position": "below",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "shelter-society"
+      ],
+      "outcomes": [
+       "rebuilding",
+       "new-actors"
+      ]
+     }
     },
     {
      "id": "fo-fallout1-2161",
@@ -499,7 +1028,29 @@
      "confidence": "high",
      "note": "",
      "bin": "the-call",
-     "binWhy": "One person leaves the shelter and starts the wasteland's history."
+     "binWhy": "One person leaves the shelter and starts the wasteland's history.",
+     "facets": {
+      "change": "a shelter → one person sent out; the wasteland gets a history",
+      "mechanism": "recruitment",
+      "actor": "individual",
+      "position": "below",
+      "scope": "national",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "shelter-society",
+       "post-collapse"
+      ],
+      "outcomes": [
+       "turning-point",
+       "new-actors"
+      ]
+     }
     },
     {
      "id": "fo-fallout2-2241",
@@ -515,7 +1066,29 @@
      "confidence": "high",
      "note": "",
      "bin": "decisive-victory",
-     "binWhy": "A battle or campaign settles the war."
+     "binWhy": "A battle or campaign settles the war.",
+     "facets": {
+      "change": "the old government's remnant → destroyed",
+      "mechanism": "war",
+      "actor": "individual",
+      "position": "below",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "hidden-society"
+      ],
+      "outcomes": [
+       "state-dissolves",
+       "new-order"
+      ]
+     }
     },
     {
      "id": "fo-fallout3-2277",
@@ -531,7 +1104,28 @@
      "confidence": "high",
      "note": "",
      "bin": "the-call",
-     "binWhy": "A shelter-born person walks out into the ruins."
+     "binWhy": "A shelter-born person walks out into the ruins.",
+     "facets": {
+      "change": "a shelter → walks out; the water made drinkable",
+      "mechanism": "recruitment",
+      "actor": "individual",
+      "position": "below",
+      "scope": "national",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "shelter-society"
+      ],
+      "outcomes": [
+       "rebuilding"
+      ]
+     }
     },
     {
      "id": "fo-newvegas-2281",
@@ -547,7 +1141,29 @@
      "confidence": "high",
      "note": "",
      "bin": "long-war",
-     "binWhy": "Two powers fight over the dam in a war neither can end."
+     "binWhy": "Two powers fight over the dam in a war neither can end.",
+     "facets": {
+      "change": "a dam → fought over by two powers",
+      "mechanism": "war",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "rivalry"
+      ],
+      "outcomes": [
+       "stalemate",
+       "consolidation"
+      ]
+     }
     },
     {
      "id": "fo-fallout4-2287",
@@ -563,7 +1179,29 @@
      "confidence": "high",
      "note": "",
      "bin": "the-call",
-     "binWhy": "A pre-war survivor wakes into the ruins and must choose a side."
+     "binWhy": "A pre-war survivor wakes into the ruins and must choose a side.",
+     "facets": {
+      "change": "cryogenic sleep → woken into ruins; a side to choose",
+      "mechanism": "recruitment",
+      "actor": "individual",
+      "position": "below",
+      "scope": "national",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "hidden-society",
+       "machine-dependency"
+      ],
+      "outcomes": [
+       "turning-point"
+      ]
+     }
     },
     {
      "id": "fo-tv-2296",
@@ -579,7 +1217,29 @@
      "confidence": "high",
      "note": "Seasons 1 (2024) and 2 (2025-26) are both set in 2296; the showrunners have confirmed that no New Vegas ending has been made canon.",
      "bin": "the-call",
-     "binWhy": "The shelter is opened by a raid and its people are pulled into the world."
+     "binWhy": "The shelter is opened by a raid and its people are pulled into the world.",
+     "facets": {
+      "change": "a sealed shelter → opened by a raid",
+      "mechanism": "attack",
+      "actor": "faction",
+      "position": "outside",
+      "scope": "local",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "shelter-society",
+       "cover-up"
+      ],
+      "outcomes": [
+       "revelation",
+       "hunt-begins"
+      ]
+     }
     },
     {
      "id": "fo-house-2381",
@@ -595,7 +1255,29 @@
      "confidence": "low",
      "note": "Conditional dialogue in Fallout: New Vegas, tied to Mr. House's ending: a forecast rather than a depicted event.",
      "bin": "voyage-into-unknown",
-     "binWhy": "Colony ships are to leave the solar system."
+     "binWhy": "Colony ships are to leave the solar system.",
+     "facets": {
+      "change": "ruins → colony ships to leave them behind",
+      "mechanism": "expedition",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "prosperity"
+      ],
+      "outcomes": [
+       "exodus",
+       "colonisation"
+      ]
+     }
     },
     {
      "id": "fo-bigmt-2910",
@@ -611,7 +1293,27 @@
      "confidence": "low",
      "note": "A conditional, comedic ending slide in a 2011 DLC, and the only dated canon event after 2297; no canon material exists between those two points.",
      "bin": "decisive-victory",
-     "binWhy": "An invasion is stopped by a counter-frequency."
+     "binWhy": "An invasion is stopped by a counter-frequency.",
+     "facets": {
+      "change": "an invasion → stopped by a counter-frequency",
+      "mechanism": "attack",
+      "actor": "machine",
+      "position": "inside",
+      "scope": "local",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse"
+      ],
+      "outcomes": [
+       "recovery"
+      ]
+     }
     }
    ],
    "groupingNote": "Fallout is the archetype at industrial scale: a two-hour nuclear exchange in the twenty-first century ends the world, and the games then catalogue what grows in it, Vaults that were experiments, a Brotherhood founded by a mutineer, ghouls, robots still polishing floors, and new nations built out of scrap. The fork is the War itself rather than the franchise's earlier, deliberately undated split from our history after the Second World War, because this archetype branches on the catastrophe. Tiers: T2 carries almost the whole branch from 2052 to 2296, because the fiction's entire life sits inside our next three centuries; T3 holds only the real-world wartime split and T4 only real-world background (Becquerel, 1896). T1 exists but is thin and shaky, Mr. House's projected colony ships in 2381 and one Old World Blues ending slide dated 2910, with no dated canon at all between 2297 and 2910; those two entries should be read as the branch's far horizon rather than as depicted history."
@@ -648,7 +1350,25 @@
      "confidence": "high",
      "note": "Real-world background; the fiction is silent before the twenty-first century.",
      "binWhy": "A discovery the rest of the history grows from.",
-     "bin": "breakthrough-science"
+     "bin": "breakthrough-science",
+     "facets": {
+      "change": "no programmable machine → the first design",
+      "mechanism": "invention",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "national",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [],
+      "outcomes": [
+       "foreknowledge"
+      ]
+     }
     },
     {
      "id": "matrix-turing-1950",
@@ -664,7 +1384,27 @@
      "confidence": "high",
      "note": "Real-world background.",
      "binWhy": "A discovery the rest of the history grows from.",
-     "bin": "breakthrough-science"
+     "bin": "breakthrough-science",
+     "facets": {
+      "change": "machines compute → asked whether they think",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "technological-race"
+      ],
+      "outcomes": [
+       "foreknowledge"
+      ]
+     }
     },
     {
      "id": "matrix-1999",
@@ -680,7 +1420,8 @@
      "confidence": "high",
      "note": "Morpheus, on screen: 'You believe it's the year 1999... when in fact it's closer to 2199... we honestly don't know.' US release 31 March 1999.",
      "binWhy": "A real-world publication or release date, not a moment in the story.",
-     "bin": null
+     "bin": null,
+     "facets": null
     },
     {
      "id": "matrix-renaissance-2090",
@@ -696,7 +1437,31 @@
      "confidence": "high",
      "note": "Canonical date text in The Animatrix and the Matrix comics: 'Zion Archive. World History, 2nd RENAISSANCE, 2090-2139'.",
      "bin": "machine-awakens",
-     "binWhy": "An artificial mind acts on its own or against its makers."
+     "binWhy": "An artificial mind acts on its own or against its makers.",
+     "facets": {
+      "change": "servant machines → a machine kills its owner; a nation of their own",
+      "mechanism": "uprising",
+      "actor": "machine",
+      "position": "below",
+      "scope": "planetary",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "machine-dependency",
+       "repression",
+       "slavery-or-servitude"
+      ],
+      "outcomes": [
+       "new-order",
+       "rivalry",
+       "new-actors"
+      ]
+     }
     },
     {
      "id": "matrix-war-2139",
@@ -712,7 +1477,29 @@
      "confidence": "medium",
      "note": "2139 is the end of the canonically dated 2090-2139 Second Renaissance range; Wikipedia's Animatrix synopsis says 2148 and fan timelines range into the 2170s.",
      "bin": "war-breaks-out",
-     "binWhy": "A major war starts."
+     "binWhy": "A major war starts.",
+     "facets": {
+      "change": "a rival prospering → struck with nuclear weapons",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "rivalry",
+       "crisis-economic"
+      ],
+      "outcomes": [
+       "mass-death",
+       "collapse"
+      ]
+     }
     },
     {
      "id": "matrix-darkstorm-2145",
@@ -728,7 +1515,30 @@
      "confidence": "medium",
      "note": "The event is canonical (The Animatrix) but has no official year; about 2145 places it in the war's first decade. Circulating figures such as 2085 or 2098 are reconstructions.",
      "bin": "civilisation-collapses",
-     "binWhy": "The order of society breaks and does not come back."
+     "binWhy": "The order of society breaks and does not come back.",
+     "facets": {
+      "change": "the sun → blotted out to starve the machines; humans farmed",
+      "mechanism": "attack",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "long-war",
+       "existential-threat"
+      ],
+      "outcomes": [
+       "collapse",
+       "servitude",
+       "mass-death"
+      ]
+     }
     },
     {
      "id": "matrix-neo-2199",
@@ -744,7 +1554,30 @@
      "confidence": "high",
      "note": "Spoken on screen by Morpheus as an approximation. Some tie-in reconstructions instead add five prior One-cycles of about a century each and date the films to roughly 2700.",
      "bin": "chosen-one",
-     "binWhy": "The sixth One is found and offered the choice."
+     "binWhy": "The sixth One is found and offered the choice.",
+     "facets": {
+      "change": "the pods → the sixth One extracted and offered the choice",
+      "mechanism": "recruitment",
+      "actor": "individual",
+      "position": "below",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "slavery-or-servitude",
+       "prophecy",
+       "hidden-society"
+      ],
+      "outcomes": [
+       "turning-point",
+       "foreknowledge"
+      ]
+     }
     },
     {
      "id": "matrix-resurrections-2259",
@@ -760,7 +1593,28 @@
      "confidence": "medium",
      "note": "The sixty-year gap is canonical; 2259 is 2199 plus sixty. Cycle-based reconstructions put this film near 2760, which would move the franchise past 2300, but that reading is not supported by on-screen dialogue.",
      "bin": "long-after",
-     "binWhy": "A jump forward shows what the world became."
+     "binWhy": "A jump forward shows what the world became.",
+     "facets": {
+      "change": "truce → sixty years on, rebuilt around grief",
+      "mechanism": "consolidation",
+      "actor": "machine",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "cold-war"
+      ],
+      "outcomes": [
+       "stalemate",
+       "dependency"
+      ]
+     }
     }
    ],
    "groupingNote": "The Matrix is the archetype running backwards: the world that ends is a simulation of 1999 kept alive as a power plant, and the ruins the survivors inherit are their own cities under a black sky. Humanity loses a war to its own machines, scorches the sky to win it and is farmed in pods while the last free city hides underground, which is the group's mechanism taken to its logical end. The fork is the Machine War's start at 2139, the close of the canonically dated Second Renaissance range; Operation Dark Storm, which actually ends the human world, is undated on screen and placed at about 2145 here. Tiers: there is no T1, because under the dating the films themselves give (Morpheus's 'closer to 2199' plus the canonical sixty-year gap to Resurrections) this branch stops at 2259; only fan reconstructions that add five prior One-cycles push it past 2300, and that reading contradicts the dialogue. T4 is real-world background only (Babbage, 1834) and T3 holds the simulated 1999 alongside Turing's real 1950."
@@ -797,7 +1651,27 @@
      "confidence": "high",
      "note": "Real-world background; death tolls vary by source.",
      "binWhy": "A disease or biological failure strikes on a mass scale.",
-     "bin": "plague"
+     "bin": "plague",
+     "facets": {
+      "change": "new railways → a pandemic rides them",
+      "mechanism": "disaster",
+      "actor": "nature",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "biological",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "global-travel"
+      ],
+      "outcomes": [
+       "mass-death"
+      ]
+     }
     },
     {
      "id": "tm-trench-1917",
@@ -813,7 +1687,28 @@
      "confidence": "high",
      "note": "On screen; the bullet is the object half of the film's time loop.",
      "bin": "time-traveller-arrives",
-     "binWhy": "Someone or something arrives out of its own time and changes the present."
+     "binWhy": "Someone or something arrives out of its own time and changes the present.",
+     "facets": {
+      "change": "a trench → a man from the future lands in it",
+      "mechanism": "arrival",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "local",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "long-war",
+       "time-loop"
+      ],
+      "outcomes": [
+       "time-lost"
+      ]
+     }
     },
     {
      "id": "tm-jetee-1962",
@@ -829,7 +1724,8 @@
      "confidence": "high",
      "note": "Real-world publication; La Jetée never dates its Third World War or its future.",
      "binWhy": "A real-world publication or release date, not a moment in the story.",
-     "bin": null
+     "bin": null,
+     "facets": null
     },
     {
      "id": "tm-1990",
@@ -845,7 +1741,28 @@
      "confidence": "high",
      "note": "Railly states 'This is 1990'; the opening title card is dated 12 April 1990.",
      "bin": "time-traveller-arrives",
-     "binWhy": "Someone or something arrives out of its own time and changes the present."
+     "binWhy": "Someone or something arrives out of its own time and changes the present.",
+     "facets": {
+      "change": "an asylum → a man from the future, six years early",
+      "mechanism": "arrival",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "local",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "time-loop"
+      ],
+      "outcomes": [
+       "hunt-begins",
+       "ignorance"
+      ]
+     }
     },
     {
      "id": "tm-release-1996",
@@ -862,7 +1779,29 @@
      "note": "The 2035 scientists state the release date on screen; the Army of the Twelve Monkeys, whose name they blame, are animal-rights activists and a red herring, and the carrier is Goines's assistant, Dr Peters.",
      "historyContradicts": false,
      "bin": "plague",
-     "binWhy": "The virus is released; the plague is caused, not prevented."
+     "binWhy": "The virus is released; the plague is caused, not prevented.",
+     "facets": {
+      "change": "a plan to prevent → the virus released, the loop closed",
+      "mechanism": "attack",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "biological",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "religious-fervour",
+       "secrecy"
+      ],
+      "outcomes": [
+       "mass-death",
+       "collapse"
+      ]
+     }
     },
     {
      "id": "tm-toll-1997",
@@ -878,7 +1817,29 @@
      "confidence": "high",
      "note": "The opening title card states that five billion people will die in 1997, and the film's ending confirms the outbreak is not averted.",
      "bin": "plague",
-     "binWhy": "A disease or biological failure strikes on a mass scale."
+     "binWhy": "A disease or biological failure strikes on a mass scale.",
+     "facets": {
+      "change": "release → five billion dead within a year",
+      "mechanism": "disaster",
+      "actor": "nature",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "biological",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "plague-running"
+      ],
+      "outcomes": [
+       "mass-death",
+       "shelter-society",
+       "collapse"
+      ]
+     }
     },
     {
      "id": "tm-future-2035",
@@ -894,7 +1855,29 @@
      "confidence": "medium",
      "note": "2035 is the standard citation and matches the film's 'thirty years' dialogue loosely; the year is never spoken on screen, and a strict reading of the dialogue implies about 2026.",
      "bin": "long-after",
-     "binWhy": "A jump forward shows what the world became."
+     "binWhy": "A jump forward shows what the world became.",
+     "facets": {
+      "change": "the surface → sealed compounds; dissidents sent back",
+      "mechanism": "consolidation",
+      "actor": "state",
+      "position": "inside",
+      "scope": "local",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "shelter-society"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "hunt-begins"
+      ]
+     }
     }
    ],
    "groupingNote": "Twelve Monkeys is this archetype in its bleakest form: a plague released in a single afternoon in 1996 has killed five billion people by 1997, and the film's future, a sealed underground Philadelphia in 2035, is the ruins. It belongs here because the industrial world does not fall to war or machines but to a laboratory sample carried onto a plane, and because the survivors' only project is reaching back into the world they lost. The paradoxes are the point and are worth stating together: the timeline is a single immutable loop, the message that sends Cole back is Railly's own 1996 voicemail, the bullet in his leg comes from the antique pistol Jose hands him in 1996, and the child who watches him die at the airport grows up to be him, so the plague is caused rather than prevented, and the film's own metaphor for this is Cole watching a movie that never changes. Note the phase anomaly: Cole's 1917 and 1990 scenes count as prehistory by year but are incursions from the branch's own future. Tiers: T2 holds only 2035 because that is the only future the film ever shows, and there is no T1 at all, since this branch ends thirty-nine years after its fork; T4 is real-world background only (the 1889 pandemic). The 2015-2018 television series is a separate continuity and is not counted here."

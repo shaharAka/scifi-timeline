@@ -41,7 +41,29 @@
      "confidence": "high",
      "note": "The series treats the real 1947 Roswell incident as the fiction's first true event and never contradicts the public record, only supplements it.",
      "bin": "first-contact",
-     "binWhy": "A non-human intelligence is confirmed, met or intervenes."
+     "binWhy": "A non-human intelligence is confirmed, met or intervenes.",
+     "facets": {
+      "change": "secret unknown → a ship crashes; a plan is exposed to a few",
+      "mechanism": "arrival",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "national",
+      "domain": "cosmic",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "cold-war",
+       "secrecy"
+      ],
+      "outcomes": [
+       "cover-up",
+       "foreknowledge"
+      ]
+     }
     },
     {
      "id": "xf-syndicate",
@@ -57,7 +79,30 @@
      "confidence": "medium",
      "note": "The mythology dates the Syndicate's formation loosely to the years after 1947; 1962 is the best-supported reading from the series' own retellings across the later mytharc episodes.",
      "bin": "secret-kept",
-     "binWhy": "Those who know form a cabal to keep it from everyone else."
+     "binWhy": "Those who know form a cabal to keep it from everyone else.",
+     "facets": {
+      "change": "those who know → form a cabal to manage it",
+      "mechanism": "negotiation",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "existential-threat",
+       "contact-made",
+       "cold-war"
+      ],
+      "outcomes": [
+       "cover-up",
+       "collaboration"
+      ]
+     }
     },
     {
      "id": "xf-treaty",
@@ -73,7 +118,29 @@
      "confidence": "high",
      "note": "Merges the treaty and the abduction: both are dated 1973 on screen in the series' flashbacks, and the abduction is the treaty's price paid in the Mulder family.",
      "bin": "secret-kept",
-     "binWhy": "A secret pact with the invader, sealed with children."
+     "binWhy": "A secret pact with the invader, sealed with children.",
+     "facets": {
+      "change": "resistance → a secret pact with the invader, sealed with children",
+      "mechanism": "negotiation",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "existential-threat",
+       "cover-up"
+      ],
+      "outcomes": [
+       "collaboration",
+       "foreknowledge"
+      ]
+     }
     },
     {
      "id": "xf-files-reopened",
@@ -89,7 +156,29 @@
      "confidence": "high",
      "note": "The series' present day is the real present day of its broadcast: the pilot is set in 1993 and the seasons advance roughly with the calendar.",
      "bin": "the-call",
-     "binWhy": "An ordinary person is drawn into the larger story."
+     "binWhy": "An ordinary person is drawn into the larger story.",
+     "facets": {
+      "change": "cases filed away → two agents assigned to them",
+      "mechanism": "law",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "cover-up",
+       "secrecy"
+      ],
+      "outcomes": [
+       "hunt-begins",
+       "revelation"
+      ]
+     }
     },
     {
      "id": "xf-black-oil",
@@ -105,7 +194,27 @@
      "confidence": "high",
      "note": "The film sits between seasons five and six and is set in the summer of 1998.",
      "bin": "truth-revealed",
-     "binWhy": "What was hidden is exposed."
+     "binWhy": "What was hidden is exposed.",
+     "facets": {
+      "change": "sightings → proof the presence is planetary",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "cover-up"
+      ],
+      "outcomes": [
+       "revelation"
+      ]
+     }
     },
     {
      "id": "xf-mulder-abduction",
@@ -121,7 +230,28 @@
      "confidence": "high",
      "note": "",
      "bin": "terror-attack",
-     "binWhy": "The investigator is taken by the enemy he was investigating."
+     "binWhy": "The investigator is taken by the enemy he was investigating.",
+     "facets": {
+      "change": "the investigator → taken by what he investigated",
+      "mechanism": "attack",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "local",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "cover-up"
+      ],
+      "outcomes": [
+       "hunt-begins",
+       "despair"
+      ]
+     }
     },
     {
      "id": "xf-colonization-2012",
@@ -137,7 +267,29 @@
      "confidence": "medium",
      "note": "2012 is stated on screen as the colonization date, but the invasion never happens on screen between the original run and the 2016 revival, which treats the date as passed and the conspiracy as broken; the fiction's deepest reach therefore stops here.",
      "bin": "truth-revealed",
-     "binWhy": "The invasion date the conspiracy was built on passes and the plan is exposed as broken."
+     "binWhy": "The invasion date the conspiracy was built on passes and the plan is exposed as broken.",
+     "facets": {
+      "change": "the fixed date → passes; the plan is broken",
+      "mechanism": "disclosure",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "cosmic",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "prophecy",
+       "cover-up"
+      ],
+      "outcomes": [
+       "revelation",
+       "scattering"
+      ]
+     }
     },
     {
      "id": "xf-revival",
@@ -153,7 +305,28 @@
      "confidence": "high",
      "note": "Season ten premiered in January 2016 and season eleven in January 2018; both are set in their year of broadcast, which is what keeps this lineage anchored to the present day.",
      "bin": "the-call",
-     "binWhy": "Pulled back into the work after fourteen years."
+     "binWhy": "Pulled back into the work after fourteen years.",
+     "facets": {
+      "change": "the work closed → reopened in a changed country",
+      "mechanism": "law",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "cover-up",
+       "secrecy"
+      ],
+      "outcomes": [
+       "hunt-begins"
+      ]
+     }
     }
    ],
    "groupingNote": "The X-Files is the archetype's purest case: nothing in public history changes, and the divergence is that a 1947 crash and a 1973 treaty were real and classified. Its events cluster exactly where the conceit requires — five in the 20th century (T3) and three from 1998 onward (T2) — because a secret history has to be old enough to have been buried and recent enough to still be running. The lineage has no T1 event, and that is a true fact about the genre rather than a gap: the mytharc ends at the 2016 revival, so it stops in our near future, and even the date the whole conspiracy was built around — the 2012 colonization — sits in T2 on the real calendar. Nothing in the fiction reaches past the next few decades, so nothing reaches deep time."
@@ -190,7 +363,28 @@
      "confidence": "medium",
      "note": "The agency's creation is placed in the late 1950s by franchise tie-in material; the films themselves only establish that it predates the 1961 first contact and the 1969 events.",
      "bin": "new-institution",
-     "binWhy": "A body is founded that will shape everything after it."
+     "binWhy": "A body is founded that will shape everything after it.",
+     "facets": {
+      "change": "no oversight → an agency founded in secret",
+      "mechanism": "founding",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy"
+      ],
+      "outcomes": [
+       "secrecy-state",
+       "new-actors"
+      ]
+     }
     },
     {
      "id": "mib-first-contact",
@@ -206,7 +400,29 @@
      "confidence": "medium",
      "note": "The founding year of the agency's mission is fixed by franchise reference rather than stated on screen in the 1997 film.",
      "bin": "first-contact",
-     "binWhy": "A non-human intelligence is confirmed, met or intervenes."
+     "binWhy": "A non-human intelligence is confirmed, met or intervenes.",
+     "facets": {
+      "change": "a chance meeting → the planet declared a neutral zone",
+      "mechanism": "arrival",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy"
+      ],
+      "outcomes": [
+       "contact",
+       "diplomacy",
+       "cover-up"
+      ]
+     }
     },
     {
      "id": "mib-worlds-fair",
@@ -222,7 +438,28 @@
      "confidence": "medium",
      "note": "Established in franchise tie-in material and revisited in the films, where the 1964 fairground site is where the first film's climax takes place.",
      "bin": "secret-kept",
-     "binWhy": "Alien hardware hidden in plain sight as landmarks."
+     "binWhy": "Alien hardware hidden in plain sight as landmarks.",
+     "facets": {
+      "change": "alien hardware → hidden in plain sight as landmarks",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "contact-made"
+      ],
+      "outcomes": [
+       "cover-up"
+      ]
+     }
     },
     {
      "id": "mib-arcnet",
@@ -238,7 +475,30 @@
      "confidence": "high",
      "note": "The third film stages this on the real Apollo 11 launch date of 16 July 1969 and calls it the fixed point on which humanity's survival depends.",
      "bin": "secret-kept",
-     "binWhy": "A planetary defence system launched under the cover of a Moon rocket."
+     "binWhy": "A planetary defence system launched under the cover of a Moon rocket.",
+     "facets": {
+      "change": "planet undefended → a shield launched under cover of a moon rocket",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "existential-threat",
+       "secrecy",
+       "contact-made"
+      ],
+      "outcomes": [
+       "cover-up",
+       "consolidation"
+      ]
+     }
     },
     {
      "id": "mib-agent-j",
@@ -254,7 +514,28 @@
      "confidence": "high",
      "note": "The first film's release year is also its story year, keeping the franchise's present identical to the audience's.",
      "bin": "the-call",
-     "binWhy": "An ordinary person is drawn into the larger story."
+     "binWhy": "An ordinary person is drawn into the larger story.",
+     "facets": {
+      "change": "a police officer → recruited into the agency that does not exist",
+      "mechanism": "recruitment",
+      "actor": "individual",
+      "position": "below",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "contact-made"
+      ],
+      "outcomes": [
+       "new-actors"
+      ]
+     }
     },
     {
      "id": "mib-light-of-zartha",
@@ -270,7 +551,27 @@
      "confidence": "high",
      "note": "The second film is set five years after the first, in its own release year.",
      "bin": "truth-revealed",
-     "binWhy": "What was hidden is exposed."
+     "binWhy": "What was hidden is exposed.",
+     "facets": {
+      "change": "headquarters → seized by an alien queen; a hidden royal revealed",
+      "mechanism": "invasion",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "local",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy"
+      ],
+      "outcomes": [
+       "revelation"
+      ]
+     }
     },
     {
      "id": "mib-boris",
@@ -286,7 +587,29 @@
      "confidence": "high",
      "note": "The film is set in its release year before the time jump, and its 1969 sequence is the same fixed point charted above.",
      "bin": "time-traveller-arrives",
-     "binWhy": "Someone or something arrives out of its own time and changes the present."
+     "binWhy": "Someone or something arrives out of its own time and changes the present.",
+     "facets": {
+      "change": "the past → an escaped prisoner goes back to kill his captor",
+      "mechanism": "arrival",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "national",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "prophecy",
+       "time-loop"
+      ],
+      "outcomes": [
+       "hunt-begins",
+       "foreknowledge"
+      ]
+     }
     },
     {
      "id": "mib-international",
@@ -302,7 +625,28 @@
      "confidence": "high",
      "note": "Set in its release year and noted for giving the franchise its first recruit who was not memory-wiped into the job.",
      "bin": "the-call",
-     "binWhy": "An ordinary person is drawn into the larger story."
+     "binWhy": "An ordinary person is drawn into the larger story.",
+     "facets": {
+      "change": "a childhood witness → finds the agency herself; an infiltration exposed",
+      "mechanism": "recruitment",
+      "actor": "individual",
+      "position": "below",
+      "scope": "national",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy"
+      ],
+      "outcomes": [
+       "revelation",
+       "new-actors"
+      ]
+     }
     }
    ],
    "groupingNote": "Men in Black runs entirely on concealment: the aliens were always here, the agency was founded in secret, and the public record of the 1960s is left intact while being quietly falsified from the inside. On the real axis it spans 1958 to 2019 — one T4 event for the agency's founding, five T3 events for the 1960s decade the films treat as their origin story, and three T2 events for the beats set in the audience's own century. Its T1 tier is empty because the fiction stops in our near future: for all the galaxy-spanning traffic, no Men in Black story is set more than a few decades past the present, which is exactly what keeps the conceit — they are among us, now, and you have already met one — intact."
@@ -339,7 +683,29 @@
      "confidence": "medium",
      "note": "The books say only that the school was founded over a thousand years before the 1990s; the conventional c. 990 dating is arithmetic from that statement, and the exact year is a convention rather than a stated fact.",
      "bin": "new-institution",
-     "binWhy": "A body is founded that will shape everything after it."
+     "binWhy": "A body is founded that will shape everything after it.",
+     "facets": {
+      "change": "a persecuted minority → founds its own school",
+      "mechanism": "founding",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "national",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "persecution",
+       "hidden-society"
+      ],
+      "outcomes": [
+       "parallel-society",
+       "new-actors"
+      ]
+     }
     },
     {
      "id": "hp-statute-of-secrecy",
@@ -355,7 +721,28 @@
      "confidence": "high",
      "note": "Instituted in 1689 and implemented in 1692, the same year as the Salem witch trials; the real trials are the Muggle-side event the wizarding law answers.",
      "bin": "secret-kept",
-     "binWhy": "The magical world hides itself from everyone else by law."
+     "binWhy": "The magical world hides itself from everyone else by law.",
+     "facets": {
+      "change": "visible → hidden by its own law",
+      "mechanism": "law",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "persecution"
+      ],
+      "outcomes": [
+       "parallel-society",
+       "ignorance"
+      ]
+     }
     },
     {
      "id": "hp-grindelwald-defeated",
@@ -371,7 +758,29 @@
      "confidence": "high",
      "note": "The date is given on Dumbledore's Chocolate Frog card and is deliberately the year the real Second World War ended.",
      "bin": "decisive-victory",
-     "binWhy": "A battle or campaign settles the war."
+     "binWhy": "A battle or campaign settles the war.",
+     "facets": {
+      "change": "a hidden war → ended by one duel",
+      "mechanism": "war",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "long-war",
+       "hidden-society"
+      ],
+      "outcomes": [
+       "turning-point",
+       "prestige"
+      ]
+     }
     },
     {
      "id": "hp-potters-attacked",
@@ -387,7 +796,29 @@
      "confidence": "high",
      "note": "Dated by the books' own chronology: Harry is fifteen months old at the attack and turns eleven in 1991.",
      "bin": "ruler-falls",
-     "binWhy": "The dark lord is destroyed; his war ends overnight and the survivor is hidden."
+     "binWhy": "The dark lord is destroyed; his war ends overnight and the survivor is hidden.",
+     "facets": {
+      "change": "the dark lord ascendant → destroyed trying to kill a child",
+      "mechanism": "attack",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "long-war",
+       "prophecy"
+      ],
+      "outcomes": [
+       "turning-point",
+       "foreknowledge"
+      ]
+     }
     },
     {
      "id": "hp-letter-arrives",
@@ -403,7 +834,29 @@
      "confidence": "high",
      "note": "The first book opens on Harry's eleventh birthday, 31 July 1991, ten years after the attack that made him the Boy Who Lived.",
      "bin": "the-call",
-     "binWhy": "An ordinary person is drawn into the larger story."
+     "binWhy": "An ordinary person is drawn into the larger story.",
+     "facets": {
+      "change": "an ordinary boy → told who he is and where he belongs",
+      "mechanism": "recruitment",
+      "actor": "individual",
+      "position": "below",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "hidden-society",
+       "isolation"
+      ],
+      "outcomes": [
+       "new-actors",
+       "revelation"
+      ]
+     }
     },
     {
      "id": "hp-chamber-opens",
@@ -419,7 +872,28 @@
      "confidence": "high",
      "note": "The second book spans the 1992-1993 school year.",
      "bin": "terror-attack",
-     "binWhy": "Students attacked inside the school by a hidden enemy within."
+     "binWhy": "Students attacked inside the school by a hidden enemy within.",
+     "facets": {
+      "change": "a school → attacked from within by a hidden enemy",
+      "mechanism": "attack",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "hidden-society",
+       "persecution"
+      ],
+      "outcomes": [
+       "hunt-begins"
+      ]
+     }
     },
     {
      "id": "hp-voldemort-returns",
@@ -435,7 +909,29 @@
      "confidence": "high",
      "note": "The third task of the Triwizard Tournament is in June 1995; the denial campaign runs through the 1995-1996 school year.",
      "bin": "secret-kept",
-     "binWhy": "The government spends a year denying what it knows."
+     "binWhy": "The government spends a year denying what it knows.",
+     "facets": {
+      "change": "the enemy dead → returned, and officially denied",
+      "mechanism": "arrival",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "prophecy",
+       "weak-institutions"
+      ],
+      "outcomes": [
+       "cover-up",
+       "resistance-forms"
+      ]
+     }
     },
     {
      "id": "hp-battle-of-hogwarts",
@@ -451,7 +947,29 @@
      "confidence": "high",
      "note": "The battle is dated 2 May 1998 by the books' own chronology; it is the last event of the main series' present day.",
      "bin": "decisive-victory",
-     "binWhy": "A battle or campaign settles the war."
+     "binWhy": "A battle or campaign settles the war.",
+     "facets": {
+      "change": "the state captured → the war ends in one night",
+      "mechanism": "war",
+      "actor": "faction",
+      "position": "below",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "one-party-state",
+       "long-war"
+      ],
+      "outcomes": [
+       "turning-point",
+       "new-order"
+      ]
+     }
     },
     {
      "id": "hp-epilogue",
@@ -467,7 +985,29 @@
      "confidence": "high",
      "note": "The epilogue sits nineteen years after the battle, which fixes it in 2017 — the year the real-world calendar caught up with the books, and the anchor for this lineage's present day.",
      "binWhy": "A jump forward shows what the world became.",
-     "bin": "long-after"
+     "bin": "long-after",
+     "facets": {
+      "change": "war → a generation later, ordinary life",
+      "mechanism": "consolidation",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "national",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 0,
+       "population": 1
+      },
+      "preconditions": [
+       "prosperity",
+       "hidden-society"
+      ],
+      "outcomes": [
+       "rebuilding",
+       "ignorance"
+      ]
+     }
     }
    ],
    "groupingNote": "Harry Potter's present day is ours: Privet Drive, King's Cross and the Ministry's Muggle Prime Minister are all real, and the branch is a concealment treaty rather than a changed history. The 1692 Statute of Secrecy is the load-bearing event — it shares its year with the Salem witch trials, so the fiction explains a real historical atrocity as the reason the magical world went dark — and the story's own branch opens in 1981, ten years before Harry's first letter. On the real axis most of the lineage sits in the 20th century: two T4 events in the deep past, six T3 events for the 1945-1998 span the books actually narrate, and one T2 event for the 2017 epilogue. The T1 tier is empty because the fiction stops there — at the year the real calendar caught up with it — so no magical future has been invented to reach deep time."
@@ -504,7 +1044,29 @@
      "confidence": "medium",
      "note": "The origin is shown in flashback but never dated by the show, so year 1 stands for deep prehistory; the lineage's ancient past is this single event rather than a chain of dated ones.",
      "bin": "beyond-human",
-     "binWhy": "A girl is made stronger than what hides in the dark."
+     "binWhy": "A girl is made stronger than what hides in the dark.",
+     "facets": {
+      "change": "defenceless → one girl made strong enough",
+      "mechanism": "invention",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "cosmic",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "existential-threat",
+       "hidden-society"
+      ],
+      "outcomes": [
+       "new-actors",
+       "transcendence"
+      ]
+     }
     },
     {
      "id": "btvs-sunnydale-arrival",
@@ -520,7 +1082,29 @@
      "confidence": "high",
      "note": "Merges the March arrival with the May season finale, as the schema allows only one event per lineage-year pair; the series' first season is set in its broadcast year, and the show's present stays within a year or two of the real calendar for its whole run.",
      "bin": "the-call",
-     "binWhy": "An ordinary person is drawn into the larger story."
+     "binWhy": "An ordinary person is drawn into the larger story.",
+     "facets": {
+      "change": "a new town → the chosen girl arrives where the threat is",
+      "mechanism": "recruitment",
+      "actor": "individual",
+      "position": "below",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "hidden-society",
+       "existential-threat"
+      ],
+      "outcomes": [
+       "hunt-begins",
+       "new-actors"
+      ]
+     }
     },
     {
      "id": "btvs-battle-of-sunnydale",
@@ -536,7 +1120,30 @@
      "confidence": "high",
      "note": "The televised series ends in May 2003 and the finale's consequences drive the canonical comics that continue the story.",
      "bin": "decisive-victory",
-     "binWhy": "A battle or campaign settles the war."
+     "binWhy": "A battle or campaign settles the war.",
+     "facets": {
+      "change": "one chosen → thousands; the enemy destroyed, the town gone",
+      "mechanism": "war",
+      "actor": "movement",
+      "position": "below",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "existential-threat",
+       "long-war"
+      ],
+      "outcomes": [
+       "turning-point",
+       "new-order",
+       "collapse"
+      ]
+     }
     },
     {
      "id": "btvs-harmony-public",
@@ -552,7 +1159,28 @@
      "confidence": "medium",
      "note": "The reveal happens in the eighth season of the canonical comics, published 2008-2009; the in-universe date of that season is only pinned by its publication window, so the year is the best-supported reading rather than a stated one.",
      "bin": "truth-revealed",
-     "binWhy": "The supernatural stops being a secret and becomes a news cycle."
+     "binWhy": "The supernatural stops being a secret and becomes a news cycle.",
+     "facets": {
+      "change": "a secret world → a celebrity on television",
+      "mechanism": "disclosure",
+      "actor": "individual",
+      "position": "below",
+      "scope": "national",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "hidden-society"
+      ],
+      "outcomes": [
+       "revelation",
+       "new-order"
+      ]
+     }
     },
     {
      "id": "btvs-magic-goes-dark",
@@ -568,7 +1196,29 @@
      "confidence": "medium",
      "note": "Placed in the publication year of the eighth season's final arc; the comics' chronology is loose and the season is usually read as spanning about a year and a half after 2003.",
      "bin": "civilisation-collapses",
-     "binWhy": "Magic leaves the world; every witch loses her power."
+     "binWhy": "Magic leaves the world; every witch loses her power.",
+     "facets": {
+      "change": "a world with magic → magic ends to end the war",
+      "mechanism": "attack",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "cosmic",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "long-war",
+       "existential-threat"
+      ],
+      "outcomes": [
+       "collapse",
+       "isolation"
+      ]
+     }
     },
     {
      "id": "btvs-fray",
@@ -584,7 +1234,29 @@
      "confidence": "medium",
      "note": "The comic places Melaka two hundred years after Buffy's era and firmly in the 23rd century; year 2200 is a midpoint for that convention, not a stated date. On the real axis the 23rd century is T2 — near future, not deep time — so this is the furthest the fiction reaches without ever leaving our next three hundred years.",
      "bin": "chosen-one",
-     "binWhy": "A new Slayer is called after generations."
+     "binWhy": "A new Slayer is called after generations.",
+     "facets": {
+      "change": "generations without → a new chosen one called",
+      "mechanism": "recruitment",
+      "actor": "individual",
+      "position": "below",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "isolation"
+      ],
+      "outcomes": [
+       "new-actors",
+       "rebuilding"
+      ]
+     }
     }
    ],
    "groupingNote": "Buffy hides its whole cosmology under an ordinary American town: the vampires are real, the Hellmouth is real, and the human world's ignorance is the story's standing joke and its tragedy. The branch never changes the historical record, so the lineage has no documented break with real history — the divergence is the point at which the fiction's present begins in 1997, and the 2009 celebrity reveal is where the secrecy finally fails. It is also the only lineage here whose story genuinely leaves the present century: the canonical comics jump two hundred years to the Slayer of the 23rd century, where magic has become legend, vampires have been reclassified as mutants and the Watchers' Council has decayed into fanatics. That is real narrative distance, and the real axis records it faithfully — the 1997-2003 seasons are T3, the 2009-2010 comics and Fray's 2200 are T2, and only the Slayer line's mythological origin sits in T4. Its T1 tier is empty because the fiction stops short of 2300: the story's own deep future is still, on our calendar, only two centuries away."
@@ -621,7 +1293,26 @@
      "confidence": "medium",
      "note": "Lyra's world's own texts date the beginning of the Church to roughly eighteen centuries before the story; the fiction presents it as a claim made by an angel rather than as a divine act, but gives no firm year.",
      "bin": "power-seized",
-     "binWhy": "The first angel gathers the powers of the world under himself."
+     "binWhy": "The first angel gathers the powers of the world under himself.",
+     "facets": {
+      "change": "many powers → the first angel claims to be God",
+      "mechanism": "coup",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [],
+      "outcomes": [
+       "theocracy",
+       "one-party-state"
+      ]
+     }
     },
     {
      "id": "hdm-magisterium",
@@ -637,7 +1328,28 @@
      "confidence": "medium",
      "note": "The Magisterium is a medieval institution in the books rather than a dated one; the year is an approximation of its establishment as the Church's governing body.",
      "bin": "new-institution",
-     "binWhy": "The church body that governs every question is consolidated."
+     "binWhy": "The church body that governs every question is consolidated.",
+     "facets": {
+      "change": "a ruler → a church that governs every question",
+      "mechanism": "founding",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "theocracy"
+      ],
+      "outcomes": [
+       "consolidation",
+       "suppression"
+      ]
+     }
     },
     {
      "id": "hdm-witch-clans",
@@ -653,7 +1365,29 @@
      "confidence": "low",
      "note": "The witches are ancient and long-lived in the books but their clans are never dated; this year indicates deep medieval background only, and the low confidence reflects that the fiction does not support a specific date.",
      "bin": "new-institution",
-     "binWhy": "The clans that keep the prophecy consolidate."
+     "binWhy": "The clans that keep the prophecy consolidate.",
+     "facets": {
+      "change": "scattered witches → clans that keep the prophecy",
+      "mechanism": "founding",
+      "actor": "faction",
+      "position": "below",
+      "scope": "national",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "hidden-society",
+       "prophecy"
+      ],
+      "outcomes": [
+       "new-actors",
+       "foreknowledge"
+      ]
+     }
     },
     {
      "id": "hdm-lyra-born",
@@ -669,7 +1403,29 @@
      "confidence": "medium",
      "note": "Lyra is twelve when the first book opens, and the first book is set in the mid-1990s, so her birth is arithmetic from a story date that is itself inferred from the novels' contemporary setting.",
      "bin": "chosen-one",
-     "binWhy": "A child is born or a person chosen on whom the future turns."
+     "binWhy": "A child is born or a person chosen on whom the future turns.",
+     "facets": {
+      "change": "prophecy → the child is born and hidden",
+      "mechanism": "birth",
+      "actor": "individual",
+      "position": "below",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 1
+      },
+      "preconditions": [
+       "prophecy",
+       "theocracy"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "secrecy-state"
+      ]
+     }
     },
     {
      "id": "hdm-roger-taken",
@@ -685,7 +1441,29 @@
      "confidence": "medium",
      "note": "The first book is explicitly set contemporary to its writing in the mid-1990s and was published in 1995; the trilogy gives no in-story years, so the story's present is dated by that contemporary setting.",
      "bin": "truth-revealed",
-     "binWhy": "What was hidden is exposed."
+     "binWhy": "What was hidden is exposed.",
+     "facets": {
+      "change": "a friend taken → the church's programme uncovered",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "below",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "theocracy",
+       "cover-up"
+      ],
+      "outcomes": [
+       "revelation",
+       "hunt-begins"
+      ]
+     }
     },
     {
      "id": "hdm-window-opens",
@@ -701,7 +1479,29 @@
      "confidence": "medium",
      "note": "The second book introduces Will in an Oxford that is recognisably ours in the 1990s; the year follows the contemporary setting of the trilogy rather than a stated date.",
      "bin": "gateway-opens",
-     "binWhy": "A passage to somewhere unreachable is found or made."
+     "binWhy": "A passage to somewhere unreachable is found or made.",
+     "facets": {
+      "change": "one world → a window torn into another",
+      "mechanism": "invention",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "theocracy",
+       "rivalry"
+      ],
+      "outcomes": [
+       "opening",
+       "holy-war"
+      ]
+     }
     },
     {
      "id": "hdm-war-in-heaven",
@@ -717,7 +1517,30 @@
      "confidence": "medium",
      "note": "Dated by the third book's publication in 2000 and by the trilogy's mid-1990s start; Lyra's Oxford and The Secret Commonwealth continue the story two and ten years later.",
      "bin": "decisive-victory",
-     "binWhy": "The Authority dies and the windows between worlds close."
+     "binWhy": "The Authority dies and the windows between worlds close.",
+     "facets": {
+      "change": "the Authority → dies; every window closed",
+      "mechanism": "war",
+      "actor": "movement",
+      "position": "below",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "theocracy",
+       "religious-fervour"
+      ],
+      "outcomes": [
+       "state-dissolves",
+       "closing-borders",
+       "isolation"
+      ]
+     }
     }
    ],
    "groupingNote": "His Dark Materials is the inverse of the other four lineages: the concealment is not a modern cover-up but a whole parallel history, so the honest divergence is deep past rather than a twentieth-century secret. The branch described in the text is the Reformation that never happened — Calvin as Pope, the Magisterium unbroken, no scientific or industrial revolution — which makes the sixteenth century the last point at which Lyra's world and ours share a history. On the real axis the lineage splits into three bands: three events of ancient background in T4, the 1985-1997 beats in T3, and the war at the end of the trilogy in T2, with T1 empty because nothing in the story is set beyond the near future. The tension worth recording is that the story's own arc is inverted relative to ours: by divergence-relative reckoning the 1990s books are the deep end of the branch, more than four centuries past the fork, while the real calendar files them as the recent past — which is exactly why the events carry both a `tier` and a `phase`. Its present day is still our present day, since Will's Oxford is the real 1990s and the story walks between the two."

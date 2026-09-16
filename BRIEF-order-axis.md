@@ -162,6 +162,44 @@ ours. When the vocabulary looks wrong, change the task description in the
 tool's prompt or edit `bins.json`, never add rules about bin counts or sizes:
 the model is the one making the call, and it needs the target, not guardrails.
 
+### 2.5 Facets: what the matching actually runs on (landed 2026-09-17)
+
+A single bin conflates moments that share no future (Iran 1979 and the
+Enabling Act are both "power is seized"). So every event now carries a
+**moment signature** - `facets` in the event schema, closed vocabularies in
+`data/facets.json`, documented in `data/SCHEMA.md` - and matching runs on the
+facets, with the bin kept as the coarse label for column headings:
+
+- match on the SITUATION: mechanism, actor, position (inside / below / outside /
+  above), scope, domain, the four-axis direction vector, preconditions;
+- hold OUT the outcome: it is what a match is for, read from the neighbours.
+
+`tools/facet-match.py` is the reference implementation: neighbours of any
+moment with similarity 0..1 (under ~0.5 means nothing close) and each
+neighbour's next beats read forward. `data/real-history.json` is our own arc
+in the same schema, 40 beats from 1903 to the news items, published as
+`payload.real`; it is the trunk's own chronology and the anchor for every bin.
+
+What this means for the views:
+
+- **News → futures** matches a news item by facets, not by bin. Bin the news
+  item AND facet it (the facet fields are small judgements the model makes
+  well); its neighbours are the fictional moments with the most similar
+  situation; each neighbour's world is read forward from that node.
+- **The trunk gets its own beats** from `payload.real`, drawn as one shared
+  row; clicking a real beat is the same operation as choosing a news item.
+- **The Moments view** keeps bins as columns. Within a column the branches can
+  be ordered by facet similarity to the selected moment so the closest futures
+  sit together.
+
+Known coarseness to fix next: two moments with the same mechanism, actor,
+position, domain and direction can still be different acts (a law banning
+vigilantes and a law declaring the Moon landings fake both read as
+law / state / inside / national / political, power up, openness down). A
+`target` facet - what is acted on: a group, a state, territory, knowledge, a
+technology, an enemy - would separate them. Add it to `data/facets.json` and
+to every event before adding worlds, not after.
+
 ### 2.3 The picture
 
 - Columns are bins, ordered left to right by the mean position of their

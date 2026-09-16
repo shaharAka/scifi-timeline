@@ -1,0 +1,1385 @@
+{
+ "_comment": "Our own history as a sequence of moments, in the same schema as the worlds' events (year, title, description, bin, facets). This is the trunk's own chronology: the real arc that every fiction shares up to its fork, and the tail that today's news extends. Each beat is one the later history turned on; the list is a first pass and the thing to argue with. Bins here also anchor the vocabulary: a bin's clearest real instance is the best definition of it.",
+ "id": "real",
+ "title": "Real history",
+ "events": [
+  {
+   "id": "real-flight-1903",
+   "year": 1903,
+   "date": "1903",
+   "title": "Powered flight",
+   "description": "The Wright brothers fly at Kitty Hawk; within fifteen years aircraft are weapons and within fifty they are how people cross oceans.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "new-technology-deployed",
+   "binWhy": "A new capability, first demonstrated.",
+   "facets": {
+    "change": "no flight → powered flight",
+    "mechanism": "invention",
+    "actor": "corporation",
+    "position": "inside",
+    "scope": "planetary",
+    "domain": "technological",
+    "direction": {
+     "power": 0,
+     "openness": 1,
+     "capability": 1,
+     "population": 0
+    },
+    "preconditions": [
+     "technological-race"
+    ],
+    "outcomes": [
+     "prestige",
+     "dependency"
+    ]
+   }
+  },
+  {
+   "id": "real-ww1-1914",
+   "year": 1914,
+   "date": "1914",
+   "title": "The Great War begins",
+   "description": "An assassination in Sarajevo cascades through alliances into a war that kills some twenty million and ends four empires.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "war-breaks-out",
+   "binWhy": "",
+   "facets": {
+    "change": "armed peace → general war",
+    "mechanism": "war",
+    "actor": "state",
+    "position": "outside",
+    "scope": "planetary",
+    "domain": "military",
+    "direction": {
+     "power": 0,
+     "openness": -1,
+     "capability": -1,
+     "population": -1
+    },
+    "preconditions": [
+     "rivalry",
+     "arms-race"
+    ],
+    "outcomes": [
+     "mass-death",
+     "attrition",
+     "state-dissolves"
+    ]
+   }
+  },
+  {
+   "id": "real-russia-feb-1917",
+   "year": 1917,
+   "date": "1917-03-08",
+   "title": "The February Revolution",
+   "description": "Bread riots and mutiny in Petrograd end three centuries of Romanov rule in a week.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "uprising",
+   "binWhy": "",
+   "facets": {
+    "change": "autocracy → provisional government",
+    "mechanism": "uprising",
+    "actor": "movement",
+    "position": "below",
+    "scope": "national",
+    "domain": "political",
+    "direction": {
+     "power": -1,
+     "openness": 1,
+     "capability": 0,
+     "population": 0
+    },
+    "preconditions": [
+     "long-war",
+     "crisis-economic",
+     "crisis-legitimacy"
+    ],
+    "outcomes": [
+     "succession-struggle",
+     "reform"
+    ]
+   }
+  },
+  {
+   "id": "real-russia-oct-1917",
+   "year": 1917,
+   "date": "1917-11-07",
+   "title": "The Bolsheviks seize power",
+   "description": "A minority party takes the capital by armed coup and dissolves the elected assembly within months.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "power-seized",
+   "binWhy": "",
+   "facets": {
+    "change": "provisional government → one-party rule by coup",
+    "mechanism": "coup",
+    "actor": "faction",
+    "position": "inside",
+    "scope": "national",
+    "domain": "political",
+    "direction": {
+     "power": 1,
+     "openness": -1,
+     "capability": 0,
+     "population": 0
+    },
+    "preconditions": [
+     "weak-institutions",
+     "long-war"
+    ],
+    "outcomes": [
+     "one-party-state",
+     "civil-war",
+     "purge"
+    ]
+   }
+  },
+  {
+   "id": "real-flu-1918",
+   "year": 1918,
+   "date": "1918",
+   "title": "The influenza pandemic",
+   "description": "A respiratory virus rides the war's troop movements around the world and kills perhaps fifty million.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "plague",
+   "binWhy": "",
+   "facets": {
+    "change": "wartime → global pandemic",
+    "mechanism": "disaster",
+    "actor": "nature",
+    "position": "above",
+    "scope": "planetary",
+    "domain": "biological",
+    "direction": {
+     "power": 0,
+     "openness": -1,
+     "capability": 0,
+     "population": -1
+    },
+    "preconditions": [
+     "long-war",
+     "global-travel"
+    ],
+    "outcomes": [
+     "mass-death"
+    ]
+   }
+  },
+  {
+   "id": "real-versailles-1919",
+   "year": 1919,
+   "date": "1919",
+   "title": "Versailles",
+   "description": "The victors dictate terms: reparations, disarmament, lost territory. The settlement is resented from the day it is signed.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "peace-made",
+   "binWhy": "",
+   "facets": {
+    "change": "war → a dictated peace",
+    "mechanism": "negotiation",
+    "actor": "state",
+    "position": "outside",
+    "scope": "planetary",
+    "domain": "political",
+    "direction": {
+     "power": 1,
+     "openness": -1,
+     "capability": 0,
+     "population": 0
+    },
+    "preconditions": [
+     "war-just-ended"
+    ],
+    "outcomes": [
+     "partition",
+     "occupation",
+     "radicalisation"
+    ]
+   }
+  },
+  {
+   "id": "real-league-1920",
+   "year": 1920,
+   "date": "1920",
+   "title": "The League of Nations",
+   "description": "The first standing body meant to prevent war by collective security; the United States never joins.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "new-institution",
+   "binWhy": "",
+   "facets": {
+    "change": "no world body → one founded",
+    "mechanism": "founding",
+    "actor": "state",
+    "position": "inside",
+    "scope": "planetary",
+    "domain": "political",
+    "direction": {
+     "power": 0,
+     "openness": 1,
+     "capability": 0,
+     "population": 0
+    },
+    "preconditions": [
+     "war-just-ended"
+    ],
+    "outcomes": [
+     "diplomacy",
+     "union"
+    ]
+   }
+  },
+  {
+   "id": "real-crash-1929",
+   "year": 1929,
+   "date": "1929-10-29",
+   "title": "The Wall Street Crash",
+   "description": "The market collapses in October and the Depression that follows puts a quarter of American workers out of a job.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "market-crash",
+   "binWhy": "",
+   "facets": {
+    "change": "boom → depression",
+    "mechanism": "disaster",
+    "actor": "corporation",
+    "position": "inside",
+    "scope": "planetary",
+    "domain": "economic",
+    "direction": {
+     "power": 0,
+     "openness": -1,
+     "capability": -1,
+     "population": 0
+    },
+    "preconditions": [
+     "prosperity",
+     "speculation"
+    ],
+    "outcomes": [
+     "recession",
+     "radicalisation"
+    ]
+   }
+  },
+  {
+   "id": "real-enabling-act-1933",
+   "year": 1933,
+   "date": "1933-03-23",
+   "title": "The Enabling Act",
+   "description": "After the Reichstag fire, parliament votes Hitler the power to legislate without it; the republic ends by its own procedure.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "power-seized",
+   "binWhy": "",
+   "facets": {
+    "change": "democracy → dictatorship by emergency law",
+    "mechanism": "law",
+    "actor": "individual",
+    "position": "inside",
+    "scope": "national",
+    "domain": "political",
+    "direction": {
+     "power": 1,
+     "openness": -1,
+     "capability": 0,
+     "population": 0
+    },
+    "preconditions": [
+     "crisis-economic",
+     "street-violence",
+     "weak-institutions"
+    ],
+    "outcomes": [
+     "one-party-state",
+     "purge",
+     "war-of-expansion"
+    ]
+   }
+  },
+  {
+   "id": "real-ww2-1939",
+   "year": 1939,
+   "date": "1939-09-01",
+   "title": "The Second World War begins",
+   "description": "Germany invades Poland; the alliances hold this time and Europe is at war within days.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "war-breaks-out",
+   "binWhy": "",
+   "facets": {
+    "change": "armed peace → general war",
+    "mechanism": "invasion",
+    "actor": "state",
+    "position": "outside",
+    "scope": "planetary",
+    "domain": "military",
+    "direction": {
+     "power": 0,
+     "openness": -1,
+     "capability": -1,
+     "population": -1
+    },
+    "preconditions": [
+     "rivalry",
+     "arms-race",
+     "one-party-state"
+    ],
+    "outcomes": [
+     "mass-death",
+     "occupation"
+    ]
+   }
+  },
+  {
+   "id": "real-holocaust-1941",
+   "year": 1941,
+   "date": "1941",
+   "title": "The Holocaust",
+   "description": "The state turns persecution into industrial murder; six million Jews are killed, with millions of others.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "mass-death",
+   "binWhy": "",
+   "facets": {
+    "change": "persecution → extermination",
+    "mechanism": "attack",
+    "actor": "state",
+    "position": "inside",
+    "scope": "civilisational",
+    "domain": "social",
+    "direction": {
+     "power": 1,
+     "openness": -1,
+     "capability": 0,
+     "population": -1
+    },
+    "preconditions": [
+     "one-party-state",
+     "persecution",
+     "long-war"
+    ],
+    "outcomes": [
+     "mass-death"
+    ]
+   }
+  },
+  {
+   "id": "real-manhattan-1942",
+   "year": 1942,
+   "date": "1942",
+   "title": "The Manhattan Project",
+   "description": "A secret programme employing over a hundred thousand people builds the atomic bomb in three years.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "secret-kept",
+   "binWhy": "",
+   "facets": {
+    "change": "theory → a secret weapons programme",
+    "mechanism": "law",
+    "actor": "state",
+    "position": "inside",
+    "scope": "national",
+    "domain": "scientific",
+    "direction": {
+     "power": 1,
+     "openness": -1,
+     "capability": 1,
+     "population": 0
+    },
+    "preconditions": [
+     "long-war",
+     "technological-race",
+     "existential-threat"
+    ],
+    "outcomes": [
+     "arms-race",
+     "secrecy-state"
+    ]
+   }
+  },
+  {
+   "id": "real-hiroshima-1945",
+   "year": 1945,
+   "date": "1945-08-06",
+   "title": "Hiroshima and Nagasaki",
+   "description": "The first atomic bombs used in war; Japan surrenders within days.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "doomsday-weapon",
+   "binWhy": "",
+   "facets": {
+    "change": "conventional war → atomic weapons used",
+    "mechanism": "attack",
+    "actor": "state",
+    "position": "outside",
+    "scope": "planetary",
+    "domain": "military",
+    "direction": {
+     "power": 1,
+     "openness": -1,
+     "capability": 1,
+     "population": -1
+    },
+    "preconditions": [
+     "long-war",
+     "technological-race",
+     "secrecy"
+    ],
+    "outcomes": [
+     "surrender",
+     "arms-race",
+     "cold-war"
+    ]
+   }
+  },
+  {
+   "id": "real-victory-1945",
+   "year": 1945,
+   "date": "1945-05-08",
+   "title": "Allied victory",
+   "description": "Germany and Japan surrender unconditionally and are occupied; Europe is divided between the victors.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "decisive-victory",
+   "binWhy": "",
+   "facets": {
+    "change": "world war → unconditional surrender and occupation",
+    "mechanism": "war",
+    "actor": "state",
+    "position": "outside",
+    "scope": "planetary",
+    "domain": "military",
+    "direction": {
+     "power": 1,
+     "openness": 1,
+     "capability": 0,
+     "population": 0
+    },
+    "preconditions": [
+     "long-war"
+    ],
+    "outcomes": [
+     "occupation",
+     "partition",
+     "union"
+    ]
+   }
+  },
+  {
+   "id": "real-un-1945",
+   "year": 1945,
+   "date": "1945-10-24",
+   "title": "The United Nations",
+   "description": "Fifty-one states sign a charter in San Francisco; this time the great powers all join.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "new-institution",
+   "binWhy": "",
+   "facets": {
+    "change": "no world body → one founded, with the powers inside",
+    "mechanism": "founding",
+    "actor": "state",
+    "position": "inside",
+    "scope": "planetary",
+    "domain": "political",
+    "direction": {
+     "power": 0,
+     "openness": 1,
+     "capability": 0,
+     "population": 0
+    },
+    "preconditions": [
+     "war-just-ended"
+    ],
+    "outcomes": [
+     "union",
+     "diplomacy"
+    ]
+   }
+  },
+  {
+   "id": "real-cold-war-1947",
+   "year": 1947,
+   "date": "1947",
+   "title": "The Cold War sets in",
+   "description": "Two armed blocs, a divided Europe and, from 1949, two nuclear powers; open war between them never comes.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "long-war",
+   "binWhy": "",
+   "facets": {
+    "change": "alliance → two armed blocs",
+    "mechanism": "consolidation",
+    "actor": "state",
+    "position": "outside",
+    "scope": "planetary",
+    "domain": "political",
+    "direction": {
+     "power": 1,
+     "openness": -1,
+     "capability": 1,
+     "population": 0
+    },
+    "preconditions": [
+     "war-just-ended",
+     "rivalry",
+     "arms-race"
+    ],
+    "outcomes": [
+     "cold-war",
+     "arms-race",
+     "stalemate"
+    ]
+   }
+  },
+  {
+   "id": "real-rome-1957",
+   "year": 1957,
+   "date": "1957-03-25",
+   "title": "The Treaty of Rome",
+   "description": "Six countries that fought each other twice in thirty years found a common market.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "union-founded",
+   "binWhy": "",
+   "facets": {
+    "change": "rival states → a common market",
+    "mechanism": "negotiation",
+    "actor": "state",
+    "position": "inside",
+    "scope": "civilisational",
+    "domain": "economic",
+    "direction": {
+     "power": 0,
+     "openness": 1,
+     "capability": 1,
+     "population": 0
+    },
+    "preconditions": [
+     "war-just-ended",
+     "cold-war"
+    ],
+    "outcomes": [
+     "union",
+     "recovery"
+    ]
+   }
+  },
+  {
+   "id": "real-sputnik-1957",
+   "year": 1957,
+   "date": "1957-10-04",
+   "title": "Sputnik",
+   "description": "The first artificial satellite; the space race begins as a branch of the arms race.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "voyage-into-unknown",
+   "binWhy": "",
+   "facets": {
+    "change": "nothing in orbit → a rival's satellite overhead",
+    "mechanism": "expedition",
+    "actor": "state",
+    "position": "inside",
+    "scope": "planetary",
+    "domain": "technological",
+    "direction": {
+     "power": 0,
+     "openness": 0,
+     "capability": 1,
+     "population": 0
+    },
+    "preconditions": [
+     "cold-war",
+     "technological-race"
+    ],
+    "outcomes": [
+     "arms-race",
+     "prestige"
+    ]
+   }
+  },
+  {
+   "id": "real-cuba-1962",
+   "year": 1962,
+   "date": "1962",
+   "title": "The Cuban Missile Crisis",
+   "description": "Thirteen days at the edge of nuclear war end in a negotiated withdrawal.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "peace-made",
+   "binWhy": "",
+   "facets": {
+    "change": "brink of nuclear war → negotiated withdrawal",
+    "mechanism": "negotiation",
+    "actor": "state",
+    "position": "outside",
+    "scope": "planetary",
+    "domain": "military",
+    "direction": {
+     "power": 0,
+     "openness": 1,
+     "capability": 0,
+     "population": 0
+    },
+    "preconditions": [
+     "cold-war",
+     "arms-race",
+     "existential-threat"
+    ],
+    "outcomes": [
+     "diplomacy",
+     "stalemate"
+    ]
+   }
+  },
+  {
+   "id": "real-jfk-1963",
+   "year": 1963,
+   "date": "1963-11-22",
+   "title": "Kennedy is assassinated",
+   "description": "The president is shot in Dallas; the succession is orderly and the era is not.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "ruler-falls",
+   "binWhy": "",
+   "facets": {
+    "change": "president → killed; orderly succession",
+    "mechanism": "attack",
+    "actor": "individual",
+    "position": "below",
+    "scope": "national",
+    "domain": "political",
+    "direction": {
+     "power": -1,
+     "openness": 0,
+     "capability": 0,
+     "population": 0
+    },
+    "preconditions": [
+     "cold-war"
+    ],
+    "outcomes": [
+     "succession-struggle",
+     "reform"
+    ]
+   }
+  },
+  {
+   "id": "real-apollo-1969",
+   "year": 1969,
+   "date": "1969-07-20",
+   "title": "Apollo 11",
+   "description": "Two men walk on the Moon; the programme is wound down within three years.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "voyage-into-unknown",
+   "binWhy": "",
+   "facets": {
+    "change": "no human beyond Earth → a landing on the Moon",
+    "mechanism": "expedition",
+    "actor": "state",
+    "position": "inside",
+    "scope": "planetary",
+    "domain": "technological",
+    "direction": {
+     "power": 0,
+     "openness": 1,
+     "capability": 1,
+     "population": 0
+    },
+    "preconditions": [
+     "cold-war",
+     "technological-race",
+     "prosperity"
+    ],
+    "outcomes": [
+     "prestige",
+     "programme-winds-down"
+    ]
+   }
+  },
+  {
+   "id": "real-pentagon-papers-1971",
+   "year": 1971,
+   "date": "1971",
+   "title": "The Pentagon Papers",
+   "description": "A classified history of the war is leaked; the government's account of it collapses in public.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "truth-revealed",
+   "binWhy": "",
+   "facets": {
+    "change": "official account → leaked record",
+    "mechanism": "disclosure",
+    "actor": "individual",
+    "position": "inside",
+    "scope": "national",
+    "domain": "political",
+    "direction": {
+     "power": -1,
+     "openness": 1,
+     "capability": 0,
+     "population": 0
+    },
+    "preconditions": [
+     "long-war",
+     "cover-up"
+    ],
+    "outcomes": [
+     "revelation",
+     "reform"
+    ]
+   }
+  },
+  {
+   "id": "real-oil-shock-1973",
+   "year": 1973,
+   "date": "1973",
+   "title": "The oil shock",
+   "description": "An embargo quadruples the price of oil and ends the post-war boom in the West.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "market-crash",
+   "binWhy": "",
+   "facets": {
+    "change": "cheap oil → embargo, stagflation",
+    "mechanism": "attack",
+    "actor": "state",
+    "position": "outside",
+    "scope": "planetary",
+    "domain": "economic",
+    "direction": {
+     "power": 0,
+     "openness": -1,
+     "capability": -1,
+     "population": 0
+    },
+    "preconditions": [
+     "rivalry",
+     "resource-dependency"
+    ],
+    "outcomes": [
+     "recession"
+    ]
+   }
+  },
+  {
+   "id": "real-iran-1979",
+   "year": 1979,
+   "date": "1979",
+   "title": "The Iranian Revolution",
+   "description": "Mass protest led by the clergy ends the monarchy; a theocracy follows, then hostages and an eight-year war with Iraq.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "power-seized",
+   "binWhy": "",
+   "facets": {
+    "change": "monarchy → theocracy by mass uprising",
+    "mechanism": "uprising",
+    "actor": "movement",
+    "position": "below",
+    "scope": "national",
+    "domain": "political",
+    "direction": {
+     "power": 1,
+     "openness": -1,
+     "capability": 0,
+     "population": 0
+    },
+    "preconditions": [
+     "crisis-legitimacy",
+     "foreign-backed-ruler",
+     "repression"
+    ],
+    "outcomes": [
+     "theocracy",
+     "purge",
+     "war-with-neighbour"
+    ]
+   }
+  },
+  {
+   "id": "real-berlin-wall-1989",
+   "year": 1989,
+   "date": "1989-11-09",
+   "title": "The Wall falls",
+   "description": "Crowds cross the Berlin Wall on a November night; the one-party states of Eastern Europe fall within a year.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "uprising",
+   "binWhy": "",
+   "facets": {
+    "change": "one-party states → open borders",
+    "mechanism": "uprising",
+    "actor": "movement",
+    "position": "below",
+    "scope": "national",
+    "domain": "political",
+    "direction": {
+     "power": -1,
+     "openness": 1,
+     "capability": 0,
+     "population": 0
+    },
+    "preconditions": [
+     "crisis-economic",
+     "crisis-legitimacy",
+     "repression"
+    ],
+    "outcomes": [
+     "reform",
+     "union",
+     "state-dissolves"
+    ]
+   }
+  },
+  {
+   "id": "real-ussr-1991",
+   "year": 1991,
+   "date": "1991-12-26",
+   "title": "The Soviet Union dissolves",
+   "description": "Fifteen republics leave; a nuclear superpower ends without a war.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "state-dissolves",
+   "binWhy": "",
+   "facets": {
+    "change": "a union of republics → fifteen states",
+    "mechanism": "secession",
+    "actor": "state",
+    "position": "inside",
+    "scope": "civilisational",
+    "domain": "political",
+    "direction": {
+     "power": -1,
+     "openness": 1,
+     "capability": -1,
+     "population": 0
+    },
+    "preconditions": [
+     "crisis-economic",
+     "crisis-legitimacy"
+    ],
+    "outcomes": [
+     "state-dissolves",
+     "independence",
+     "recession"
+    ]
+   }
+  },
+  {
+   "id": "real-web-1991",
+   "year": 1991,
+   "date": "1991",
+   "title": "The web goes public",
+   "description": "The first website is published; within a decade the network reaches a billion people.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "new-technology-deployed",
+   "binWhy": "",
+   "facets": {
+    "change": "networks for specialists → a web for everyone",
+    "mechanism": "invention",
+    "actor": "individual",
+    "position": "inside",
+    "scope": "planetary",
+    "domain": "technological",
+    "direction": {
+     "power": -1,
+     "openness": 1,
+     "capability": 1,
+     "population": 0
+    },
+    "preconditions": [
+     "prosperity"
+    ],
+    "outcomes": [
+     "opening",
+     "dependency"
+    ]
+   }
+  },
+  {
+   "id": "real-nineties-1995",
+   "year": 1995,
+   "date": "1995",
+   "title": "The long boom",
+   "description": "No great-power war, expanding markets and unions, an economy that seems to have stopped having crises.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "golden-age",
+   "binWhy": "",
+   "facets": {
+    "change": "cold war → an age at its height",
+    "mechanism": "consolidation",
+    "actor": "state",
+    "position": "inside",
+    "scope": "planetary",
+    "domain": "political",
+    "direction": {
+     "power": 0,
+     "openness": 1,
+     "capability": 1,
+     "population": 1
+    },
+    "preconditions": [
+     "war-just-ended",
+     "prosperity"
+    ],
+    "outcomes": [
+     "prestige",
+     "union"
+    ]
+   }
+  },
+  {
+   "id": "real-iss-2000",
+   "year": 2000,
+   "date": "2000-11-02",
+   "title": "The space station is crewed",
+   "description": "Permanent human presence in orbit begins, built by former rivals.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "settlement-founded",
+   "binWhy": "",
+   "facets": {
+    "change": "visits to orbit → a permanent crew",
+    "mechanism": "founding",
+    "actor": "state",
+    "position": "inside",
+    "scope": "planetary",
+    "domain": "technological",
+    "direction": {
+     "power": 0,
+     "openness": 1,
+     "capability": 1,
+     "population": 0
+    },
+    "preconditions": [
+     "war-just-ended",
+     "prosperity"
+    ],
+    "outcomes": [
+     "colonisation",
+     "diplomacy"
+    ]
+   }
+  },
+  {
+   "id": "real-911-2001",
+   "year": 2001,
+   "date": "2001-09-11",
+   "title": "11 September",
+   "description": "Hijacked airliners destroy the towers; two wars and a security state follow.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "terror-attack",
+   "binWhy": "",
+   "facets": {
+    "change": "peace at home → an attack on the capital of the world economy",
+    "mechanism": "attack",
+    "actor": "faction",
+    "position": "outside",
+    "scope": "national",
+    "domain": "military",
+    "direction": {
+     "power": 1,
+     "openness": -1,
+     "capability": 0,
+     "population": -1
+    },
+    "preconditions": [
+     "religious-fervour",
+     "rivalry"
+    ],
+    "outcomes": [
+     "war-of-expansion",
+     "state-powers",
+     "mass-death"
+    ]
+   }
+  },
+  {
+   "id": "real-iraq-2003",
+   "year": 2003,
+   "date": "2003-03-20",
+   "title": "The invasion of Iraq",
+   "description": "A war of choice on a contested pretext; the occupation lasts eight years and the insurgency longer.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "war-breaks-out",
+   "binWhy": "",
+   "facets": {
+    "change": "containment → invasion and occupation",
+    "mechanism": "invasion",
+    "actor": "state",
+    "position": "outside",
+    "scope": "national",
+    "domain": "military",
+    "direction": {
+     "power": 0,
+     "openness": -1,
+     "capability": -1,
+     "population": -1
+    },
+    "preconditions": [
+     "rivalry",
+     "manufactured-emergency"
+    ],
+    "outcomes": [
+     "occupation",
+     "attrition",
+     "radicalisation"
+    ]
+   }
+  },
+  {
+   "id": "real-crash-2008",
+   "year": 2008,
+   "date": "2008-09-15",
+   "title": "The financial crisis",
+   "description": "A credit boom ends in the failure of banks; states take on the losses and a decade of austerity and populism follows.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "market-crash",
+   "binWhy": "",
+   "facets": {
+    "change": "credit boom → financial crisis",
+    "mechanism": "disaster",
+    "actor": "corporation",
+    "position": "inside",
+    "scope": "planetary",
+    "domain": "economic",
+    "direction": {
+     "power": 0,
+     "openness": -1,
+     "capability": -1,
+     "population": 0
+    },
+    "preconditions": [
+     "prosperity",
+     "speculation",
+     "weak-institutions"
+    ],
+    "outcomes": [
+     "recession",
+     "state-powers",
+     "radicalisation"
+    ]
+   }
+  },
+  {
+   "id": "real-arab-spring-2011",
+   "year": 2011,
+   "date": "2011",
+   "title": "The Arab Spring",
+   "description": "Uprisings across a region; one democracy, several civil wars, and restored autocracies.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "uprising",
+   "binWhy": "",
+   "facets": {
+    "change": "autocracies → uprisings with divergent ends",
+    "mechanism": "uprising",
+    "actor": "movement",
+    "position": "below",
+    "scope": "national",
+    "domain": "political",
+    "direction": {
+     "power": -1,
+     "openness": 1,
+     "capability": 0,
+     "population": 0
+    },
+    "preconditions": [
+     "crisis-economic",
+     "crisis-legitimacy",
+     "repression"
+    ],
+    "outcomes": [
+     "civil-war",
+     "reform",
+     "purge"
+    ]
+   }
+  },
+  {
+   "id": "real-snowden-2013",
+   "year": 2013,
+   "date": "2013",
+   "title": "Snowden",
+   "description": "Leaked files show the scale of mass surveillance; some of it is reformed.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "truth-revealed",
+   "binWhy": "",
+   "facets": {
+    "change": "secret surveillance → published",
+    "mechanism": "disclosure",
+    "actor": "individual",
+    "position": "inside",
+    "scope": "planetary",
+    "domain": "political",
+    "direction": {
+     "power": -1,
+     "openness": 1,
+     "capability": 0,
+     "population": 0
+    },
+    "preconditions": [
+     "secrecy",
+     "cover-up"
+    ],
+    "outcomes": [
+     "revelation",
+     "reform"
+    ]
+   }
+  },
+  {
+   "id": "real-covid-2020",
+   "year": 2020,
+   "date": "2020",
+   "title": "COVID-19",
+   "description": "A pandemic closes the world for a year; states take emergency powers, millions die, and a vaccine arrives within twelve months.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "plague",
+   "binWhy": "",
+   "facets": {
+    "change": "open world → pandemic and lockdown",
+    "mechanism": "disaster",
+    "actor": "nature",
+    "position": "above",
+    "scope": "planetary",
+    "domain": "biological",
+    "direction": {
+     "power": 1,
+     "openness": -1,
+     "capability": 0,
+     "population": -1
+    },
+    "preconditions": [
+     "global-travel"
+    ],
+    "outcomes": [
+     "mass-death",
+     "lockdown",
+     "state-powers",
+     "recovery"
+    ]
+   }
+  },
+  {
+   "id": "real-ukraine-2022",
+   "year": 2022,
+   "date": "2022-02-24",
+   "title": "Russia invades Ukraine",
+   "description": "The largest war in Europe since 1945; it settles into attrition and rearms the continent.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "war-breaks-out",
+   "binWhy": "",
+   "facets": {
+    "change": "frozen conflict → full invasion",
+    "mechanism": "invasion",
+    "actor": "state",
+    "position": "outside",
+    "scope": "national",
+    "domain": "military",
+    "direction": {
+     "power": 0,
+     "openness": -1,
+     "capability": -1,
+     "population": -1
+    },
+    "preconditions": [
+     "rivalry",
+     "one-party-state"
+    ],
+    "outcomes": [
+     "attrition",
+     "union",
+     "arms-race"
+    ]
+   }
+  },
+  {
+   "id": "real-llm-2022",
+   "year": 2022,
+   "date": "2022-11-30",
+   "title": "Conversational AI reaches the public",
+   "description": "A language model that answers in prose is released to everyone; within a year it is in every office.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "new-technology-deployed",
+   "binWhy": "",
+   "facets": {
+    "change": "machines that compute → machines that converse",
+    "mechanism": "invention",
+    "actor": "corporation",
+    "position": "inside",
+    "scope": "planetary",
+    "domain": "technological",
+    "direction": {
+     "power": 1,
+     "openness": 1,
+     "capability": 1,
+     "population": 0
+    },
+    "preconditions": [
+     "technological-race",
+     "prosperity"
+    ],
+    "outcomes": [
+     "dependency",
+     "arms-race"
+    ]
+   }
+  },
+  {
+   "id": "real-fusion-2022",
+   "year": 2022,
+   "date": "2022-12-05",
+   "title": "A fusion experiment returns net energy",
+   "description": "For the first time a laboratory fusion reaction gives back more energy than the lasers put in.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "breakthrough-science",
+   "binWhy": "",
+   "facets": {
+    "change": "fusion consumes energy → returns it",
+    "mechanism": "discovery",
+    "actor": "state",
+    "position": "inside",
+    "scope": "planetary",
+    "domain": "scientific",
+    "direction": {
+     "power": 0,
+     "openness": 1,
+     "capability": 1,
+     "population": 0
+    },
+    "preconditions": [
+     "technological-race",
+     "crisis-ecological"
+    ],
+    "outcomes": [
+     "prestige"
+    ]
+   }
+  },
+  {
+   "id": "real-lunar-south-pole-2023",
+   "year": 2023,
+   "date": "2023-08-23",
+   "title": "First landing near the lunar south pole",
+   "description": "A new spacefaring nation lands where the ice is.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "voyage-into-unknown",
+   "binWhy": "",
+   "facets": {
+    "change": "the Moon's poles unvisited → a landing near the ice",
+    "mechanism": "expedition",
+    "actor": "state",
+    "position": "inside",
+    "scope": "planetary",
+    "domain": "technological",
+    "direction": {
+     "power": 0,
+     "openness": 1,
+     "capability": 1,
+     "population": 0
+    },
+    "preconditions": [
+     "technological-race",
+     "rivalry"
+    ],
+    "outcomes": [
+     "prestige",
+     "colonisation"
+    ]
+   }
+  },
+  {
+   "id": "real-artemis-ii-2026",
+   "year": 2026,
+   "date": "2026-04-11",
+   "title": "Artemis II splashes down",
+   "description": "The first crewed flight beyond low Earth orbit in more than fifty years returns.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "voyage-into-unknown",
+   "binWhy": "",
+   "facets": {
+    "change": "no crew beyond orbit since 1972 → a crewed lunar flyby",
+    "mechanism": "expedition",
+    "actor": "state",
+    "position": "inside",
+    "scope": "planetary",
+    "domain": "technological",
+    "direction": {
+     "power": 0,
+     "openness": 1,
+     "capability": 1,
+     "population": 0
+    },
+    "preconditions": [
+     "technological-race",
+     "rivalry"
+    ],
+    "outcomes": [
+     "prestige",
+     "colonisation"
+    ]
+   }
+  }
+ ]
+}

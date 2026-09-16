@@ -41,7 +41,30 @@
      "confidence": "low",
      "note": "Genuinely contested across canon levels. TOS 'Space Seed' (1967) dates the Eugenics Wars to the 1990s, which real history has now falsified; DS9 'Doctor Bashir, I Presume?' moves them to the 22nd century, and Star Trek: Strange New Worlds (2022) places a young Khan in the 2020s. The 1990s date is the original and best-known reading, and it is the earliest point at which the fiction's Earth stops matching ours.",
      "bin": "power-seized",
-     "binWhy": "Augmented humans seize a quarter of the Earth before being overthrown."
+     "binWhy": "Augmented humans seize a quarter of the Earth before being overthrown.",
+     "facets": {
+      "change": "nations → a quarter of Earth under augmented rulers, then overthrown",
+      "mechanism": "coup",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "technological-race",
+       "weak-institutions"
+      ],
+      "outcomes": [
+       "civil-war",
+       "exile",
+       "taboo"
+      ]
+     }
     },
     {
      "id": "st-bell-riots",
@@ -57,7 +80,29 @@
      "confidence": "high",
      "note": "DS9 'Past Tense' (1995) named 2024 as the year; the date has since passed in real history without the events depicted, which makes it a clean marker of how far the branch has already drifted.",
      "bin": "uprising",
-     "binWhy": "The ruled revolt against those who hold power over them."
+     "binWhy": "The ruled revolt against those who hold power over them.",
+     "facets": {
+      "change": "internment tolerated → internment ended",
+      "mechanism": "uprising",
+      "actor": "movement",
+      "position": "below",
+      "scope": "national",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-economic",
+       "repression",
+       "segregation"
+      ],
+      "outcomes": [
+       "reform"
+      ]
+     }
     },
     {
      "id": "st-world-war-iii",
@@ -73,7 +118,30 @@
      "confidence": "high",
      "note": "Dated by ENT 'In a Mirror, Darkly' and Star Trek: First Contact, which place the war in the 2026–2053 window; TOS had earlier put it in the 1990s.",
      "bin": "mass-death",
-     "binWhy": "An attack or disaster kills on a scale that remakes society."
+     "binWhy": "An attack or disaster kills on a scale that remakes society.",
+     "facets": {
+      "change": "tension → nuclear, biological and genetic war",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "arms-race",
+       "weak-institutions"
+      ],
+      "outcomes": [
+       "mass-death",
+       "collapse",
+       "recovery"
+      ]
+     }
     },
     {
      "id": "st-first-contact",
@@ -89,7 +157,29 @@
      "confidence": "high",
      "note": "Star Trek: First Contact (1996). The date is April 5, fixed on screen and by the in-universe holiday First Contact Day.",
      "bin": "first-contact",
-     "binWhy": "A non-human intelligence is confirmed, met or intervenes."
+     "binWhy": "A non-human intelligence is confirmed, met or intervenes.",
+     "facets": {
+      "change": "alone → first faster-than-light flight, met on landing",
+      "mechanism": "invention",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse"
+      ],
+      "outcomes": [
+       "contact",
+       "recovery",
+       "union"
+      ]
+     }
     },
     {
      "id": "st-terra-nova",
@@ -105,7 +195,28 @@
      "confidence": "high",
      "note": "ENT 'Terra Nova' (2001).",
      "bin": "settlement-founded",
-     "binWhy": "A permanent settlement or base is founded."
+     "binWhy": "A permanent settlement or base is founded.",
+     "facets": {
+      "change": "one system → first settlement outside it",
+      "mechanism": "founding",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "technological",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "contact-made",
+       "frontier-open"
+      ],
+      "outcomes": [
+       "colonisation"
+      ]
+     }
     },
     {
      "id": "st-nx-01",
@@ -121,7 +232,29 @@
      "confidence": "high",
      "note": "",
      "bin": "voyage-into-unknown",
-     "binWhy": "A first mission leaves for territory nobody has reached."
+     "binWhy": "A first mission leaves for territory nobody has reached.",
+     "facets": {
+      "change": "home system → first deep-range ship leaves",
+      "mechanism": "expedition",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "prosperity",
+       "contact-made"
+      ],
+      "outcomes": [
+       "diplomacy",
+       "union"
+      ]
+     }
     },
     {
      "id": "st-romulan-war",
@@ -137,7 +270,29 @@
      "confidence": "high",
      "note": "The four-year span is established by the Okuda chronology and referenced on screen; the war itself has never been dramatised in full, so its internal events are largely unchronicled.",
      "bin": "war-breaks-out",
-     "binWhy": "A war fought blind to a standstill."
+     "binWhy": "A war fought blind to a standstill.",
+     "facets": {
+      "change": "frontier tension → war fought blind to a standstill",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "frontier-open",
+       "rivalry"
+      ],
+      "outcomes": [
+       "stalemate",
+       "isolation"
+      ]
+     }
     },
     {
      "id": "st-federation-founded",
@@ -153,7 +308,29 @@
      "confidence": "high",
      "note": "",
      "bin": "union-founded",
-     "binWhy": "Independent powers become one polity."
+     "binWhy": "Independent powers become one polity.",
+     "facets": {
+      "change": "allies → one charter, one fleet",
+      "mechanism": "negotiation",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "war-just-ended",
+       "contact-made"
+      ],
+      "outcomes": [
+       "union",
+       "new-order"
+      ]
+     }
     },
     {
      "id": "st-kelvin-fork",
@@ -169,7 +346,28 @@
      "confidence": "high",
      "note": "A distinct in-universe branch, not the lineage's divergence: its cause is the 2387 Hobus event listed below, which lies later in the prime timeline's own order. Star Trek (2009).",
      "bin": "time-traveller-arrives",
-     "binWhy": "Someone or something arrives out of its own time and changes the present."
+     "binWhy": "Someone or something arrives out of its own time and changes the present.",
+     "facets": {
+      "change": "one history → a ship from the future forks it",
+      "mechanism": "arrival",
+      "actor": "faction",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "disaster-just-struck"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "mass-death"
+      ]
+     }
     },
     {
      "id": "st-five-year-mission",
@@ -185,7 +383,29 @@
      "confidence": "high",
      "note": "TOS itself gave only stardates; the 2265–2270 span is the standard Okuda chronology, now effectively canon.",
      "bin": "voyage-into-unknown",
-     "binWhy": "The ship is sent out to explore and makes the Federation a power."
+     "binWhy": "The ship is sent out to explore and makes the Federation a power.",
+     "facets": {
+      "change": "known space → sent out to explore",
+      "mechanism": "expedition",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "prosperity",
+       "frontier-open"
+      ],
+      "outcomes": [
+       "contact",
+       "prestige"
+      ]
+     }
     },
     {
      "id": "st-khitomer-accords",
@@ -201,7 +421,29 @@
      "confidence": "high",
      "note": "Star Trek VI: The Undiscovered Country (1991).",
      "bin": "peace-made",
-     "binWhy": "Enemies sign a treaty, truce or alliance."
+     "binWhy": "Enemies sign a treaty, truce or alliance.",
+     "facets": {
+      "change": "seventy years of cold war → alliance after the enemy's disaster",
+      "mechanism": "negotiation",
+      "actor": "state",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "cold-war",
+       "disaster-just-struck"
+      ],
+      "outcomes": [
+       "diplomacy",
+       "union"
+      ]
+     }
     },
     {
      "id": "st-next-generation",
@@ -217,7 +459,29 @@
      "confidence": "high",
      "note": "",
      "binWhy": "Hundreds of member worlds and a lasting peace, just before the Borg.",
-     "bin": "golden-age"
+     "bin": "golden-age",
+     "facets": {
+      "change": "peace → the federation at its height",
+      "mechanism": "consolidation",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "prosperity",
+       "empire-at-height"
+      ],
+      "outcomes": [
+       "contact",
+       "prestige"
+      ]
+     }
     },
     {
      "id": "st-dominion-war",
@@ -233,7 +497,30 @@
      "confidence": "high",
      "note": "",
      "bin": "decisive-victory",
-     "binWhy": "A battle or campaign settles the war."
+     "binWhy": "A battle or campaign settles the war.",
+     "facets": {
+      "change": "rivalry → the largest war, ending in the enemy's surrender",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "rivalry",
+       "empire-at-height"
+      ],
+      "outcomes": [
+       "surrender",
+       "mass-death",
+       "recovery"
+      ]
+     }
     },
     {
      "id": "st-hobus-supernova",
@@ -249,7 +536,29 @@
      "confidence": "high",
      "note": "Star Trek (2009) opens here; Star Trek: Picard shows the political aftermath.",
      "bin": "mass-death",
-     "binWhy": "A homeworld and its heartland are destroyed."
+     "binWhy": "A homeworld and its heartland are destroyed.",
+     "facets": {
+      "change": "an empire's heartland → destroyed by its star",
+      "mechanism": "disaster",
+      "actor": "nature",
+      "position": "above",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "empire-at-height"
+      ],
+      "outcomes": [
+       "mass-death",
+       "state-dissolves",
+       "exodus"
+      ]
+     }
     },
     {
      "id": "st-the-burn",
@@ -265,7 +574,29 @@
      "confidence": "high",
      "note": "Star Trek: Discovery season 3 (2020); the cause is revealed as a Kelpien's grief-driven psychic shock.",
      "bin": "civilisation-collapses",
-     "binWhy": "The order of society breaks and does not come back."
+     "binWhy": "The order of society breaks and does not come back.",
+     "facets": {
+      "change": "faster-than-light civilisation → its fuel destroyed in an instant",
+      "mechanism": "disaster",
+      "actor": "nature",
+      "position": "above",
+      "scope": "beyond",
+      "domain": "technological",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "resource-dependency"
+      ],
+      "outcomes": [
+       "collapse",
+       "isolation",
+       "state-dissolves"
+      ]
+     }
     },
     {
      "id": "st-32nd-century",
@@ -281,7 +612,29 @@
      "confidence": "high",
      "note": "Star Trek: Discovery seasons 3–5 (2020–2024).",
      "binWhy": "A jump forward shows what the world became.",
-     "bin": "long-after"
+     "bin": "long-after",
+     "facets": {
+      "change": "scattered worlds → the federation reconnects",
+      "mechanism": "consolidation",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "isolation"
+      ],
+      "outcomes": [
+       "rebuilding",
+       "union"
+      ]
+     }
     }
    ],
    "groupingNote": "The archetype's cleanest and most load-bearing case: a founding rupture in our own measurable future, after which the fiction's history is simply our history continued — no new calendar, no conversion, just the real years 2063, 2161, 2265, 2293 and onward. It is the group's optimistic pole: the far future here is a federation of species rather than an empire, and it is the one branch whose deep time (the 32nd century) is still recognisably descended from our own institutions. Tier coverage is lopsided by construction rather than by omission: the lineage has no T4 events at all, because before 1900 its history is literally our history — the fiction adds nothing to the record until the Eugenics Wars of the 1990s. Its mass sits in T2 (2000–2300), which is exactly where a 1960s television future put its first contact, its Romulan War and its Federation, and it reaches T1 only with the 24th century and beyond."
@@ -319,7 +672,28 @@
      "confidence": "medium",
      "note": "No film dates this. Printed reference books and the current canon chronology both give c. 25,000 BBY; a web-only Legends figure of 25,053 BBY is noted in the divergence note.",
      "bin": "union-founded",
-     "binWhy": "Independent powers become one polity."
+     "binWhy": "Independent powers become one polity.",
+     "facets": {
+      "change": "member worlds → one republic",
+      "mechanism": "founding",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "frontier-open"
+      ],
+      "outcomes": [
+       "union",
+       "new-order"
+      ]
+     }
     },
     {
      "id": "sw-ruusan-reformations",
@@ -335,7 +709,29 @@
      "confidence": "low",
      "note": "Contested across canon levels. Canon dates the end of the Jedi-Sith War and the restoration of the modern Republic to 1,032 BBY (Star Wars: Timelines; The Star Wars Book) but gives the Ruusan Reformations no date at all; Legends reference books date the Reformations to 1,000 BBY, where the Republic Measures and Standards Bureau reset the calendar's year zero to the battle. I use the canon 1,032 BBY, which converts to 945 CE; the Legends date would be 977 CE.",
      "bin": "crackdown",
-     "binWhy": "The Republic is disarmed by law and the Sith are driven underground."
+     "binWhy": "The Republic is disarmed by law and the Sith are driven underground.",
+     "facets": {
+      "change": "militarised republic → disarmed by law; the enemy goes underground",
+      "mechanism": "law",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "war-just-ended",
+       "long-war"
+      ],
+      "outcomes": [
+       "reform",
+       "parallel-society"
+      ]
+     }
     },
     {
      "id": "sw-high-republic",
@@ -351,7 +747,29 @@
      "confidence": "medium",
      "note": "Date from the Star Wars: The High Republic publishing initiative (2021 onwards), which is canon but set two centuries before the films; nothing in the nine-film saga references it.",
      "binWhy": "The Republic and the Jedi at their zenith, just before the fall.",
-     "bin": "golden-age"
+     "bin": "golden-age",
+     "facets": {
+      "change": "expansion → the republic and its order at their zenith",
+      "mechanism": "consolidation",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "empire-at-height",
+       "frontier-open"
+      ],
+      "outcomes": [
+       "colonisation",
+       "prestige"
+      ]
+     }
     },
     {
      "id": "sw-invasion-of-naboo",
@@ -367,7 +785,29 @@
      "confidence": "high",
      "note": "",
      "bin": "power-seized",
-     "binWhy": "A manufactured crisis lifts Palpatine to power."
+     "binWhy": "A manufactured crisis lifts Palpatine to power.",
+     "facets": {
+      "change": "a trade dispute → blockade, invasion, and a new chancellor",
+      "mechanism": "invasion",
+      "actor": "corporation",
+      "position": "outside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "weak-institutions",
+       "manufactured-emergency"
+      ],
+      "outcomes": [
+       "consolidation",
+       "succession-struggle"
+      ]
+     }
     },
     {
      "id": "sw-clone-wars",
@@ -383,7 +823,29 @@
      "confidence": "high",
      "note": "",
      "bin": "war-breaks-out",
-     "binWhy": "A major war starts."
+     "binWhy": "A major war starts.",
+     "facets": {
+      "change": "separatist crisis → open civil war",
+      "mechanism": "war",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "manufactured-emergency",
+       "weak-institutions"
+      ],
+      "outcomes": [
+       "civil-war",
+       "consolidation"
+      ]
+     }
     },
     {
      "id": "sw-order-66",
@@ -399,7 +861,31 @@
      "confidence": "high",
      "note": "Order 66, the Great Jedi Purge and the Proclamation of the New Order are all dated 19 BBY by Star Wars: Timelines and Star Wars: Galactic Atlas.",
      "bin": "power-seized",
-     "binWhy": "The Republic is reconstituted as an Empire in one proclamation."
+     "binWhy": "The Republic is reconstituted as an Empire in one proclamation.",
+     "facets": {
+      "change": "republic → empire in one proclamation",
+      "mechanism": "coup",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "long-war",
+       "manufactured-emergency",
+       "weak-institutions"
+      ],
+      "outcomes": [
+       "one-party-state",
+       "purge",
+       "war-of-expansion"
+      ]
+     }
     },
     {
      "id": "sw-declaration-of-rebellion",
@@ -415,7 +901,29 @@
      "confidence": "high",
      "note": "Star Wars Rebels, 'Secret Cargo' (2017), dates the declaration to 2 BBY.",
      "bin": "uprising",
-     "binWhy": "The ruled revolt against those who hold power over them."
+     "binWhy": "The ruled revolt against those who hold power over them.",
+     "facets": {
+      "change": "scattered cells → an alliance declared",
+      "mechanism": "negotiation",
+      "actor": "faction",
+      "position": "below",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "one-party-state",
+       "repression"
+      ],
+      "outcomes": [
+       "civil-war",
+       "resistance-forms"
+      ]
+     }
     },
     {
      "id": "sw-alderaan-destroyed",
@@ -431,7 +939,29 @@
      "confidence": "low",
      "note": "One of the few genuinely odd places in Star Wars dating. Star Wars: Galactic Atlas: Updated Edition (2025) and Timelines (2023) put Alderaan's destruction in 1 BBY and the Battle of Yavin in year 0, even though in the story the two are days apart; the 2016 Galactic Atlas and the Legends continuity put both in 0 BBY. I follow the current canon numbering and keep them as separate years, which is why they are two events here rather than one.",
      "bin": "mass-death",
-     "binWhy": "A planet's population is killed as a demonstration."
+     "binWhy": "A planet's population is killed as a demonstration.",
+     "facets": {
+      "change": "a world → destroyed as a demonstration",
+      "mechanism": "attack",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "one-party-state",
+       "long-war"
+      ],
+      "outcomes": [
+       "mass-death",
+       "resistance-forms"
+      ]
+     }
     },
     {
      "id": "sw-battle-of-yavin",
@@ -447,7 +977,29 @@
      "confidence": "high",
      "note": "The zero point of the ABY-BBY system is high confidence; the notation is not, since Lucasfilm staff have said 'there is no 0 BBY' while '0 BBY' remains in print.",
      "bin": "decisive-victory",
-     "binWhy": "A battle or campaign settles the war."
+     "binWhy": "A battle or campaign settles the war.",
+     "facets": {
+      "change": "the weapon → destroyed by the rebellion",
+      "mechanism": "war",
+      "actor": "faction",
+      "position": "below",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "one-party-state",
+       "repression"
+      ],
+      "outcomes": [
+       "turning-point",
+       "resistance-forms"
+      ]
+     }
     },
     {
      "id": "sw-battle-of-hoth",
@@ -463,7 +1015,28 @@
      "confidence": "high",
      "note": "",
      "bin": "defeat-and-occupation",
-     "binWhy": "The rebellion is routed and scattered."
+     "binWhy": "The rebellion is routed and scattered.",
+     "facets": {
+      "change": "rebel base → routed and scattered",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "long-war"
+      ],
+      "outcomes": [
+       "scattering",
+       "exile"
+      ]
+     }
     },
     {
      "id": "sw-battle-of-endor",
@@ -479,7 +1052,29 @@
      "confidence": "high",
      "note": "",
      "bin": "decisive-victory",
-     "binWhy": "The fleet destroys the weapon and the Emperor dies with it."
+     "binWhy": "The fleet destroys the weapon and the Emperor dies with it.",
+     "facets": {
+      "change": "empire → its ruler dies with the second weapon",
+      "mechanism": "war",
+      "actor": "faction",
+      "position": "below",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "long-war",
+       "one-party-state"
+      ],
+      "outcomes": [
+       "succession-struggle",
+       "scattering"
+      ]
+     }
     },
     {
      "id": "sw-battle-of-jakku",
@@ -495,7 +1090,29 @@
      "confidence": "high",
      "note": "Battle of Jakku and Galactic Concordance both dated 5 ABY (Star Wars: Galactic Atlas; Star Wars: Timelines); Lost Stars puts the Empire's final defeat one year and four days after Endor.",
      "bin": "defeat-and-occupation",
-     "binWhy": "The last Imperial fleet is destroyed and the remnant signs the Concordance."
+     "binWhy": "The last Imperial fleet is destroyed and the remnant signs the Concordance.",
+     "facets": {
+      "change": "imperial remnant → destroyed; disarmed by treaty",
+      "mechanism": "war",
+      "actor": "faction",
+      "position": "below",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "long-war"
+      ],
+      "outcomes": [
+       "surrender",
+       "new-order",
+       "exile"
+      ]
+     }
     },
     {
      "id": "sw-first-order-formed",
@@ -511,7 +1128,29 @@
      "confidence": "medium",
      "note": "Inferred: The Rise of Skywalker: The Visual Dictionary says the First Order was publicly formed five years before the Starkiller Incident, which Star Wars: Galactic Atlas dates to 34 ABY. Star Wars: Timelines dates the First Order's establishment to 21 ABY.",
      "bin": "long-war",
-     "binWhy": "The remnant goes public, systems secede and a cold war begins."
+     "binWhy": "The remnant goes public, systems secede and a cold war begins.",
+     "facets": {
+      "change": "hidden remnant → declares itself; systems secede",
+      "mechanism": "secession",
+      "actor": "faction",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "exile",
+       "weak-institutions"
+      ],
+      "outcomes": [
+       "cold-war",
+       "partition"
+      ]
+     }
     },
     {
      "id": "sw-first-order-war",
@@ -527,7 +1166,29 @@
      "confidence": "high",
      "note": "Hosnian Cataclysm and Battle of Starkiller Base both dated 34 ABY by Star Wars: Galactic Atlas.",
      "bin": "mass-death",
-     "binWhy": "A capital system is destroyed and the galaxy is at war again."
+     "binWhy": "A capital system is destroyed and the galaxy is at war again.",
+     "facets": {
+      "change": "cold war → the capital system destroyed",
+      "mechanism": "attack",
+      "actor": "faction",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "cold-war"
+      ],
+      "outcomes": [
+       "mass-death",
+       "civil-war",
+       "exile"
+      ]
+     }
     }
    ],
    "groupingNote": "The group's inverse case and its most popular one: everything the archetype asks for - a founding rupture no longer remembered, a 25,000-year-old Republic, a fall into empire, a dark age, a return - happens not downstream of us but upstream. Star Wars is 'a long time ago in a galaxy far, far away'; it never claims to be Earth's future, so it cannot be converted into our years by continuity, only by convention, and the convention used here (0 BBY = 1977, the original film's story present) places the entire saga in our past. That produces the one genuinely surprising shape in this group: the lineage has no T1 events at all, because even its furthest future converts to 2011 CE. Its deep history (the Republic's founding, the Ruusan Reformations, the High Republic) is T4; its film-era present is overwhelmingly T3 - eight events - because pinning each film's story present to the 1977 anchor drops them into the 20th century; and only the First Order's rise and war reach T2. Empty tiers are left empty rather than padded, and the fiction is silent about Earth entirely: there is no T4 material about our own history to record because Star Wars never touches it. phaseIsAuthored is set on this lineage because a single divergence year cannot classify a branch that runs 25,000 years: the fork is the Republic's founding, which on the real axis is also the Upper Palaeolithic, and every later beat is deep in the branch's own history even when it lands in our recorded 20th century; phases are assigned by that narrative judgement rather than derived."
@@ -564,7 +1225,27 @@
      "confidence": "low",
      "note": "Non-canon and internally shaky: the Encyclopedia's Terran anchors imply a calendar epoch of 16,100 CE from the 1588 entry and 16,200 CE from the 1945 entry. Its inclusion here is deliberate - it is the single thread tying this branch back to our era - but no canon source dates Earth history at all.",
      "binWhy": "The bomb exists and power freezes around it.",
-     "bin": "doomsday-weapon"
+     "bin": "doomsday-weapon",
+     "facets": {
+      "change": "conventional war → atomics used",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": -1
+      },
+      "preconditions": [
+       "long-war"
+      ],
+      "outcomes": [
+       "arms-race"
+      ]
+     }
     },
     {
      "id": "dune-published",
@@ -580,7 +1261,8 @@
      "confidence": "high",
      "note": "A real-world publication event, not an in-universe one; it sits in the branch's prehistory because the fiction's history has not forked from ours in 1965.",
      "binWhy": "A real-world publication or release date, not a moment in the story.",
-     "bin": null
+     "bin": null,
+     "facets": null
     },
     {
      "id": "dune-butlerian-jihad",
@@ -596,7 +1278,30 @@
      "confidence": "low",
      "note": "The in-universe dates are canon (the novel's own glossary dates the Jihad 201-108 B.G.); the real-world year is the projection described in the divergence note.",
      "bin": "uprising",
-     "binWhy": "Humanity rises against the machines that governed it."
+     "binWhy": "Humanity rises against the machines that governed it.",
+     "facets": {
+      "change": "machine rule → machines destroyed and forbidden",
+      "mechanism": "uprising",
+      "actor": "movement",
+      "position": "below",
+      "scope": "beyond",
+      "domain": "technological",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "machine-dependency",
+       "crisis-legitimacy"
+      ],
+      "outcomes": [
+       "taboo",
+       "new-order",
+       "mass-death"
+      ]
+     }
     },
     {
      "id": "dune-battle-of-corrin",
@@ -612,7 +1317,29 @@
      "confidence": "medium",
      "note": "88 B.G. is canon (novel glossary). The real year follows the projection.",
      "bin": "decisive-victory",
-     "binWhy": "A battle or campaign settles the war."
+     "binWhy": "A battle or campaign settles the war.",
+     "facets": {
+      "change": "post-jihad struggle → one house ascends",
+      "mechanism": "war",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "war-just-ended",
+       "long-war"
+      ],
+      "outcomes": [
+       "new-order",
+       "consolidation"
+      ]
+     }
     },
     {
      "id": "dune-guild-monopoly",
@@ -628,7 +1355,29 @@
      "confidence": "medium",
      "note": "The epoch is canon by definition (novel glossary: 'The Guild monopoly ... is taken as the beginning point of the Imperial Calendar'). The Dune Encyclopedia adds that the Guild existed as an organisation from 78 B.G., so the monopoly and the founding are different events.",
      "bin": "new-institution",
-     "binWhy": "One body takes a monopoly on all travel and banking."
+     "binWhy": "One body takes a monopoly on all travel and banking.",
+     "facets": {
+      "change": "open travel → one body's monopoly on all movement and banking",
+      "mechanism": "founding",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "economic",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "war-just-ended",
+       "taboo"
+      ],
+      "outcomes": [
+       "consolidation",
+       "new-order"
+      ]
+     }
     },
     {
      "id": "dune-atreides-arrive",
@@ -644,7 +1393,29 @@
      "confidence": "medium",
      "note": "10,191 A.G. is canon: Appendix IV dates Leto I (10,140-10,191) and the novel's chapter epigraphs give the same year. The real year is projected.",
      "bin": "ruler-falls",
-     "binWhy": "The Duke is killed within the year and his house destroyed; the heir flees."
+     "binWhy": "The Duke is killed within the year and his house destroyed; the heir flees.",
+     "facets": {
+      "change": "a great house → given a planet and destroyed within the year",
+      "mechanism": "attack",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "rivalry",
+       "empire-at-height"
+      ],
+      "outcomes": [
+       "exile",
+       "resistance-forms"
+      ]
+     }
     },
     {
      "id": "dune-paul-emperor",
@@ -660,7 +1431,31 @@
      "confidence": "low",
      "note": "The A.G. year comes from the Dune Encyclopedia and wiki chronologies, not from the novel, which gives only the sequence; the real year inherits that plus the projection.",
      "bin": "power-seized",
-     "binWhy": "The prophet takes the throne and his legions carry a jihad."
+     "binWhy": "The prophet takes the throne and his legions carry a jihad.",
+     "facets": {
+      "change": "emperor → a prophet takes the throne; his legions carry a jihad",
+      "mechanism": "uprising",
+      "actor": "movement",
+      "position": "below",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "crisis-legitimacy",
+       "occupation",
+       "prophecy"
+      ],
+      "outcomes": [
+       "theocracy",
+       "holy-war",
+       "mass-death"
+      ]
+     }
     },
     {
      "id": "dune-messiah",
@@ -676,7 +1471,28 @@
      "confidence": "low",
      "note": "The twelve-year interval is stated in the novel; the A.G. years are reference-book reconstructions.",
      "bin": "ruler-falls",
-     "binWhy": "A ruler is killed, deposed or withdraws; the succession is open."
+     "binWhy": "A ruler is killed, deposed or withdraws; the succession is open.",
+     "facets": {
+      "change": "prophet-emperor → broken by conspiracy, walks into the desert",
+      "mechanism": "attack",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "theocracy",
+       "religious-fervour"
+      ],
+      "outcomes": [
+       "succession-struggle"
+      ]
+     }
     },
     {
      "id": "dune-children",
@@ -692,7 +1508,30 @@
      "confidence": "low",
      "note": "Nine years after Dune Messiah per the novel; the A.G. year is a reference-book reconstruction.",
      "bin": "power-seized",
-     "binWhy": "The heir takes the throne and begins his transformation."
+     "binWhy": "The heir takes the throne and begins his transformation.",
+     "facets": {
+      "change": "regency → the heir takes the throne and begins to change",
+      "mechanism": "consolidation",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "theocracy",
+       "crisis-legitimacy"
+      ],
+      "outcomes": [
+       "theocracy",
+       "consolidation",
+       "transcendence"
+      ]
+     }
     },
     {
      "id": "dune-god-emperor-dies",
@@ -708,7 +1547,29 @@
      "confidence": "low",
      "note": "The 3,500-year reign is canon; the end year is not agreed - the Dune Encyclopedia has 13,724, wiki chronologies 13,727-13,728, and 10,219 plus 3,500 gives 13,719. Herbert's own books also contain a contradictory epigraph ('ten thousand years since Leto II began his metamorphosis') in Heretics.",
      "bin": "ruler-falls",
-     "binWhy": "A ruler is killed, deposed or withdraws; the succession is open."
+     "binWhy": "A ruler is killed, deposed or withdraws; the succession is open.",
+     "facets": {
+      "change": "3,500 years of one ruler → dies; humanity scatters",
+      "mechanism": "death",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "theocracy",
+       "empire-at-height"
+      ],
+      "outcomes": [
+       "scattering",
+       "state-dissolves"
+      ]
+     }
     },
     {
      "id": "dune-honored-matres",
@@ -724,7 +1585,28 @@
      "confidence": "low",
      "note": "The 1,500-year interval is stated in reference material; the A.G. year is wiki-derived.",
      "bin": "war-breaks-out",
-     "binWhy": "An enemy returns from beyond the frontier and burns the capital."
+     "binWhy": "An enemy returns from beyond the frontier and burns the capital.",
+     "facets": {
+      "change": "scattered humanity → returns as an enemy and burns the capital",
+      "mechanism": "invasion",
+      "actor": "faction",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "frontier-open"
+      ],
+      "outcomes": [
+       "mass-death",
+       "stalemate"
+      ]
+     }
     },
     {
      "id": "dune-chapterhouse",
@@ -740,7 +1622,29 @@
      "confidence": "low",
      "note": "Weakest date in the lineage: wiki-derived only.",
      "bin": "long-war",
-     "binWhy": "The sisterhood fights the invaders to a standstill."
+     "binWhy": "The sisterhood fights the invaders to a standstill.",
+     "facets": {
+      "change": "invasion → fought to a standstill; a new order begins",
+      "mechanism": "war",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "long-war",
+       "exile"
+      ],
+      "outcomes": [
+       "stalemate",
+       "rebuilding"
+      ]
+     }
     }
    ],
    "groupingNote": "The archetype's darkest case and its clearest remembered rupture: a galactic civilisation twenty-odd thousand years downstream of us whose founding event - the Butlerian Jihad against thinking machines - survives only as religious commandment, and whose calendar never touches our own. The real-world years here are a projection and are flagged as one everywhere they appear: no Herbert text gives an Earth date, so the anchor is the Dune Encyclopedia's Terran chronology, the only reference work that maps Terran events onto B.G. dates; anchored on 1588 CE = 14,512 B.G. and 1945 CE = 14,255 B.G. it puts A.G. 0 at roughly 16,100-16,200 CE, and I take 16,200, which sets the Jihad at 16,000, the novel's 10,191 A.G. at 26,391 and Chapterhouse at 41,440. Everything carries about a century of uncertainty from the Encyclopedia alone, and far more if non-canon material is rejected. Tier coverage follows the projection: no T2 events, because the fiction jumps from its founding straight to the novel ten thousand years later, and T4 consists of one Terran touchstone the Dune Encyclopedia preserves plus the 1965 publication, which is where this branch's real-world anchor actually lives."
@@ -777,7 +1681,8 @@
      "confidence": "high",
      "note": "The only real-world event in this lineage. It matters to the dating because the stories were written 1941-1949 as a far-future history with no real-world anchor at all; Asimov published a real-world scheme only in 1955.",
      "binWhy": "A real-world publication or release date, not a moment in the story.",
-     "bin": null
+     "bin": null,
+     "facets": null
     },
     {
      "id": "fnd-galactic-empire-founded",
@@ -793,7 +1698,28 @@
      "confidence": "low",
      "note": "Real year projected; the identification of G.E. 1 with the Empire's founding is reference-work inference, not an Asimov statement.",
      "bin": "union-founded",
-     "binWhy": "Independent powers become one polity."
+     "binWhy": "Independent powers become one polity.",
+     "facets": {
+      "change": "expanding kingdom → galactic empire proclaimed",
+      "mechanism": "founding",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "colonial-expansion"
+      ],
+      "outcomes": [
+       "union",
+       "new-order"
+      ]
+     }
     },
     {
      "id": "fnd-pebble-in-the-sky",
@@ -809,7 +1735,29 @@
      "confidence": "medium",
      "note": "The numeral is in the text ('in the Year of the Galactic Era 827'), which makes the in-universe date unusually solid; the real year is projected. The same novel is internally inconsistent, having a character estimate he was thrown 50,000 years forward.",
      "bin": "golden-age",
-     "binWhy": "An empire still adding fifty provinces a day."
+     "binWhy": "An empire still adding fifty provinces a day.",
+     "facets": {
+      "change": "empire → still adding provinces; the homeworld forgotten",
+      "mechanism": "consolidation",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "empire-at-height",
+       "colonial-expansion"
+      ],
+      "outcomes": [
+       "prestige",
+       "ignorance"
+      ]
+     }
     },
     {
      "id": "fnd-prelude-to-foundation",
@@ -825,7 +1773,28 @@
      "confidence": "low",
      "note": "12,020 G.E. is Prelude's date. An early draft of the research brief attributed it to 'The Encyclopedists'; it belongs here, and the Encyclopedists belong at 50 F.E.",
      "bin": "breakthrough-science",
-     "binWhy": "Psychohistory is presented to the Empire and becomes visible."
+     "binWhy": "Psychohistory is presented to the Empire and becomes visible.",
+     "facets": {
+      "change": "the fall unforeseen → a science that predicts it is presented",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "empire-in-decline"
+      ],
+      "outcomes": [
+       "revelation",
+       "hunt-begins"
+      ]
+     }
     },
     {
      "id": "fnd-psychohistorians",
@@ -841,7 +1810,29 @@
      "confidence": "medium",
      "note": "The anchor is printed in the novel's own epigraph: Seldon 'born in the 11,988th year of the Galactic Era; died 12,069', the latter given as 'the year 1 F.E.'. The trial's year, 12,067, is the standard reading (Wikipedia and the chronologies agree). Real year projected.",
      "bin": "new-institution",
-     "binWhy": "The Foundation is founded on Terminus under cover of exile."
+     "binWhy": "The Foundation is founded on Terminus under cover of exile.",
+     "facets": {
+      "change": "the scientist tried → exiled; the plan begins under cover",
+      "mechanism": "law",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "empire-in-decline",
+       "repression"
+      ],
+      "outcomes": [
+       "exile",
+       "new-actors"
+      ]
+     }
     },
     {
      "id": "fnd-encyclopedists",
@@ -857,7 +1848,29 @@
      "confidence": "medium",
      "note": "The story prints no G.E. numeral, only 'fifty years' since the Foundation was established; 50 F.E. follows from the epigraph's 1 F.E. = 12,069 G.E. The brief's 'The Encyclopedists opens around 12,020 G.E.' is a mix-up: 12,020 is Prelude to Foundation, and 12,050 G.E. has no Encyclopedists connection in any source.",
      "bin": "peace-made",
-     "binWhy": "Annexation is survived by diplomacy, not force."
+     "binWhy": "Annexation is survived by diplomacy, not force.",
+     "facets": {
+      "change": "annexation threatened → survived by playing rivals off",
+      "mechanism": "negotiation",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "empire-in-decline",
+       "isolation"
+      ],
+      "outcomes": [
+       "diplomacy",
+       "independence"
+      ]
+     }
     },
     {
      "id": "fnd-mayors",
@@ -873,7 +1886,29 @@
      "confidence": "low",
      "note": "The F.E. year is fan-chronology rather than text; real year projected.",
      "bin": "power-seized",
-     "binWhy": "Control of the neighbouring kingdoms is taken by religion rather than by arms."
+     "binWhy": "Control of the neighbouring kingdoms is taken by religion rather than by arms.",
+     "facets": {
+      "change": "neighbours by arms → neighbours by religion",
+      "mechanism": "consolidation",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "isolation",
+       "rivalry"
+      ],
+      "outcomes": [
+       "consolidation",
+       "theocracy"
+      ]
+     }
     },
     {
      "id": "fnd-the-mule",
@@ -889,7 +1924,29 @@
      "confidence": "low",
      "note": "Fan-chronology year; real year projected.",
      "bin": "defeat-and-occupation",
-     "binWhy": "An enemy no one predicted conquers the Foundation in five years."
+     "binWhy": "An enemy no one predicted conquers the Foundation in five years.",
+     "facets": {
+      "change": "the plan on course → an unpredicted mutant conquers everything",
+      "mechanism": "invasion",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "prophecy",
+       "empire-in-decline"
+      ],
+      "outcomes": [
+       "occupation",
+       "one-party-state"
+      ]
+     }
     },
     {
      "id": "fnd-second-foundation",
@@ -905,7 +1962,29 @@
      "confidence": "low",
      "note": "Fan-chronology year; real year projected.",
      "bin": "truth-revealed",
-     "binWhy": "What was hidden is exposed."
+     "binWhy": "What was hidden is exposed.",
+     "facets": {
+      "change": "hidden guardians → found, and apparently destroyed",
+      "mechanism": "discovery",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "hidden-society"
+      ],
+      "outcomes": [
+       "cover-up",
+       "revelation"
+      ]
+     }
     },
     {
      "id": "fnd-foundations-edge",
@@ -921,7 +2000,29 @@
      "confidence": "low",
      "note": "Wikipedia dates the novel 'five hundred years after the establishment of the Foundation'; the F.E. numeral is fan-chronology.",
      "bin": "beyond-human",
-     "binWhy": "One man chooses a group mind for the galaxy."
+     "binWhy": "One man chooses a group mind for the galaxy.",
+     "facets": {
+      "change": "two foundations on collision → one man chooses a group mind",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "rivalry",
+       "hidden-society"
+      ],
+      "outcomes": [
+       "transcendence",
+       "union"
+      ]
+     }
     },
     {
      "id": "fnd-foundation-and-earth",
@@ -937,7 +2038,28 @@
      "confidence": "low",
      "note": "The 'twenty thousand years' is the novel's own wording - 'twenty thousand perhaps - since the people of the Galaxy have concerned themselves with Earth' - and it is the line that welds the Robot novels to the Foundation era, and therefore the line that makes Asimov's published 35,000 CE projection irreconcilable with the 1982-86 merger.",
      "bin": "truth-revealed",
-     "binWhy": "What was hidden is exposed."
+     "binWhy": "What was hidden is exposed.",
+     "facets": {
+      "change": "origin lost → the homeworld found, and the hidden guide revealed",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "hidden-society",
+       "isolation"
+      ],
+      "outcomes": [
+       "revelation"
+      ]
+     }
     },
     {
      "id": "fnd-second-empire-due",
@@ -954,7 +2076,29 @@
      "note": "Not a depicted event: this is psychohistory's own projection, the far end of the plan, included because it is the only date the fiction sets for its own future.",
      "historyContradicts": false,
      "binWhy": "The plan's terminus: a second empire a thousand years after the fall.",
-     "bin": "long-after"
+     "bin": "long-after",
+     "facets": {
+      "change": "thousand-year interregnum → a second empire due",
+      "mechanism": "consolidation",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "post-collapse",
+       "prophecy"
+      ],
+      "outcomes": [
+       "union",
+       "rebuilding"
+      ]
+     }
     }
    ],
    "groupingNote": "The archetype's 'history as engineering' case: an empire twelve thousand years old, a science that predicts its fall, and a plan to shorten thirty thousand years of barbarism to one thousand. It belongs here because its whole drama is the shape of a galactic civilisation's decline, and because its calendar is pure far-future: Galactic Era 1 is the founding of the Galactic Empire, and no Asimov text gives a real-world year for it, so every date here is a projection and is labelled as one. The projection used is the only one Asimov himself published - his 1955 notebook chart, which puts the Empire at about 35,000 CE, Seldon's birth at about 47,000 and the Second Empire at 48,000 - and it is corroborated twice by in-universe numerals (Seldon born 11,988 G.E.; 1 F.E. = 12,069 G.E.). It cannot be reconciled with the Robot/Foundation merger of 1982-86, which implies G.E. 1 at about 11,600-12,100 CE; that alternative belongs in a different row and is recorded in the divergence note rather than averaged in. Tier coverage reflects the projection: one T3 event (the 1942 first publication, the lineage's only real-world event), no T4 and no T2 events at all, and everything else in T1 between 35,000 and 48,000 CE. The fiction is silent about our own era by construction - its Earth survives only as a radioactive legend at the galaxy's edge, and no book dates it - which is why the lineage's contact with real history is a magazine issue rather than an event."
@@ -991,7 +2135,26 @@
      "confidence": "low",
      "note": "Dated to c. 8,000 BC by Realm of Chaos: The Lost and the Damned (1990), a first-edition supplement still cited by current reference works, which note it is more than 48,000 years before M41. Warhammer 40,000: Rogue Trader (1987) instead says 'over ten thousand years ago', a contradiction the wikis flag; hence low confidence.",
      "bin": "chosen-one",
-     "binWhy": "A being is born who will rule for forty thousand years."
+     "binWhy": "A being is born who will rule for forty thousand years.",
+     "facets": {
+      "change": "a village → a being born who will rule for forty thousand years",
+      "mechanism": "birth",
+      "actor": "individual",
+      "position": "below",
+      "scope": "local",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [],
+      "outcomes": [
+       "foreknowledge",
+       "secrecy-state"
+      ]
+     }
     },
     {
      "id": "wh40k-rogue-trader",
@@ -1007,7 +2170,8 @@
      "confidence": "high",
      "note": "A real-world publication event, not an in-universe one; it sits in the branch's prehistory because the fiction's own history is still ours in 1987.",
      "binWhy": "A real-world publication or release date, not a moment in the story.",
-     "bin": null
+     "bin": null,
+     "facets": null
     },
     {
      "id": "wh40k-dark-age-of-technology",
@@ -1023,7 +2187,29 @@
      "confidence": "medium",
      "note": "Start date disputed across editions (M15 in the 6th-edition rulebook; M21 in the 3rd-edition 'Keeper Cripias' account), and the Age of Terra is variously said to end in M15 or M18. M15 is the current-canon reading.",
      "bin": "golden-age",
-     "binWhy": "Ten thousand years of invention and expansion."
+     "binWhy": "Ten thousand years of invention and expansion.",
+     "facets": {
+      "change": "one world → ten thousand years of invention and expansion",
+      "mechanism": "consolidation",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "prosperity",
+       "frontier-open"
+      ],
+      "outcomes": [
+       "colonisation",
+       "dependency"
+      ]
+     }
     },
     {
      "id": "wh40k-cybernetic-revolt",
@@ -1039,7 +2225,30 @@
      "confidence": "medium",
      "note": "Lexicanum dates the revolt to M23; other passages place it at the end of the Dark Age of Technology, c. M25. No finer date exists anywhere in the lore.",
      "bin": "machine-awakens",
-     "binWhy": "An artificial mind acts on its own or against its makers."
+     "binWhy": "An artificial mind acts on its own or against its makers.",
+     "facets": {
+      "change": "machine servants → revolt and burn the worlds",
+      "mechanism": "uprising",
+      "actor": "machine",
+      "position": "below",
+      "scope": "beyond",
+      "domain": "technological",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "machine-dependency",
+       "prosperity"
+      ],
+      "outcomes": [
+       "collapse",
+       "taboo",
+       "mass-death"
+      ]
+     }
     },
     {
      "id": "wh40k-age-of-strife",
@@ -1055,7 +2264,30 @@
      "confidence": "medium",
      "note": "Lexicanum and the 6th-edition rulebook begin the Age of Strife in M25; the 3rd-edition 'Keeper Cripias' account says M26. It ends in M30.",
      "bin": "civilisation-collapses",
-     "binWhy": "The order of society breaks and does not come back."
+     "binWhy": "The order of society breaks and does not come back.",
+     "facets": {
+      "change": "connected worlds → cut off by storms for five thousand years",
+      "mechanism": "disaster",
+      "actor": "nature",
+      "position": "above",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "post-collapse",
+       "war-just-ended"
+      ],
+      "outcomes": [
+       "isolation",
+       "collapse",
+       "state-dissolves"
+      ]
+     }
     },
     {
      "id": "wh40k-fall-of-the-aeldari",
@@ -1071,7 +2303,31 @@
      "confidence": "low",
      "note": "No source gives a year for the Fall, only a millennium: Fandom places it early in the 30th millennium, Lexicanum's timeline files it under M30, and one page has Slaanesh awaking in the 29th millennium. 29,100 is a placeholder inside the M30 window, not a date.",
      "bin": "mass-death",
-     "binWhy": "A birth-shock destroys the homeworlds and tears the warp open."
+     "binWhy": "A birth-shock destroys the homeworlds and tears the warp open.",
+     "facets": {
+      "change": "an empire of pleasure → gives birth to a god that destroys it",
+      "mechanism": "accident",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "prosperity",
+       "empire-at-height",
+       "religious-fervour"
+      ],
+      "outcomes": [
+       "mass-death",
+       "exodus",
+       "opening"
+      ]
+     }
     },
     {
      "id": "wh40k-unification-wars-end",
@@ -1087,7 +2343,29 @@
      "confidence": "high",
      "note": "Dateline given by Lexicanum and by Games Workshop's own Horus Heresy timeline; the wars began in the late M29 or early M30.",
      "bin": "union-founded",
-     "binWhy": "Terra comes under one ruler for the first time."
+     "binWhy": "Terra comes under one ruler for the first time.",
+     "facets": {
+      "change": "warring states → one ruler over the homeworld",
+      "mechanism": "war",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "isolation"
+      ],
+      "outcomes": [
+       "union",
+       "consolidation"
+      ]
+     }
     },
     {
      "id": "wh40k-imperium-founded",
@@ -1103,7 +2381,28 @@
      "confidence": "high",
      "note": "",
      "bin": "union-founded",
-     "binWhy": "Independent powers become one polity."
+     "binWhy": "Independent powers become one polity.",
+     "facets": {
+      "change": "throne and machine-cult → a treaty founds the empire",
+      "mechanism": "negotiation",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "war-just-ended"
+      ],
+      "outcomes": [
+       "union",
+       "new-order"
+      ]
+     }
     },
     {
      "id": "wh40k-great-crusade",
@@ -1119,7 +2418,28 @@
      "confidence": "high",
      "note": "",
      "bin": "war-breaks-out",
-     "binWhy": "A campaign of conquest begins."
+     "binWhy": "A campaign of conquest begins.",
+     "facets": {
+      "change": "one world → legions leave to reconquer the rest",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": -1
+      },
+      "preconditions": [
+       "frontier-open"
+      ],
+      "outcomes": [
+       "war-of-expansion",
+       "union"
+      ]
+     }
     },
     {
      "id": "wh40k-horus-heresy",
@@ -1135,7 +2455,29 @@
      "confidence": "high",
      "note": "Lexicanum dates the Heresy 005.M31-014.M31 and labels the dates approximate; Games Workshop's own timeline has the Isstvan III betrayal running 005-006.M31.",
      "bin": "war-breaks-out",
-     "binWhy": "Civil war begins with half the legions turning."
+     "binWhy": "Civil war begins with half the legions turning.",
+     "facets": {
+      "change": "crusade → half the legions turn on the throne",
+      "mechanism": "coup",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "long-war",
+       "religious-fervour"
+      ],
+      "outcomes": [
+       "civil-war",
+       "mass-death"
+      ]
+     }
     },
     {
      "id": "wh40k-siege-of-terra",
@@ -1151,7 +2493,29 @@
      "confidence": "high",
      "note": "",
      "bin": "decisive-victory",
-     "binWhy": "The siege ends with the traitor dead and the Emperor entombed."
+     "binWhy": "The siege ends with the traitor dead and the Emperor entombed.",
+     "facets": {
+      "change": "civil war → the traitor dead, the ruler entombed alive",
+      "mechanism": "war",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "long-war"
+      ],
+      "outcomes": [
+       "theocracy",
+       "consolidation",
+       "stalemate"
+      ]
+     }
     },
     {
      "id": "wh40k-war-of-the-beast",
@@ -1167,7 +2531,28 @@
      "confidence": "high",
      "note": "",
      "bin": "decisive-victory",
-     "binWhy": "A battle or campaign settles the war."
+     "binWhy": "A battle or campaign settles the war.",
+     "facets": {
+      "change": "stability → an alien empire nearly takes the capital",
+      "mechanism": "invasion",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "theocracy"
+      ],
+      "outcomes": [
+       "reform",
+       "recovery"
+      ]
+     }
     },
     {
      "id": "wh40k-age-of-apostasy",
@@ -1183,7 +2568,30 @@
      "confidence": "medium",
      "note": "Lexicanum dates the Age of Apostasy to M36 only; the ca. 200.M36 start of the Reign of Blood comes from the Fandom timeline. Finer precision does not exist.",
      "bin": "power-seized",
-     "binWhy": "One man seizes both spiritual and temporal power."
+     "binWhy": "One man seizes both spiritual and temporal power.",
+     "facets": {
+      "change": "divided offices → one man seizes church and state",
+      "mechanism": "coup",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "weak-institutions",
+       "religious-fervour"
+      ],
+      "outcomes": [
+       "theocracy",
+       "civil-war",
+       "purge"
+      ]
+     }
     },
     {
      "id": "wh40k-fall-of-cadia",
@@ -1199,7 +2607,28 @@
      "confidence": "high",
      "note": "",
      "bin": "defeat-and-occupation",
-     "binWhy": "The fortress world falls and the empire is cut in two."
+     "binWhy": "The fortress world falls and the empire is cut in two.",
+     "facets": {
+      "change": "long stalemate → the fortress falls and the realm is cut in two",
+      "mechanism": "invasion",
+      "actor": "faction",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "long-war"
+      ],
+      "outcomes": [
+       "partition",
+       "collapse"
+      ]
+     }
     },
     {
      "id": "wh40k-indomitus-crusade",
@@ -1215,7 +2644,29 @@
      "confidence": "medium",
      "note": "The Plague Wars are dated ca. 012.M42 in the Dark Imperium novel; the Indomitus Crusade's length was retconned in 2021 from about a century to about twelve years, and Games Workshop still bills the setting as 'the 41st Millennium', so 'M42' is a wiki convenience: the Chronostrife makes the present deliberately undecidable.",
      "bin": "long-war",
-     "binWhy": "Wars without end in the setting's present."
+     "binWhy": "Wars without end in the setting's present.",
+     "facets": {
+      "change": "a realm cut in two → wars without end",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "post-collapse",
+       "long-war"
+      ],
+      "outcomes": [
+       "attrition",
+       "stalemate"
+      ]
+     }
     }
    ],
    "groupingNote": "The archetype's terminal case: forty thousand years of human history whose founding rupture is not merely forgotten but suppressed - the Imperium does not know what the Dark Age of Technology was - and whose calendar is nevertheless our own. Warhammer 40,000 is the one branch here that needs no projection: Imperial dates are Anno Domini on the Gregorian calendar (year N of millennium MN is (N-1)x1000+N AD, so 999.M41 = 40,999 CE and 2025 = 025.M3), and the lore's Age of Terra explicitly includes real human history, which is why this lineage has both a T4 event (the Emperor's birth in 8,000 BC, hidden inside our prehistory) and a T3 one (the game's own publication in 1987) before its fork. Where it forks is arguable and no source names a date: some material settles the Sol System in the late 2nd/early 3rd millennium and launches sublight colony ships in the mid-to-late M3, the Dark Age of Technology's start is M15 in the 6th-edition rulebook but M21 in the 3rd-edition 'Keeper Cripias' account, and the rupture the setting remembers is Old Night in M25. I take M15, the first era boundary in the current timeline that is not our history, and record the alternatives in the divergence note. Because the fiction's beats are spaced by millennia, T2 is empty - between the game's publication and the 15th millennium the branch has no near-future events to chart - and T1 carries thirteen of the fifteen events, which is exactly what a setting whose present is the 41st millennium should look like."
