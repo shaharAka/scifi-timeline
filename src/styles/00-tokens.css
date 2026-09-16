@@ -1,7 +1,9 @@
 /* ============================================================================
-   Structural tokens - the things that do NOT change between themes, plus the
-   light default. Every colour here is overridden by a file in src/styles/themes/;
-   this file is the fallback so the page is never unstyled.
+   The whole palette, and everything structural, in one place. There is one
+   theme: Blueprint. A five-theme picker was built so the choice could actually
+   be evaluated, and then removed by the owner in favour of this one, so
+   src/styles/themes/ no longer exists and nothing else in src/styles/ may
+   hard-code a colour or a duration.
 
    Rules that hold in every theme:
    - Colour is meaning, never decoration. The archetype colours come from the

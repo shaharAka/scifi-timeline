@@ -524,9 +524,9 @@ def assemble():
     def concat(sub, ext):
         """Concatenate every .ext under src/<sub>, walking subdirectories.
 
-        Recursing matters for src/styles/themes/: the base token file must load
-        before any theme, and plain filename order gives that for free
-        (00-tokens, 10-base, 20-chart, 30-panels, then themes/10-paper, ...).
+        Walking subdirectories keeps filename order meaningful if the styles are
+        ever split further: 00-tokens must load before anything that consumes a
+        token, and plain sorted order gives that for free.
         """
         root = os.path.join(SRC, sub)
         names = []

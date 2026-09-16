@@ -4,7 +4,7 @@
    Deliberately absent, and not to be reintroduced without a reason:
    gradient text, radial-gradient page washes, coloured glow shadows, pill
    radii, and coloured stripes down the left edge of things. Every colour here
-   is a token so all five themes in src/styles/themes/ work.
+   is a token, which is what lets the palette be swapped in one file.
    ========================================================================== */
 *{box-sizing:border-box}
 html,body{height:100%}
