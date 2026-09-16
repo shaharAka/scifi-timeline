@@ -92,11 +92,11 @@ def bin_lines(bins):
     return "\n".join("  %-22s %s" % (b["id"], b["definition"]) for b in bins)
 
 
-PROMPT = """You are binning moments from fictional chronologies.
-
-A BIN is a KIND OF MOMENT that recurs across different stories. The test: if you
-put two events side by side and a reader would say "these are the same kind of
-thing happening", they share a bin.
+PROMPT = """You are building a vocabulary of KINDS OF MOMENT across fictional
+chronologies. You are given every event at once. A bin is a kind of moment that can
+recur in different stories: two events share a bin when a reader would say
+"this is the same kind of thing happening", whatever the world, the scale or
+the year.
 
 BINS THAT ALREADY EXIST:
 {existing}
@@ -104,35 +104,21 @@ BINS THAT ALREADY EXIST:
 EVENTS TO BIN:
 {events}
 
-For each event, add it to an existing bin if one fits. Create a new bin ONLY if
-you would have to stretch a definition to make the event fit.
+For each event, first say in one clause what kind of moment it is. Then put it
+in the existing bin that fits, or create a new bin if none does. You know these
+works; use that knowledge together with the text. How general a bin should be
+is your judgement to make.
 
-THE FAILURE MODE TO AVOID is a bin with one member. A bin holding a single event
-is not a kind of moment - it is that event with a label on it, and it makes the
-vocabulary useless for finding convergence. Before creating a bin, look again at
-the existing ones: a bin whose definition is one step more general than your
-first instinct will usually cover the event you are holding and several others
-you have not seen yet.
+Use `null` for an event that is not a moment in a story at all, such as a
+publication date or a note about how a date was derived.
 
-  too narrow:  "a vigilante movement emerges"   -> admits one event
-  right level: "unofficial enforcers appear outside the law"
-  too broad:   "something changes"              -> admits everything
-
-Other rules:
-- One bin per event. `null` if the event is not a moment in a story at all -
-  a publication date, or a note about how a date was derived.
-- Judge from the event's OWN text, not from how famous the year is and not from
-  what you know about the franchise.
-- Aim for a vocabulary of roughly two dozen bins for a few hundred events. If you
-  are past that, your bins are too narrow.
-- Bin ids: lowercase, hyphenated, and they must read as a kind of moment, not as
-  a specific incident. `first-contact`, not `the-vulcans-arrive`.
-- Labels: Title Case, four words at most. Definitions: one sentence, and general
-  enough that an event from another world could satisfy it.
+Bin ids are lowercase and hyphenated and name the kind of moment, not the
+incident (`first-contact`, not `the-vulcans-arrive`). A new bin needs a short
+label and a one-sentence definition another world's event could satisfy.
 
 Reply with JSON only, no prose and no code fence:
 
-{"assignments":[{"event_id":"...","bin":"existing-or-new-id","new_bin":{"label":"...","definition":"..."} or null,"why":"under 12 words"}]}"""
+{"assignments":[{"event_id":"...","moment":"what kind of moment this is","bin":"existing-or-new-id","new_bin":{"label":"...","definition":"..."} or null,"why":"one short sentence"}]}"""
 
 
 def call_gemini(events, bins, model, key, thinking="medium"):
@@ -143,7 +129,7 @@ def call_gemini(events, bins, model, key, thinking="medium"):
     for e in events:
         ev_lines.append('  id=%s | world=%s | %s | %s | %s\n      %s'
                         % (e["event_id"], e["world"], e["year"], e["kind"] or "event",
-                           e["title"], (e["description"] or "")[:230]))
+                           e["title"], (e["description"] or "").strip()))
     # `replace` rather than `format`: the prompt contains literal JSON braces,
     # which format() would try to read as placeholders.
     prompt = (PROMPT
@@ -178,7 +164,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--limit", type=int, help="only the first N events")
-    ap.add_argument("--batch", type=int, default=60)
+    ap.add_argument("--batch", type=int, default=500, help="events per model call; the default sends all of them at once")
     ap.add_argument("--report", action="store_true")
     ap.add_argument("--reset", action="store_true", help="clear bins and re-bin")
     args = ap.parse_args()
@@ -277,7 +263,8 @@ def main():
                     print("    unknown bin %r for %s and no definition; leaving null"
                           % (bid, eid))
                     bid = None
-            assignments[eid] = {"bin": bid, "why": a.get("why", "")}
+            assignments[eid] = {"bin": bid, "why": a.get("why", ""),
+                                "moment": (a.get("moment") or "").strip()}
         print("    bins now: %d" % len(bins))
 
     if not assignments:
@@ -300,8 +287,10 @@ def main():
                 if ev.get("bin") != a["bin"]:
                     ev["bin"] = a["bin"]
                     changed += 1
-                if a["why"] and not ev.get("binWhy"):
+                if a["why"]:
                     ev["binWhy"] = a["why"]
+                if a.get("moment"):
+                    ev["binMoment"] = a["moment"]
                 touched = True
         if touched:
             path.write_text(json.dumps(doc2, indent=1, ensure_ascii=False) + "\n")
