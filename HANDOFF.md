@@ -429,7 +429,7 @@ If you are resuming with an agent, the useful opening instruction is:
 > `python3 build-data.py` and the three test suites to confirm the baseline
 > before changing anything. Edit `src/` and `data/`, never `timeline.html`.
 > After any visual change, open timeline.html in a real browser and walk the
-> checklist in DESIGN.md §5 before calling it done. Pick up the open threads in
+> checklist in DESIGN.md §6 before calling it done. Pick up the open threads in
 > HANDOFF.md §9 in order unless told otherwise.
 
 The three rules most worth restating to any agent: **never edit generated files

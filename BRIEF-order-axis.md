@@ -210,7 +210,7 @@ as well as showing it. Keep archetype bundles as the default.
 - Edit `src/` and `data/`, never `timeline.html`; `python3 build-data.py`
   then the three suites after every change.
 - Look at it in a real browser at ~1500px after every visual change and walk
-  DESIGN.md §5; the headless suite proves completeness, not legibility.
+  DESIGN.md §6; the headless suite proves completeness, not legibility.
 - Anything that cannot be read without hovering gets named on the canvas.
 - Update DESIGN.md (a new section per view, with the placement rules above),
   HANDOFF.md §9, and README when a phase lands. One commit per phase, message

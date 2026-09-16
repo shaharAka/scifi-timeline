@@ -338,7 +338,49 @@ convergence, open a drawer. The checklist that matters:
 
 ---
 
-## 6. Decisions that look like mistakes but are not
+## 6. Visual review checklist
+
+The headless suites prove completeness, not legibility. A change is not done
+until it has been opened in a real browser at ~1500px and walked through this
+list. `BRIEF-order-axis.md` and `HANDOFF.md` both refer to this section.
+
+**Framing**
+- [ ] Opens on the intended framing, and the whole tree is reachable from it.
+- [ ] Nothing important is off-canvas at the default view (the suite reports
+      off-screen events; read them, do not just check it passed).
+- [ ] Every era preset lands somewhere legible, including the widest.
+
+**Legibility without hovering**
+- [ ] Anything you cannot read without hovering is named on the canvas. This is
+      the standing rule; hovering is a bonus, never the only route to a fact.
+- [ ] Branch titles and event labels do not collide at any zoom the presets
+      reach. Check the fork cluster specifically, where lanes bunch.
+- [ ] Text stays above 4.5:1 against whatever it sits on, in every theme and on
+      the art plate behind the chart.
+
+**The picture still argues the thesis**
+- [ ] One trunk, not one per world. If a change multiplies the trunk, stop.
+- [ ] Forks remain the most legible event on any branch.
+- [ ] Today is singular and unmistakable.
+- [ ] Colour still means archetype and nothing else; amber still means only
+      "contradicted by real history".
+
+**Interaction**
+- [ ] Zoom in and out from the opening view; the content magnifies rather than
+      sliding away, and nothing collapses to a strip.
+- [ ] Pan both axes and hit the edges; nothing becomes unreachable.
+- [ ] Click a branch, then a node, then step back out. Open Worlds, then a
+      world, then About, then News.
+- [ ] Keyboard: arrows pan, +/- zoom, 0 fits, Escape backs out.
+
+**Content**
+- [ ] Every image is labelled for what it is: a generated plate is not passed
+      off as a photograph, and an openly-licensed one keeps its attribution
+      and licence link.
+- [ ] No placeholder or lorem text reached the page.
+- [ ] Empty states (no news, no dossier, no art) read as deliberate.
+
+## 7. Decisions that look like mistakes but are not
 
 - **The chart is the page.** There is no scrolling document; the tree fills
   the viewport and the reading happens in the panel. Do not reintroduce
@@ -359,7 +401,7 @@ convergence, open a drawer. The checklist that matters:
 
 ---
 
-## 7. Imagery
+## 8. Imagery
 
 Two kinds of picture, deliberately kept distinct in the UI:
 
