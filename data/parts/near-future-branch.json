@@ -39,7 +39,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Undated on screen: the script and the standard reconstruction place it four million years ago while Clarke's novel says three million. The branch's deepest cause is here, but the fork itself is not — recorded history runs unaltered until 2001.",
-     "bin": "technological-or-supernatural-ascendance",
+     "bin": "transhuman-breakthrough",
      "binWhy": "Alien intervention creates a massive leap in capability."
     },
     {
@@ -70,7 +70,7 @@
      "inUniverse": null,
      "confidence": "low",
      "note": "Clarke's novel dates HAL's activation to 12 January 1992; some reference works give 1997. Either way the real 1990s produced nothing remotely like it — an early missed milestone of the branch.",
-     "bin": "emergence-of-new-actors",
+     "bin": "technological-watershed",
      "binWhy": "A new tool of immense power becomes operational."
     },
     {
@@ -86,7 +86,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "1994 is stated in Clarke's novel; the sequel 2010 implies the base is long established by 1999. Real history delivered no lunar base at all, then or since.",
-     "bin": "founding-of-a-settlement",
+     "bin": "interstellar-colonization",
      "binWhy": "Establishment of a permanent lunar outpost."
     },
     {
@@ -102,7 +102,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The excavation date comes from the shooting script and is contradicted by the sequel's 1999. Real 2001 came and went with no lunar base, no monolith and no signal, which is exactly what plotting this film on a real calendar shows.",
-     "bin": "the-truth-comes-out",
+     "bin": "first-contact",
      "binWhy": "Evidence of an external intelligence begins to operate."
     },
     {
@@ -118,7 +118,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The film's title card reads 'Jupiter Mission: 18 months later'; the early script had the launch in 2002, while 2010 dates the mission to 2001 (HAL's secret orders are dated 30 January 2001). This dataset follows the film's own 18-month spacing from the April 2001 signal.",
-     "bin": "dawn-of-exploration",
+     "bin": "deep-space-expedition",
      "binWhy": "First mission of this type into unknown territory."
     },
     {
@@ -134,7 +134,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Dated from the film's 18-month card plus the novel's stated transit time; the sequel's compressed chronology puts the same events in 2002.",
-     "bin": "technological-or-supernatural-ascendance",
+     "bin": "transhuman-breakthrough",
      "binWhy": "A human is transformed into a being of immense power."
     },
     {
@@ -150,7 +150,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The sequel's title year is stated on screen; the film follows the 2001 movie's Jupiter ending rather than the novel's Saturn one.",
-     "bin": "technological-catastrophe",
+     "bin": "deep-space-expedition",
      "binWhy": "Rejected mass-casualty-event because it focuses on the new sun's arrival."
     },
     {
@@ -166,7 +166,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Clarke's third novel is set in the year of Halley's Comet's return, fifty-one years after the Jupiter ignition.",
-     "bin": "the-truth-comes-out",
+     "bin": "deep-space-expedition",
      "binWhy": "Forbidden territory is entered for the first time."
     },
     {
@@ -182,7 +182,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Clarke's fourth novel (1997), never adapted to film; it is the branch's only reach past our own millennium.",
-     "bin": "emergence-of-new-actors",
+     "bin": "transhuman-breakthrough",
      "binWhy": "The makers of the monoliths begin to act directly."
     }
    ],
@@ -220,7 +220,7 @@
      "confidence": "medium",
      "note": "The 1936 Games were in fact the first live television broadcast; the claim that the transmission escaped the ionosphere and reached Vega is the fiction's conceit, and it is the only pre-1960s history the story uses.",
      "binWhy": "Incidental event that only becomes relevant later.",
-     "bin": "dawn-of-exploration"
+     "bin": "technological-watershed"
     },
     {
      "id": "contact-treatment-1979",
@@ -280,7 +280,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Placed at the film's own present (1997) on the strength of its 'FOUR YEARS LATER' card and its Heaven's Gate news reference; the script allows 1996-97, and the novel never states a year for the detection.",
-     "bin": "the-truth-comes-out",
+     "bin": "first-contact",
      "binWhy": "A new category of actor (ETI) begins operating via signal."
     },
     {
@@ -296,7 +296,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The novel states the Hokkaido launch date outright and seats five travellers in a dodecahedron; the film keeps Hokkaido as the surviving site but makes it a one-person pod and gives no date. The novel's Hokkaido machine is the third built, the film's is the second.",
-     "bin": "dawn-of-exploration",
+     "bin": "deep-space-expedition",
      "binWhy": "First mission through a wormhole to a new location."
     },
     {
@@ -312,7 +312,7 @@
      "inUniverse": null,
      "confidence": "low",
      "note": "The novel's last chapter is undated: the computation follows the 31 December 1999 journey and her mother's death, and summaries place it anywhere from immediately after to 'years later', so 2000 is an inference. The film drops the pi revelation and ends with eighteen hours of unexplained static instead, which is stated on screen.",
-     "bin": "the-truth-comes-out",
+     "bin": "first-contact",
      "binWhy": "Discovery that the universe itself was engineered by a higher power."
     }
    ],
@@ -349,7 +349,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Canon states roughly two billion years; this is the deep backstory that the whole branch eventually detonates, and the only pre-modern material the series has.",
-     "bin": "emergence-of-new-actors",
+     "bin": "first-contact",
      "binWhy": "The first action of a major group in the setting's history."
     },
     {
@@ -380,7 +380,7 @@
      "inUniverse": null,
      "confidence": "low",
      "note": "Design-guide date (the RPG says only 'the 2000s'). Real 2025 passed with robotic landers and the Artemis Accords and no permanent base — the branch's first missed milestone, and the reason this lineage is plottable against our own decade.",
-     "bin": "founding-of-a-settlement",
+     "bin": "interstellar-colonization",
      "binWhy": "Establishment of a permanent outpost."
     },
     {
@@ -396,7 +396,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Design-guide date; the novels give no year, only 'the 21st century' and 'about three generations' before the Epstein Drive.",
-     "bin": "founding-of-a-settlement",
+     "bin": "interstellar-colonization",
      "binWhy": "First permanent settlement on another planet."
     },
     {
@@ -412,7 +412,7 @@
      "inUniverse": null,
      "confidence": "low",
      "note": "Design-guide date; the same asteroid is later the site of the protomolecule catastrophe, which gives the early colonisation its retrospective weight.",
-     "bin": "founding-of-a-settlement",
+     "bin": "interstellar-colonization",
      "binWhy": "A new major permanent outpost."
     },
     {
@@ -428,7 +428,7 @@
      "inUniverse": null,
      "confidence": "low",
      "note": "Design-guide date; canon stresses that the split is generational rather than a single act, and the formal independence demand follows around 2200-2213.",
-     "bin": "prolonged-guerrilla-conflict",
+     "bin": "interminable-insurgency",
      "binWhy": "Beginning of a long-term struggle for independence."
     },
     {
@@ -444,7 +444,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Contested: on screen the drive is dated 137 years before the series' 2350s present (2213-14), the wiki's prose rounds it to c. 2213, and the TV design guide says 2200. The independence trade is dated to the same year in the wiki's reconstruction.",
-     "bin": "technological-or-supernatural-ascendance",
+     "bin": "technological-watershed",
      "binWhy": "A breakthrough creates a tool of immense power/utility."
     },
     {
@@ -460,7 +460,7 @@
      "inUniverse": null,
      "confidence": "low",
      "note": "Reconstructed from the wiki's era table; the novels describe the Belt's settlement in detail but never date it.",
-     "bin": "founding-of-a-settlement",
+     "bin": "interstellar-colonization",
      "binWhy": "Widespread establishment of new colonies."
     },
     {
@@ -476,7 +476,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "TV continuity: Avasarala dates it 'forty years' before the series' 2350s present.",
-     "bin": "state-curtails-freedom",
+     "bin": "decisive-military-victory",
      "binWhy": "Governmental action to restrict activities of a specific group."
     },
     {
@@ -492,7 +492,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The novels place it four years before the 2340 Pallas revolt, which is a decade before Leviathan Wakes, so c. 2336; the TV continuity's table gives 2339.",
-     "bin": "mass-casualty-event",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "A sudden attack kills a large number of people."
     },
     {
@@ -508,7 +508,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Design-guide/wiki dating (the books' relative era 0-1 XTE corresponds to c. 2342-43); the Mars-Protogen base on Phoebe follows in 2345.",
-     "bin": "the-truth-comes-out",
+     "bin": "first-contact",
      "binWhy": "A new substance/agent begins operating within human society."
     },
     {
@@ -524,7 +524,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The series never prints a year: 2350 comes from the authors' original RPG (named 2350), the wiki's reconstruction and ScreenRant's timeline; the official RPG map is marked 2351 because it is set in the gap between books one and two.",
-     "bin": "mass-casualty-event",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "Destruction of ships and stations results in massive deaths."
     },
     {
@@ -540,7 +540,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "TV dating (ring forms 2352, fleet arrives 2353, '187 days later'); the books' Abaddon's Gate corresponds to c. 2354, so the books run a year or two later than the show.",
-     "bin": "dawn-of-exploration",
+     "bin": "first-contact",
      "binWhy": "A new type of mission/entry into thousands of systems."
     },
     {
@@ -556,7 +556,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "TV: the strikes fall in 2355 and the Free Navy war ends in late 2356; the novels' Nemesis Games and Babylon's Ashes cover the same ground c. 2359-60.",
-     "bin": "mass-casualty-event",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "An attack kills millions of people."
     },
     {
@@ -572,7 +572,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Persepolis Rising jumps 'thirty years' past Babylon's Ashes; the wiki's reconstruction lands c. 2390, with Tiamat's Wrath c. 2393-94 and Leviathan Falls c. 2395.",
-     "bin": "decisive-military-victory",
+     "bin": "regime-overthrow",
      "binWhy": "A military regime seizes control of the gate network."
     },
     {
@@ -588,7 +588,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Leviathan Falls (2021); the year is reconstructed from the wiki's relative chronology, not printed in the novel.",
-     "bin": "technological-catastrophe",
+     "bin": "systemic-collapse",
      "binWhy": "Failure of the gate network destabilizes civilization."
     },
     {
@@ -604,7 +604,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Wikipedia's plot summary states the epilogue is set a thousand years after Leviathan Falls and that the gate collapse stranded 1,300 colony systems; the novel prints no year, so c. 3395 is arithmetic from the reconstruction above.",
-     "bin": "diplomatic-normalization",
+     "bin": "interstellar-confederation",
      "binWhy": "Former colonies reconcile and establish contact."
     }
    ],
@@ -642,7 +642,7 @@
      "confidence": "medium",
      "note": "The landing is real history; the classroom revisionism is canon dialogue in the film, undated there but implied to be a product of the crisis decades.",
      "binWhy": "Note about historical revisionism, not a specific event.",
-     "bin": null
+     "bin": "authoritarian-consolidation"
     },
     {
      "id": "interstellar-film-released",
@@ -672,7 +672,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "From the film's line that the wormhole appeared '48 years ago' relative to its 2067 present; the 2019 anchor itself is Kip Thorne's own extrapolation in the tie-in book, not something Nolan put on screen. The real 2019 produced gravitational-wave catalogues and no wormhole — the branch's fork is already behind us.",
-     "bin": "the-truth-comes-out",
+     "bin": "first-contact",
      "binWhy": "A new route into unknown territory is found."
     },
     {
@@ -688,7 +688,7 @@
      "inUniverse": null,
      "confidence": "low",
      "note": "No year is spoken on screen; the onset in the 2030s is a reconstruction. The film supplies only relative escalation — by its 2067 present wheat has been gone 'seven years', okra that same year, and corn is all that is left.",
-     "bin": "economic-catastrophe",
+     "bin": "systemic-collapse",
      "binWhy": "Systemic failure that causes widespread hardship/population collapse."
     },
     {
@@ -704,7 +704,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Reconstructed from the film's on-screen statement that the Lazarus missions left ten years before its present; the twelve astronauts are led by Dr Mann, and only Miller, Mann and Edmunds are named.",
-     "bin": "dawn-of-exploration",
+     "bin": "deep-space-expedition",
      "binWhy": "First missions of a new type into unknown territory."
     },
     {
@@ -720,7 +720,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Derived, not stated: 2019 plus the on-screen '48 years'. The film displays no year, and the day-level dates circulating online are fan reconstruction, so only the year is given here.",
-     "bin": "dawn-of-exploration",
+     "bin": "deep-space-expedition",
      "binWhy": "The central mission departs for unknown worlds."
     },
     {
@@ -736,7 +736,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Dated from the on-screen two-year transit to Saturn (2067-69) plus the stated dilation; the film gives the loss as twenty-three years, four months and eight days.",
-     "bin": "mass-casualty-event",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "Rejected technological-catastrophe because time-dilation isn't a failure."
     },
     {
@@ -753,7 +753,7 @@
      "confidence": "medium",
      "note": "Derived from the on-screen 'twenty-three years, four months, eight days'; the same figure is why Murph's generation has grown up while Cooper has not aged.",
      "binWhy": "Specific story beat that doesn't represent a systemic shift.",
-     "bin": "epilogue-of-continuity"
+     "bin": "deep-space-expedition"
     },
     {
      "id": "interstellar-tesseract",
@@ -768,7 +768,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Derived from the on-screen line that the manoeuvre 'will cost us 51 years' (2092 + 51). The tesseract's builders are outside time, so the scene's own dating is necessarily Cooper's, not theirs.",
-     "bin": "technological-or-supernatural-ascendance",
+     "bin": "transhuman-breakthrough",
      "binWhy": "A future-human construct grants immense power over time."
     },
     {
@@ -784,7 +784,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Derived from the on-screen 'you are 124 years old'; a 13-year gap between the 2143 fall and this recovery is unexplained by the film, and the final montage of Brand alone on Edmunds' planet is undated.",
-     "bin": "epilogue-of-continuity",
+     "bin": "interstellar-colonization",
      "binWhy": "A person out of time awakens into a transformed society."
     },
     {
@@ -800,7 +800,7 @@
      "inUniverse": null,
      "confidence": "low",
      "note": "Flagged deliberately: the film says only that they are us, 'a civilization that's evolved past the four dimensions', and never dates them, so 2500 is a marker for the branch's deep-time reach rather than a canon figure. If a strict no-invention reading is preferred, this is the one event to drop, leaving T1 empty.",
-     "bin": "technological-or-supernatural-ascendance",
+     "bin": "transhuman-breakthrough",
      "binWhy": "Humanity evolves into beings with immense power over dimensions."
     }
    ],
@@ -853,7 +853,7 @@
      "confidence": "medium",
      "note": "Novel continuity only, and male infertility rather than the film's female infertility; the film moves the same event to 2009 and the last child is Baby Diego. James calls 1995 'Year Omega'.",
      "historyContradicts": false,
-     "bin": "mass-casualty-event",
+     "bin": "systemic-collapse",
      "binWhy": "A biological catastrophe affecting all reproduction."
     },
     {
@@ -884,7 +884,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Inferred from the film's 'eighteen years of infertility' and Baby Diego's age of eighteen years and four months, which puts his birth in mid-2009; the novel's equivalent is the male infertility of 1995, so the year is contested across adaptations — but real 2009 delivered no such thing, which is the point of plotting it.",
-     "bin": null,
+     "bin": "systemic-collapse",
      "binWhy": "Biological end of reproduction affecting the whole species."
     },
     {
@@ -900,7 +900,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Novel continuity: the diary opens in January 2021 and the infertility dates from 1995. The film's equivalent birth happens in 2027 and is a girl, Kee's daughter.",
-     "bin": "pivotal-birth",
+     "bin": "messianic-birth",
      "binWhy": "The arrival of a child who symbolizes the return of hope."
     },
     {
@@ -916,7 +916,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The film never displays the year, but its own poster announces 'The year 2027: the last days of the human race. No child has been born for 18 years', and the opening news copy calls Diego's death a reminder of 'the 18 years of infertility'. Real 2027 is close, and no such crisis has happened.",
-     "bin": "pivotal-birth",
+     "bin": "messianic-birth",
      "binWhy": "The birth of the first child in 18 years."
     }
    ],

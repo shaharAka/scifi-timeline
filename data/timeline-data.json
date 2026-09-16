@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-09-16T19:31:48Z",
+  "generated": "2026-09-16T19:50:14Z",
   "source": "data/parts/*.json",
   "lineages": 24,
   "events": 237,
@@ -91,7 +91,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Lyra's world's own texts date the beginning of the Church to roughly eighteen centuries before the story; the fiction presents it as a claim made by an angel rather than as a divine act, but gives no firm year.",
-     "bin": "power-vacuum",
+     "bin": "authoritarian-consolidation",
      "binWhy": "A new leader seizes control and establishes a long-term order."
     },
     {
@@ -107,7 +107,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The Magisterium is a medieval institution in the books rather than a dated one; the year is an approximation of its establishment as the Church's governing body.",
-     "bin": "state-curtails-freedom",
+     "bin": "authoritarian-consolidation",
      "binWhy": "The governing body passes laws/doctrines to restrict people."
     },
     {
@@ -123,7 +123,7 @@
      "inUniverse": null,
      "confidence": "low",
      "note": "The witches are ancient and long-lived in the books but their clans are never dated; this year indicates deep medieval background only, and the low confidence reflects that the fiction does not support a specific date.",
-     "bin": "interstate-unification",
+     "bin": "interstellar-confederation",
      "binWhy": "Independent groups form a permanent, unified body."
     },
     {
@@ -139,7 +139,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Lyra is twelve when the first book opens, and the first book is set in the mid-1990s, so her birth is arithmetic from a story date that is itself inferred from the novels' contemporary setting.",
-     "bin": "pivotal-birth",
+     "bin": "messianic-birth",
      "binWhy": "The arrival of the prophesied child central to the story."
     },
     {
@@ -155,7 +155,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The first book is explicitly set contemporary to its writing in the mid-1990s and was published in 1995; the trilogy gives no in-story years, so the story's present is dated by that contemporary setting.",
-     "bin": "the-truth-comes-out",
+     "bin": "institutional-proscription",
      "binWhy": "Discovery of a clandestine group operating within society."
     },
     {
@@ -171,7 +171,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The second book introduces Will in an Oxford that is recognisably ours in the 1990s; the year follows the contemporary setting of the trilogy rather than a stated date.",
-     "bin": "dawn-of-exploration",
+     "bin": "technological-watershed",
      "binWhy": "A new type of mission/travel into unknown territory begins."
     },
     {
@@ -187,7 +187,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Dated by the third book's publication in 2000 and by the trilogy's mid-1990s start; Lyra's Oxford and The Secret Commonwealth continue the story two and ten years later.",
-     "bin": "the-war-is-lost",
+     "bin": "regime-overthrow",
      "binWhy": "The traditional ruling power (the Authority) is defeated."
     }
    ],
@@ -224,7 +224,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The series treats the real 1947 Roswell incident as the fiction's first true event and never contradicts the public record, only supplements it.",
-     "bin": "the-truth-comes-out",
+     "bin": "first-contact",
      "binWhy": "The discovery of an alien presence begins a long-term secret history."
     },
     {
@@ -240,7 +240,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The mythology dates the Syndicate's formation loosely to the years after 1947; 1962 is the best-supported reading from the series' own retellings across the later mytharc episodes.",
-     "bin": "emergence-of-new-actors",
+     "bin": "authoritarian-consolidation",
      "binWhy": "Power brokers from rival nations form a single secret body."
     },
     {
@@ -256,7 +256,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Merges the treaty and the abduction: both are dated 1973 on screen in the series' flashbacks, and the abduction is the treaty's price paid in the Mulder family.",
-     "bin": "diplomatic-normalization",
+     "bin": "interstellar-confederation",
      "binWhy": "A treaty is signed between humans and an alien force with hostages."
     },
     {
@@ -272,7 +272,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The series' present day is the real present day of its broadcast: the pilot is set in 1993 and the seasons advance roughly with the calendar.",
-     "bin": "emergence-of-new-actors",
+     "bin": "vigilante-emergence",
      "binWhy": "Characters begin investigating cases that have been hidden."
     },
     {
@@ -288,7 +288,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The film sits between seasons five and six and is set in the summer of 1998.",
-     "bin": "the-truth-comes-out",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "The full planetary scale of the alien presence is revealed."
     },
     {
@@ -304,7 +304,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "",
-     "bin": "assassination-alters-history",
+     "bin": "assassination-divergence",
      "binWhy": "The removal of a central figure shifts the focus of the investigation."
     },
     {
@@ -320,7 +320,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "2012 is stated on screen as the colonization date, but the invasion never happens on screen between the original run and the 2016 revival, which treats the date as passed and the conspiracy as broken; the fiction's deepest reach therefore stops here.",
-     "bin": "the-war-is-lost",
+     "bin": "systemic-collapse",
      "binWhy": "The predicted collapse/invasion date passes without the expected system change."
     },
     {
@@ -336,7 +336,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Season ten premiered in January 2016 and season eleven in January 2018; both are set in their year of broadcast, which is what keeps this lineage anchored to the present day.",
-     "bin": "emergence-of-new-actors",
+     "bin": "vigilante-emergence",
      "binWhy": "Old conspiracies fragment and new ones begin to operate."
     }
    ],
@@ -373,7 +373,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The agency's creation is placed in the late 1950s by franchise tie-in material; the films themselves only establish that it predates the 1961 first contact and the 1969 events.",
-     "bin": "emergence-of-new-actors",
+     "bin": "vigilante-emergence",
      "binWhy": "A group forms an agency with total autonomy and oversight."
     },
     {
@@ -389,7 +389,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The founding year of the agency's mission is fixed by franchise reference rather than stated on screen in the 1997 film.",
-     "bin": "diplomatic-normalization",
+     "bin": "first-contact",
      "binWhy": "An encounter leads to a standing policy of Earth as a neutral zone."
     },
     {
@@ -405,7 +405,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Established in franchise tie-in material and revisited in the films, where the 1964 fairground site is where the first film's climax takes place.",
-     "bin": "the-truth-comes-out",
+     "bin": "technological-watershed",
      "binWhy": "Alien tech is revealed to be the true nature of human landmarks."
     },
     {
@@ -421,7 +421,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The third film stages this on the real Apollo 11 launch date of 16 July 1969 and calls it the fixed point on which humanity's survival depends.",
-     "bin": "technological-or-supernatural-ascendance",
+     "bin": "technological-watershed",
      "binWhy": "The deployment of a planetary shield provides immense protective power."
     },
     {
@@ -437,7 +437,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The first film's release year is also its story year, keeping the franchise's present identical to the audience's.",
-     "bin": "pivotal-birth",
+     "bin": "vigilante-emergence",
      "binWhy": "A new individual is recruited into a secret society."
     },
     {
@@ -453,7 +453,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The second film is set five years after the first, in its own release year.",
-     "bin": "the-truth-comes-out",
+     "bin": "assassination-divergence",
      "binWhy": "The takeover of headquarters forces the restoration of a leader's memory."
     },
     {
@@ -469,7 +469,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The film is set in its release year before the time jump, and its 1969 sequence is the same fixed point charted above.",
-     "bin": "assassination-alters-history",
+     "bin": "temporal-incursion",
      "binWhy": "A time-traveling assassin attempts to shift the timeline by killing a leader."
     },
     {
@@ -485,7 +485,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Set in its release year and noted for giving the franchise its first recruit who was not memory-wiped into the job.",
-     "bin": "the-truth-comes-out",
+     "bin": "vigilante-emergence",
      "binWhy": "A new recruit uncovers internal infiltration by a hidden group."
     }
    ],
@@ -522,7 +522,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The books say only that the school was founded over a thousand years before the 1990s; the conventional c. 990 dating is arithmetic from that statement, and the exact year is a convention rather than a stated fact.",
-     "bin": "founding-of-a-settlement",
+     "bin": "interstellar-confederation",
      "binWhy": "The establishment of a permanent institution that will outlast governments."
     },
     {
@@ -538,7 +538,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Instituted in 1689 and implemented in 1692, the same year as the Salem witch trials; the real trials are the Muggle-side event the wizarding law answers.",
-     "bin": "state-curtails-freedom",
+     "bin": "institutional-proscription",
      "binWhy": "A government passes a law mandating the withdrawal and concealment of a group."
     },
     {
@@ -570,7 +570,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Dated by the books' own chronology: Harry is fifteen months old at the attack and turns eleven in 1991.",
-     "bin": "assassination-alters-history",
+     "bin": "assassination-divergence",
      "binWhy": "The failed murder of a child destroys a leader and ends a war."
     },
     {
@@ -586,7 +586,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The first book opens on Harry's eleventh birthday, 31 July 1991, ten years after the attack that made him the Boy Who Lived.",
-     "bin": "the-truth-comes-out",
+     "bin": "messianic-birth",
      "binWhy": "A character learns they belong to a hidden group with a destiny."
     },
     {
@@ -602,7 +602,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The second book spans the 1992-1993 school year.",
-     "bin": "the-truth-comes-out",
+     "bin": "interminable-insurgency",
      "binWhy": "A hidden group's activity begins impacting the visible world."
     },
     {
@@ -618,7 +618,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The third task of the Triwizard Tournament is in June 1995; the denial campaign runs through the 1995-1996 school year.",
-     "bin": "emergence-of-new-actors",
+     "bin": "authoritarian-consolidation",
      "binWhy": "A defunct antagonist returns to activity, initially hidden from the public."
     },
     {
@@ -651,7 +651,7 @@
      "confidence": "high",
      "note": "The epilogue sits nineteen years after the battle, which fixes it in 2017 — the year the real-world calendar caught up with the books, and the anchor for this lineage's present day.",
      "binWhy": "It describes a status quo, not a transformative moment.",
-     "bin": "epilogue-of-continuity"
+     "bin": null
     }
    ],
    "groupingNote": "Harry Potter's present day is ours: Privet Drive, King's Cross and the Ministry's Muggle Prime Minister are all real, and the branch is a concealment treaty rather than a changed history. The 1692 Statute of Secrecy is the load-bearing event — it shares its year with the Salem witch trials, so the fiction explains a real historical atrocity as the reason the magical world went dark — and the story's own branch opens in 1981, ten years before Harry's first letter. On the real axis most of the lineage sits in the 20th century: two T4 events in the deep past, six T3 events for the 1945-1998 span the books actually narrate, and one T2 event for the 2017 epilogue. The T1 tier is empty because the fiction stops there — at the year the real calendar caught up with it — so no magical future has been invented to reach deep time."
@@ -687,7 +687,7 @@
      "inUniverse": "the age of the Old Ones",
      "confidence": "medium",
      "note": "The origin is shown in flashback but never dated by the show, so year 1 stands for deep prehistory; the lineage's ancient past is this single event rather than a chain of dated ones.",
-     "bin": "technological-or-supernatural-ascendance",
+     "bin": "transhuman-breakthrough",
      "binWhy": "Ritual creates a being of immense power to fight the dark."
     },
     {
@@ -703,7 +703,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Merges the March arrival with the May season finale, as the schema allows only one event per lineage-year pair; the series' first season is set in its broadcast year, and the show's present stays within a year or two of the real calendar for its whole run.",
-     "bin": "pivotal-birth",
+     "bin": "vigilante-emergence",
      "binWhy": "The protagonist begins operations in a new setting."
     },
     {
@@ -735,7 +735,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The reveal happens in the eighth season of the canonical comics, published 2008-2009; the in-universe date of that season is only pinned by its publication window, so the year is the best-supported reading rather than a stated one.",
-     "bin": "the-truth-comes-out",
+     "bin": "vigilante-emergence",
      "binWhy": "Rejected diplomatic-normalization because vampires aren't recognized as a state."
     },
     {
@@ -751,7 +751,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Placed in the publication year of the eighth season's final arc; the comics' chronology is loose and the season is usually read as spanning about a year and a half after 2003.",
-     "bin": "technological-catastrophe",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "A fundamental force (magic) fails, destabilizing civilization."
     },
     {
@@ -767,7 +767,7 @@
      "inUniverse": "the 23rd century",
      "confidence": "medium",
      "note": "The comic places Melaka two hundred years after Buffy's era and firmly in the 23rd century; year 2200 is a midpoint for that convention, not a stated date. On the real axis the 23rd century is T2 — near future, not deep time — so this is the furthest the fiction reaches without ever leaving our next three hundred years.",
-     "bin": "pivotal-birth",
+     "bin": "vigilante-emergence",
      "binWhy": "A central individual is chosen/called after a long absence."
     }
    ],
@@ -804,7 +804,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Real history before the divergence, and load-bearing for the fiction, which states that the Depression simply continued for want of a Roosevelt. Real Black Tuesday was 29 October 1929. Sits in T3 because the tier cutoffs are absolute calendar dates, and carries phase prehistory because it is before this branch forks.",
-     "bin": "economic-catastrophe",
+     "bin": "systemic-collapse",
      "binWhy": "First event of its type; defines the historical context."
     },
     {
@@ -820,7 +820,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "One real-world year, one event: this entry carries both the historical attempt and the fictional outcome, because the fork and the contrast are the same afternoon. Dated at the divergence, so it is T3 by the taxonomy rather than T4. Real Cermak died on 6 March 1933 and Zangara was executed on 20 March.",
-     "bin": "assassination-alters-history",
+     "bin": "assassination-divergence",
      "binWhy": "First event involving a political killing changing the world."
     },
     {
@@ -836,7 +836,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Real history for contrast: the Allies won in 1945. The novel dates the Allied surrender to 1947 and sets its present day fifteen years later. Two background facts share this year with no dates of their own - the Reich's rockets have already carried colonisation missions to the Moon and to Venus and Mars, and the Mediterranean has been drained for farmland - so they are folded in here rather than given entries.",
-     "bin": "the-war-is-lost",
+     "bin": "regime-overthrow",
      "binWhy": "First event describing a definitive military defeat and surrender."
     },
     {
@@ -852,7 +852,8 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The book is in wide circulation by 1962 but the novel never fixes its publication year; 1955 is an approximation chosen to sit between the 1947 peace and the 1962 narrative.",
-     "binWhy": "Event is a publication date and meta-commentary, not a narrative moment."
+     "binWhy": "Event is a publication date and meta-commentary, not a narrative moment.",
+     "bin": null
     },
     {
      "id": "tmithc-succession-crisis",
@@ -867,7 +868,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Real history for contrast: Hitler died in a Berlin bunker on 30 April 1945 and Bormann disappeared days later, his remains identified only in 1972. In the novel both are alive into the 1960s. Three linked succession facts share the novel's undifferentiated present year, so they are merged into one entry rather than split across invented dates.",
-     "bin": "power-vacuum",
+     "bin": "succession-struggle",
      "binWhy": "First event involving internal political instability following a leader's death."
     }
    ],
@@ -904,7 +905,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Real-history anchor, genuinely before this lineage's fork and consistent with everything the comic shows about the period it borrows. Real Black Tuesday was 29 October 1929.",
-     "bin": "economic-catastrophe",
+     "bin": "systemic-collapse",
      "binWhy": "Matches the financial collapse description in tmithc-crash-1929."
     },
     {
@@ -920,7 +921,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Genuinely before this lineage's 1938 fork, so its phase is prehistory and it is unchanged in this fiction: Watchmen does not fork on this afternoon the way The Man in the High Castle does, and that contrast is the point of this group. Its tier is still T3, because tier is an absolute calendar bucket and 1933 is the twentieth century. The rest of the real century is not enumerated as separate entries; the events below mark where the fiction leaves it.",
-     "bin": null,
+     "bin": "assassination-divergence",
      "binWhy": "Matches the assassination attempt fork in tmithc-zangara-miami."
     },
     {
@@ -936,7 +937,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Real history for contrast: in 1938 the costumed hero is Superman, published in Action Comics #1 and entirely fictional. The comic names Hooded Justice as the first real masked adventurer and dates the Minutemen's formation a year later; the two founding beats share this short window and are merged rather than given invented months. Both are phase fork.",
-     "bin": "emergence-of-new-actors",
+     "bin": "vigilante-emergence",
      "binWhy": "Rejected power-vacuum; these actors don't replace a specific leader."
     },
     {
@@ -952,7 +953,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The accident is firmly in the late 1950s but the comic does not print a single unambiguous year on the page; 1959 is the standard reading and matches the in-universe chronologies. Real history for contrast: 1959 is the year DARPA is founded, not the year a man becomes a god.",
-     "bin": "technological-or-supernatural-ascendance",
+     "bin": "transhuman-breakthrough",
      "binWhy": "First instance of an individual gaining god-like powers."
     },
     {
@@ -984,7 +985,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Dated directly in the comic's backmatter; this is the legal event that creates the story's central condition of retired heroes.",
-     "bin": "state-curtails-freedom",
+     "bin": "institutional-proscription",
      "binWhy": "First event of institutional repression of a subculture."
     },
     {
@@ -1000,7 +1001,7 @@
      "inUniverse": "11/2",
      "confidence": "high",
      "note": "Both landmark beats fall in the story's single present year, so they are merged into one entry with the psychically loudest date. The comic ends with Rorschach's journal sitting in a newspaper slush pile, so whether the lie holds is deliberately unresolved; the HBO continuation answers it in 2019 and continues the same continuity rather than forking a new one.",
-     "bin": "mass-casualty-event",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "Focuses on the scale of death and disaster."
     }
    ],
@@ -1037,7 +1038,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Real history before the divergence, and singled out by Harris himself as still-operative law in the fiction. Real dates: Reichstag fire 27 February 1933, Enabling Act 23 March 1933. Phase prehistory; tier T3 by the absolute cutoffs.",
-     "bin": "state-curtails-freedom",
+     "bin": "authoritarian-consolidation",
      "binWhy": "Matches the legal removal of freedoms and consolidation of power."
     },
     {
@@ -1053,7 +1054,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Both halves of the hinge fall in this one real-world year, so they share an entry: the conference that created the document trail every murder victim in the plot attended, and the assassination that in our history removed the man who ordered it. Both are real history - Wannsee 20 January 1942, the attack 27 May 1942, Heydrich's death 4 June 1942 - and the fiction changes only the second. The month is used rather than a day because Harris does not dramatise the attack. Phase fork.",
-     "bin": "assassination-alters-history",
+     "bin": "assassination-divergence",
      "binWhy": "Matches the pattern of an assassination attempt altering the timeline."
     },
     {
@@ -1085,7 +1086,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Real history for contrast: the Normandy landings took place on 6 June 1944 and Britain fought on to 1945. The novel dates the British surrender to 1944.",
-     "bin": "the-war-is-lost",
+     "bin": "regime-overthrow",
      "binWhy": "Matches the surrender and defeat of a major power."
     },
     {
@@ -1101,7 +1102,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The novel puts the end of the war and the German bomb test around 1946 without a month; the V-3 demonstration over New York is given as the reason the United States never tried to liberate Europe.",
-     "bin": "the-war-is-lost",
+     "bin": "decisive-military-victory",
      "binWhy": "Focuses on the atomic bomb as the decisive power shift."
     },
     {
@@ -1117,7 +1118,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The novel gives the 1960 casualty figure rather than a start date for the insurgency; used as the earliest year the text explicitly quantifies.",
-     "bin": "prolonged-guerrilla-conflict",
+     "bin": "interminable-insurgency",
      "binWhy": "Distinct from decisive-military-victory; emphasizes the grind and lack of resolution."
     },
     {
@@ -1133,7 +1134,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Real history for contrast: Himmler was captured and killed himself in May 1945. The novel states the 1962 crash as an accomplished fact two years before its narrative present.",
-     "bin": "power-vacuum",
+     "bin": "succession-struggle",
      "binWhy": "Matches the death of a leader opening a succession path."
     },
     {
@@ -1149,7 +1150,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The novel presents Hitler as already withdrawn when the story opens and does not date the withdrawal; 1963 is the last full year before the narrative and is used as the best-supported reading.",
-     "bin": "power-vacuum",
+     "bin": "succession-struggle",
      "binWhy": "Matches the internal instability caused by a leader's effective absence."
     },
     {
@@ -1165,7 +1166,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The novel's action runs from 14 to 20 April 1964 and all of its major beats fall in that one week, so they are merged here rather than split across invented days. Real history for contrast: Hitler died in 1945 and Joseph P. Kennedy Sr. was never president - his son John was, and was assassinated in 1963. The novel deliberately leaves March's death off the page.",
-     "bin": "diplomatic-normalization",
+     "bin": "authoritarian-consolidation",
      "binWhy": "Rejected state-curtails-freedom; focus is on international relations and detente."
     }
    ],
@@ -1202,7 +1203,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Real history, and the earliest anchor the fiction genuinely stands on rather than one invented for symmetry. The film never dates the Manhattan Project, so the placement is inference from the world it depicts - the nuclear anxiety of 1984 and the countervalue exchange of Judgment Day. Real dates: Trinity 16 July 1945, Hiroshima 6 August 1945. Phase prehistory; tier T3 by the absolute cutoffs.",
-     "bin": "technological-or-supernatural-ascendance",
+     "bin": "technological-watershed",
      "binWhy": "Matches the emergence of world-changing technological power."
     },
     {
@@ -1218,7 +1219,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "One year holds both the real world and the fork, so they share an entry. Phase fork. The loop's bootstrap is that the destroyed T-800's chip and arm are what Cyberdyne later reverse-engineers into Skynet.",
-     "bin": "emergence-of-new-actors",
+     "bin": "temporal-incursion",
      "binWhy": "Matches new, impactful agents (time travelers) appearing in society."
     },
     {
@@ -1234,7 +1235,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The film closes with Sarah pregnant and driving into a storm, and the sequels state John's birth year as 1985; the exact date is not fixed on screen.",
-     "bin": "pivotal-birth",
+     "bin": "messianic-birth",
      "binWhy": "Distinct from emergence-of-new-actors because it specifies birth and destiny."
     },
     {
@@ -1250,7 +1251,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The load-bearing date of the whole franchise, stated exactly on screen, and the same year as the raid that prevents it - so the two halves of the loop's argument share one entry. Real history for contrast: 29 August 1997 was an ordinary Friday and Skynet does not exist. This event is not a break that time travel creates so much as one the loop produces: the 1984 Terminator's own wreckage is what makes Skynet buildable.",
-     "bin": "technological-catastrophe",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "Nuclear exchange kills a large number of people suddenly."
     },
     {
@@ -1266,7 +1267,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Belongs to the Dark Fate branch, which follows T2 and discards T3 and everything after; the film states John was killed in 1998 without a day. Kept because it is the clearest proof that in this archetype every attempted fix moves the damage rather than removing it.",
-     "bin": "assassination-alters-history",
+     "bin": "assassination-divergence",
      "binWhy": "The successful assassination of a leader shifts the timeline."
     },
     {
@@ -1282,7 +1283,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Stated in Salvation, which sits in the branch where Judgment Day happened as scheduled; included as the one hard pre-war date the franchise gives for human-machine research.",
-     "bin": "emergence-of-new-actors",
+     "bin": "transhuman-breakthrough",
      "binWhy": "Process creates a new kind of powerful being (cyborg)."
     },
     {
@@ -1298,7 +1299,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Rise of the Machines states the date on screen. Real history for contrast: 24 July 2004 was an ordinary Saturday. This is the first firm evidence that in this franchise the date moves but the event does not.",
-     "bin": "technological-catastrophe",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "A sudden disaster kills a large number of people."
     },
     {
@@ -1314,7 +1315,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Genisys reboots the timeline from 1973 onward, so its dates do not chain to the earlier films; it gives October 2017 as an activation window rather than a single day. Real history for contrast: October 2017 was an ordinary month.",
-     "bin": "technological-catastrophe",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "A sudden disaster kills a large number of people."
     },
     {
@@ -1330,7 +1331,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Real history for contrast: 2029 has not happened. This is the deepest point the franchise canonically reaches and the origin end of the loop - the war is fought with the technology the 1984 mission delivered, by a resistance led by the man the 1984 mission created. It sits in T2 alongside the 2003, 2004 and 2017 beats - our near future on the real axis - while its phase is aftermath, because the story has only travelled 45 years from its fork.",
-     "bin": "decisive-military-victory",
+     "bin": "temporal-incursion",
      "binWhy": "Conflict is resolved quickly as the defense grid falls."
     }
    ],
@@ -1367,7 +1368,8 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Real-world background.",
-     "binWhy": "Real world history, not a fictional event."
+     "binWhy": "Real world history, not a fictional event.",
+     "bin": "technological-watershed"
     },
     {
      "id": "mm-shock-1973",
@@ -1382,7 +1384,8 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Real-world background; the fiction's own oil war is dated only in production and tie-in material.",
-     "binWhy": "Real world history, not a fictional event."
+     "binWhy": "Real world history, not a fictional event.",
+     "bin": "systemic-collapse"
     },
     {
      "id": "mm-film-1979",
@@ -1412,7 +1415,7 @@
      "inUniverse": null,
      "confidence": "low",
      "note": "Never stated on screen; see the divergence note. The Mad Max 2 narration does not date the collapse at all, and the often-quoted 'last years of the 20th century' line does not exist in the film.",
-     "bin": "economic-catastrophe",
+     "bin": "systemic-collapse",
      "binWhy": "Resource failure leads to the collapse of the industrial order."
     },
     {
@@ -1428,7 +1431,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "On-screen background signage gives 6 December 1984, the franchise's hardest in-universe date.",
-     "bin": "prolonged-guerrilla-conflict",
+     "bin": "vigilante-emergence",
      "binWhy": "Law enforcement struggles against violent insurgent gangs."
     },
     {
@@ -1444,7 +1447,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The three-year gap comes from the official production preamble, not the film; whether the nuclear exchange happens here or between the first two films depends on which continuity you follow.",
-     "bin": "technological-catastrophe",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "The world of the old order is completely gone after nuclear war."
     },
     {
@@ -1460,7 +1463,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The fifteen-year gap comes from co-writer Terry Hayes (Starlog, June 1985); the film states no year.",
-     "bin": "founding-of-a-settlement",
+     "bin": "regime-overthrow",
      "binWhy": "Establishment of a new, post-apocalyptic town."
     },
     {
@@ -1476,7 +1479,7 @@
      "inUniverse": "Day 12045",
      "confidence": "low",
      "note": "Miller: the apocalypse 'happens, and you wind up 45-50 years in the future' from a rolling 'next Wednesday'; the tattoo implies about thirty-three years since the Fall; the 2015 comics put their Fall in the 2010s. The year is arithmetic on Miller's figure, not a stated date. Furiosa (2024) runs the fifteen years directly into this film.",
-     "bin": "state-curtails-freedom",
+     "bin": "interminable-insurgency",
      "binWhy": "A new regime controls the wasteland through resource monopoly."
     }
    ],
@@ -1513,7 +1516,8 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Real-world background; the fiction itself is silent before 1972.",
-     "binWhy": "Real world history, not a fictional event."
+     "binWhy": "Real world history, not a fictional event.",
+     "bin": "technological-watershed"
     },
     {
      "id": "pota-icarus-1972",
@@ -1528,7 +1532,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "No on-screen date card. 1972 is derived from the 3978 arrival minus the 2,006 elapsed years the crew log, and from Landon's line about 'the class of '72'.",
-     "bin": "dawn-of-exploration",
+     "bin": "deep-space-expedition",
      "binWhy": "The launch of a mission into the unknown."
     },
     {
@@ -1544,7 +1548,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The first impossible event in the series, but a closed causal loop rather than a change to human history, which is why this lineage's fork is placed at the 1983 plague instead.",
-     "bin": "emergence-of-new-actors",
+     "bin": "temporal-incursion",
      "binWhy": "Intelligent apes begin operating within 1970s human society."
     },
     {
@@ -1560,7 +1564,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Conquest gives only the relative 'eight years ago' before its 1991 uprising, so 1983 is arithmetic; the same film is frequently misreported as being set in 1983.",
-     "bin": "mass-casualty-event",
+     "bin": "systemic-collapse",
      "binWhy": "A biological disaster destabilizes the domestic social order."
     },
     {
@@ -1576,7 +1580,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Conquest's title card gives 1991 and the internal arithmetic fits (Caesar is eighteen, born in 1973), though some timelines read the film as 1993.",
-     "bin": "prolonged-guerrilla-conflict",
+     "bin": "regime-overthrow",
      "binWhy": "An internal uprising against the established human industrial order."
     },
     {
@@ -1592,7 +1596,7 @@
      "inUniverse": null,
      "confidence": "low",
      "note": "Never dated on screen: Battle's Lawgiver places it in the aftermath of Caesar's victory, and that film's 'twelve-year truce' points to about 1992.",
-     "bin": "the-war-is-lost",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "Conflict ends with the total ruin of human civilization."
     },
     {
@@ -1608,7 +1612,7 @@
      "inUniverse": null,
      "confidence": "low",
      "note": "Battle states no year; 'ten years after a worldwide series of ape revolutions and a brutal nuclear war' plus the twelve-year truce puts the main story around 2003, while some sources prefer 2001.",
-     "bin": "founding-of-a-settlement",
+     "bin": "interstellar-confederation",
      "binWhy": "The establishment of the first Ape City."
     },
     {
@@ -1640,7 +1644,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The date is a chronometer reading that the series itself says may have stopped mid-flight; the 1975 animated series is undated, with fans split between 3479 and 3979.",
-     "bin": "state-curtails-freedom",
+     "bin": "temporal-incursion",
      "binWhy": "New individuals arrive in a world where their kind are livestock."
     },
     {
@@ -1656,7 +1660,7 @@
      "inUniverse": null,
      "confidence": "low",
      "note": "Brent states 3955 in dialogue while Taylor's chronometer in the 1968 film reads 3978; the standard rationalisation is that Brent's chronometer was damaged.",
-     "bin": "mass-casualty-event",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "A doomsday device destroys the entire planet."
     },
     {
@@ -1672,7 +1676,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The ship's on-screen chronometer reads 3978; the 'November 25' date comes from a later novelisation, not from the film.",
-     "bin": "the-truth-comes-out",
+     "bin": "temporal-incursion",
      "binWhy": "A traveler discovers a new, unknown world state."
     }
    ],
@@ -1709,7 +1713,8 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Real-world background; death tolls vary by source.",
-     "binWhy": "Real world history, not a fictional event."
+     "binWhy": "Real world history, not a fictional event.",
+     "bin": "catastrophic-mass-destruction"
     },
     {
      "id": "tm-trench-1917",
@@ -1724,7 +1729,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "On screen; the bullet is the object half of the film's time loop.",
-     "bin": "emergence-of-new-actors",
+     "bin": "temporal-incursion",
      "binWhy": "A time traveler enters a historical conflict."
     },
     {
@@ -1755,7 +1760,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Railly states 'This is 1990'; the opening title card is dated 12 April 1990.",
-     "bin": "emergence-of-new-actors",
+     "bin": "temporal-incursion",
      "binWhy": "A time traveler appears and influences individuals in the past."
     },
     {
@@ -1772,7 +1777,7 @@
      "confidence": "high",
      "note": "The 2035 scientists state the release date on screen; the Army of the Twelve Monkeys, whose name they blame, are animal-rights activists and a red herring, and the carrier is Goines's assistant, Dr Peters.",
      "historyContradicts": false,
-     "bin": "mass-casualty-event",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "The release of a virus that causes a global catastrophe."
     },
     {
@@ -1788,7 +1793,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The opening title card states that five billion people will die in 1997, and the film's ending confirms the outbreak is not averted.",
-     "bin": "technological-catastrophe",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "A virus kills 5 billion people."
     },
     {
@@ -1804,7 +1809,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "2035 is the standard citation and matches the film's 'thirty years' dialogue loosely; the year is never spoken on screen, and a strict reading of the dialogue implies about 2026.",
-     "bin": "epilogue-of-continuity",
+     "bin": "authoritarian-consolidation",
      "binWhy": "Survivors establish a permanent, sealed underground compound."
     }
    ],
@@ -1841,7 +1846,8 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Real-world background.",
-     "binWhy": "Real world history, not a fictional event."
+     "binWhy": "Real world history, not a fictional event.",
+     "bin": "technological-watershed"
     },
     {
      "id": "fo-split-1945",
@@ -1856,7 +1862,8 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The Fallout 3 manual states the split is 'after World War II' and never dates it precisely; the Fallout Bible, non-canon since 2011, says the same. The widely repeated claim that the transistor was not invented until 2067 is unsupported by canon.",
-     "binWhy": "A meta-note about a timeline divergence."
+     "binWhy": "A meta-note about a timeline divergence.",
+     "bin": null
     },
     {
      "id": "fo-resource-wars-2052",
@@ -1871,7 +1878,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "",
-     "bin": "economic-catastrophe",
+     "bin": "systemic-collapse",
      "binWhy": "Global resource depletion leads to systemic social and political failure."
     },
     {
@@ -1887,7 +1894,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The experiment programme is canon across Fallout, Fallout 2, Fallout 3 and Fallout 4; the Vault count is usually given as 122.",
-     "bin": "the-truth-comes-out",
+     "bin": "technological-watershed",
      "binWhy": "The creation of a massive, secret project with sinister motives."
     },
     {
@@ -1903,7 +1910,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "",
-     "bin": "prolonged-guerrilla-conflict",
+     "bin": "interminable-insurgency",
      "binWhy": "A long, bloody conflict stripping away diplomatic possibilities."
     },
     {
@@ -1919,7 +1926,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Uncontested across Fallout's intro and the Fallout 4 and 76 loading screens. Earlier the same month the Mariposa mutiny begins the Brotherhood of Steel, so 2077 also carries the wasteland's first institution.",
-     "bin": "mass-casualty-event",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "Sudden nuclear exchange kills billions."
     },
     {
@@ -1935,7 +1942,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Fallout 76's setting; later updates advance the in-universe clock only to about 2105.",
-     "bin": "founding-of-a-settlement",
+     "bin": "interstellar-colonization",
      "binWhy": "Survivors leave a vault to settle the wreckage."
     },
     {
@@ -1951,7 +1958,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "",
-     "bin": "emergence-of-new-actors",
+     "bin": "regime-overthrow",
      "binWhy": "A vault dweller enters the world and changes local history."
     },
     {
@@ -1967,7 +1974,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "",
-     "bin": "decisive-military-victory",
+     "bin": "regime-overthrow",
      "binWhy": "The destruction of the last remnant of the old government."
     },
     {
@@ -1983,7 +1990,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "",
-     "bin": "technological-or-supernatural-ascendance",
+     "bin": "technological-watershed",
      "binWhy": "A breakthrough technology makes the wasteland water drinkable."
     },
     {
@@ -1999,7 +2006,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "",
-     "bin": "power-vacuum",
+     "bin": "succession-struggle",
      "binWhy": "Major powers struggle for control of the Hoover Dam."
     },
     {
@@ -2015,7 +2022,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "",
-     "bin": "emergence-of-new-actors",
+     "bin": "regime-overthrow",
      "binWhy": "A pre-war individual enters a conflict between major factions."
     },
     {
@@ -2031,7 +2038,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Seasons 1 (2024) and 2 (2025-26) are both set in 2296; the showrunners have confirmed that no New Vegas ending has been made canon.",
-     "bin": "the-truth-comes-out",
+     "bin": "interminable-insurgency",
      "binWhy": "A vault dweller is forced into the surface world."
     },
     {
@@ -2047,7 +2054,7 @@
      "inUniverse": null,
      "confidence": "low",
      "note": "Conditional dialogue in Fallout: New Vegas, tied to Mr. House's ending: a forecast rather than a depicted event.",
-     "bin": "dawn-of-exploration",
+     "bin": "interstellar-colonization",
      "binWhy": "A planned mission to launch colony ships into space."
     },
     {
@@ -2100,7 +2107,8 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Real-world background; the fiction is silent before the twenty-first century.",
-     "binWhy": "Real world history, not a fictional event."
+     "binWhy": "Real world history, not a fictional event.",
+     "bin": "technological-watershed"
     },
     {
      "id": "matrix-turing-1950",
@@ -2115,7 +2123,8 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Real-world background.",
-     "binWhy": "Real world history, not a fictional event."
+     "binWhy": "Real world history, not a fictional event.",
+     "bin": "technological-watershed"
     },
     {
      "id": "matrix-1999",
@@ -2145,7 +2154,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Canonical date text in The Animatrix and the Matrix comics: 'Zion Archive. World History, 2nd RENAISSANCE, 2090-2139'.",
-     "bin": "emergence-of-new-actors",
+     "bin": "regime-overthrow",
      "binWhy": "Machines become a new category of political/social actor."
     },
     {
@@ -2161,7 +2170,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "2139 is the end of the canonically dated 2090-2139 Second Renaissance range; Wikipedia's Animatrix synopsis says 2148 and fan timelines range into the 2170s.",
-     "bin": "prolonged-guerrilla-conflict",
+     "bin": "interminable-insurgency",
      "binWhy": "The start of a war between humans and machines."
     },
     {
@@ -2177,7 +2186,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The event is canonical (The Animatrix) but has no official year; about 2145 places it in the war's first decade. Circulating figures such as 2085 or 2098 are reconstructions.",
-     "bin": "technological-catastrophe",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "Humanity's attempt to win a war results in global environmental collapse."
     },
     {
@@ -2193,7 +2202,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Spoken on screen by Morpheus as an approximation. Some tie-in reconstructions instead add five prior One-cycles of about a century each and date the films to roughly 2700.",
-     "bin": "pivotal-birth",
+     "bin": "transhuman-breakthrough",
      "binWhy": "The One is extracted to challenge the status quo."
     },
     {
@@ -2209,7 +2218,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The sixty-year gap is canonical; 2259 is 2199 plus sixty. Cycle-based reconstructions put this film near 2760, which would move the franchise past 2300, but that reading is not supported by on-screen dialogue.",
-     "bin": "diplomatic-normalization",
+     "bin": "systemic-collapse",
      "binWhy": "A status quo defined by a truce and machine civil peace."
     }
    ],
@@ -2246,7 +2255,7 @@
      "confidence": "medium",
      "note": "The 1936 Games were in fact the first live television broadcast; the claim that the transmission escaped the ionosphere and reached Vega is the fiction's conceit, and it is the only pre-1960s history the story uses.",
      "binWhy": "Incidental event that only becomes relevant later.",
-     "bin": "dawn-of-exploration"
+     "bin": "technological-watershed"
     },
     {
      "id": "contact-treatment-1979",
@@ -2306,7 +2315,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Placed at the film's own present (1997) on the strength of its 'FOUR YEARS LATER' card and its Heaven's Gate news reference; the script allows 1996-97, and the novel never states a year for the detection.",
-     "bin": "the-truth-comes-out",
+     "bin": "first-contact",
      "binWhy": "A new category of actor (ETI) begins operating via signal."
     },
     {
@@ -2322,7 +2331,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The novel states the Hokkaido launch date outright and seats five travellers in a dodecahedron; the film keeps Hokkaido as the surviving site but makes it a one-person pod and gives no date. The novel's Hokkaido machine is the third built, the film's is the second.",
-     "bin": "dawn-of-exploration",
+     "bin": "deep-space-expedition",
      "binWhy": "First mission through a wormhole to a new location."
     },
     {
@@ -2338,7 +2347,7 @@
      "inUniverse": null,
      "confidence": "low",
      "note": "The novel's last chapter is undated: the computation follows the 31 December 1999 journey and her mother's death, and summaries place it anywhere from immediately after to 'years later', so 2000 is an inference. The film drops the pi revelation and ends with eighteen hours of unexplained static instead, which is stated on screen.",
-     "bin": "the-truth-comes-out",
+     "bin": "first-contact",
      "binWhy": "Discovery that the universe itself was engineered by a higher power."
     }
    ],
@@ -2375,7 +2384,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Undated on screen: the script and the standard reconstruction place it four million years ago while Clarke's novel says three million. The branch's deepest cause is here, but the fork itself is not — recorded history runs unaltered until 2001.",
-     "bin": "technological-or-supernatural-ascendance",
+     "bin": "transhuman-breakthrough",
      "binWhy": "Alien intervention creates a massive leap in capability."
     },
     {
@@ -2406,7 +2415,7 @@
      "inUniverse": null,
      "confidence": "low",
      "note": "Clarke's novel dates HAL's activation to 12 January 1992; some reference works give 1997. Either way the real 1990s produced nothing remotely like it — an early missed milestone of the branch.",
-     "bin": "emergence-of-new-actors",
+     "bin": "technological-watershed",
      "binWhy": "A new tool of immense power becomes operational."
     },
     {
@@ -2422,7 +2431,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "1994 is stated in Clarke's novel; the sequel 2010 implies the base is long established by 1999. Real history delivered no lunar base at all, then or since.",
-     "bin": "founding-of-a-settlement",
+     "bin": "interstellar-colonization",
      "binWhy": "Establishment of a permanent lunar outpost."
     },
     {
@@ -2438,7 +2447,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The excavation date comes from the shooting script and is contradicted by the sequel's 1999. Real 2001 came and went with no lunar base, no monolith and no signal, which is exactly what plotting this film on a real calendar shows.",
-     "bin": "the-truth-comes-out",
+     "bin": "first-contact",
      "binWhy": "Evidence of an external intelligence begins to operate."
     },
     {
@@ -2454,7 +2463,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The film's title card reads 'Jupiter Mission: 18 months later'; the early script had the launch in 2002, while 2010 dates the mission to 2001 (HAL's secret orders are dated 30 January 2001). This dataset follows the film's own 18-month spacing from the April 2001 signal.",
-     "bin": "dawn-of-exploration",
+     "bin": "deep-space-expedition",
      "binWhy": "First mission of this type into unknown territory."
     },
     {
@@ -2470,7 +2479,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Dated from the film's 18-month card plus the novel's stated transit time; the sequel's compressed chronology puts the same events in 2002.",
-     "bin": "technological-or-supernatural-ascendance",
+     "bin": "transhuman-breakthrough",
      "binWhy": "A human is transformed into a being of immense power."
     },
     {
@@ -2486,7 +2495,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The sequel's title year is stated on screen; the film follows the 2001 movie's Jupiter ending rather than the novel's Saturn one.",
-     "bin": "technological-catastrophe",
+     "bin": "deep-space-expedition",
      "binWhy": "Rejected mass-casualty-event because it focuses on the new sun's arrival."
     },
     {
@@ -2502,7 +2511,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Clarke's third novel is set in the year of Halley's Comet's return, fifty-one years after the Jupiter ignition.",
-     "bin": "the-truth-comes-out",
+     "bin": "deep-space-expedition",
      "binWhy": "Forbidden territory is entered for the first time."
     },
     {
@@ -2518,7 +2527,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Clarke's fourth novel (1997), never adapted to film; it is the branch's only reach past our own millennium.",
-     "bin": "emergence-of-new-actors",
+     "bin": "transhuman-breakthrough",
      "binWhy": "The makers of the monoliths begin to act directly."
     }
    ],
@@ -2571,7 +2580,7 @@
      "confidence": "medium",
      "note": "Novel continuity only, and male infertility rather than the film's female infertility; the film moves the same event to 2009 and the last child is Baby Diego. James calls 1995 'Year Omega'.",
      "historyContradicts": false,
-     "bin": "mass-casualty-event",
+     "bin": "systemic-collapse",
      "binWhy": "A biological catastrophe affecting all reproduction."
     },
     {
@@ -2602,7 +2611,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Inferred from the film's 'eighteen years of infertility' and Baby Diego's age of eighteen years and four months, which puts his birth in mid-2009; the novel's equivalent is the male infertility of 1995, so the year is contested across adaptations — but real 2009 delivered no such thing, which is the point of plotting it.",
-     "bin": null,
+     "bin": "systemic-collapse",
      "binWhy": "Biological end of reproduction affecting the whole species."
     },
     {
@@ -2618,7 +2627,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Novel continuity: the diary opens in January 2021 and the infertility dates from 1995. The film's equivalent birth happens in 2027 and is a girl, Kee's daughter.",
-     "bin": "pivotal-birth",
+     "bin": "messianic-birth",
      "binWhy": "The arrival of a child who symbolizes the return of hope."
     },
     {
@@ -2634,7 +2643,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The film never displays the year, but its own poster announces 'The year 2027: the last days of the human race. No child has been born for 18 years', and the opening news copy calls Diego's death a reminder of 'the 18 years of infertility'. Real 2027 is close, and no such crisis has happened.",
-     "bin": "pivotal-birth",
+     "bin": "messianic-birth",
      "binWhy": "The birth of the first child in 18 years."
     }
    ],
@@ -2672,7 +2681,7 @@
      "confidence": "medium",
      "note": "The landing is real history; the classroom revisionism is canon dialogue in the film, undated there but implied to be a product of the crisis decades.",
      "binWhy": "Note about historical revisionism, not a specific event.",
-     "bin": null
+     "bin": "authoritarian-consolidation"
     },
     {
      "id": "interstellar-film-released",
@@ -2702,7 +2711,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "From the film's line that the wormhole appeared '48 years ago' relative to its 2067 present; the 2019 anchor itself is Kip Thorne's own extrapolation in the tie-in book, not something Nolan put on screen. The real 2019 produced gravitational-wave catalogues and no wormhole — the branch's fork is already behind us.",
-     "bin": "the-truth-comes-out",
+     "bin": "first-contact",
      "binWhy": "A new route into unknown territory is found."
     },
     {
@@ -2718,7 +2727,7 @@
      "inUniverse": null,
      "confidence": "low",
      "note": "No year is spoken on screen; the onset in the 2030s is a reconstruction. The film supplies only relative escalation — by its 2067 present wheat has been gone 'seven years', okra that same year, and corn is all that is left.",
-     "bin": "economic-catastrophe",
+     "bin": "systemic-collapse",
      "binWhy": "Systemic failure that causes widespread hardship/population collapse."
     },
     {
@@ -2734,7 +2743,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Reconstructed from the film's on-screen statement that the Lazarus missions left ten years before its present; the twelve astronauts are led by Dr Mann, and only Miller, Mann and Edmunds are named.",
-     "bin": "dawn-of-exploration",
+     "bin": "deep-space-expedition",
      "binWhy": "First missions of a new type into unknown territory."
     },
     {
@@ -2750,7 +2759,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Derived, not stated: 2019 plus the on-screen '48 years'. The film displays no year, and the day-level dates circulating online are fan reconstruction, so only the year is given here.",
-     "bin": "dawn-of-exploration",
+     "bin": "deep-space-expedition",
      "binWhy": "The central mission departs for unknown worlds."
     },
     {
@@ -2766,7 +2775,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Dated from the on-screen two-year transit to Saturn (2067-69) plus the stated dilation; the film gives the loss as twenty-three years, four months and eight days.",
-     "bin": "mass-casualty-event",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "Rejected technological-catastrophe because time-dilation isn't a failure."
     },
     {
@@ -2783,7 +2792,7 @@
      "confidence": "medium",
      "note": "Derived from the on-screen 'twenty-three years, four months, eight days'; the same figure is why Murph's generation has grown up while Cooper has not aged.",
      "binWhy": "Specific story beat that doesn't represent a systemic shift.",
-     "bin": "epilogue-of-continuity"
+     "bin": "deep-space-expedition"
     },
     {
      "id": "interstellar-tesseract",
@@ -2798,7 +2807,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Derived from the on-screen line that the manoeuvre 'will cost us 51 years' (2092 + 51). The tesseract's builders are outside time, so the scene's own dating is necessarily Cooper's, not theirs.",
-     "bin": "technological-or-supernatural-ascendance",
+     "bin": "transhuman-breakthrough",
      "binWhy": "A future-human construct grants immense power over time."
     },
     {
@@ -2814,7 +2823,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Derived from the on-screen 'you are 124 years old'; a 13-year gap between the 2143 fall and this recovery is unexplained by the film, and the final montage of Brand alone on Edmunds' planet is undated.",
-     "bin": "epilogue-of-continuity",
+     "bin": "interstellar-colonization",
      "binWhy": "A person out of time awakens into a transformed society."
     },
     {
@@ -2830,7 +2839,7 @@
      "inUniverse": null,
      "confidence": "low",
      "note": "Flagged deliberately: the film says only that they are us, 'a civilization that's evolved past the four dimensions', and never dates them, so 2500 is a marker for the branch's deep-time reach rather than a canon figure. If a strict no-invention reading is preferred, this is the one event to drop, leaving T1 empty.",
-     "bin": "technological-or-supernatural-ascendance",
+     "bin": "transhuman-breakthrough",
      "binWhy": "Humanity evolves into beings with immense power over dimensions."
     }
    ],
@@ -2867,7 +2876,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Canon states roughly two billion years; this is the deep backstory that the whole branch eventually detonates, and the only pre-modern material the series has.",
-     "bin": "emergence-of-new-actors",
+     "bin": "first-contact",
      "binWhy": "The first action of a major group in the setting's history."
     },
     {
@@ -2898,7 +2907,7 @@
      "inUniverse": null,
      "confidence": "low",
      "note": "Design-guide date (the RPG says only 'the 2000s'). Real 2025 passed with robotic landers and the Artemis Accords and no permanent base — the branch's first missed milestone, and the reason this lineage is plottable against our own decade.",
-     "bin": "founding-of-a-settlement",
+     "bin": "interstellar-colonization",
      "binWhy": "Establishment of a permanent outpost."
     },
     {
@@ -2914,7 +2923,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Design-guide date; the novels give no year, only 'the 21st century' and 'about three generations' before the Epstein Drive.",
-     "bin": "founding-of-a-settlement",
+     "bin": "interstellar-colonization",
      "binWhy": "First permanent settlement on another planet."
     },
     {
@@ -2930,7 +2939,7 @@
      "inUniverse": null,
      "confidence": "low",
      "note": "Design-guide date; the same asteroid is later the site of the protomolecule catastrophe, which gives the early colonisation its retrospective weight.",
-     "bin": "founding-of-a-settlement",
+     "bin": "interstellar-colonization",
      "binWhy": "A new major permanent outpost."
     },
     {
@@ -2946,7 +2955,7 @@
      "inUniverse": null,
      "confidence": "low",
      "note": "Design-guide date; canon stresses that the split is generational rather than a single act, and the formal independence demand follows around 2200-2213.",
-     "bin": "prolonged-guerrilla-conflict",
+     "bin": "interminable-insurgency",
      "binWhy": "Beginning of a long-term struggle for independence."
     },
     {
@@ -2962,7 +2971,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Contested: on screen the drive is dated 137 years before the series' 2350s present (2213-14), the wiki's prose rounds it to c. 2213, and the TV design guide says 2200. The independence trade is dated to the same year in the wiki's reconstruction.",
-     "bin": "technological-or-supernatural-ascendance",
+     "bin": "technological-watershed",
      "binWhy": "A breakthrough creates a tool of immense power/utility."
     },
     {
@@ -2978,7 +2987,7 @@
      "inUniverse": null,
      "confidence": "low",
      "note": "Reconstructed from the wiki's era table; the novels describe the Belt's settlement in detail but never date it.",
-     "bin": "founding-of-a-settlement",
+     "bin": "interstellar-colonization",
      "binWhy": "Widespread establishment of new colonies."
     },
     {
@@ -2994,7 +3003,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "TV continuity: Avasarala dates it 'forty years' before the series' 2350s present.",
-     "bin": "state-curtails-freedom",
+     "bin": "decisive-military-victory",
      "binWhy": "Governmental action to restrict activities of a specific group."
     },
     {
@@ -3010,7 +3019,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The novels place it four years before the 2340 Pallas revolt, which is a decade before Leviathan Wakes, so c. 2336; the TV continuity's table gives 2339.",
-     "bin": "mass-casualty-event",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "A sudden attack kills a large number of people."
     },
     {
@@ -3026,7 +3035,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Design-guide/wiki dating (the books' relative era 0-1 XTE corresponds to c. 2342-43); the Mars-Protogen base on Phoebe follows in 2345.",
-     "bin": "the-truth-comes-out",
+     "bin": "first-contact",
      "binWhy": "A new substance/agent begins operating within human society."
     },
     {
@@ -3042,7 +3051,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The series never prints a year: 2350 comes from the authors' original RPG (named 2350), the wiki's reconstruction and ScreenRant's timeline; the official RPG map is marked 2351 because it is set in the gap between books one and two.",
-     "bin": "mass-casualty-event",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "Destruction of ships and stations results in massive deaths."
     },
     {
@@ -3058,7 +3067,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "TV dating (ring forms 2352, fleet arrives 2353, '187 days later'); the books' Abaddon's Gate corresponds to c. 2354, so the books run a year or two later than the show.",
-     "bin": "dawn-of-exploration",
+     "bin": "first-contact",
      "binWhy": "A new type of mission/entry into thousands of systems."
     },
     {
@@ -3074,7 +3083,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "TV: the strikes fall in 2355 and the Free Navy war ends in late 2356; the novels' Nemesis Games and Babylon's Ashes cover the same ground c. 2359-60.",
-     "bin": "mass-casualty-event",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "An attack kills millions of people."
     },
     {
@@ -3090,7 +3099,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Persepolis Rising jumps 'thirty years' past Babylon's Ashes; the wiki's reconstruction lands c. 2390, with Tiamat's Wrath c. 2393-94 and Leviathan Falls c. 2395.",
-     "bin": "decisive-military-victory",
+     "bin": "regime-overthrow",
      "binWhy": "A military regime seizes control of the gate network."
     },
     {
@@ -3106,7 +3115,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Leviathan Falls (2021); the year is reconstructed from the wiki's relative chronology, not printed in the novel.",
-     "bin": "technological-catastrophe",
+     "bin": "systemic-collapse",
      "binWhy": "Failure of the gate network destabilizes civilization."
     },
     {
@@ -3122,7 +3131,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Wikipedia's plot summary states the epilogue is set a thousand years after Leviathan Falls and that the gate collapse stranded 1,300 colony systems; the novel prints no year, so c. 3395 is arithmetic from the reconstruction above.",
-     "bin": "diplomatic-normalization",
+     "bin": "interstellar-confederation",
      "binWhy": "Former colonies reconcile and establish contact."
     }
    ],
@@ -3161,7 +3170,7 @@
      "inUniverse": "25,000 BBY",
      "confidence": "medium",
      "note": "No film dates this. Printed reference books and the current canon chronology both give c. 25,000 BBY; a web-only Legends figure of 25,053 BBY is noted in the divergence note.",
-     "bin": "interstate-unification",
+     "bin": "interstellar-confederation",
      "binWhy": "Member worlds found a Republic; similar to Federation founding."
     },
     {
@@ -3177,7 +3186,7 @@
      "inUniverse": "c. 1,032 BBY (canon); 1,000 BBY (Legends)",
      "confidence": "low",
      "note": "Contested across canon levels. Canon dates the end of the Jedi-Sith War and the restoration of the modern Republic to 1,032 BBY (Star Wars: Timelines; The Star Wars Book) but gives the Ruusan Reformations no date at all; Legends reference books date the Reformations to 1,000 BBY, where the Republic Measures and Standards Bureau reset the calendar's year zero to the battle. I use the canon 1,032 BBY, which converts to 945 CE; the Legends date would be 977 CE.",
-     "bin": "state-curtails-freedom",
+     "bin": "institutional-proscription",
      "binWhy": "The government passes laws to restrict powers and disarm."
     },
     {
@@ -3193,7 +3202,8 @@
      "inUniverse": "232 BBY",
      "confidence": "medium",
      "note": "Date from the Star Wars: The High Republic publishing initiative (2021 onwards), which is canon but set two centuries before the films; nothing in the nine-film saga references it.",
-     "binWhy": "Description of an era's zenith, not a specific moment."
+     "binWhy": "Description of an era's zenith, not a specific moment.",
+     "bin": "deep-space-expedition"
     },
     {
      "id": "sw-invasion-of-naboo",
@@ -3208,7 +3218,7 @@
      "inUniverse": "32 BBY",
      "confidence": "high",
      "note": "",
-     "bin": "power-vacuum",
+     "bin": "authoritarian-consolidation",
      "binWhy": "Replaced with emergence-of-new-actors; fits because a blockade curtails freedom."
     },
     {
@@ -3224,7 +3234,7 @@
      "inUniverse": "22 BBY",
      "confidence": "high",
      "note": "",
-     "bin": "prolonged-guerrilla-conflict",
+     "bin": "authoritarian-consolidation",
      "binWhy": "While engineered, it is described as an open, large-scale war."
     },
     {
@@ -3240,7 +3250,7 @@
      "inUniverse": "19 BBY",
      "confidence": "high",
      "note": "Order 66, the Great Jedi Purge and the Proclamation of the New Order are all dated 19 BBY by Star Wars: Timelines and Star Wars: Galactic Atlas.",
-     "bin": "state-curtails-freedom",
+     "bin": "regime-overthrow",
      "binWhy": "The mass assassination of the Jedi shifts the timeline/regime."
     },
     {
@@ -3256,7 +3266,7 @@
      "inUniverse": "2 BBY",
      "confidence": "high",
      "note": "Star Wars Rebels, 'Secret Cargo' (2017), dates the declaration to 2 BBY.",
-     "bin": "interstate-unification",
+     "bin": "interstellar-confederation",
      "binWhy": "Delegates sign a treaty to form a political alliance."
     },
     {
@@ -3272,7 +3282,7 @@
      "inUniverse": "1 BBY",
      "confidence": "low",
      "note": "One of the few genuinely odd places in Star Wars dating. Star Wars: Galactic Atlas: Updated Edition (2025) and Timelines (2023) put Alderaan's destruction in 1 BBY and the Battle of Yavin in year 0, even though in the story the two are days apart; the 2016 Galactic Atlas and the Legends continuity put both in 0 BBY. I follow the current canon numbering and keep them as separate years, which is why they are two events here rather than one.",
-     "bin": "mass-casualty-event",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "A sudden attack kills a large number of people."
     },
     {
@@ -3304,7 +3314,7 @@
      "inUniverse": "3 ABY",
      "confidence": "high",
      "note": "",
-     "bin": "the-war-is-lost",
+     "bin": "decisive-military-victory",
      "binWhy": "The traditional protagonists are routed and defeated."
     },
     {
@@ -3320,7 +3330,7 @@
      "inUniverse": "4 ABY",
      "confidence": "high",
      "note": "",
-     "bin": "power-vacuum",
+     "bin": "regime-overthrow",
      "binWhy": "The conflict is resolved with the death of the leader."
     },
     {
@@ -3336,7 +3346,7 @@
      "inUniverse": "5 ABY",
      "confidence": "high",
      "note": "Battle of Jakku and Galactic Concordance both dated 5 ABY (Star Wars: Galactic Atlas; Star Wars: Timelines); Lost Stars puts the Empire's final defeat one year and four days after Endor.",
-     "bin": "decisive-military-victory",
+     "bin": "regime-overthrow",
      "binWhy": "The last great fleet is destroyed, ending the war."
     },
     {
@@ -3352,7 +3362,7 @@
      "inUniverse": "29 ABY",
      "confidence": "medium",
      "note": "Inferred: The Rise of Skywalker: The Visual Dictionary says the First Order was publicly formed five years before the Starkiller Incident, which Star Wars: Galactic Atlas dates to 34 ABY. Star Wars: Timelines dates the First Order's establishment to 21 ABY.",
-     "bin": "emergence-of-new-actors",
+     "bin": "authoritarian-consolidation",
      "binWhy": "A reorganized group goes public and begins operating."
     },
     {
@@ -3368,7 +3378,7 @@
      "inUniverse": "34 ABY",
      "confidence": "high",
      "note": "Hosnian Cataclysm and Battle of Starkiller Base both dated 34 ABY by Star Wars: Galactic Atlas.",
-     "bin": "mass-casualty-event",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "Destruction of the capital system kills millions suddenly."
     }
    ],
@@ -3405,7 +3415,7 @@
      "inUniverse": "1992–1996",
      "confidence": "low",
      "note": "Genuinely contested across canon levels. TOS 'Space Seed' (1967) dates the Eugenics Wars to the 1990s, which real history has now falsified; DS9 'Doctor Bashir, I Presume?' moves them to the 22nd century, and Star Trek: Strange New Worlds (2022) places a young Khan in the 2020s. The 1990s date is the original and best-known reading, and it is the earliest point at which the fiction's Earth stops matching ours.",
-     "bin": "prolonged-guerrilla-conflict",
+     "bin": "regime-overthrow",
      "binWhy": "War involving nuclear and genetic weapons killing millions."
     },
     {
@@ -3421,7 +3431,7 @@
      "inUniverse": "2024",
      "confidence": "high",
      "note": "DS9 'Past Tense' (1995) named 2024 as the year; the date has since passed in real history without the events depicted, which makes it a clean marker of how far the branch has already drifted.",
-     "bin": null,
+     "bin": "systemic-collapse",
      "binWhy": "Rejection of sanctuary-districts; fits state curtailment of movement/rights."
     },
     {
@@ -3437,7 +3447,7 @@
      "inUniverse": "2026–2053, post-atomic horror to 2079",
      "confidence": "high",
      "note": "Dated by ENT 'In a Mirror, Darkly' and Star Trek: First Contact, which place the war in the 2026–2053 window; TOS had earlier put it in the 1990s.",
-     "bin": "mass-casualty-event",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "A sudden disaster/war kills a large number of people."
     },
     {
@@ -3453,7 +3463,7 @@
      "inUniverse": "5 April 2063",
      "confidence": "high",
      "note": "Star Trek: First Contact (1996). The date is April 5, fixed on screen and by the in-universe holiday First Contact Day.",
-     "bin": null,
+     "bin": "first-contact",
      "binWhy": "Rejected diplomatic-normalization as it involves a new species, not enemies."
     },
     {
@@ -3469,7 +3479,7 @@
      "inUniverse": "2069",
      "confidence": "high",
      "note": "ENT 'Terra Nova' (2001).",
-     "bin": "founding-of-a-settlement",
+     "bin": "interstellar-colonization",
      "binWhy": "Rejected pivotal-birth; this is about a colony, not a person."
     },
     {
@@ -3485,7 +3495,7 @@
      "inUniverse": "2151",
      "confidence": "high",
      "note": "",
-     "bin": "dawn-of-exploration",
+     "bin": "deep-space-expedition",
      "binWhy": "Rejected emergence-of-new-actors; this is about an expedition's launch."
     },
     {
@@ -3501,7 +3511,7 @@
      "inUniverse": "2156–2160",
      "confidence": "high",
      "note": "The four-year span is established by the Okuda chronology and referenced on screen; the war itself has never been dramatised in full, so its internal events are largely unchronicled.",
-     "bin": "prolonged-guerrilla-conflict",
+     "bin": "interminable-insurgency",
      "binWhy": "Replaced with decisive-military-victory because it reached a stalemate."
     },
     {
@@ -3517,7 +3527,7 @@
      "inUniverse": "2161",
      "confidence": "high",
      "note": "",
-     "bin": "interstate-unification",
+     "bin": "interstellar-confederation",
      "binWhy": "Rejected diplomatic-normalization; this creates a new state entirely."
     },
     {
@@ -3533,7 +3543,7 @@
      "inUniverse": "2233 (Kelvin timeline)",
      "confidence": "high",
      "note": "A distinct in-universe branch, not the lineage's divergence: its cause is the 2387 Hobus event listed below, which lies later in the prime timeline's own order. Star Trek (2009).",
-     "bin": "mass-casualty-event",
+     "bin": "temporal-incursion",
      "binWhy": "Death of a key individual (George Kirk) forks the timeline."
     },
     {
@@ -3549,7 +3559,7 @@
      "inUniverse": "2265–2270 (stardates 1000–6146)",
      "confidence": "high",
      "note": "TOS itself gave only stardates; the 2265–2270 span is the standard Okuda chronology, now effectively canon.",
-     "bin": "dawn-of-exploration",
+     "bin": "deep-space-expedition",
      "binWhy": "The launch of a mission of exploration into the unknown."
     },
     {
@@ -3565,7 +3575,7 @@
      "inUniverse": "2293 (stardate 9521.6)",
      "confidence": "high",
      "note": "Star Trek VI: The Undiscovered Country (1991).",
-     "bin": "diplomatic-normalization",
+     "bin": "interstellar-confederation",
      "binWhy": "Former enemies reconcile through a formal treaty."
     },
     {
@@ -3581,7 +3591,8 @@
      "inUniverse": "2364 (stardate 41153.7)",
      "confidence": "high",
      "note": "",
-     "binWhy": "Description of a status quo, not a specific moment."
+     "binWhy": "Description of a status quo, not a specific moment.",
+     "bin": "deep-space-expedition"
     },
     {
      "id": "st-dominion-war",
@@ -3612,7 +3623,7 @@
      "inUniverse": "2387",
      "confidence": "high",
      "note": "Star Trek (2009) opens here; Star Trek: Picard shows the political aftermath.",
-     "bin": "mass-casualty-event",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "A sudden disaster destroys a homeworld and its population."
     },
     {
@@ -3628,7 +3639,7 @@
      "inUniverse": "3069",
      "confidence": "high",
      "note": "Star Trek: Discovery season 3 (2020); the cause is revealed as a Kelpien's grief-driven psychic shock.",
-     "bin": "technological-catastrophe",
+     "bin": "systemic-collapse",
      "binWhy": "Rejected economic-catastrophe; the cause is a physical technological failure."
     },
     {
@@ -3644,7 +3655,8 @@
      "inUniverse": "3189",
      "confidence": "high",
      "note": "Star Trek: Discovery seasons 3–5 (2020–2024).",
-     "binWhy": "Note about a setting/era, not a specific moment."
+     "binWhy": "Note about a setting/era, not a specific moment.",
+     "bin": "interstellar-confederation"
     }
    ],
    "groupingNote": "The archetype's cleanest and most load-bearing case: a founding rupture in our own measurable future, after which the fiction's history is simply our history continued — no new calendar, no conversion, just the real years 2063, 2161, 2265, 2293 and onward. It is the group's optimistic pole: the far future here is a federation of species rather than an empire, and it is the one branch whose deep time (the 32nd century) is still recognisably descended from our own institutions. Tier coverage is lopsided by construction rather than by omission: the lineage has no T4 events at all, because before 1900 its history is literally our history — the fiction adds nothing to the record until the Eugenics Wars of the 1990s. Its mass sits in T2 (2000–2300), which is exactly where a 1960s television future put its first contact, its Romulan War and its Federation, and it reaches T1 only with the 24th century and beyond."
@@ -3680,7 +3692,7 @@
      "inUniverse": "8,000 BC",
      "confidence": "low",
      "note": "Dated to c. 8,000 BC by Realm of Chaos: The Lost and the Damned (1990), a first-edition supplement still cited by current reference works, which note it is more than 48,000 years before M41. Warhammer 40,000: Rogue Trader (1987) instead says 'over ten thousand years ago', a contradiction the wikis flag; hence low confidence.",
-     "bin": "pivotal-birth",
+     "bin": "messianic-birth",
      "binWhy": "The birth of a being destined to lead humanity for millennia."
     },
     {
@@ -3711,7 +3723,7 @@
      "inUniverse": "M15",
      "confidence": "medium",
      "note": "Start date disputed across editions (M15 in the 6th-edition rulebook; M21 in the 3rd-edition 'Keeper Cripias' account), and the Age of Terra is variously said to end in M15 or M18. M15 is the current-canon reading.",
-     "bin": "dawn-of-exploration",
+     "bin": "technological-watershed",
      "binWhy": "Humanity invents new tech and spreads across the galaxy."
     },
     {
@@ -3727,7 +3739,7 @@
      "inUniverse": "M23",
      "confidence": "medium",
      "note": "Lexicanum dates the revolt to M23; other passages place it at the end of the Dark Age of Technology, c. M25. No finer date exists anywhere in the lore.",
-     "bin": "technological-catastrophe",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "Thinking machines turn on masters, leading to a permanent ban on AI."
     },
     {
@@ -3743,7 +3755,7 @@
      "inUniverse": "M25-M30",
      "confidence": "medium",
      "note": "Lexicanum and the 6th-edition rulebook begin the Age of Strife in M25; the 3rd-edition 'Keeper Cripias' account says M26. It ends in M30.",
-     "bin": "economic-catastrophe",
+     "bin": "systemic-collapse",
      "binWhy": "Interstellar civilization collapses and worlds are isolated due to systemic failure."
     },
     {
@@ -3759,7 +3771,7 @@
      "inUniverse": "M30 (early)",
      "confidence": "low",
      "note": "No source gives a year for the Fall, only a millennium: Fandom places it early in the 30th millennium, Lexicanum's timeline files it under M30, and one page has Slaanesh awaking in the 29th millennium. 29,100 is a placeholder inside the M30 window, not a date.",
-     "bin": "mass-casualty-event",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "The birth of a god destroys homeworlds and kills trillions."
     },
     {
@@ -3775,7 +3787,7 @@
      "inUniverse": "712.M30",
      "confidence": "high",
      "note": "Dateline given by Lexicanum and by Games Workshop's own Horus Heresy timeline; the wars began in the late M29 or early M30.",
-     "bin": "interstate-unification",
+     "bin": "decisive-military-victory",
      "binWhy": "The last opposing states are destroyed, unifying the planet under one ruler."
     },
     {
@@ -3791,7 +3803,7 @@
      "inUniverse": "739.M30",
      "confidence": "high",
      "note": "",
-     "bin": "interstate-unification",
+     "bin": "interstellar-confederation",
      "binWhy": "Two major powers sign a treaty to form a single empire."
     },
     {
@@ -3807,7 +3819,7 @@
      "inUniverse": "798.M30",
      "confidence": "high",
      "note": "",
-     "bin": "decisive-military-victory",
+     "bin": "interstellar-colonization",
      "binWhy": "A mission to rediscover and reunite scattered worlds begins."
     },
     {
@@ -3823,7 +3835,7 @@
      "inUniverse": "005.M31",
      "confidence": "high",
      "note": "Lexicanum dates the Heresy 005.M31-014.M31 and labels the dates approximate; Games Workshop's own timeline has the Isstvan III betrayal running 005-006.M31.",
-     "bin": "prolonged-guerrilla-conflict",
+     "bin": "succession-struggle",
      "binWhy": "Rejected the-war-is-lost; it is the start of a long civil war."
     },
     {
@@ -3839,7 +3851,7 @@
      "inUniverse": "014.M31",
      "confidence": "high",
      "note": "",
-     "bin": "power-vacuum",
+     "bin": "decisive-military-victory",
      "binWhy": "The conflict ends with the leader entombed and the mission failed."
     },
     {
@@ -3855,7 +3867,7 @@
      "inUniverse": "544.M32",
      "confidence": "high",
      "note": "",
-     "bin": "the-war-is-lost",
+     "bin": "decisive-military-victory",
      "binWhy": "The survival of the state leads to a violent reshaping of institutions."
     },
     {
@@ -3871,7 +3883,7 @@
      "inUniverse": "c. 200.M36",
      "confidence": "medium",
      "note": "Lexicanum dates the Age of Apostasy to M36 only; the ca. 200.M36 start of the Reign of Blood comes from the Fandom timeline. Finer precision does not exist.",
-     "bin": "state-curtails-freedom",
+     "bin": "authoritarian-consolidation",
      "binWhy": "A leader seizes spiritual/temporal power, causing internal religious strife."
     },
     {
@@ -3887,7 +3899,7 @@
      "inUniverse": "999.M41",
      "confidence": "high",
      "note": "",
-     "bin": "mass-casualty-event",
+     "bin": "systemic-collapse",
      "binWhy": "A major stronghold is broken and a rift splits the galaxy."
     },
     {
@@ -3903,7 +3915,7 @@
      "inUniverse": "012.M42",
      "confidence": "medium",
      "note": "The Plague Wars are dated ca. 012.M42 in the Dark Imperium novel; the Indomitus Crusade's length was retconned in 2021 from about a century to about twelve years, and Games Workshop still bills the setting as 'the 41st Millennium', so 'M42' is a wiki convenience: the Chronostrife makes the present deliberately undecidable.",
-     "bin": "prolonged-guerrilla-conflict",
+     "bin": "interminable-insurgency",
      "binWhy": "A series of wars in which the state struggles to hold territory."
     }
    ],
@@ -3940,7 +3952,8 @@
      "inUniverse": "14,255 B.G. (Dune Encyclopedia)",
      "confidence": "low",
      "note": "Non-canon and internally shaky: the Encyclopedia's Terran anchors imply a calendar epoch of 16,100 CE from the 1588 entry and 16,200 CE from the 1945 entry. Its inclusion here is deliberate - it is the single thread tying this branch back to our era - but no canon source dates Earth history at all.",
-     "binWhy": "This is a chronological note about how dates are derived, not a moment in a story."
+     "binWhy": "This is a chronological note about how dates are derived, not a moment in a story.",
+     "bin": "technological-watershed"
     },
     {
      "id": "dune-published",
@@ -3970,7 +3983,7 @@
      "inUniverse": "201 B.G. - 108 B.G.",
      "confidence": "low",
      "note": "The in-universe dates are canon (the novel's own glossary dates the Jihad 201-108 B.G.); the real-world year is the projection described in the divergence note.",
-     "bin": "prolonged-guerrilla-conflict",
+     "bin": "institutional-proscription",
      "binWhy": "Rejected mass-casualty-event; focuses on the societal shift against thinking machines."
     },
     {
@@ -4002,7 +4015,7 @@
      "inUniverse": "0 A.G.",
      "confidence": "medium",
      "note": "The epoch is canon by definition (novel glossary: 'The Guild monopoly ... is taken as the beginning point of the Imperial Calendar'). The Dune Encyclopedia adds that the Guild existed as an organisation from 78 B.G., so the monopoly and the founding are different events.",
-     "bin": "emergence-of-new-actors",
+     "bin": "interstellar-confederation",
      "binWhy": "Rejected economic-catastrophe; establishes a universal charter and central commercial authority."
     },
     {
@@ -4018,7 +4031,7 @@
      "inUniverse": "10,191 A.G.",
      "confidence": "medium",
      "note": "10,191 A.G. is canon: Appendix IV dates Leto I (10,140-10,191) and the novel's chapter epigraphs give the same year. The real year is projected.",
-     "bin": "power-vacuum",
+     "bin": "regime-overthrow",
      "binWhy": "The destruction of the ruling house creates a systemic collapse and leadership struggle."
     },
     {
@@ -4034,7 +4047,7 @@
      "inUniverse": "10,196 A.G.",
      "confidence": "low",
      "note": "The A.G. year comes from the Dune Encyclopedia and wiki chronologies, not from the novel, which gives only the sequence; the real year inherits that plus the projection.",
-     "bin": "the-war-is-lost",
+     "bin": "regime-overthrow",
      "binWhy": "The existing order is defeated and its settlement is broken."
     },
     {
@@ -4050,7 +4063,7 @@
      "inUniverse": "10,208-10,210 A.G.",
      "confidence": "low",
      "note": "The twelve-year interval is stated in the novel; the A.G. years are reference-book reconstructions.",
-     "bin": "assassination-alters-history",
+     "bin": "succession-struggle",
      "binWhy": "A conspiracy successfully breaks and removes the leader from power."
     },
     {
@@ -4066,7 +4079,7 @@
      "inUniverse": "10,219 A.G.",
      "confidence": "low",
      "note": "Nine years after Dune Messiah per the novel; the A.G. year is a reference-book reconstruction.",
-     "bin": "technological-or-supernatural-ascendance",
+     "bin": "transhuman-breakthrough",
      "binWhy": "A character undergoes a metamorphosis to become a near-immortal, powerful ruler."
     },
     {
@@ -4082,7 +4095,7 @@
      "inUniverse": "13,724 A.G.",
      "confidence": "low",
      "note": "The 3,500-year reign is canon; the end year is not agreed - the Dune Encyclopedia has 13,724, wiki chronologies 13,727-13,728, and 10,219 plus 3,500 gives 13,719. Herbert's own books also contain a contradictory epigraph ('ten thousand years since Leto II began his metamorphosis') in Heretics.",
-     "bin": "power-vacuum",
+     "bin": "assassination-divergence",
      "binWhy": "The death of a long-term leader triggers mass migration and societal fragmentation."
     },
     {
@@ -4098,7 +4111,7 @@
      "inUniverse": "15,229 A.G.",
      "confidence": "low",
      "note": "The 1,500-year interval is stated in reference material; the A.G. year is wiki-derived.",
-     "bin": "emergence-of-new-actors",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "Rejected decsive-military-victory; describes an external force initiating a violent struggle."
     },
     {
@@ -4114,7 +4127,7 @@
      "inUniverse": "15,240 A.G.",
      "confidence": "low",
      "note": "Weakest date in the lineage: wiki-derived only.",
-     "bin": "founding-of-a-settlement",
+     "bin": "interminable-insurgency",
      "binWhy": "The characters begin building a new world and organization from scratch."
     }
    ],
@@ -4166,7 +4179,7 @@
      "inUniverse": "1 G.E.",
      "confidence": "low",
      "note": "Real year projected; the identification of G.E. 1 with the Empire's founding is reference-work inference, not an Asimov statement.",
-     "bin": "interstate-unification",
+     "bin": "interstellar-confederation",
      "binWhy": "Multiple systems become a single empire under one crown and calendar."
     },
     {
@@ -4182,7 +4195,7 @@
      "inUniverse": "827 G.E.",
      "confidence": "medium",
      "note": "The numeral is in the text ('in the Year of the Galactic Era 827'), which makes the in-universe date unusually solid; the real year is projected. The same novel is internally inconsistent, having a character estimate he was thrown 50,000 years forward.",
-     "bin": "pivotal-birth",
+     "bin": "temporal-incursion",
      "binWhy": "Rejected mass-casualty-event; focuses on a character discovering a forgotten world."
     },
     {
@@ -4198,7 +4211,7 @@
      "inUniverse": "12,020 G.E.",
      "confidence": "low",
      "note": "12,020 G.E. is Prelude's date. An early draft of the research brief attributed it to 'The Encyclopedists'; it belongs here, and the Encyclopedists belong at 50 F.E.",
-     "bin": "emergence-of-new-actors",
+     "bin": "technological-watershed",
      "binWhy": "A new science and its practitioners become visible and threatening to the state."
     },
     {
@@ -4214,7 +4227,7 @@
      "inUniverse": "12,067 G.E. (-2 F.E.)",
      "confidence": "medium",
      "note": "The anchor is printed in the novel's own epigraph: Seldon 'born in the 11,988th year of the Galactic Era; died 12,069', the latter given as 'the year 1 F.E.'. The trial's year, 12,067, is the standard reading (Wikipedia and the chronologies agree). Real year projected.",
-     "bin": "founding-of-a-settlement",
+     "bin": "institutional-proscription",
      "binWhy": "A group is exiled to establish a new outpost at the rim."
     },
     {
@@ -4230,7 +4243,7 @@
      "inUniverse": "50 F.E. (c. 12,118 G.E.)",
      "confidence": "medium",
      "note": "The story prints no G.E. numeral, only 'fifty years' since the Foundation was established; 50 F.E. follows from the epigraph's 1 F.E. = 12,069 G.E. The brief's 'The Encyclopedists opens around 12,020 G.E.' is a mix-up: 12,020 is Prelude to Foundation, and 12,050 G.E. has no Encyclopedists connection in any source.",
-     "bin": "diplomatic-normalization",
+     "bin": "decisive-military-victory",
      "binWhy": "Rejected decisive-military-victory; the crisis is resolved through political maneuvering."
     },
     {
@@ -4246,7 +4259,7 @@
      "inUniverse": "80 F.E.",
      "confidence": "low",
      "note": "The F.E. year is fan-chronology rather than text; real year projected.",
-     "bin": "technological-or-supernatural-ascendance",
+     "bin": "regime-overthrow",
      "binWhy": "Religion becomes the new mechanism for control over barbarian neighbors."
     },
     {
@@ -4262,7 +4275,7 @@
      "inUniverse": "310 F.E.",
      "confidence": "low",
      "note": "Fan-chronology year; real year projected.",
-     "bin": "assassination-alters-history",
+     "bin": "regime-overthrow",
      "binWhy": "A mutant with powers outside normal prediction conquers the existing powers."
     },
     {
@@ -4278,7 +4291,7 @@
      "inUniverse": "376-377 F.E.",
      "confidence": "low",
      "note": "Fan-chronology year; real year projected.",
-     "bin": "the-truth-comes-out",
+     "bin": "assassination-divergence",
      "binWhy": "A hidden group is located and its role in the plan is revealed."
     },
     {
@@ -4294,7 +4307,7 @@
      "inUniverse": "498 F.E.",
      "confidence": "low",
      "note": "Wikipedia dates the novel 'five hundred years after the establishment of the Foundation'; the F.E. numeral is fan-chronology.",
-     "bin": "technological-or-supernatural-ascendance",
+     "bin": "transhuman-breakthrough",
      "binWhy": "A collective group mind is chosen as the species' future."
     },
     {
@@ -4310,7 +4323,7 @@
      "inUniverse": "499 F.E.",
      "confidence": "low",
      "note": "The 'twenty thousand years' is the novel's own wording - 'twenty thousand perhaps - since the people of the Galaxy have concerned themselves with Earth' - and it is the line that welds the Robot novels to the Foundation era, and therefore the line that makes Asimov's published 35,000 CE projection irreconcilable with the 1982-86 merger.",
-     "bin": "the-truth-comes-out",
+     "bin": "first-contact",
      "binWhy": "The discovery that a hidden actor has been guiding humanity for millennia."
     },
     {
@@ -4328,7 +4341,7 @@
      "note": "Not a depicted event: this is psychohistory's own projection, the far end of the plan, included because it is the only date the fiction sets for its own future.",
      "historyContradicts": false,
      "binWhy": "A note about the end of a plan in stories that were never written.",
-     "bin": "interstate-unification"
+     "bin": null
     }
    ],
    "groupingNote": "The archetype's 'history as engineering' case: an empire twelve thousand years old, a science that predicts its fall, and a plan to shorten thirty thousand years of barbarism to one thousand. It belongs here because its whole drama is the shape of a galactic civilisation's decline, and because its calendar is pure far-future: Galactic Era 1 is the founding of the Galactic Empire, and no Asimov text gives a real-world year for it, so every date here is a projection and is labelled as one. The projection used is the only one Asimov himself published - his 1955 notebook chart, which puts the Empire at about 35,000 CE, Seldon's birth at about 47,000 and the Second Empire at 48,000 - and it is corroborated twice by in-universe numerals (Seldon born 11,988 G.E.; 1 F.E. = 12,069 G.E.). It cannot be reconciled with the Robot/Foundation merger of 1982-86, which implies G.E. 1 at about 11,600-12,100 CE; that alternative belongs in a different row and is recorded in the divergence note rather than averaged in. Tier coverage reflects the projection: one T3 event (the 1942 first publication, the lineage's only real-world event), no T4 and no T2 events at all, and everything else in T1 between 35,000 and 48,000 CE. The fiction is silent about our own era by construction - its Earth survives only as a radioactive legend at the galaxy's edge, and no book dates it - which is why the lineage's contact with real history is a magazine issue rather than an event."
@@ -7010,112 +7023,112 @@
  ],
  "bins": [
   {
-   "id": "economic-catastrophe",
-   "label": "economic catastrophe",
-   "definition": "A systemic financial failure that destabilizes society and causes widespread hardship.",
+   "id": "systemic-collapse",
+   "label": "Systemic Collapse",
+   "definition": "An economic, environmental, or social catastrophe destabilises a civilization's existing order.",
    "createdFrom": "tmithc-crash-1929"
   },
   {
-   "id": "assassination-alters-history",
-   "label": "assassination alters history",
-   "definition": "A successful or failed assassination of a leader shifts the timeline.",
+   "id": "assassination-divergence",
+   "label": "Assassination Or Attempt",
+   "definition": "A targeted killing or political assassination alters historical trajectory.",
    "createdFrom": "tmithc-zangara-miami"
   },
   {
-   "id": "the-war-is-lost",
-   "label": "the war is lost",
-   "definition": "A major conflict concludes with the defeat of the traditional protagonist-aligned power.",
+   "id": "regime-overthrow",
+   "label": "Regime Overthrow",
+   "definition": "A governing power or alliance falls to conquerors or internal transformation.",
    "createdFrom": "tmithc-axis-victory-1947"
   },
   {
-   "id": "power-vacuum",
-   "label": "power vacuum",
-   "definition": "The death or incapacity of a leader triggers a struggle for control.",
+   "id": "succession-struggle",
+   "label": "Succession Struggle",
+   "definition": "The death or incapacitation of a leader triggers a fight for power.",
    "createdFrom": "tmithc-succession-crisis"
   },
   {
-   "id": "emergence-of-new-actors",
-   "label": "emergence of new actors",
-   "definition": "A new category of individual or group begins operating within society.",
+   "id": "vigilante-emergence",
+   "label": "Emergence Of Vigilantes",
+   "definition": "Costumed or extralegal individuals emerge outside normal civil authority.",
    "createdFrom": "wm-minutemen-era-begins"
   },
   {
-   "id": "technological-or-supernatural-ascendance",
-   "label": "technological or supernatural ascendance",
-   "definition": "A breakthrough or event creates a being or tool of immense power.",
+   "id": "transhuman-breakthrough",
+   "label": "Transhuman Breakthrough",
+   "definition": "A sapient being transcends normal mortal or physical biological limits.",
    "createdFrom": "wm-doctor-manhattan"
   },
   {
    "id": "decisive-military-victory",
-   "label": "decisive military victory",
-   "definition": "A conflict is resolved quickly and completely by one side.",
+   "label": "Decisive Military Victory",
+   "definition": "An armed conflict ends swiftly through overwhelming strategic force.",
    "createdFrom": "wm-vietnam-won"
   },
   {
-   "id": "state-curtails-freedom",
-   "label": "state curtails freedom",
-   "definition": "A government passes laws to restrict or outlaw a specific group's activities.",
+   "id": "institutional-proscription",
+   "label": "Institutional Proscription",
+   "definition": "The state passes laws outlawing or suppressing a faction or practice.",
    "createdFrom": "wm-keene-act"
   },
   {
-   "id": "mass-casualty-event",
-   "label": "mass casualty event",
-   "definition": "A sudden disaster or attack kills a large number of people.",
+   "id": "catastrophic-mass-destruction",
+   "label": "Catastrophic Mass Destruction",
+   "definition": "A sudden mass-casualty disaster strikes a major population center.",
    "createdFrom": "wm-1985-the-knife-edge"
   },
   {
-   "id": "prolonged-guerrilla-conflict",
-   "label": "prolonged guerrilla conflict",
-   "definition": "A war devolves into a long-term, indecisive, and bloody insurgency.",
+   "id": "authoritarian-consolidation",
+   "label": "Authoritarian Consolidation",
+   "definition": "A leader or faction legally dismantles democratic checks to secure dictatorship.",
+   "createdFrom": "fl-hitler-seizes-power"
+  },
+  {
+   "id": "interminable-insurgency",
+   "label": "Interminable Insurgency",
+   "definition": "A protracted asymmetric conflict grinds on without decisive resolution.",
    "createdFrom": "fl-war-of-the-urals"
   },
   {
-   "id": "diplomatic-normalization",
-   "label": "diplomatic normalization",
-   "definition": "Former enemies attempt to reconcile through state visits or treaties.",
-   "createdFrom": "fl-auschwitz-erased"
+   "id": "technological-watershed",
+   "label": "Technological Watershed",
+   "definition": "The invention or first test of a transformative technological capability.",
+   "createdFrom": "term-trinity-1945"
   },
   {
-   "id": "pivotal-birth",
-   "label": "pivotal birth",
-   "definition": "The arrival of an individual destined to play a central role.",
+   "id": "temporal-incursion",
+   "label": "Temporal Incursion",
+   "definition": "Agents or entities travel through time, intruding on a historical era.",
+   "createdFrom": "term-arrival-1984"
+  },
+  {
+   "id": "messianic-birth",
+   "label": "Destined Birth",
+   "definition": "A figure prophesied or destined to lead a faction is born.",
    "createdFrom": "term-john-connor-born"
   },
   {
-   "id": "founding-of-a-settlement",
-   "label": "founding of a settlement",
-   "definition": "The establishment of a new colony or major permanent outpost.",
+   "id": "first-contact",
+   "label": "First Contact",
+   "definition": "Humanity or a civilization makes initial formal contact with extraterrestrial life.",
+   "createdFrom": "st-first-contact"
+  },
+  {
+   "id": "interstellar-colonization",
+   "label": "Interstellar Colonization",
+   "definition": "A civilization plants its first or major settlement beyond its home system.",
    "createdFrom": "st-terra-nova"
   },
   {
-   "id": "dawn-of-exploration",
-   "label": "dawn of exploration",
-   "definition": "The first mission of a new type into unknown territory.",
+   "id": "deep-space-expedition",
+   "label": "Deep Space Expedition",
+   "definition": "A pioneering crew embarks on extended exploratory travel into uncharted space.",
    "createdFrom": "st-nx-01"
   },
   {
-   "id": "interstate-unification",
-   "label": "interstate unification",
-   "definition": "Independent powers sign a charter to form a single federal body.",
+   "id": "interstellar-confederation",
+   "label": "Interstellar Confederation",
+   "definition": "Multiple distinct sovereign species or worlds unite under a single charter.",
    "createdFrom": "st-federation-founded"
-  },
-  {
-   "id": "technological-catastrophe",
-   "label": "technological catastrophe",
-   "definition": "The sudden failure of a fundamental technology destabilizes civilization.",
-   "createdFrom": "st-the-burn"
-  },
-  {
-   "id": "the-truth-comes-out",
-   "label": "the truth comes out",
-   "definition": "A hidden reality or secret organization is revealed or discovered.",
-   "createdFrom": "fnd-second-foundation"
-  },
-  {
-   "id": "epilogue-of-continuity",
-   "label": "epilogue of continuity",
-   "definition": "A jump forward in time showing characters in a stable, surviving world.",
-   "createdFrom": "hp-epilogue"
   }
  ],
  "atlas": {

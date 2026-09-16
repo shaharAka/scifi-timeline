@@ -40,7 +40,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The series treats the real 1947 Roswell incident as the fiction's first true event and never contradicts the public record, only supplements it.",
-     "bin": "the-truth-comes-out",
+     "bin": "first-contact",
      "binWhy": "The discovery of an alien presence begins a long-term secret history."
     },
     {
@@ -56,7 +56,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The mythology dates the Syndicate's formation loosely to the years after 1947; 1962 is the best-supported reading from the series' own retellings across the later mytharc episodes.",
-     "bin": "emergence-of-new-actors",
+     "bin": "authoritarian-consolidation",
      "binWhy": "Power brokers from rival nations form a single secret body."
     },
     {
@@ -72,7 +72,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Merges the treaty and the abduction: both are dated 1973 on screen in the series' flashbacks, and the abduction is the treaty's price paid in the Mulder family.",
-     "bin": "diplomatic-normalization",
+     "bin": "interstellar-confederation",
      "binWhy": "A treaty is signed between humans and an alien force with hostages."
     },
     {
@@ -88,7 +88,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The series' present day is the real present day of its broadcast: the pilot is set in 1993 and the seasons advance roughly with the calendar.",
-     "bin": "emergence-of-new-actors",
+     "bin": "vigilante-emergence",
      "binWhy": "Characters begin investigating cases that have been hidden."
     },
     {
@@ -104,7 +104,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The film sits between seasons five and six and is set in the summer of 1998.",
-     "bin": "the-truth-comes-out",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "The full planetary scale of the alien presence is revealed."
     },
     {
@@ -120,7 +120,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "",
-     "bin": "assassination-alters-history",
+     "bin": "assassination-divergence",
      "binWhy": "The removal of a central figure shifts the focus of the investigation."
     },
     {
@@ -136,7 +136,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "2012 is stated on screen as the colonization date, but the invasion never happens on screen between the original run and the 2016 revival, which treats the date as passed and the conspiracy as broken; the fiction's deepest reach therefore stops here.",
-     "bin": "the-war-is-lost",
+     "bin": "systemic-collapse",
      "binWhy": "The predicted collapse/invasion date passes without the expected system change."
     },
     {
@@ -152,7 +152,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Season ten premiered in January 2016 and season eleven in January 2018; both are set in their year of broadcast, which is what keeps this lineage anchored to the present day.",
-     "bin": "emergence-of-new-actors",
+     "bin": "vigilante-emergence",
      "binWhy": "Old conspiracies fragment and new ones begin to operate."
     }
    ],
@@ -189,7 +189,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The agency's creation is placed in the late 1950s by franchise tie-in material; the films themselves only establish that it predates the 1961 first contact and the 1969 events.",
-     "bin": "emergence-of-new-actors",
+     "bin": "vigilante-emergence",
      "binWhy": "A group forms an agency with total autonomy and oversight."
     },
     {
@@ -205,7 +205,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The founding year of the agency's mission is fixed by franchise reference rather than stated on screen in the 1997 film.",
-     "bin": "diplomatic-normalization",
+     "bin": "first-contact",
      "binWhy": "An encounter leads to a standing policy of Earth as a neutral zone."
     },
     {
@@ -221,7 +221,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Established in franchise tie-in material and revisited in the films, where the 1964 fairground site is where the first film's climax takes place.",
-     "bin": "the-truth-comes-out",
+     "bin": "technological-watershed",
      "binWhy": "Alien tech is revealed to be the true nature of human landmarks."
     },
     {
@@ -237,7 +237,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The third film stages this on the real Apollo 11 launch date of 16 July 1969 and calls it the fixed point on which humanity's survival depends.",
-     "bin": "technological-or-supernatural-ascendance",
+     "bin": "technological-watershed",
      "binWhy": "The deployment of a planetary shield provides immense protective power."
     },
     {
@@ -253,7 +253,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The first film's release year is also its story year, keeping the franchise's present identical to the audience's.",
-     "bin": "pivotal-birth",
+     "bin": "vigilante-emergence",
      "binWhy": "A new individual is recruited into a secret society."
     },
     {
@@ -269,7 +269,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The second film is set five years after the first, in its own release year.",
-     "bin": "the-truth-comes-out",
+     "bin": "assassination-divergence",
      "binWhy": "The takeover of headquarters forces the restoration of a leader's memory."
     },
     {
@@ -285,7 +285,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The film is set in its release year before the time jump, and its 1969 sequence is the same fixed point charted above.",
-     "bin": "assassination-alters-history",
+     "bin": "temporal-incursion",
      "binWhy": "A time-traveling assassin attempts to shift the timeline by killing a leader."
     },
     {
@@ -301,7 +301,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Set in its release year and noted for giving the franchise its first recruit who was not memory-wiped into the job.",
-     "bin": "the-truth-comes-out",
+     "bin": "vigilante-emergence",
      "binWhy": "A new recruit uncovers internal infiltration by a hidden group."
     }
    ],
@@ -338,7 +338,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The books say only that the school was founded over a thousand years before the 1990s; the conventional c. 990 dating is arithmetic from that statement, and the exact year is a convention rather than a stated fact.",
-     "bin": "founding-of-a-settlement",
+     "bin": "interstellar-confederation",
      "binWhy": "The establishment of a permanent institution that will outlast governments."
     },
     {
@@ -354,7 +354,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Instituted in 1689 and implemented in 1692, the same year as the Salem witch trials; the real trials are the Muggle-side event the wizarding law answers.",
-     "bin": "state-curtails-freedom",
+     "bin": "institutional-proscription",
      "binWhy": "A government passes a law mandating the withdrawal and concealment of a group."
     },
     {
@@ -386,7 +386,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Dated by the books' own chronology: Harry is fifteen months old at the attack and turns eleven in 1991.",
-     "bin": "assassination-alters-history",
+     "bin": "assassination-divergence",
      "binWhy": "The failed murder of a child destroys a leader and ends a war."
     },
     {
@@ -402,7 +402,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The first book opens on Harry's eleventh birthday, 31 July 1991, ten years after the attack that made him the Boy Who Lived.",
-     "bin": "the-truth-comes-out",
+     "bin": "messianic-birth",
      "binWhy": "A character learns they belong to a hidden group with a destiny."
     },
     {
@@ -418,7 +418,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The second book spans the 1992-1993 school year.",
-     "bin": "the-truth-comes-out",
+     "bin": "interminable-insurgency",
      "binWhy": "A hidden group's activity begins impacting the visible world."
     },
     {
@@ -434,7 +434,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "The third task of the Triwizard Tournament is in June 1995; the denial campaign runs through the 1995-1996 school year.",
-     "bin": "emergence-of-new-actors",
+     "bin": "authoritarian-consolidation",
      "binWhy": "A defunct antagonist returns to activity, initially hidden from the public."
     },
     {
@@ -467,7 +467,7 @@
      "confidence": "high",
      "note": "The epilogue sits nineteen years after the battle, which fixes it in 2017 — the year the real-world calendar caught up with the books, and the anchor for this lineage's present day.",
      "binWhy": "It describes a status quo, not a transformative moment.",
-     "bin": "epilogue-of-continuity"
+     "bin": null
     }
    ],
    "groupingNote": "Harry Potter's present day is ours: Privet Drive, King's Cross and the Ministry's Muggle Prime Minister are all real, and the branch is a concealment treaty rather than a changed history. The 1692 Statute of Secrecy is the load-bearing event — it shares its year with the Salem witch trials, so the fiction explains a real historical atrocity as the reason the magical world went dark — and the story's own branch opens in 1981, ten years before Harry's first letter. On the real axis most of the lineage sits in the 20th century: two T4 events in the deep past, six T3 events for the 1945-1998 span the books actually narrate, and one T2 event for the 2017 epilogue. The T1 tier is empty because the fiction stops there — at the year the real calendar caught up with it — so no magical future has been invented to reach deep time."
@@ -503,7 +503,7 @@
      "inUniverse": "the age of the Old Ones",
      "confidence": "medium",
      "note": "The origin is shown in flashback but never dated by the show, so year 1 stands for deep prehistory; the lineage's ancient past is this single event rather than a chain of dated ones.",
-     "bin": "technological-or-supernatural-ascendance",
+     "bin": "transhuman-breakthrough",
      "binWhy": "Ritual creates a being of immense power to fight the dark."
     },
     {
@@ -519,7 +519,7 @@
      "inUniverse": null,
      "confidence": "high",
      "note": "Merges the March arrival with the May season finale, as the schema allows only one event per lineage-year pair; the series' first season is set in its broadcast year, and the show's present stays within a year or two of the real calendar for its whole run.",
-     "bin": "pivotal-birth",
+     "bin": "vigilante-emergence",
      "binWhy": "The protagonist begins operations in a new setting."
     },
     {
@@ -551,7 +551,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The reveal happens in the eighth season of the canonical comics, published 2008-2009; the in-universe date of that season is only pinned by its publication window, so the year is the best-supported reading rather than a stated one.",
-     "bin": "the-truth-comes-out",
+     "bin": "vigilante-emergence",
      "binWhy": "Rejected diplomatic-normalization because vampires aren't recognized as a state."
     },
     {
@@ -567,7 +567,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Placed in the publication year of the eighth season's final arc; the comics' chronology is loose and the season is usually read as spanning about a year and a half after 2003.",
-     "bin": "technological-catastrophe",
+     "bin": "catastrophic-mass-destruction",
      "binWhy": "A fundamental force (magic) fails, destabilizing civilization."
     },
     {
@@ -583,7 +583,7 @@
      "inUniverse": "the 23rd century",
      "confidence": "medium",
      "note": "The comic places Melaka two hundred years after Buffy's era and firmly in the 23rd century; year 2200 is a midpoint for that convention, not a stated date. On the real axis the 23rd century is T2 — near future, not deep time — so this is the furthest the fiction reaches without ever leaving our next three hundred years.",
-     "bin": "pivotal-birth",
+     "bin": "vigilante-emergence",
      "binWhy": "A central individual is chosen/called after a long absence."
     }
    ],
@@ -620,7 +620,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Lyra's world's own texts date the beginning of the Church to roughly eighteen centuries before the story; the fiction presents it as a claim made by an angel rather than as a divine act, but gives no firm year.",
-     "bin": "power-vacuum",
+     "bin": "authoritarian-consolidation",
      "binWhy": "A new leader seizes control and establishes a long-term order."
     },
     {
@@ -636,7 +636,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The Magisterium is a medieval institution in the books rather than a dated one; the year is an approximation of its establishment as the Church's governing body.",
-     "bin": "state-curtails-freedom",
+     "bin": "authoritarian-consolidation",
      "binWhy": "The governing body passes laws/doctrines to restrict people."
     },
     {
@@ -652,7 +652,7 @@
      "inUniverse": null,
      "confidence": "low",
      "note": "The witches are ancient and long-lived in the books but their clans are never dated; this year indicates deep medieval background only, and the low confidence reflects that the fiction does not support a specific date.",
-     "bin": "interstate-unification",
+     "bin": "interstellar-confederation",
      "binWhy": "Independent groups form a permanent, unified body."
     },
     {
@@ -668,7 +668,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Lyra is twelve when the first book opens, and the first book is set in the mid-1990s, so her birth is arithmetic from a story date that is itself inferred from the novels' contemporary setting.",
-     "bin": "pivotal-birth",
+     "bin": "messianic-birth",
      "binWhy": "The arrival of the prophesied child central to the story."
     },
     {
@@ -684,7 +684,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The first book is explicitly set contemporary to its writing in the mid-1990s and was published in 1995; the trilogy gives no in-story years, so the story's present is dated by that contemporary setting.",
-     "bin": "the-truth-comes-out",
+     "bin": "institutional-proscription",
      "binWhy": "Discovery of a clandestine group operating within society."
     },
     {
@@ -700,7 +700,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "The second book introduces Will in an Oxford that is recognisably ours in the 1990s; the year follows the contemporary setting of the trilogy rather than a stated date.",
-     "bin": "dawn-of-exploration",
+     "bin": "technological-watershed",
      "binWhy": "A new type of mission/travel into unknown territory begins."
     },
     {
@@ -716,7 +716,7 @@
      "inUniverse": null,
      "confidence": "medium",
      "note": "Dated by the third book's publication in 2000 and by the trilogy's mid-1990s start; Lyra's Oxford and The Secret Commonwealth continue the story two and ten years later.",
-     "bin": "the-war-is-lost",
+     "bin": "regime-overthrow",
      "binWhy": "The traditional ruling power (the Authority) is defeated."
     }
    ],

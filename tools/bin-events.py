@@ -94,10 +94,9 @@ def bin_lines(bins):
 
 PROMPT = """You are binning moments from fictional chronologies.
 
-A BIN is a KIND OF MOMENT that recurs across different stories - "the war
-arrives", "the regime takes power", "the truth comes out". Not a topic and not a
-genre. The test: two events belong in the same bin when someone reading the two
-descriptions side by side would say "these are the same kind of thing happening".
+A BIN is a KIND OF MOMENT that recurs across different stories. The test: if you
+put two events side by side and a reader would say "these are the same kind of
+thing happening", they share a bin.
 
 BINS THAT ALREADY EXIST:
 {existing}
@@ -105,29 +104,38 @@ BINS THAT ALREADY EXIST:
 EVENTS TO BIN:
 {events}
 
-For each event, either assign it to an existing bin, or - only when nothing
-fits - create a new bin.
+For each event, add it to an existing bin if one fits. Create a new bin ONLY if
+you would have to stretch a definition to make the event fit.
 
-Rules:
-- Prefer an existing bin. Create one only when you would have to stretch a
-  definition to make the event fit; say which bin you rejected and why.
+THE FAILURE MODE TO AVOID is a bin with one member. A bin holding a single event
+is not a kind of moment - it is that event with a label on it, and it makes the
+vocabulary useless for finding convergence. Before creating a bin, look again at
+the existing ones: a bin whose definition is one step more general than your
+first instinct will usually cover the event you are holding and several others
+you have not seen yet.
+
+  too narrow:  "a vigilante movement emerges"   -> admits one event
+  right level: "unofficial enforcers appear outside the law"
+  too broad:   "something changes"              -> admits everything
+
+Other rules:
 - One bin per event. `null` if the event is not a moment in a story at all -
   a publication date, or a note about how a date was derived.
-- Judge from the event's OWN text. Not from how famous the year is, and not
-  from what you know about the franchise.
-- A bin's definition must be general enough to admit events from other worlds.
-  "the Empire takes power" is too narrow; "an authoritarian regime replaces a
-  republic" is a bin.
+- Judge from the event's OWN text, not from how famous the year is and not from
+  what you know about the franchise.
+- Aim for a vocabulary of roughly two dozen bins for a few hundred events. If you
+  are past that, your bins are too narrow.
+- Bin ids: lowercase, hyphenated, and they must read as a kind of moment, not as
+  a specific incident. `first-contact`, not `the-vulcans-arrive`.
+- Labels: Title Case, four words at most. Definitions: one sentence, and general
+  enough that an event from another world could satisfy it.
 
 Reply with JSON only, no prose and no code fence:
 
-{"assignments":[{"event_id":"...","bin":"existing-or-new-id","new_bin":{"label":"...","definition":"..."} or null,"why":"under 12 words"}]}
-
-Use lowercase-hyphenated ids. For an existing bin, `bin` must be one of the ids
-listed above and `new_bin` must be null."""
+{"assignments":[{"event_id":"...","bin":"existing-or-new-id","new_bin":{"label":"...","definition":"..."} or null,"why":"under 12 words"}]}"""
 
 
-def call_gemini(events, bins, model, key, size):
+def call_gemini(events, bins, model, key, thinking="medium"):
     from google import genai
     from google.genai import types
 
@@ -147,7 +155,7 @@ def call_gemini(events, bins, model, key, size):
         model=model, contents=prompt,
         config=types.GenerateContentConfig(
             response_mime_type="application/json",
-            thinking_config=types.ThinkingConfig(thinking_level="LOW")))
+            thinking_config=types.ThinkingConfig(thinking_level=thinking)))
     text = getattr(resp, "text", None) or ""
     if not text and resp.candidates:
         parts = (resp.candidates[0].content.parts if resp.candidates[0].content else []) or []
@@ -174,6 +182,10 @@ def main():
     ap.add_argument("--report", action="store_true")
     ap.add_argument("--reset", action="store_true", help="clear bins and re-bin")
     args = ap.parse_args()
+
+    env = load_env()
+    model = env.get("GEMINI_TEXT_MODEL") or "gemini-3.8-flash"
+    thinking = env.get("GEMINI_THINKING") or "medium"
 
     doc = load_bins()
     if args.reset:
@@ -219,7 +231,8 @@ def main():
         })
     if args.limit:
         todo = todo[: args.limit]
-    print("events to bin: %d   existing bins: %d" % (len(todo), len(bins)))
+    print("events to bin: %d   existing bins: %d   model: %s (thinking %s)"
+          % (len(todo), len(bins), model, thinking))
 
     if args.dry_run:
         print("\nfirst batch would be:")
@@ -227,20 +240,18 @@ def main():
             print("   %-34s %s" % (e["event_id"], e["title"][:56]))
         return 0
 
-    env = load_env()
     key = env.get("GEMINI_API_KEY") or os.environ.get("GEMINI_API_KEY")
     if not key:
         print("no GEMINI_API_KEY (see .env.example)")
         return 3
 
-    model = env.get("GEMINI_TEXT_MODEL") or "gemini-2.5-flash"
     assignments = {}
     for start in range(0, len(todo), args.batch):
         chunk = todo[start:start + args.batch]
         print("  binning %d-%d of %d ..." % (start + 1, start + len(chunk), len(todo)),
               flush=True)
         try:
-            out = call_gemini(chunk, bins, model, key, None)
+            out = call_gemini(chunk, bins, model, key, thinking)
         except Exception as exc:  # noqa: BLE001
             print("    batch failed, skipping: %s" % str(exc)[:160])
             continue

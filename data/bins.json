@@ -1,113 +1,113 @@
 {
- "_comment": "The bin vocabulary. A bin is a KIND OF MOMENT that recurs across worlds; an event points at one by id. Bins are not fixed in advance - tools/bin-events.py adds to an existing bin when an event is like one already there, and creates a new bin only when nothing fits. This file is the outcome of that, and the thing to edit when you disagree with it.",
  "bins": [
   {
-   "id": "economic-catastrophe",
-   "label": "economic catastrophe",
-   "definition": "A systemic financial failure that destabilizes society and causes widespread hardship.",
+   "id": "systemic-collapse",
+   "label": "Systemic Collapse",
+   "definition": "An economic, environmental, or social catastrophe destabilises a civilization's existing order.",
    "createdFrom": "tmithc-crash-1929"
   },
   {
-   "id": "assassination-alters-history",
-   "label": "assassination alters history",
-   "definition": "A successful or failed assassination of a leader shifts the timeline.",
+   "id": "assassination-divergence",
+   "label": "Assassination Or Attempt",
+   "definition": "A targeted killing or political assassination alters historical trajectory.",
    "createdFrom": "tmithc-zangara-miami"
   },
   {
-   "id": "the-war-is-lost",
-   "label": "the war is lost",
-   "definition": "A major conflict concludes with the defeat of the traditional protagonist-aligned power.",
+   "id": "regime-overthrow",
+   "label": "Regime Overthrow",
+   "definition": "A governing power or alliance falls to conquerors or internal transformation.",
    "createdFrom": "tmithc-axis-victory-1947"
   },
   {
-   "id": "power-vacuum",
-   "label": "power vacuum",
-   "definition": "The death or incapacity of a leader triggers a struggle for control.",
+   "id": "succession-struggle",
+   "label": "Succession Struggle",
+   "definition": "The death or incapacitation of a leader triggers a fight for power.",
    "createdFrom": "tmithc-succession-crisis"
   },
   {
-   "id": "emergence-of-new-actors",
-   "label": "emergence of new actors",
-   "definition": "A new category of individual or group begins operating within society.",
+   "id": "vigilante-emergence",
+   "label": "Emergence Of Vigilantes",
+   "definition": "Costumed or extralegal individuals emerge outside normal civil authority.",
    "createdFrom": "wm-minutemen-era-begins"
   },
   {
-   "id": "technological-or-supernatural-ascendance",
-   "label": "technological or supernatural ascendance",
-   "definition": "A breakthrough or event creates a being or tool of immense power.",
+   "id": "transhuman-breakthrough",
+   "label": "Transhuman Breakthrough",
+   "definition": "A sapient being transcends normal mortal or physical biological limits.",
    "createdFrom": "wm-doctor-manhattan"
   },
   {
    "id": "decisive-military-victory",
-   "label": "decisive military victory",
-   "definition": "A conflict is resolved quickly and completely by one side.",
+   "label": "Decisive Military Victory",
+   "definition": "An armed conflict ends swiftly through overwhelming strategic force.",
    "createdFrom": "wm-vietnam-won"
   },
   {
-   "id": "state-curtails-freedom",
-   "label": "state curtails freedom",
-   "definition": "A government passes laws to restrict or outlaw a specific group's activities.",
+   "id": "institutional-proscription",
+   "label": "Institutional Proscription",
+   "definition": "The state passes laws outlawing or suppressing a faction or practice.",
    "createdFrom": "wm-keene-act"
   },
   {
-   "id": "mass-casualty-event",
-   "label": "mass casualty event",
-   "definition": "A sudden disaster or attack kills a large number of people.",
+   "id": "catastrophic-mass-destruction",
+   "label": "Catastrophic Mass Destruction",
+   "definition": "A sudden mass-casualty disaster strikes a major population center.",
    "createdFrom": "wm-1985-the-knife-edge"
   },
   {
-   "id": "prolonged-guerrilla-conflict",
-   "label": "prolonged guerrilla conflict",
-   "definition": "A war devolves into a long-term, indecisive, and bloody insurgency.",
+   "id": "authoritarian-consolidation",
+   "label": "Authoritarian Consolidation",
+   "definition": "A leader or faction legally dismantles democratic checks to secure dictatorship.",
+   "createdFrom": "fl-hitler-seizes-power"
+  },
+  {
+   "id": "interminable-insurgency",
+   "label": "Interminable Insurgency",
+   "definition": "A protracted asymmetric conflict grinds on without decisive resolution.",
    "createdFrom": "fl-war-of-the-urals"
   },
   {
-   "id": "diplomatic-normalization",
-   "label": "diplomatic normalization",
-   "definition": "Former enemies attempt to reconcile through state visits or treaties.",
-   "createdFrom": "fl-auschwitz-erased"
+   "id": "technological-watershed",
+   "label": "Technological Watershed",
+   "definition": "The invention or first test of a transformative technological capability.",
+   "createdFrom": "term-trinity-1945"
   },
   {
-   "id": "pivotal-birth",
-   "label": "pivotal birth",
-   "definition": "The arrival of an individual destined to play a central role.",
+   "id": "temporal-incursion",
+   "label": "Temporal Incursion",
+   "definition": "Agents or entities travel through time, intruding on a historical era.",
+   "createdFrom": "term-arrival-1984"
+  },
+  {
+   "id": "messianic-birth",
+   "label": "Destined Birth",
+   "definition": "A figure prophesied or destined to lead a faction is born.",
    "createdFrom": "term-john-connor-born"
   },
   {
-   "id": "founding-of-a-settlement",
-   "label": "founding of a settlement",
-   "definition": "The establishment of a new colony or major permanent outpost.",
+   "id": "first-contact",
+   "label": "First Contact",
+   "definition": "Humanity or a civilization makes initial formal contact with extraterrestrial life.",
+   "createdFrom": "st-first-contact"
+  },
+  {
+   "id": "interstellar-colonization",
+   "label": "Interstellar Colonization",
+   "definition": "A civilization plants its first or major settlement beyond its home system.",
    "createdFrom": "st-terra-nova"
   },
   {
-   "id": "dawn-of-exploration",
-   "label": "dawn of exploration",
-   "definition": "The first mission of a new type into unknown territory.",
+   "id": "deep-space-expedition",
+   "label": "Deep Space Expedition",
+   "definition": "A pioneering crew embarks on extended exploratory travel into uncharted space.",
    "createdFrom": "st-nx-01"
   },
   {
-   "id": "interstate-unification",
-   "label": "interstate unification",
-   "definition": "Independent powers sign a charter to form a single federal body.",
+   "id": "interstellar-confederation",
+   "label": "Interstellar Confederation",
+   "definition": "Multiple distinct sovereign species or worlds unite under a single charter.",
    "createdFrom": "st-federation-founded"
-  },
-  {
-   "id": "technological-catastrophe",
-   "label": "technological catastrophe",
-   "definition": "The sudden failure of a fundamental technology destabilizes civilization.",
-   "createdFrom": "st-the-burn"
-  },
-  {
-   "id": "the-truth-comes-out",
-   "label": "the truth comes out",
-   "definition": "A hidden reality or secret organization is revealed or discovered.",
-   "createdFrom": "fnd-second-foundation"
-  },
-  {
-   "id": "epilogue-of-continuity",
-   "label": "epilogue of continuity",
-   "definition": "A jump forward in time showing characters in a stable, surviving world.",
-   "createdFrom": "hp-epilogue"
   }
- ]
+ ],
+ "_comment": "The bin vocabulary. A bin is a KIND OF MOMENT that recurs across worlds; an event points at one by id. Bins are not fixed in advance - tools/bin-events.py adds to an existing bin when an event is like one already there, and creates a new bin only when nothing fits. This file is the outcome of that, and the thing to edit when you disagree with it."
 }
