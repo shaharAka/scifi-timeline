@@ -1,0 +1,216 @@
+{
+  "worlds": [
+    {
+      "id": "star-wars",
+      "setting": "The galaxy is a web of hyperlanes linking thousands of inhabited worlds, all of it governed badly from the city-planet Coruscant. Ordinary life stays local: a moisture farmer on Tatooine sells water to survive, a freighter crew runs cargo past Imperial patrols, a mechanic keeps droids running on a backwater moon. Above them the Republic rots into an Empire, the Empire collapses into warlord remnants, and the cycle begins again under the First Order.",
+      "conflict": "The engine is a fight over who governs the galaxy and by what right. A Republic of worlds becomes an Empire under one Sith Lord; a rebellion restores a New Republic that disarms too soon; the Imperial remnant returns as the First Order. The Jedi, once the Republic's peacekeepers, are hunted to near-extinction and remembered as a rumour.",
+      "politics": "Power is whoever holds Coruscant: the Senate and a Supreme Chancellor in the Republic's last centuries, then the Emperor with his Moffs and planetary governors, then a quarrelling New Republic. What actually reaches any single planet is decided lower down, by sector governors, Hutt crime families and shipping cartels.",
+      "technology": "Hyperdrives cross the galaxy in hours; droids do the labour; blasters, repulsorlift speeders and cybernetic prosthetics are ordinary, and a farm kid can rebuild a droid from scrap. What is missing is the network: no internet, no planetary data web, no way to look anything up. News arrives by HoloNet broadcast, courier or not at all, and outer worlds live on rumour.",
+      "mood": "Worn-in, romantic, elegiac. The galaxy is dusty and second-hand - cantinas, salvage yards, freighters held together with tape - while the moral stakes stay enormous, and a choice made in a nowhere town decides the fate of worlds.",
+      "themes": [
+        "decline of a republic",
+        "empire and resistance",
+        "redemption",
+        "the Force as religion",
+        "legacy and bloodline",
+        "war's aftermath"
+      ],
+      "tags": ["space-opera", "galactic-empire", "desert", "religion", "prophecy"],
+      "locations": [
+        { "name": "Coruscant", "blurb": "Planet-wide capital: Jedi Temple, Senate chamber, and later the Imperial Palace all sit here." },
+        { "name": "Tatooine", "blurb": "Desert world of moisture farms, salvage and gangsters; where the story starts and keeps returning." },
+        { "name": "Alderaan", "blurb": "Core world of diplomats and pacifists, destroyed outright as a demonstration of Imperial power." },
+        { "name": "Hoth", "blurb": "Frozen, nearly empty world; the Rebel Alliance's hidden base and the Empire's counterstroke." },
+        { "name": "The Outer Rim", "blurb": "Frontier of small settlements and no law, where the Republic's writ barely runs." }
+      ],
+      "factions": [
+        { "name": "The Jedi Order", "blurb": "Monastic peacekeepers who use the Force; generals in the Clone Wars, then hunted almost to extinction." },
+        { "name": "The Galactic Empire", "blurb": "Palpatine's military state of Moffs, stormtroopers and Star Destroyers; disarmed at Jakku, reborn as the First Order." },
+        { "name": "The Rebel Alliance", "blurb": "Coalition of rebel cells and defectors fighting to restore the Republic." },
+        { "name": "The Sith", "blurb": "Ancient order of Force-users devoted to domination, working through a master and one apprentice." },
+        { "name": "The Hutts", "blurb": "Crime families controlling a stretch of the Outer Rim through debt, slavery and smuggling." }
+      ],
+      "whereToStart": [
+        { "title": "Star Wars: Episode IV - A New Hope", "year": 1977, "medium": "film", "blurb": "The original entry point: Empire, Rebellion and the Force in one self-contained story." },
+        { "title": "Star Wars Rebels", "year": 2014, "medium": "tv", "blurb": "Shows ordinary life under Imperial occupation on one backwater planet." },
+        { "title": "Lost Stars", "year": 2015, "medium": "book", "blurb": "Two friends on opposite sides of the civil war; the clearest view of Imperial service." }
+      ],
+      "connections": [
+        { "id": "star-trek", "note": "Space opera's two poles: Star Wars is a mythic past, Star Trek an institutional future." },
+        { "id": "dune", "note": "Both give a feudal galaxy, a spice trade and a desert messiah; Dune is the political version." },
+        { "id": "foundation", "note": "Both stage a galactic empire's fall and return; Foundation computes it, Star Wars mythologises it." }
+      ],
+      "spoilerLevel": "mild"
+    },
+    {
+      "id": "star-trek",
+      "setting": "Earth has no money, no hunger and no want, and its people join a fleet out of interest rather than wages. This is the leading world of the United Federation of Planets, a union of some hundred and fifty member worlds from Vulcan to Andoria and Tellar, with Starfleet as its exploring and fighting arm. Most citizens never leave their homeworld; those who do serve on starships, on starbases like Deep Space Nine, or in frontier colonies.",
+      "conflict": "The Federation believes force is a last resort and keeps testing that belief against powers that do not: Klingons, Romulans, Cardassians and the Dominion, which nearly wins. Its internal argument is the Prime Directive, which forbids interference in other cultures and gets broken whenever a crew decides the rule is wrong.",
+      "politics": "A civilian Federation Council and President, drawn from member worlds, set policy, and Starfleet answers to them in theory; its own admiralty has started wars and covered them up. Beyond the border sit the Klingon Empire, the Romulan Star Empire and the Cardassian Union, and by the 25th century the Romulan state is a ruin.",
+      "technology": "Warp drive, transporters, replicators, universal translators and holodecks; medicine cures most disease and repairs most injuries. Federation ships carry no cloaking device, by treaty; human genetic engineering is illegal after the Eugenics Wars; and the Prime Directive limits what technology may be handed to anyone else. All of it depends on dilithium, and in the 31st century the galaxy's supply is destroyed in an instant.",
+      "mood": "Optimistic, procedural, argumentative. Clean, well-lit ships crewed by professionals who solve problems by talking, and the drama comes from whether their ethics survive a situation that does not reward them.",
+      "themes": [
+        "exploration as a vocation",
+        "ethics under pressure",
+        "the Prime Directive",
+        "diplomacy over force",
+        "what counts as a person",
+        "institutions worth defending"
+      ],
+      "tags": ["space-opera", "first-contact", "space-station", "ai", "far-future", "time-travel"],
+      "locations": [
+        { "name": "Earth", "blurb": "Federation capital; Starfleet Academy and headquarters sit on San Francisco Bay." },
+        { "name": "Vulcan", "blurb": "Desert homeworld of the logical Vulcans, a founding member and Earth's oldest ally." },
+        { "name": "Qo'noS", "blurb": "Klingon homeworld of warrior houses and honour duels; enemy, then ally, of the Federation." },
+        { "name": "Deep Space Nine", "blurb": "Cardassian-built station beside the Bajoran wormhole; the quadrant's busiest crossroads." },
+        { "name": "Romulus", "blurb": "Secretive Romulan homeworld behind the Neutral Zone, destroyed by the Hobus supernova in 2387." }
+      ],
+      "factions": [
+        { "name": "United Federation of Planets", "blurb": "Multi-species union of a hundred and fifty worlds; civilians govern it and Starfleet serves it." },
+        { "name": "Starfleet", "blurb": "Exploration, diplomacy and defence in one service; captains get wide latitude and awful choices." },
+        { "name": "Klingon Empire", "blurb": "Feudal warrior houses under a Chancellor; ritual honour, cloaking ships, a cold war turned alliance." },
+        { "name": "The Borg", "blurb": "Collective that assimilates species and adapts to every weapon; the Federation's worst encounter." },
+        { "name": "The Dominion", "blurb": "Founders, Jem'Hadar soldiers and Vorta administrators from the Gamma Quadrant; nearly conquers the Alpha Quadrant." }
+      ],
+      "whereToStart": [
+        { "title": "Star Trek: The Next Generation", "year": 1987, "medium": "tv", "blurb": "The Federation at its height; episodic, self-contained and the easiest way in." },
+        { "title": "Star Trek: First Contact", "year": 1996, "medium": "film", "blurb": "Dramatises this timeline's fork: Cochrane's warp flight and the Vulcan landing of 2063." },
+        { "title": "Star Trek: The Original Series", "year": 1966, "medium": "tv", "blurb": "Where the five-year mission, the Klingons and the Prime Directive all begin." }
+      ],
+      "connections": [
+        { "id": "star-wars", "note": "The other pole: Star Wars is myth set long ago, Star Trek institutions set ahead of us." },
+        { "id": "the-expanse", "note": "Often described as the realist answer to Star Trek: no artificial gravity, no replicators, no unified humanity." },
+        { "id": "warhammer-40000", "note": "The dark mirror: the same interstellar premise answered with a theocracy, regression and no progress." },
+        { "id": "2001-space-odyssey", "note": "Both are 1960s first-contact visions; 2001 is austere and ambiguous where Star Trek is warm and talkative." }
+      ],
+      "spoilerLevel": "mild"
+    },
+    {
+      "id": "dune",
+      "setting": "Ten thousand years after the Butlerian Jihad, humanity lives in a feudal Imperium of Great Houses under one Emperor, and the whole thing runs on a single commodity: the spice melange, harvested on the desert planet Arrakis, which extends life, opens prescience and lets the Spacing Guild's navigators fold space. Ordinary people live under a House, a Guild contract or a CHOAM charter. On Arrakis they wear stillsuits that recycle every drop of body water, and water is money.",
+      "conflict": "The engine is scarcity and control: whoever controls spice controls interstellar travel, and therefore the Imperium. Around that sit the Great Convention's rules for war, the Bene Gesserit breeding programme, and the Fremen, a desert people the Imperium has spent generations dismissing. The Atreides arrive on Arrakis, are destroyed there, and produce a messiah whose jihad kills billions.",
+      "politics": "The Emperor rules through the Landsraad of Great Houses, but real power is a balance of three: the Emperor's Sardaukar legions, the Spacing Guild's monopoly on transport, and CHOAM, the cartel holding every commercial licence. The Bene Gesserit sisterhood works above all three, placing its people in every great house.",
+      "technology": "No computers and no thinking machines: the Butlerian Jihad made that religious law, so calculation is done by human minds trained as Mentats. Holtzman shields make bullets useless, so wars are fought with knives and decided by training, and atomics exist but the Great Convention forbids using them on people. Interstellar travel belongs to the Guild alone, and nobody else can navigate.",
+      "mood": "Dry, fatalistic, immense. Heat, thirst, ritual and long plotting; the books read like an anthropologist's report on a religion being born, with a warning underneath about the leaders it produces.",
+      "themes": [
+        "ecological scarcity",
+        "prophecy and messiahs",
+        "feudal obligation",
+        "the danger of heroes",
+        "human computation",
+        "breeding and control"
+      ],
+      "tags": ["desert", "galactic-empire", "prophecy", "religion", "ai", "space-opera"],
+      "locations": [
+        { "name": "Arrakis", "blurb": "Desert world of spice, sandworms and Fremen; the only source of melange in the universe." },
+        { "name": "Caladan", "blurb": "Atreides homeworld of oceans and rice paddies, given up when the family is granted Arrakis." },
+        { "name": "Giedi Prime", "blurb": "Harkonnen industrial homeworld, polluted and run on cruelty and family intrigue." },
+        { "name": "Kaitain", "blurb": "Corrino imperial capital of gardens, ceremony and Sardaukar parades." },
+        { "name": "Chapterhouse", "blurb": "Bene Gesserit training world that ends the series holding the last sandworms." }
+      ],
+      "factions": [
+        { "name": "House Atreides", "blurb": "Honourable Great House destroyed on Arrakis; its heirs end up ruling the Imperium." },
+        { "name": "House Harkonnen", "blurb": "Brutal rival house and former masters of Arrakis, kept in power by the Emperor." },
+        { "name": "The Spacing Guild", "blurb": "Holds the monopoly on space travel; its navigators need spice to fold space." },
+        { "name": "The Bene Gesserit", "blurb": "Sisterhood breeding a superhuman over millennia through arranged marriages and truthsaying." },
+        { "name": "The Fremen", "blurb": "Water-disciplined desert people of Arrakis; the finest fighters in the Imperium." }
+      ],
+      "whereToStart": [
+        { "title": "Dune", "year": 1965, "medium": "book", "blurb": "The entry point: Arrakis, the spice, the Houses and the Fremen in one volume." },
+        { "title": "Dune", "year": 2021, "medium": "film", "blurb": "Villeneuve's adaptation covers the first half of the novel; the clearest visual map of the world." },
+        { "title": "Dune Messiah", "year": 1969, "medium": "book", "blurb": "Short sequel showing what the victory costs; best read straight after Dune." }
+      ],
+      "connections": [
+        { "id": "foundation", "note": "The field's paired galactic histories, and opposites: Asimov computes the fall, Herbert sends a messiah." },
+        { "id": "star-wars", "note": "Both offer a feudal galaxy, a spice trade and a desert messiah; Dune is the political and ecological one." },
+        { "id": "warhammer-40000", "note": "40k inherits Dune's god-emperor, navigator caste and holy ban on thinking machines, pushed further." }
+      ],
+      "spoilerLevel": "mild"
+    },
+    {
+      "id": "foundation",
+      "setting": "Trantor is one city wrapped around a planet: forty billion people who never see open sky, eating food shipped in from twenty agricultural worlds, running the administration of an empire of millions of worlds. Further out the Empire is a memory thinning into superstition - a province like Anacreon is a kingdom with atomic heaters and nobody left who can repair them. On Terminus, at the rim, a small colony of scientists is compiling an encyclopedia.",
+      "conflict": "The Empire is falling and cannot be argued out of it; the Foundation's purpose is not to prevent the fall but to shorten the dark age after it from thirty thousand years to one thousand. Each crisis is a problem with one correct answer, solved by politics, religion or trade rather than force - until the Mule, who is not in the equations at all.",
+      "politics": "A hereditary Emperor on Trantor rules through a colossal civil service, while the Commission of Public Safety and the military decide more each century and outer provinces drift into hereditary kingdoms. The Foundation is run by mayors and traders, and behind it a Second Foundation of psychologists corrects what the First Foundation cannot see.",
+      "technology": "Atomic power is the load-bearing technology: Trantor is heated and fed by atomic plants, and the Foundation's first export is a nuclear power station sold to a kingdom that can no longer build one. Hyperspace crosses the galaxy in days; personal shields, blasters and microfilm are ordinary. There are no aliens anywhere in the galaxy, no robots in the original stories, and psychohistory is mathematics done by people, not machines.",
+      "mood": "Cool, procedural, elegiac. Decline is recorded as an administrative fact - reports, trade delegations, a shrinking map - and the pleasure is watching clever people solve a crisis with the tools they have.",
+      "themes": [
+        "decline of empire",
+        "predictability of crowds",
+        "history as engineering",
+        "religion as control",
+        "trade and dependency",
+        "limits of prediction"
+      ],
+      "tags": ["galactic-empire", "far-future", "space-opera", "religion", "prophecy"],
+      "locations": [
+        { "name": "Trantor", "blurb": "Metal-cased imperial capital: forty billion people and no open sky anywhere." },
+        { "name": "Terminus", "blurb": "Resource-poor rim world where the Foundation is exiled and the plan begins." },
+        { "name": "Anacreon", "blurb": "Neighbouring kingdom that tries to annex Terminus; the first Seldon Crisis." },
+        { "name": "Kalgan", "blurb": "Resort world turned warlord capital; the Mule's base of operations." },
+        { "name": "Earth", "blurb": "The lost homeworld, its crust still radioactive; the last novel's search ends here." }
+      ],
+      "factions": [
+        { "name": "The Galactic Empire", "blurb": "Twelve-thousand-year-old state run from Trantor; rotting at the centre while provinces drift away." },
+        { "name": "The Foundation", "blurb": "Seldon's scientific colony on Terminus, later a trading and religious power." },
+        { "name": "The Second Foundation", "blurb": "Hidden psychologists who correct deviations from the plan that the First Foundation cannot detect." },
+        { "name": "The Four Kingdoms", "blurb": "Petty successor states around Terminus that Hardin plays against one another." },
+        { "name": "The Traders", "blurb": "Independent Foundation merchants whose routes and deals become the First Foundation's real strength." }
+      ],
+      "whereToStart": [
+        { "title": "Foundation", "year": 1951, "medium": "book", "blurb": "The fix-up novel: Trantor, Seldon's trial and the first three crises, in order." },
+        { "title": "Foundation and Empire", "year": 1952, "medium": "book", "blurb": "Second book; introduces the Mule, the crisis the mathematics never saw coming." },
+        { "title": "Foundation", "year": 2021, "medium": "tv", "blurb": "Apple's adaptation changes the plan's mechanics; watch it after the books, not instead." }
+      ],
+      "connections": [
+        { "id": "dune", "note": "The paired galactic histories, and opposites: Seldon computes the fall, Herbert's messiah short-circuits it." },
+        { "id": "star-wars", "note": "Both stage a galactic empire's fall and return; Foundation keeps it statistical, Star Wars makes it a family myth." },
+        { "id": "star-trek", "note": "Asimov's galaxy is entirely human by choice; Star Trek's Federation is the multi-species answer to the same question." }
+      ],
+      "spoilerLevel": "mild"
+    },
+    {
+      "id": "warhammer-40000",
+      "setting": "A million human worlds pay tithes to the Imperium of Man, whose ruler has sat dead but not dead on the Golden Throne on Terra for ten thousand years. Ordinary life is a hive city: shifts in a manufactorum, corpse-starch rations, a chapel on every level, and a governor whose one duty is the Imperial tithe. Above that the Administratum, the Ecclesiarchy and the Astra Militarum grind on enormously, slowly and half-mad. The Great Rift has torn the galaxy in two.",
+      "conflict": "The Imperium is permanently at war with everything: Orks, Aeldari, Tyranids, Necrons, Chaos and its own rebels, on a scale where a lost regiment is a rounding error. The deeper conflict is that the system keeping humanity alive is the same system that keeps it ignorant and cruel, and every alternative on offer is extinction or corruption. Nothing improves.",
+      "politics": "The Emperor is a comatose figurehead who is also officially a god, and real power sits with the High Lords of Terra and the great institutions: the Ecclesiarchy, the Inquisition, the Adeptus Mechanicus, the Astra Militarum, the Navis Nobilite. Since the Great Rift the returned primarch Roboute Guilliman has ruled as Lord Commander, and no faction can reform any of it.",
+      "technology": "Nothing has been invented for ten thousand years. Technology is a religion: the Mechanicus of Mars copies Standard Template Construct designs it no longer understands, blesses its machines before use and calls innovation heresy. Ships cross the warp, a hostile dimension where time runs wrong and daemons wait, guided by a mutant navigator caste, and messages travel as dreams sent by astropaths. Artificial intelligence is banned absolutely.",
+      "mood": "Gothic, vast, oppressive, and blackly funny. Cathedrals the size of cities, skulls on every surface, incense and propaganda laid over machinery that kills the people operating it, and an administration so large it has lost worlds from its own records.",
+      "themes": [
+        "entropy and decay",
+        "religious authority",
+        "total war",
+        "technological regression",
+        "heresy and inquisition",
+        "the individual against the state"
+      ],
+      "tags": ["galactic-empire", "far-future", "dystopia", "religion", "ai", "secret-war"],
+      "locations": [
+        { "name": "Terra", "blurb": "Throneworld: the Imperial Palace, the Golden Throne, and a planet buried under bureaucracy and pilgrims." },
+        { "name": "Mars", "blurb": "Forge world of the Mechanicus: shipyards, factorums and machine-worship at Olympus Mons." },
+        { "name": "Cadia", "blurb": "Fortress world guarding the only stable route out of the Eye of Terror; broken by the 13th Black Crusade." },
+        { "name": "Necromunda", "blurb": "Hive world of manufactoria, gangs and underhive mutants; where most Imperial citizens actually live." },
+        { "name": "The Eye of Terror", "blurb": "Warp scar where Chaos pours into realspace, widened into the Great Rift that splits the Imperium." }
+      ],
+      "factions": [
+        { "name": "The Adeptus Mechanicus", "blurb": "Tech-priests of Mars who build, maintain and bless the Imperium's machines, and own its technology." },
+        { "name": "The Inquisition", "blurb": "Secret police with authority over everything, hunting heresy, xenos and daemons, answering to nobody." },
+        { "name": "The Astra Militarum", "blurb": "The Imperial Guard: billions of ordinary soldiers shipped between war zones as planetary tithe." },
+        { "name": "The Adeptus Astartes", "blurb": "Gene-forged warrior monks in power armour; a thousand chapters, each with its own cult and secrets." },
+        { "name": "Chaos", "blurb": "The Ruinous Powers, their cults and Traitor Legions, seeking the Imperium's destruction or conversion." }
+      ],
+      "whereToStart": [
+        { "title": "Eisenhorn", "year": 2001, "medium": "book", "blurb": "Dan Abnett's Inquisitor trilogy; the best ground-level tour of Imperial cities and cults." },
+        { "title": "Horus Rising", "year": 2006, "medium": "book", "blurb": "First Horus Heresy novel: the civil war that explains why the Imperium is like this." },
+        { "title": "Warhammer 40,000 Core Book", "year": 2023, "medium": "game", "blurb": "The rulebook's lore sections are the setting's own canon: Imperium, warp and timeline." }
+      ],
+      "connections": [
+        { "id": "star-trek", "note": "The mirror image: the same interstellar premise answered with a theocracy, regression and no progress." },
+        { "id": "dune", "note": "Inherits Dune's god-emperor, navigator caste and holy ban on thinking machines, pushed to extremes." },
+        { "id": "star-wars", "note": "Both are galactic empires with a mystic warrior order; 40k's never falls and never reforms." },
+        { "id": "foundation", "note": "Asimov's empire in decline with a plan; 40k is the same empire with no plan possible." }
+      ],
+      "spoilerLevel": "mild"
+    }
+  ]
+}

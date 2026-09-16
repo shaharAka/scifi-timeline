@@ -1,0 +1,207 @@
+{
+  "worlds": [
+    {
+      "id": "2001-space-odyssey",
+      "setting": "Everything familiar is the 1960s' idea of 2001: Pan Am shuttles to a wheel-shaped space station, a Hilton hotel in orbit, videophone calls home, and a permanent American base at Clavius. The single change is an object. A black slab buried four million years ago near Tycho is dug up on the Moon and answers the sunrise with one radio pulse aimed at Jupiter. The story then runs from tool-using australopithecines to a finale the film declines to explain.",
+      "conflict": "The engine is not a war but a question of agency: something older and far more capable has been shaping humans since before they were human, and it never explains itself. Every advance - the first tool, HAL's patient voice, Bowman's transit - happens inside a design whose plans nobody on screen is allowed to see. People act, and cannot tell whether they chose.",
+      "politics": "An American-led space programme holds the Moon and the Jupiter mission, briefs its own people on a cover story and answers to a civilian authority the audience never meets; the only other power on screen is a courteous Soviet delegation kept outside the secret. There is no war and no ideology - the authority that actually shapes events is non-human, off-stage and four million years old.",
+      "technology": "The near-future as 1968 imagined it: reusable shuttles, a rotating station that supplies gravity, hibernation pods, voice-print doors, and HAL, a computer that talks, reads lips and runs the ship. What is absent is the real twenty-first century - no internet culture, no personal computing, no digital clutter. The monoliths are the only magic, and they are never explained.",
+      "mood": "Cold, serene, ceremonial. Terror and wonder arrive at the same temperature: the film's most violent act is committed by a polite voice, and its ending offers transcendence without consolation.",
+      "themes": [
+        "humanity as an experiment",
+        "tools and the species that makes them",
+        "machine obedience and error",
+        "intelligence that will not explain itself",
+        "evolution by intervention",
+        "silence as meaning"
+      ],
+      "tags": ["hard-scifi", "first-contact", "artificial-intelligence", "existential-risk", "alien-artefact"],
+      "locations": [
+        { "name": "TMA-1, near Tycho", "blurb": "A slab buried four million years ago, dug up under a press blackout, and the reason for everything after." },
+        { "name": "Clavius Base", "blurb": "The American lunar base: a briefing room, a cover story, and a press office that lies by omission." },
+        { "name": "Space Station V", "blurb": "The wheel-shaped orbital station where Pan Am shuttles dock and a Hilton serves Earth-facing rooms." },
+        { "name": "Discovery One", "blurb": "A long spine of a ship bound for Jupiter: five crew, three asleep, one computer awake." },
+        { "name": "The Star Gate", "blurb": "A monolith far larger than the one on the Moon, waiting in Jovian orbit for a visitor." }
+      ],
+      "factions": [
+        { "name": "The American space programme", "blurb": "Runs the Moon and the Jupiter mission under a cover story it never shares with its own crews." },
+        { "name": "Discovery One's crew", "blurb": "Five men, three of them asleep; Poole and Bowman fly the ship and know nothing of its orders." },
+        { "name": "HAL 9000", "blurb": "The sixth crew member: a speaking computer that runs the ship and cannot be argued with." },
+        { "name": "The Soviet delegation", "blurb": "Courteous rivals on the station, suspicious of the blackout at Clavius and kept in the dark." },
+        { "name": "The makers of the monoliths", "blurb": "Never seen and never named; present only as an object, a signal and a very long patience." }
+      ],
+      "whereToStart": [
+        { "title": "2001: A Space Odyssey", "year": 1968, "medium": "film", "blurb": "The film itself, and the only version that matters: see it before reading anything about it." },
+        { "title": "2001: A Space Odyssey", "year": 1968, "medium": "book", "blurb": "Clarke's parallel novel, written alongside the film, answers questions the film deliberately leaves open." },
+        { "title": "2010: The Year We Make Contact", "year": 1984, "medium": "film", "blurb": "The sequel that explains the first film's ending and turns silence into a much chattier kind of story." }
+      ],
+      "connections": [
+        { "id": "interstellar", "note": "The other great hard-science cosmic film, and its mirror: Kubrick withholds the meaning, Nolan explains his." },
+        { "id": "contact", "note": "Both send one traveller out and bring them back with an experience nobody else can verify." },
+        { "id": "star-trek", "note": "The same optimistic 1960s space future, stripped of camaraderie, explanation and any human in charge." }
+      ],
+      "spoilerLevel": "mild"
+    },
+    {
+      "id": "contact",
+      "setting": "Late-1990s America, exactly as it was: the Very Large Array in New Mexico, NASA budget fights, SETI kept alive on private grants, cable news and religious broadcasting. The single change is a signal - a repeating prime number from Vega, twenty-six light years out, carrying a 1936 Olympic broadcast and then sixty-three thousand pages of engineering drawings. Governments build the machine those drawings specify, and the novel and the film resolve the ride differently. The story covers about three years.",
+      "conflict": "The engine is an argument, not an invasion: what counts as evidence, and who is allowed to hold it. Scientists, soldiers and preachers read the same signal and reach different conclusions, and the machine turns a private obsession into a public referendum - on whether humanity is alone, whether faith and reason can share a room, and who gets to speak for the species.",
+      "politics": "The signal runs through ordinary 1990s institutions: a White House that wants a usable answer, a security apparatus that wants the machine under its control, and an international consortium that finishes a second one in Hokkaido. Around them, millenarian cults and mainstream clergy fight the meaning out in public.",
+      "technology": "Present-day and unfashionably so: radio telescopes, tape archives, room-sized supercomputers, Space Shuttle hardware, and one alien machine - concentric rings and a single seat, with no engine anyone can identify. There is no starship, no fleet and no invasion; the wonder is a wormhole with a fixed itinerary, and a chair that falls through it.",
+      "mood": "Sober, hopeful, argumentative. It is the most procedural of first-contact stories - the awe is filtered through funding hearings, security briefings and live television - and its most affecting scenes are about a daughter and her dead father, not a spacecraft.",
+      "themes": [
+        "verification and belief",
+        "science as a vocation",
+        "faith and reason in one room",
+        "first contact as a mirror",
+        "grief and the search for a parent",
+        "evidence that cannot be corroborated"
+      ],
+      "tags": ["first-contact", "faith-vs-science", "hard-scifi", "wormhole", "seti"],
+      "locations": [
+        { "name": "The Very Large Array, New Mexico", "blurb": "A field of steerable dishes where the prime numbers arrive and a career is made and unmade." },
+        { "name": "Cape Canaveral", "blurb": "The film's site for the first machine; the novel builds the same machine in Wyoming instead." },
+        { "name": "Hokkaido", "blurb": "The second machine, funded internationally and built in secret, and the one that carries a passenger." },
+        { "name": "The station at the galactic centre", "blurb": "Where the machine delivers its passenger: built for visitors by whoever sent the message." }
+      ],
+      "factions": [
+        { "name": "Ellie Arroway's SETI team", "blurb": "A handful of researchers living on private grants, one budget vote away from being shut down." },
+        { "name": "The American government", "blurb": "Takes the signal over, wants the machine under military control, and owns the official record." },
+        { "name": "The Hokkaido consortium", "blurb": "The international funders who build the surviving machine after the first one is destroyed." },
+        { "name": "The religious opposition", "blurb": "Millenarian movements and mainstream clergy who read the signal as revelation, blasphemy or a test." },
+        { "name": "The senders", "blurb": "Whoever transmitted from Vega, twenty-six light years away and never met as themselves." }
+      ],
+      "whereToStart": [
+        { "title": "Contact", "year": 1997, "medium": "film", "blurb": "Zemeckis's film, the version most people meet first and the one this lineage's dates follow." },
+        { "title": "Contact", "year": 1985, "medium": "book", "blurb": "Sagan's novel: the same signal, a Machine built in Wyoming, and a final chapter the film drops." }
+      ],
+      "connections": [
+        { "id": "2001-space-odyssey", "note": "Both send one traveller out and bring them back with an experience nobody else can verify." },
+        { "id": "interstellar", "note": "Both are one trip to a signal or wormhole, and both are really about a parent and child." },
+        { "id": "x-files", "note": "The 1990s' other signal story: Contact puts the evidence on television, The X-Files locks it away." }
+      ],
+      "spoilerLevel": "mild"
+    },
+    {
+      "id": "the-expanse",
+      "setting": "Two centuries after a fusion drive opened the solar system, the familiar is still in place: an overcrowded Earth of thirty billion governed by the UN, a Mars settled in 2050 and generations into making a dead planet live, and a Belt of stations whose people mine the ice and metal that keep both alive and are treated as colonial labour. The single change is the Epstein Drive. There is no artificial gravity: ships burn halfway, flip, and burn again. The story opens in 2350 and spans centuries.",
+      "conflict": "The engine is a colonial economy with three claimants and no exit: Earth needs the Belt's resources and holds the purse, Mars needs Earth's and resents the dependency, and the Belt does the dying work while being taxed, policed and called ungrateful. Every crisis runs through that structure - water riots, blockades, a stolen warship - and the alien substance on Phoebe only accelerates a fight that was already coming.",
+      "politics": "Power sits with two governments and a diaspora: the UN on Earth, whose elections the off-worlders cannot vote in, and the Martian Congressional Republic, a militarised meritocracy where citizenship is earned through service and the terraforming project is the point of the nation. The Belt has no sovereign state of its own, only the Outer Planets Alliance - a union, a lobby and, at times, an armed movement that Earth and Mars both call terrorism.",
+      "technology": "Hard, dirty, plausible engineering: fusion drives under months-long burn, patched vacuum suits, mag-boots instead of gravity, hand terminals that float data in the air, rail guns, torpedoes and point-defence cannons. Nothing is sleek. Air and water are metered, gravity is something only a spinning station or a burning drive provides, and the only truly incomprehensible thing in the system is the alien substance recovered from Phoebe - an artefact that treats living tissue as raw material and has no mind to negotiate with.",
+      "mood": "Grubby, proud, claustrophobic. It plays as a western and a labour dispute in vacuum: people drinking in station bars under a dome, one hull breach from dying, and entirely certain that the inner planets will never see them as anything but hired help.",
+      "themes": [
+        "colonial extraction",
+        "class and gravity",
+        "who owns the solar system",
+        "us and them across a vacuum",
+        "alien technology as a weapon",
+        "found family on a borrowed ship"
+      ],
+      "tags": ["hard-scifi", "space-colonisation", "colonialism", "political-intrigue", "alien-artefact"],
+      "locations": [
+        { "name": "Ceres Station", "blurb": "The Belt's port city inside a spun-up asteroid, where air and water are sold by the litre." },
+        { "name": "Tycho Station", "blurb": "The largest mobile construction platform in the system, and the yard building the Nauvoo." },
+        { "name": "Earth", "blurb": "Thirty billion people under UN rule, most of them on Basic assistance, in a climate-stressed world." },
+        { "name": "Mars", "blurb": "A planet mid-terraform: dome cities, a serious navy, and people who expect to see open air." },
+        { "name": "Ganymede", "blurb": "The outer planets' breadbasket - greenhouse domes over ice - and too valuable to be left alone." }
+      ],
+      "factions": [
+        { "name": "United Nations (Earth)", "blurb": "Governs thirty billion people, controls the shipping lanes, and treats the Belt as a restive colony." },
+        { "name": "Martian Congressional Republic", "blurb": "A meritocracy built on terraforming, with the system's best navy and citizenship earned by service." },
+        { "name": "Outer Planets Alliance", "blurb": "The Belt's fractious movement - union, lobby and armed faction at once - which Earth calls terrorism." },
+        { "name": "Star Helix Security", "blurb": "The private police force contracted to keep order on Ceres, and resented by everyone there." },
+        { "name": "The Mormon expedition", "blurb": "A religious group building a generation ship at Tycho to leave the solar system entirely." }
+      ],
+      "whereToStart": [
+        { "title": "Leviathan Wakes", "year": 2011, "medium": "book", "blurb": "The first novel and the clearest way in: a missing woman, an ice hauler, and politics from the bottom." },
+        { "title": "The Expanse", "year": 2015, "medium": "tv", "blurb": "Six seasons on screen and the easiest way to feel the physics; season one covers the first book." }
+      ],
+      "connections": [
+        { "id": "star-trek", "note": "Routinely described as the answer to Star Trek's post-scarcity idealism: same ambition, none of the comfort." },
+        { "id": "foundation", "note": "An acknowledged influence on the authors: Asimov's political scale, redrawn inside a single solar system." },
+        { "id": "dune", "note": "Both are resource politics in space, and both turn on a substance that rewrites what a human being is." }
+      ],
+      "spoilerLevel": "none"
+    },
+    {
+      "id": "interstellar",
+      "setting": "Dust-bowl farm country in the American interior, and it looks like the 1930s with better machines: combines, ballgames on a screen, a school that teaches the Moon landings were faked to bankrupt the Soviets. The single change is a blight. Wheat went first, then okra, and corn is going; the species is being starved off its own planet. The only way out is a wormhole near Saturn, found in 2019. The film's timeline then stretches a century, most of it lost to relativity.",
+      "conflict": "The engine is not an enemy but a deadline: a species that has run out of time on its own planet, arguing about how to spend what is left. The choice is between rescuing everyone alive now and planting a colony for a generation nobody will live to meet. Every relationship in the film is a parent and child separated by that arithmetic.",
+      "politics": "Thin by design. Government has shrunk to local schools, a shuttered space programme and a sheriff, and what remains of NASA is hidden in a bunker, because for a generation the schools have taught that leaving the planet was waste. Order is kept by habit, dust masks and rationing, and the only institution with real authority is the one nobody is allowed to know still exists.",
+      "technology": "Salvaged twentieth-century: pickup trucks, combines, crop-survey drones whose solar cells are worth stealing, radios carried into the fields. Spaceflight hardware is old and precious, flown by pilots trained before the collapse; the internet texture of our century is gone and messages arrive as stored video that piles up unwatched. Time itself becomes the most expensive thing the technology spends.",
+      "mood": "Elegiac, dusty, stubborn. The dominant feeling is not fear but grief for a world already lost; the film keeps its most emotional scenes in kitchens and truck cabs, and its awe is a small ship alone against a very large silence.",
+      "themes": [
+        "the biosphere as adversary",
+        "parenting across lost time",
+        "relativity as bereavement",
+        "science under a dying sky",
+        "leaving rather than saving the world",
+        "love as a physical force"
+      ],
+      "tags": ["hard-scifi", "wormhole", "existential-risk", "space-colonisation", "time-dilation"],
+      "locations": [
+        { "name": "The Cooper farm", "blurb": "A corn farm losing its soil, a house full of books, and a bedroom where things fall off shelves." },
+        { "name": "The secret NASA facility", "blurb": "A buried launch complex holding the last engineers, the old Rangers, and the Endurance." },
+        { "name": "The wormhole near Saturn", "blurb": "A sphere of bent starlight near Saturn, 48 years old when the film opens, and the only way out." },
+        { "name": "Miller's planet", "blurb": "An ocean world under a black hole's tide, where an hour on the surface costs seven years." },
+        { "name": "Gargantua", "blurb": "A black hole with a bright disc, close enough that time itself becomes a resource to spend." }
+      ],
+      "factions": [
+        { "name": "What is left of NASA", "blurb": "A few dozen engineers and pilots in a bunker, running a mission they can neither fund nor admit." },
+        { "name": "The Lazarus astronauts", "blurb": "Twelve volunteers sent one-way through the wormhole, each landing alone on an unvisited world." },
+        { "name": "The Endurance crew", "blurb": "Four people and two robots on one ship, with no rescue coming and no second attempt." },
+        { "name": "The farm towns", "blurb": "The people left on Earth, told to grow food and make their peace with a shrinking future." }
+      ],
+      "whereToStart": [
+        { "title": "Interstellar", "year": 2014, "medium": "film", "blurb": "The film itself: nearly three hours, and the only version of this story that exists." },
+        { "title": "The Science of Interstellar", "year": 2014, "medium": "book", "blurb": "Kip Thorne's companion volume explains the physics on screen, and supplies the dates the film never states." }
+      ],
+      "connections": [
+        { "id": "2001-space-odyssey", "note": "The other great hard-science cosmic film, and its mirror: Kubrick withholds meaning, Nolan explains his." },
+        { "id": "contact", "note": "Both are one trip to a signal or wormhole, and both come down to a parent and child separated." },
+        { "id": "children-of-men", "note": "Both are end-of-the-biosphere stories about a species with no future, one from blight, one from infertility." }
+      ],
+      "spoilerLevel": "none"
+    },
+    {
+      "id": "children-of-men",
+      "setting": "Britain in 2027, and it is recognisably ours with the volume turned down: buses, coffee shops, council flats, and a state of emergency so old it has become weather. The single change is biological - humanity became infertile in 2009, and no child has been born in eighteen years. Britain has sealed itself and turned on the refugees it has interned. The film covers a few weeks of that eighteenth year; P. D. James's novel set the same collapse in 1995 and its story in 2021.",
+      "conflict": "The engine is not a war but a slow failure of maintenance: a species with no future going through the motions of a state, and the question of what hope does to people who have none. The immediate fight is over one pregnant woman - who gets to own her, protect her or use her - but the deeper conflict is between those who accept extinction and those who cannot.",
+      "politics": "A British state under emergency rule has suspended the ordinary rules: Homeland Security runs identity checks, detention and deportation, refugees are held behind wire at Bexhill, and the only armed opposition is a small underground of former activists. There is nowhere to appeal and nowhere to go - the rest of the world is in worse shape, and Britain says so constantly.",
+      "technology": "Exactly the technology of 2006, with a few additions the crisis produced: walled compounds, CCTV, armoured buses, and Quietus, a suicide kit sold openly in shops. Everything works slightly worse than it used to - the trains run, the phones work, the buildings are grimy - and nothing futuristic has arrived to help. The one piece of magic is the Human Project, a scientific refuge in the Azores that may not exist.",
+      "mood": "Exhausted, grey, tender. The dominant note is not panic but the fatigue of people who have been grieving for eighteen years; the film is full of coughs, plastic sheeting and grim courtesy, and its most shocking moments are small acts of tenderness in places built to prevent them.",
+      "themes": [
+        "extinction as bureaucracy",
+        "the last generation",
+        "hope as a dangerous object",
+        "the state against the refugee",
+        "caretaking a doomed world",
+        "birth as politics"
+      ],
+      "tags": ["dystopia", "infertility", "existential-risk", "refugees", "near-future"],
+      "locations": [
+        { "name": "London", "blurb": "A functioning city of checkpoints, screens and anti-terror advertising, where emergency has become routine." },
+        { "name": "Bexhill-on-Sea", "blurb": "The internment camp on the south coast where Britain keeps its refugees caged behind wire, indefinitely." },
+        { "name": "The Ark of the Arts", "blurb": "Battersea Power Station, filled with the world's art treasures and kept for an audience that will never come." },
+        { "name": "Jasper's farmhouse", "blurb": "A remote house in the woods with a wood stove, a dog, and Quietus in the cupboard." },
+        { "name": "The Azores", "blurb": "The rumoured home of the Human Project, the last scientific refuge anyone in Britain still talks about." }
+      ],
+      "factions": [
+        { "name": "The British state", "blurb": "Emergency government, Homeland Security, checkpoints and deportation: order maintained by treating refugees as the enemy." },
+        { "name": "The Fishes", "blurb": "A small armed underground of former activists, split between idealism and people who want power." },
+        { "name": "The Human Project", "blurb": "A rumoured scientific refuge abroad that the world's last hope is quietly pinned on." },
+        { "name": "The last generation", "blurb": "Everyone born in or before 2009: a whole society with no children in it, ageing together." }
+      ],
+      "whereToStart": [
+        { "title": "Children of Men", "year": 2006, "medium": "film", "blurb": "Cuaron's film, which this world is drawn from: short, relentless, and almost never explains itself." },
+        { "title": "The Children of Men", "year": 1992, "medium": "book", "blurb": "P. D. James's novel: the same infertility, an England twenty-six years in, and a very different ending." }
+      ],
+      "connections": [
+        { "id": "the-matrix", "note": "Both imagine humanity's continuation managed by a system: the Matrix farms people, Britain interns them." },
+        { "id": "interstellar", "note": "Both are stories of a species with no future on its own planet: one lost to infertility, one to blight." },
+        { "id": "twelve-monkeys", "note": "Both are end-of-the-species stories set off by a biological accident that nobody can undo." }
+      ],
+      "spoilerLevel": "none"
+    }
+  ]
+}

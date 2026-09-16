@@ -1,0 +1,10 @@
+# Scratch file written by test-fixture.py and consumed by test-viewer.js.
+# It is fixture data, not project data - regenerate it with `python3 test-fixture.py`.
+data/.test-fixture.json
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store

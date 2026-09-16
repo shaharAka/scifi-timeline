@@ -1,0 +1,10 @@
+{
+ "_comment": "Canonical display order and definition of the divergence archetypes. build-data.py reads the 'order' array; each data/parts/*.json also carries its own copy of the group definition so a single part file stays self-describing.",
+ "order": [
+  "hidden-history",
+  "alternate-past",
+  "post-industrial-collapse",
+  "near-future-branch",
+  "far-future-space-opera"
+ ]
+}

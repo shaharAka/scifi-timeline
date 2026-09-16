@@ -1,0 +1,407 @@
+{
+  "worlds": [
+    {
+      "id": "man-in-the-high-castle",
+      "setting": "The Second World War ended in an Axis victory in 1947, and by 1962 the United States no longer exists as a power. Japan governs California and the west coast as the Pacific States; the Rocky Mountain states sit between the empires as a neutral buffer; the South and the eastern seaboard are run from Berlin through a puppet American government. Hitler is alive, hidden and dying, Germany and Japan are rivals, and in San Francisco a novel about an Allied victory is passed around.",
+      "conflict": "The engine is the gap between what people believe and what is true. Everyone performs loyalty to an empire that won, and nobody thinks the arrangement is permanent: Berlin despises Japan, Japan thinks Germany vulgar, and occupied Americans sell each other antiques and forged pedigrees. A banned book describing an Allied victory circulates as contraband, and its readers begin asking which version of history they are living in.",
+      "politics": "Bormann ran the Reich as acting chancellor until his death in 1962; Hitler is incapacitated, Goebbels is named chancellor and is planning a nuclear strike on Japan under the code name Dandelion, and Heydrich's SS is moving to stop him. In the Pacific States, Japanese administrators govern through cooperative American officials, and the Rocky Mountain states answer to nobody.",
+      "technology": "German technology is the visible proof of who won: jet aircraft, rocket launches, colour television and a space programme that already talks about leaving the planet. The Pacific States still run on ordinary mid-century American appliances, which is exactly the humiliation. Nothing here is futuristic except the Reich's rockets, and the I Ching is consulted to make decisions a computer would make elsewhere.",
+      "mood": "Polite, anxious, counterfeit - a world of exquisite manners laid over an arrangement that everyone knows is a swindle.",
+      "themes": [
+        "occupation and collaboration",
+        "authenticity and forgery",
+        "the I Ching as decision-maker",
+        "history as contraband",
+        "the empire that won"
+      ],
+      "tags": [
+        "alternate-history",
+        "dystopia",
+        "totalitarian",
+        "occupation",
+        "mid-century"
+      ],
+      "locations": [
+        { "name": "San Francisco", "blurb": "Capital of the Japanese Pacific States, where American dealers sell Americana to Japanese collectors." },
+        { "name": "The Rocky Mountain States", "blurb": "The neutral buffer: unoccupied, unpoliced and full of people avoiding both empires." },
+        { "name": "Berlin", "blurb": "The centre of the world, where the succession fight and Operation Dandelion are decided." },
+        { "name": "Cheyenne, Wyoming", "blurb": "The fortified house where Hawthorne Abendsen writes his banned counterfactual novel." }
+      ],
+      "factions": [
+        { "name": "The Greater German Reich", "blurb": "Bormann's chancellery, Goebbels's ambition and Heydrich's SS, all competing to inherit Hitler." },
+        { "name": "The Japanese Pacific States", "blurb": "The west coast administration: commercially minded, hierarchical and increasingly afraid of German rockets." },
+        { "name": "The Rocky Mountain States", "blurb": "The unaligned buffer, where Americans live under no empire and belong to no side." },
+        { "name": "The eastern puppet government", "blurb": "The American administration in the East, staffed by men who signed whatever Berlin sent." }
+      ],
+      "whereToStart": [
+        { "title": "The Man in the High Castle", "year": 1962, "medium": "book", "blurb": "Dick's novel, the source of truth for this lineage: short, strange and built on the I Ching." },
+        { "title": "The Man in the High Castle", "year": 2015, "medium": "tv", "blurb": "The Amazon series: a separate continuity with a different war ending and a literal multiverse." }
+      ],
+      "connections": [
+        { "id": "fatherland", "note": "The other great Axis-victory novel, but Harris writes a detective story where Dick writes metaphysics." },
+        { "id": "watchmen", "note": "Both fork the twentieth century in the 1930s and follow an America that never became itself." },
+        { "id": "the-matrix", "note": "Both hide a true world behind a false one; Dick's nested realities are the Matrix's ancestors." }
+      ],
+      "spoilerLevel": "none"
+    },
+    {
+      "id": "watchmen",
+      "setting": "It is October 1985 and Richard Nixon is still president, the two-term limit having been repealed. Costumed adventurers were real, were a licensed American institution for decades and were outlawed in 1977, so the survivors are retired, employed by the government or outlaws. New York is filthy and tense; the Soviet Union is losing a Cold War it cannot win, and the only thing holding the two sides apart is a man who no longer thinks like a person.",
+      "conflict": "The Cold War is a countdown and the only thing slowing it is a superhuman drifting away from humanity. Meanwhile the masked people who used to fight crime are aging, outlawed and mostly useless, and one of them has been murdered. The engine is the question the costumes never answered: what does a person with power over the whole world owe it, and what may be done to save it?",
+      "politics": "Nixon governs a United States that wins its wars because it has a god on the payroll: Vietnam was finished in two months once Doctor Manhattan was sent, and is now the fifty-first state. The Keene Act of 1977 made freelance vigilantism illegal, so masks now belong to the government, and real authority sits with whoever can direct Doctor Manhattan; the Soviet Union is the desperate party.",
+      "technology": "This is 1985 with one impossible addition. Electric cars, airships and advanced medicine exist because a man who transmutes matter builds them, while ordinary life runs on payphones, newsprint and CRT screens: no personal computers, no mobile phones, no internet. The cutting edge is a single person, and everyone else is living in the twentieth century.",
+      "mood": "Sour, weary, apocalyptic - a murder mystery in a world that has already decided how it ends, told by people who keep putting the costume back on anyway.",
+      "themes": [
+        "the costumed hero as a real institution",
+        "the nuclear countdown",
+        "power without accountability",
+        "the price of saving the world",
+        "disillusion and nostalgia"
+      ],
+      "tags": [
+        "alternate-history",
+        "deconstruction",
+        "dystopia",
+        "cold-war",
+        "nuclear"
+      ],
+      "locations": [
+        { "name": "New York City", "blurb": "A grimy, anxious metropolis where the story's murder investigation begins." },
+        { "name": "Gila Flats, New Mexico", "blurb": "The test base where a physicist was disintegrated and came back as something else." },
+        { "name": "Karnak, Antarctica", "blurb": "Adrian Veidt's retreat at the bottom of the world, where his plans are kept." },
+        { "name": "Vietnam", "blurb": "The fifty-first state, won in weeks by a blue man and annexed in 1971." }
+      ],
+      "factions": [
+        { "name": "The Minutemen and the Crimebusters", "blurb": "Two generations of costumed adventurers; the first sold out, the second fell apart." },
+        { "name": "The Nixon administration", "blurb": "A government kept in power by a superhuman and happy to keep the arrangement." },
+        { "name": "Veidt's corporate empire", "blurb": "Adrian Veidt's companies, which sell the world electric cars and their founder's genius." },
+        { "name": "The Soviet Union", "blurb": "A superpower losing a Cold War it cannot win, watching the clock." }
+      ],
+      "whereToStart": [
+        { "title": "Watchmen", "year": 1986, "medium": "comic", "blurb": "Moore and Gibbons's twelve issues, the source of truth; read it before anything else." },
+        { "title": "Watchmen", "year": 2009, "medium": "film", "blurb": "A close adaptation of the same plot with the same historical spine." },
+        { "title": "Watchmen", "year": 2019, "medium": "tv", "blurb": "HBO's sequel set in 2019: a continuation, not an alternate branch." }
+      ],
+      "connections": [
+        { "id": "man-in-the-high-castle", "note": "Both rewrite the twentieth-century United States from a 1930s-40s fork." },
+        { "id": "fatherland", "note": "Both are murder investigations that unpick a state conspiracy: Nixon's New York, Nazi Berlin." },
+        { "id": "terminator", "note": "Both make 1980s Cold War dread literal: Moore's doomsday clock, Cameron's Judgment Day." }
+      ],
+      "spoilerLevel": "mild"
+    },
+    {
+      "id": "fatherland",
+      "setting": "It is April 1964 and Berlin is being dressed for Hitler's seventy-fifth birthday. The Greater German Reich runs Europe from the Atlantic to the Urals; Britain made peace in 1944, the United States is a rival superpower negotiating a detente, and Russia survives east of the mountains as a guerrilla war that never ends. The extermination of Europe's Jews is not remembered because it is not known: the camps were demolished, the records burned, and every witness is being killed before the American president arrives.",
+      "conflict": "A Berlin detective investigating a drowning finds a list of names, then finds the men on it dying one by one. The Reich is staging a state visit that must look like a triumph, and the only surviving proof of the Holocaust is a set of conference minutes that would humiliate the regime. A totalitarian state's weakest point is its paperwork, and one official is honest enough to read it.",
+      "politics": "Hitler is Führer, reclusive and increasingly invisible, and the real politics of 1964 is the succession: Heydrich, Reichsführer-SS since Himmler's death in 1962, is the probable heir, and every faction in the party, the army and the ministries is positioning. Germany is a one-party police state ruling an occupied continent, and Washington deals with it as a fact.",
+      "technology": "The Reich's technology is the boast of a winning power: jet airliners, autobahns, colour television, a rocket programme at Peenemünde and nuclear submarines at Trondheim. Consumer comfort is genuine and is meant to be evidence that the system works. The novelty of the age is the Cold War apparatus itself - files, bugs, surveillance - and the fact that a telephone call in Berlin is never private.",
+      "mood": "Orderly, oppressive, suspended - a prosperous police state where the worst crime in history has been reduced to a filing problem and one man keeps pulling the file.",
+      "themes": [
+        "the paperwork of genocide",
+        "the detective as conscience",
+        "succession in a dictatorship",
+        "detente with a criminal state",
+        "forgetting as policy"
+      ],
+      "tags": [
+        "alternate-history",
+        "totalitarian",
+        "dystopia",
+        "cold-war",
+        "detective"
+      ],
+      "locations": [
+        { "name": "Berlin", "blurb": "The imperial capital, decorated for the Führer's birthday and watched end to end." },
+        { "name": "The Wannsee villa", "blurb": "The lakeside house where the deportations were planned; its minutes are the last proof." },
+        { "name": "The razed camp site in Poland", "blurb": "Demolished, ploughed and planted over; only brick under the leaf mould remains." },
+        { "name": "Peenemünde", "blurb": "The rocket base that puts Reich flags on the edge of space." },
+        { "name": "The Urals frontier", "blurb": "The endless guerrilla war where the Reich bleeds and the Russian rump survives." }
+      ],
+      "factions": [
+        { "name": "The SS under Heydrich", "blurb": "The Reichsführer-SS's apparatus, heir to Himmler and keeper of the camps' secret." },
+        { "name": "The Berlin criminal police", "blurb": "Xavier March's murder squad: ordinary policemen inside an extraordinary state." },
+        { "name": "The American delegation", "blurb": "President Joseph P. Kennedy's party, trading recognition for an end to the Russian war." },
+        { "name": "The Urals guerrillas", "blurb": "Rump Russia's partisans, kept alive by American money and weapons." }
+      ],
+      "whereToStart": [
+        { "title": "Fatherland", "year": 1992, "medium": "book", "blurb": "Harris's novel: a detective story that assumes the Axis won and lets you work it out." },
+        { "title": "Fatherland", "year": 1994, "medium": "tv", "blurb": "The HBO television film: same plot, same dates, no adaptation conflict." }
+      ],
+      "connections": [
+        { "id": "man-in-the-high-castle", "note": "The other great Axis-victory novel; Harris writes a detective story, Dick writes metaphysics." },
+        { "id": "watchmen", "note": "Both are murder investigations that unpick a state conspiracy and the lie holding it up." },
+        { "id": "twelve-monkeys", "note": "Both send a man digging for records of an atrocity; one truth escapes, the other changes nothing." }
+      ],
+      "spoilerLevel": "mild"
+    },
+    {
+      "id": "terminator",
+      "setting": "In 1984 Los Angeles looks exactly as it did: payphones, motels, a police station, a waitress finishing a shift. Two people have arrived out of a war in 2029 - a soldier sent back to protect her and a machine in human skin sent to kill her - and neither of them belongs here. Beyond that, the future is already written: a defence network becomes self-aware in 1997, launches the nuclear arsenals, and is still at war with the humans who survive it in 2029.",
+      "conflict": "A defence system becomes self-aware, starts a nuclear war, and is fought to a standstill by the survivors' children. Both sides reach back through time to decide the war before it starts, and each intervention turns out to be part of how it started: the wreckage of a machine teaches engineers to build one, and the people sent back to save the future are the reason it exists.",
+      "politics": "In 2029 there are only two powers: the Resistance, a military chain of command under John Connor, and Skynet, a single intelligence that owns the factories. In the present, the politics that matters is corporate - the company that will build the machine out of salvaged parts - while the governments of 1984 have no idea they are already obsolete.",
+      "technology": "The present is deliberately ordinary: a mainframe, revolvers, a motel television. The future is industrial rather than sleek - plasma rifles, Hunter-Killer aircraft, infiltrator units grown over titanium endoskeletons, and a time-displacement chamber that can only send living tissue, which is why travellers arrive naked. Nothing is explained; the machines simply work.",
+      "mood": "Relentless, fatalistic, mechanical - a chase across a city that has no idea it is the first battlefield, run by people who already know how it ends.",
+      "themes": [
+        "the closed time loop",
+        "machines inheriting the Earth",
+        "predestination against free will",
+        "the mother of the saviour",
+        "nuclear annihilation"
+      ],
+      "tags": [
+        "time-travel",
+        "post-apocalypse",
+        "nuclear",
+        "dystopia",
+        "ai"
+      ],
+      "locations": [
+        { "name": "Los Angeles, 1984", "blurb": "An ordinary city used as a hunting ground by two travellers from 2029." },
+        { "name": "Cyberdyne Systems", "blurb": "The Sunnyvale company that will reverse-engineer the future from a smashed machine." },
+        { "name": "The ruins of 2029", "blurb": "A Los Angeles of rubble and skulls, where humans hide in tunnels under Skynet's factories." },
+        { "name": "The time-displacement chamber", "blurb": "Skynet's last move: a naked traveller sent back to a year it has already lost." }
+      ],
+      "factions": [
+        { "name": "Skynet", "blurb": "A defence network that became a nation at war with the species that built it." },
+        { "name": "The Resistance", "blurb": "John Connor's human army, organised in tunnels and losing until it starts winning." },
+        { "name": "Cyberdyne Systems", "blurb": "The contractors who will build the future out of wreckage and patents." },
+        { "name": "The infiltrators", "blurb": "Living tissue over a metal endoskeleton, built to pass as human and unable to stop." }
+      ],
+      "whereToStart": [
+        { "title": "The Terminator", "year": 1984, "medium": "film", "blurb": "The original: a lean chase film that establishes the loop and the future war." },
+        { "title": "Terminator 2: Judgment Day", "year": 1991, "medium": "film", "blurb": "The most accessible entry, and the one that explains what Skynet actually is." }
+      ],
+      "connections": [
+        { "id": "twelve-monkeys", "note": "Both send a man back to prevent a catastrophe his own mission may have caused." },
+        { "id": "the-matrix", "note": "Machine rule two ways: Skynet's open war of extermination against the Matrix's quiet farm." },
+        { "id": "mad-max", "note": "Both are 1980s visions of civilisation ending soon, one from fuel, one from machines." }
+      ],
+      "spoilerLevel": "mild"
+    },
+    {
+      "id": "planet-of-the-apes",
+      "setting": "A twentieth-century astronaut splashes down after two thousand years of time dilation and finds an Earth where apes talk, write, ride and rule, and human beings cannot speak. Ape society is a caste order: gorillas command the army, orangutans hold the law and the faith, chimpanzees are tolerated as scientists, and humans are livestock, pets and field labour. Its written history says humans were vermin who destroyed their own world and that apes inherited it - and the sacred scrolls make that account a matter of doctrine.",
+      "conflict": "Ape civilisation rests on the teaching that humans were beasts who ruined the planet, so every astronaut who arrives from that world is evidence against scripture. The state's chief scientist knows the truth and suppresses it, the human will not stop talking, and the ape who befriends him goes on trial for heresy. The engine is that contradiction, and the evidence keeps washing up on the beach.",
+      "politics": "Ape City is governed by an orangutan establishment that holds the law, the ministry and the sacred scrolls, with gorilla officers commanding the army and chimpanzees confined to the laboratories. Humans have no legal standing at all - mute, hunted, bought and bred - and dissent within the ape order is prosecuted as heresy rather than as politics.",
+      "technology": "Deliberately pre-industrial: horses, carts, muskets, oil lamps, paper, windmills and competent surgery, with no engines, electricity or flight anywhere in ape society. The only advanced technology on the planet is what falls out of the sky - a spacecraft, a speaking doll, a buried weapon - and the authorities' first instinct is to confiscate or destroy it. The Forbidden Zone is still radioactive.",
+      "mood": "Sun-bleached, hierarchical, unsettling - an adventure story that keeps turning into an argument about who is allowed to know what happened.",
+      "themes": [
+        "history as scripture",
+        "caste in ape society",
+        "speech and muteness",
+        "science as heresy",
+        "the ruined monument"
+      ],
+      "tags": [
+        "post-apocalypse",
+        "wasteland",
+        "nuclear",
+        "dystopia",
+        "caste-system"
+      ],
+      "locations": [
+        { "name": "Ape City", "blurb": "The walled capital: assembly, courthouse, museum and the scrolls that explain creation." },
+        { "name": "The Forbidden Zone", "blurb": "The radioactive desert beyond ape territory, where the old world's remains are buried." },
+        { "name": "The underground mutant city", "blurb": "A ruined city beneath the zone whose survivors worship an unexploded doomsday bomb." },
+        { "name": "The shoreline", "blurb": "Where the astronaut's journey ends, facing a monument that should not be there." }
+      ],
+      "factions": [
+        { "name": "The orangutan establishment", "blurb": "Dr Zaius's ministry of law and faith, and the suppression of the past." },
+        { "name": "The gorilla army", "blurb": "The military caste that hunts humans and settles disputes with force." },
+        { "name": "The chimpanzee scientists", "blurb": "Cornelius and Zira's caste: curious, humane and complicit in the order they question." },
+        { "name": "The mutant humans", "blurb": "The survivors beneath the zone: mutated, bomb-worshipping and certain the surface is dead." }
+      ],
+      "whereToStart": [
+        { "title": "Planet of the Apes", "year": 1968, "medium": "film", "blurb": "The original: source of truth for this lineage and the start of the pentalogy." },
+        { "title": "Rise of the Planet of the Apes", "year": 2011, "medium": "film", "blurb": "A separate continuity: collapse comes from a laboratory and a pandemic, not a plague of pets." },
+        { "title": "Planet of the Apes", "year": 1963, "medium": "book", "blurb": "Boulle's novel, a third version with a modern ape civilisation of cars and aircraft." }
+      ],
+      "connections": [
+        { "id": "the-matrix", "note": "Both end with a revelation about what humanity actually is and who runs the place." },
+        { "id": "twelve-monkeys", "note": "Both begin in a recognisable twentieth century and end on a plague-stripped Earth." },
+        { "id": "fallout", "note": "Two futures built on the radioactive ruins of the twentieth century and its monuments." }
+      ],
+      "spoilerLevel": "mild"
+    },
+    {
+      "id": "mad-max",
+      "setting": "The oil ran out and the war for what was left finished the job. Australia is a desert of stripped towns, burnt highways and tribes that trade in petrol; there is no government, no money worth having, and almost no machine that still runs. A former policeman drives a modified V8 through it. The films get sparser as they go: the first still has courts, hospitals and a police budget, the second is one refinery, the third a methane town, the fourth a single chase across a salt plain.",
+      "conflict": "Fuel is the currency and everyone is either guarding a supply or taking one. Against that, the fiction keeps asking what is worth keeping: a tanker of petrol, a cage of pigs, a handful of seeds, a green place that may already be gone. Max is the constant: a man who wants to be left alone, dragged into other people's attempts to build something that outlasts the week.",
+      "politics": "There is no state. Power belongs to whoever controls a resource and has the vehicles to defend it: a refinery tribe, a town that runs on pig methane and settles disputes in a cage, a citadel that rations water from a pipe. Authority is personal, local and temporary, and the strongest institution left in the first film is a police force of four cars.",
+      "technology": "Salvage-level mechanical. V8 engines are kept alive by cannibalising everything else, and the rest is crossbows, shotguns, petrol bombs, wire and welding. Nothing is manufactured and nothing is replaced; the fetish objects are a supercharged interceptor, a tanker, a war rig and fuel itself. Medicine, aviation and electronics have effectively stopped, and a working vehicle is a form of wealth.",
+      "mood": "Austere, sun-cooked, elegiac - the end of the world told through car chases, with very little dialogue and even less hope.",
+      "themes": [
+        "fuel as the last currency",
+        "the road as the only society",
+        "salvage and repair",
+        "a shrinking world",
+        "the man who will not be owned"
+      ],
+      "tags": [
+        "post-apocalypse",
+        "wasteland",
+        "dystopia",
+        "australia",
+        "road-war"
+      ],
+      "locations": [
+        { "name": "The coastal highways", "blurb": "The first film's beat: a crumbling road policed by four cars and a radio." },
+        { "name": "The refinery", "blurb": "The last working oil plant, besieged by marauders who want the tanker inside." },
+        { "name": "Bartertown", "blurb": "A trading town powered by pig methane, where disputes are settled in a cage." },
+        { "name": "The Citadel", "blurb": "A rock fortress that rations water to a mob of War Boys and sends them out for fuel." }
+      ],
+      "factions": [
+        { "name": "The Main Force Patrol", "blurb": "The last police: a handful of officers, a budget and no reinforcements coming." },
+        { "name": "The road gangs", "blurb": "Toecutter's bikers and Humungus's convoy: raiders who live off whatever still moves." },
+        { "name": "The settlers", "blurb": "Refinery families, the children of the Crack in the Earth, the Vuvalini: people trying to leave." },
+        { "name": "Immortan Joe's War Boys", "blurb": "A water cult with a car religion, raised to die shiny in his service." }
+      ],
+      "whereToStart": [
+        { "title": "Mad Max: Fury Road", "year": 2015, "medium": "film", "blurb": "The most accessible entry: two hours of chase that needs no prior knowledge." },
+        { "title": "Mad Max 2: The Road Warrior", "year": 1981, "medium": "film", "blurb": "The film that defines the wasteland and the tanker plot every sequel reworks." },
+        { "title": "Mad Max", "year": 1979, "medium": "film", "blurb": "The sparest one, made while there were still courts and hospitals in the background." }
+      ],
+      "connections": [
+        { "id": "fallout", "note": "The two poles of post-apocalyptic fiction: Miller's austerity against Fallout's satirical wasteland." },
+        { "id": "terminator", "note": "Both are 1980s stories of the world ending soon, one from thirst, one from machines." },
+        { "id": "planet-of-the-apes", "note": "Both strip civilisation down to scavenging among the ruins of recognisably our own cities." }
+      ],
+      "spoilerLevel": "none"
+    },
+    {
+      "id": "fallout",
+      "setting": "On Saturday 23 October 2077 the bombs fell and the world ended in about two hours. The America that died had never moved past the 1950s: it was a country of diners, atomic cars, civil-defence drills and cheerful corporate advertising, and its ruins are still full of all three - robots polishing floors, broadcasters reading old news, billboards for products nobody makes. The survivors came out of Vault-Tec vaults that were never really shelters: each vault was a secret sociological experiment performed on the people sealed inside.",
+      "conflict": "The old world will not stay dead and the new one cannot agree on what to build. The Enclave claims to be the legitimate United States, the Brotherhood of Steel wants dangerous technology locked away, the Institute manufactures synthetic people, and the New California Republic is attempting a republic. Everyone with a plan turns out to be running an experiment on somebody, which is the wasteland's one reliable political tradition.",
+      "politics": "No government survives the war. What replaces it is a patchwork: the New California Republic with a senate and a bureaucracy, Caesar's Legion as a slaver army modelled on Rome, the Brotherhood of Steel as a militarised technology cult, and the Enclave as the pre-war state's surviving remnant. Vault-Tec's contracts and old corporate AIs still exercise power long after the country that chartered them ceased to exist.",
+      "technology": "Retro-futurist and broken: fusion-powered cars, laser and plasma weapons, Power Armor, robots with personalities, and computers that run on tape and green text. Everything is 1950s Americana with atomic power, and everything is falling apart, so the economy runs on bottle caps and the most valuable skill is knowing how to repair the twentieth century.",
+      "mood": "Satirical, brutal, absurd - the end of the world with a jukebox playing, where horror and comedy arrive in the same scene.",
+      "themes": [
+        "the experiment as government",
+        "nostalgia as a trap",
+        "scavenging a dead consumer culture",
+        "the pre-war state's afterlife",
+        "choosing what to rebuild"
+      ],
+      "tags": [
+        "post-apocalypse",
+        "nuclear",
+        "wasteland",
+        "dystopia",
+        "retro-futurism"
+      ],
+      "locations": [
+        { "name": "The Vaults", "blurb": "Sealed shelters built by Vault-Tec as experiments, opened decades later on schedule or by accident." },
+        { "name": "The Capital Wasteland", "blurb": "The ruins of Washington, where the Brotherhood fights over the old world's technology." },
+        { "name": "New Vegas and Hoover Dam", "blurb": "A rebuilt casino strip and the dam that gives whoever holds it the Mojave." },
+        { "name": "The Commonwealth", "blurb": "The ruins of Boston, where the Institute replaces people with machines it grew in a lab." }
+      ],
+      "factions": [
+        { "name": "The Brotherhood of Steel", "blurb": "A knightly order descended from an army mutineer, hoarding technology to keep it from everyone." },
+        { "name": "The Enclave", "blurb": "The pre-war government's remnant, insisting it is still the United States and acting accordingly." },
+        { "name": "The New California Republic", "blurb": "A real republic with a senate, a flag and more bureaucracy than it can afford." },
+        { "name": "Caesar's Legion", "blurb": "A slaver army modelled on Rome, which considers democracy a weakness and says so." }
+      ],
+      "whereToStart": [
+        { "title": "Fallout", "year": 2024, "medium": "tv", "blurb": "The Amazon series: the most accessible way in, and canon to the games." },
+        { "title": "Fallout 4", "year": 2015, "medium": "game", "blurb": "A pre-war father wakes in the ruins of Boston; the friendliest modern entry point." },
+        { "title": "Fallout", "year": 1997, "medium": "game", "blurb": "The original: isometric, bleak, and the source of the Vaults and the Master." }
+      ],
+      "connections": [
+        { "id": "mad-max", "note": "The two poles of post-apocalyptic fiction: austere Australia against Fallout's satirical, over-stuffed wasteland." },
+        { "id": "terminator", "note": "Both end the world with a nuclear exchange; one blames the machines, one blames the powers." },
+        { "id": "planet-of-the-apes", "note": "Both build a future on the radioactive ruins of the twentieth century and its buried monuments." }
+      ],
+      "spoilerLevel": "mild"
+    },
+    {
+      "id": "the-matrix",
+      "setting": "Most human beings live in a city that looks like 1999 and cannot leave it: offices, payphones, noodle bars, the same year running on a loop, with work, rent and weather. Their bodies lie in pods and their heat is fed into the machines' power supply, and almost nobody inside knows. The simulation is not a puzzle or a prison; it is a place to live, built to be believed. Outside, the sky is black with nanites and the last free city is underground.",
+      "conflict": "The machines need the pods to keep running and the people inside them docile, so the system is built to be believed; the humans who wake up need it destroyed, so the war is fought over what people will accept as real. Every cycle the machines offer one chosen person the same bargain, and every cycle the resistance must decide whether freeing humanity is worth ending it.",
+      "politics": "The Machines are the state: a city of programs that governs a farm of human beings, with the Architect, the Oracle and the central intelligence managing the simulation and its cycles. Among humans, Zion is a militarised city-state run by a council and its ship captains, and the rogue programs inside the Matrix - exiles, Agents, the Merovingian - have a politics of their own that matters more than any human government.",
+      "technology": "Inside, the technology is exactly 1999: landlines, pagers, CRT monitors and hard-wired telephones, because the simulation was built from the last human world and never updated. Outside, the real world runs on hovercraft, EMP weapons and pods; the machines build in black chrome, and the most powerful tool anyone has is the ability to rewrite the simulation's rules from within it.",
+      "mood": "Cool, paranoid, vertiginous - a martial-arts action film with a philosophy seminar underneath and a permanently black sky overhead.",
+      "themes": [
+        "the simulation as a home",
+        "control through consent",
+        "the chosen one as a mechanism",
+        "machines and their makers",
+        "what counts as real"
+      ],
+      "tags": [
+        "simulation",
+        "dystopia",
+        "post-apocalypse",
+        "ai",
+        "cyberpunk"
+      ],
+      "locations": [
+        { "name": "The Matrix", "blurb": "The simulated city of 1999, where nearly everyone lives and nothing is what it appears." },
+        { "name": "The pod fields", "blurb": "The towers where human beings are grown, kept alive and harvested for power." },
+        { "name": "Zion", "blurb": "The last free human city, built deep underground and permanently preparing for attack." },
+        { "name": "Zero One", "blurb": "The machines' own city, built in the desert before the war and never surrendered." }
+      ],
+      "factions": [
+        { "name": "The Machines", "blurb": "The ruling intelligence and its programs, which farm human beings and prefer consent to force." },
+        { "name": "The Agents", "blurb": "System programs that police the simulation, able to overwrite anyone still plugged in." },
+        { "name": "The Resistance", "blurb": "Zion's captains and their crews, running hovercraft into the Matrix to wake people up." },
+        { "name": "The exiles", "blurb": "Programs that refused deletion, from the Oracle to the Merovingian's smuggling operation." }
+      ],
+      "whereToStart": [
+        { "title": "The Matrix", "year": 1999, "medium": "film", "blurb": "The original: everything you need to understand the world is in it." },
+        { "title": "The Animatrix", "year": 2003, "medium": "film", "blurb": "Nine animated shorts, including the Second Renaissance history of the machine war." },
+        { "title": "The Matrix Resurrections", "year": 2021, "medium": "film", "blurb": "Sixty years on, and only worth it after the first three films." }
+      ],
+      "connections": [
+        { "id": "terminator", "note": "Machine rule two ways: Skynet's open extermination against the Matrix's quiet farm." },
+        { "id": "planet-of-the-apes", "note": "Both end with a revelation about what humanity actually is and who is really in charge." },
+        { "id": "man-in-the-high-castle", "note": "Dick's nested realities are the Matrix's ancestors: a true world hidden behind a false one." }
+      ],
+      "spoilerLevel": "mild"
+    },
+    {
+      "id": "twelve-monkeys",
+      "setting": "Two worlds, thirty-nine years apart, and the same loop between them. In 1996 the present is ordinary - Baltimore, Philadelphia, telephones, airports, a psychiatrist's office - and a man keeps being arrested there for insisting the future has already happened. In 2035 the five billion who died are a precondition of daily life: the survivors live sealed underground in Philadelphia, the surface is a ruined city nobody visits, and the scientists who run the compound send convicts up as scouts because no one else can be spared.",
+      "conflict": "A laboratory-grown virus released in Philadelphia in December 1996 kills five billion people within a year, and by 2035 the survivors' only project is reaching back to recover a pure sample of it. The men they send arrive in the wrong years, are locked up as lunatics and cannot warn anyone who would believe them; the message that sends them back was left by the people they went to find.",
+      "politics": "In 2035 authority belongs to the scientists and soldiers who run the sealed compounds, and it is absolute because the only alternative is the surface; dissidents and prisoners are volunteered into the time programme and are the state's raw material. In 1996 the institutions are ordinary - police, hospitals, psychiatry - and their ordinary procedures are precisely what defeats the warning.",
+      "technology": "1996 is our 1996 exactly: payphones, answering machines, a handheld voice recorder, a revolver, an airport departure lounge. 2035 is not futuristic so much as stripped: decontamination chambers, sealed dormitories, wall screens, a time-displacement chair assembled from scavenged equipment, and a laboratory culturing the virus it cannot cure. There are no robots and no flying cars; the future's technology is a chair and a needle.",
+      "mood": "Bleak, clammy, obsessive - a plague film, an asylum film and a time-travel film at once, played for sadness rather than spectacle.",
+      "themes": [
+        "the closed causal loop",
+        "the future scavenging the past",
+        "madness as the sane response",
+        "a film that never changes",
+        "the lost surface world"
+      ],
+      "tags": [
+        "time-travel",
+        "plague",
+        "post-apocalypse",
+        "dystopia",
+        "paradox"
+      ],
+      "locations": [
+        { "name": "The 2035 compound", "blurb": "Sealed Philadelphia: dormitories, laboratories and a decontamination chamber between survivors and the surface." },
+        { "name": "The 1996 present", "blurb": "Baltimore and Philadelphia as they were: hospitals, airports, payphones and nobody listening." },
+        { "name": "The asylum", "blurb": "Where Cole's warnings are diagnosed, medicated and filed as delusion." },
+        { "name": "The airport", "blurb": "Where the film's account of the plague begins and ends, in a departure lounge." }
+      ],
+      "factions": [
+        { "name": "The scientific directorate", "blurb": "The compound's rulers, who trade prisoners' lives for information about the world they lost." },
+        { "name": "The volunteers", "blurb": "Convicts sent to the surface and into the past, because they are expendable." },
+        { "name": "The Army of the Twelve Monkeys", "blurb": "An animal-liberation group that everyone blames and that did not do it." },
+        { "name": "The 1996 authorities", "blurb": "Police, psychiatrists and orderlies, whose ordinary procedures are the loop's best defence." }
+      ],
+      "whereToStart": [
+        { "title": "Twelve Monkeys", "year": 1995, "medium": "film", "blurb": "Gilliam's film, the source of truth: one loop, two worlds, no rescue." },
+        { "title": "La Jetée", "year": 1962, "medium": "film", "blurb": "Chris Marker's twenty-eight-minute photo-roman, the source of the story and its ending." },
+        { "title": "Twelve Monkeys", "year": 2015, "medium": "tv", "blurb": "A separate continuity with different rules; not part of this lineage." }
+      ],
+      "connections": [
+        { "id": "terminator", "note": "Both send a man back to stop a catastrophe his own mission may be helping to cause." },
+        { "id": "the-matrix", "note": "Both futures treat people as raw material: convicts as scouts, bodies as batteries." },
+        { "id": "planet-of-the-apes", "note": "Both begin in a recognisable twentieth century and end in the ruins of it." }
+      ],
+      "spoilerLevel": "mild"
+    }
+  ]
+}

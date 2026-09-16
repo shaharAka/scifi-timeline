@@ -1,0 +1,491 @@
+{
+  "worlds": [
+    {
+      "id": "x-files",
+      "setting": "The surface is an unremarkable 1990s America: federal offices, motels and small towns, a country that has officially stopped believing in flying saucers. Underneath it, the government has known since 1947 that something non-human is here, and a small group of officials has spent fifty years managing that fact in secret. The X-Files office holds the cases nobody wants filed. Knowing costs you: the record is simultaneously true and officially discredited, and the people who keep it tend to lose their careers, their families and their lives.",
+      "conflict": "Mulder believes the truth is knowable and suppressed; Scully demands evidence that would survive a courtroom. Both are right. The government is in a standing arrangement with visitors it cannot fight, made by men who priced a few generations of silence as a fair trade for the species. Every case asks whether exposure would save anyone, or would end the arrangement that keeps humanity alive.",
+      "politics": "Agency politics on the surface, a shadow cabinet underneath. A handful of powerful men decide what the public may know, and the Bureau's official position is that Mulder's work is a waste of money.",
+      "technology": "The tech is deliberately mundane: filing cabinets, payphones, rental cars, autopsy rooms. The aliens have what we cannot build, the conspiracy has only what it can steal and reverse-engineer, and none of it reaches the public. You notice the absence of the ordinary things that would prove anything, such as a working camera or a witness who stays alive.",
+      "mood": "Paranoid, melancholy, claustrophobic. It is a show about two people doing careful work in a building that has already decided the answer, and about how lonely it is to be the only one asking.",
+      "themes": [
+        "the unknowability of truth",
+        "institutional betrayal",
+        "belief against evidence",
+        "the cost of knowing",
+        "complicity and silence"
+      ],
+      "tags": [
+        "conspiracy",
+        "government-coverup",
+        "first-contact",
+        "secret-society"
+      ],
+      "locations": [
+        {
+          "name": "The basement office",
+          "blurb": "Where the discredited cases are kept, one floor below anyone who matters."
+        },
+        {
+          "name": "The evidence warehouse",
+          "blurb": "A locked facility full of objects that officially never existed."
+        },
+        {
+          "name": "The Oregon woods",
+          "blurb": "Where the series begins: teenagers, a forest, and missing time."
+        }
+      ],
+      "factions": [
+        {
+          "name": "The FBI",
+          "blurb": "Files the strange away, funds the sceptic, and calls it oversight."
+        },
+        {
+          "name": "The Syndicate",
+          "blurb": "Officials who learned the truth in 1947 and chose secrecy over disclosure."
+        },
+        {
+          "name": "The Colonists",
+          "blurb": "The non-human presence that has been here longer than the cover-up."
+        },
+        {
+          "name": "The Lone Gunmen",
+          "blurb": "Three paranoid publishers who are right far more often than is comfortable."
+        }
+      ],
+      "whereToStart": [
+        {
+          "title": "The X-Files, season one",
+          "year": 1993,
+          "medium": "tv",
+          "blurb": "The pilot sets the entire arrangement up in forty-five minutes: basement, sceptic, cover-up."
+        },
+        {
+          "title": "The X-Files: Fight the Future",
+          "year": 1998,
+          "medium": "film",
+          "blurb": "The mythology at feature length, for anyone who wants the conspiracy without twenty-four episodes a year."
+        },
+        {
+          "title": "\"Jose Chung's From Outer Space\"",
+          "year": 1996,
+          "medium": "tv",
+          "blurb": "A standalone hour that captures the show's joke about testimony, memory and unreliable witnesses."
+        }
+      ],
+      "connections": [
+        {
+          "id": "men-in-black",
+          "note": "The same hidden arrangement as farce rather than horror: both turn on what the government knows and never says."
+        },
+        {
+          "id": "the-matrix",
+          "note": "Both are late-1990s paranoia where official reality is a managed fiction and knowing makes you a target."
+        },
+        {
+          "id": "watchmen",
+          "note": "Shared question of who may act outside the law, answered grimly here and in costume there."
+        },
+        {
+          "id": "buffy",
+          "note": "1990s television contemporaries: one hides the monsters in a conspiracy, the other in a high school."
+        }
+      ],
+      "spoilerLevel": "none"
+    },
+    {
+      "id": "men-in-black",
+      "setting": "New York looks like New York: traffic, tourists, hot dog carts, a news cycle about nothing. Underneath it, roughly fifteen hundred aliens live disguised among humans, and a small agency runs their arrivals, paperwork, disputes and deportations. Both films and cartoon spin-off are consistent about one thing: the extraordinary here is administered. The surface stays beautifully ordinary because a neutral zone is only neutral while nobody notices it. The cost of knowing is exacted by machine: one flash and you lose the memory, one signature and you lose your name.",
+      "conflict": "The agency's mandate is to keep Earth a neutral zone, which makes immigration control and public relations more important than firepower. Every incident that risks exposure is a catastrophe, whether a hostile alien or a human demanding proof causes it. The comedy comes from procedure; the tension from the fact that procedure is all that stands between the planet and everyone who wants it.",
+      "politics": "An unofficial department with no congressional oversight, no public budget line and no accountability to anyone outside itself. It answers to no electorate, and the only check on it is its own sense of restraint.",
+      "technology": "Chrome sidearms and sunglasses are the visible kit, but the real technology is discretion: neuralysers that erase memory, disguises that hide a body, doors that fold space. Nothing is designed to impress, only to be forgotten. What is missing is any interest in improving human life. The agency could change the world and has decided, for excellent reasons, not to.",
+      "mood": "Deadpan, breezy, faintly sinister. A galaxy-threatening emergency is handled like a lost-luggage claim, and the joke is that this is exactly how it should be handled.",
+      "themes": [
+        "concealment as policy",
+        "the ethics of forgetting",
+        "bureaucracy as cosmology",
+        "who watches the watchers",
+        "assimilation and asylum"
+      ],
+      "tags": [
+        "government-coverup",
+        "secret-society",
+        "first-contact",
+        "conspiracy"
+      ],
+      "locations": [
+        {
+          "name": "MiB headquarters",
+          "blurb": "A windowless building full of aliens queuing at numbered counters."
+        },
+        {
+          "name": "The 1964 World's Fair site",
+          "blurb": "Observation towers that are not towers, hiding spacecraft in plain sight."
+        },
+        {
+          "name": "The city morgue",
+          "blurb": "Where a rookie cop first sees what the paperwork is really for."
+        },
+        {
+          "name": "LunarMax",
+          "blurb": "A prison on the moon, which is presented as an administrative posting."
+        }
+      ],
+      "factions": [
+        {
+          "name": "The Men in Black",
+          "blurb": "Agents who surrendered their names and their pasts to police the neutral zone."
+        },
+        {
+          "name": "The refugee population",
+          "blurb": "Aliens living on Earth under asylum, filing forms like anybody else."
+        },
+        {
+          "name": "The London branch",
+          "blurb": "The same department under another flag, equally invisible to its own government."
+        },
+        {
+          "name": "Rival powers",
+          "blurb": "Species who want Earth's neutrality revoked, or its residents extradited."
+        }
+      ],
+      "whereToStart": [
+        {
+          "title": "Men in Black",
+          "year": 1997,
+          "medium": "film",
+          "blurb": "Ninety-eight minutes that establish the agency, the rules and the tone in one go."
+        },
+        {
+          "title": "Men in Black 3",
+          "year": 2012,
+          "medium": "film",
+          "blurb": "Best picture of how far back the arrangement runs and how much of it is one agent's work."
+        },
+        {
+          "title": "Men in Black: International",
+          "year": 2019,
+          "medium": "film",
+          "blurb": "The agency as a worldwide employer, seen by a recruit who was never memory-wiped."
+        }
+      ],
+      "connections": [
+        {
+          "id": "x-files",
+          "note": "Same hidden arrangement played as farce instead of horror: what the government knows and never says."
+        },
+        {
+          "id": "watchmen",
+          "note": "Both ask who licenses the policing of the extraordinary, and hide the answer in an off-books file."
+        },
+        {
+          "id": "the-matrix",
+          "note": "Shared premise that memory is editable and the world you remember is an administrative decision."
+        },
+        {
+          "id": "harry-potter",
+          "note": "Two concealment bureaucracies with a population hiding next door, one administrative and one enchanted."
+        }
+      ],
+      "spoilerLevel": "none"
+    },
+    {
+      "id": "harry-potter",
+      "setting": "Ordinary Britain in the 1990s: suburbs, comprehensive schools, the evening news, a country with no idea. Laid over the top of it is a parallel magical Britain with the same postcode, hidden behind enchantment, misdirection and memory charms. It has its own civil service, newspaper, prison, bank and class system, and it is small enough that everyone knows everyone. The cost of knowing is the cruellest of the five worlds: the Muggle side of your family is not supposed to be told.",
+      "conflict": "Two wars, twenty years apart, over whether magic belongs to everyone or only to those born to it. Powerful families and the movement they fund want a pure-blood order restored; the Ministry wants calm above all else, which makes it the enemy of anyone trying to warn it. Because the world is concealed, the war is fought in spaces the ordinary one never looks at.",
+      "politics": "The Ministry of Magic governs the concealed population: an elected minister, a permanent bureaucracy, a court, and one seat of contact with the Muggle Prime Minister. It is a small civil service with a small civil service's instincts, which is why it spends its worst year denying a war rather than fighting one.",
+      "technology": "Magic replaces almost every modern convenience, and nothing is built: no computers, no electronics, no industry, only wands, quills, enchanted objects and a steam train to school. Wizards conjure what Muggles manufacture, treat Muggle engineering as a curiosity, and cannot easily fix a problem that magic does not solve. The result is a world with 1990s politics and medieval infrastructure.",
+      "mood": "Cosy and parochial on the surface, genuinely frightening underneath. The emotional register is boarding-school warmth, petty snobbery and real grief, all in the same corridor.",
+      "themes": [
+        "blood and class",
+        "institutional denial",
+        "belonging and exile",
+        "loyalty and sacrifice",
+        "the seduction of purity"
+      ],
+      "tags": [
+        "magic",
+        "secret-society",
+        "coming-of-age",
+        "chosen-one"
+      ],
+      "locations": [
+        {
+          "name": "Hogwarts",
+          "blurb": "A castle school that is the safest and most dangerous building in the country."
+        },
+        {
+          "name": "Diagon Alley",
+          "blurb": "A shopping street folded behind an ordinary London pub."
+        },
+        {
+          "name": "The Ministry of Magic",
+          "blurb": "A windowless underground bureaucracy with a courtroom at the bottom."
+        },
+        {
+          "name": "Azkaban",
+          "blurb": "An island prison guarded by creatures that feed on happiness."
+        },
+        {
+          "name": "Privet Drive",
+          "blurb": "The Muggle suburb where the concealed world dumps what it cannot protect."
+        }
+      ],
+      "factions": [
+        {
+          "name": "The Ministry of Magic",
+          "blurb": "Government, courts and press release, all in one uneasy institution."
+        },
+        {
+          "name": "Hogwarts",
+          "blurb": "Four houses, one staffroom, and old arguments kept alive by sorting."
+        },
+        {
+          "name": "The Death Eaters",
+          "blurb": "A movement for pure-blood rule, swearing allegiance to one leader."
+        },
+        {
+          "name": "The Daily Prophet",
+          "blurb": "The newspaper of record, which prints what the Ministry finds helpful."
+        }
+      ],
+      "whereToStart": [
+        {
+          "title": "Harry Potter and the Philosopher's Stone",
+          "year": 1997,
+          "medium": "book",
+          "blurb": "The seven-book arc starts here and the world is built from the first chapter."
+        },
+        {
+          "title": "Harry Potter and the Philosopher's Stone",
+          "year": 2001,
+          "medium": "film",
+          "blurb": "The gentlest way in if you want the castle before the war."
+        },
+        {
+          "title": "Harry Potter and the Goblet of Fire",
+          "year": 2000,
+          "medium": "book",
+          "blurb": "The hinge volume: the concealed world stops being a school story and becomes a war."
+        }
+      ],
+      "connections": [
+        {
+          "id": "his-dark-materials",
+          "note": "Contemporaries and deliberate opposites: one affirms a hidden magical order, the other burns religious authority down."
+        },
+        {
+          "id": "buffy",
+          "note": "Both are 1990s adolescence split between an ordinary life and a secret, lethal duty."
+        },
+        {
+          "id": "men-in-black",
+          "note": "One hidden world is bureaucratic and the other magical, and both hide a whole population next door."
+        },
+        {
+          "id": "x-files",
+          "note": "Both run a hidden ministry their national government half-knows about and never mentions."
+        }
+      ],
+      "spoilerLevel": "mild"
+    },
+    {
+      "id": "buffy",
+      "setting": "Sunnydale, California, late 1990s: stucco houses, a mall, a high school, a nightclub called the Bronze, and a death rate the local paper never asks about. The town sits on a Hellmouth, a weak point between worlds, which is why so much happens here and why the adults explain none of it. The show's real structure is high school as horror: the monsters are literal and the metaphors are adolescent. To know about it is to be drafted, and the drafting is lifelong.",
+      "conflict": "One girl in each generation is given the strength to fight vampires and demons, and the fight never ends for her. Buffy wants an ordinary life and is not allowed one; her friends insist on helping and are always in danger because of it. The engine is that the power is real, necessary, isolating and unfair, and each season makes her pay more for it.",
+      "politics": "A secret council of Watchers trains and directs the Slayer, treats her as an instrument, and controls what she is told. The town authorities, the police and the school board are innocent, corrupt or wilfully blind. Everything is informal: the real decisions are made by a teenager, her librarian and her friends.",
+      "technology": "Deliberately analog and cheap: stakes, crossbows, a card index in a school library, research done by hand, and no mobile phones worth relying on. Magic exists and is expensive to use. The conspicuous absence is any adult institution that could help, and any weapon that does not have to be swung by a person at close range.",
+      "mood": "Wry, adolescent, genuinely sad. The jokes land fast, the horror is practical and physical, and grief is treated as the actual cost of the job.",
+      "themes": [
+        "growing up as horror",
+        "power and obligation",
+        "chosen family",
+        "the loneliness of the only one",
+        "high school as hellmouth"
+      ],
+      "tags": [
+        "vampire",
+        "urban-fantasy",
+        "coming-of-age",
+        "chosen-one",
+        "magic",
+        "secret-society"
+      ],
+      "locations": [
+        {
+          "name": "Sunnydale High",
+          "blurb": "A normal California school with a library that doubles as a war room."
+        },
+        {
+          "name": "The Bronze",
+          "blurb": "The all-ages club where the band plays and the vampires hunt."
+        },
+        {
+          "name": "The Hellmouth",
+          "blurb": "The weak point under the town that explains everything wrong with it."
+        },
+        {
+          "name": "The cemetery",
+          "blurb": "The most-used set on the show, and the reason for the town's death rate."
+        }
+      ],
+      "factions": [
+        {
+          "name": "The Scooby Gang",
+          "blurb": "A Slayer, a Watcher and three friends doing research after school."
+        },
+        {
+          "name": "The Watchers' Council",
+          "blurb": "A centuries-old body that trains Slayers and withholds what they need."
+        },
+        {
+          "name": "Vampires and demons",
+          "blurb": "Predators with their own politics, hierarchies and grudges."
+        },
+        {
+          "name": "The Initiative",
+          "blurb": "A government research unit on campus, treating demons as a military problem."
+        }
+      ],
+      "whereToStart": [
+        {
+          "title": "Buffy the Vampire Slayer, season one",
+          "year": 1997,
+          "medium": "tv",
+          "blurb": "Twelve episodes that set the premise; the show finds its voice in season two."
+        },
+        {
+          "title": "Buffy the Vampire Slayer, season two",
+          "year": 1998,
+          "medium": "tv",
+          "blurb": "Where the metaphor and the emotional stakes start carrying real weight."
+        },
+        {
+          "title": "Buffy the Vampire Slayer, season three",
+          "year": 1999,
+          "medium": "tv",
+          "blurb": "High school as horror at full strength, with graduation as the finale."
+        }
+      ],
+      "connections": [
+        {
+          "id": "x-files",
+          "note": "Same 1990s monster-of-the-week lineage: one files the strange as a conspiracy, the other stakes it."
+        },
+        {
+          "id": "his-dark-materials",
+          "note": "Both follow a chosen child who turns against the institution claiming to own her."
+        },
+        {
+          "id": "men-in-black",
+          "note": "Two answers to the same question: the agency that handles the supernatural, and the teenager who does it unpaid."
+        },
+        {
+          "id": "harry-potter",
+          "note": "Late-1990s teen fantasy contemporaries, one at boarding school and one in a Californian suburb."
+        }
+      ],
+      "spoilerLevel": "mild"
+    },
+    {
+      "id": "his-dark-materials",
+      "setting": "Not our world. Lyra's Oxford has colleges, gas lamps and a river, and the year is roughly ours, but the Reformation never broke the Church's power: John Calvin became Pope, the Magisterium still governs, and there was no scientific or industrial revolution. Every person is accompanied by a daemon, an animal-shaped soul that speaks, changes shape in childhood and settles at puberty. Power is liturgical, fuel is anbaric, and the North is a frontier of zeppelins, witches, armoured bears and experimental stations.",
+      "conflict": "The Church teaches that Dust, a particle visible only to instruments and attracted to conscious beings, is evidence of original sin, and it is prepared to sever children from their daemons to prevent it. Against that stands a child whom the witches' prophecy concerns, and the question the trilogy asks is whether knowledge and desire are pollution or the whole point of being alive.",
+      "politics": "The Magisterium rules Lyra's world: doctrine is law, and it has courts, spies and experimental stations of its own. Everything else sits outside it or under it, from the colleges of Oxford to the Gyptians on the canals and the witch clans of the far north, who owe the Church nothing.",
+      "technology": "No electronics, no screens, no computing. Zeppelins, anbaric lamps, naphtha, hand-written reports, glass instruments and the alethiometer, a compass-like device that answers questions in symbols and is read by intuition rather than calculation. The world is industrious without being industrial: it can build airships and cannot build a radio, and it possesses photographic plates while lacking the thought that would make them mundane.",
+      "mood": "Wonderful and dreadful at once. It reads as a children's adventure written in the language of theology, where the villains are sincere, the scholarship is dangerous and growing up is the most serious event in the universe.",
+      "themes": [
+        "authority against free will",
+        "soul and body",
+        "the cost of knowledge",
+        "innocence and experience",
+        "institutional cruelty"
+      ],
+      "tags": [
+        "parallel-worlds",
+        "religion",
+        "magic",
+        "coming-of-age",
+        "chosen-one"
+      ],
+      "locations": [
+        {
+          "name": "Jordan College, Oxford",
+          "blurb": "A scholarly house with cellars, a Master and an interest in the North."
+        },
+        {
+          "name": "The Arctic",
+          "blurb": "Svalbard and the far north: aurora, armoured bears and an experimental station."
+        },
+        {
+          "name": "Cittàgazze",
+          "blurb": "A Mediterranean town of empty streets that is full of doors to elsewhere."
+        },
+        {
+          "name": "The Magisterium's courts",
+          "blurb": "Where doctrine is decided and children are the subject of the ruling."
+        }
+      ],
+      "factions": [
+        {
+          "name": "The Magisterium",
+          "blurb": "The Church as government: doctrine, courts, spies and scientific bureaux."
+        },
+        {
+          "name": "The witches",
+          "blurb": "Long-lived clans of the north, owing no allegiance to the Church."
+        },
+        {
+          "name": "The armoured bears",
+          "blurb": "Svalbard's panserbjorne, who forge their own armour and hire out as mercenaries."
+        },
+        {
+          "name": "The Gyptians",
+          "blurb": "Canal-boat families with their own laws, networks and long memories."
+        },
+        {
+          "name": "Oxford scholars",
+          "blurb": "Men who read what they are not supposed to and keep their own accounts."
+        }
+      ],
+      "whereToStart": [
+        {
+          "title": "Northern Lights",
+          "year": 1995,
+          "medium": "book",
+          "blurb": "The entry point and the fullest account of what a life with a daemon is like."
+        },
+        {
+          "title": "The Subtle Knife",
+          "year": 1997,
+          "medium": "book",
+          "blurb": "Where the story crosses into our world and the series becomes a multiverse rather than a parallel."
+        },
+        {
+          "title": "La Belle Sauvage",
+          "year": 2017,
+          "medium": "book",
+          "blurb": "A prequel flood story for readers who already know the world; best not read first."
+        }
+      ],
+      "connections": [
+        {
+          "id": "harry-potter",
+          "note": "Turn-of-the-millennium British fantasy opposites: one affirms the hidden order, the other dismantles holy authority."
+        },
+        {
+          "id": "the-matrix",
+          "note": "Both make the real world a managed version of a larger one, and knowledge a thing you cannot unlearn."
+        },
+        {
+          "id": "contact",
+          "note": "Both take instruments and evidence seriously, then ask what a person owes to what they cannot prove."
+        },
+        {
+          "id": "star-trek",
+          "note": "Mirror images: a federation built on inquiry, and a church that burned the inquiry down."
+        }
+      ],
+      "spoilerLevel": "heavy"
+    }
+  ]
+}
