@@ -200,38 +200,35 @@ law / state / inside / national / political, power up, openness down). A
 technology, an enemy - would separate them. Add it to `data/facets.json` and
 to every event before adding worlds, not after.
 
-### 2.3 The picture (built 2026-09-17: the graph, anchored on us)
+### 2.3 The picture (built 2026-09-17: the Moments page, an arc diagram anchored on us)
 
-The Moments view is a graph, not a set of lanes: one circle per kind of moment,
-a road for every way a story moves between two kinds. What anchors it is our
-own history.
+Moments is its own page, not a mode of the tree. Nothing of the tree is drawn
+on it and it has its own camera and its own panel (`src/viewer/57-moments-page.js`).
 
-- **The main line is us.** The kinds our history has passed through are laid
-  left to right in the order we first reached them (22 of the 33), joined by a
-  single heavy line in the trunk colour and marked "US". Under each circle: the
-  years it happened to us ("war begins: 1914 1939 2003 …") and one small dot per
-  visit. Today is a ring on the last kind we reached.
-- **Only in fiction.** The kinds no real beat has reached sit off the line,
-  above and below, at the x where they tend to fall in a story, labelled "only
-  in fiction". Every fictional future is our line plus one or more of these.
-- **Strands.** Each world rides our line until its fork: a thin line in its
-  colour alongside the main line, from the first of our kinds it shares to the
-  last before its divergence, ending in a dot. Clicking a strand opens the world.
-- **Roads.** A transition between two kinds, made after a world has forked, is
-  drawn once as an arc weighted by how many worlds take it: shared roads heavy
-  and named, private ones faint, dashed where they lie ahead of today. Pre-fork
-  transitions are not roads; they are the strand.
-- **Clicking a circle** lights the worlds that share that kind of moment (their
-  roads stay bright, everything else recedes) and opens the panel with, for each
-  world, the moment it had there and what followed, plus the years it happened
-  to us. **Clicking a real-beat dot** runs the situation match on that beat.
-- Circle size follows the number of worlds through it; the count is printed in
-  the circle. No lane furniture is drawn in this view.
-
-Code: `src/viewer/57-graph.js` (`placeMomentsGraph`, `drawMomentGraph`); the
-axis that supplies the columns is `56-moments.js`; lighting and the panel are
-`88-futures.js`. Level of detail on the main line is the open problem: at 22
-kinds the labels alternate above and below and still touch at 1500px.
+- **One line of circles, one per kind of moment.** Left of TODAY: the kinds our
+  own history has passed through, in the order we first reached them (22 of
+  33), on a solid line in the trunk colour. Right of TODAY: the kinds only
+  fiction has reached, in the order stories tend to reach them, on a dotted
+  line. Circle size and the number inside are how many worlds pass through it.
+- **Arcs above the line are roads**: a transition a fiction makes between two
+  kinds after it has forked, drawn once, heavier the more worlds take it,
+  dashed where it lies ahead of today. Pre-fork moves are not roads (the world
+  was still with us). **Arcs below the line are our own path**, in our colour.
+- **Nothing is coloured by world until asked.** Click a circle: roads not
+  touching it recede, and the panel shows the kind, its definition and example
+  headline, *Happened to us* (each real beat as a button), *What tends to
+  follow* (the next kind in each world through it, counted, with bars), and
+  every world that passes through it with the moment it had there and its next
+  three beats. Click a world's name to light its whole road in its colour, with
+  the shared-with-us part dotted. Click a small dot above a circle (a time it
+  happened to us) for the situation match: the beat's signature, then the
+  nearest fictional moments by facets with their scores and what followed.
+- **Camera**: wheel zooms the line around the cursor (1× to 9×), drag pans, Fit
+  resets; the line uses the width beside the panel. Labels are rotated and thin
+  out with spacing; every kind keeps its name on hover.
+- Clicks are dispatched from the svg's pointerup using the pressed element, so
+  they survive the svg's pointer capture. Do not rely on `onclick` on svg
+  children in this codebase.
 
 ### 2.4 Code and tests
 

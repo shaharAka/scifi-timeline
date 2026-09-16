@@ -145,6 +145,7 @@ function tweenTo(c, hs, z, ms){
    time span to set. In Order mode x is sequence and always fills the width, so
    touching view.c/hs there would mean nothing. */
 function fitAll(){
+  if(axisMode === "moments"){ momentsFit(); renderChart(); return; }
   var lay = layout(visibleLineages());
   Z = clamp((Hv - 12) / Math.max(1, lay.height1), Z_MIN, 1.15);
   panY = 0;
@@ -190,7 +191,7 @@ function setPanel(mode){
   var d = document.getElementById("drawer");
   d.setAttribute("data-mode", panelMode);
   d.classList.toggle("open", !!panelMode);
-  ["index","news","world","about"].forEach(function(m){
+  ["index","news","world","about","moments"].forEach(function(m){
     var el = document.getElementById("panel-" + m);
     if(el) el.classList.toggle("on", m === panelMode);
   });
@@ -200,6 +201,10 @@ function setPanel(mode){
   if(bn) bn.classList.toggle("on", panelMode === "news");
   if(ba) ba.classList.toggle("on", panelMode === "about");
   if(panelMode) d.scrollTop = 0;
+  if(axisMode === "moments" && typeof renderMomentsPage === "function" && !setPanel._busy){
+    setPanel._busy = true;
+    try{ renderChart(); } finally { setPanel._busy = false; }
+  }
 }
 function togglePanel(mode){ setPanel(panelMode === mode ? "" : mode); }
 
@@ -259,7 +264,11 @@ function setAxis(mode, persist){
      only the home era at 1958-2042 hides almost every fork, which looks like
      the switch broke the chart. Order and Moments both fill the width and need
      only a vertical fit: their x is not a quantity to zoom. */
-  if(axisMode === "years") fitEverything();
+  if(typeof document !== "undefined" && document.body && document.body.classList){
+    document.body.classList.toggle("mode-moments", axisMode === "moments");
+  }
+  if(axisMode === "moments"){ momentsFit(); renderChart(); renderMomentsPanel(); if(panelMode === "" || panelMode === "news") setPanel("moments"); }
+  else if(axisMode === "years") fitEverything();
   else fitAll();
 }
 
@@ -318,6 +327,7 @@ function init(){
   on("btn-about", "onclick", function(){ togglePanel("about"); });
   on("pclose-index", "onclick", function(){ setPanel(""); });
   on("pclose-about", "onclick", function(){ setPanel(""); });
+  on("pclose-moments", "onclick", function(){ setPanel(""); });
 
   window.addEventListener("resize", function(){
     if(measureW() !== W || measureH() !== Hv){

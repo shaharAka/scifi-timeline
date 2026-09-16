@@ -150,27 +150,35 @@
   paint-order:stroke;stroke:var(--bg);stroke-width:3px;stroke-linejoin:round}
 .moment-node-count{font-size:var(--fs-0);fill:var(--ink-4)}
 
-/* Moments graph, anchored on us */
-.main-line-glow{fill:none;stroke:var(--trunk-glow);stroke-width:14;stroke-linecap:round}
-.main-line{fill:none;stroke:var(--trunk);stroke-width:3.2;stroke-linecap:round}
-.main-line-label{font-size:10px;font-weight:800;letter-spacing:.16em;fill:var(--trunk);font-family:var(--font-mono)}
-.strand-line{stroke-width:2.6;opacity:.9;stroke-linecap:round}
-.strand-end{opacity:1}
-/* a strand is a whole world's reach along our line, and at 1500px a 1.6px line
-   is easy to miss. Heavier by default; hovering lifts it clear of its
-   neighbours and thickens it further, so a strand can be picked out. */
-.strand:hover .strand-line{stroke-width:4.5;opacity:1}
-.strand:hover .strand-end{r:4}
-.strand{cursor:pointer}
-.graph-edge{fill:none;stroke:var(--ink-4);opacity:.16}
-.graph-edge.shared{stroke:var(--ink-2);opacity:.6}
-.graph-edge.future{stroke-dasharray:6 5}
-.graph-edge-label{font-size:8.5px;fill:var(--ink-3);font-weight:600}
-.graph-node .moment-ring{stroke:var(--line-3);stroke-width:1.3}
-.graph-node.on-main .moment-ring{stroke:var(--trunk);stroke-width:2.2}
-.moment-node-n{font-size:8.5px;font-weight:700;fill:var(--ink-2);font-family:var(--font-mono)}
-.moment-years{font-size:8.5px;fill:var(--trunk);font-family:var(--font-mono);letter-spacing:.02em}
-.real-dot{fill:var(--surface);stroke:var(--trunk);stroke-width:1.4}
-.real-hit:hover + .real-dot{fill:var(--trunk)}
-.today-ring{fill:none;stroke:var(--now);stroke-width:1.6}
-.graph-now{font-size:11px}
+/* ---------------------------------------------------------------- the Moments page */
+body.mode-moments .legend .t-only{display:none}
+body:not(.mode-moments) .legend .m-only{display:none}
+#chart.moments{cursor:grab}
+.mp-region{font-size:10.5px;font-weight:750;letter-spacing:.14em;fill:var(--ink-2);font-family:var(--font-mono)}
+.mp-region.faint{fill:var(--ink-3)}
+.mp-today-line{stroke:var(--now);stroke-width:1.2;stroke-dasharray:3 5;opacity:.7}
+.mp-today{font-size:11px}
+.mp-line-ours{stroke:var(--trunk);stroke-width:3;stroke-linecap:round}
+.mp-line-notyet{stroke:var(--trunk-dim);stroke-width:1.6;stroke-dasharray:2 6}
+.mp-our-road{stroke:var(--trunk);stroke-width:1.3;opacity:.5}
+.mp-road{stroke:var(--ink-4);opacity:.16}
+.mp-road.shared{stroke:var(--ink-2);opacity:.5}
+.mp-road.future{stroke-dasharray:5 4}
+.mp-world-road{fill:none;stroke-width:2.8;opacity:.95}
+.mp-world-road.shared-with-us{stroke-dasharray:2 3;opacity:.7}
+.mp-world-road.future{stroke-dasharray:6 4}
+.mp-world-ring{fill:none;stroke-width:1.6;opacity:.9}
+.mp-circle{fill:var(--surface);stroke:var(--line-3);stroke-width:1.3}
+.mp-node.ours .mp-circle{stroke:var(--trunk);stroke-width:2.2}
+.mp-node:hover .mp-circle{stroke-width:3}
+.mp-selected-ring{fill:none;stroke:var(--now);stroke-width:1.6}
+.mp-count{font-size:8.5px;font-weight:700;fill:var(--ink-2);font-family:var(--font-mono)}
+.mp-label{font-size:10.5px;font-weight:650;fill:var(--ink-1)}
+.mp-label.tight{font-size:9.5px}
+.mp-node.notyet .mp-label{fill:var(--ink-3);font-weight:600}
+.mp-node.selected .mp-label{fill:var(--ink-0);font-weight:750}
+.mp-beat{fill:var(--surface);stroke:var(--trunk);stroke-width:1.4}
+.mp-beat.selected{fill:var(--trunk)}
+.mp-beat-hit{cursor:pointer}
+.mp-beat-hit:hover + .mp-beat{fill:var(--trunk)}
+.mp-empty{font-size:13px;fill:var(--ink-3)}

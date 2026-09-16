@@ -52,6 +52,10 @@ function futuresFor(binId, limit){
 /* Light every world through this kind of moment, and open the panel. */
 function matchNews(item){
   var binId = binForNews(item);
+  if(axisMode === "moments"){
+    if(binId) momentsSelectKind(binId);
+    return Object.keys(worldsThroughBin(binId)).length;
+  }
   if(!binId){
     litBin = null; litWorlds = null;
     renderChart();

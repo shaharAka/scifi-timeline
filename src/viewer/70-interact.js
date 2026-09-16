@@ -7,7 +7,7 @@ function attachInteractions(svg){
     if(ev.button !== 0) return;
     /* remember what was pressed: once the svg captures the pointer, pointerup is
        retargeted to the svg itself and ev.target no longer names the branch */
-    drag = { x0:ev.clientX, y0:ev.clientY, c0:view.c, p0:panY, moved:0, target:ev.target };
+    drag = { x0:ev.clientX, y0:ev.clientY, c0:view.c, p0:panY, t0:MP.tx, moved:0, target:ev.target };
     svg.classList.add("dragging");
     try{ svg.setPointerCapture(ev.pointerId); }catch(e){}
   };
@@ -17,6 +17,7 @@ function attachInteractions(svg){
       drag.moved = Math.max(drag.moved, Math.abs(dx), Math.abs(dy));
       /* Order mode: x is sequence and always fills the width, so there is
          nothing to pan along it. Dragging still moves the tree vertically. */
+      if(axisMode === "moments"){ momentsPan(dx, drag.t0); renderChart(); return; }
       if(axisMode === "years") panTime(drag.c0, dx);   /* else x is not a quantity */
       panY = drag.p0 + dy;
       renderChart();
@@ -35,6 +36,14 @@ function attachInteractions(svg){
     if(wasDrag) return;
     var t = (pressed && pressed.getAttribute) ? pressed : ev.target;
     if(!t || !t.getAttribute) return;
+    if(axisMode === "moments"){
+      /* the pressed element, or an ancestor, names what was clicked */
+      var nodeId = attrUp(t, "data-moment-node"), beatId = attrUp(t, "data-real");
+      if(beatId) momentsSelectBeat(beatId);
+      else if(nodeId) momentsSelectKind(nodeId);
+      else momentsClear();
+      return;
+    }
     var lane = t.getAttribute("data-lane"), evId = t.getAttribute("data-ev");
     if(lane){ openWorld(lane); return; }
     if(!evId){ if(sel) closeWorld(); return; }   /* click on empty sky: step back out */
@@ -57,6 +66,12 @@ function attachInteractions(svg){
     var mx = (ev.clientX - rect.left) * (W / (rect.width || W));
     var my = ((ev.clientY || 0) - rect.top) * (Hv / (rect.height || Hv));
     var dX = ev.deltaX || 0, dY = ev.deltaY || 0;
+    if(axisMode === "moments"){
+      if(ev.shiftKey || Math.abs(dX) > Math.abs(dY)){ momentsPan(-(ev.shiftKey ? dY : dX), MP.tx); }
+      else momentsZoomAt(Math.exp(-dY * (ev.ctrlKey ? 0.01 : 0.0016)), mx);
+      renderChart();
+      return;
+    }
     if(axisMode === "years" && (ev.shiftKey || Math.abs(dX) > Math.abs(dY))){
       panTime(view.c, -(ev.shiftKey ? dY : dX));
       renderChart();
@@ -80,6 +95,16 @@ function panTime(c0, dx){
   var scale = ((W - PAD_R) - anchorX()) / warp(view.hs);
   var a = (-dx) / scale;
   view.c = Math.max(-OFF_CAP, Math.min(OFF_CAP, c0 - Math.sign(a) * Math.expm1(Math.abs(a)) * WARP));
+}
+
+/* the nearest ancestor (or the element) carrying an attribute */
+function attrUp(node, name){
+  var n = node, guard = 0;
+  while(n && guard++ < 14){
+    if(n.getAttribute && n.getAttribute(name)) return n.getAttribute(name);
+    n = n.parentNode;
+  }
+  return null;
 }
 
 function hoverCheck(ev){

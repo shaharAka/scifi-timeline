@@ -48,8 +48,7 @@ function layout(list){
   var head = 0;
   /* The graph names its kinds on the circles themselves, so no strip is
      reserved when it is the picture being drawn. */
-  if(typeof AX !== "undefined" && AX && AX.mode === "moments"
-     && AX.columns && !graphMode() && typeof momentHeadRows === "function"){
+  if(false){
     momentRowsCache = momentHeadRows(AX.columns);
     head = momentRowsCache.height;
   }

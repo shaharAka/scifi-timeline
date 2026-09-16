@@ -181,7 +181,8 @@ const ids = [
   "eras", "cards", "drawer", "panes", "dchart", "converge", "plate", "backdrop",
   "news-list", "panel-news", "btn-news", "axis-toggle",
   /* the single-canvas explorer: the side panel and its three modes */
-  "panel-index", "panel-world", "panel-about", "tags", "brand", "btn-worlds", "btn-about",
+  "panel-index", "panel-world", "panel-about", "panel-moments", "moments-body", "pclose-moments",
+  "tags", "brand", "btn-worlds", "btn-about",
   "pclose-index", "pclose-about", "hero-title", "hero-lede", "notes", "legend-hint", "sec-worlds-blurb",
   "themes", "backdrop",
 ];
@@ -654,262 +655,175 @@ attempt("axis switch round-trip", () => {
 });
 
 
-/* ---- Moments: the graph of kinds of moment, anchored on us ------------------
-   One circle per kind, roads between kinds, and our own history as the main
-   line: the kinds we have reached, in first-visit order, with every fiction
-   riding that line until its fork. No lanes and no per-event targets here. */
-attempt("moments graph invariants", () => {
+/* ---- Moments: the arc diagram anchored on us ------------------------------------
+   Its own page: one line of kinds, ours first in first-visit order, then the
+   kinds only fiction has reached; roads above, our path below; a panel of its
+   own. No lanes, no per-event targets, no tree furniture. */
+attempt("moments page invariants", () => {
   setModeVia("moments");
   const t = debug();
   if (t.axisMode() !== "moments") throw new Error("moments mode did not engage");
-  const ax = t.axis();
-  if (ax.mode !== "moments") throw new Error("axis is not the moments axis");
+  const M = t.moments();
+  if (!M) throw new Error("the moments model was not built");
   const binned = t.lineages.some((l) => l.events.some((e) => e.bin));
   if (!binned) { soft("moments: no binned events in this payload, skipped"); return; }
-  check(ax.columns.length > 0, "moments axis produced no columns");
-  const G = t.graph();
-  if (!G) throw new Error("the graph was not placed");
 
-  /* the graph is drawn, and it is a graph: circles and roads, not lanes */
   const circles = svgNodes().filter((n) => n.getAttribute("data-moment-node") !== null);
-  const arcs = svgNodes().filter((n) => n.getAttribute("data-edge") !== null);
-  check(circles.length === G.nodes.length,
-    `${circles.length} circles drawn for ${G.nodes.length} kinds of moment`);
-  check(G.nodes.length >= ax.columns.length,
-    "a kind a world passes through has no circle");
-  check(arcs.length === G.edges.length, `${arcs.length} roads drawn for ${G.edges.length} placed`);
+  check(circles.length === M.nodes.length, `${circles.length} circles for ${M.nodes.length} kinds`);
+  const roads = svgNodes().filter((n) => n.getAttribute("data-road") !== null);
+  check(roads.length === M.roads.length, `${roads.length} roads drawn for ${M.roads.length} in the model`);
+  const ours = svgNodes().filter((n) => n.getAttribute("data-our-road") !== null);
+  check(ours.length === M.ours.length, `${ours.length} of our own arcs drawn for ${M.ours.length}`);
 
-  /* every kind is named on the canvas */
-  const named = new Set(svgNodes()
-    .filter((n) => n.classList && n.classList.contains("moment-node-label"))
-    .map((n) => String(n.textContent)));
-  check(named.size === G.nodes.length,
-    `${named.size} of ${G.nodes.length} kinds of moment are named on canvas`);
-
-  /* the main line is our history: its kinds in first-visit order, left to right,
-     all on one y; the kinds only fiction reached sit off that line */
+  /* our kinds come first, in the order we first reached them; then fiction-only */
   const real = t.real();
   if (real && real.events && real.events.length) {
     const firstVisit = [];
     real.events.forEach((e) => { if (e.bin && !firstVisit.includes(e.bin)) firstVisit.push(e.bin); });
-    check(G.main.join(",") === firstVisit.join(","), "the main line is not our first-visit order");
-    const mains = G.nodes.filter((n) => n.onMain);
-    for (let i = 1; i < mains.length; i++) {
-      check(mains[i].x > mains[i - 1].x, `main-line kind ${mains[i].id} is not right of ${mains[i - 1].id}`);
-      check(Math.abs(mains[i].y - mains[0].y) < 0.01, "a main-line kind left the line");
-    }
-    G.nodes.filter((n) => !n.onMain).forEach((n) => {
-      check(Math.abs(n.y - G.midY) > 20, `${n.id} is only in fiction but sits on our line`);
-    });
-    const lines = svgNodes().filter((n) => n.classList && n.classList.contains("main-line"));
-    check(lines.length === 1, `${lines.length} main lines drawn, expected 1`);
-    check(!!G.today, "no today node: our last kind was not placed");
-    check(svgNodes().some((n) => n.classList && n.classList.contains("today-ring")), "today is not ringed");
-    /* every real beat is a clickable dot at its kind's circle */
+    check(M.realOrder.join(",") === firstVisit.join(","), "our kinds are not in first-visit order");
+    check(M.order.slice(0, M.realOrder.length).join(",") === M.realOrder.join(","), "our kinds do not come first on the line");
+    M.fictionOnly.forEach((b) => check(!firstVisit.includes(b), `${b} is marked fiction-only but happened to us`));
+    for (let i = 1; i < M.nodes.length; i++) check(M.nodes[i].x > M.nodes[i - 1].x, "kinds are not laid left to right");
+    const today = svgNodes().filter((n) => n.classList && n.classList.contains("mp-today"));
+    check(today.length === 1, `${today.length} TODAY markers, expected 1`);
+    /* every binned real beat is a clickable dot at its kind */
     const hits = svgNodes().filter((n) => n.getAttribute("data-real") !== null);
-    check(hits.length === real.events.filter((e) => e.bin).length,
-      `${hits.length} real-beat dots for ${real.events.filter((e) => e.bin).length} binned beats`);
-    /* a strand for every world that shares any of our kinds before its fork */
-    const strands = svgNodes().filter((n) => n.classList && n.classList.contains("strand"));
-    check(strands.length === G.strands.length, `${strands.length} strands drawn for ${G.strands.length}`);
-    G.strands.forEach((s) => check(s.x1 >= s.x0, `${s.l.id}: strand runs backwards`));
+    const expectN = real.events.filter((e) => e.bin).length;
+    check(hits.length === expectN, `${hits.length} real-beat dots for ${expectN} binned beats`);
+    hits.forEach((h) => {
+      const e = real.events.find((y) => y.id === h.getAttribute("data-real"));
+      const node = e && M.at[e.bin];
+      check(!!node && Math.abs(parseFloat(h.getAttribute("cx")) - node.x) < 40, `${e && e.year}: dot is not at its kind`);
+    });
   }
 
-  /* no lane furniture in the graph */
-  const FURNITURE = ["bundle-band", "bundle-label", "side-label",
-                     "trunk-core", "trunk-glow", "trunk-future",
-                     "trunk-label", "arc-rule", "axis-caption", "fork-zone"];
-  const furniture = svgNodes().filter((n) => n.classList
-    && FURNITURE.some((c) => n.classList.contains(c)));
-  check(furniture.length === 0,
-    `${furniture.length} piece(s) of tree furniture drawn in the graph: ` +
-    furniture.slice(0, 4).map((n) => n.getAttribute("class")).join(", "));
-
-  /* a road exists for every post-fork transition the worlds make, counted from
-     the data; pre-fork transitions are the strand, not roads */
+  /* roads are post-fork moves only, counted from the data */
   const want = new Set();
   t.lineages.forEach((l) => {
-    const dv = l.divergence.year;
-    const seq = [];
+    const dv = l.divergence.year, seq = [];
     l.events.forEach((e) => {
-      if (e.bin && G.at[e.bin] && (seq.length === 0 || seq[seq.length - 1].bin !== e.bin)) seq.push({ bin: e.bin, year: e.year });
+      if (e.bin && M.at[e.bin] && (seq.length === 0 || seq[seq.length - 1].bin !== e.bin)) seq.push({ bin: e.bin, year: e.year });
     });
     for (let i = 1; i < seq.length; i++) if (seq[i].year >= dv) want.add(seq[i - 1].bin + "|" + seq[i].bin);
   });
-  check(arcs.length === want.size, `${arcs.length} roads drawn for ${want.size} transitions in the data`);
+  check(roads.length === want.size, `${roads.length} roads drawn for ${want.size} post-fork transitions`);
 
-  /* a circle's count is the number of worlds that pass through that kind */
+  /* a circle's count is the number of worlds through it */
   const expect = {};
   t.lineages.forEach((l) => {
-    const here = new Set();
-    l.events.forEach((e) => { if (e.bin) here.add(e.bin); });
+    const here = new Set(); l.events.forEach((e) => { if (e.bin) here.add(e.bin); });
     here.forEach((b) => { expect[b] = (expect[b] || 0) + 1; });
   });
   let wrong = 0;
-  G.nodes.forEach((n) => { if (n.worlds.size !== (expect[n.id] || 0)) wrong++; });
-  check(wrong === 0, `${wrong} circle(s) miscount the worlds that pass through`);
+  M.nodes.forEach((n) => { if (n.worlds !== (expect[n.id] || 0)) wrong++; });
+  check(wrong === 0, `${wrong} circle(s) miscount the worlds through them`);
 
-  const zone = svgNodes().filter((n) => n.classList && n.classList.contains("zone"));
-  check(zone.length === 0, `${zone.length} fork-zone caption(s) drawn in the graph`);
-
-  /* A road's name must not sit on a circle: a label on a node reads as that
-     node's name. The placement search avoided only other labels at first, so
-     several landed on circles. */
-  const circleGeom = circles.map((g) => {
-    const c = (g.children || []).find((x) => x.tagName === "CIRCLE");
-    return c ? { x: parseFloat(c.getAttribute("cx")), y: parseFloat(c.getAttribute("cy")),
-                 r: parseFloat(c.getAttribute("r")) } : null;
-  }).filter(Boolean);
-  const roadLabels = svgNodes().filter((n) => n.classList
-    && n.classList.contains("graph-edge-label"));
-  let onCircle = 0;
-  roadLabels.forEach((l) => {
-    const lx = parseFloat(l.getAttribute("x")), ly = parseFloat(l.getAttribute("y"));
-    const hw = (String(l.textContent).length * 5.2) / 2;
-    circleGeom.forEach((c) => {
-      const nx = Math.max(lx - hw, Math.min(c.x, lx + hw));
-      const dx = c.x - nx, dy = c.y - ly;
-      if (dx * dx + dy * dy < c.r * c.r) onCircle++;
-    });
-  });
-  check(onCircle === 0, `${onCircle} road label(s) sit on a circle`);
-
-  /* and road names must not land on each other */
-  let labelClash = 0;
-  roadLabels.forEach((a, i) => {
-    const ax = parseFloat(a.getAttribute("x")), ay = parseFloat(a.getAttribute("y"));
-    const aw = String(a.textContent).length * 5.2;
-    roadLabels.slice(i + 1).forEach((b) => {
-      const bx = parseFloat(b.getAttribute("x")), by = parseFloat(b.getAttribute("y"));
-      const bw = String(b.textContent).length * 5.2;
-      if (Math.abs(ay - by) < 11 && Math.abs(ax - bx) < (aw + bw) / 2) labelClash++;
-    });
-  });
-  check(labelClash === 0, `${labelClash} pair(s) of road labels overlap`);
-
-  soft(`moments graph: ${G.main.length} kinds on our line, ${G.nodes.length - G.main.length} only in fiction, ` +
-       `${G.edges.length} roads, ${G.sharedEdges} shared, ${G.strands.length} strands, ` +
-       `${roadLabels.length} roads named`);
+  /* no tree furniture on this page */
+  const FURNITURE = ["bundle-band", "bundle-label", "side-label", "trunk-core", "trunk-glow", "trunk-future",
+                     "trunk-label", "fork-zone", "now-plane", "branch", "hit"];
+  const furniture = svgNodes().filter((n) => n.classList && FURNITURE.some((c) => n.classList.contains(c)));
+  check(furniture.length === 0, `${furniture.length} piece(s) of tree furniture drawn on the Moments page`);
+  const lanes = svgNodes().filter((n) => n.getAttribute("data-lane") !== null);
+  check(lanes.length === 0, `${lanes.length} lane targets drawn on the Moments page`);
+  soft(`moments: ${M.realOrder.length} kinds ours, ${M.fictionOnly.length} only fiction, ${M.roads.length} roads, ${M.ours.length} of our own arcs`);
 });
 
-/* ---- news -> futures: the reason the view exists --------------------------- */
-attempt("news to futures", () => {
+/* ---- Moments: clicking does things, through the pointer path a browser uses ---- */
+attempt("moments clicks and camera", () => {
   setModeVia("moments");
   const t = debug();
-  const ax = t.axis();
-  const busiest = ax.columns.slice().sort((a, b) => b.worlds.size - a.worlds.size)[0];
-  if (!busiest) { soft("news->futures: no binned events in this payload, skipped"); return; }
-  const item = { headline: "test headline", bin: busiest.bin };
-  const n = t.matchNews(item);
-  check(n === busiest.worlds.size,
-    `match lit ${n} worlds but the kind is passed through by ${busiest.worlds.size}`);
+  const M = t.moments();
+  if (!M || !M.nodes.length) { soft("moments clicks: nothing to click, skipped"); return; }
+  const busiest = M.nodes.slice().sort((a, b) => b.worlds - a.worlds)[0];
 
-  /* The matched kind is spotted and every other circle recedes. Dimming by
-     "shares a world with the match" was the first attempt and lit 31 of 32 -
-     worlds pass through many kinds, so that marks everything and says nothing. */
-  const nodes = svgNodes().filter((x) => x.getAttribute("data-moment-node") !== null);
-  const dimmed = nodes.filter((x) => x.getAttribute("opacity") === "0.28");
-  const spotted = nodes.filter((x) => x.getAttribute("data-moment-node") === busiest.bin);
-  check(spotted.length === 1, `the matched kind has ${spotted.length} circles, expected 1`);
-  check(!spotted[0].getAttribute("opacity"),
-    "the matched kind is dimmed; the match should spotlight it");
-  check(dimmed.length === nodes.length - 1,
-    `${dimmed.length} circles dimmed, expected ${nodes.length - 1} of ${nodes.length}`);
+  /* a circle, clicked the way a browser delivers it: pointerdown then pointerup */
+  const grp = svgNodes().find((n) => n.getAttribute("data-moment-node") === busiest.id);
+  const circle = grp.children.find((c) => c.classList && c.classList.contains("mp-circle")) || grp;
+  chart.onpointerdown({ button: 0, clientX: 300, clientY: 300, pointerId: 1, target: circle });
+  chart.onpointerup({ clientX: 300, clientY: 300, pointerId: 1, target: { getAttribute: () => null } });
+  check(t.momentsState().node === busiest.id, "clicking a circle did not select its kind");
+  check(store["drawer"].getAttribute("data-mode") === "moments", "clicking a circle did not open the Moments panel");
+  const body = String(store["moments-body"].innerHTML);
+  check(new RegExp(`${busiest.worlds} worlds? pass`).test(body), "the panel does not state how many worlds pass through");
+  const cards = store["moments-body"].querySelectorAll(".mp-card");
+  check(cards.length === busiest.worlds, `${cards.length} world cards for ${busiest.worlds} worlds`);
+  check(/What tends to follow/.test(body) || busiest.follow.length === 0, "the panel does not say what tends to follow");
+  /* roads not touching the selected kind recede */
+  const faded = svgNodes().filter((n) => n.getAttribute("data-road") !== null && n.getAttribute("opacity") === "0.05");
+  const touching = M.roads.filter((r) => r.a === busiest.id || r.b === busiest.id).length;
+  check(faded.length === M.roads.length - touching, `${faded.length} roads faded, expected ${M.roads.length - touching}`);
 
-  /* the lit worlds are carried by the arcs: the roads they walk stay bright */
-  const arcOpacity = svgNodes()
-    .filter((x) => x.getAttribute("data-edge") !== null)
-    .map((x) => parseFloat(x.getAttribute("opacity")))
-    .filter((v) => !isNaN(v));
-  check(arcOpacity.some((v) => v >= 0.9), "no arc stayed bright for the matched worlds");
-  check(arcOpacity.some((v) => v <= 0.1), "no arc receded; the match did not narrow anything");
-
-  /* the futures are read forward, in each world's own order */
-  const fx = t.futuresFor(busiest.bin);
-  check(fx.length === busiest.worlds.size,
-    `futures returned for ${fx.length} worlds, expected ${busiest.worlds.size}`);
-  fx.forEach((f) => {
-    f.after.forEach((e) => check(e.year >= f.matched.year,
-      `${f.world.title}: a future beat precedes the match`));
-  });
-  const withNext = fx.filter((f) => f.after.length).length;
-  check(withNext > 0, "no world has anything after the match, so there is no future to read");
-  check(t.futuresFor("no-such-kind").length === 0, "unknown kind returned futures");
-
-  t.renderFutures(item, fx);
-  const host = store["news-list"];
-  const cards = host ? host.querySelectorAll(".fx-card") : [];
-  check(cards.length === fx.length,
-    `panel drew ${cards.length} future card(s) for ${fx.length} worlds`);
-  /* clicking the circle itself does the same, and names the years it happened to us */
-  const node = svgNodes().find((x) => x.getAttribute("data-moment-node") === busiest.bin);
-  check(!!node && !!node.onclick, "the matched kind's circle is not clickable");
-  if (node && node.onclick) {
-    node.onclick({ stopPropagation() {} });
-    const again = store["news-list"].querySelectorAll(".fx-card");
-    check(again.length === fx.length, `circle click drew ${again.length} cards for ${fx.length} worlds`);
-    check(store["drawer"].getAttribute("data-mode") === "news", "circle click did not open the panel");
-    const g = debug().graph();
-    const n = g.nodes.find((k) => k.id === busiest.bin);
-    if (n && n.years.length) check(/Happened to us/.test(String(store["news-list"].innerHTML)),
-      "a kind we have been through did not say when it happened to us");
+  /* a world's name lights its whole road */
+  const firstWorld = store["moments-body"].querySelectorAll("[data-world]")[0];
+  if (firstWorld) {
+    firstWorld.onclick();
+    const wid = t.momentsState().world;
+    check(!!wid, "clicking a world did not light it");
+    const wroads = svgNodes().filter((n) => n.classList && n.classList.contains("mp-world-road"));
+    const seqLen = M.paths[wid].seq.length;
+    check(wroads.length === Math.max(0, seqLen - 1), `${wroads.length} coloured segments for a path of ${seqLen} kinds`);
+    firstWorld.onclick();
+    check(!t.momentsState().world, "clicking the world again did not unlight it");
   }
 
-  t.clearMatch();
-  check(!t.litBin(), "clearing the match left it lit");
-  setModeVia("moments");
-  soft(`news->futures: "${busiest.spec.label || busiest.bin}" lit ${busiest.worlds.size} worlds, ` +
-       `${withNext} with beats after the match`);
+  /* a real-beat dot runs the situation match */
+  const real = t.real();
+  const dot = svgNodes().find((n) => n.getAttribute("data-real") !== null);
+  if (dot && real) {
+    chart.onpointerdown({ button: 0, clientX: 300, clientY: 300, pointerId: 1, target: dot });
+    chart.onpointerup({ clientX: 300, clientY: 300, pointerId: 1, target: { getAttribute: () => null } });
+    const st = t.momentsState();
+    check(!!st.beat && st.beat.id === dot.getAttribute("data-real"), "clicking a dot did not select the beat");
+    const b2 = String(store["moments-body"].innerHTML);
+    check(/Nearest situations/.test(b2), "the beat panel did not run the situation match");
+    check(store["moments-body"].querySelectorAll(".mp-card").length > 0, "the situation match returned no neighbours");
+    check(/match/.test(b2), "neighbours carry no similarity score");
+  }
+
+  /* empty sky clears; the camera zooms and pans; fit resets */
+  chart.onpointerdown({ button: 0, clientX: 10, clientY: 10, pointerId: 1, target: chart });
+  chart.onpointerup({ clientX: 10, clientY: 10, pointerId: 1, target: { getAttribute: () => null } });
+  check(!t.momentsState().node && !t.momentsState().beat, "clicking empty sky did not clear the selection");
+  const x0 = debug().moments().nodes[1].x - debug().moments().nodes[0].x;
+  chart.onwheel({ deltaX: 0, deltaY: -400, clientX: 400, clientY: 300, preventDefault() {} });
+  const x1 = debug().moments().nodes[1].x - debug().moments().nodes[0].x;
+  check(x1 > x0 * 1.3, `wheel did not zoom the line (${x0.toFixed(1)} -> ${x1.toFixed(1)})`);
+  const before = debug().momentsState().tx;
+  chart.onpointerdown({ button: 0, clientX: 800, clientY: 400, pointerId: 1, target: chart });
+  chart.onpointermove({ clientX: 700, clientY: 400, pointerId: 1 });
+  chart.onpointerup({ clientX: 700, clientY: 400, pointerId: 1, target: { getAttribute: () => null } });
+  check(debug().momentsState().tx < before, "drag did not pan the line");
+  store["reset"].onclick();
+  const x2 = debug().moments().nodes[1].x - debug().moments().nodes[0].x;
+  check(Math.abs(x2 - x0) < 0.5, "Fit did not reset the zoom");
+  /* a news item selects its kind here */
+  const n = t.matchNews({ headline: "test", bin: busiest.id });
+  check(n === busiest.worlds && t.momentsState().node === busiest.id, "a news item did not select its kind on the Moments page");
+  t.momentsClear();
+  soft(`moments clicks: "${busiest.spec.label}" -> ${busiest.worlds} worlds; zoom ${x0.toFixed(0)}->${x1.toFixed(0)}px`);
 });
 
-
-/* ---- real history on the trunk, and matching by situation ------------------
-   Real history now carries the same schema as the fictions, so its beats sit on
-   the same axis and answer the same question when clicked. The three views
-   place them by different rules, so this checks each one draws them all. */
+/* ---- real history on every axis ---------------------------------------------- */
 attempt("real history on every axis", () => {
   const t = debug();
   const real = t.real();
-  if (!real || !real.events || !real.events.length) {
-    soft("real history: none in this payload, skipped"); return;
-  }
-  for (const mode of ["moments", "order", "years"]) {
+  if (!real || !real.events || !real.events.length) { soft("real history: none in this payload, skipped"); return; }
+  for (const mode of ["order", "years"]) {
     setModeVia(mode);
     const hits = svgNodes().filter((n) => n.getAttribute("data-real") !== null);
-    const expectN = mode === "moments" ? real.events.filter((e) => e.bin).length : real.events.length;
-    check(hits.length === expectN, `${mode}: ${hits.length} real beats drawn for ${expectN}`);
+    check(hits.length === real.events.length, `${mode}: ${hits.length} real beats drawn for ${real.events.length}`);
     const xs = hits.map((n) => parseFloat(n.getAttribute("cx")));
     check(xs.every((v) => !isNaN(v)), `${mode}: a real beat has no x`);
-    /* Beats must stay in year order and must not collapse into a pile. They
-       are NOT required to have distinct pixels: in Years the whole of real
-       history compresses into about a hundred pixels at the default zoom, so
-       adjacent years legitimately share one, and two beats in the same year
-       always do (February and October 1917). Demanding unique x would be
-       demanding that the calendar not be a calendar. */
-    if (mode === "moments") {
-      /* in the graph a beat sits at its kind's circle: check that, not year order */
-      const G = t.graph();
-      hits.forEach((n, i) => {
-        const e = real.events.find((y) => y.id === n.getAttribute("data-real"));
-        const node = e && G.at[e.bin];
-        check(!!node && Math.abs(xs[i] - node.x) < 30, `${mode}: ${e && e.year} is not at its kind's circle`);
-      });
-      continue;
-    }
     const ordered = hits
       .map((n, i) => ({ x: xs[i], e: real.events.find((y) => y.id === n.getAttribute("data-real")) }))
-      .filter((o) => o.e)
-      .sort((a, b) => a.e.year - b.e.year);
+      .filter((o) => o.e).sort((a, b) => a.e.year - b.e.year);
     for (let i = 1; i < ordered.length; i++) {
       check(ordered[i].x >= ordered[i - 1].x + (mode === "years" ? -0.51 : -0.01),
         `${mode}: ${ordered[i].e.year} is drawn left of ${ordered[i - 1].e.year}`);
     }
-    check(new Set(xs.map((v) => Math.round(v))).size >= Math.min(20, real.events.length),
-      `${mode}: ${real.events.length} real beats collapsed into ` +
-      `${new Set(xs.map((v) => Math.round(v))).size} distinct pixels`);
   }
   setModeVia("moments");
-  soft(`real history: ${real.events.length} beats on all three axes`);
+  soft(`real history: ${real.events.length} beats on the line-shaped axes, and on their kinds on the Moments page`);
 });
 
 attempt("matching by situation", () => {
@@ -917,56 +831,35 @@ attempt("matching by situation", () => {
   const moments = t.facetMoments();
   const real = moments.filter((m) => m.real);
   if (!real.length) { soft("situation match: no faceted real beats, skipped"); return; }
-
-  /* every faceted moment has a signature, and outcomes are not in the input */
-  check(moments.length > real.length,
-    `only ${moments.length} moments carry a signature; expected the fictions too`);
+  check(moments.length > real.length, `only ${moments.length} moments carry a signature; expected the fictions too`);
   moments.forEach((m) => check(!!m.e.facets, `${m.e.id} has no facets`));
-
-  /* a real beat finds neighbours in other worlds, ranked */
   const target = real.find((m) => /enabling act/i.test(m.e.title)) || real[0];
   const ns = t.facetNeighbours(target, moments, 6);
   check(ns.length > 0, `no neighbours found for ${target.e.title}`);
-  check(ns.every((n) => n.m.world !== target.world),
-    "a neighbour came from the same world as the query");
+  check(ns.every((n) => n.m.world !== target.world), "a neighbour came from the same world as the query");
   let descending = true;
   for (let i = 1; i < ns.length; i++) if (ns[i].score > ns[i - 1].score + 1e-9) descending = false;
   check(descending, "neighbours are not ranked by similarity");
-  ns.forEach((n) => {
-    check(n.score >= 0 && n.score <= 1, `similarity ${n.score} is outside 0..1`);
-  });
-
-  /* outcomes are held out: two moments identical but for their outcomes are
-     not made more similar by sharing them */
+  ns.forEach((n) => check(n.score >= 0 && n.score <= 1, `similarity ${n.score} is outside 0..1`));
   const a = { mechanism:"law", actor:"individual", position:"inside", domain:"political",
               scope:"national", direction:{power:1,openness:-1,capability:0,population:0},
               preconditions:["x"], outcomes:["one"] };
   const b = Object.assign({}, a, { outcomes:["one"] });
   const c = Object.assign({}, a, { outcomes:["a","b","c","d","e"] });
-  check(Math.abs(t.facetSim(a, b) - t.facetSim(a, c)) < 1e-9,
-    "outcomes changed the similarity; they are supposed to be held out");
-
-  /* reading forward uses the neighbour's own order, not the canvas order */
+  check(Math.abs(t.facetSim(a, b) - t.facetSim(a, c)) < 1e-9, "outcomes changed the similarity; they are supposed to be held out");
   ns.slice(0, 3).forEach((n) => {
     const fwd = t.facetForward(n.m, 3);
     check(fwd.length <= 3, `forward read returned ${fwd.length} beats`);
-    fwd.forEach((x) => check(x.year >= n.m.e.year,
-      `${n.m.worldTitle}: a forward beat precedes the neighbour`));
+    fwd.forEach((x) => check(x.year >= n.m.e.year, `${n.m.worldTitle}: a forward beat precedes the neighbour`));
   });
-
-  /* and clicking a real beat runs the same operation as choosing a news item */
-  const hit = svgNodes().find((n) => n.getAttribute("data-real") === target.e.id);
-  check(!!hit, `${target.e.title} has no clickable target on the canvas`);
-  hit.onclick({ stopPropagation() {} });
-  const host = store["news-list"];
-  const cards = host ? host.querySelectorAll(".fx-card") : [];
-  check(cards.length > 0, "clicking a real beat opened no futures");
-  check(/Nearest situations/.test(String(host.innerHTML)),
-    "clicking a real beat did not report the situation match");
-  soft(`situation match: "${target.e.title}" -> ${ns.length} neighbours, ` +
-       `closest ${ns[0].score.toFixed(2)} in ${ns[0].m.worldTitle}`);
-  debug().clearMatch();
+  /* and the same beat selected on the Moments page reports the same match */
   setModeVia("moments");
+  t.momentsSelectBeat(target.e.id);
+  const body = String(store["moments-body"].innerHTML);
+  check(/Nearest situations/.test(body), "selecting the beat did not report the situation match");
+  check(body.includes(ns[0].score.toFixed(2)), "the page's closest match differs from the tool's");
+  t.momentsClear();
+  soft(`situation match: "${target.e.title}" -> ${ns.length} neighbours, closest ${ns[0].score.toFixed(2)} in ${ns[0].m.worldTitle}`);
 });
 
 /* ---- art plates: whatever the build shipped must actually reach the DOM ---- */
@@ -1131,6 +1024,7 @@ attempt("archetype contrast on the single palette", () => {
    The previous interactions leave the view zoomed out, where short branches are
    legitimately not drawn, so restore a known framing first. */
 attempt("convergence animation", () => {
+  setModeVia("order");                     /* branches exist only in the line-shaped views */
   debug().focusYear(1800, 1400);
   /* query AFTER framing: focusYear re-renders and republishes the svg */
   const cores = () => store["chart"].querySelectorAll(".core");

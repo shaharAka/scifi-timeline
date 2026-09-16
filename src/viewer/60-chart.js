@@ -199,7 +199,18 @@ function renderChart(yOverride){
   while(svg.firstChild) svg.removeChild(svg.firstChild);
   rooms = {};
   drawBackdrop(W, Hv);
-  svg.setAttribute("class", (svg.getAttribute("class") || "").replace(/\blod-\d\b/g, "").trim() + " lod-" + lay.lod);
+  svg.setAttribute("class", (svg.getAttribute("class") || "").replace(/\blod-\d\b/g, "").replace(/\bmoments\b/g, "").trim() + " lod-" + lay.lod);
+
+  /* Moments is its own page: an arc diagram with its own camera and panel.
+     Nothing of the tree is drawn there. */
+  if(axisMode === "moments"){
+    svg.setAttribute("class", (svg.getAttribute("class") || "") + " moments");
+    cursorEls = null;
+    renderMomentsPage(svg);
+    attachInteractions(svg);
+    publishTimeline(lay, null);
+    return;
+  }
 
   var defs = sEl("defs");
   var grad = sEl("linearGradient", {id:"nowGrad", x1:"0", x2:"1", y1:"0", y2:"0"});
@@ -438,18 +449,11 @@ function renderChart(yOverride){
 
   /* branches and the real history each one leans on */
   var targets = {};
-  if(AX.mode === "moments" && AX.columns && AX.columns.length){
-    /* The graph is a different picture, not the columns with different
-       spacing: one circle per kind of moment, an arc for each way a story
-       moves between them, and the arcs named. */
-    drawMomentGraph(gBranches, list, left, right);
-  } else {
-    lay.lanes.forEach(function(ln){
-      targets[ln.l.id] = ln.y;
-      gBranches.appendChild(renderBranch(ln, lay, budget, left, right, nx));
-      renderPrehistory(ln, lay, gPre, left, right);
-    });
-  }
+  lay.lanes.forEach(function(ln){
+    targets[ln.l.id] = ln.y;
+    gBranches.appendChild(renderBranch(ln, lay, budget, left, right, nx));
+    renderPrehistory(ln, lay, gPre, left, right);
+  });
 
   /* Real history's own beats, drawn on the trunk in every view. They are not
      decoration: a world's divergence is a divergence from THESE, and clicking
@@ -482,6 +486,11 @@ function renderChart(yOverride){
   var zs = document.getElementById("zoom");
   if(zs) zs.value = String(Math.round(1000 * (Math.log(view.hs/SPAN_MIN) / Math.log(SPAN_MAX/SPAN_MIN))));
 
+  publishTimeline(lay, nx);
+}
+
+function publishTimeline(lay, nx){
+  var ty = lay ? lay.trunkY : 0;
   window.__timeline = {
     view:view, NOW:NOW, W:W, H:Hv, sceneH:H, NOWX:nx, LANE_R:LANE_R, trunkY:ty, Z:Z, panY:panY,
     zoomBy:zoomBy, fit:fitAll,
@@ -492,7 +501,11 @@ function renderChart(yOverride){
     clearMatch:function(){ return clearMatch(); },
     futuresFor:function(id, n){ return futuresFor(id, n); },
     renderFutures:function(item, fx){ return renderFutures(item, fx); },
-    graph:function(){ return momentGraphCache; },
+    moments:function(){ return MP.model; },
+    momentsState:function(){ return MP; },
+    momentsZoom:function(g){ momentsZoomAt(g, W / 2); renderChart(); },
+    momentsSelectKind:momentsSelectKind, momentsSelectBeat:momentsSelectBeat,
+    momentsSelectWorld:momentsSelectWorld, momentsClear:momentsClear,
     litBin:function(){ return litBin; },
     litWorlds:function(){ return litWorlds; },
     real:function(){ return REAL; },
