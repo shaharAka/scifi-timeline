@@ -1,0 +1,78 @@
+/* ============================================================================
+   Design tokens - the whole visual language in one place.
+   Palette: a violet-black night ground, five neutral inks, a WARM ivory trunk
+   (real history reads as sunlight), pure white only for today, cool archetype
+   colours from the data. Amber is reserved for 'contradicted by real history'.
+   Everything else in src/styles/ refers to these; nothing else hard-codes a
+   colour, a duration or a radius. Archetype colours are NOT here: they live in
+   the data (data/parts/<archetype>.json -> group.color), because they mean
+   something and change when the dataset does.
+   ========================================================================== */
+:root{
+  /* --- surfaces: one very dark blue-black, then glass panels on top ------- */
+  --bg:#07060e;
+  --bg-2:#0c0a17;
+  --panel:rgba(15,12,30,.72);
+  --panel-solid:#0e0b1c;
+  --line-1:#1b1a33;   /* hairline borders */
+  --line-2:#2b2a4d;   /* borders that must read */
+  --line-3:#45437a;   /* leaders, hover borders */
+
+  /* --- ink: five steps, never pure white except the present day ---------- */
+  --ink-0:#f7f5fb;
+  --ink-1:#ebe8f5;
+  --ink-2:#aca8c6;
+  --ink-3:#716d92;
+  --ink-4:#46436a;
+
+  /* --- the shared axis --------------------------------------------------- */
+  --trunk:#f4e7c3;                    /* real history: warm ivory, the one thing drawn once */
+  --trunk-dim:#4d4636;                /* the years we have not reached */
+  --trunk-glow:rgba(255,214,150,.26);
+  --now:#ffffff;                      /* the only pure white on the page */
+  --now-glow:rgba(255,255,255,.18);
+
+  /* --- meaning colours (not decoration) ---------------------------------- */
+  --flag:#ffcf5c;                     /* real history has since contradicted this */
+  --ok:#34d399;
+  --warn:#ffd166;
+  --bad:#f87171;
+
+  /* --- type ---------------------------------------------------------------- */
+  --font-sans:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+  --font-mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+  --fs-0:10px;
+  --fs-1:11.5px;
+  --fs-2:12.5px;
+  --fs-3:14px;
+  --fs-4:16px;
+  --fs-5:19px;
+  --fs-6:27px;
+  --track:.11em;                      /* letter-spacing for uppercase labels */
+
+  /* --- shape --------------------------------------------------------------- */
+  --r-1:9px;
+  --r-2:13px;
+  --r-3:16px;
+
+  /* --- motion -------------------------------------------------------------- */
+  --ease-out:cubic-bezier(.22,.68,.24,1);
+  --t-fast:.16s;
+  --t-base:.32s;
+  --t-slow:.6s;
+
+  /* --- chart --------------------------------------------------------------- */
+  --chart-grid:#141226;
+  --chart-band:rgba(255,255,255,.02);
+
+  /* --- legacy aliases (older rules still refer to these) ------------------ */
+  --ink:var(--ink-1);
+  --ink2:var(--ink-2);
+  --ink3:var(--ink-3);
+  --line:var(--line-1);
+  --line2:var(--line-2);
+  --real:var(--trunk-dim);
+  --ack:var(--flag);
+  --radius:var(--r-3);
+  --ease:var(--ease-out);
+}

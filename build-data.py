@@ -19,6 +19,8 @@ WORLDS = os.path.join(PARTS, "worlds")
 GROUPS_FILE = os.path.join(ROOT, "data", "groups.json")
 OUT = os.path.join(ROOT, "data", "timeline-data.json")
 HTML = os.path.join(ROOT, "timeline.html")
+SRC = os.path.join(ROOT, "src")
+ATLAS_FILE = os.path.join(ROOT, "data", "atlas.json")
 EMBED_MARK = '<script id="embedded-data" type="application/json">'
 
 MEDIA = {"film", "tv", "book", "game", "comic"}
@@ -320,6 +322,76 @@ def check_lineage(name, lin, group_id, seen_ids):
     return lin
 
 
+def load_atlas():
+    """Page copy and era presets for this atlas. Optional; the viewer has
+    fallbacks for everything, but if the file exists it must be sane."""
+    if not os.path.exists(ATLAS_FILE):
+        warn("data/atlas.json not found; the page will use its built-in copy")
+        return None
+    try:
+        with open(ATLAS_FILE, "r", encoding="utf-8") as fh:
+            atlas = json.load(fh)
+    except Exception as e:  # noqa: BLE001
+        err("data/atlas.json does not parse: %s" % e)
+        return None
+    if not isinstance(atlas, dict):
+        err("data/atlas.json must be an object")
+        return None
+    for key in ("title", "headline", "lede"):
+        if not isinstance(atlas.get(key), str) or not atlas[key].strip():
+            err("data/atlas.json: %r must be a non-empty string" % key)
+    eras = atlas.get("eras")
+    if not isinstance(eras, list) or not eras:
+        err("data/atlas.json: 'eras' must be a non-empty list")
+    else:
+        for i, e in enumerate(eras):
+            ok = (isinstance(e, dict) and isinstance(e.get("label"), str)
+                  and isinstance(e.get("from"), (int, float))
+                  and isinstance(e.get("to"), (int, float)) and e["from"] < e["to"])
+            if not ok:
+                err("data/atlas.json: eras[%d] needs label, and numeric from < to" % i)
+        d = atlas.get("defaultEra", 0)
+        if not isinstance(d, int) or d < 0 or d >= len(eras):
+            err("data/atlas.json: 'defaultEra' must index into 'eras'")
+    atlas.pop("_comment", None)
+    return atlas
+
+
+def assemble():
+    """Build timeline.html from src/: the page template with every stylesheet
+    and every viewer module inlined, in filename order. Returns the HTML with
+    the embedded-data block still empty, or None if src/ is absent."""
+    tpl_path = os.path.join(SRC, "page.html")
+    if not os.path.exists(tpl_path):
+        return None
+    with open(tpl_path, "r", encoding="utf-8") as fh:
+        html = fh.read()
+
+    def concat(sub, ext):
+        folder = os.path.join(SRC, sub)
+        names = sorted(n for n in os.listdir(folder) if n.endswith(ext)) if os.path.isdir(folder) else []
+        if not names:
+            err("src/%s has no %s files" % (sub, ext))
+        chunks = []
+        for n in names:
+            with open(os.path.join(folder, n), "r", encoding="utf-8") as fh:
+                body = fh.read().rstrip() + "\n"
+            if "</script" in body.lower() or "</style" in body.lower():
+                err("src/%s/%s contains a closing script/style tag; it would break the page" % (sub, n))
+            chunks.append("/* ---- src/%s/%s ---- */\n%s" % (sub, n, body))
+        return "\n".join(chunks), names
+
+    css, css_names = concat("styles", ".css")
+    js, js_names = concat("viewer", ".js")
+    for marker in ("<!-- @styles -->", "<!-- @scripts -->", EMBED_MARK):
+        if marker not in html:
+            err("src/page.html is missing the %s marker" % marker)
+    html = html.replace("<!-- @styles -->", "<style>\n" + css + "</style>", 1)
+    html = html.replace("<!-- @scripts -->", "<script>\n" + js + "</script>", 1)
+    return html, css_names, js_names
+
+
+
 def main():
     parts = load_parts()
     order = load_group_order()
@@ -391,6 +463,14 @@ def main():
                 err("%s/%s: event id %r uses the prefix of %s"
                     % (lin["id"], eid, sorted(owners)))
 
+    atlas = load_atlas()
+    assembled = assemble()
+    if errors:
+        print("BUILD FAILED - %d error(s):\n" % len(errors))
+        for e in errors:
+            print("  ERROR  " + e)
+        return 1
+
     lineage_ids = set(l["id"] for l in lineages)
     worlds = load_worlds(lineage_ids)
     for lid in sorted(lineage_ids):
@@ -413,15 +493,24 @@ def main():
         "lineages": lineages,
         "worlds": [worlds[l["id"]] for l in lineages if l["id"] in worlds],
     }
+    if atlas:
+        payload["atlas"] = atlas
 
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, "w", encoding="utf-8") as fh:
         json.dump(payload, fh, ensure_ascii=False, indent=1)
 
     embedded = False
-    if os.path.exists(HTML):
+    assembled_from = None
+    if assembled:
+        html, css_names, js_names = assembled
+        assembled_from = (css_names, js_names)
+    elif os.path.exists(HTML):
         with open(HTML, "r", encoding="utf-8") as fh:
             html = fh.read()
+    else:
+        html = None
+    if html is not None:
         start = html.find(EMBED_MARK)
         if start == -1:
             err("timeline.html has no %s marker; cannot embed" % EMBED_MARK)
@@ -445,9 +534,14 @@ def main():
           % (len(groups), len(lineages), payload["meta"]["events"]))
     print("    wrote %s (%.1f KB)"
           % (os.path.relpath(OUT, ROOT), os.path.getsize(OUT) / 1024.0))
+    if assembled_from and embedded:
+        print("    assembled timeline.html from src/ (%d stylesheets, %d viewer modules)"
+              % (len(assembled_from[0]), len(assembled_from[1])))
     if embedded:
         print("    embedded a copy inside timeline.html (%.1f KB)"
               % (os.path.getsize(HTML) / 1024.0))
+    if atlas:
+        print("    atlas: %r, %d era presets" % (atlas.get("title"), len(atlas.get("eras", []))))
     for g in groups:
         n = sum(1 for l in lineages if l["group"] == g["id"])
         ev = sum(len(l["events"]) for l in lineages if l["group"] == g["id"])

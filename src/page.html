@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title id="page-title">Where We Are Now - a converging timeline of science fiction</title>
+<!-- @styles -->
+</head>
+<body>
+<div class="app">
+
+<header class="topbar">
+  <div class="bar row1">
+    <div class="brand" id="brand"><span class="brand-a">Every one of these histories</span> <span class="brand-b" id="brand-accent">converges on today</span></div>
+    <button class="nav" id="btn-worlds" title="Browse every world">Worlds</button>
+    <button class="nav" id="btn-about" title="What this is and what to distrust">About</button>
+    <span class="sep"></span>
+    <span class="lbl">Era</span>
+    <div id="eras" class="eras"></div>
+    <span class="sep"></span>
+    <button class="icon" id="zout" title="Zoom out (-)">&minus;</button>
+    <input type="range" id="zoom" min="0" max="1000" value="330" title="Time span">
+    <button class="icon" id="zin" title="Zoom in (+)">+</button>
+    <button class="ghost small" id="reset" title="Fit the whole tree (0)">Fit</button>
+    <span class="sep"></span>
+    <button class="play small" id="converge" title="Every branch withdraws into the history they all share, then grows out again">&#9654; Play convergence</button>
+    <span class="grow"></span>
+    <input type="search" id="find" placeholder="Search worlds, tags, events...">
+    <select id="sort">
+      <option value="group">Sort: archetype</option>
+      <option value="divergence">Sort: divergence year</option>
+      <option value="title">Sort: title</option>
+      <option value="events">Sort: most charted</option>
+      <option value="medium">Sort: medium</option>
+    </select>
+  </div>
+  <div class="bar row2">
+    <span class="lbl">Archetype</span>
+    <div class="chips" id="chips"></div>
+    <span class="grow"></span>
+    <button id="allev" class="small">Show all event labels</button>
+  </div>
+</header>
+
+<main class="canvas">
+  <div id="chartbody">
+    <canvas id="backdrop"></canvas>
+    <svg id="chart" xmlns="http://www.w3.org/2000/svg"></svg>
+  </div>
+
+  <aside class="panel" id="drawer" data-mode="">
+    <div class="panel-mode" id="panel-index">
+      <div class="phead"><h2>Every world</h2><button class="ghost" id="pclose-index">Close</button></div>
+      <div class="stats" id="stats"></div>
+      <div class="chips tags" id="tags"></div>
+      <p class="phint" id="sec-worlds-blurb">Every row opens the full dossier: what the place is like to live in, who holds power, what the technology does and conspicuously refuses to do, where to begin, and which other worlds it genuinely connects to. The bar is where its charted time sits against today.</p>
+      <div class="cards" id="cards"></div>
+    </div>
+    <div class="panel-mode" id="panel-world"></div>
+    <div class="panel-mode" id="panel-about">
+      <div class="phead"><h2>About this atlas</h2><button class="ghost" id="pclose-about">Close</button></div>
+      <h1 id="hero-title">Every one of these histories <span class="accent">converges on today</span></h1>
+      <p class="lede" id="hero-lede">
+        Twenty-four science-fiction worlds, each pinned to the <b>real calendar</b> rather than its own.
+        Every one of them rode along our history, broke away at one dated moment, and is drawn right up to the
+        line where <span class="now-inline">we are now</span>. Grouped by <b>how</b> they break with us
+        rather than by genre &mdash; because that is what decides whether a world is hiding underneath this
+        one, downstream of a war we won, or waiting ten thousand years ahead.
+      </p>
+      <div class="note" id="notes">
+        <h3>How this was built, and what to distrust</h3>
+        <p><b>The conversion problem.</b> Only some of these fictions date themselves in real years. Everything else had to be converted. Read those positions as <i>projections</i>, not recorded history.</p>
+        <p><b>The axis is warped.</b> The scale is a symmetric log: it stretches the centuries around now and compresses deep time. Year labels are exact; spacing is not.</p>
+      </div>
+    </div>
+  </aside>
+</main>
+
+<footer class="bottombar legend">
+  <span class="item"><svg width="28" height="10"><line x1="0" y1="5" x2="28" y2="5" stroke="#f4e7c3" stroke-width="2.4"/></svg> real history</span>
+  <span class="item"><svg width="32" height="14"><path d="M0 12 C 10 12, 10 3, 20 3 L 32 3" fill="none" stroke="#2dd4e6" stroke-width="2.2"/></svg> a world forking off it</span>
+  <span class="item"><svg width="12" height="12"><circle cx="6" cy="6" r="4" fill="#f472d0"/></svg> major event</span>
+  <span class="item"><svg width="12" height="12"><circle cx="6" cy="6" r="2" fill="#7b8db0"/></svg> supporting</span>
+  <span class="item"><svg width="12" height="12"><circle cx="6" cy="6" r="2.6" fill="#ffffff"/></svg> passes through today</span>
+  <span class="item"><svg width="14" height="14"><circle cx="7" cy="7" r="5" fill="none" stroke="#ffcf5c" stroke-width="1.1" stroke-dasharray="2 2"/></svg> contradicted by real history</span>
+  <span class="item hint" id="legend-hint">drag to pan &middot; scroll or pinch to zoom &middot; hover to light a world &middot; click to enter it</span>
+</footer>
+
+</div>
+<div id="tip"></div>
+
+<script id="embedded-data" type="application/json">
+__EMBEDDED__
+</script>
+<!-- @scripts -->
+</body>
+</html>

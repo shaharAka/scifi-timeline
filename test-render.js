@@ -178,7 +178,10 @@ const ids = [
   "chart", "chartbody", "tip", "chips", "stats", "sort", "find",
   "zoom", "zin", "zout", "reset", "allev", "embedded-data",
   /* dashboard furniture, added when the page became a converging dashboard */
-  "eras", "conv", "cards", "drawer", "panes", "dchart", "converge",
+  "eras", "cards", "drawer", "panes", "dchart", "converge",
+  /* the single-canvas explorer: the side panel and its three modes */
+  "panel-index", "panel-world", "panel-about", "tags", "brand", "btn-worlds", "btn-about",
+  "pclose-index", "pclose-about", "hero-title", "hero-lede", "notes", "legend-hint", "sec-worlds-blurb",
 ];
 const store = Object.create(null);
 ids.forEach((id) => { store[id] = new El(id === "chart" ? "svg" : "div"); });
@@ -408,7 +411,7 @@ attempt("world drawer for every lineage", () => {
     if (!t) throw new Error("no lane target for " + l.id);
     chart.onpointerup({ clientX: 10, clientY: 10, pointerId: 1, target: t });
 
-    const d = store["drawer"];
+    const d = store["panel-world"];
     if (!/dtitle/.test(d.innerHTML) || !d.innerHTML.includes(escapeRe(l.title))) {
       throw new Error("world drawer did not render for " + l.id);
     }
@@ -448,7 +451,7 @@ attempt("world drawer for every lineage", () => {
     const tab = d.querySelectorAll("[data-tab]").find((n) => n.getAttribute("data-tab") === "chronology");
     if (!tab) throw new Error("no chronology tab for " + l.id);
     tab.onclick();
-    const tbody = store["drawer"].querySelectorAll("TBODY")[0];
+    const tbody = store["panel-world"].querySelectorAll("TBODY")[0];
     if (!tbody) throw new Error("chronology for " + l.id + " rendered no table body");
     if (tbody.children.length !== l.events.length) {
       throw new Error(`chronology for ${l.id} rendered ${tbody.children.length} rows, ` +
@@ -460,10 +463,10 @@ attempt("world drawer for every lineage", () => {
 
     /* and the entry-point tab must render whenever the dossier has any */
     if (dossiers.has(l.id)) {
-      const tab2 = store["drawer"].querySelectorAll("[data-tab]").find((n) => n.getAttribute("data-tab") === "where");
+      const tab2 = store["panel-world"].querySelectorAll("[data-tab]").find((n) => n.getAttribute("data-tab") === "where");
       tab2.onclick();
       const first = l._w.whereToStart[0];
-      if (!plainText(store["drawer"].innerHTML).includes(first.title)) {
+      if (!plainText(store["panel-world"].innerHTML).includes(first.title)) {
         throw new Error("where-to-start missing for " + l.id);
       }
     }
@@ -477,9 +480,10 @@ attempt("dashboard panels populated", () => {
   const cards = store["cards"].querySelectorAll(".card");
   check(cards.length === payload.lineages.length,
     `rendered ${cards.length} world cards, expected ${payload.lineages.length}`);
-  const rows = store["conv"].querySelectorAll(".convrow");
-  check(rows.length === payload.lineages.length,
-    `rendered ${rows.length} convergence rows, expected ${payload.lineages.length}`);
+  const tracks = store["cards"].querySelectorAll(".track");
+  check(tracks.length === payload.lineages.length,
+    `rendered ${tracks.length} distribution tracks inside the world index, expected ${payload.lineages.length}`);
+  check(store["drawer"].getAttribute("data-mode") !== null, "the explorer panel did not render");
   const stats = store["stats"].innerHTML;
   check(/Worlds charted/.test(stats) && /Dated events/.test(stats) && /Dossiers/.test(stats),
     "stat strip did not render its three headline figures");
@@ -495,14 +499,18 @@ attempt("dashboard panels populated", () => {
 attempt("convergence animation", () => {
   debug().focusYear(1800, 1400);
   /* query AFTER framing: focusYear re-renders and republishes the svg */
-  if (!store["chart"].querySelectorAll(".spine-fic").length) {
+  const cores = () => store["chart"].querySelectorAll(".core");
+  if (!cores().length) {
     throw new Error("no branches to converge at the default view");
+  }
+  if (store["chart"].querySelectorAll(".trunk-core").length !== 1) {
+    throw new Error("expected exactly one trunk (real history drawn once)");
   }
 
   store["converge"].onclick();
-  const armed = store["chart"].querySelectorAll(".spine-fic");
-  if (!armed.every((n) => n.getAttribute("stroke-dasharray") === "1600")) {
-    throw new Error("convergence did not arm every branch");
+  const armed = cores();
+  if (!armed.every((n) => Number(n.getAttribute("stroke-dasharray")) > 0)) {
+    throw new Error("convergence did not arm every branch with its own length");
   }
   if (!armed.some((n) => n.getAttribute("stroke-dashoffset") !== null)) {
     throw new Error("convergence did not begin (no dash offset applied)");
@@ -510,6 +518,22 @@ attempt("convergence animation", () => {
   if (!store["converge"].classList.contains("on")) {
     throw new Error("convergence button did not enter its running state");
   }
+});
+
+/* tree integrity: every visible world is either a branch off the trunk or an
+   explicit "forks later" marker - never silently absent */
+attempt("tree integrity", () => {
+  debug().focusYear(1800, 1400);
+  const groups = store["chart"].querySelectorAll("[data-lane-group]");
+  if (groups.length !== expectedLineages) {
+    throw new Error(`rendered ${groups.length} branch groups, expected ${expectedLineages}`);
+  }
+  for (const g of groups) {
+    const drawn = g.querySelectorAll(".core").length + g.querySelectorAll(".ghost").length;
+    if (!drawn) throw new Error("branch " + g.getAttribute("data-lane-group") + " drew neither a path nor a marker");
+  }
+  const forks = store["chart"].querySelectorAll(".fork").length;
+  if (!forks) throw new Error("no fork nodes on the trunk in the default view");
 });
 
 {
@@ -575,6 +599,31 @@ attempt("convergence animation", () => {
   const frac = (t.pxFor(t.NOW) - t.LANE_R) / (t.W - t.LANE_R);
   soft(`present day sits ${(frac * 100).toFixed(0)}% across the drawing area in the default view`);
 }
+
+/* the camera: zoom in and out around the centre, pan vertically, fit - the tree
+   must stay complete and the scene must never be pulled out of the viewport */
+attempt("camera zoom, pan and fit", () => {
+  const t0 = debug();
+  t0.zoomBy(0.5); t0.zoomBy(0.5);
+  if (lanesRendered() !== expectedLineages) throw new Error("lanes lost after zooming in");
+  const zin = debug().Z;
+  debug().zoomBy(4); debug().zoomBy(4);
+  if (lanesRendered() !== expectedLineages) throw new Error("lanes lost after zooming out");
+  if (!(debug().Z < zin)) throw new Error("zooming out did not reduce Z");
+  const t = debug();
+  if (t.sceneH <= t.H && Math.abs(t.panY - (t.H - t.sceneH) / 2) > 1) {
+    throw new Error("a scene that fits was not centred");
+  }
+  debug().fit();
+  const f = debug();
+  if (f.sceneH > f.H + 1 && f.Z > 0.3) throw new Error(`fit left the tree taller than the viewport (${Math.round(f.sceneH)} > ${f.H})`);
+  chart.onpointerdown({ button: 0, clientX: 800, clientY: 400, pointerId: 1 });
+  chart.onpointermove({ clientX: 800, clientY: 300, pointerId: 1 });
+  chart.onpointerup({ clientX: 800, clientY: 300, pointerId: 1, target: { getAttribute: () => null } });
+  chart.onwheel({ deltaX: 120, deltaY: 0, clientX: 900, clientY: 400, preventDefault() {} });
+  chart.onwheel({ deltaX: 0, deltaY: 200, clientX: 900, clientY: 400, preventDefault() {} });
+  if (lanesRendered() !== expectedLineages) throw new Error("lanes lost after pan/wheel");
+});
 
 /* zoom the slider to both extremes and re-check lane integrity */
 for (const v of ["0", "1000", "500"]) {

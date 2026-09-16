@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-09-16T15:50:32Z",
+  "generated": "2026-09-16T17:54:29Z",
   "source": "data/parts/*.json",
   "lineages": 24,
   "events": 237,
@@ -15,7 +15,7 @@
    "tagline": "The world is already stranger than we know — the truth is simply classified.",
    "question": "Where are the aliens, wizards and vampires hiding in the present day?",
    "divergenceMechanism": "A secret breach of the consensus world, kept off the record and running underneath ordinary history.",
-   "color": "#8b5cf6"
+   "color": "#9d7bff"
   },
   {
    "id": "alternate-past",
@@ -23,7 +23,7 @@
    "tagline": "History took a different turn inside living memory, and the story is set downstream of it.",
    "question": "What if the war, the revolution or the assassination had gone the other way?",
    "divergenceMechanism": "An explicit counterfactual in the 19th or 20th century that rewrites the world the story inhabits.",
-   "color": "#f59e0b"
+   "color": "#3fd19a"
   },
   {
    "id": "post-industrial-collapse",
@@ -31,7 +31,7 @@
    "tagline": "Our civilisation ends in a single generation, and the survivors inherit the ruins.",
    "question": "What grows in the wreckage of the industrial world?",
    "divergenceMechanism": "A discrete catastrophe inside the 20th or 21st century destroys the industrial order.",
-   "color": "#ef4444"
+   "color": "#ff6b4a"
   },
   {
    "id": "near-future-branch",
@@ -39,7 +39,7 @@
    "tagline": "The world is ours, and then one discovery or one invention pushes it off our track.",
    "question": "How does our own century become the first chapter of the story?",
    "divergenceMechanism": "A single breakthrough or contact event inside our own century, reached from a recognisably present-day world.",
-   "color": "#22d3ee"
+   "color": "#2dd4e6"
   },
   {
    "id": "far-future-space-opera",
@@ -47,7 +47,7 @@
    "tagline": "Humanity survives the next ten thousand years and spreads across the galaxy.",
    "question": "What does a galactic civilisation thousands of years downstream of us look like?",
    "divergenceMechanism": "A founding rupture — often no longer remembered — after which humanity's future runs millennia beyond our own.",
-   "color": "#e879f9"
+   "color": "#f472d0"
   }
  ],
  "lineages": [
@@ -6184,5 +6184,63 @@
    ],
    "spoilerLevel": "mild"
   }
- ]
+ ],
+ "atlas": {
+  "id": "scifi",
+  "title": "Where We Are Now - a converging timeline of science fiction",
+  "headline": "Every one of these histories",
+  "headlineAccent": "converges on today",
+  "lede": "Twenty-four science-fiction worlds, each pinned to the **real calendar** rather than its own. Every one of them rode along our history, broke away at one dated moment, and is drawn right up to the line where ==we are now==. Grouped by **how** they break with us rather than by genre - because that is what decides whether a world is hiding underneath this one, downstream of a war we won, or waiting ten thousand years ahead.",
+  "trunkLabel": "REAL HISTORY",
+  "futureLabel": "the years none of us have reached",
+  "eras": [
+   {
+    "label": "Around now",
+    "from": 1830,
+    "to": 2150
+   },
+   {
+    "label": "Divergence era",
+    "from": 1900,
+    "to": 2100
+   },
+   {
+    "label": "Next millennia",
+    "from": -1000,
+    "to": 5000
+   },
+   {
+    "label": "Full reach",
+    "from": -46000,
+    "to": 50000
+   },
+   {
+    "label": "Deep past",
+    "from": -48000,
+    "to": 2000
+   }
+  ],
+  "defaultEra": 0,
+  "legendHint": "drag to pan · scroll to zoom · click a branch or card to enter that world",
+  "sections": {
+   "distribution": {
+    "title": "Where the charted time actually sits",
+    "blurb": "Each world's recorded events, bucketed by when they land on the real calendar. The vertical rule is today: bars starting to its left are stories that begin in our past, and a long right tail means the fiction runs deep into the future."
+   },
+   "worlds": {
+    "title": "Enter a world",
+    "blurb": "Every card opens the full dossier: what the place is like to live in, who holds power, what the technology does and conspicuously refuses to do, where to begin, and which other worlds it genuinely connects to."
+   }
+  },
+  "notes": {
+   "heading": "How this was built, and what to distrust",
+   "paragraphs": [
+    "**The conversion problem.** Only some of these fictions date themselves in real years. Star Trek does - first contact is 5 April 2063. Everything else had to be converted: Star Wars counts from the Battle of Yavin, Dune counts After Guild, Foundation counts Galactic Era, Warhammer counts millennia. Read those positions as *projections*, not recorded history. Every event keeps its original in-universe label so you can check the arithmetic yourself.",
+    "**Star Wars really does land in the deep past.** Its own opening says \"a long time ago\", and converting BBY against a 1977 anchor puts the founding of the Republic around 23,000 BCE. That is not a sign error, and every world carries an *epoch* field saying which way it faces.",
+    "**The axis is warped.** The dataset runs from roughly 2 billion BCE to 48,000 CE, so the scale is a symmetric log: it stretches the centuries around now and compresses deep time, staying continuous and monotonic throughout. Year labels are exact; spacing is not. *Full reach* is the widest honest window.",
+    "**Confidence is recorded per event.** High means the fiction states it outright; medium means it was inferred or computed from a stated anchor; low means sources genuinely conflict - usually a book-versus-film or canon-level disagreement - and the competing claim is written out in the event note rather than quietly resolved.",
+    "**Editing it.** The dataset lives beside this file: one JSON file per archetype under `data/parts/`, world dossiers under `data/parts/worlds/`, the page copy in `data/atlas.json`, and the contract in `data/SCHEMA.md`. Run `python3 build-data.py` to validate and rebuild; it refuses to build on bad data, assembles the viewer from `src/`, and embeds the result here."
+   ]
+  }
+ }
 }

@@ -1,0 +1,331 @@
+# Design language and visual architecture
+
+This is the guide for anyone - person or agent - who changes how the atlas
+looks or adds to it. Read it before touching `src/`. It says what the picture
+is supposed to mean, which shapes carry that meaning, how the code is laid out
+so the meaning survives edits, and how to add a world, an archetype or a whole
+new atlas without redesigning anything.
+
+The one-line brief: **a researched, honest, explorable atlas of fictional
+chronologies, pinned to the real calendar, that converges on today.** The
+visual has one job: make "converges on today" true at a glance.
+
+---
+
+## 1. The thesis, as a picture
+
+Every fiction here rode along real history until one dated moment, then left.
+So the picture is a **tree**, not a table:
+
+- **One trunk.** Real history is drawn once, as a single luminous line through
+  the middle of the chart. It is the axis: the year ticks sit on it. It is solid
+  up to today and becomes a faint dotted line beyond, because real history has
+  not happened there yet.
+- **Branches.** Each world leaves the trunk at its divergence year with a
+  smooth curve and settles into its own lane, above or below. Its events are
+  nodes on that branch. Where a branch runs off the right edge, a chevron says
+  it continues; where it ends, a small hollow cap says the story stops here.
+- **Bundles.** Worlds that break with history the same way (the archetypes)
+  occupy adjacent lanes on the same side, under a faint band and a small
+  heading. Colour belongs to the archetype and to nothing else.
+- **Today** is a vertical plane of white light through everything. A white node
+  marks every branch that passes through it: those are the futures we are still
+  waiting on. An amber dashed ring marks an event real history has already
+  contradicted.
+- **The past a world leans on.** Events dated before a world's fork are real
+  history it depends on. They sit on the trunk, nudged toward that world's
+  side, dimmer than branch events.
+- **Ghosts.** A world whose fork lies beyond the right edge is not silently
+  absent: an italic marker at the edge says "Dune forks in 16000 ->".
+
+The previous chart drew one lane per world with real history repeated inside
+each lane. It read as twenty-four project schedules. Do not go back to that:
+if a change makes the trunk less singular or the forks less visible, it is
+moving the wrong way.
+
+### One canvas, two ways to read
+
+The chart is the page. It fills the viewport under a two-row top bar and above
+a one-line legend, and nothing else scrolls. Everything that used to be a
+section below the chart now lives in one of two places:
+
+- **Hover** (see below) for anything you can learn without leaving the picture.
+- **The explorer panel**, a glass sheet that slides in from the right, with
+  three modes: *Worlds* (compact stats, tag filters, and one row per world with
+  its distribution bar), a *world* (the dossier tabs, reached by clicking a
+  branch, a node or a row), and *About* (the headline, the lede and the method
+  notes). Opening a world lights its branch and dims the rest; Escape or a
+  click on empty sky steps back out.
+
+The camera is a map camera. Drag pans in both directions. Scrolling or pinching
+zooms around the cursor and moves two things together: the time window
+(`view.hs`) and the lane pitch (`Z`), so the tree behaves like one picture
+rather than a chart with a separate horizontal scale. Horizontal scroll or
+shift+scroll slides along time. **Fit** (or the `0` key) frames the home era
+with the whole tree in the viewport. Level of detail follows the lane pitch on
+screen: below 24px the event labels go, below 15px the titles go too, and a
+hovered or selected branch always keeps its labels.
+
+### Hover is a lamp, not a highlight
+
+Pointing at anything lights one lineage and lets the rest fall back:
+
+- **Hover a branch** (or its card, or its row in the distribution panel): every
+  other branch drops to a quarter opacity, the hovered one thickens, its nodes
+  swell, its fork node pulses, and the trunk turns that world's colour from the
+  left edge up to the fork - a literal reading of how long it rode with us.
+- **Hover an event**: a ripple leaves the node and the tooltip opens as a scan
+  card in the archetype's colour: the event, its in-universe date, how far it is
+  from today ("41 years behind us"), which beat of the branch it is, and a small
+  bar placing it on the branch with today marked.
+- **Move along the chart**: a dashed scrubber follows the pointer with a year
+  readout under the trunk and a running count - "1961 · 5 of 24 worlds have
+  forked". Past today it reads "years ahead" instead.
+
+These are implemented as CSS classes (`.branch.hover`, `#chart.has-hover`) and a
+`.cursor` group that is moved in place, never re-rendered. Anything new that
+responds to hover should follow the same rule: one lineage lit, everything else
+dimmed, no colour that isn't already on the page.
+
+### Motion is the same idea three times
+
+Branches are strokes that can be shortened back to the trunk, and every
+movement in the chart is that one operation:
+
+| Moment | What happens | Where |
+|---|---|---|
+| First paint | Branches grow out of the trunk, earliest fork first; labels fade in after | `growIn()` |
+| Play convergence | Every branch retracts into the trunk, the trunk brightens, a beat, then they regrow | `playConvergence()` |
+| Re-sort or filter | Lanes glide to their new rows; forks stay pinned to the trunk | `animateLayout()` |
+
+All three respect `prefers-reduced-motion` and degrade to an instant state.
+
+---
+
+## 2. Tokens
+
+`src/styles/00-tokens.css` is the whole palette, type scale, radii and motion.
+Nothing else in `src/styles/` may hard-code a colour or a duration. The only
+colours that are *not* tokens are archetype colours, because they are data:
+`data/parts/<archetype>.json -> group.color`.
+
+Rules of the palette:
+
+- **One dark ground.** `--bg` is a violet-black. Panels are glass on top of
+  it (`--panel`, blurred). There is no light theme; the chart is a night sky.
+- **Ink is five steps** (`--ink-0` .. `--ink-4`) and nothing on the page is pure
+  white except the present day (`--now`). If something needs to read as "now",
+  it is white; otherwise it is not.
+- **The trunk is warm.** `--trunk` is an ivory (`--trunk-dim`, `--trunk-glow`
+  follow it): real history reads as sunlight, every fiction is a cool colour
+  leaving it, and today is the one pure white. Keep the trunk the only warm
+  neutral on the page.
+- **Meaning colours** are reserved: `--flag` (amber) means "real history has
+  contradicted this", and the `--ok/--warn/--bad` trio is only for confidence
+  ratings and stat bars. Never use amber for decoration.
+- **Archetype colours** come from data and must stay distinguishable from each
+  other, from the trunk and from white at 2px stroke on `--bg`. The current five
+  sit roughly 70 degrees apart: lavender `#9d7bff`, mint `#3fd19a`, coral
+  `#ff6b4a`, cyan `#2dd4e6`, pink `#f472d0`. None is amber (reserved) or ivory
+  (the trunk). When adding an archetype, pick a hue at least 40 degrees from its
+  neighbours and check it against the others on the chart, not in a swatch.
+
+Type: one sans for prose and titles, one mono for anything that is a year, an
+axis label, a code-ish tag or a small caps heading. Uppercase headings always
+get `letter-spacing: var(--track)`.
+
+Motion: `--ease-out` everywhere; `--t-fast` for hover, `--t-base` for state
+changes, `--t-slow` for reveals. The three chart movements have their own
+durations in `65-motion.js` because they are choreography, not transitions.
+
+---
+
+## 3. Chart anatomy and the numbers that shape it
+
+All geometry constants live at the top of `src/viewer/10-state.js`.
+
+```
+PAD_Y ─┐
+       │  [bundle heading]                        <- in the gap above its band
+       │  ── outermost lane (earliest fork) ──── title on the outer side
+       │  ── ...                             ──── event labels on the trunk side
+       │  BUNDLE_GAP
+       │  [next bundle]
+TRUNK_BAND
+═══════════════ trunk ════════════════════|══ ─ ─ ─ ─ (future)
+   ticks + year labels under the trunk    today
+TRUNK_BAND
+       │  [bundles below, mirrored: outermost at the bottom]
+PAD_Y ─┘
+```
+
+- **Lane pitch** is `LANE_GAP * Z`. Every vertical constant (`PAD_Y`,
+  `TRUNK_BAND`, `BUNDLE_GAP`, `LANE_GAP`) is multiplied by the zoom `Z`, so the
+  scene at zoom Z is exactly Z times the scene at zoom 1. That linearity is what
+  lets `zoomAt()` keep the point under the cursor fixed. `panY` translates the
+  scene group; `clampPan()` centres a scene that fits and never lets a taller
+  one leave the viewport.
+- **Level of detail** is decided in `layout()` from the on-screen pitch
+  (`lod` 2/1/0) and applied in `renderBranch` and via `#chart.lod-N` classes.
+- **Fork curve**: a cubic from the trunk to the lane over `CURVE_W * sqrt(Z)`
+  pixels, shortened for branches that end sooner. The title sits just past the
+  curve.
+- **Sides**: each archetype is placed on the side with fewer lanes so far, in
+  `data/groups.json` order. A group may pin itself with `"side": "above"` or
+  `"below"` in its part file; use that when a new archetype unbalances the
+  picture.
+- **Order on a side**: the world that forks earliest sits outermost, between
+  bundles and within a bundle. A later fork then curves to an inner lane
+  without crossing an earlier branch's flat run. Crossings only occur across
+  bundles with interleaved fork years (Star Trek dropping through two bundles is
+  the one case in this dataset, and it is acceptable).
+- **Labels**: one row of event labels per lane, budgeted by zoom
+  (`labelBudget`) and chosen by importance, then by closeness to the view
+  centre. A label is dropped rather than overlapped (`claimRoom`). Titles go on
+  the outer side, event labels on the trunk side, so neighbours never fight.
+
+### The time axis
+
+The scale is a **symmetric log around the view centre**:
+
+```
+warp(off) = sign(off) * min(log1p(|off| / WARP), 1e4)        WARP = 110
+x(year)   = anchorX + (rightEdge - anchorX) * warp(year - c) / warp(hs)
+```
+
+- `WARP = 110` is load-bearing: near-linear across the last few centuries, only
+  bending for deep time. Do not tune it per view.
+- `ANCHOR = 0.5`: the view centre sits mid-width, so an era preset's `from`
+  and `to` are the true left and right edges. (The first build used 0.22, which
+  made the presets' `from` values fictional; the change is deliberate.) The
+  anchor must be a **constant** - deriving it from the viewport breaks the
+  mapping's invertibility, which `test-render.js` guards.
+- `pxFor` and `yearForPx` are exact inverses. Change both or neither.
+
+---
+
+## 4. Code architecture
+
+`timeline.html` is **generated**. Never edit it. `python3 build-data.py`
+validates the data, then assembles the page from `src/` and embeds the data:
+
+```
+src/page.html            the markup, with three markers:
+                         <!-- @styles -->  <script id="embedded-data">  <!-- @scripts -->
+src/styles/NN-*.css      inlined in filename order
+src/viewer/NN-*.js       inlined in filename order into ONE IIFE
+                         (00-boot.js opens it, 99-go.js closes it)
+data/atlas.json          the page copy and era presets for this atlas
+data/parts/*.json        the dataset (see data/SCHEMA.md)
+```
+
+The viewer modules share one scope by design (no bundler, no imports, works
+from `file://`). Keep function names unique and keep each file to one concern:
+
+| File | Owns |
+|---|---|
+| `00-boot.js` | reading the embedded payload, `normalize`, `boot` |
+| `10-state.js` | every constant and every piece of mutable state |
+| `20-scale.js` | the time axis (`warp`, `pxFor`, `yearForPx`) |
+| `30-format.js` | year formatting, escaping, the `mark()` inline-markup renderer |
+| `40-select.js` | filtering, sorting, `overtaken()` |
+| `50-layout.js` | the tree layout: sides, bundles, lane rows, trunk position |
+| `60-chart.js` | drawing: backdrop, trunk, axis, bundles, `renderBranch`, prehistory nodes |
+| `65-motion.js` | grow-in, convergence, layout glide |
+| `70-interact.js` | pan, zoom, hover, click, tooltip |
+| `80-panels.js` | the explorer's Worlds mode: compact stats, tag chips, one row per world with its distribution bar; `refresh()` |
+| `85-drawer.js` | the explorer's world mode (dossier tabs, mini chart), `openWorld`/`closeWorld` |
+| `90-chrome.js` | archetype chips, era buttons, the camera (`zoomAt`, `zoomBy`, `fitAll`), the panel (`setPanel`), atlas copy, `init()` |
+| `99-go.js` | boot |
+
+**Layering inside the SVG**, back to front: grid, today-plane, then the
+pannable `g.scene` (bundle bands, trunk, branches, prehistory nodes), then the
+today-line and the `g.cursor` scrubber in viewport coordinates. The SVG is the
+size of the viewport; the scene is translated by `panY`. Inside a branch group
+the hit rectangle (`data-lane`) and event hit circles (`data-ev`) are appended
+last so nothing covers them. The starfield is a `<canvas>` under the SVG,
+painted once per size, never per frame, and skipped where canvas is
+unavailable.
+
+**Rendering model**: `renderChart()` rebuilds the SVG wholesale on every
+pan, zoom, filter and animation frame. A few hundred nodes; do not optimise
+without measuring. It republishes `window.__timeline` each time - read it
+fresh, never cache it.
+
+**Hooks the tests depend on** (`test-render.js`): one `rect[data-lane]` per
+visible world (also for ghosts), one `circle[data-ev="<lineage>|<index>"]` per
+event inside the drawable range, exactly one `.trunk-core`, `.core` paths that
+`playConvergence` arms with their own length, exactly one text starting
+`TODAY <year>`, `window.__timeline.{pxFor,yearForPx,focusYear,zoomBy,fit,Z,panY,
+sceneH,LANE_R,W,H}`, the panel `#drawer[data-mode]` with `#panel-index`
+(`#stats`, `#tags`, `#cards` rows carrying a `.track`) and `#panel-world`
+(the `.dtitle`, `[data-tab]` tabs, `#dchart`). Keep those names if you restyle.
+
+---
+
+## 5. Extending it
+
+### Add a world
+Edit the relevant `data/parts/<archetype>.json`, following `data/SCHEMA.md`.
+Optionally add a dossier under `data/parts/worlds/`. Run
+`python3 build-data.py`. Nothing in `src/` changes: the layout, colour, side
+and ordering all derive from the data.
+
+### Add an archetype
+Create `data/parts/<id>.json` with a `group` block (`id, name, tagline,
+question, divergenceMechanism, color`, optional `side`) and its lineages. Add
+the id to `data/groups.json -> order` (this is the reading order and the
+side-balancing order). Check the new colour on the chart against the others.
+Rebuild.
+
+### Make a different atlas
+Replace `data/parts/`, `data/groups.json` and `data/atlas.json`. The atlas file
+carries the title, headline, lede, trunk label, era presets, section copy and
+the method notes - the viewer contains no science-fiction-specific text.
+Inline marks in atlas copy: `**bold**`, `*italic*`, `` `code` ``, `==now==`
+(the present-day highlight). Era presets are `{label, from, to}` with honest
+edges; `defaultEra` indexes into them. Because the axis is a symmetric log
+around the centre of `from..to`, put the centre where the detail should be
+(for this atlas, the fork cluster around 2000) and let the edges run wide.
+
+### Change the look
+Tokens first (`00-tokens.css`). If a change needs a new colour with a new
+meaning, add a token and document the meaning here. Chart shapes live in
+`60-chart.js` and `20-chart.css`; keep the class names in section 4.
+
+### Verify
+```
+python3 build-data.py
+python3 test-fixture.py && node test-viewer.js && node test-render.js timeline.html
+```
+Then look at it. The headless suite proves the tree is complete and the
+interactions do not throw; it cannot judge whether the picture is beautiful.
+Open `timeline.html` at ~1500px wide, hit each era preset, play the
+convergence, open a drawer. The checklist that matters:
+
+- Is the trunk the single brightest continuous line, and is it drawn once?
+- Can you find every fork without reading a label?
+- Does today read as a plane through everything, with its white nodes?
+- Do titles and event labels stay off each other at every preset?
+- Does every archetype colour survive at 2px on the dark ground?
+
+---
+
+## 6. Decisions that look like mistakes but are not
+
+- **The chart is the page.** There is no scrolling document; the tree fills
+  the viewport and the reading happens in the panel. Do not reintroduce
+  sections under the chart - put new material in a panel mode or on hover.
+- **Zoom moves time and pitch together.** A separate horizontal zoom felt like
+  a spreadsheet. If a user needs the time window alone, the slider and the era
+  presets do that; the wheel stays coupled.
+- **Star Trek crosses two bundles.** Earliest-fork-outermost is the right
+  global rule; one long drop is the cost of keeping the far-future space operas
+  together. Do not special-case it.
+- **Events before a fork sit on the trunk**, not on the branch, even when the
+  fiction invented them (Hogwarts in 994). The schema calls that phase
+  *prehistory* and the chart honours the schema; if the data is wrong, fix the
+  data.
+- **Wheel zooms the canvas.** There is no page to scroll any more, so this is
+  no longer a trap; horizontal wheel and shift+wheel slide along time.
+- **Generated files are committed** so a fresh clone opens with no build step.

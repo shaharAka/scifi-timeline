@@ -4,29 +4,45 @@ An animated dashboard that puts fictional histories on the **real-world calendar
 shows where each one stops agreeing with us, and lets you step inside any of the
 twenty-four worlds.
 
-Open **`timeline.html`** directly in a browser. No server, no build step, no
-dependencies — the page carries its own copy of the data so it works from
-`file://`.
+Open **`timeline.html`** directly in a browser. No server, no dependencies — the
+page carries its own copy of the data so it works from `file://`.
 
-## The dashboard
+`timeline.html` is **generated**: `python3 build-data.py` assembles it from the
+viewer source in `src/` and the data in `data/`. Edit those, never the output.
+The visual language and the code layout are documented in **`DESIGN.md`** —
+read it before changing how anything looks.
+
+## The atlas
+
+The chart is the page: one canvas that fills the window, with a two-row top bar
+and a one-line legend. Drag to pan, scroll or pinch to zoom around the cursor
+(time window and lane pitch move together), horizontal scroll to slide along
+time, **Fit** to frame the whole tree. Everything else lives in the explorer
+panel on the right - **Worlds** (stats, tag filters, one row per world with the
+bar showing where its charted time sits against today), a **world** (opened by
+clicking any branch, node or row), and **About**.
 
 - **Stat strip** — how many worlds, how many dated events, what share of them the
   fiction states outright, how many are genuinely contested, and how many have a
-  dossier behind them. The bars fill on load.
-- **The convergence chart** — every lineage as a lane on a shared real-time axis,
-  with the present day as a pulsing line. Lanes slide to their new positions when
-  you re-sort, and there is no jitter: the layout animates rather than snapping.
-- **Play convergence** — the signature animation. Every branch withdraws back to
-  the single moment all of them share, then unfolds again. It is the thesis of
-  the whole chart, performed.
-- **Where the charted time sits** — each world's events plotted against today, so
-  you can see at a glance which fictions live in our past and which run far past us.
-- **Enter a world** — a card per lineage; clicking one (or its lane) opens the
-  dossier.
+  dossier behind them. In the Worlds panel.
+- **The convergence chart** — a tree. Real history is one luminous trunk drawn
+  once, with the year axis on it; every world is a branch that peels off at its
+  divergence year and settles into its own lane, above or below, bundled by
+  archetype. Today is a plane of light through everything, with a white node
+  wherever a branch passes through it. Branches grow out of the trunk on first
+  paint and glide to new rows when you re-sort.
+- **Play convergence** — the signature animation. Every branch retracts into
+  the trunk, the trunk brightens, and then they all grow out again. It is the
+  thesis of the whole chart, performed.
+- **Where the charted time sits** — the bar on each world's row in the Worlds
+  panel, so you can see at a glance which fictions live in our past and which
+  run far past us.
+- **Enter a world** — click a branch, a node or a row; the dossier opens in the
+  panel and the branch lights up in the chart.
 
 ## Going deeper into a world
 
-Every world's drawer has three tabs:
+Every world's panel has three tabs:
 
 | Tab | What it gives you |
 |---|---|
@@ -45,13 +61,20 @@ reveal, so you know before you read.
 
 ## What the chart shows
 
-Every lineage (a franchise, series or novel) is drawn as its own track:
+The chart is a tree on a shared real-time axis:
 
-- a **dashed grey spine** is real history, which every lineage shares;
-- a **coloured fork marker** is that story's *divergence* — the first real-world
+- the **trunk** is real history, drawn once, solid up to today and dotted beyond;
+- a **fork node** on the trunk is a story's *divergence* — the first real-world
   year its history is no longer identical to ours;
-- a **coloured branch** is the fiction's own timeline after the fork;
-- the **bold vertical line** is the present day.
+- the **coloured branch** leaving it is the fiction's own timeline; a chevron at
+  the edge means it continues, a hollow cap means the story ends there;
+- small dots **on the trunk** are the real history a world leans on before it
+  forks;
+- the **white plane** is the present day, and a **white node** marks each branch
+  passing through it; an **amber ring** marks an event real history has since
+  contradicted;
+- a world whose fork lies beyond the right edge is named by an italic marker
+  there rather than silently missing.
 
 Franchises are grouped by **how they break with our history**, not by genre.
 24 lineages, 237 events:
@@ -79,11 +102,12 @@ compresses the deep past and deep future. It stays continuous and monotonic — 
 year is ever reordered — but distances far from now are visually compressed.
 **The year labels are always the truth; the spacing is not linear.**
 
-Five era presets jump to the useful regions: *Around now*, *Divergence era*,
-*Deep future*, *Full reach* (233 of the 237 events on one screen) and
-*Ancient past*. Because the axis compresses hard at the extremes, no single view
-can show 2 billion BCE and 48,000 CE at linear accuracy at once — that is the
-trade the warp makes, and *Full reach* is the widest honest window.
+Era presets (defined in `data/atlas.json`) jump to the useful regions: *Around
+now*, *Divergence era*, *Deep future*, *Full reach* and *Ancient past*. Their
+`from`/`to` are the true left and right edges of the view. Because the axis
+compresses hard at the extremes, no single view can show 2 billion BCE and
+48,000 CE at linear accuracy at once — that is the trade the warp makes, and
+*Full reach* is the widest honest window.
 
 ## The conversion problem
 
@@ -111,13 +135,18 @@ why lineages carry an `epoch` field.
 
 | File | Purpose |
 |---|---|
-| `timeline.html` | The viewer. Self-contained; embeds a copy of the data. |
+| `timeline.html` | **Generated.** The viewer, self-contained, with a copy of the data embedded. |
+| `src/page.html` | The page template; `build-data.py` inlines styles, scripts and data into it. |
+| `src/styles/*.css` | Design tokens first, then chrome, chart and panel styles. |
+| `src/viewer/*.js` | The viewer, one concern per file, assembled in filename order. |
+| `data/atlas.json` | Everything the page *says*: title, lede, era presets, section copy, notes. |
+| `DESIGN.md` | The design language, chart anatomy and how to extend the atlas. |
 | `data/timeline-data.json` | The aggregated dataset the viewer fetches when served over HTTP. |
 | `data/parts/*.json` | One file per archetype — **edit these**. |
 | `data/parts/worlds/*.json` | World dossiers, one file per research pass. |
 | `data/groups.json` | Archetype display order. |
 | `data/SCHEMA.md` | The data contract. Read this before adding a lineage. |
-| `build-data.py` | Validates the parts, rebuilds the aggregate, re-embeds it in the HTML. |
+| `build-data.py` | Validates the parts and the atlas, rebuilds the aggregate, assembles the page from `src/`, embeds the data. |
 | `test-fixture.py` | Proves the build pipeline works and that invalid data is rejected. |
 | `test-render.js` | Runs the viewer's render pipeline headlessly against a minimal DOM. |
 | `test-viewer.js` | Renders fixture data through `timeline.html`. |
@@ -128,6 +157,16 @@ why lineages carry an `epoch` field.
 1. Read `data/SCHEMA.md`.
 2. Edit the relevant `data/parts/*.json`.
 3. Run `python3 build-data.py`.
+
+## Editing the viewer
+
+1. Read `DESIGN.md`.
+2. Edit `src/styles/*.css`, `src/viewer/*.js` or `src/page.html`.
+3. Run `python3 build-data.py` — it assembles `timeline.html` and embeds the data
+   in one step — then the three test suites below.
+
+Page copy (title, lede, era presets, section text, the method notes) is data:
+edit `data/atlas.json` and rebuild.
 
 The validator enforces the rules that matter and will refuse to build:
 

@@ -4,18 +4,27 @@ Everything needed to pick this up cold, from any machine. Read this first; it is
 the entry point and it tells you what to trust and what will bite you.
 
 - **Repo:** `/Users/shahar/Documents/scifi-timeline` (standalone git repo, branch `main`)
-- **Commit at handoff:** `a4ea806` (project) + this document
+- **Commit at handoff:** the latest commit on `main` ("Single-canvas convergence
+  tree…"), on top of `a4ea806` (the researched dataset) and `74c373f` (the first
+  handoff).
 - **Remote:** none yet. Local only.
-- **What it is:** a static, dependency-free dashboard that pins 24 science-fiction
-  worlds to the real-world calendar, shows where each one diverges from our
-  history, and lets a reader step inside any of them.
+- **What it is:** a static, dependency-free atlas that pins 24 science-fiction
+  worlds to the real-world calendar as one tree - real history is the trunk,
+  each world a branch leaving it at its divergence year - on a single pannable,
+  zoomable canvas, with a side panel to step inside any world.
 - **State:** all three test suites green. 5 archetypes, 24 lineages, 237 events,
-  24 world dossiers.
+  24 world dossiers. The viewer was rebuilt on 2026-09-16: tree chart, `src/`
+  modules assembled by the build, design tokens, atlas config, single-canvas
+  camera and explorer panel. Visually verified in Chrome at 1500px; not yet
+  reviewed on other widths or by the owner on a real screen.
+- **Read next:** `DESIGN.md` — the visual language, the chart's anatomy, the
+  `src/` layout and how to extend the atlas. This document is about the
+  pipeline and the traps; that one is about the picture.
 
 ```bash
 cd /Users/shahar/Documents/scifi-timeline
-open timeline.html          # just works, no server, no build step
-python3 build-data.py       # validate + regenerate after editing data
+open timeline.html          # just works, no server
+python3 build-data.py       # validate data, assemble timeline.html from src/, embed
 python3 test-fixture.py && node test-viewer.js && node test-render.js timeline.html
 ```
 
@@ -25,7 +34,12 @@ python3 test-fixture.py && node test-viewer.js && node test-render.js timeline.h
 
 | Path | Role | Edit it? |
 |---|---|---|
-| `timeline.html` | The entire dashboard: markup, CSS, and viewer JS in one file. Also carries an embedded copy of the dataset so it opens over `file://`. | Yes — this is the app |
+| `timeline.html` | **Generated.** The whole dashboard in one file, assembled from `src/` with the dataset embedded so it opens over `file://`. | **Never** — edit `src/` |
+| `src/page.html` | The markup template with `<!-- @styles -->`, `<!-- @scripts -->` and the embedded-data markers. | Yes |
+| `src/styles/*.css` | `00-tokens.css` (the design tokens), then base, chart, panels. | Yes |
+| `src/viewer/*.js` | The viewer, one concern per file, concatenated in filename order into one IIFE. | Yes — this is the app |
+| `data/atlas.json` | Page copy and era presets for this atlas. Validated by the build. | Yes |
+| `DESIGN.md` | Design language, chart anatomy, extension guide. | When the design changes |
 | `data/parts/*.json` | The editable dataset, one file per archetype. | Yes — this is the data |
 | `data/parts/worlds/*.json` | World dossiers, one file per research pass. | Yes |
 | `data/groups.json` | Archetype display order. | Yes |
@@ -38,8 +52,9 @@ python3 test-fixture.py && node test-viewer.js && node test-render.js timeline.h
 | `README.md` | User-facing orientation. | When behaviour changes |
 
 `timeline.html` and `data/timeline-data.json` are **generated** and committed on
-purpose: a fresh clone opens with zero setup. If you edit `data/parts/`, you must
-re-run `python3 build-data.py` or the page will not change.
+purpose: a fresh clone opens with zero setup. If you edit `data/parts/`, `src/`
+or `data/atlas.json`, you must re-run `python3 build-data.py` or the page will
+not change.
 
 ---
 
@@ -48,14 +63,20 @@ re-run `python3 build-data.py` or the page will not change.
 ```
 data/parts/*.json ──┐
 data/parts/worlds/*.json ──┤
-data/groups.json ──┘        │
+data/groups.json ──┤
+data/atlas.json ──┘         │
                             ▼
                     build-data.py
-                    ├─ validate (44 hard errors, 14 warnings)
-                    ├─ aggregate → data/timeline-data.json
-                    └─ embed a compact copy into timeline.html
-                       between the <script id="embedded-data"> markers
+                    ├─ validate the parts, the dossiers and the atlas
+                    ├─ aggregate → data/timeline-data.json (+ atlas)
+                    ├─ assemble src/page.html + src/styles/*.css + src/viewer/*.js
+                    └─ embed a compact copy of the data into the result
+                       → timeline.html
 ```
+
+If `src/` is absent the build falls back to re-embedding into the existing
+`timeline.html`, so older checkouts still work; with `src/` present the output
+is rebuilt from scratch every time.
 
 The viewer boots from the embedded copy, then tries `fetch("data/timeline-data.json")`
 and replaces it if that succeeds. So `file://` works from the embedded copy and a
@@ -112,39 +133,36 @@ so keep it sharp.
 
 ---
 
-## 4. Viewer architecture (`timeline.html`)
+## 4. Viewer architecture (`src/viewer/`)
 
-One IIFE, no framework, no build step for the JS. Roughly:
+One IIFE assembled from thirteen files in filename order; `00-boot.js` opens it,
+`99-go.js` closes it, and `boot()` **must stay in the last file**. The full
+module table and the SVG layer order are in `DESIGN.md` section 4. The short
+version:
 
-| Area | Functions | Notes |
+| Area | Files | Notes |
 |---|---|---|
-| Boot | `readEmbedded`, `normalize`, `boot` | `boot()` **must stay at the bottom of the IIFE** |
-| Time transform | `warp`, `anchorX`, `warpX`, `pxFor`, `yearForPx` | see §5 |
-| Selection | `matches`, `visibleLineages`, `layout` | filter/sort → ordered rows |
-| Chart | `renderChart`, `renderLane` | four SVG layers: bands, axis, lanes, today |
-| Motion | `slide`, `playConvergence` | lane tween; the signature animation |
-| Interaction | `attachInteractions`, `hoverCheck`, `showTip` | pan, zoom, hover, click |
-| Dashboard | `renderStats`, `renderConvergence`, `renderCards` | stat strip, bar panel, cards |
-| Drill-down | `openWorld`, `renderDrawer`, `drawMini` | the three-tab world drawer |
+| Boot, state, scale, format, select | `00`–`40` | `10-state.js` holds every constant; `20-scale.js` is the axis (see §5) |
+| Layout | `50-layout.js` | the tree: sides, bundles, lane rows, trunk y |
+| Chart | `60-chart.js` | trunk + axis, `renderBranch`, prehistory nodes, canvas backdrop |
+| Motion | `65-motion.js` | `growIn`, `playConvergence`, `animateLayout` |
+| Interaction | `70-interact.js` | pan, zoom, hover, click, tooltip |
+| Panels, drawer, chrome | `80`–`90` | the explorer panel (Worlds index with stats/tags/rows, the world dossier + mini chart, About), chips, eras, the camera (`zoomAt`/`fitAll`), atlas copy, `init` |
 
-`renderChart()` rebuilds the SVG wholesale on every pan/zoom. That is fine at this
-size (237 event targets) and keeps the code simple — do not optimise it without
-measuring first.
+`renderChart()` rebuilds the SVG wholesale on every pan/zoom and on every frame
+of the layout glide. Fine at this size — do not optimise without measuring.
+The SVG is viewport-sized; the scene is translated by `panY` and every vertical
+constant is scaled by `Z` (see DESIGN.md §3). The page itself does not scroll.
 
-**`window.__timeline`** is published on every render as a debug and test surface:
-`view`, `NOW`, `pxFor`, `yearForPx`, `visibleYears()`, `focusYear(year, span)`,
-`lineages`, `openWorld`. Read it **fresh each time** — `render()` republishes it, so
-a captured reference goes stale and points at an orphaned tree. This bit the test
-harness twice.
+**`window.__timeline`** is republished on every render (`view`, `NOW`, `pxFor`,
+`yearForPx`, `visibleYears()`, `focusYear()`, `layout`, `lineages`, `openWorld`,
+`playConvergence`). Read it **fresh each time**; a captured reference goes stale.
 
 ### Layer order matters
 
-`gBands → gAxis → gLanes → gNow`. Within a lane, event hit-target circles are
-appended **last** so nothing can cover them. The lane's title gutter is a
-translucent rect (`rgba(11,18,32,.82)`) specifically so the today line still reads
-through it.
-
----
+Grid → today-plane → `g.scene` (bundle bands → trunk → branches → prehistory
+nodes) → today-line → scrubber. Inside a branch group, the `data-lane` hit rect
+and the `data-ev` hit circles are appended **last** so nothing can cover them.
 
 ## 5. The time axis — read before touching numbers
 
@@ -159,20 +177,27 @@ warp(off) = sign(off) * min(log1p(|off| / WARP), 1e4)
   collapses into ~200px and the modern era renders as one illegible clump; at 110
   the axis is near-linear across the last few centuries and only bends for deep
   time. It was chosen by geometric search over the real event distribution.
-- `anchorX()` is the present day's x position, fixed at **22%** of the width. It is
-  deliberately **not** derived from the viewport: a dynamic anchor silently
-  stretched the visible range by three orders of magnitude as soon as the view left
-  our own era.
+- `ANCHOR = 0.5`: the **view centre** (`view.c`, not the present day) sits
+  mid-width, so an era preset's `from`/`to` are the true edges of the view. The
+  first build used 0.22, which made the presets' `from` values fictional (the
+  "Around now" preset claimed −700 and actually showed 1060). The anchor is
+  deliberately a **constant**: a dynamic anchor derived from the viewport
+  silently stretched the visible range by three orders of magnitude.
 - `yearForPx` and `pxFor` must remain exact inverses. If you change one, change the
   other, and the test suite has a guard that will catch you at six different views.
 - `OFF_CAP = 5e9` exists so panning can reach the ~2-billion-year-old Expanse
   events. The `warp` log cap parks anything more extreme at a finite position
   instead of flinging it off the axis.
 
-**Era presets** are built at runtime in `renderEras()`, not in the markup:
-Around now `-700..3100`, Divergence era `1890..2090`, Deep future `2300..49000`,
-Full reach `-52000..52000` (233/237 events on one screen), Ancient past `-26000..6000`.
-They are tuned against the data — if the dataset changes a lot, re-check them.
+**Era presets** live in `data/atlas.json` (with a fallback list in
+`90-chrome.js`): Around now `1830..2150`, Divergence era `1900..2100`, Next
+millennia `-1000..5000`, Full reach `-46000..50000`, Deep past `-48000..2000`.
+The axis is a symmetric log around the **centre** of `from..to`, so detail lives
+at the centre and the edges are cheap: a wide preset centred on the fork
+cluster (~2000) shows Star Wars at 5% and Foundation at 97% while keeping the
+1930s–2130s forks readable in the middle. Centring a wide view on the far
+future instead squashes every modern fork into the left edge. Re-check the
+presets whenever the dataset's fork cluster moves.
 
 ---
 
@@ -261,6 +286,20 @@ every one is easy to write again.
 8. **A stale `__timeline` reference** after re-render, in tests and in throwaway
    scripts.
 9. **`phase`/`tier` conflation** across five research passes (see §3).
+10. **Clicks on a branch did nothing in a real browser.** The svg calls
+    `setPointerCapture` on pointerdown, after which `pointerup` is retargeted to
+    the svg itself, so `ev.target` never named the branch. The headless suite
+    passed because it hands the handler a fake target. Fixed by remembering the
+    pressed element on pointerdown. If you touch the pointer handlers, test in a
+    browser, not only in Node.
+11. **The drawer's mini chart collapsed** for any world with a very early
+    prehistory event (The Expanse's 2-billion-year ring builders squashed the
+    whole branch into a pixel). It now uses two log segments joined at the fork.
+12. **The test shim only knows the element ids listed at the top of
+    `test-render.js`.** Add any new `id` the viewer reads with `getElementById`
+    to that list, or the page will throw in Node while working in a browser.
+    The shim's `innerHTML` getter also returns only what was assigned to that
+    element, not its children - assert on the element you wrote to.
 
 ---
 
@@ -291,22 +330,42 @@ Change these only on purpose.
 
 ## 9. Open threads
 
-Nothing is broken. These are the obvious next moves:
+Nothing is broken. In rough priority order:
 
-1. **No remote.** `git remote -v` is empty. Upstreaming to GitHub is the natural
+1. **Owner review of the new canvas.** The single-canvas layout, the palette
+   and the hover language landed in one day and were checked at 1500×950 only.
+   Open it at the owner's real window size, hit every era preset, zoom in and
+   out, open Worlds → a world → About, and note anything crowded or unreadable.
+   The top bar wraps to two rows below ~1400px and drops the long brand text
+   below ~1180px; judge whether that is acceptable.
+2. **The amber "contradicted" rule is questionable.** `overtaken()` flags every
+   non-publication event dated 1990–today, so the Hidden History bundle carries
+   amber rings on nearly every 1990s beat. Whether a secret history counts as
+   "contradicted by real history" is a data decision: either narrow the rule
+   (e.g. only `epoch: far-future` lineages, or an explicit `historyContradicts`
+   per event) or keep it and say so in the legend. Do not change the meaning of
+   amber without updating DESIGN.md §2.
+3. **Label collisions at high zoom.** One event label row per lane and a
+   claim-a-slot rule keep labels apart at fit zoom; when zoomed far in, labels
+   from neighbouring lanes can still touch where forks stack at the same year.
+   A second row becomes affordable once `LANE_GAP * Z` exceeds ~48px - gate it
+   on that, not on a fixed pitch.
+4. **No remote.** `git remote -v` is empty. Upstreaming to GitHub is the natural
    next step, and since the page is pure static it deploys to Pages with no server.
-2. **The old copy still exists** at `/Users/shahar/Documents/isramarket/timeline`,
-   untracked inside the isramarket repo. It is a verified-identical backup; delete
-   it when you are confident, and if you do not, add a `.gitignore` entry there so
-   it can never be committed into the app repo by accident.
-3. **The dataset is 24 worlds.** The schema and grouping are built to take more.
-   The Far-Future group has exactly 5; candidates that fit the existing archetypes
-   include Alien, Blade Runner, Neuromancer, The Culture, Babylon 5, Battlestar
-   Galactica, A Canticle for Leibowitz, Childhood's End.
-4. **No accessibility audit** beyond `prefers-reduced-motion` support. The SVG
-   lanes are mouse-and-keyboard (pan/zoom keys) but not screen-reader described.
-5. **No mobile layout.** The chart is a fixed-minimum-width SVG with drag-to-pan;
-   it is usable down to tablet width, not designed for phones.
+5. **The old copy still exists** at `/Users/shahar/Documents/isramarket/timeline`,
+   untracked inside the isramarket repo. It is **stale**, not a backup, and
+   predates the tree chart entirely. Delete it, or at least `.gitignore` it there.
+6. **The dataset is 24 worlds.** The schema, grouping, layout and panel are built
+   to take more without code changes (see DESIGN.md §5). Candidates that fit the
+   existing archetypes include Alien, Blade Runner, Neuromancer, The Culture,
+   Babylon 5, Battlestar Galactica, A Canticle for Leibowitz, Childhood's End.
+   Past ~30 worlds the fit zoom drops below the title level of detail; add a
+   collapse-by-archetype affordance before that, not a smaller pitch.
+7. **No accessibility audit** beyond `prefers-reduced-motion` support. The
+   canvas is mouse-and-keyboard (arrows pan, +/- zoom, 0 fit, Esc back) but not
+   screen-reader described; the panel's dossier text is the accessible path.
+8. **No mobile layout.** The camera works with touch (pointer events), but the
+   top bar and the 480px panel are designed for a desktop window.
 
 ---
 
@@ -318,10 +377,15 @@ built on, and there are no external services, secrets, or environment variables.
 
 If you are resuming with an agent, the useful opening instruction is:
 
-> Read HANDOFF.md, then README.md and data/SCHEMA.md. Run the three test suites to
-> confirm the baseline before changing anything.
+> Read HANDOFF.md, then DESIGN.md, README.md and data/SCHEMA.md. Run
+> `python3 build-data.py` and the three test suites to confirm the baseline
+> before changing anything. Edit `src/` and `data/`, never `timeline.html`.
+> After any visual change, open timeline.html in a real browser and walk the
+> checklist in DESIGN.md §5 before calling it done. Pick up the open threads in
+> HANDOFF.md §9 in order unless told otherwise.
 
-The two rules most worth restating to any agent: **never edit generated files by
-hand** (`data/timeline-data.json`, the embedded block in `timeline.html`), and
-**run `build-data.py` after any data edit**, because a stale embed is invisible and
-looks like a code bug.
+The three rules most worth restating to any agent: **never edit generated files
+by hand** (`timeline.html`, `data/timeline-data.json`); **run `build-data.py`
+after any edit** to `src/` or `data/`, because a stale build is invisible and
+looks like a code bug; and **look at the chart in a browser** after any visual
+change — the headless suite proves completeness, not beauty.

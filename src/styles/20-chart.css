@@ -1,0 +1,103 @@
+/* ============================================================================
+   The convergence chart. One trunk (real history), branches that peel off it,
+   a plane of light where today is. Every class here is applied by
+   src/viewer/60-chart.js; the shapes are described in DESIGN.md.
+   ========================================================================== */
+#chartbody{position:absolute;inset:0;overflow:hidden}
+#backdrop{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;display:block}
+#chart{position:absolute;inset:0;display:block;width:100%;height:100%;cursor:grab;touch-action:none;user-select:none}
+#chart.dragging{cursor:grabbing}
+
+/* axis: lives on the trunk */
+.gridline{stroke:var(--chart-grid);stroke-width:1}
+.axis-tick{stroke:var(--trunk-dim);stroke-width:1}
+.axis-label{fill:var(--ink-3);font-size:10.5px;font-family:var(--font-mono)}
+.axis-label.major{fill:var(--ink-2);font-weight:600}
+.axis-caption{fill:var(--ink-4);font-size:10px;font-family:var(--font-mono);letter-spacing:.06em}
+
+/* trunk */
+.trunk-glow{stroke:var(--trunk-glow);stroke-width:16;stroke-linecap:round;fill:none}
+.trunk-core{stroke:var(--trunk);stroke-width:2.4;stroke-linecap:round;fill:none}
+.trunk-future{stroke:var(--trunk-dim);stroke-width:1.4;stroke-dasharray:2 6;fill:none;opacity:.85}
+.trunk-label{fill:var(--ink-2);font-size:10px;font-weight:750;letter-spacing:.18em;font-family:var(--font-mono)}
+.trunk-label.faint{fill:var(--ink-4);font-weight:600}
+#chart.converging .trunk-core{stroke-width:3.4}
+#chart.converging .trunk-glow{stroke-width:26;stroke:rgba(190,208,255,.42)}
+
+/* bundles = archetypes */
+.bundle-band{fill:var(--chart-band)}
+.bundle-label{font-size:10px;font-weight:750;letter-spacing:.14em;text-transform:uppercase}
+.bundle-label .n{font-weight:500;opacity:.6}
+
+/* branches = worlds */
+.branch .halo{fill:none;stroke-width:10;opacity:.14;stroke-linecap:round;transition:opacity var(--t-fast)}
+.branch .core{fill:none;stroke-width:2.2;stroke-linecap:round}
+.branch .fork{stroke:var(--bg-2);stroke-width:1.6}
+.branch .node{stroke:var(--bg-2);stroke-width:1}
+.branch .node.minor{opacity:.55}
+.branch.hover .node.minor{opacity:.9}
+.branch .flag{fill:none;stroke:var(--flag);stroke-width:1.1;stroke-dasharray:2 2}
+.branch .cross{fill:var(--now);stroke:none}
+.branch .cap{fill:var(--bg-2);stroke-width:1.6}
+.branch .title{font-size:11.5px;font-weight:650;fill:var(--ink-1);letter-spacing:-.005em}
+.branch .title .sub{font-size:9.5px;font-weight:500;fill:var(--ink-3);font-family:var(--font-mono)}
+.branch .ev-label{font-size:10px;fill:var(--ink-2)}
+.branch .ev-label .yr{fill:var(--ink-3);font-family:var(--font-mono);font-size:9.5px}
+.branch .leader{stroke:var(--line-3);stroke-width:1;fill:none;opacity:.8}
+.branch .ghost{font-size:10px;fill:var(--ink-3);font-style:italic;font-family:var(--font-mono)}
+.branch .hit{fill:transparent;cursor:pointer}
+.branch.dim{opacity:.22}
+.branch.sel .halo{opacity:.4}
+.branch.sel .core{stroke-width:3}
+
+/* hover: light one lineage up, let the rest fall back. The .shared line paints
+   the trunk in that world's colour up to its fork - how long it rode with us. */
+.branch .shared{fill:none;stroke-width:3.4;stroke-linecap:round;opacity:0;transition:opacity var(--t-fast)}
+.branch .node,.branch .fork,.branch .cross{transform-box:fill-box;transform-origin:center;transition:transform var(--t-fast)}
+#chart.has-hover .branch:not(.hover):not(.sel){opacity:.26;transition:opacity var(--t-fast)}
+#chart.has-hover .prehist{opacity:.35}
+.branch.hover{opacity:1}
+.branch.hover .shared{opacity:.9}
+.branch.hover .halo{opacity:.5}
+.branch.hover .core{stroke-width:3.4}
+.branch.hover .node{transform:scale(1.55)}
+.branch.hover .cross{transform:scale(1.6)}
+.branch.hover .fork{animation:forkpulse 1.1s ease-in-out infinite}
+.branch.hover .title{fill:var(--ink-0)}
+.branch.hover .ev-label{fill:var(--ink-1)}
+@keyframes forkpulse{0%,100%{transform:scale(1)}50%{transform:scale(1.9)}}
+
+/* the scrubber: a year readout that follows the pointer along the trunk */
+.cursor{pointer-events:none}
+.cursor-line{stroke:var(--ink-3);stroke-width:1;stroke-dasharray:2 3}
+.cursor-pill{fill:rgba(12,10,23,.94);stroke:var(--line-3)}
+.cursor-text{fill:var(--ink-1);font-size:10.5px;font-family:var(--font-mono)}
+.cursor-text .n{fill:var(--now);font-weight:700}
+.cursor-text .m{fill:var(--ink-3)}
+.ripple{fill:none;stroke-width:1.5;transform-box:fill-box;transform-origin:center;animation:ripple .75s ease-out forwards}
+@keyframes ripple{from{transform:scale(.5);opacity:.95}to{transform:scale(3.2);opacity:0}}
+
+/* real history a world leans on, before it forks */
+.prehist .node{opacity:.5;stroke:var(--bg-2);stroke-width:1}
+
+/* the present day */
+.now-plane{pointer-events:none}
+.now-line{stroke:var(--now);stroke-width:1.5;opacity:.92}
+.now-cap{fill:var(--now);font-size:10.5px;font-weight:800;letter-spacing:.14em;font-family:var(--font-mono)}
+.now-pulse{animation:nowpulse 3.4s ease-in-out infinite}
+@keyframes nowpulse{0%,100%{opacity:.55}50%{opacity:1}}
+
+.legend{display:flex;flex-wrap:nowrap;gap:6px 18px;align-items:center;padding:7px 14px;
+  border:1px solid var(--line-1);border-radius:var(--r-2);font-size:var(--fs-1);color:var(--ink-2);
+  background:var(--panel);overflow-x:auto;scrollbar-width:none}
+.legend::-webkit-scrollbar{display:none}
+.legend .item{display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.legend .item.hint{margin-left:auto;color:var(--ink-3)}
+.legend svg{flex:none}
+.empty{padding:44px;text-align:center;color:var(--ink-3);font-size:13px}
+
+/* level of detail: the layout hides labels below a lane pitch; these soften
+   what remains as the tree gets denser */
+#chart.lod-1 .ev-label,#chart.lod-0 .ev-label{display:none}
+#chart.lod-0 .bundle-label{font-size:9px}
+#chart.lod-0 .branch .core{stroke-width:1.6}
