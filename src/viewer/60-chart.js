@@ -21,8 +21,15 @@ function clampPan(sceneH){
   else panY = clamp(panY, Hv - sceneH - 24, 24);
 }
 
-function labelBudget(span){
+/* How many event labels a lane may carry.
+   In Years mode this follows the time span: zoomed in, there is room for more.
+   In Order mode there is no span to read (x is sequence, and a stale span from
+   the other view would be a lie), so it follows the lane pitch instead. */
+function labelBudget(span, lod){
   if(showAllEvents) return 99;
+  if(lod != null){
+    return lod >= 2 ? 4 : lod === 1 ? 3 : 2;
+  }
   if(span < 30) return 8;
   if(span < 120) return 6;
   if(span < 500) return 4;
@@ -166,7 +173,8 @@ function renderChart(yOverride){
   var ty = lay.trunkY;
   buildAxis(list, left, right);
   var nx = AX.now;
-  var budget = labelBudget(view.hs * 2);
+  var budget = labelBudget(AX.mode === 'years' ? view.hs * 2 : 0,
+                           AX.mode === 'years' ? null : lay.lod);
 
   /* bundles: a faint band and a label at the outer corner */
   lay.bundles.forEach(function(b){
@@ -223,8 +231,12 @@ function renderChart(yOverride){
       var z = AX.caption;
       gGrid.appendChild(sEl("rect",
         {x:z.zoneA, y:0, width:Math.max(0, z.zoneB - z.zoneA), height:Hv}, "fork-zone"));
-      var zl = sEl("text", {x:(z.zoneA + z.zoneB) / 2, y:ty + 42, "text-anchor":"middle"},
-                   "axis-label major");
+      /* The fork zone is a thicket of branch titles top to bottom - every
+         pre-today branch curves away inside it - so the caption goes on the
+         trunk line, which is the one strip no lane can cross. It replaces
+         nothing: the "beats before today" marker sits to the right of the zone. */
+      var zl = sEl("text", {x:(z.zoneA + z.zoneB) / 2, y:ty + 4, "text-anchor":"middle"},
+                   "axis-label major zone");
       zl.textContent = z.text;
       gTrunk.appendChild(zl);
     }

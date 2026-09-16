@@ -519,6 +519,112 @@ attempt("dashboard panels populated", () => {
 
 
 
+
+/* ---- Order mode: the invariants BRIEF-order-axis.md 1.3 requires -----------
+   Order mode has no off-canvas: position is sequence, so every event is placed
+   by construction. These check the placement rules actually hold, reading them
+   from the live axis rather than re-deriving them. */
+function setModeVia(mode){
+  const b = document.querySelectorAll(".ax").find((x) => x.getAttribute("data-axis") === mode);
+  if (!b || !b.onclick) throw new Error(`no ${mode} button wired`);
+  b.onclick();
+}
+function axisEventX(id, year){
+  const t = debug();
+  const l = t.lineages.find((x) => x.id === id);
+  const e = l.events.find((x) => x.year === year);
+  return t.axis().x(l, e);
+}
+
+attempt("order mode invariants", () => {
+  setModeVia("order");
+  const t = debug();
+  if (t.axisMode() !== "order") throw new Error("order mode did not engage");
+  const AXo = t.axis();
+  if (AXo.mode !== "order") throw new Error("axis is not the order axis");
+  const nx = t.NOWX;
+  const NOW = t.NOW;
+  const lanes = t.layout.lanes;
+
+  /* every event has a target on canvas, and every target is an event */
+  const seen = new Set(svgNodes().map((n) => n.getAttribute("data-ev")).filter(Boolean));
+  const all = [];
+  t.lineages.forEach((l) => l.events.forEach((e, i) => all.push({ id: l.id, e, key: l.id + "|" + i })));
+  const missing = all.filter((x) => !seen.has(x.key));
+  check(missing.length === 0,
+    `${missing.length} event(s) have no target in order mode, e.g. ` +
+    missing.slice(0, 3).map((m) => `${m.id} ${m.e.year}`).join("; "));
+  check(seen.size === all.length,
+    `order mode drew ${seen.size} targets for ${all.length} events`);
+
+  /* forks keep their rank: earlier divergence is further left */
+  const preToday  = lanes.filter((ln) => ln.l.divergence.year <= NOW)
+                         .map((ln) => ({ y: ln.l.divergence.year, x: AXo.fork(ln.l), id: ln.l.id }))
+                         .sort((a, b) => a.y - b.y);
+  const postToday = lanes.filter((ln) => ln.l.divergence.year > NOW)
+                         .map((ln) => ({ y: ln.l.divergence.year, x: AXo.fork(ln.l), id: ln.l.id }))
+                         .sort((a, b) => a.y - b.y);
+  /* The rule is "rank order preserved", and ties are real: Contact and Buffy both
+     fork in 1997. So the property to check is not that the sorted list is
+     monotonic - equal years may be ordered by lane - but that no STRICTLY LATER
+     fork ever sits to the left of an earlier one. */
+  function noInversions(pairs, side){
+    for (const a of pairs) for (const b of pairs) {
+      if (a.y < b.y && a.x > b.x + 0.5) {
+        check(false, `${side} fork ${b.id} (${b.y}) sits left of the earlier ${a.id} (${a.y})`);
+      }
+    }
+  }
+  noInversions(preToday.map((p) => ({ id: p.id, y: p.y, x: p.x })), "pre-today");
+  noInversions(postToday.map((p) => ({ id: p.id, y: p.y, x: p.x })), "post-today");
+  preToday.forEach((p) => check(p.x < nx, `pre-today fork ${p.id} sits at ${Math.round(p.x)}, not left of today`));
+  postToday.forEach((p) => check(p.x > nx, `post-today fork ${p.id} sits at ${Math.round(p.x)}, not right of today`));
+
+  /* beats advance along the branch, and stay on their side of today */
+  /* A year appears at most once per lineage (schema rule 5), so beats should
+     strictly advance. Equality is tolerated rather than failed: beats are placed
+     per side of today, and a world whose only beats sit before today can end up
+     with its last beat and its branch end at the same x. */
+  let backwards = 0, wrongSide = 0;
+  lanes.forEach((ln) => {
+    const l = ln.l;
+    const on = l.events.filter((e) => e.year >= l.divergence.year);
+    let prev = -Infinity;
+    on.forEach((e) => {
+      const x = AXo.x(l, e);
+      if (x < prev) backwards++;
+      prev = x;
+      if (e.year <= NOW && x > nx + 0.5) wrongSide++;
+      if (e.year >  NOW && x < nx - 0.5) wrongSide++;
+    });
+  });
+  check(backwards === 0, `${backwards} beat(s) do not advance along their branch in order mode`);
+  check(wrongSide === 0, `${wrongSide} beat(s) are on the wrong side of today in order mode`);
+
+  /* today is singular */
+  const caps = svgNodes().filter((n) => n.tagName === "TEXT" && /^TODAY \d{4}/.test(n.textContent));
+  check(caps.length === 1, `expected exactly one TODAY cap, found ${caps.length}`);
+  const cores = svgNodes().filter((n) => n.classList && n.classList.contains("trunk-core"));
+  check(cores.length === 1, `expected exactly one trunk core, found ${cores.length}`);
+
+  soft(`order mode: ${lanes.length} lanes, ${seen.size}/${all.length} events on canvas, ` +
+       `${preToday.length} forks before today, ${postToday.length} after`);
+});
+
+/* switching views must not lose lanes */
+attempt("axis switch round-trip", () => {
+  setModeVia("order");
+  const before = lanesRendered();
+  setModeVia("years");
+  const mid = lanesRendered();
+  setModeVia("order");
+  const after = lanesRendered();
+  check(mid === before, `Years dropped lanes: ${before} -> ${mid}`);
+  check(after === before, `returning to Order dropped lanes: ${before} -> ${after}`);
+  soft(`axis switch: ${before} lanes preserved through Order -> Years -> Order`);
+  if (debug().axisMode() !== "order") throw new Error("did not return to Order");
+});
+
 /* ---- art plates: whatever the build shipped must actually reach the DOM ---- */
 attempt("art plates", () => {
   const art = payload.art || {};
@@ -568,10 +674,18 @@ attempt("art plates", () => {
 attempt("news", () => {
   const items = payload.news || [];
   if (!items.length) { soft("news: none in this payload, skipped"); return; }
+  /* The band is a Years-mode affordance: in Order the today column already says
+     what has happened, and the right of the chart is where the post-today forks
+     live. So it is asserted in Years, and its absence in Order is asserted too. */
+  const inOrder = svgNodes().filter((n) => String(n.getAttribute("class") || "").indexOf("news-row") >= 0);
+  check(inOrder.length === 0,
+    `order mode drew ${inOrder.length} news band rows; the band is Years-only`);
+  setModeVia("years");
   const band = svgNodes().filter((n) => String(n.getAttribute("class") || "").indexOf("news-row") >= 0);
   if (band.length < Math.min(items.length, 3)) {
-    throw new Error(`news band drew ${band.length} rows for ${items.length} items`);
+    throw new Error(`news band drew ${band.length} rows for ${items.length} items in Years mode`);
   }
+  setModeVia("order");
   store["btn-news"].onclick();
   const listHtml = store["news-list"].innerHTML;
   const list = plainText(listHtml);

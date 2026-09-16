@@ -54,6 +54,54 @@ each lane. It read as twenty-four project schedules. Do not go back to that:
 if a change makes the trunk less singular or the forks less visible, it is
 moving the wrong way.
 
+### Two axes, and why there are two
+
+The same tree, drawn twice, because the calendar and the sequence answer
+different questions and neither answer is complete on its own.
+
+**Order is the default.** Position is sequence, not date. Forks keep their
+*order* and spread across a **fork zone**; each world's beats spread evenly
+along its own branch; today is a fixed column at 58% of the width. Nothing is
+off-canvas, because there is no window to be outside of.
+
+**Years is the evidence.** The symmetric-log calendar, unchanged. Honest and
+complete, but the whole dataset occupies a fraction of one percent of its
+x-range: forks squeeze into a few hundred pixels while +/-48,000 years sits
+empty. Every legibility fix for three rounds - label gating, ghost markers,
+zoom anchoring, fit-everything - was compensation for that.
+
+> The years are the evidence, the order is the story.
+
+Placement rules, all in `55-order.js` behind one `AX` accessor. The renderer
+never calls `pxFor`; it asks `AX.fork`, `AX.x`, `AX.end`, and does not know
+which axis answered.
+
+| | Order | Years |
+|---|---|---|
+| fork x | rank within the fork zone, earliest leftmost | `pxFor(divergence.year)` |
+| forks after today | first slots right of today, in rank order | same as any other year |
+| beat x | evenly spaced along the branch, by side of today | `pxFor(event.year)` |
+| prehistory | spread on the trunk in its own order | `pxFor(event.year)` |
+| off-canvas | never | genuinely possible |
+| today | a fixed column | wherever the year falls |
+| label density | follows lane pitch | follows the time span |
+
+**Prehistory is the clearest win.** On the calendar, a two-billion-year-old
+artefact and a 2026 event are 180 pixels apart - a false proximity. In Order
+they are each one dot, in their own order, and the artefact is exactly as
+important as anything else.
+
+**What follows from the axis.** In Order, horizontal pan, shift-scroll,
+double-click-to-year and the era presets do nothing, because x is not a
+quantity. Those controls are **disabled, not hidden**: a control that vanishes
+reads as a bug, a greyed one explains itself. Wheel still changes lane pitch.
+
+Two invariants the tests hold, and one they deliberately do not:
+- every event has a target on canvas, because there is no off-screen;
+- no strictly later fork ever sits left of an earlier one;
+- **ties are legitimate** - Contact and Buffy both fork in 1997 - so equal years
+  may share an x, and the check is for inversions rather than monotonicity.
+
 ### One canvas, two ways to read
 
 The chart is the page. It fills the viewport under a two-row top bar and above

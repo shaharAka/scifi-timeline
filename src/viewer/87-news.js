@@ -79,6 +79,12 @@ function fmtNewsDate(iso){
 function renderNewsBand(parent, nx, top, height){
   var items = newsItems();
   if(!items.length) return;
+  /* In Order mode the whole point of the axis is that today is a column and the
+     beats that have happened sit left of it - the band would be restating the
+     picture on top of it, and the right of the chart is where the post-today
+     forks live, so there is nowhere to put it that does not cover them. The
+     panel keeps every item. */
+  if(AX && AX.mode === "order") return;
 
   var w = 250;
   var x = W - w - 14;

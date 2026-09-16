@@ -140,18 +140,24 @@ function tweenTo(c, hs, z, ms){
   })(t0);
 }
 
+/* Fit the tree. Both modes want the same vertical framing - the whole tree in
+   the viewport at the smallest lane pitch that holds it - and only Years has a
+   time span to set. In Order mode x is sequence and always fills the width, so
+   touching view.c/hs there would mean nothing. */
 function fitAll(){
-  var h = homeEra();
-  view.c = (h.from + h.to) / 2;
-  view.hs = clampSpan((h.to - h.from) / 2);
   var lay = layout(visibleLineages());
   Z = clamp((Hv - 12) / Math.max(1, lay.height1), Z_MIN, 1.15);
   panY = 0;
+  if(axisMode === "years"){
+    var h = homeEra();
+    view.c = (h.from + h.to) / 2;
+    view.hs = clampSpan((h.to - h.from) / 2);
+    var host = document.getElementById("eras");
+    if(host) Array.prototype.forEach.call(host.querySelectorAll(".era"), function(x, i){
+      x.classList.toggle("on", eras()[i] === h);
+    });
+  }
   renderChart();
-  var host = document.getElementById("eras");
-  if(host) Array.prototype.forEach.call(host.querySelectorAll(".era"), function(x, i){
-    x.classList.toggle("on", eras()[i] === h);
-  });
 }
 
 /* --- the panel --------------------------------------------------------------- */
@@ -230,8 +236,8 @@ function setAxis(mode, persist){
      only the home era at 1958-2042 hides almost every fork, which looks like
      the switch broke the chart. Order always fills the width and only needs to
      fit vertically. */
-  if(axisMode === "years") fitEverything();
-  else fitAll();
+  if(axisMode === "years") fitEverything();   /* the whole calendar, all forks visible */
+  else fitAll();                              /* vertical fit; x fills the width */
 }
 
 function renderAxisToggle(){

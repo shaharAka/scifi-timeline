@@ -121,3 +121,7 @@
 
 /* the fork zone: a faint band marking where worlds stop sharing our history */
 .fork-zone{fill:var(--chart-band)}
+
+/* the fork-zone caption sits on the trunk line, so it needs a ground of its
+   own to stay readable against the trunk's own glow */
+.axis-label.zone{paint-order:stroke;stroke:var(--surface);stroke-width:3.5px;stroke-linejoin:round}

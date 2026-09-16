@@ -372,13 +372,17 @@ Change these only on purpose.
 
 Nothing is broken. In rough priority order:
 
-1. **The Order axis - see `BRIEF-order-axis.md`.** The owner's direction after
-   the legibility pass: the picture should be about how things are *ordered*,
-   not *when* they happen; convergence happens where different worlds pass
-   through the same kind of moment. The brief specifies three views in build
-   order - Order (no data change, do first), Moments (needs a `stage` on every
-   event), and an optional likeness sort - and keeps Years as the evidence
-   view. Start there.
+1. **Order axis, phase 1 - LANDED, phase 2 next.** The picture is now about
+   sequence rather than date: Order is the default view, Years is the evidence
+   beside it as a toggle, and both draw through one `AX` accessor in
+   `55-order.js` so `renderBranch`/`renderPrehistory` never call `pxFor`.
+   `DESIGN.md` §1 has the placement rules and the two-axis table.
+   **What remains is phase 2, the Moments view**, which needs a `stage` on every
+   event - twelve categories, chosen from the event's own text. That is a
+   research pass, not clerical tagging: the categories overlap
+   (`collapse`/`war`/`aftermath`, `origins`/`fork`) and forcing one per event is
+   an interpretive commitment. Phase 3 (ordering worlds by likeness) depends on
+   it. See `BRIEF-order-axis.md` §2.
 2. **Owner review, round two - done, re-check.** The halves of the canvas now
    carry meaning (above = ahead of us, below = behind and beside us) and are
    labelled on the left edge; bundles are tinted and barred in their colour;
