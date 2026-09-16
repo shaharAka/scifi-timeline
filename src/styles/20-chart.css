@@ -154,9 +154,14 @@
 .main-line-glow{fill:none;stroke:var(--trunk-glow);stroke-width:14;stroke-linecap:round}
 .main-line{fill:none;stroke:var(--trunk);stroke-width:3.2;stroke-linecap:round}
 .main-line-label{font-size:10px;font-weight:800;letter-spacing:.16em;fill:var(--trunk);font-family:var(--font-mono)}
-.strand-line{stroke-width:1.6;opacity:.75}
-.strand-end{opacity:.95}
-.strand:hover .strand-line{stroke-width:3;opacity:1}
+.strand-line{stroke-width:2.6;opacity:.9;stroke-linecap:round}
+.strand-end{opacity:1}
+/* a strand is a whole world's reach along our line, and at 1500px a 1.6px line
+   is easy to miss. Heavier by default; hovering lifts it clear of its
+   neighbours and thickens it further, so a strand can be picked out. */
+.strand:hover .strand-line{stroke-width:4.5;opacity:1}
+.strand:hover .strand-end{r:4}
+.strand{cursor:pointer}
 .graph-edge{fill:none;stroke:var(--ink-4);opacity:.16}
 .graph-edge.shared{stroke:var(--ink-2);opacity:.6}
 .graph-edge.future{stroke-dasharray:6 5}

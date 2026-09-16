@@ -751,8 +751,45 @@ attempt("moments graph invariants", () => {
 
   const zone = svgNodes().filter((n) => n.classList && n.classList.contains("zone"));
   check(zone.length === 0, `${zone.length} fork-zone caption(s) drawn in the graph`);
+
+  /* A road's name must not sit on a circle: a label on a node reads as that
+     node's name. The placement search avoided only other labels at first, so
+     several landed on circles. */
+  const circleGeom = circles.map((g) => {
+    const c = (g.children || []).find((x) => x.tagName === "CIRCLE");
+    return c ? { x: parseFloat(c.getAttribute("cx")), y: parseFloat(c.getAttribute("cy")),
+                 r: parseFloat(c.getAttribute("r")) } : null;
+  }).filter(Boolean);
+  const roadLabels = svgNodes().filter((n) => n.classList
+    && n.classList.contains("graph-edge-label"));
+  let onCircle = 0;
+  roadLabels.forEach((l) => {
+    const lx = parseFloat(l.getAttribute("x")), ly = parseFloat(l.getAttribute("y"));
+    const hw = (String(l.textContent).length * 5.2) / 2;
+    circleGeom.forEach((c) => {
+      const nx = Math.max(lx - hw, Math.min(c.x, lx + hw));
+      const dx = c.x - nx, dy = c.y - ly;
+      if (dx * dx + dy * dy < c.r * c.r) onCircle++;
+    });
+  });
+  check(onCircle === 0, `${onCircle} road label(s) sit on a circle`);
+
+  /* and road names must not land on each other */
+  let labelClash = 0;
+  roadLabels.forEach((a, i) => {
+    const ax = parseFloat(a.getAttribute("x")), ay = parseFloat(a.getAttribute("y"));
+    const aw = String(a.textContent).length * 5.2;
+    roadLabels.slice(i + 1).forEach((b) => {
+      const bx = parseFloat(b.getAttribute("x")), by = parseFloat(b.getAttribute("y"));
+      const bw = String(b.textContent).length * 5.2;
+      if (Math.abs(ay - by) < 11 && Math.abs(ax - bx) < (aw + bw) / 2) labelClash++;
+    });
+  });
+  check(labelClash === 0, `${labelClash} pair(s) of road labels overlap`);
+
   soft(`moments graph: ${G.main.length} kinds on our line, ${G.nodes.length - G.main.length} only in fiction, ` +
-       `${G.edges.length} roads, ${G.sharedEdges} shared, ${G.strands.length} strands`);
+       `${G.edges.length} roads, ${G.sharedEdges} shared, ${G.strands.length} strands, ` +
+       `${roadLabels.length} roads named`);
 });
 
 /* ---- news -> futures: the reason the view exists --------------------------- */

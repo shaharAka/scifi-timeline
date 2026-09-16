@@ -236,15 +236,31 @@ function drawMomentGraph(host, list, left, right){
     gEdges.appendChild(p);
     if(e.n >= 2){
       var text = G.labelFor(e), w = text.length * 5.2 + 14, geom = edgeGeom(A, B, bow), spot = null;
-      for(var attempt = 0; attempt < 12 && !spot; attempt++){
-        var tt = 0.5 + ((attempt % 2 ? 1 : -1) * Math.ceil(attempt / 2) * 0.09);
-        if(tt < 0.16 || tt > 0.84) continue;
-        var q = quadAt(geom, tt), off = -9 - Math.floor(attempt / 4) * 5, clash = false;
+      /* The labels must clear the CIRCLES as well as each other. They only
+         avoided one another before, so several landed on top of a circle - and
+         a name sitting on a node reads as that node's name. */
+      for(var attempt = 0; attempt < 64 && !spot; attempt++){
+        var tt = 0.5 + ((attempt % 2 ? 1 : -1) * Math.ceil(attempt / 2) * 0.07);
+        if(tt < 0.10 || tt > 0.90) continue;
+        var q = quadAt(geom, tt);
+        /* alternate above and below the arc, stepping further out each pass */
+        var off = (attempt % 2 ? -1 : 1) * (10 + Math.floor(attempt / 8) * 6);
+        var ly = q.y + off, clash = false;
         for(var k = 0; k < edgeLabelSpots.length; k++){
           var o = edgeLabelSpots[k];
-          if(Math.abs(o.y - (q.y + off)) < 11 && Math.abs(o.x - q.x) < (o.w + w) / 2){ clash = true; break; }
+          if(Math.abs(o.y - ly) < 11 && Math.abs(o.x - q.x) < (o.w + w) / 2){ clash = true; break; }
         }
-        if(!clash) spot = { x:q.x, y:q.y + off, w:w };
+        if(!clash){
+          for(var m = 0; m < G.nodes.length; m++){
+            var nd = G.nodes[m];
+            var nr = MOMENT_R + nd.worlds.size * 0.75;
+            /* a label is a wide box: test its span against the circle, not its centre */
+            var halfW = w / 2, cx = Math.max(q.x - halfW, Math.min(nd.x, q.x + halfW));
+            var dx = nd.x - cx, dy = nd.y - ly;
+            if(dx * dx + dy * dy < (nr + 9) * (nr + 9)){ clash = true; break; }
+          }
+        }
+        if(!clash) spot = { x:q.x, y:ly, w:w };
       }
       if(spot){
         edgeLabelSpots.push(spot);

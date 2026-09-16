@@ -162,8 +162,31 @@ function fitAll(){
 
 /* --- the panel --------------------------------------------------------------- */
 
+/* The panel holds two different things: the news list, and the reading of one
+   moment forward by situation. Its heading has to say which, and the heading in
+   the template describes only the first - a situation panel under "On today's
+   timeline" is describing something it is not. */
+function updatePanelCopy(){
+  var head = document.getElementById("news-head");
+  var hint = document.getElementById("news-hint");
+  if(!head) return;
+  var host = document.getElementById("news-list");
+  var situ = host && host.querySelector(".fx-head");
+  if(situ){
+    var t = situ.querySelector("h3");
+    head.textContent = t ? t.textContent : "This moment";
+    if(hint) hint.textContent = "The nearest situations in other worlds by "
+      + "signature, with outcomes held out, and what followed each there.";
+  } else {
+    head.textContent = "On today's timeline";
+    if(hint) hint.textContent = "Real events that touch these worlds. Each one is "
+      + "marked on the today line, where a fiction's future and our present meet.";
+  }
+}
+
 function setPanel(mode){
   panelMode = mode || "";
+  if(panelMode === "news") updatePanelCopy();
   var d = document.getElementById("drawer");
   d.setAttribute("data-mode", panelMode);
   d.classList.toggle("open", !!panelMode);
