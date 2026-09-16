@@ -301,3 +301,53 @@ function graphMode(){
   return typeof AX !== "undefined" && AX && AX.mode === "moments"
       && AX.columns && AX.columns.length > 0;
 }
+
+/* ============================================================================
+   Real history on the trunk.
+
+   The real beats carry the same schema as the fictions - binned and faceted -
+   so they sit on the same axis as everything else and answer the same question
+   when clicked. Position comes from the active axis, so they land correctly in
+   Order, in Moments and in Years without a second set of rules.
+   ========================================================================== */
+function drawRealBeats(host, list, left, right){
+  if(!REAL || !REAL.events || !REAL.events.length) return;
+  var g = sEl("g", null, "real-beats");
+  var shown = 0;
+  REAL.events.forEach(function(e){
+    var x = AX.realX ? AX.realX(e) : null;
+    if(x == null || isNaN(x) || x < left - 4 || x > right + 4) return;
+    shown++;
+    /* A fixed strip at the head of the drawing area. In graph mode there is no
+       trunk line to sit on, and in the line views the trunk is where the lanes
+       converge - a hundred year ticks - so real history gets its own row. */
+    var y = graphMode() ? 26 : 0;
+    var hit = sEl("circle", {cx:x, cy:y, r:11, fill:"transparent",
+                             "pointer-events":"all"}, "real-hit");
+    hit.setAttribute("data-real", e.id);
+    hit.style.cursor = "pointer";
+    var t = sEl("title");
+    t.textContent = fmtYear(e.year) + " \u00b7 " + e.title
+      + "\n" + (e.facets ? e.facets.change : "")
+      + "\nclick to read what followed in worlds in this situation";
+    hit.appendChild(t);
+    g.appendChild(hit);
+    g.appendChild(paintC(sEl("circle", {cx:x, cy:y, r:3.1}, "real-dot"), "fill", "#ffffff"));
+  });
+  if(shown){
+    var lab = sEl("text", {x:left + 4, y:-13}, "real-label");
+    lab.textContent = "REAL HISTORY · " + shown + " beats";
+    g.appendChild(lab);
+  }
+  host.appendChild(g);
+  /* the clicks are wired here because the group is rebuilt on every render */
+  Array.prototype.forEach.call(g.querySelectorAll("[data-real]"), function(el){
+    el.onclick = function(ev){
+      if(ev && ev.stopPropagation) ev.stopPropagation();
+      var id = el.getAttribute("data-real");
+      var e = null;
+      REAL.events.forEach(function(x){ if(x.id === id) e = x; });
+      if(e) matchMoment(e);
+    };
+  });
+}

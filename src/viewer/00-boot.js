@@ -46,6 +46,8 @@ function boot(d){
     }
     ATLAS = DATA.atlas;
     BINS = DATA.bins || [];
+    /* our own history, in the same schema as the fictions */
+    REAL = DATA.real || null;
     /* the atlas may name its default axis; Order is ours */
     if(ATLAS && (ATLAS.defaultAxis === "years" || ATLAS.defaultAxis === "order"
                  || ATLAS.defaultAxis === "moments")){

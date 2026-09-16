@@ -786,6 +786,103 @@ attempt("news to futures", () => {
        `${withNext} with beats after the match`);
 });
 
+
+/* ---- real history on the trunk, and matching by situation ------------------
+   Real history now carries the same schema as the fictions, so its beats sit on
+   the same axis and answer the same question when clicked. The three views
+   place them by different rules, so this checks each one draws them all. */
+attempt("real history on every axis", () => {
+  const t = debug();
+  const real = t.real();
+  if (!real || !real.events || !real.events.length) {
+    soft("real history: none in this payload, skipped"); return;
+  }
+  for (const mode of ["moments", "order", "years"]) {
+    setModeVia(mode);
+    const hits = svgNodes().filter((n) => n.getAttribute("data-real") !== null);
+    check(hits.length === real.events.length,
+      `${mode}: ${hits.length} real beats drawn for ${real.events.length}`);
+    const xs = hits.map((n) => parseFloat(n.getAttribute("cx")));
+    check(xs.every((v) => !isNaN(v)), `${mode}: a real beat has no x`);
+    /* Beats must stay in year order and must not collapse into a pile. They
+       are NOT required to have distinct pixels: in Years the whole of real
+       history compresses into about a hundred pixels at the default zoom, so
+       adjacent years legitimately share one, and two beats in the same year
+       always do (February and October 1917). Demanding unique x would be
+       demanding that the calendar not be a calendar. */
+    const ordered = hits
+      .map((n, i) => ({ x: xs[i], e: real.events.find((y) => y.id === n.getAttribute("data-real")) }))
+      .filter((o) => o.e)
+      .sort((a, b) => a.e.year - b.e.year);
+    for (let i = 1; i < ordered.length; i++) {
+      check(ordered[i].x >= ordered[i - 1].x + (mode === "years" ? -0.51 : -0.01),
+        `${mode}: ${ordered[i].e.year} is drawn left of ${ordered[i - 1].e.year}`);
+    }
+    check(new Set(xs.map((v) => Math.round(v))).size >= Math.min(20, real.events.length),
+      `${mode}: ${real.events.length} real beats collapsed into ` +
+      `${new Set(xs.map((v) => Math.round(v))).size} distinct pixels`);
+  }
+  setModeVia("moments");
+  soft(`real history: ${real.events.length} beats on all three axes`);
+});
+
+attempt("matching by situation", () => {
+  const t = debug();
+  const moments = t.facetMoments();
+  const real = moments.filter((m) => m.real);
+  if (!real.length) { soft("situation match: no faceted real beats, skipped"); return; }
+
+  /* every faceted moment has a signature, and outcomes are not in the input */
+  check(moments.length > real.length,
+    `only ${moments.length} moments carry a signature; expected the fictions too`);
+  moments.forEach((m) => check(!!m.e.facets, `${m.e.id} has no facets`));
+
+  /* a real beat finds neighbours in other worlds, ranked */
+  const target = real.find((m) => /enabling act/i.test(m.e.title)) || real[0];
+  const ns = t.facetNeighbours(target, moments, 6);
+  check(ns.length > 0, `no neighbours found for ${target.e.title}`);
+  check(ns.every((n) => n.m.world !== target.world),
+    "a neighbour came from the same world as the query");
+  let descending = true;
+  for (let i = 1; i < ns.length; i++) if (ns[i].score > ns[i - 1].score + 1e-9) descending = false;
+  check(descending, "neighbours are not ranked by similarity");
+  ns.forEach((n) => {
+    check(n.score >= 0 && n.score <= 1, `similarity ${n.score} is outside 0..1`);
+  });
+
+  /* outcomes are held out: two moments identical but for their outcomes are
+     not made more similar by sharing them */
+  const a = { mechanism:"law", actor:"individual", position:"inside", domain:"political",
+              scope:"national", direction:{power:1,openness:-1,capability:0,population:0},
+              preconditions:["x"], outcomes:["one"] };
+  const b = Object.assign({}, a, { outcomes:["one"] });
+  const c = Object.assign({}, a, { outcomes:["a","b","c","d","e"] });
+  check(Math.abs(t.facetSim(a, b) - t.facetSim(a, c)) < 1e-9,
+    "outcomes changed the similarity; they are supposed to be held out");
+
+  /* reading forward uses the neighbour's own order, not the canvas order */
+  ns.slice(0, 3).forEach((n) => {
+    const fwd = t.facetForward(n.m, 3);
+    check(fwd.length <= 3, `forward read returned ${fwd.length} beats`);
+    fwd.forEach((x) => check(x.year >= n.m.e.year,
+      `${n.m.worldTitle}: a forward beat precedes the neighbour`));
+  });
+
+  /* and clicking a real beat runs the same operation as choosing a news item */
+  const hit = svgNodes().find((n) => n.getAttribute("data-real") === target.e.id);
+  check(!!hit, `${target.e.title} has no clickable target on the canvas`);
+  hit.onclick({ stopPropagation() {} });
+  const host = store["news-list"];
+  const cards = host ? host.querySelectorAll(".fx-card") : [];
+  check(cards.length > 0, "clicking a real beat opened no futures");
+  check(/Nearest situations/.test(String(host.innerHTML)),
+    "clicking a real beat did not report the situation match");
+  soft(`situation match: "${target.e.title}" -> ${ns.length} neighbours, ` +
+       `closest ${ns[0].score.toFixed(2)} in ${ns[0].m.worldTitle}`);
+  debug().clearMatch();
+  setModeVia("moments");
+});
+
 /* ---- art plates: whatever the build shipped must actually reach the DOM ---- */
 attempt("art plates", () => {
   const art = payload.art || {};

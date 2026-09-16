@@ -168,6 +168,9 @@ function axisMoments(list, left, right){
       if(!seq.length) return null;
       return colOf[seq[0].bin] || null;
     },
+    /* Moments has no date axis, so a real beat is placed by its own order along
+       the trunk - the one reading that means the same thing here as in Order */
+    realX: function(e){ return left + realBeatT(e) * (right - left); },
     offCanvas: false
   };
 }

@@ -448,6 +448,12 @@ function renderChart(yOverride){
     });
   }
 
+  /* Real history's own beats, drawn on the trunk in every view. They are not
+     decoration: a world's divergence is a divergence from THESE, and clicking
+     one asks the question the atlas exists for - which fictions are in a
+     comparable situation, and what followed there. */
+  drawRealBeats(gTrunk, list, left, right);
+
   /* the scrubber lives in its own group and is moved in place, never re-rendered */
   var tyv = clamp(ty + panY, 30, Hv - 60);
   cursorEls = {
@@ -485,6 +491,9 @@ function renderChart(yOverride){
     renderFutures:function(item, fx){ return renderFutures(item, fx); },
     litBin:function(){ return litBin; },
     litWorlds:function(){ return litWorlds; },
+    real:function(){ return REAL; },
+    facetMoments:facetMoments, facetNeighbours:facetNeighbours,
+    facetForward:facetForward, facetSim:facetSim,
     visibleYears:function(){ return { from:yearForPx(LANE_R), to:yearForPx(W-12) }; },
     focusYear:function(year, halfSpan){
       view.c = year;

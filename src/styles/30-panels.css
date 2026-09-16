@@ -162,3 +162,15 @@ table.ev .iu{font-size:11px;color:var(--ink-3);display:block;margin-top:2px}
 .fx-next li{margin:2px 0}
 .fx-yr{color:var(--ink-4);font-variant-numeric:tabular-nums}
 .fx-end{font-size:var(--fs-0);color:var(--ink-4);font-style:italic}
+
+/* the situation: what the moment is, and what the match is computed over */
+.fx-change{margin:0 0 8px;font-size:var(--fs-2);color:var(--ink-0);font-weight:600;line-height:1.3}
+.fx-facets{display:grid;grid-template-columns:auto 1fr;gap:1px 8px;margin:0 0 12px;
+  font-size:var(--fs-0);color:var(--ink-3)}
+.fx-facets dt{color:var(--ink-4);text-transform:uppercase;letter-spacing:.04em}
+.fx-facets dd{margin:0;color:var(--ink-2)}
+.fx-why{margin:2px 0 6px;font-size:var(--fs-0);color:var(--ink-3);font-style:italic}
+/* real history on the trunk */
+.real-dot{stroke:var(--trunk);stroke-width:1.1}
+.real-label{font-size:var(--fs-0);font-weight:700;fill:var(--trunk);letter-spacing:.04em}
+.real-hit:hover + .real-dot{r:5}

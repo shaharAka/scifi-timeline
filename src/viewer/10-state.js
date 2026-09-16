@@ -40,6 +40,8 @@ var sel = null, activeTab = "world";
    there. Empty means no match is active. */
 var litBin = null;
 var litWorlds = null;
+/* the beat being read forward by situation, fiction or real */
+var litMoment = null;
 var q = "", tagFilter = null, showAllEvents = false;
 var groupOn = {};
 var anim = { raf:0, from:null, dur:480 };
@@ -56,3 +58,7 @@ var REDUCED = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion
 
 /* The bin vocabulary, straight from the payload. */
 var BINS = [];
+
+/* Real history's own chronology, binned and faceted like any world. It is the
+   trunk: the beats everything else is a divergence from. */
+var REAL = null;

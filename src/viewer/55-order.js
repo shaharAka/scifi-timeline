@@ -43,9 +43,23 @@ function axisYears(list, left, right){
       (l.events || []).forEach(function(e){ if(e.year > last) last = e.year; });
       return pxFor(last);
     },
+    /* real beats ride the same calendar as everything else */
+    realX: function(e){ return pxFor(e.year); },
     offCanvas: false,
     caption: null
   };
+}
+
+
+/* Where a real beat sits on the trunk, for the axes whose x is a sequence
+   rather than a date. Its position is its own rank in real history, so the
+   trunk reads as a chronology in every view and a beat is never placed by a
+   rule that view does not otherwise use. */
+function realBeatT(e){
+  var evs = (REAL && REAL.events) || [];
+  var i = -1;
+  for(var k = 0; k < evs.length; k++){ if(evs[k] === e){ i = k; break; } }
+  return (i < 0 || evs.length < 2) ? 0.5 : i / (evs.length - 1);
 }
 
 /* --- the order axis ---------------------------------------------------------- */
@@ -148,6 +162,10 @@ function axisOrder(list, left, right){
   return {
     mode: "order",
     now: nowX,
+    /* The trunk is not a lane, so real beats are not placed by any world's
+       fork rule: they spread along the full width by their own order, which is
+       the same reading the fork zone and the beats get in this view. */
+    realX: function(e){ return left + realBeatT(e) * (right - left); },
     offCanvas: false,
     caption: { zoneA: zoneA, zoneB: zoneB,
                text: "worlds leave our history, in the order they do" },
