@@ -167,6 +167,7 @@ why lineages carry an `epoch` field.
 | `src/page.html` | The page template; `build-data.py` inlines styles, scripts and data into it. |
 | `src/styles/*.css` | Design tokens first, then chrome, chart and panel styles. |
 | `src/viewer/*.js` | The viewer, one concern per file, assembled in filename order. |
+| `vendor/*.js` | Cytoscape.js and dagre (MIT), loaded by the Moments page as plain script tags. |
 | `data/atlas.json` | Everything the page *says*: title, lede, era presets, section copy, notes. |
 | `DESIGN.md` | The design language, chart anatomy and how to extend the atlas. |
 | `data/timeline-data.json` | The aggregated dataset the viewer fetches when served over HTTP. |

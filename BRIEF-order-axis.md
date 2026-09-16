@@ -200,46 +200,72 @@ law / state / inside / national / political, power up, openness down). A
 technology, an enemy - would separate them. Add it to `data/facets.json` and
 to every event before adding worlds, not after.
 
-### 2.3 The picture (built 2026-09-17: the Moments page, an arc diagram anchored on us)
+### 2.3 The picture (built 2026-09-17: the Moments page, a flow of kinds anchored on us)
 
 Moments is its own page, not a mode of the tree. Nothing of the tree is drawn
 on it and it has its own camera and its own panel (`src/viewer/57-moments-page.js`).
+The question it answers is *what leads to what*, so it is a directed graph,
+not a line: the arc-diagram and the column versions before it were still a
+timeline in disguise and were removed.
 
-- **One line of circles, one per kind of moment.** Left of TODAY: the kinds our
-  own history has passed through, in the order we first reached them (22 of
-  33), on a solid line in the trunk colour. Right of TODAY: the kinds only
-  fiction has reached, in the order stories tend to reach them, on a dotted
-  line. Circle size and the number inside are how many worlds pass through it.
-- **Arcs above the line are roads**: a transition a fiction makes between two
-  kinds after it has forked, drawn once, heavier the more worlds take it,
-  dashed where it lies ahead of today. Pre-fork moves are not roads (the world
-  was still with us). **Arcs below the line are our own path**, in our colour.
-- **Nothing is coloured by world until asked.** Click a circle: roads not
-  touching it recede, and the panel shows the kind, its definition and example
-  headline, *Happened to us* (each real beat as a button), *What tends to
-  follow* (the next kind in each world through it, counted, with bars), and
-  every world that passes through it with the moment it had there and its next
+- **One circle per kind of moment**, sized by how many worlds pass through it.
+  Kinds our own history has passed through (22 of 33) have a heavy border in
+  the trunk colour; the kind we are in now has a double border. Kinds only
+  fiction has reached are plain.
+- **Roads are edges**: a transition a fiction makes between two kinds after it
+  has forked, drawn once per pair, weighted by how many worlds take it, dashed
+  where it lies ahead of today. Pre-fork moves are not roads (the world was
+  still with us). A road only one world takes is a whisper (7% opacity) until
+  something is chosen. **Our own path** is the dotted line in our colour.
+- **Layout is left to right by what leads to what**, ranked by dagre on the
+  shared roads and our path only. Ranking on every private road spread the map
+  over four thousand pixels; one world's detour is not the shape of the story.
+  Kinds no shared road or real step touches sit in a row underneath, at the x
+  their story position implies. There is no date and no rank of first visit
+  anywhere in the placement.
+- **Nothing is coloured by world until asked.** Tap a circle: roads not
+  touching it recede, the neighbourhood stays lit, and the panel shows the kind,
+  its definition and example headline, *Happened to us* (each real beat as a
+  button), *What leads here* and *What it leads to* (counted, with bars, naming
+  the worlds), and every world through it with its moment there and its next
   three beats. Click a world's name to light its whole road in its colour, with
-  the shared-with-us part dotted. Click a small dot above a circle (a time it
-  happened to us) for the situation match: the beat's signature, then the
-  nearest fictional moments by facets with their scores and what followed.
-- **Camera**: wheel zooms the line around the cursor (1× to 9×), drag pans, Fit
-  resets; the line uses the width beside the panel. Labels are rotated and thin
-  out with spacing; every kind keeps its name on hover.
-- Clicks are dispatched from the svg's pointerup using the pressed element, so
-  they survive the svg's pointer capture. Do not rely on `onclick` on svg
-  children in this codebase.
+  the shared-with-us part dotted. Click a real beat for the situation match: the
+  beat's signature, then the nearest fictional moments by facets with their
+  scores and what followed. Tap empty canvas to clear.
+- **Camera**: wheel zooms around the cursor, drag pans, the +/- buttons and
+  Fit work. The page opens with our path framed at a readable zoom, the right
+  edge of the map (where today sits) just inside the view; Fit shows the whole
+  map inside the part of the canvas the panel does not cover; choosing a circle
+  pans the least distance needed to keep it out from under the panel. Labels
+  hide below a readable size rather than shrink to dust.
+- **Rendering**: Cytoscape.js with the dagre layout, vendored under `vendor/`
+  and loaded by `<script src>` from `src/page.html`, so the page still works
+  over `file://` and needs no build. When the vendor scripts are absent (the
+  Node test shim) the page falls back to an SVG flow drawn by the same model
+  (`momentsLayout`, `mpRoadPath`) with the same clicks, dispatched from the
+  svg's pointerup using the pressed element so they survive pointer capture.
 
 ### 2.4 Code and tests
 
-- `56-moments.js`: `placeMoments(list, stages, left, right)` returns the same
-  shape as `placeOrder`, plus `columns:[{stage, x0, x1, worlds:Set}]`.
-- The `AX` accessor gets a third implementation. The toggle becomes
-  `Order | Moments | Years`.
-- Tests: every non-publication event has a stage and a `data-ev`; a branch's
-  node x never decreases along its beats; column counts equal the number of
-  distinct worlds with an event in that stage; hovering a column header adds
-  `.hover` to exactly those branches.
+- `57-moments-page.js`: `momentsModel()` builds `{nodes, roads, ours, paths,
+  at, order, todayIndex, lastReal}` from the bins, the real history and each
+  world's post-fork sequence; `renderMomentsCy(M)` keeps one Cytoscape instance
+  and rebuilds elements only when `mpSignature(M)` changes; `mpCyLayout`,
+  `mpCyFit`, `mpCyHome`, `mpCyReveal` are the camera; `renderMomentsPanel`
+  writes into `#moments-body` (`mpKindHtml`, `mpBeatHtml`). Selection state is
+  `MP.node / MP.world / MP.beat` and is applied as classes (`selected`, `dim`,
+  `touch`, `faded`, `world`, `on-world`).
+- `60-chart.js` branches to `renderMomentsPage` before any tree drawing;
+  `90-chrome.js` routes `zoomBy` / `fitAll` / boot to the Cytoscape camera
+  when `MP.cy` exists.
+- Tests (`test-render.js`, fallback path): node count equals kinds in use,
+  road count equals distinct post-fork transitions, our path equals consecutive
+  real kind transitions, TODAY marker present, a tap on a circle selects it and
+  opens the panel with one `.mp-card` per world and a *What it leads to*
+  section, non-touching roads fade to `0.04`, a world button lights
+  `.mp-world-road`, a beat button shows *Nearest situations*, empty canvas
+  clears, `matchNews` selects the kind. The shim loads no vendor code, so the
+  Cytoscape path is verified in a browser (see HANDOFF §6).
 
 ---
 

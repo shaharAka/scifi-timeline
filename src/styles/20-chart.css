@@ -154,15 +154,23 @@
 body.mode-moments .legend .t-only{display:none}
 body:not(.mode-moments) .legend .m-only{display:none}
 #chart.moments{cursor:grab}
+#cy{position:absolute;inset:0;display:none}
+#chartbody.cy-on #cy{display:block}
+#chartbody.cy-on #chart{display:none}
+#chartbody.cy-on #backdrop{display:none}
 .mp-region{font-size:10.5px;font-weight:750;letter-spacing:.14em;fill:var(--ink-2);font-family:var(--font-mono)}
 .mp-region.faint{fill:var(--ink-3)}
-.mp-today-line{stroke:var(--now);stroke-width:1.2;stroke-dasharray:3 5;opacity:.7}
-.mp-today{font-size:11px}
+.mp-today-ring{fill:none;stroke:var(--now);stroke-width:1.6}
+.mp-today{font-size:10.5px}
+.mp-axis{stroke:var(--line-2);stroke-width:1}
+.mp-arrowhead{fill:var(--ink-2)}
+.mp-our-road{fill:none}
+.mp-years{font-size:8.5px;fill:var(--trunk);font-family:var(--font-mono)}
 .mp-line-ours{stroke:var(--trunk);stroke-width:3;stroke-linecap:round}
 .mp-line-notyet{stroke:var(--trunk-dim);stroke-width:1.6;stroke-dasharray:2 6}
-.mp-our-road{stroke:var(--trunk);stroke-width:1.3;opacity:.5}
-.mp-road{stroke:var(--ink-4);opacity:.16}
-.mp-road.shared{stroke:var(--ink-2);opacity:.5}
+.mp-our-road{stroke:var(--trunk);stroke-width:1.6;opacity:.55;stroke-dasharray:3 3}
+.mp-road{stroke:var(--ink-4);opacity:.14}
+.mp-road.shared{stroke:var(--ink-2);opacity:.6}
 .mp-road.future{stroke-dasharray:5 4}
 .mp-world-road{fill:none;stroke-width:2.8;opacity:.95}
 .mp-world-road.shared-with-us{stroke-dasharray:2 3;opacity:.7}

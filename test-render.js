@@ -675,18 +675,17 @@ attempt("moments page invariants", () => {
   const ours = svgNodes().filter((n) => n.getAttribute("data-our-road") !== null);
   check(ours.length === M.ours.length, `${ours.length} of our own arcs drawn for ${M.ours.length}`);
 
-  /* our kinds come first, in the order we first reached them; then fiction-only */
+  /* x is where a kind tends to fall in a story; every kind is on canvas */
+  const byPos = M.nodes.slice().sort((a, b) => a.p - b.p);
+  for (let i = 1; i < byPos.length; i++) check(byPos[i].fx >= byPos[i - 1].fx - 0.01, "x does not follow story position");
+  M.nodes.forEach((n) => check(isFinite(n.x) && isFinite(n.y), `${n.id} has no position`));
   const real = t.real();
   if (real && real.events && real.events.length) {
     const firstVisit = [];
     real.events.forEach((e) => { if (e.bin && !firstVisit.includes(e.bin)) firstVisit.push(e.bin); });
-    check(M.realOrder.join(",") === firstVisit.join(","), "our kinds are not in first-visit order");
-    check(M.order.slice(0, M.realOrder.length).join(",") === M.realOrder.join(","), "our kinds do not come first on the line");
     M.fictionOnly.forEach((b) => check(!firstVisit.includes(b), `${b} is marked fiction-only but happened to us`));
-    for (let i = 1; i < M.nodes.length; i++) check(M.nodes[i].x > M.nodes[i - 1].x, "kinds are not laid left to right");
     const today = svgNodes().filter((n) => n.classList && n.classList.contains("mp-today"));
     check(today.length === 1, `${today.length} TODAY markers, expected 1`);
-    /* every binned real beat is a clickable dot at its kind */
     const hits = svgNodes().filter((n) => n.getAttribute("data-real") !== null);
     const expectN = real.events.filter((e) => e.bin).length;
     check(hits.length === expectN, `${hits.length} real-beat dots for ${expectN} binned beats`);
@@ -695,6 +694,8 @@ attempt("moments page invariants", () => {
       const node = e && M.at[e.bin];
       check(!!node && Math.abs(parseFloat(h.getAttribute("cx")) - node.x) < 40, `${e && e.year}: dot is not at its kind`);
     });
+    const arrows = svgNodes().filter((n) => n.getAttribute("marker-end") !== null);
+    check(arrows.length >= M.roads.filter((r) => r.worlds.length > 1).length, "shared roads carry no arrowheads");
   }
 
   /* roads are post-fork moves only, counted from the data */
@@ -725,7 +726,7 @@ attempt("moments page invariants", () => {
   check(furniture.length === 0, `${furniture.length} piece(s) of tree furniture drawn on the Moments page`);
   const lanes = svgNodes().filter((n) => n.getAttribute("data-lane") !== null);
   check(lanes.length === 0, `${lanes.length} lane targets drawn on the Moments page`);
-  soft(`moments: ${M.realOrder.length} kinds ours, ${M.fictionOnly.length} only fiction, ${M.roads.length} roads, ${M.ours.length} of our own arcs`);
+  soft(`moments: ${M.nodes.length} kinds (${M.realOrder.length} ours), ${M.roads.length} roads, ${M.ours.length} steps in our own path`);
 });
 
 /* ---- Moments: clicking does things, through the pointer path a browser uses ---- */
@@ -747,9 +748,9 @@ attempt("moments clicks and camera", () => {
   check(new RegExp(`${busiest.worlds} worlds? pass`).test(body), "the panel does not state how many worlds pass through");
   const cards = store["moments-body"].querySelectorAll(".mp-card");
   check(cards.length === busiest.worlds, `${cards.length} world cards for ${busiest.worlds} worlds`);
-  check(/What tends to follow/.test(body) || busiest.follow.length === 0, "the panel does not say what tends to follow");
+  check(/What it leads to/.test(body) || busiest.follow.length === 0, "the panel does not say what it leads to");
   /* roads not touching the selected kind recede */
-  const faded = svgNodes().filter((n) => n.getAttribute("data-road") !== null && n.getAttribute("opacity") === "0.05");
+  const faded = svgNodes().filter((n) => n.getAttribute("data-road") !== null && n.getAttribute("opacity") === "0.04");
   const touching = M.roads.filter((r) => r.a === busiest.id || r.b === busiest.id).length;
   check(faded.length === M.roads.length - touching, `${faded.length} roads faded, expected ${M.roads.length - touching}`);
 
@@ -784,18 +785,18 @@ attempt("moments clicks and camera", () => {
   chart.onpointerdown({ button: 0, clientX: 10, clientY: 10, pointerId: 1, target: chart });
   chart.onpointerup({ clientX: 10, clientY: 10, pointerId: 1, target: { getAttribute: () => null } });
   check(!t.momentsState().node && !t.momentsState().beat, "clicking empty sky did not clear the selection");
-  const x0 = debug().moments().nodes[1].x - debug().moments().nodes[0].x;
+  const spread = () => { const xs = debug().moments().nodes.map((k) => k.x); return Math.max(...xs) - Math.min(...xs); };
+  const x0 = spread();
   chart.onwheel({ deltaX: 0, deltaY: -400, clientX: 400, clientY: 300, preventDefault() {} });
-  const x1 = debug().moments().nodes[1].x - debug().moments().nodes[0].x;
-  check(x1 > x0 * 1.3, `wheel did not zoom the line (${x0.toFixed(1)} -> ${x1.toFixed(1)})`);
+  const x1 = spread();
+  check(x1 > x0 * 1.3, `wheel did not zoom the flow (${x0.toFixed(1)} -> ${x1.toFixed(1)})`);
   const before = debug().momentsState().tx;
   chart.onpointerdown({ button: 0, clientX: 800, clientY: 400, pointerId: 1, target: chart });
   chart.onpointermove({ clientX: 700, clientY: 400, pointerId: 1 });
   chart.onpointerup({ clientX: 700, clientY: 400, pointerId: 1, target: { getAttribute: () => null } });
   check(debug().momentsState().tx < before, "drag did not pan the line");
   store["reset"].onclick();
-  const x2 = debug().moments().nodes[1].x - debug().moments().nodes[0].x;
-  check(Math.abs(x2 - x0) < 0.5, "Fit did not reset the zoom");
+  check(Math.abs(spread() - x0) < 0.5, "Fit did not reset the zoom");
   /* a news item selects its kind here */
   const n = t.matchNews({ headline: "test", bin: busiest.id });
   check(n === busiest.worlds && t.momentsState().node === busiest.id, "a news item did not select its kind on the Moments page");

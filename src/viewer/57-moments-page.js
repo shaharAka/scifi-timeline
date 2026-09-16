@@ -1,26 +1,33 @@
 /* ============================================================================
-   The Moments page: an arc diagram anchored on us.
+   The Moments page: a flow of what leads to what.
 
-   One line of circles, one per kind of moment. Left of TODAY: the kinds our own
-   history has passed through, in the order we first reached them. Right of
-   TODAY: the kinds only fiction has reached, in the order they tend to arrive
-   in a story. Above the line, arcs are the roads fictions take between kinds
-   after they fork - drawn once each, heavier the more worlds take them, dashed
-   where they lie ahead of today. Below the line, our own path through the kinds,
-   in our colour.
+   One circle per kind of moment. The roads between kinds are the drawing: a
+   road is a move some fiction makes from one kind to the next after it has
+   left our history, drawn once, heavier the more worlds make it, with an arrow
+   where several do, dashed where it lies ahead of today. A road only one world
+   takes is a whisper until a circle or a world is chosen. Our own history is
+   one path through the same kinds, dotted, in our colour, with the kind we are
+   in now double-ringed.
+
+   The circles are placed left to right by what leads to what - dagre ranks the
+   shared roads and our own path - and never by a date or by the order we first
+   reached them. Kinds no shared road touches sit in a row underneath.
 
    Nothing is coloured by world until you ask for one. Click a circle and the
    panel shows every world that passes through that kind of moment, the moment
-   each one had there, what followed, and what tends to follow across all of
-   them. Click one of the small dots under a circle - a time it happened to us -
-   and the panel matches that real beat by situation to the nearest fictional
-   moments and reads them forward. Click a world's name to light its whole road.
+   each one had there, what followed, what leads here and what it leads to.
+   Click a time it happened to us and the panel matches that real beat by
+   situation to the nearest fictional moments and reads them forward. Click a
+   world's name to light its whole road.
 
-   The page has its own camera: wheel zooms the line around the cursor, drag
-   pans it, Fit resets. Labels appear as the spacing allows.
+   Rendering is Cytoscape.js + dagre from vendor/ when present, with an SVG
+   flow drawn from the same model when it is not (the test shim). The page has
+   its own camera: wheel zooms around the cursor, drag pans, Fit shows the whole
+   map beside the panel, and it opens with our own path framed at a readable
+   zoom.
    ========================================================================== */
 
-var MP = { s:1, tx:0, node:null, world:null, beat:null, model:null, geom:null, width:900 };
+var MP = { s:1, tx:0, ty:0, node:null, world:null, beat:null, model:null, geom:null, width:900 };
 var MP_PAD = 72;
 var MP_MAX_S = 9;
 
@@ -98,30 +105,25 @@ function momentsModel(){
     var a2 = realEv[j - 1].bin, b2 = realEv[j].bin;
     if(a2 && b2 && a2 !== b2 && at[a2] && at[b2]) ours.push({ a:a2, b:b2, from:realEv[j - 1], to:realEv[j] });
   }
-  return { nodes:nodes, at:at, order:order, realOrder:realOrder, fictionOnly:fictionOnly,
+  return { nodes:nodes, at:at, order:order, realOrder:realOrder, fictionOnly:fictionOnly, pos:pos,
            roads:roadList, ours:ours, paths:paths, list:list,
            todayIndex: realOrder.length - 1, lastReal: realEv.length ? realEv[realEv.length - 1] : null };
 }
 
-/* --- the camera ---------------------------------------------------------------- */
-function mpUnit(n){ return (MP.width - 2 * MP_PAD) / Math.max(1, n - 1); }
-function mpX(i){ return MP_PAD + MP.tx + i * mpUnit(MP.model ? MP.model.nodes.length : 2) * MP.s; }
-function mpClampTx(){
-  var n = MP.model ? MP.model.nodes.length : 2;
-  var lineW = (n - 1) * mpUnit(n) * MP.s;
-  var minTx = Math.min(0, (MP.width - 2 * MP_PAD) - lineW);
-  MP.tx = Math.max(minTx, Math.min(0, MP.tx));
+/* --- the camera: one zoom, two pans, over the whole flow ------------------------ */
+function mpT(x){ return MP.tx + x * MP.s; }
+function mpTY(y){ return MP.ty + y * MP.s; }
+function momentsFit(){ MP.s = 1; MP.tx = 0; MP.ty = 0; }
+function momentsZoomAt(g, mx, my){
+  if(my == null) my = Hv / 2;
+  var s2 = Math.max(0.6, Math.min(MP_MAX_S, MP.s * g));
+  var wx = (mx - MP.tx) / MP.s, wy = (my - MP.ty) / MP.s;
+  MP.tx = mx - wx * s2; MP.ty = my - wy * s2; MP.s = s2;
 }
-function momentsFit(){ MP.s = 1; MP.tx = 0; }
-function momentsZoomAt(g, mx){
-  var n = MP.model ? MP.model.nodes.length : 2, unit = mpUnit(n);
-  var s2 = Math.max(1, Math.min(MP_MAX_S, MP.s * g));
-  var xs = (mx - MP_PAD - MP.tx) / (unit * MP.s);        /* which node-index the cursor is over */
-  MP.tx = mx - MP_PAD - xs * unit * s2;
-  MP.s = s2;
-  mpClampTx();
+function momentsPan(dx, tx0, dy, ty0){
+  MP.tx = tx0 + dx;
+  if(ty0 !== undefined) MP.ty = ty0 + (dy || 0);
 }
-function momentsPan(dx0, tx0){ MP.tx = tx0 + dx0; mpClampTx(); }
 
 /* --- selection ------------------------------------------------------------------ */
 function momentsSelectKind(id){
@@ -147,190 +149,430 @@ function momentsClear(){
   renderChart(); renderMomentsPanel();
 }
 
-/* --- drawing ------------------------------------------------------------------- */
-function mpArc(x1, x2, y, above, cls, attrs){
-  var rx = Math.max(1, Math.abs(x2 - x1) / 2);
-  /* height grows with distance but is capped by the room on that side, so a
-     road across the whole line is a low wide arch rather than a wall */
-  var room = above ? (y - 64) : ((Hv - 44) - y);
-  var ry = Math.max(6, Math.min(rx * 0.5, room * 0.92));
-  var d = "M" + x1.toFixed(1) + " " + y.toFixed(1) + " A" + rx.toFixed(1) + " " + ry.toFixed(1)
-        + " 0 0 " + (above ? (x2 > x1 ? 1 : 0) : (x2 > x1 ? 0 : 1)) + " " + x2.toFixed(1) + " " + y.toFixed(1);
-  var p = sEl("path", { d:d, fill:"none" }, cls);
-  if(attrs) for(var k in attrs) p.setAttribute(k, attrs[k]);
-  return p;
+/* --- layout: x is story position, y follows the roads ----------------------------- */
+function momentsLayout(M, width){
+  var left = MP_PAD, right = width - MP_PAD - 110, top = 78, bottom = Hv - 64;
+  var n = M.nodes.length;
+  /* x: where the kind tends to fall in a story (0 = a story's first beat,
+     1 = its last), averaged over every world that has it; a kind only our
+     history has is placed by its rank in ours */
+  M.nodes.forEach(function(k){
+    var ps = M.pos[k.id];
+    var p = (ps && ps.length) ? mpMean(ps)
+          : (M.realOrder.length > 1 ? M.realOrder.indexOf(k.id) / (M.realOrder.length - 1) : 0.5);
+    k.p = p;
+    k.fx = left + (right - left) * p;
+  });
+  /* neighbours, weighted by how many worlds take the road */
+  var nb = {};
+  M.nodes.forEach(function(k){ nb[k.id] = []; });
+  M.roads.forEach(function(r){
+    nb[r.a].push({ id:r.b, w:r.worlds.length }); nb[r.b].push({ id:r.a, w:r.worlds.length });
+  });
+  M.ours.forEach(function(o){ nb[o.a].push({ id:o.b, w:1 }); nb[o.b].push({ id:o.a, w:1 }); });
+  /* y: start spread by x-rank, then pull each kind toward the kinds it connects
+     to, then push apart anything that would overlap. Deterministic. */
+  var byX = M.nodes.slice().sort(function(a, b){ return a.fx - b.fx || (a.id < b.id ? -1 : 1); });
+  byX.forEach(function(k, i){
+    var f = (i * 0.6180339887) % 1;
+    k.fy = top + (bottom - top) * f;
+  });
+  var minGap = 34;
+  for(var it = 0; it < 8; it++){
+    M.nodes.forEach(function(k){
+      var ws = 0, sum = 0;
+      nb[k.id].forEach(function(e){ var o = M.at[e.id]; if(!o) return; sum += o.fy * e.w; ws += e.w; });
+      if(ws) k.fy = 0.55 * k.fy + 0.45 * (sum / ws);
+    });
+    /* de-overlap: kinds close in x must be a lane apart in y */
+    var byY = M.nodes.slice().sort(function(a, b){ return a.fy - b.fy; });
+    for(var pass = 0; pass < 3; pass++){
+      for(var i = 0; i < byY.length; i++){
+        for(var j = i + 1; j < byY.length; j++){
+          var A = byY[i], B = byY[j];
+          if(Math.abs(A.fx - B.fx) > 96) continue;
+          var d = B.fy - A.fy;
+          if(d < minGap){ var push = (minGap - d) / 2; A.fy -= push; B.fy += push; }
+        }
+      }
+      byY.sort(function(a, b){ return a.fy - b.fy; });
+    }
+    M.nodes.forEach(function(k){ k.fy = Math.max(top, Math.min(bottom, k.fy)); });
+  }
+  return { left:left, right:right, top:top, bottom:bottom };
 }
+
+/* --- drawing ------------------------------------------------------------------- */
+/* a road from A to B: an S-curve forward, a loop over the top when it runs back */
+function mpRoadPath(x1, y1, x2, y2){
+  var dx = x2 - x1;
+  if(dx >= 0){
+    var c = Math.max(24, dx * 0.5);
+    return "M" + x1.toFixed(1) + " " + y1.toFixed(1) + " C" + (x1 + c).toFixed(1) + " " + y1.toFixed(1) + ","
+      + (x2 - c).toFixed(1) + " " + y2.toFixed(1) + "," + x2.toFixed(1) + " " + y2.toFixed(1);
+  }
+  var lift = Math.min(160, 50 + Math.abs(dx) * 0.25);
+  return "M" + x1.toFixed(1) + " " + y1.toFixed(1) + " C" + (x1 + 70).toFixed(1) + " " + (y1 - lift).toFixed(1) + ","
+    + (x2 - 70).toFixed(1) + " " + (y2 - lift).toFixed(1) + "," + x2.toFixed(1) + " " + y2.toFixed(1);
+}
+function mpRadius(k){ return 4 + Math.min(10, k.worlds * 0.9); }
 
 function renderMomentsPage(svg){
   var M = momentsModel();
   MP.model = M;
   MP.width = mpUsableWidth();
-  mpClampTx();
-  var n = M.nodes.length;
-  var baseY = Math.round(Hv * 0.66);
-  var spacing = mpUnit(n) * MP.s;
+  if(mpCyAvailable()){ renderMomentsCy(M); return; }
+  var cb = document.getElementById("chartbody");
+  if(cb && cb.classList) cb.classList.remove("cy-on");
   var g = sEl("g", null, "moments-page");
   svg.appendChild(g);
-  if(!n){
+  if(!M.nodes.length){
     var none = sEl("text", {x:W / 2, y:Hv / 2, "text-anchor":"middle"}, "mp-empty");
     none.textContent = "No kinds of moment to show: bin the events first.";
     g.appendChild(none);
     return;
   }
-  var xOf = {};
-  M.nodes.forEach(function(k){ xOf[k.id] = mpX(k.i); k.x = xOf[k.id]; k.y = baseY; });
-  MP.geom = { baseY:baseY, spacing:spacing };
+  var L = momentsLayout(M, MP.width);
+  MP.geom = L;
+  M.nodes.forEach(function(k){ k.x = mpT(k.fx); k.y = mpTY(k.fy); });
 
-  /* region headers */
-  var h1 = sEl("text", {x:MP_PAD, y:34}, "mp-region");
-  h1.textContent = "WHAT HAS HAPPENED TO US  ·  kinds of moment, in the order we first reached them";
-  g.appendChild(h1);
-  var todayX = null;
-  if(M.todayIndex >= 0){
-    todayX = M.fictionOnly.length ? (xOf[M.realOrder[M.todayIndex]] + xOf[M.fictionOnly[0]]) / 2
-                                  : xOf[M.realOrder[M.todayIndex]] + spacing / 2;
-    g.appendChild(sEl("line", {x1:todayX, y1:48, x2:todayX, y2:Hv - 40}, "mp-today-line"));
-    var tl = sEl("text", {x:todayX, y:Hv - 24, "text-anchor":"middle"}, "now-cap mp-today");
-    tl.textContent = "TODAY " + NOW;
-    g.appendChild(tl);
-    if(M.fictionOnly.length){
-      var h2 = sEl("text", {x:Math.min(MP.width - MP_PAD, Math.max(todayX + 12, xOf[M.fictionOnly[0]] - 10)), y:34}, "mp-region faint");
-      h2.textContent = "NOT YET  ·  kinds only fiction has reached, in the order stories tend to reach them";
-      g.appendChild(h2);
-    }
-  }
+  var defs = sEl("defs");
+  var mk = sEl("marker", {id:"mp-arrow", viewBox:"0 0 10 10", refX:"9", refY:"5", markerWidth:"7", markerHeight:"7", orient:"auto-start-reverse"});
+  mk.appendChild(sEl("path", {d:"M0 1 L9 5 L0 9 z"}, "mp-arrowhead"));
+  defs.appendChild(mk);
+  g.appendChild(defs);
 
-  /* the line itself: ours solid, the not-yet part dotted */
-  var xFirst = xOf[M.order[0]], xLastOurs = M.todayIndex >= 0 ? xOf[M.realOrder[M.todayIndex]] : xFirst;
-  var xLast = xOf[M.order[n - 1]];
-  if(xLastOurs > xFirst) g.appendChild(sEl("line", {x1:xFirst, y1:baseY, x2:xLastOurs, y2:baseY}, "mp-line-ours"));
-  if(xLast > xLastOurs) g.appendChild(sEl("line", {x1:xLastOurs, y1:baseY, x2:xLast, y2:baseY}, "mp-line-notyet"));
+  /* the story axis: beginning to end */
+  var ay = Hv - 30;
+  var axl = sEl("text", {x:mpT(L.left), y:ay, "text-anchor":"start"}, "mp-region");
+  axl.textContent = "BEGINNING OF A STORY";
+  var axr = sEl("text", {x:mpT(L.right), y:ay, "text-anchor":"end"}, "mp-region");
+  axr.textContent = "END OF A STORY";
+  var axm = sEl("text", {x:mpT((L.left + L.right) / 2), y:ay, "text-anchor":"middle"}, "mp-region faint");
+  axm.textContent = "left to right: where a kind of moment tends to fall  ·  roads: what leads to what  ·  thickness: how many worlds";
+  g.appendChild(sEl("line", {x1:mpT(L.left), y1:ay - 14, x2:mpT(L.right), y2:ay - 14}, "mp-axis"));
+  g.appendChild(axl); g.appendChild(axr); g.appendChild(axm);
 
-  /* our own path, below the line */
+  var selected = MP.node, litWorld = MP.world;
+  function touches(r){ return selected && (r.a === selected || r.b === selected); }
+
+  /* our own path through the kinds, as it actually ran */
   var gOurs = sEl("g", null, "mp-ours");
   M.ours.forEach(function(o){
-    var p = mpArc(xOf[o.a], xOf[o.b], baseY, false, "mp-our-road");
+    var A = M.at[o.a], B = M.at[o.b];
+    var p = sEl("path", {d:mpRoadPath(A.x, A.y, B.x, B.y), fill:"none"}, "mp-our-road");
     p.setAttribute("data-our-road", o.a + "|" + o.b);
-    var t = sEl("title"); t.textContent = o.from.year + " " + o.from.title + "  →  " + o.to.year + " " + o.to.title;
+    if(selected && !(o.a === selected || o.b === selected)) p.setAttribute("opacity", "0.12");
+    var t = sEl("title"); t.textContent = "us: " + o.from.year + " " + o.from.title + "  →  " + o.to.year + " " + o.to.title;
     p.appendChild(t);
     gOurs.appendChild(p);
   });
   g.appendChild(gOurs);
 
-  /* the fictions' roads, above the line */
-  var selected = MP.node, litWorld = MP.world;
+  /* the roads */
   var gRoads = sEl("g", null, "mp-roads");
   M.roads.forEach(function(r){
-    var cls = "mp-road" + (r.worlds.length > 1 ? " shared" : "") + (r.future ? " future" : "");
-    var p = mpArc(xOf[r.a], xOf[r.b], baseY, true, cls);
+    var A = M.at[r.a], B = M.at[r.b];
+    var shared = r.worlds.length > 1;
+    var p = sEl("path", {d:mpRoadPath(A.x, A.y, B.x, B.y), fill:"none"},
+                "mp-road" + (shared ? " shared" : "") + (r.future ? " future" : ""));
     p.setAttribute("data-road", r.key);
-    p.setAttribute("stroke-width", (0.8 + Math.min(3.4, r.worlds.length * 0.7)).toFixed(2));
-    if(selected){
-      var touches = (r.a === selected || r.b === selected);
-      p.setAttribute("opacity", touches ? "0.95" : "0.05");
-    }
+    p.setAttribute("stroke-width", (0.8 + Math.min(4, r.worlds.length * 0.9)).toFixed(2));
+    if(shared || touches(r)) p.setAttribute("marker-end", "url(#mp-arrow)");
+    if(selected) p.setAttribute("opacity", touches(r) ? "0.95" : "0.04");
     var t = sEl("title");
-    t.textContent = mpLabel(r.a) + " → " + mpLabel(r.b) + "\n"
-      + r.worlds.length + (r.worlds.length === 1 ? " world: " : " worlds: ")
-      + r.worlds.map(function(l){ return l.title; }).join(", ");
+    t.textContent = mpLabel(r.a) + "  →  " + mpLabel(r.b) + "\n" + r.worlds.length
+      + (r.worlds.length === 1 ? " world: " : " worlds: ") + r.worlds.map(function(l){ return l.title; }).join(", ");
     p.appendChild(t);
     gRoads.appendChild(p);
   });
   g.appendChild(gRoads);
 
-  /* one world's whole road, in its colour, on top */
+  /* one world's whole road, in its colour */
   if(litWorld && M.paths[litWorld]){
     var pth = M.paths[litWorld], col = pth.l._g.color, dv = pth.l.divergence.year;
     var gW = sEl("g", null, "mp-world-path");
     for(var i = 1; i < pth.seq.length; i++){
-      var a = pth.seq[i - 1], b = pth.seq[i];
-      if(!xOf[a.bin] || !xOf[b.bin]) continue;
-      var shared = b.year < dv;                     /* still riding our history */
-      var future = a.year > NOW;
-      var wp = mpArc(xOf[a.bin], xOf[b.bin], baseY, true, "mp-world-road" + (shared ? " shared-with-us" : "") + (future ? " future" : ""));
+      var a = pth.seq[i - 1], b = pth.seq[i], A2 = M.at[a.bin], B2 = M.at[b.bin];
+      if(!A2 || !B2) continue;
+      var wp = sEl("path", {d:mpRoadPath(A2.x, A2.y, B2.x, B2.y), fill:"none", "marker-end":"url(#mp-arrow)"},
+                   "mp-world-road" + (b.year < dv ? " shared-with-us" : "") + (a.year > NOW ? " future" : ""));
       paintC(wp, "stroke", col);
       var tt = sEl("title");
       tt.textContent = pth.l.title + ": " + a.e.year + " " + a.e.title + "  →  " + b.e.year + " " + b.e.title
-        + (shared ? "\n(still sharing our history)" : "");
+        + (b.year < dv ? "\n(still sharing our history)" : "");
       wp.appendChild(tt);
       gW.appendChild(wp);
     }
     pth.seq.forEach(function(s){
-      if(xOf[s.bin] == null) return;
-      gW.appendChild(paintC(sEl("circle", {cx:xOf[s.bin], cy:baseY, r: 5 + Math.min(10, (M.at[s.bin].worlds || 1) * 0.9) + 4}, "mp-world-ring"), "stroke", col));
+      var K = M.at[s.bin]; if(!K) return;
+      gW.appendChild(paintC(sEl("circle", {cx:K.x, cy:K.y, r:mpRadius(K) + 4}, "mp-world-ring"), "stroke", col));
     });
     g.appendChild(gW);
   }
 
-  /* circles */
-  /* labels by spacing: all of them when there is room, every other one when
-     tight, and always the selected kind. A label is rotated so 33 kinds can be
-     named across 1000px; below that it takes a hover. */
-  var showAll = spacing >= 44, showSome = spacing >= 21;
+  /* the kinds */
+  var connected = {};
+  if(selected){ M.roads.forEach(function(r){ if(touches(r)){ connected[r.a] = true; connected[r.b] = true; } }); }
   var gNodes = sEl("g", null, "mp-nodes");
   M.nodes.forEach(function(k){
-    var x = xOf[k.id], r = 4 + Math.min(10, k.worlds * 0.9);
+    var x = k.x, y = k.y, r = mpRadius(k);
     var grp = sEl("g", null, "mp-node" + (k.ours ? " ours" : " notyet") + (k.id === selected ? " selected" : ""));
     grp.setAttribute("data-moment-node", k.id);
-    if(selected && k.id !== selected){
-      var touching = M.roads.some(function(rd){ return (rd.a === selected && rd.b === k.id) || (rd.b === selected && rd.a === k.id); });
-      if(!touching) grp.setAttribute("opacity", "0.35");
-    }
-    grp.appendChild(sEl("circle", {cx:x, cy:baseY, r:r + 7, fill:"transparent", "pointer-events":"all"}, "mp-hit"));
-    grp.appendChild(sEl("circle", {cx:x, cy:baseY, r:r}, "mp-circle"));
-    if(k.id === selected) grp.appendChild(sEl("circle", {cx:x, cy:baseY, r:r + 4}, "mp-selected-ring"));
+    if(selected && k.id !== selected && !connected[k.id]) grp.setAttribute("opacity", "0.3");
+    grp.appendChild(sEl("circle", {cx:x, cy:y, r:r + 7, fill:"transparent", "pointer-events":"all"}, "mp-hit"));
+    grp.appendChild(sEl("circle", {cx:x, cy:y, r:r}, "mp-circle"));
+    if(k.id === selected) grp.appendChild(sEl("circle", {cx:x, cy:y, r:r + 4}, "mp-selected-ring"));
     if(r >= 7){
-      var ct = sEl("text", {x:x, y:baseY + 3, "text-anchor":"middle"}, "mp-count");
+      var ct = sEl("text", {x:x, y:y + 3, "text-anchor":"middle"}, "mp-count");
       ct.textContent = String(k.worlds);
       grp.appendChild(ct);
     }
-    var label = showAll || (showSome && (k.i % 2 === 0 || k.worlds >= 5)) || k.id === selected;
-    if(label){
-      var ly = baseY + r + 12;
-      var lab = sEl("text", {x:x, y:ly, "text-anchor":"end",
-                             transform:"rotate(-34 " + x.toFixed(1) + " " + ly.toFixed(1) + ")"},
-                    "mp-label" + (spacing < 44 ? " tight" : ""));
-      lab.textContent = mpLabel(k.id);
-      grp.appendChild(lab);
+    var lab = sEl("text", {x:x + r + 5, y:y + 3.5}, "mp-label" + (MP.s < 0.8 ? " tight" : ""));
+    lab.textContent = mpLabel(k.id);
+    grp.appendChild(lab);
+    if(k.visits.length){
+      var yr = sEl("text", {x:x + r + 5, y:y + 14}, "mp-years");
+      yr.textContent = "us: " + k.visits.slice(0, 3).map(function(e){ return e.year; }).join(", ") + (k.visits.length > 3 ? " …" : "");
+      grp.appendChild(yr);
     }
     var t = sEl("title");
     t.textContent = mpLabel(k.id) + " — " + k.worlds + (k.worlds === 1 ? " world" : " worlds")
       + (k.visits.length ? "\nhappened to us: " + k.visits.map(function(e){ return e.year; }).join(", ") : "\nhas not happened to us")
-      + "\n" + (k.spec.definition || "") + "\nclick to see the worlds that pass through it";
+      + "\n" + (k.spec.definition || "") + "\nclick: what leads here, what it leads to, and the worlds through it";
     grp.appendChild(t);
     gNodes.appendChild(grp);
-
     /* the times it happened to us: a dot per visit above the circle, clickable */
-    if(k.visits.length && (spacing >= 22 || k.id === selected)){
-      var kk = k.visits.length;
-      k.visits.forEach(function(e, j){
-        var vx = x + (j - (kk - 1) / 2) * Math.min(8, Math.max(4, spacing / 6)), vy = baseY - r - 9;
-        var hit = sEl("circle", {cx:vx, cy:vy, r:6, fill:"transparent", "pointer-events":"all"}, "mp-beat-hit");
-        hit.setAttribute("data-real", e.id);
-        var tb = sEl("title");
-        tb.textContent = e.year + " · " + e.title + (e.facets ? "\n" + e.facets.change : "")
-          + "\nclick: the fictional moments nearest this situation, and what followed there";
-        hit.appendChild(tb);
-        hit.onclick = function(ev){ if(ev && ev.stopPropagation) ev.stopPropagation(); momentsSelectBeat(e.id); };
-        gNodes.appendChild(hit);
-        gNodes.appendChild(sEl("circle", {cx:vx, cy:vy, r: MP.beat && MP.beat.id === e.id ? 3.6 : 2.4},
-                                "mp-beat" + (MP.beat && MP.beat.id === e.id ? " selected" : "")));
-      });
-    }
+    var kk = k.visits.length;
+    k.visits.forEach(function(e, j){
+      var vx = x + (j - (kk - 1) / 2) * 7, vy = y - r - 8;
+      var hit = sEl("circle", {cx:vx, cy:vy, r:6, fill:"transparent", "pointer-events":"all"}, "mp-beat-hit");
+      hit.setAttribute("data-real", e.id);
+      var tb = sEl("title");
+      tb.textContent = e.year + " · " + e.title + (e.facets ? "\n" + e.facets.change : "")
+        + "\nclick: the fictional moments nearest this situation, and what followed there";
+      hit.appendChild(tb);
+      hit.onclick = function(ev){ if(ev && ev.stopPropagation) ev.stopPropagation(); momentsSelectBeat(e.id); };
+      gNodes.appendChild(hit);
+      gNodes.appendChild(sEl("circle", {cx:vx, cy:vy, r: MP.beat && MP.beat.id === e.id ? 3.6 : 2.4},
+                              "mp-beat" + (MP.beat && MP.beat.id === e.id ? " selected" : "")));
+    });
   });
   g.appendChild(gNodes);
-
-  /* click wiring for the shim (real browsers dispatch through onpointerup) */
   Array.prototype.forEach.call(gNodes.querySelectorAll("[data-moment-node]"), function(el){
     el.onclick = function(ev){ if(ev && ev.stopPropagation) ev.stopPropagation(); momentsSelectKind(el.getAttribute("data-moment-node")); };
   });
 
-  var cap = sEl("text", {x:MP.width - MP_PAD, y:Hv - 8, "text-anchor":"end"}, "axis-caption");
-  cap.textContent = M.realOrder.length + " kinds we have been through · " + M.fictionOnly.length
-    + " only in fiction · " + M.roads.length + " roads, "
-    + M.roads.filter(function(r){ return r.worlds.length > 1; }).length + " shared · zoom "
-    + MP.s.toFixed(1) + "×";
+  /* today: where our path currently ends */
+  if(M.lastReal && M.at[M.lastReal.bin]){
+    var tn = M.at[M.lastReal.bin], rr = mpRadius(tn) + 8;
+    g.appendChild(sEl("circle", {cx:tn.x, cy:tn.y, r:rr}, "mp-today-ring"));
+    var tl = sEl("text", {x:tn.x, y:tn.y - rr - 6, "text-anchor":"middle"}, "now-cap mp-today");
+    tl.textContent = "TODAY " + NOW + " · we are here";
+    g.appendChild(tl);
+  }
+
+  var cap = sEl("text", {x:MP.width - MP_PAD, y:22, "text-anchor":"end"}, "axis-caption");
+  cap.textContent = M.nodes.length + " kinds of moment · " + M.roads.length + " roads, "
+    + M.roads.filter(function(r){ return r.worlds.length > 1; }).length + " taken by more than one world · zoom " + MP.s.toFixed(1) + "×";
   g.appendChild(cap);
+}
+
+
+/* ============================================================================
+   The Cytoscape rendering of the same model. Layout is dagre, left to right:
+   ranks come from the roads themselves, so a kind sits to the right of the
+   kinds that lead to it. Cytoscape owns pan, zoom and hit-testing on a canvas,
+   which is what a graph of 140 roads needs; the SVG drawing above stays as the
+   headless fallback (the test harness has no canvas and loads no vendor code).
+   ========================================================================== */
+function mpCyAvailable(){
+  return typeof window !== "undefined" && typeof window.cytoscape === "function"
+      && !!document.getElementById("cy") && typeof document.createElement("canvas").getContext === "function";
+}
+function mpCss(name, fallback){
+  try{
+    var v = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+    return v || fallback;
+  }catch(e){ return fallback; }
+}
+function mpElements(M){
+  var els = [];
+  var todayId = M.lastReal ? M.lastReal.bin : null;
+  M.nodes.forEach(function(k){
+    var years = k.visits.length ? "us: " + k.visits.slice(0, 3).map(function(e){ return e.year; }).join(", ") + (k.visits.length > 3 ? " …" : "") : "";
+    els.push({ group:"nodes", data:{ id:k.id, label:mpLabel(k.id), years:years, worlds:k.worlds, ours:k.ours ? 1 : 0, p:k.p || 0 },
+               classes:(k.ours ? "ours" : "notyet") + (k.id === todayId ? " today" : "") });
+  });
+  M.roads.forEach(function(r){
+    els.push({ group:"edges", data:{ id:"r:" + r.key, source:r.a, target:r.b, weight:r.worlds.length,
+               names:r.worlds.map(function(l){ return l.title; }).join(", ") },
+               classes:"road" + (r.worlds.length > 1 ? " shared" : "") + (r.future ? " future" : "") });
+  });
+  M.ours.forEach(function(o, i){
+    els.push({ group:"edges", data:{ id:"o:" + i, source:o.a, target:o.b, weight:1, names:o.from.year + " " + o.from.title + " → " + o.to.year + " " + o.to.title },
+               classes:"ours" });
+  });
+  return els;
+}
+function mpCyStyle(){
+  var trunk = mpCss("--trunk", "#1d3f6b"), ink2 = mpCss("--ink-2", "#4a5c6b"), ink4 = mpCss("--ink-4", "#9fafbd"),
+      ink1 = mpCss("--ink-1", "#22323f"), surface = mpCss("--surface", "#f8fbfd"), line3 = mpCss("--line-3", "#8494a6"),
+      now = mpCss("--now", "#101c28"), font = mpCss("--font-sans", "sans-serif");
+  return [
+    { selector:"node", style:{
+        "width":"mapData(worlds, 0, 12, 16, 46)", "height":"mapData(worlds, 0, 12, 16, 46)",
+        "background-color":surface, "border-width":1.4, "border-color":line3,
+        "label":"data(label)", "font-family":font, "font-size":13, "font-weight":600, "color":ink1,
+        "text-valign":"bottom", "text-halign":"center", "text-margin-y":6, "text-wrap":"wrap", "text-max-width":110,
+        "text-background-color":surface, "text-background-opacity":0.85, "text-background-padding":2, "text-background-shape":"roundrectangle",
+        "min-zoomed-font-size":6,
+        "transition-property":"opacity", "transition-duration":"120ms" } },
+    { selector:"node.ours", style:{ "border-width":2.6, "border-color":trunk } },
+    { selector:"node.today", style:{ "border-style":"double", "border-width":5, "border-color":now } },
+    { selector:"node.selected", style:{ "border-color":now, "border-width":4, "background-color":mpCss("--bg-2", "#e4eaf1") } },
+    { selector:"node.dim", style:{ "opacity":0.28 } },
+    /* A road one world takes is context, not shape: it stays a whisper until a
+       circle or a world is chosen, and then only the ones that touch it speak. */
+    { selector:"edge", style:{ "curve-style":"unbundled-bezier", "control-point-distances":[38], "control-point-weights":[0.5],
+        "line-color":ink4, "opacity":0.07, "width":1,
+        "target-arrow-shape":"none", "arrow-scale":0.8,
+        "transition-property":"opacity", "transition-duration":"120ms" } },
+    { selector:"edge.shared", style:{ "line-color":ink2, "target-arrow-color":ink2, "target-arrow-shape":"triangle", "opacity":0.8,
+        "width":"mapData(weight, 2, 8, 1.8, 7)" } },
+    { selector:"edge.future", style:{ "line-style":"dashed", "line-dash-pattern":[6, 4] } },
+    { selector:"edge.ours", style:{ "line-color":trunk, "target-arrow-color":trunk, "target-arrow-shape":"triangle", "line-style":"dotted", "width":2, "opacity":0.7,
+        "control-point-distances":[-30] } },
+    { selector:"edge.touch", style:{ "opacity":0.98, "target-arrow-shape":"triangle", "line-color":ink1, "target-arrow-color":ink1, "z-index":10,
+        "width":"mapData(weight, 1, 8, 1.6, 7)" } },
+    { selector:"edge.faded", style:{ "opacity":0.04 } },
+    { selector:"edge.world", style:{ "line-color":"data(color)", "target-arrow-color":"data(color)", "target-arrow-shape":"triangle", "width":3.2, "opacity":0.98, "z-index":20 } },
+    { selector:"edge.world.shared-with-us", style:{ "line-style":"dotted" } },
+    { selector:"node.on-world", style:{ "border-color":"data(color)", "border-width":3.4 } }
+  ];
+}
+/* Fit the graph into the part of the canvas the panel does not cover, so the
+   right-hand kinds are not parked behind it. Cytoscape's own fit only knows the
+   whole container. */
+function mpCyFit(pad, eles, maxZoom){
+  var cy = MP.cy; if(!cy) return;
+  pad = pad == null ? 36 : pad;
+  var bb = (eles || cy.elements()).boundingBox();
+  if(!bb.w || !bb.h) return;
+  var cw = cy.width(), ch = cy.height();
+  var uw = Math.min(cw, mpUsableWidth());
+  var z = Math.min((uw - 2 * pad) / bb.w, (ch - 2 * pad) / bb.h);
+  z = Math.max(cy.minZoom(), Math.min(maxZoom || cy.maxZoom(), z));
+  cy.viewport({ zoom:z, pan:{ x: (uw - bb.w * z) / 2 - bb.x1 * z, y: (ch - bb.h * z) / 2 - bb.y1 * z } });
+}
+/* Pan the least distance that brings a node into the uncovered part of the
+   canvas: choosing a circle opens the panel, and the circle must stay in view. */
+function mpCyReveal(id){
+  var cy = MP.cy; if(!cy) return;
+  var n = cy.getElementById(id); if(!n || !n.length) return;
+  var rp = n.renderedPosition(), uw = Math.min(cy.width(), mpUsableWidth()), ch = cy.height(), m = 90;
+  var dx = 0, dy = 0;
+  if(rp.x > uw - m) dx = (uw - m) - rp.x; else if(rp.x < m) dx = m - rp.x;
+  if(rp.y > ch - m) dy = (ch - m) - rp.y; else if(rp.y < m) dy = m - rp.y;
+  if(dx || dy) cy.panBy({ x:dx, y:dy });
+}
+function mpSignature(M){
+  return M.nodes.map(function(k){ return k.id; }).join(",") + "#" + M.roads.map(function(r){ return r.key; }).join(",") + "#" + M.ours.length;
+}
+function renderMomentsCy(M){
+  var cb = document.getElementById("chartbody"), host = document.getElementById("cy");
+  if(cb && cb.classList) cb.classList.add("cy-on");
+  var sig = mpSignature(M);
+  if(!MP.cy){
+    if(window.cytoscapeDagre && cytoscape.use){ try{ cytoscape.use(window.cytoscapeDagre); }catch(e){} }
+    MP.cy = cytoscape({ container:host, elements:mpElements(M), style:mpCyStyle(), wheelSensitivity:0.25,
+                        minZoom:0.25, maxZoom:6, boxSelectionEnabled:false, autounselectify:true });
+    MP.cySig = sig;
+    mpCyLayout();
+    MP.cy.on("tap", "node", function(ev){ momentsSelectKind(ev.target.id()); });
+    MP.cy.on("tap", function(ev){ if(ev.target === MP.cy) momentsClear(); });
+    MP.cy.on("mouseover", "node", function(ev){ host.style.cursor = "pointer"; });
+    MP.cy.on("mouseout", "node", function(ev){ host.style.cursor = ""; });
+  } else if(MP.cySig !== sig){
+    MP.cy.elements().remove();
+    MP.cy.add(mpElements(M));
+    MP.cySig = sig;
+    mpCyLayout();
+  }
+  var cy = MP.cy;
+  cy.resize();
+  /* selection state as classes */
+  cy.nodes().removeClass("selected dim on-world");
+  cy.edges().removeClass("touch faded");
+  cy.edges(".world").remove();
+  if(MP.node){
+    var sel = cy.getElementById(MP.node);
+    sel.addClass("selected");
+    mpCyReveal(MP.node);
+    var near = sel.closedNeighborhood();
+    cy.nodes().not(near).addClass("dim");
+    cy.edges(".road").forEach(function(e){
+      if(e.source().id() === MP.node || e.target().id() === MP.node) e.addClass("touch"); else e.addClass("faded");
+    });
+  }
+  if(MP.world && M.paths[MP.world]){
+    var pth = M.paths[MP.world], col = pth.l._g.color, dv = pth.l.divergence.year, add = [];
+    for(var i = 1; i < pth.seq.length; i++){
+      var a = pth.seq[i - 1], b = pth.seq[i];
+      if(!M.at[a.bin] || !M.at[b.bin]) continue;
+      add.push({ group:"edges", data:{ id:"w:" + i, source:a.bin, target:b.bin, color:col,
+                 names:pth.l.title + ": " + a.e.year + " " + a.e.title + " → " + b.e.year + " " + b.e.title },
+                 classes:"world" + (b.year < dv ? " shared-with-us" : "") });
+      cy.getElementById(b.bin).addClass("on-world").data("color", col);
+    }
+    if(pth.seq.length) cy.getElementById(pth.seq[0].bin).addClass("on-world").data("color", col);
+    cy.add(add);
+  }
+}
+function mpCyLayout(){
+  var cy = MP.cy;
+  /* Rank left to right on the roads several worlds take and on our own path.
+     Ranking on every private road too spread 33 kinds over four thousand
+     pixels: one world's idiosyncratic detour is not the shape of the story. */
+  var ranking = cy.elements().filter(function(e){
+    return e.isNode() || e.hasClass("shared") || e.hasClass("ours");
+  });
+  var opts = { name:"dagre", rankDir:"LR", nodeSep:40, rankSep:82, edgeSep:12, ranker:"tight-tree",
+               padding:30, animate:false, eles:ranking,
+               edgeWeight:function(e){ return e.hasClass("shared") ? (1 + (e.data("weight") || 1)) : 1; } };
+  try{
+    ranking.layout(opts).run();
+  }catch(e){
+    try{ cy.layout({ name:"breadthfirst", directed:true, padding:30 }).run(); }
+    catch(e2){ cy.layout({ name:"grid", padding:30 }).run(); }
+  }
+  /* kinds that no shared road or real step touches were not ranked: place them
+     at the x their story position implies, in a row under the rest */
+  var bb = cy.elements().filter(function(e){ return e.isNode() && ranking.contains(e) && e.connectedEdges(".shared, .ours").length; }).boundingBox();
+  var stray = cy.nodes().filter(function(n){ return !n.connectedEdges(".shared, .ours").length; });
+  stray.forEach(function(n, i){
+    n.position({ x: bb.x1 + (bb.w || 600) * (n.data("p") || 0.5), y: bb.y2 + 90 + (i % 2) * 44 });
+  });
+  mpCyHome();
+}
+/* The opening camera frames our own path at a zoom the labels survive: the
+   real history is the anchor, and the fictions are read outward from it. Fit
+   gives the whole map, smaller, when the reader asks for it. */
+function mpCyHome(){
+  var cy = MP.cy; if(!cy) return;
+  var ours = cy.nodes(".ours");
+  if(!ours.length){ mpCyFit(36); return; }
+  mpCyFit(48, ours, 1.05);
+  if(cy.zoom() < 0.62){
+    /* Too wide to read whole. Open at a readable zoom with the right edge of
+       the map - where today sits - just inside the view, so what led here fills
+       the screen and only the kinds beyond us are off to the right. */
+    var t = cy.nodes(".today"); var c = (t.length ? t : ours).boundingBox(), all = cy.elements().boundingBox();
+    var z = 0.72, uw = Math.min(cy.width(), mpUsableWidth());
+    var right = Math.min(all.x2, c.x2 + 160);
+    var yc = all.h * z < cy.height() - 40 ? all.y1 + all.h / 2 : c.y1 + c.h / 2;
+    cy.viewport({ zoom:z, pan:{ x: (uw - 48) - right * z, y: cy.height() / 2 - yc * z } });
+  }
 }
 
 /* --- the panel ------------------------------------------------------------------ */
@@ -348,13 +590,15 @@ function renderMomentsPanel(){
   } else if(MP.node && M.at[MP.node]){
     html += mpKindHtml(M.at[MP.node], M);
   } else {
-    html += '<p class="mp-intro">One circle per kind of moment. Left of today, the kinds our own history has '
-      + 'passed through, in the order we first reached them; right of today, the kinds only fiction has reached. '
-      + 'Arcs above the line are the roads fictions take between kinds once they have left our history; the line '
-      + 'below is our own path.</p>'
-      + '<p class="mp-intro"><b>Click a circle</b> for every world that passes through that kind of moment and what '
-      + 'each did next. <b>Click a small dot</b> above a circle, a time it happened to us, to match that real moment '
-      + 'by situation to the nearest fictional ones. <b>Click a world</b> to light its whole road.</p>';
+    html += '<p class="mp-intro">One circle per kind of moment, and a road for every move a fiction makes from one '
+      + 'kind to the next once it has left our history. Circles run left to right by what leads to what, never by '
+      + 'date: a heavy border marks a kind we have been through ourselves, a double ring the kind we are in now, and '
+      + 'the dotted line is our own path. Roads several worlds take are drawn dark, with an arrow; a road one world '
+      + 'takes stays faint until you choose something.</p>'
+      + '<p class="mp-intro"><b>Click a circle</b> for every world that passes through that kind of moment, what leads '
+      + 'there and what it leads to. <b>Click a time it happened to us</b> to match that real moment by situation to '
+      + 'the nearest fictional ones and read them forward. <b>Click a world</b> to light its whole road. '
+      + 'Scroll to zoom, drag to pan, Fit for the whole map.</p>';
     var shared = M.roads.filter(function(r){ return r.worlds.length > 1; }).slice(0, 10);
     if(shared.length){
       html += '<h3 class="mp-h">Roads more than one world takes</h3><ol class="mp-roads">';
@@ -397,9 +641,22 @@ function mpKindHtml(k, M){
     });
     html += '</ul>';
   }
+  var leads = M.roads.filter(function(r){ return r.b === k.id; });
+  if(leads.length){
+    var tot = 0; leads.forEach(function(r){ tot += r.worlds.length; });
+    html += '<h3 class="mp-h">What leads here</h3><ul class="mp-follow">';
+    leads.forEach(function(r){
+      var pct = Math.round(100 * r.worlds.length / Math.max(1, tot));
+      html += '<li><button class="mp-kind" data-kind="' + esc(r.a) + '">' + esc(mpLabel(r.a)) + '</button> →'
+        + '<span class="mp-bar"><i style="width:' + pct + '%"></i></span>'
+        + '<span class="mp-n">' + r.worlds.length + ' of ' + tot + '</span>'
+        + '<span class="mp-who">' + r.worlds.map(function(l){ return esc(l.title); }).join(", ") + '</span></li>';
+    });
+    html += '</ul>';
+  }
   if(k.follow.length){
     var total = 0; k.follow.forEach(function(f){ total += f.worlds.length; });
-    html += '<h3 class="mp-h">What tends to follow</h3><ul class="mp-follow">';
+    html += '<h3 class="mp-h">What it leads to</h3><ul class="mp-follow">';
     k.follow.slice(0, 8).forEach(function(f){
       var pct = Math.round(100 * f.worlds.length / Math.max(1, total));
       html += '<li><button class="mp-kind" data-kind="' + esc(f.bin) + '">' + esc(mpLabel(f.bin)) + '</button>'

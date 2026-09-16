@@ -98,6 +98,11 @@ function zoomAt(g, mx, my, ms){
    magnifying empty space, which read as the chart falling apart. Anchoring on
    today means zooming in actually magnifies the part being looked at. */
 function zoomBy(g, ms){
+  if(axisMode === "moments"){
+    if(MP.cy){ MP.cy.zoom({ level: MP.cy.zoom() / g, renderedPosition: { x: MP.cy.width() / 2, y: MP.cy.height() / 2 } }); }
+    else { momentsZoomAt(1 / g, W / 2, Hv / 2); renderChart(); }
+    return;
+  }
   var nx = pxFor(NOW);
   var ax = (nx >= LANE_R && nx <= W - 12) ? nx : (LANE_R + (W - 12)) / 2;
   zoomAt(g, ax, Hv / 2, ms);
@@ -145,7 +150,11 @@ function tweenTo(c, hs, z, ms){
    time span to set. In Order mode x is sequence and always fills the width, so
    touching view.c/hs there would mean nothing. */
 function fitAll(){
-  if(axisMode === "moments"){ momentsFit(); renderChart(); return; }
+  if(axisMode === "moments"){
+    momentsFit(); renderChart();
+    if(MP.cy) mpCyFit(36);
+    return;
+  }
   var lay = layout(visibleLineages());
   Z = clamp((Hv - 12) / Math.max(1, lay.height1), Z_MIN, 1.15);
   panY = 0;
@@ -299,7 +308,8 @@ function init(){
   /* Open on the fork cluster, where the argument is legible; the whole dataset
      is one preset away (Full reach). Opening on everything squashed twenty
      forks into a hundred pixels and hid the grouping. */
-  fitAll();
+  if(axisMode === "moments"){ momentsFit(); renderChart(); if(MP.cy) mpCyHome(); }
+  else fitAll();
   renderCards();
 
   on("zin", "onclick", function(){ zoomBy(0.7, CAM_MS); });

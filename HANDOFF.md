@@ -45,6 +45,7 @@ python3 test-fixture.py && node test-viewer.js && node test-render.js timeline.h
 | `data/atlas.json` | Page copy and era presets for this atlas. Validated by the build. | Yes |
 | `data/bins.json`, `data/facets.json`, `data/real-history.json` | The kinds of moment, the closed facet vocabularies, and our own history as a sequence of moments. All validated by the build. | Yes - deliberately |
 | `tools/facet-match.py` | Match any moment to its situational neighbours and read them forward. | When the facets change |
+| `vendor/*.js` | Cytoscape.js, dagre and the cytoscape-dagre adapter (MIT), used by the Moments page. Loaded by `<script src>`, never inlined, so the build stays dependency-free. | Only to upgrade; keep the three versions in step |
 | `DESIGN.md` | Design language, chart anatomy, extension guide. | When the design changes |
 | `BRIEF-order-axis.md` | The next piece of work: the Order and Moments views, phased. | As phases land |
 | `data/parts/*.json` | The editable dataset, one file per archetype. | Yes — this is the data |
@@ -190,6 +191,8 @@ version:
 |---|---|---|
 | Boot, state, scale, format, select | `00`–`40` | `10-state.js` holds every constant; `20-scale.js` is the axis (see §5) |
 | Layout | `50-layout.js` | the tree: sides, bundles, lane rows, trunk y |
+| Axes | `55-order.js`, `56-moments.js` | the `AX` accessor: Years, Order, and the column placement the Moments axis exposes to the tree |
+| Moments page | `57-moments-page.js`, `58-facets.js` | its own page: the kinds-and-roads model, Cytoscape/dagre rendering with an SVG fallback, its camera and its panel; facet similarity for matching by situation |
 | Chart | `60-chart.js` | trunk + axis, `renderBranch`, prehistory nodes, canvas backdrop |
 | Motion | `65-motion.js` | `growIn`, `playConvergence`, `animateLayout` |
 | Interaction | `70-interact.js` | pan, zoom, hover, click, tooltip |
@@ -378,17 +381,18 @@ Change these only on purpose.
 
 Nothing is broken. In rough priority order:
 
-1. **Order axis, phase 1 - LANDED, phase 2 next.** The picture is now about
-   sequence rather than date: Order is the default view, Years is the evidence
-   beside it as a toggle, and both draw through one `AX` accessor in
-   `55-order.js` so `renderBranch`/`renderPrehistory` never call `pxFor`.
-   `DESIGN.md` §1 has the placement rules and the two-axis table.
-   **What remains is phase 2, the Moments view**, which needs a `stage` on every
-   event - twelve categories, chosen from the event's own text. That is a
-   research pass, not clerical tagging: the categories overlap
-   (`collapse`/`war`/`aftermath`, `origins`/`fork`) and forcing one per event is
-   an interpretive commitment. Phase 3 (ordering worlds by likeness) depends on
-   it. See `BRIEF-order-axis.md` §2.
+1. **Order and Moments - both landed; Moments is the page to keep tuning.**
+   Order positions by sequence through the `AX` accessor in `55-order.js`.
+   Moments is its own page (`57-moments-page.js`): a directed graph of kinds of
+   moment and the roads worlds take between them, ranked left to right by
+   dagre on the shared roads and our own path, rendered by Cytoscape.js from
+   `vendor/`. The owner's test for it is "what leads to what" - never anchor
+   it on a date or on a count-in-a-row. What remains: the dotted real path
+   crosses the map where our history visits kinds out of the fictions' order
+   (dagre reverses those edges); the two-node "long after / a gateway opens"
+   strays sit apart from everything; the bins are 33 hand-built kinds and the
+   facets (`data/facets.json`, `58-facets.js`) are what the situation match
+   runs on. `BRIEF-order-axis.md` §2.3 has the picture and §2.5 the facets.
 2. **Owner review, round two - done, re-check.** The halves of the canvas now
    carry meaning (above = ahead of us, below = behind and beside us) and are
    labelled on the left edge; bundles are tinted and barred in their colour;

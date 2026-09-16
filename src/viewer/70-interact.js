@@ -7,7 +7,7 @@ function attachInteractions(svg){
     if(ev.button !== 0) return;
     /* remember what was pressed: once the svg captures the pointer, pointerup is
        retargeted to the svg itself and ev.target no longer names the branch */
-    drag = { x0:ev.clientX, y0:ev.clientY, c0:view.c, p0:panY, t0:MP.tx, moved:0, target:ev.target };
+    drag = { x0:ev.clientX, y0:ev.clientY, c0:view.c, p0:panY, t0:MP.tx, ty0:MP.ty, moved:0, target:ev.target };
     svg.classList.add("dragging");
     try{ svg.setPointerCapture(ev.pointerId); }catch(e){}
   };
@@ -17,7 +17,7 @@ function attachInteractions(svg){
       drag.moved = Math.max(drag.moved, Math.abs(dx), Math.abs(dy));
       /* Order mode: x is sequence and always fills the width, so there is
          nothing to pan along it. Dragging still moves the tree vertically. */
-      if(axisMode === "moments"){ momentsPan(dx, drag.t0); renderChart(); return; }
+      if(axisMode === "moments"){ momentsPan(dx, drag.t0, dy, drag.ty0); renderChart(); return; }
       if(axisMode === "years") panTime(drag.c0, dx);   /* else x is not a quantity */
       panY = drag.p0 + dy;
       renderChart();
@@ -67,8 +67,8 @@ function attachInteractions(svg){
     var my = ((ev.clientY || 0) - rect.top) * (Hv / (rect.height || Hv));
     var dX = ev.deltaX || 0, dY = ev.deltaY || 0;
     if(axisMode === "moments"){
-      if(ev.shiftKey || Math.abs(dX) > Math.abs(dY)){ momentsPan(-(ev.shiftKey ? dY : dX), MP.tx); }
-      else momentsZoomAt(Math.exp(-dY * (ev.ctrlKey ? 0.01 : 0.0016)), mx);
+      if(ev.shiftKey || Math.abs(dX) > Math.abs(dY)){ momentsPan(-(ev.shiftKey ? dY : dX), MP.tx, 0, MP.ty); }
+      else momentsZoomAt(Math.exp(-dY * (ev.ctrlKey ? 0.01 : 0.0016)), mx, my);
       renderChart();
       return;
     }
