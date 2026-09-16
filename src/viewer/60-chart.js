@@ -279,7 +279,7 @@ function renderChart(yOverride){
       tx.textContent = fmtYear(t);
       gTrunk.appendChild(tx);
     });
-  } else if(AX.mode === "moments"){
+  } else if(AX.mode === "moments" && !graphMode()){
     /* One band per kind of moment. The header is the kind and how many worlds
        pass through it - that count IS the convergence, so it is stated, not
        implied by a shade. */
@@ -359,11 +359,6 @@ function renderChart(yOverride){
     var a2 = sEl("text", {x:right, y:ay - 5, "text-anchor":"end"}, "axis-label major");
     a2.textContent = "tends to come later \u25b6";
     gTrunk.appendChild(a2);
-    if(AX.caption){
-      var mc = sEl("text", {x:right, y:Hv - 26, "text-anchor":"end"}, "axis-label");
-      mc.textContent = AX.caption.text;
-      gTrunk.appendChild(mc);
-    }
   } else {
     /* the fork zone: where worlds stop sharing our history */
     if(AX.caption){
@@ -439,11 +434,18 @@ function renderChart(yOverride){
 
   /* branches and the real history each one leans on */
   var targets = {};
-  lay.lanes.forEach(function(ln){
-    targets[ln.l.id] = ln.y;
-    gBranches.appendChild(renderBranch(ln, lay, budget, left, right, nx));
-    renderPrehistory(ln, lay, gPre, left, right);
-  });
+  if(AX.mode === "moments" && AX.columns && AX.columns.length){
+    /* The graph is a different picture, not the columns with different
+       spacing: one circle per kind of moment, an arc for each way a story
+       moves between them, and the arcs named. */
+    drawMomentGraph(gBranches, list, left, right);
+  } else {
+    lay.lanes.forEach(function(ln){
+      targets[ln.l.id] = ln.y;
+      gBranches.appendChild(renderBranch(ln, lay, budget, left, right, nx));
+      renderPrehistory(ln, lay, gPre, left, right);
+    });
+  }
 
   /* the scrubber lives in its own group and is moved in place, never re-rendered */
   var tyv = clamp(ty + panY, 30, Hv - 60);
@@ -481,6 +483,7 @@ function renderChart(yOverride){
     futuresFor:function(id, n){ return futuresFor(id, n); },
     renderFutures:function(item, fx){ return renderFutures(item, fx); },
     litBin:function(){ return litBin; },
+    litWorlds:function(){ return litWorlds; },
     visibleYears:function(){ return { from:yearForPx(LANE_R), to:yearForPx(W-12) }; },
     focusYear:function(year, halfSpan){
       view.c = year;

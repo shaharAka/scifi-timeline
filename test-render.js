@@ -345,6 +345,12 @@ const expectedEvents = payload.lineages.reduce((a, l) => a + l.events.length, 0)
    treated as off-screen rather than as a rendering failure. */
 const tl = sandbox.window.__timeline;
 if (!tl) fail("viewer did not publish window.__timeline; cannot verify visibility");
+/* This sweep is about the line-shaped views: a window in time, lanes, and an
+   event target per event. The Moments graph has none of those - its circles are
+   kinds of moment, and every world passes through them whatever the date - so
+   the sweep is run in a view it is about rather than in whatever the page
+   happens to open on. The graph is covered by its own assertions below. */
+setModeVia("order");
 const vis = tl.visibleYears();
 const drawn = new Set(svgNodes().map((n) => n.getAttribute("data-ev")).filter(Boolean));
 const missing = [];
@@ -432,8 +438,11 @@ attempt("wheel zoom", () => {
   chart.onwheel({ deltaY: -240, clientX: 900, clientY: 400, preventDefault() {} });
 });
 attempt("hover an event", () => {
-  const t = svgNodes().find((n) => n.getAttribute("data-ev") !== null);
-  if (!t) throw new Error("no event target to hover");
+  /* In the Moments graph a kind of moment is the interactive thing and there are
+     no per-event targets; the circles are what a pointer can land on. */
+  const t = svgNodes().find((n) => n.getAttribute("data-ev") !== null)
+         || svgNodes().find((n) => n.getAttribute("data-moment-node") !== null);
+  if (!t) throw new Error("no interactive target to hover");
   chart.onpointermove({ target: t, clientX: 500, clientY: 300 });
 });
 
@@ -442,6 +451,13 @@ attempt("hover an event", () => {
 attempt("world drawer for every lineage", () => {
   let opened = 0;
   const dossiers = new Set((payload.worlds || []).map((w) => w.id));
+  /* The lane targets exist in the line-shaped views. The graph has no lanes -
+     it is circles - so this walks the drawers in a view that has them, which is
+     what it is testing: the drawer, not the layout. The previous mode is
+     restored afterwards: tests that follow assert against whatever view is
+     current, so leaking a mode here breaks them in ways that look unrelated. */
+  const wasMode = debug().axisMode();
+  setModeVia("order");
   for (const l of payload.lineages) {
     const t = svgNodes().find((n) => n.getAttribute && n.getAttribute("data-lane") === l.id);
     if (!t) throw new Error("no lane target for " + l.id);
@@ -638,11 +654,12 @@ attempt("axis switch round-trip", () => {
 });
 
 
-/* ---- Moments: BRIEF-order-axis.md 2.4 --------------------------------------
-   The primary view. Columns are kinds of moment; the two things that must hold
-   are that a branch never runs backwards along the arc, and that a column's
-   count is the number of distinct worlds that pass through it. */
-attempt("moments view invariants", () => {
+/* ---- Moments: the graph of kinds of moment --------------------------------
+   The primary view draws a DIFFERENT picture from the line-shaped ones: one
+   circle per kind of moment, one arc for each way a story moves between two
+   kinds, and a name on the arcs that more than one world takes. There are no
+   lanes and no per-event targets here, so the assertions are about the graph. */
+attempt("moments graph invariants", () => {
   setModeVia("moments");
   const t = debug();
   if (t.axisMode() !== "moments") throw new Error("moments mode did not engage");
@@ -652,81 +669,48 @@ attempt("moments view invariants", () => {
   if (!binned) { soft("moments: no binned events in this payload, skipped"); return; }
   check(ax.columns.length > 0, "moments axis produced no columns");
 
-  /* reaching the view changed nothing about what is on canvas */
-  const seen = new Set(svgNodes().map((n) => n.getAttribute("data-ev")).filter(Boolean));
-  const all = [];
-  t.lineages.forEach((l) => l.events.forEach((e, i) => all.push({ id: l.id, e, key: l.id + "|" + i })));
-  const missing = all.filter((x) => !seen.has(x.key));
-  check(missing.length === 0,
-    `${missing.length} event(s) have no target in moments mode, e.g. ` +
-    missing.slice(0, 3).map((m) => `${m.id} ${m.e.year}`).join("; "));
+  /* the graph is drawn, and it is a graph: circles and arcs, not lanes */
+  const circles = svgNodes().filter((n) => n.getAttribute("data-moment-node") !== null);
+  const arcs = svgNodes().filter((n) => n.getAttribute("data-edge") !== null);
+  check(circles.length === ax.columns.length,
+    `${circles.length} circles drawn for ${ax.columns.length} kinds of moment`);
+  check(arcs.length > 0, "the graph drew no arcs between kinds");
 
-  /* What actually holds, and what does not.
-     NOT claimed: that a branch runs left to right. Columns are ordered by the
-     MEAN position of their events, and nothing makes a world's own path follow
-     that mean - worlds genuinely meet these kinds of moment in different
-     orders, and across the atlas 66 of 179 in-world transitions go backwards
-     against the arc. That is the subject matter, not a defect: it is how two
-     worlds can pass through the same moments and still differ.
-     What IS claimed: a branch's path is exactly its own bin sequence in its own
-     event order, so the zigzag the reader sees is the world's real order. */
-  let mismatchedPath = 0;
+  /* every kind is named on the canvas - the rules say nothing readable only on
+     hover, and here the name is the label beside the circle */
+  const named = new Set(svgNodes()
+    .filter((n) => n.classList && n.classList.contains("moment-node-label"))
+    .map((n) => String(n.textContent)));
+  check(named.size === ax.columns.length,
+    `${named.size} of ${ax.columns.length} kinds of moment are named on canvas`);
+
+  /* an arc exists for every transition the worlds actually make, counted from
+     the data rather than from the drawing */
+  const want = new Set();
   t.lineages.forEach((l) => {
-    const binEvts = l.events.filter((e) => e.bin);
-    binEvts.forEach((e, i) => {
-      const want = ax.x(l, e);
-      const xs = binEvts.map((x) => ax.x(l, x));
-      if (xs[i] !== want) mismatchedPath++;
+    const seq = [];
+    l.events.forEach((e) => {
+      if (e.bin && (seq.length === 0 || seq[seq.length - 1] !== e.bin)) seq.push(e.bin);
     });
+    for (let i = 1; i < seq.length; i++) want.add(seq[i - 1] + "\u0000" + seq[i]);
   });
-  check(mismatchedPath === 0, `${mismatchedPath} beat(s) do not sit where their kind's column is`);
+  check(arcs.length === want.size,
+    `${arcs.length} arcs drawn for ${want.size} transitions in the data`);
 
-  /* every beat sits in the column of its own bin */
-  let offColumn = 0;
-  const colX = {};
-  ax.columns.forEach((c) => { colX[c.bin] = c.cx; });
-  t.lineages.forEach((l) => {
-    l.events.forEach((e) => { if (e.bin && colX[e.bin] !== undefined
-      && Math.abs(ax.x(l, e) - colX[e.bin]) > 0.01) offColumn++; });
-  });
-  check(offColumn === 0, `${offColumn} beat(s) are not in their bin's column`);
-
-  /* and the count of worlds per column is the count the data supports */
-  const worldsWithKind = {};
-  t.lineages.forEach((l) => {
-    const seen = new Set();
-    l.events.forEach((e) => { if (e.bin) seen.add(e.bin); });
-    seen.forEach((b) => { worldsWithKind[b] = (worldsWithKind[b] || 0) + 1; });
-  });
-  let wrongCount = 0;
-  ax.columns.forEach((c) => {
-    if (c.worlds.size !== (worldsWithKind[c.bin] || 0)) wrongCount++;
-  });
-  check(wrongCount === 0, `${wrongCount} column(s) miscount the worlds that pass through`);
-
-  /* column count == distinct worlds with an event in that kind. Read from the
-     data, independently of the axis's own bookkeeping. */
+  /* a circle's world count is the number of worlds that pass through that kind */
   const expect = {};
   t.lineages.forEach((l) => {
     const here = new Set();
     l.events.forEach((e) => { if (e.bin) here.add(e.bin); });
     here.forEach((b) => { expect[b] = (expect[b] || 0) + 1; });
   });
-  let mismatched = 0;
-  ax.columns.forEach((c) => {
-    if (c.worlds.size !== (expect[c.bin] || 0)) mismatched++;
-  });
-  check(mismatched === 0, `${mismatched} column(s) report a world count the data does not support`);
+  let wrong = 0;
+  ax.columns.forEach((c) => { if (c.worlds.size !== (expect[c.bin] || 0)) wrong++; });
+  check(wrong === 0, `${wrong} circle(s) miscount the worlds that pass through`);
 
-  /* the columns are ordered by the arc, so their means are non-decreasing */
-  let outOfOrder = 0;
-  for (let i = 1; i < ax.columns.length; i++) {
-    if (ax.columns[i].mean < ax.columns[i - 1].mean - 1e-9) outOfOrder++;
-  }
-  check(outOfOrder === 0, `${outOfOrder} column(s) are out of arc order`);
-
-  soft(`moments: ${ax.columns.length} kinds, ${Object.keys(expect).length} used by events, ` +
-       `${ax.unbinned} event(s) with no kind`);
+  const shared = svgNodes().filter((n) => n.classList && n.classList.contains("shared"));
+  soft(`moments graph: ${circles.length} kinds, ${arcs.length} transitions, ` +
+       `${shared.length} of them taken by more than one world`);
 });
 
 /* ---- news -> futures: the reason the view exists --------------------------- */
@@ -734,31 +718,34 @@ attempt("news to futures", () => {
   setModeVia("moments");
   const t = debug();
   const ax = t.axis();
-  /* Pick a kind several worlds pass through, and stand in a news item that
-     carries it. The data has no binned news yet, so the item is synthetic -
-     what is under test is the mechanism, not the current vocabulary. */
   const busiest = ax.columns.slice().sort((a, b) => b.worlds.size - a.worlds.size)[0];
-  /* The fixture payload carries no bins, so there is nothing to match against.
-     Skipping is right: the mechanism is under test, not the vocabulary. */
   if (!busiest) { soft("news->futures: no binned events in this payload, skipped"); return; }
   const item = { headline: "test headline", bin: busiest.bin };
   const n = t.matchNews(item);
   check(n === busiest.worlds.size,
-    `match lit ${n} worlds but the column reports ${busiest.worlds.size}`);
+    `match lit ${n} worlds but the kind is passed through by ${busiest.worlds.size}`);
 
-  /* exactly those branches are lit, the rest are dimmed */
-  const groups = svgNodes().filter((x) => x.getAttribute("data-lane-group"));
-  const litIds = new Set(groups.filter((x) => x.classList.contains("sel"))
-                              .map((x) => x.getAttribute("data-lane-group")));
-  const dimIds = new Set(groups.filter((x) => x.classList.contains("dim"))
-                              .map((x) => x.getAttribute("data-lane-group")));
-  check(litIds.size === busiest.worlds.size,
-    `${litIds.size} branches lit, expected ${busiest.worlds.size}`);
-  Object.keys(busiest.worlds ? Object.fromEntries([...busiest.worlds].map((w) => [w, 1])) : {})
-    .forEach((id) => check(litIds.has(id), `world ${id} passes through the kind but is not lit`));
-  [...litIds].forEach((id) => check(!dimIds.has(id), `world ${id} is both lit and dimmed`));
+  /* The matched kind is spotted and every other circle recedes. Dimming by
+     "shares a world with the match" was the first attempt and lit 31 of 32 -
+     worlds pass through many kinds, so that marks everything and says nothing. */
+  const nodes = svgNodes().filter((x) => x.getAttribute("data-moment-node") !== null);
+  const dimmed = nodes.filter((x) => x.getAttribute("opacity") === "0.28");
+  const spotted = nodes.filter((x) => x.getAttribute("data-moment-node") === busiest.bin);
+  check(spotted.length === 1, `the matched kind has ${spotted.length} circles, expected 1`);
+  check(!spotted[0].getAttribute("opacity"),
+    "the matched kind is dimmed; the match should spotlight it");
+  check(dimmed.length === nodes.length - 1,
+    `${dimmed.length} circles dimmed, expected ${nodes.length - 1} of ${nodes.length}`);
 
-  /* and the futures are read forward, in this world's own order */
+  /* the lit worlds are carried by the arcs: the roads they walk stay bright */
+  const arcOpacity = svgNodes()
+    .filter((x) => x.getAttribute("data-edge") !== null)
+    .map((x) => parseFloat(x.getAttribute("opacity")))
+    .filter((v) => !isNaN(v));
+  check(arcOpacity.some((v) => v >= 0.9), "no arc stayed bright for the matched worlds");
+  check(arcOpacity.some((v) => v <= 0.1), "no arc receded; the match did not narrow anything");
+
+  /* the futures are read forward, in each world's own order */
   const fx = t.futuresFor(busiest.bin);
   check(fx.length === busiest.worlds.size,
     `futures returned for ${fx.length} worlds, expected ${busiest.worlds.size}`);
@@ -768,8 +755,6 @@ attempt("news to futures", () => {
   });
   const withNext = fx.filter((f) => f.after.length).length;
   check(withNext > 0, "no world has anything after the match, so there is no future to read");
-
-  /* a kind nobody passes through is reported, not silently empty */
   check(t.futuresFor("no-such-kind").length === 0, "unknown kind returned futures");
 
   t.renderFutures(item, fx);
@@ -780,8 +765,8 @@ attempt("news to futures", () => {
 
   t.clearMatch();
   check(!t.litBin(), "clearing the match left it lit");
-  setModeVia("moments");      /* leave the axis where the next test expects it */
-  soft(`news->futures: "${busiest.spec.label || busiest.bin}" lit ${litIds.size} worlds, ` +
+  setModeVia("moments");
+  soft(`news->futures: "${busiest.spec.label || busiest.bin}" lit ${busiest.worlds.size} worlds, ` +
        `${withNext} with beats after the match`);
 });
 

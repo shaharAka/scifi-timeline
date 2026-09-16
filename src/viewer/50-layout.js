@@ -46,7 +46,10 @@ function layout(list){
      row it takes; reserving a strip at the top is the only clear ground. How
      tall that strip is comes from the labels themselves - see momentHeadRows. */
   var head = 0;
-  if(typeof AX !== "undefined" && AX && AX.mode === "moments" && AX.columns){
+  /* The graph names its kinds on the circles themselves, so no strip is
+     reserved when it is the picture being drawn. */
+  if(typeof AX !== "undefined" && AX && AX.mode === "moments"
+     && AX.columns && !graphMode() && typeof momentHeadRows === "function"){
     momentRowsCache = momentHeadRows(AX.columns);
     head = momentRowsCache.height;
   }

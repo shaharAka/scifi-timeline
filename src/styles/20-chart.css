@@ -137,3 +137,15 @@
 .arc-rule{stroke:var(--line-2);stroke-width:.5}
 /* convergence: one capsule per kind, sized by how many worlds pass through it */
 .moment-capsule{fill:var(--now)}
+
+/* the Moments graph: circles and the arcs between them */
+.graph-edge{fill:none;stroke:var(--ink-3);stroke-opacity:.30}
+.graph-edge.shared{stroke:var(--trunk);stroke-opacity:.75}
+.graph-edge-label{font-size:var(--fs-0);fill:var(--trunk);font-weight:600;
+  paint-order:stroke;stroke:var(--bg);stroke-width:3px;stroke-linejoin:round}
+.moment-circle{fill:var(--surface)}
+.moment-ring{fill:none;stroke:var(--trunk);stroke-width:1.2}
+.graph-node:hover .moment-ring{stroke-width:2.4}
+.moment-node-label{font-size:var(--fs-1);font-weight:700;fill:var(--ink-0);
+  paint-order:stroke;stroke:var(--bg);stroke-width:3px;stroke-linejoin:round}
+.moment-node-count{font-size:var(--fs-0);fill:var(--ink-4)}
