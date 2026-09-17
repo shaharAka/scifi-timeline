@@ -1,9 +1,9 @@
 {
  "meta": {
-  "generated": "2026-09-17T20:40:45Z",
+  "generated": "2026-09-17T20:43:08Z",
   "source": "data/parts/*.json",
-  "lineages": 25,
-  "events": 242,
+  "lineages": 26,
+  "events": 248,
   "groups": 5,
   "worlds": 24,
   "art": 24,
@@ -2865,6 +2865,270 @@
     }
    ],
    "groupingNote": "The special case in this archetype: the divergence is caused by its own future. The loop runs 2029 back to 1984 and forward again - the Terminator sent to prevent John Connor fathers him by dying, and its own wreckage is what lets Cyberdyne build Skynet, so Judgment Day is less a break from real history than a break real history produces. The 12 May 1984 arrival is the first real-world year this timeline is no longer ours (phase fork); 29 August 1997 is the load-bearing date; and the franchise then repeatedly pushes it, to 24 July 2004 in Rise of the Machines and to October 2017 in Genisys, while the Dark Fate branch cancels Skynet outright, kills John Connor in 1998 instead, and substitutes a different AI called Legion. Those later films reboot rather than continue, so the dates do not form one chain and the 1998 death is flagged as its own branch. On coverage: this is the only lineage in the group that leaves the twentieth century, with the 2003, 2004, 2017 and 2029 beats in T2 - so 2029 is our near future on the real axis even though it is the deep end of the story's own arc, which is exactly the distinction phase exists to record. The lineage is silent about T1: no Terminator film or series goes past 2029, and no deep-time event was invented to fill that tier."
+  },
+  {
+   "id": "canticle-for-leibowitz",
+   "title": "A Canticle for Leibowitz",
+   "medium": "book",
+   "creator": "Walter M. Miller Jr.",
+   "originYear": 1959,
+   "group": "post-industrial-collapse",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 1962,
+    "label": "The Flame Deluge",
+    "delta": "Real: 1962 — the Cuban Missile Crisis ends in a withdrawal and a telephone hotline, and the war that the century spent preparing for does not come. Fiction: it comes, and then the survivors turn on the knowledge that made it.",
+    "inUniverse": null,
+    "confidence": "medium",
+    "note": "Miller never puts a calendar year on the war. The novel was written in the late 1950s and its pre-war world is plainly the one its first readers lived in — Leibowitz is a Jewish electrical engineer working for the United States military, and the war is the one everybody expected. 1962 is chosen as the year that expectation came closest to being met, and the divergence note says so rather than implying the book dates it. The three parts that follow are six centuries apart, which the novel states; the second part is conventionally dated to 3174, the date the Japanese edition took for its title, and the other two follow from it."
+   },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "The species escapes to the stars and the Earth is burned again behind it — the same ending the book opened with, which is the whole argument it is making.",
+    "asOf": 3781
+   },
+   "events": [
+    {
+     "id": "cl-flame-deluge-1962",
+     "year": 1962,
+     "date": "1962",
+     "title": "The Flame Deluge",
+     "description": "The nuclear exchange the century had been preparing for happens. Cities burn, the fallout drifts, and the states that fought it stop existing as states; what is left of the twentieth century is ruins, radiation and survivors who remember who did it.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The novel does not date the war; it is placed here in the year the crisis over Cuba nearly produced it, and the divergence field records that this is a choice. The story's own anchor is that its pre-war world is the reader's.",
+     "binWhy": "The nuclear war that our 1962 avoided is fought.",
+     "bin": "doomsday-weapon",
+     "facets": {
+      "change": "armed peace → global nuclear exchange",
+      "mechanism": "attack",
+      "actor": "state",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "rivalry",
+       "arms-race",
+       "existential-threat"
+      ],
+      "outcomes": [
+       "mass-death",
+       "collapse",
+       "state-dissolves"
+      ]
+     }
+    },
+    {
+     "id": "cl-simplification-1970",
+     "year": 1970,
+     "date": "c. 1970",
+     "title": "The Simplification",
+     "description": "The survivors turn on the thing that caused it. Mobs calling themselves Simpletons burn libraries and kill anyone who can read; by the end of it illiteracy is near-total and the accumulated knowledge of the species exists only in what a few people could carry in their heads or hide.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The novel describes the Simplification as following the war but never dates it; the span is set here at about a decade after, which is as much as the book supports. What it states plainly is the mechanism: the learned were killed, and books were burned.",
+     "binWhy": "The survivors destroy the knowledge that built the weapons.",
+     "bin": "secret-kept",
+     "facets": {
+      "change": "a literate world → an illiterate one, deliberately",
+      "mechanism": "attack",
+      "actor": "movement",
+      "position": "below",
+      "scope": "civilisational",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "disaster-just-struck",
+       "persecution"
+      ],
+      "outcomes": [
+       "collapse",
+       "isolation",
+       "despair"
+      ]
+     }
+    },
+    {
+     "id": "cl-order-founded-1980",
+     "year": 1980,
+     "date": "c. 1980",
+     "title": "The Albertian Order of Leibowitz",
+     "description": "A survivor who was an engineer before the war becomes a monk, and asks the Church for permission to found an order whose work is to hide books, copy them and remember them. Its abbey stands in the New Mexico desert, on a road that used to run from the Great Salt Lake to El Paso.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The founding follows the Simplification and precedes Leibowitz's martyrdom; the novel gives no years for either. The order's purpose is the one fact that matters here and it is stated directly.",
+     "binWhy": "An order is founded to preserve what the burning left.",
+     "bin": "secret-kept",
+     "facets": {
+      "change": "knowledge destroyed → knowledge hidden and copied",
+      "mechanism": "founding",
+      "actor": "movement",
+      "position": "below",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "persecution",
+       "post-collapse",
+       "taboo"
+      ],
+      "outcomes": [
+       "shelter-society",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "cl-francis-2574",
+     "year": 2574,
+     "date": "2574",
+     "title": "A novice finds the fallout shelter",
+     "description": "Six hundred years later a novice sheltering from wolves uncovers a buried fallout shelter holding handwritten notes and a shopping list on a memo pad. He spends fifteen years illuminating a copy of them, the order argues over whether the relics are genuine, and the Church eventually makes the engineer a saint.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The novel states that the abbey still keeps its Memorabilia 'six hundred years after his death'; it does not print the year. 2574 is that interval measured from the founding, and the Japanese edition's title dates this part to the 26th century, which agrees.",
+     "binWhy": "The buried record of the old world is found and read.",
+     "bin": "truth-revealed",
+     "facets": {
+      "change": "a buried shelter → a relic that makes a saint",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "below",
+      "scope": "local",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "religious-fervour",
+       "secrecy"
+      ],
+      "outcomes": [
+       "revelation",
+       "fervour",
+       "prestige"
+      ]
+     }
+    },
+    {
+     "id": "cl-renaissance-3174",
+     "year": 3174,
+     "date": "3174",
+     "title": "The new Renaissance rediscovers the atom",
+     "description": "Six hundred years on, the world has states again, and the scholars of the new civilisation work through the Memorabilia until they can do what the old one did. The first thing they rebuild is the weapon, and the Church that kept the knowledge alive watches it happen.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "This is the second part, which the novel places six centuries after the first. The 3174 date is the one the Japanese edition used as its title; the book itself says only 'six hundred years later'.",
+     "binWhy": "The recovered knowledge reaches nuclear weapons again.",
+     "bin": "doomsday-weapon",
+     "facets": {
+      "change": "a rebuilt civilisation → one that can destroy itself again",
+      "mechanism": "discovery",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "scientific",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "technological-race",
+       "prosperity"
+      ],
+      "outcomes": [
+       "arms-race",
+       "recovery",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "cl-colony-3781",
+     "year": 3781,
+     "date": "3781",
+     "title": "The starship leaves, and the Earth burns again",
+     "description": "As the second nuclear war begins, the Church loads a starship with monks, archives and a colony and launches it. The ship gets away; the planet behind it does not, and the last thing the book says is that the cycle has closed exactly where it started.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The third part, again six centuries after the second. The novel ends with the launch and the war, in that order, and the point of the ending is that it repeats the first.",
+     "binWhy": "A colony ship escapes a second nuclear war.",
+     "bin": "voyage-into-unknown",
+     "facets": {
+      "change": "a world about to end → a species leaving it",
+      "mechanism": "expedition",
+      "actor": "movement",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": -1
+      },
+      "preconditions": [
+       "existential-threat",
+       "long-war",
+       "religious-fervour"
+      ],
+      "outcomes": [
+       "colonisation",
+       "exodus",
+       "collapse"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs here because its fork is a war, not an invention, and its own history is the subject: the twentieth century ends the way the century feared, and everything after is the slow rebuilding and the second collapse. Tier coverage is T3 for the war, the burning and the founding (1962-1980) and T1 for the three six-century parts (2574, 3174, 3781); there is no T2 because the novel jumps from the decade after the war straight to the twenty-sixth century, and no T4 because its history begins in living memory.",
+   "epoch": "far-future"
   },
   {
    "id": "mad-max",

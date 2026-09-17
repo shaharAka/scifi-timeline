@@ -10,6 +10,270 @@
  },
  "lineages": [
   {
+   "id": "canticle-for-leibowitz",
+   "title": "A Canticle for Leibowitz",
+   "medium": "book",
+   "creator": "Walter M. Miller Jr.",
+   "originYear": 1959,
+   "group": "post-industrial-collapse",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 1962,
+    "label": "The Flame Deluge",
+    "delta": "Real: 1962 — the Cuban Missile Crisis ends in a withdrawal and a telephone hotline, and the war that the century spent preparing for does not come. Fiction: it comes, and then the survivors turn on the knowledge that made it.",
+    "inUniverse": null,
+    "confidence": "medium",
+    "note": "Miller never puts a calendar year on the war. The novel was written in the late 1950s and its pre-war world is plainly the one its first readers lived in — Leibowitz is a Jewish electrical engineer working for the United States military, and the war is the one everybody expected. 1962 is chosen as the year that expectation came closest to being met, and the divergence note says so rather than implying the book dates it. The three parts that follow are six centuries apart, which the novel states; the second part is conventionally dated to 3174, the date the Japanese edition took for its title, and the other two follow from it."
+   },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "The species escapes to the stars and the Earth is burned again behind it — the same ending the book opened with, which is the whole argument it is making.",
+    "asOf": 3781
+   },
+   "events": [
+    {
+     "id": "cl-flame-deluge-1962",
+     "year": 1962,
+     "date": "1962",
+     "title": "The Flame Deluge",
+     "description": "The nuclear exchange the century had been preparing for happens. Cities burn, the fallout drifts, and the states that fought it stop existing as states; what is left of the twentieth century is ruins, radiation and survivors who remember who did it.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The novel does not date the war; it is placed here in the year the crisis over Cuba nearly produced it, and the divergence field records that this is a choice. The story's own anchor is that its pre-war world is the reader's.",
+     "binWhy": "The nuclear war that our 1962 avoided is fought.",
+     "bin": "doomsday-weapon",
+     "facets": {
+      "change": "armed peace → global nuclear exchange",
+      "mechanism": "attack",
+      "actor": "state",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "rivalry",
+       "arms-race",
+       "existential-threat"
+      ],
+      "outcomes": [
+       "mass-death",
+       "collapse",
+       "state-dissolves"
+      ]
+     }
+    },
+    {
+     "id": "cl-simplification-1970",
+     "year": 1970,
+     "date": "c. 1970",
+     "title": "The Simplification",
+     "description": "The survivors turn on the thing that caused it. Mobs calling themselves Simpletons burn libraries and kill anyone who can read; by the end of it illiteracy is near-total and the accumulated knowledge of the species exists only in what a few people could carry in their heads or hide.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The novel describes the Simplification as following the war but never dates it; the span is set here at about a decade after, which is as much as the book supports. What it states plainly is the mechanism: the learned were killed, and books were burned.",
+     "binWhy": "The survivors destroy the knowledge that built the weapons.",
+     "bin": "secret-kept",
+     "facets": {
+      "change": "a literate world → an illiterate one, deliberately",
+      "mechanism": "attack",
+      "actor": "movement",
+      "position": "below",
+      "scope": "civilisational",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "disaster-just-struck",
+       "persecution"
+      ],
+      "outcomes": [
+       "collapse",
+       "isolation",
+       "despair"
+      ]
+     }
+    },
+    {
+     "id": "cl-order-founded-1980",
+     "year": 1980,
+     "date": "c. 1980",
+     "title": "The Albertian Order of Leibowitz",
+     "description": "A survivor who was an engineer before the war becomes a monk, and asks the Church for permission to found an order whose work is to hide books, copy them and remember them. Its abbey stands in the New Mexico desert, on a road that used to run from the Great Salt Lake to El Paso.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The founding follows the Simplification and precedes Leibowitz's martyrdom; the novel gives no years for either. The order's purpose is the one fact that matters here and it is stated directly.",
+     "binWhy": "An order is founded to preserve what the burning left.",
+     "bin": "secret-kept",
+     "facets": {
+      "change": "knowledge destroyed → knowledge hidden and copied",
+      "mechanism": "founding",
+      "actor": "movement",
+      "position": "below",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "persecution",
+       "post-collapse",
+       "taboo"
+      ],
+      "outcomes": [
+       "shelter-society",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "cl-francis-2574",
+     "year": 2574,
+     "date": "2574",
+     "title": "A novice finds the fallout shelter",
+     "description": "Six hundred years later a novice sheltering from wolves uncovers a buried fallout shelter holding handwritten notes and a shopping list on a memo pad. He spends fifteen years illuminating a copy of them, the order argues over whether the relics are genuine, and the Church eventually makes the engineer a saint.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The novel states that the abbey still keeps its Memorabilia 'six hundred years after his death'; it does not print the year. 2574 is that interval measured from the founding, and the Japanese edition's title dates this part to the 26th century, which agrees.",
+     "binWhy": "The buried record of the old world is found and read.",
+     "bin": "truth-revealed",
+     "facets": {
+      "change": "a buried shelter → a relic that makes a saint",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "below",
+      "scope": "local",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "religious-fervour",
+       "secrecy"
+      ],
+      "outcomes": [
+       "revelation",
+       "fervour",
+       "prestige"
+      ]
+     }
+    },
+    {
+     "id": "cl-renaissance-3174",
+     "year": 3174,
+     "date": "3174",
+     "title": "The new Renaissance rediscovers the atom",
+     "description": "Six hundred years on, the world has states again, and the scholars of the new civilisation work through the Memorabilia until they can do what the old one did. The first thing they rebuild is the weapon, and the Church that kept the knowledge alive watches it happen.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "This is the second part, which the novel places six centuries after the first. The 3174 date is the one the Japanese edition used as its title; the book itself says only 'six hundred years later'.",
+     "binWhy": "The recovered knowledge reaches nuclear weapons again.",
+     "bin": "doomsday-weapon",
+     "facets": {
+      "change": "a rebuilt civilisation → one that can destroy itself again",
+      "mechanism": "discovery",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "scientific",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "technological-race",
+       "prosperity"
+      ],
+      "outcomes": [
+       "arms-race",
+       "recovery",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "cl-colony-3781",
+     "year": 3781,
+     "date": "3781",
+     "title": "The starship leaves, and the Earth burns again",
+     "description": "As the second nuclear war begins, the Church loads a starship with monks, archives and a colony and launches it. The ship gets away; the planet behind it does not, and the last thing the book says is that the cycle has closed exactly where it started.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The third part, again six centuries after the second. The novel ends with the launch and the war, in that order, and the point of the ending is that it repeats the first.",
+     "binWhy": "A colony ship escapes a second nuclear war.",
+     "bin": "voyage-into-unknown",
+     "facets": {
+      "change": "a world about to end → a species leaving it",
+      "mechanism": "expedition",
+      "actor": "movement",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": -1
+      },
+      "preconditions": [
+       "existential-threat",
+       "long-war",
+       "religious-fervour"
+      ],
+      "outcomes": [
+       "colonisation",
+       "exodus",
+       "collapse"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs here because its fork is a war, not an invention, and its own history is the subject: the twentieth century ends the way the century feared, and everything after is the slow rebuilding and the second collapse. Tier coverage is T3 for the war, the burning and the founding (1962-1980) and T1 for the three six-century parts (2574, 3174, 3781); there is no T2 because the novel jumps from the decade after the war straight to the twenty-sixth century, and no T4 because its history begins in living memory.",
+   "epoch": "far-future"
+  },
+  {
    "id": "planet-of-the-apes",
    "title": "Planet of the Apes",
    "medium": "film",
@@ -741,6 +1005,274 @@
     }
    ],
    "groupingNote": "Mad Max is the archetype stripped to fuel: the world does not end in a war anyone wins, it runs out of oil, and everything after the first film is set among the wreckage of ordinary Australian life, a police interceptor, a refinery, a ruined Sydney. The fork is dated 1983 with low confidence because the collapse is described only in production and tie-in material, while the films' own dating runs from a title card reading 'a few years from now' to on-screen signage reading 6 December 1984. Tiers: this branch has no T1 and never will, because the franchise's furthest era is the Fury Road wasteland roughly forty-five to fifty years past its Fall, so Mad Max simply stops inside our own next century; the T4 entry is real-world background only (the oil age, 1859), and everything the fiction itself depicts from 1973 onward sits in T3 or T2. Miller's repeated insistence that the films have no strict chronology is the honest summary of this lineage's dates."
+  },
+  {
+   "id": "twelve-monkeys",
+   "title": "Twelve Monkeys",
+   "medium": "film",
+   "creator": "Terry Gilliam (dir.); David & Janet Peoples (screenplay), from Chris Marker's La Jetée",
+   "originYear": 1995,
+   "group": "post-industrial-collapse",
+   "epoch": "far-future",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 1996,
+    "label": "The virus is released in Philadelphia",
+    "delta": "Real: the winter of 1996 passes with no plague and five billion people live out their lives. Fiction: on 13 December 1996 a laboratory-grown virus is released in Philadelphia, and by 2035 the survivors are sealed underground, sending prisoners back to change a past that cannot be changed.",
+    "inUniverse": null,
+    "confidence": "high",
+    "note": "The 2035 scientists state the date on screen, describing the release as 'probably on December 13, 1996', with symptoms first detected in Philadelphia on 27 December; the film's opening card says five billion will die in 1997."
+   },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "The plague happens exactly as remembered; the loop closes, five billion die, and the survivors live underground.",
+    "asOf": 2035
+   },
+   "events": [
+    {
+     "id": "tm-flu-1889",
+     "year": 1889,
+     "date": "1889",
+     "title": "The Russian flu pandemic",
+     "description": "Real history, not fiction: a respiratory pandemic rides the new railway and steamship networks out of Central Asia and kills about a million people, the real rehearsal for the fiction's plague.",
+     "tier": "T4",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "disaster",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real-world background; death tolls vary by source.",
+     "binWhy": "A disease or biological failure strikes on a mass scale.",
+     "bin": "plague",
+     "facets": {
+      "change": "new railways → a pandemic rides them",
+      "mechanism": "disaster",
+      "actor": "nature",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "biological",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "global-travel"
+      ],
+      "outcomes": [
+       "mass-death"
+      ]
+     }
+    },
+    {
+     "id": "tm-trench-1917",
+     "year": 1917,
+     "date": "1917",
+     "title": "The first jump lands in the First World War",
+     "description": "A targeting error drops Cole into a trench in 1917, where he is shot in the leg, a wound that will still be in his thigh when he reaches 1996.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "On screen; the bullet is the object half of the film's time loop.",
+     "bin": "time-traveller-arrives",
+     "binWhy": "Someone or something arrives out of its own time and changes the present.",
+     "facets": {
+      "change": "a trench → a man from the future lands in it",
+      "mechanism": "arrival",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "local",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "long-war",
+       "time-loop"
+      ],
+      "outcomes": [
+       "time-lost"
+      ]
+     }
+    },
+    {
+     "id": "tm-jetee-1962",
+     "year": 1962,
+     "date": "1962",
+     "title": "La Jetée",
+     "description": "Chris Marker's photo-roman tells the same story with no dates at all, a man from a post-war underground sent back to a woman on a pier, and gives Gilliam's film its structure and its ending.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real-world publication; La Jetée never dates its Third World War or its future.",
+     "binWhy": "A real-world publication or release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "tm-1990",
+     "year": 1990,
+     "date": "April 1990",
+     "title": "The second jump lands in 1990",
+     "description": "Sent to 1996, Cole arrives six years early, is arrested, and meets Jeffrey Goines and Dr Railly in a Baltimore asylum, seeding the false lead that runs through the rest of the film.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Railly states 'This is 1990'; the opening title card is dated 12 April 1990.",
+     "bin": "time-traveller-arrives",
+     "binWhy": "Someone or something arrives out of its own time and changes the present.",
+     "facets": {
+      "change": "an asylum → a man from the future, six years early",
+      "mechanism": "arrival",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "local",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "time-loop"
+      ],
+      "outcomes": [
+       "hunt-begins",
+       "ignorance"
+      ]
+     }
+    },
+    {
+     "id": "tm-release-1996",
+     "year": 1996,
+     "date": "13 December 1996",
+     "title": "The virus is released, and the loop closes",
+     "description": "Cole's jump lands in November 1996 and in December he is shot dead at Philadelphia airport in front of his own child self while Dr Peters walks onto a plane carrying the virus, so the plague is not prevented but caused.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The 2035 scientists state the release date on screen; the Army of the Twelve Monkeys, whose name they blame, are animal-rights activists and a red herring, and the carrier is Goines's assistant, Dr Peters.",
+     "historyContradicts": false,
+     "bin": "plague",
+     "binWhy": "The virus is released; the plague is caused, not prevented.",
+     "facets": {
+      "change": "a plan to prevent → the virus released, the loop closed",
+      "mechanism": "attack",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "biological",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "religious-fervour",
+       "secrecy"
+      ],
+      "outcomes": [
+       "mass-death",
+       "collapse"
+      ]
+     }
+    },
+    {
+     "id": "tm-toll-1997",
+     "year": 1997,
+     "date": "1997",
+     "title": "Five billion dead",
+     "description": "Within a year the virus has reached every continent and killed about five billion people, the survivors seal themselves into underground compounds, and the industrial world above is finished.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "disaster",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The opening title card states that five billion people will die in 1997, and the film's ending confirms the outbreak is not averted.",
+     "bin": "plague",
+     "binWhy": "A disease or biological failure strikes on a mass scale.",
+     "facets": {
+      "change": "release → five billion dead within a year",
+      "mechanism": "disaster",
+      "actor": "nature",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "biological",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "plague-running"
+      ],
+      "outcomes": [
+       "mass-death",
+       "shelter-society",
+       "collapse"
+      ]
+     }
+    },
+    {
+     "id": "tm-future-2035",
+     "year": 2035,
+     "date": "2035",
+     "title": "The underground future",
+     "description": "The film's frame: Philadelphia is a sealed compound, dissidents are volunteered to the time programme, and scientists watch Cole's life on a screen while still trying to recover a pure sample of the original virus.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "note": "2035 is the standard citation and matches the film's 'thirty years' dialogue loosely; the year is never spoken on screen, and a strict reading of the dialogue implies about 2026.",
+     "bin": "long-after",
+     "binWhy": "A jump forward shows what the world became.",
+     "facets": {
+      "change": "the surface → sealed compounds; dissidents sent back",
+      "mechanism": "consolidation",
+      "actor": "state",
+      "position": "inside",
+      "scope": "local",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "shelter-society"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "hunt-begins"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Twelve Monkeys is this archetype in its bleakest form: a plague released in a single afternoon in 1996 has killed five billion people by 1997, and the film's future, a sealed underground Philadelphia in 2035, is the ruins. It belongs here because the industrial world does not fall to war or machines but to a laboratory sample carried onto a plane, and because the survivors' only project is reaching back into the world they lost. The paradoxes are the point and are worth stating together: the timeline is a single immutable loop, the message that sends Cole back is Railly's own 1996 voicemail, the bullet in his leg comes from the antique pistol Jose hands him in 1996, and the child who watches him die at the airport grows up to be him, so the plague is caused rather than prevented, and the film's own metaphor for this is Cole watching a movie that never changes. Note the phase anomaly: Cole's 1917 and 1990 scenes count as prehistory by year but are incursions from the branch's own future. Tiers: T2 holds only 2035 because that is the only future the film ever shows, and there is no T1 at all, since this branch ends thirty-nine years after its fork; T4 is real-world background only (the 1889 pandemic). The 2015-2018 television series is a separate continuity and is not counted here."
   },
   {
    "id": "fallout",
@@ -1638,274 +2170,6 @@
     }
    ],
    "groupingNote": "The Matrix is the archetype running backwards: the world that ends is a simulation of 1999 kept alive as a power plant, and the ruins the survivors inherit are their own cities under a black sky. Humanity loses a war to its own machines, scorches the sky to win it and is farmed in pods while the last free city hides underground, which is the group's mechanism taken to its logical end. The fork is the Machine War's start at 2139, the close of the canonically dated Second Renaissance range; Operation Dark Storm, which actually ends the human world, is undated on screen and placed at about 2145 here. Tiers: there is no T1, because under the dating the films themselves give (Morpheus's 'closer to 2199' plus the canonical sixty-year gap to Resurrections) this branch stops at 2259; only fan reconstructions that add five prior One-cycles push it past 2300, and that reading contradicts the dialogue. T4 is real-world background only (Babbage, 1834) and T3 holds the simulated 1999 alongside Turing's real 1950."
-  },
-  {
-   "id": "twelve-monkeys",
-   "title": "Twelve Monkeys",
-   "medium": "film",
-   "creator": "Terry Gilliam (dir.); David & Janet Peoples (screenplay), from Chris Marker's La Jetée",
-   "originYear": 1995,
-   "group": "post-industrial-collapse",
-   "epoch": "far-future",
-   "franchiseStatus": "concluded",
-   "divergence": {
-    "year": 1996,
-    "label": "The virus is released in Philadelphia",
-    "delta": "Real: the winter of 1996 passes with no plague and five billion people live out their lives. Fiction: on 13 December 1996 a laboratory-grown virus is released in Philadelphia, and by 2035 the survivors are sealed underground, sending prisoners back to change a past that cannot be changed.",
-    "inUniverse": null,
-    "confidence": "high",
-    "note": "The 2035 scientists state the date on screen, describing the release as 'probably on December 13, 1996', with symptoms first detected in Philadelphia on 27 December; the film's opening card says five billion will die in 1997."
-   },
-   "ending": {
-    "valence": "pessimistic",
-    "why": "The plague happens exactly as remembered; the loop closes, five billion die, and the survivors live underground.",
-    "asOf": 2035
-   },
-   "events": [
-    {
-     "id": "tm-flu-1889",
-     "year": 1889,
-     "date": "1889",
-     "title": "The Russian flu pandemic",
-     "description": "Real history, not fiction: a respiratory pandemic rides the new railway and steamship networks out of Central Asia and kills about a million people, the real rehearsal for the fiction's plague.",
-     "tier": "T4",
-     "phase": "prehistory",
-     "importance": 1,
-     "kind": "disaster",
-     "inUniverse": null,
-     "confidence": "high",
-     "note": "Real-world background; death tolls vary by source.",
-     "binWhy": "A disease or biological failure strikes on a mass scale.",
-     "bin": "plague",
-     "facets": {
-      "change": "new railways → a pandemic rides them",
-      "mechanism": "disaster",
-      "actor": "nature",
-      "position": "above",
-      "scope": "planetary",
-      "domain": "biological",
-      "direction": {
-       "power": 0,
-       "openness": -1,
-       "capability": 0,
-       "population": -1
-      },
-      "preconditions": [
-       "global-travel"
-      ],
-      "outcomes": [
-       "mass-death"
-      ]
-     }
-    },
-    {
-     "id": "tm-trench-1917",
-     "year": 1917,
-     "date": "1917",
-     "title": "The first jump lands in the First World War",
-     "description": "A targeting error drops Cole into a trench in 1917, where he is shot in the leg, a wound that will still be in his thigh when he reaches 1996.",
-     "tier": "T3",
-     "phase": "prehistory",
-     "importance": 1,
-     "kind": "event",
-     "inUniverse": null,
-     "confidence": "high",
-     "note": "On screen; the bullet is the object half of the film's time loop.",
-     "bin": "time-traveller-arrives",
-     "binWhy": "Someone or something arrives out of its own time and changes the present.",
-     "facets": {
-      "change": "a trench → a man from the future lands in it",
-      "mechanism": "arrival",
-      "actor": "individual",
-      "position": "outside",
-      "scope": "local",
-      "domain": "technological",
-      "direction": {
-       "power": 0,
-       "openness": 0,
-       "capability": 0,
-       "population": 0
-      },
-      "preconditions": [
-       "long-war",
-       "time-loop"
-      ],
-      "outcomes": [
-       "time-lost"
-      ]
-     }
-    },
-    {
-     "id": "tm-jetee-1962",
-     "year": 1962,
-     "date": "1962",
-     "title": "La Jetée",
-     "description": "Chris Marker's photo-roman tells the same story with no dates at all, a man from a post-war underground sent back to a woman on a pier, and gives Gilliam's film its structure and its ending.",
-     "tier": "T3",
-     "phase": "prehistory",
-     "importance": 1,
-     "kind": "publication",
-     "inUniverse": null,
-     "confidence": "high",
-     "note": "Real-world publication; La Jetée never dates its Third World War or its future.",
-     "binWhy": "A real-world publication or release date, not a moment in the story.",
-     "bin": null,
-     "facets": null
-    },
-    {
-     "id": "tm-1990",
-     "year": 1990,
-     "date": "April 1990",
-     "title": "The second jump lands in 1990",
-     "description": "Sent to 1996, Cole arrives six years early, is arrested, and meets Jeffrey Goines and Dr Railly in a Baltimore asylum, seeding the false lead that runs through the rest of the film.",
-     "tier": "T3",
-     "phase": "prehistory",
-     "importance": 2,
-     "kind": "event",
-     "inUniverse": null,
-     "confidence": "high",
-     "note": "Railly states 'This is 1990'; the opening title card is dated 12 April 1990.",
-     "bin": "time-traveller-arrives",
-     "binWhy": "Someone or something arrives out of its own time and changes the present.",
-     "facets": {
-      "change": "an asylum → a man from the future, six years early",
-      "mechanism": "arrival",
-      "actor": "individual",
-      "position": "outside",
-      "scope": "local",
-      "domain": "technological",
-      "direction": {
-       "power": 0,
-       "openness": 0,
-       "capability": 0,
-       "population": 0
-      },
-      "preconditions": [
-       "time-loop"
-      ],
-      "outcomes": [
-       "hunt-begins",
-       "ignorance"
-      ]
-     }
-    },
-    {
-     "id": "tm-release-1996",
-     "year": 1996,
-     "date": "13 December 1996",
-     "title": "The virus is released, and the loop closes",
-     "description": "Cole's jump lands in November 1996 and in December he is shot dead at Philadelphia airport in front of his own child self while Dr Peters walks onto a plane carrying the virus, so the plague is not prevented but caused.",
-     "tier": "T3",
-     "phase": "fork",
-     "importance": 3,
-     "kind": "publication",
-     "inUniverse": null,
-     "confidence": "high",
-     "note": "The 2035 scientists state the release date on screen; the Army of the Twelve Monkeys, whose name they blame, are animal-rights activists and a red herring, and the carrier is Goines's assistant, Dr Peters.",
-     "historyContradicts": false,
-     "bin": "plague",
-     "binWhy": "The virus is released; the plague is caused, not prevented.",
-     "facets": {
-      "change": "a plan to prevent → the virus released, the loop closed",
-      "mechanism": "attack",
-      "actor": "individual",
-      "position": "inside",
-      "scope": "planetary",
-      "domain": "biological",
-      "direction": {
-       "power": 0,
-       "openness": -1,
-       "capability": 0,
-       "population": -1
-      },
-      "preconditions": [
-       "religious-fervour",
-       "secrecy"
-      ],
-      "outcomes": [
-       "mass-death",
-       "collapse"
-      ]
-     }
-    },
-    {
-     "id": "tm-toll-1997",
-     "year": 1997,
-     "date": "1997",
-     "title": "Five billion dead",
-     "description": "Within a year the virus has reached every continent and killed about five billion people, the survivors seal themselves into underground compounds, and the industrial world above is finished.",
-     "tier": "T3",
-     "phase": "fork",
-     "importance": 3,
-     "kind": "disaster",
-     "inUniverse": null,
-     "confidence": "high",
-     "note": "The opening title card states that five billion people will die in 1997, and the film's ending confirms the outbreak is not averted.",
-     "bin": "plague",
-     "binWhy": "A disease or biological failure strikes on a mass scale.",
-     "facets": {
-      "change": "release → five billion dead within a year",
-      "mechanism": "disaster",
-      "actor": "nature",
-      "position": "above",
-      "scope": "planetary",
-      "domain": "biological",
-      "direction": {
-       "power": 0,
-       "openness": -1,
-       "capability": -1,
-       "population": -1
-      },
-      "preconditions": [
-       "plague-running"
-      ],
-      "outcomes": [
-       "mass-death",
-       "shelter-society",
-       "collapse"
-      ]
-     }
-    },
-    {
-     "id": "tm-future-2035",
-     "year": 2035,
-     "date": "2035",
-     "title": "The underground future",
-     "description": "The film's frame: Philadelphia is a sealed compound, dissidents are volunteered to the time programme, and scientists watch Cole's life on a screen while still trying to recover a pure sample of the original virus.",
-     "tier": "T2",
-     "phase": "aftermath",
-     "importance": 3,
-     "kind": "event",
-     "inUniverse": null,
-     "confidence": "medium",
-     "note": "2035 is the standard citation and matches the film's 'thirty years' dialogue loosely; the year is never spoken on screen, and a strict reading of the dialogue implies about 2026.",
-     "bin": "long-after",
-     "binWhy": "A jump forward shows what the world became.",
-     "facets": {
-      "change": "the surface → sealed compounds; dissidents sent back",
-      "mechanism": "consolidation",
-      "actor": "state",
-      "position": "inside",
-      "scope": "local",
-      "domain": "political",
-      "direction": {
-       "power": 1,
-       "openness": -1,
-       "capability": -1,
-       "population": 0
-      },
-      "preconditions": [
-       "post-collapse",
-       "shelter-society"
-      ],
-      "outcomes": [
-       "foreknowledge",
-       "hunt-begins"
-      ]
-     }
-    }
-   ],
-   "groupingNote": "Twelve Monkeys is this archetype in its bleakest form: a plague released in a single afternoon in 1996 has killed five billion people by 1997, and the film's future, a sealed underground Philadelphia in 2035, is the ruins. It belongs here because the industrial world does not fall to war or machines but to a laboratory sample carried onto a plane, and because the survivors' only project is reaching back into the world they lost. The paradoxes are the point and are worth stating together: the timeline is a single immutable loop, the message that sends Cole back is Railly's own 1996 voicemail, the bullet in his leg comes from the antique pistol Jose hands him in 1996, and the child who watches him die at the airport grows up to be him, so the plague is caused rather than prevented, and the film's own metaphor for this is Cole watching a movie that never changes. Note the phase anomaly: Cole's 1917 and 1990 scenes count as prehistory by year but are incursions from the branch's own future. Tiers: T2 holds only 2035 because that is the only future the film ever shows, and there is no T1 at all, since this branch ends thirty-nine years after its fork; T4 is real-world background only (the 1889 pandemic). The 2015-2018 television series is a separate continuity and is not counted here."
   }
  ]
 }
