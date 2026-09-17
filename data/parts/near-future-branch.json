@@ -10,6 +10,452 @@
  },
  "lineages": [
   {
+   "id": "blade-runner",
+   "title": "Blade Runner",
+   "medium": "film",
+   "creator": "Philip K. Dick (novel); Ridley Scott (film)",
+   "originYear": 1982,
+   "group": "near-future-branch",
+   "franchiseStatus": "dormant",
+   "divergence": {
+    "year": 1980,
+    "label": "Tyrell Corporation is founded",
+    "delta": "Real: 1980 — the year before the IBM PC, when machine intelligence was a research programme and a phrase in a Philip K. Dick novel. Fiction: a company is already selling manufactured people, and the off-world colonies need them.",
+    "inUniverse": "Tyrell Corporation founded, 1980 (Blade Runner 2049 opening titles; the first of the dates the film states outright)",
+    "confidence": "high",
+    "note": "Blade Runner is unusual here in needing no conversion: the films state their own years, and their years are ours. The 1982 film is set in November 2019, and 2049 says 2049. The fork is placed at the founding of Tyrell in 1980, which the sequel states in its opening titles, rather than at the 1982 release — a lineage cannot share a year with its own origin, and 1980 is the earliest in-universe date either film gives."
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "The child exists, the reproduction is confirmed, and the wall between the made and the born is coming down — which is where K chooses a side and dies for it.",
+    "asOf": 2049
+   },
+   "events": [
+    {
+     "id": "br-tyrell-1980",
+     "year": 1980,
+     "date": "1980",
+     "title": "The Tyrell Corporation is founded",
+     "description": "A company begins selling manufactured humans while the rest of the world is still arguing about whether machines can think. The off-world colonies are the market: a workforce that cannot refuse, cannot organise and does not need to be fed properly.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The date is stated in the opening titles of Blade Runner 2049. In our 1980 the nearest equivalents are the first personal computers and a symbolic-AI research programme; the fiction's fork is that artificial people became a product two decades before they became a research result.",
+     "binWhy": "A company begins manufacturing people; the real 1980 has no equivalent.",
+     "bin": "new-technology-deployed",
+     "facets": {
+      "change": "theory → manufactured people for sale",
+      "mechanism": "invention",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "technological-race",
+       "prosperity"
+      ],
+      "outcomes": [
+       "dependency",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "br-2019",
+     "year": 2019,
+     "date": "2019-11",
+     "title": "Four Nexus-6 replicants come back to Earth",
+     "description": "A combat model with a four-year lifespan escapes an off-world colony, kills its crew and reaches Los Angeles looking for its maker. A retired blade runner is put on them; all four are dead within days, and so is the man who made them.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The film states November 2019 on screen. In our November 2019 Los Angeles there is no off-world traffic, no replicants and no blade runners; the fiction's 2019 is a fully industrialised version of ours with a manufactured underclass.",
+     "binWhy": "Manufactured people reach Earth and are hunted; in our 2019 they do not exist.",
+     "bin": "crackdown",
+     "facets": {
+      "change": "four replicants loose on Earth → all four dead",
+      "mechanism": "attack",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "local",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "segregation",
+       "machine-dependency"
+      ],
+      "outcomes": [
+       "hunt-begins",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "br-blackout-2022",
+     "year": 2022,
+     "date": "2022",
+     "title": "The Blackout",
+     "description": "A detonation above the West Coast destroys the world's data and its backups for days. Replicants are banned outright, Tyrell's remaining stock is legislated out of existence, and the records that would prove who was made and who was born are gone.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The Blackout is animation-anthology canon (Black Out 2022, written by Kenji Kamiyama and Shinichiro Watanabe's studio) and is treated as history by the 2049 film. Its real-world date sits inside living memory as an EMP event that never happened.",
+     "binWhy": "The archive that distinguished made from born is destroyed and replicants are banned outright.",
+     "bin": "crackdown",
+     "facets": {
+      "change": "records and replicants alike → a blackout and a ban",
+      "mechanism": "attack",
+      "actor": "faction",
+      "position": "below",
+      "scope": "civilisational",
+      "domain": "technological",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "segregation",
+       "machine-dependency"
+      ],
+      "outcomes": [
+       "suppression",
+       "collapse",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "br-wallace-2028",
+     "year": 2028,
+     "date": "2028",
+     "title": "Wallace rebuilds the industry",
+     "description": "Niander Wallace buys what is left of Tyrell, solves the protein supply and gets the ban lifted by making his new models obedient by construction. Within a decade the colonies run again and no one asks what the obedience costs.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Stated in the 2049 film's timeline. The real 2028 has no off-world colonies; the fiction's point is that the industry comes back with better compliance rather than better ethics.",
+     "binWhy": "A corporation restores replicant production and has the ban lifted.",
+     "bin": "new-technology-deployed",
+     "facets": {
+      "change": "banned industry → a licensed one",
+      "mechanism": "invention",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "economic",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "segregation",
+       "prosperity"
+      ],
+      "outcomes": [
+       "dependency",
+       "new-actors",
+       "recovery"
+      ]
+     }
+    },
+    {
+     "id": "br-miracle-2049",
+     "year": 2049,
+     "date": "2049",
+     "title": "A replicant is found to have been pregnant",
+     "description": "A blade runner uncovers a buried record: a replicant died giving birth. The corporation that makes replicants wants the method; the people who hid the child want her left alone; and the knowledge that the made can make is the end of the wall between them.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The film states 2049 on screen. The real 2049 is outside everything in this dataset's near-future group except as projection; the event is a census problem that turns into a political one.",
+     "binWhy": "Replicant reproduction is confirmed; the distinction between made and born fails.",
+     "bin": "truth-revealed",
+     "facets": {
+      "change": "a buried record → a species that can reproduce",
+      "mechanism": "disclosure",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 1
+      },
+      "preconditions": [
+       "segregation",
+       "cover-up",
+       "machine-dependency"
+      ],
+      "outcomes": [
+       "revelation",
+       "new-actors",
+       "resistance-forms"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs here because its fork is an invention inside a world that is plainly ours, and its dates are ours: the films state 2019 and 2049 outright, so nothing has to be converted. Tier coverage is T3 for the fork (1980) and T2 for everything after it (2019-2049); there is no T4 because the fiction reaches back only to its own founding, and no T1 because the story never leaves the century.",
+   "epoch": "present"
+  },
+  {
+   "id": "contact",
+   "title": "Contact",
+   "medium": "film",
+   "creator": "Carl Sagan (novel); Robert Zemeckis (film)",
+   "originYear": 1997,
+   "group": "near-future-branch",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 1997,
+    "label": "The Vega signal",
+    "delta": "Real: 1997 — Mars Pathfinder lands, Deep Blue beats Kasparov, and SETI's news is a budget fight. Fiction: a prime-number carrier wave from Vega is picked up in New Mexico, and because Vega is 26 light years away the answer to Earth's own first television broadcast has been travelling toward us since the 1960s.",
+    "inUniverse": null,
+    "confidence": "medium",
+    "note": "No calendar year is displayed on screen. The film runs from Ellie's move to the VLA (marked by an on-screen 'FOUR YEARS LATER' card) to a present that references the March 1997 Heaven's Gate suicides, so the signal lands c. 1997. Sagan's novel never dates the detection at all — Argus had been operating 'more than four years' when the signal came — and its one stated date is the Hokkaido Machine's launch on 31 December 1999."
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "Contact is made, the machine works, and the message hidden in pi says the universe was written by someone.",
+    "asOf": 2000
+   },
+   "events": [
+    {
+     "id": "contact-berlin-1936",
+     "year": 1936,
+     "date": "1936",
+     "title": "The Berlin Olympics leak into space",
+     "description": "The first television transmission strong enough to escape the ionosphere carries Hitler's opening address at the Berlin Games past the Earth — the signal the Vegans will one day answer.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "note": "The 1936 Games were in fact the first live television broadcast; the claim that the transmission escaped the ionosphere and reached Vega is the fiction's conceit, and it is the only pre-1960s history the story uses.",
+     "binWhy": "The first transmission strong enough to leave the planet.",
+     "bin": "new-technology-deployed",
+     "facets": {
+      "change": "silence → the first broadcast strong enough to leave",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "one-party-state"
+      ],
+      "outcomes": [
+       "contact"
+      ]
+     }
+    },
+    {
+     "id": "contact-treatment-1979",
+     "year": 1979,
+     "date": "1979",
+     "title": "Sagan and Druyan write the treatment",
+     "description": "Sagan and Ann Druyan begin Contact as a film treatment; when development stalls Sagan turns it into a novel, which is why the story's first contact is dated so close to its own writing.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Work began in 1979 and the treatment was finished in November 1980; the novel followed in September 1985.",
+     "binWhy": "A real-world publication or release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "contact-novel-published",
+     "year": 1985,
+     "date": "September 1985",
+     "title": "Sagan publishes Contact",
+     "description": "Sagan's only novel turns his SETI hopes into a first-contact story set in the last years of its own century, with the Machine built by recognisable governments at recognisable expense.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The novel's climax is explicitly the millennium: the Hokkaido Machine launches on 31 December 1999, with the Soviet Union still standing.",
+     "binWhy": "A real-world publication or release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "contact-sagan-death",
+     "year": 1996,
+     "date": "20 December 1996",
+     "title": "Carl Sagan dies",
+     "description": "Sagan dies before the film is finished; the adaptation arrives the following year carrying his and Druyan's story credit and a 'For Carl' dedication, which is why the film's dates track its own production decade rather than the novel's.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Filming ran from September 1996 to February 1997 and was briefly halted by the news of his death.",
+     "binWhy": "A real-world publication or release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "contact-vega-signal",
+     "year": 1997,
+     "date": "1997",
+     "title": "The Vega signal",
+     "description": "At the Very Large Array, Ellie Arroway finds a prime-number transmission from Vega, then a video of the 1936 Olympics and sixty-three thousand pages of machine schematics hidden beneath it.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "first-contact",
+     "inUniverse": null,
+     "confidence": "medium",
+     "note": "Placed at the film's own present (1997) on the strength of its 'FOUR YEARS LATER' card and its Heaven's Gate news reference; the script allows 1996-97, and the novel never states a year for the detection.",
+     "bin": "first-contact",
+     "binWhy": "A non-human intelligence is confirmed, met or intervenes.",
+     "facets": {
+      "change": "listening → a prime-number transmission answers",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "isolation",
+       "rivalry"
+      ],
+      "outcomes": [
+       "contact",
+       "diplomacy",
+       "fervour"
+      ]
+     }
+    },
+    {
+     "id": "contact-machine-1999",
+     "year": 1999,
+     "date": "31 December 1999",
+     "title": "Ellie Arroway rides the Machine",
+     "description": "After the first machine — Wyoming in the novel, Cape Canaveral in the film — is destroyed during testing by religious fanatics, a secretly built machine in Hokkaido carries Ellie through a wormhole to a station near the galactic centre and back, with almost no time passing on Earth.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "first-contact",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The novel states the Hokkaido launch date outright and seats five travellers in a dodecahedron; the film keeps Hokkaido as the surviving site but makes it a one-person pod and gives no date. The novel's Hokkaido machine is the third built, the film's is the second.",
+     "bin": "gateway-opens",
+     "binWhy": "A passage to somewhere unreachable is found or made.",
+     "facets": {
+      "change": "the schematics → a machine built and ridden",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "contact-made",
+       "religious-fervour"
+      ],
+      "outcomes": [
+       "contact",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "contact-pi-message",
+     "year": 2000,
+     "date": "2000",
+     "title": "The message hidden in pi",
+     "description": "Computing pi far beyond any practical need, Ellie finds a circle drawn in binary deep inside its expansion — evidence that the universe itself was engineered, and that her journey cannot be dismissed as a hoax.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "discovery",
+     "inUniverse": null,
+     "confidence": "low",
+     "note": "The novel's last chapter is undated: the computation follows the 31 December 1999 journey and her mother's death, and summaries place it anywhere from immediately after to 'years later', so 2000 is an inference. The film drops the pi revelation and ends with eighteen hours of unexplained static instead, which is stated on screen.",
+     "bin": "truth-revealed",
+     "binWhy": "What was hidden is exposed.",
+     "facets": {
+      "change": "a dismissed journey → proof written into mathematics",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "cover-up"
+      ],
+      "outcomes": [
+       "revelation"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs here because Sagan puts first contact barely a decade ahead of his readers and Zemeckis sets the film in its own release year: the Machine is funded, built and bombed by recognisable 1990s institutions, inside a world that is plainly ours. Tier coverage is honest but narrow — six T3 events (1936-1999) built from the 1936 broadcast, the novel, the film, Sagan's death and the signal; a single T2 beat (2000, the pi revelation); no T4, because the story's history reaches back only to the Berlin Olympics; and no T1, because no sequel, adaptation or tie-in ever carries Contact past the year 2000.",
+   "epoch": "present"
+  },
+  {
    "id": "2001-space-odyssey",
    "title": "2001: A Space Odyssey",
    "medium": "film",
@@ -387,48 +833,385 @@
    "epoch": "present"
   },
   {
-   "id": "contact",
-   "title": "Contact",
+   "id": "children-of-men",
+   "title": "Children of Men",
    "medium": "film",
-   "creator": "Carl Sagan (novel); Robert Zemeckis (film)",
-   "originYear": 1997,
+   "creator": "Alfonso Cuaron (film); P. D. James (novel)",
+   "originYear": 2006,
    "group": "near-future-branch",
    "franchiseStatus": "concluded",
    "divergence": {
-    "year": 1997,
-    "label": "The Vega signal",
-    "delta": "Real: 1997 — Mars Pathfinder lands, Deep Blue beats Kasparov, and SETI's news is a budget fight. Fiction: a prime-number carrier wave from Vega is picked up in New Mexico, and because Vega is 26 light years away the answer to Earth's own first television broadcast has been travelling toward us since the 1960s.",
+    "year": 2009,
+    "label": "Humanity stops reproducing",
+    "delta": "Real: 2009 — a financial crash, a new American president, the first iPhone 3GS; birth rates fall but babies keep arriving. Fiction: somewhere in 2009 the human race becomes infertile, and the last child born that year grows up to be the most famous person alive.",
     "inUniverse": null,
     "confidence": "medium",
-    "note": "No calendar year is displayed on screen. The film runs from Ellie's move to the VLA (marked by an on-screen 'FOUR YEARS LATER' card) to a present that references the March 1997 Heaven's Gate suicides, so the signal lands c. 1997. Sagan's novel never dates the detection at all — Argus had been operating 'more than four years' when the signal came — and its one stated date is the Hokkaido Machine's launch on 31 December 1999."
+    "note": "The film never says 2009 out loud: it follows from Baby Diego being eighteen (his on-screen age is given to the hour) in the film's 2027 present, described as 'eighteen years of infertility'. P. D. James's novel puts the same event in 1995 ('Year Omega'), with the last birth on 19 October 1995, and sets its story in January 2021 — the adaptation keeps the roughly eighteen-year gap but shifts both forward and swaps male infertility for female."
    },
    "ending": {
-    "valence": "optimistic",
-    "why": "Contact is made, the machine works, and the message hidden in pi says the universe was written by someone.",
-    "asOf": 2000
+    "valence": "unknown",
+    "why": "One child is born and one boat is met at sea; whether the Human Project exists, or the species recovers, is never shown.",
+    "asOf": 2027
    },
    "events": [
     {
-     "id": "contact-berlin-1936",
-     "year": 1936,
-     "date": "1936",
-     "title": "The Berlin Olympics leak into space",
-     "description": "The first television transmission strong enough to escape the ionosphere carries Hitler's opening address at the Berlin Games past the Earth — the signal the Vegans will one day answer.",
+     "id": "children-of-men-novel",
+     "year": 1992,
+     "date": "1992",
+     "title": "P. D. James publishes The Children of Men",
+     "description": "James imagines England in 2021, twenty-six years after the last human birth, ruled by a self-appointed Warden and quietly organising its own extinction.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The novel's own dates are 1995 for the onset of infertility and January 2021 (its first diary entry is headed Friday 1 January 2021) for the story.",
+     "binWhy": "A real-world publication or release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "children-of-men-year-omega",
+     "year": 1995,
+     "date": "19 October 1995",
+     "title": "Year Omega (novel continuity)",
+     "description": "In the novel the human race stops reproducing: all human sperm, even frozen, loses potency, and the last child is born — Joseph Ricardo, who is killed in a Buenos Aires pub brawl at twenty-five as the novel opens.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "medium",
+     "note": "Novel continuity only, and male infertility rather than the film's female infertility; the film moves the same event to 2009 and the last child is Baby Diego. James calls 1995 'Year Omega'.",
+     "historyContradicts": false,
+     "bin": "plague",
+     "binWhy": "Every human loses the ability to reproduce.",
+     "facets": {
+      "change": "fertile → no births anywhere",
+      "mechanism": "disaster",
+      "actor": "nature",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "biological",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [],
+      "outcomes": [
+       "despair",
+       "closing-borders",
+       "extinction-risk"
+      ]
+     }
+    },
+    {
+     "id": "children-of-men-film",
+     "year": 2006,
+     "date": "2006",
+     "title": "Cuaron's film released",
+     "description": "The adaptation keeps the infertility but moves the story to a Britain of internment camps and barricades, pushing the crisis into the audience's own recent past rather than the year of filming.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Released in 2006 and set twenty-one years later, in 2027.",
+     "binWhy": "A real-world publication or release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "children-of-men-infertility",
+     "year": 2009,
+     "date": "2009",
+     "title": "The last children are born",
+     "description": "Humanity becomes infertile; the cohort born in 2009 is the last, and the youngest of them — Baby Diego — is stabbed to death in Buenos Aires at eighteen as the film opens.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "disaster",
+     "inUniverse": null,
+     "confidence": "medium",
+     "note": "Inferred from the film's 'eighteen years of infertility' and Baby Diego's age of eighteen years and four months, which puts his birth in mid-2009; the novel's equivalent is the male infertility of 1995, so the year is contested across adaptations — but real 2009 delivered no such thing, which is the point of plotting it.",
+     "bin": "plague",
+     "binWhy": "A disease or biological failure strikes on a mass scale.",
+     "facets": {
+      "change": "fertile → the last children born",
+      "mechanism": "disaster",
+      "actor": "nature",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "biological",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [],
+      "outcomes": [
+       "despair",
+       "closing-borders",
+       "extinction-risk"
+      ]
+     }
+    },
+    {
+     "id": "children-of-men-julian-baby",
+     "year": 2021,
+     "date": "January 2021",
+     "title": "Julian's baby (novel ending)",
+     "description": "In the novel's present the dissident Julian gives birth to a boy, the first human birth in twenty-six years, and Theo Faron kills the Warden and takes his ring.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "note": "Novel continuity: the diary opens in January 2021 and the infertility dates from 1995. The film's equivalent birth happens in 2027 and is a girl, Kee's daughter.",
+     "bin": "chosen-one",
+     "binWhy": "A child is born or a person chosen on whom the future turns.",
+     "facets": {
+      "change": "twenty-six years without → a birth; the ruler killed",
+      "mechanism": "birth",
+      "actor": "individual",
+      "position": "below",
+      "scope": "national",
+      "domain": "biological",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 1
+      },
+      "preconditions": [
+       "one-party-state",
+       "existential-threat"
+      ],
+      "outcomes": [
+       "turning-point",
+       "succession-struggle"
+      ]
+     }
+    },
+    {
+     "id": "children-of-men-kee",
+     "year": 2027,
+     "date": "2027",
+     "title": "Kee's baby, and the ship Tomorrow",
+     "description": "In a Britain of refugee cages and closing borders, Kee gives birth to the first child in eighteen years and Theo gets her onto the fog-bound boat Tomorrow to reach the Human Project in the Azores.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "note": "The film never displays the year, but its own poster announces 'The year 2027: the last days of the human race. No child has been born for 18 years', and the opening news copy calls Diego's death a reminder of 'the 18 years of infertility'. Real 2027 is close, and no such crisis has happened.",
+     "bin": "chosen-one",
+     "binWhy": "A child is born or a person chosen on whom the future turns.",
+     "facets": {
+      "change": "eighteen years without → a birth, and a boat out",
+      "mechanism": "birth",
+      "actor": "individual",
+      "position": "below",
+      "scope": "national",
+      "domain": "biological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 1
+      },
+      "preconditions": [
+       "repression",
+       "existential-threat",
+       "isolation"
+      ],
+      "outcomes": [
+       "exodus",
+       "turning-point"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs here because the branch is opened by one biological event inside living memory — the species simply stops conceiving in 2009 — and everything else in the film, from the siege of Seattle to the camps at Bexhill, is ordinary twenty-first-century politics reacting to it. Tier coverage is deliberately narrow and honest: T3 holds the two source works and the novel's 1995 onset; T2 holds the film's 2009 fork, the novel's 2021 ending and the film's 2027 present; T4 is empty because nothing in the story reaches back before living memory, and T1 is empty because the fiction simply stops — the last image is a boat vanishing into fog, and no adaptation, sequel or tie-in carries it beyond 2027. Its own arithmetic (a final cohort born in 2009, or 1995 in the novel) implies extinction in the 2060s-2080s if the Human Project fails, but no source dates that.",
+   "epoch": "present"
+  },
+  {
+   "id": "interstellar",
+   "title": "Interstellar",
+   "medium": "film",
+   "creator": "Christopher Nolan",
+   "originYear": 2014,
+   "group": "near-future-branch",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 2019,
+    "label": "The wormhole near Saturn",
+    "delta": "Real: 2019 is the year LIGO's catalogue fills with black-hole mergers and a Chinese lander touches down on the far side of the Moon. Fiction: something opens a traversable wormhole near Saturn, and by 2067 it is the only way off a starving Earth.",
+    "inUniverse": null,
+    "confidence": "medium",
+    "note": "Nothing is dated on screen: the film says only that the wormhole 'appeared 48 years ago'. The year 2019 comes from Kip Thorne's tie-in book The Science of Interstellar, which Thorne introduces as his own extrapolation rather than Nolan's; chaining 2019 + 48 gives the standard 2067 present. The whole dating of this lineage is arithmetic from a tie-in reference, and the 13-year gap between the black-hole fall and Cooper's recovery is unexplained by any source."
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "The equation is solved from inside the tesseract, Earth is evacuated, and a new world waits at the end of the wormhole.",
+    "asOf": 2500
+   },
+   "events": [
+    {
+     "id": "interstellar-apollo",
+     "year": 1969,
+     "date": "20 July 1969",
+     "title": "Apollo 11, and the history the film rewrites",
+     "description": "The Moon landings happen; two generations later the film's schools teach that they were faked to bankrupt the Soviets, a measure of how far the blight era has rewritten its own past.",
      "tier": "T3",
      "phase": "prehistory",
      "importance": 2,
      "kind": "event",
      "inUniverse": null,
      "confidence": "medium",
-     "note": "The 1936 Games were in fact the first live television broadcast; the claim that the transmission escaped the ionosphere and reached Vega is the fiction's conceit, and it is the only pre-1960s history the story uses.",
-     "binWhy": "The first transmission strong enough to leave the planet.",
-     "bin": "new-technology-deployed",
+     "note": "The landing is real history; the classroom revisionism is canon dialogue in the film, undated there but implied to be a product of the crisis decades.",
+     "binWhy": "The state teaches that the Moon landings were faked.",
+     "bin": "secret-kept",
      "facets": {
-      "change": "silence → the first broadcast strong enough to leave",
-      "mechanism": "invention",
+      "change": "the landings → officially declared a hoax",
+      "mechanism": "law",
       "actor": "state",
       "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-ecological",
+       "post-collapse"
+      ],
+      "outcomes": [
+       "ignorance",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "interstellar-film-released",
+     "year": 2014,
+     "date": "November 2014",
+     "title": "Interstellar released",
+     "description": "Nolan's film arrives with Kip Thorne's gravitational physics attached, placing a wormhole 53 years into its own future and a blight only twenty years out.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "",
+     "binWhy": "A real-world publication or release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "interstellar-wormhole",
+     "year": 2019,
+     "date": "2019",
+     "title": "The wormhole is found",
+     "description": "An anomaly near Saturn turns out to be an artificial traversable wormhole; NASA's Lazarus missions follow it, and it becomes humanity's only route off Earth.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "discovery",
+     "inUniverse": null,
+     "confidence": "medium",
+     "note": "From the film's line that the wormhole appeared '48 years ago' relative to its 2067 present; the 2019 anchor itself is Kip Thorne's own extrapolation in the tie-in book, not something Nolan put on screen. The real 2019 produced gravitational-wave catalogues and no wormhole — the branch's fork is already behind us.",
+     "bin": "gateway-opens",
+     "binWhy": "A passage to somewhere unreachable is found or made.",
+     "facets": {
+      "change": "a dying world → a way off it appears near Saturn",
+      "mechanism": "discovery",
+      "actor": "outsider",
+      "position": "outside",
       "scope": "planetary",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-ecological"
+      ],
+      "outcomes": [
+       "opening",
+       "exodus"
+      ]
+     }
+    },
+    {
+     "id": "interstellar-blight",
+     "year": 2032,
+     "date": "c. 2032",
+     "title": "The blight",
+     "description": "A global crop blight begins destroying wheat, okra and finally everything but corn, collapsing food systems, triggering the Resource Wars and shrinking the human population.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "disaster",
+     "inUniverse": null,
+     "confidence": "low",
+     "note": "No year is spoken on screen; the onset in the 2030s is a reconstruction. The film supplies only relative escalation — by its 2067 present wheat has been gone 'seven years', okra that same year, and corn is all that is left.",
+     "bin": "plague",
+     "binWhy": "A blight destroys the food supply crop by crop.",
+     "facets": {
+      "change": "harvests → destroyed crop by crop",
+      "mechanism": "disaster",
+      "actor": "nature",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "biological",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [],
+      "outcomes": [
+       "collapse",
+       "mass-death"
+      ]
+     }
+    },
+    {
+     "id": "interstellar-lazarus",
+     "year": 2057,
+     "date": "2057",
+     "title": "The Lazarus missions",
+     "description": "With the Resource Wars over and NASA reduced to a hidden bunker, twelve one-way probes are sent through the wormhole; three worlds answer — Miller's water world, Mann's ice world and Edmunds' desert world.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "discovery",
+     "inUniverse": null,
+     "confidence": "medium",
+     "note": "Reconstructed from the film's on-screen statement that the Lazarus missions left ten years before its present; the twelve astronauts are led by Dr Mann, and only Miller, Mann and Edmunds are named.",
+     "bin": "voyage-into-unknown",
+     "binWhy": "A first mission leaves for territory nobody has reached.",
+     "facets": {
+      "change": "no way out → twelve one-way probes sent through",
+      "mechanism": "expedition",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
       "domain": "technological",
       "direction": {
        "power": 0,
@@ -437,86 +1220,114 @@
        "population": 0
       },
       "preconditions": [
-       "one-party-state"
+       "crisis-ecological",
+       "secrecy",
+       "post-collapse"
       ],
       "outcomes": [
-       "contact"
+       "exodus",
+       "foreknowledge"
       ]
      }
     },
     {
-     "id": "contact-treatment-1979",
-     "year": 1979,
-     "date": "1979",
-     "title": "Sagan and Druyan write the treatment",
-     "description": "Sagan and Ann Druyan begin Contact as a film treatment; when development stalls Sagan turns it into a novel, which is why the story's first contact is dated so close to its own writing.",
-     "tier": "T3",
-     "phase": "prehistory",
-     "importance": 1,
-     "kind": "publication",
-     "inUniverse": null,
-     "confidence": "high",
-     "note": "Work began in 1979 and the treatment was finished in November 1980; the novel followed in September 1985.",
-     "binWhy": "A real-world publication or release date, not a moment in the story.",
-     "bin": null,
-     "facets": null
-    },
-    {
-     "id": "contact-novel-published",
-     "year": 1985,
-     "date": "September 1985",
-     "title": "Sagan publishes Contact",
-     "description": "Sagan's only novel turns his SETI hopes into a first-contact story set in the last years of its own century, with the Machine built by recognisable governments at recognisable expense.",
-     "tier": "T3",
-     "phase": "prehistory",
-     "importance": 2,
-     "kind": "publication",
-     "inUniverse": null,
-     "confidence": "high",
-     "note": "The novel's climax is explicitly the millennium: the Hokkaido Machine launches on 31 December 1999, with the Soviet Union still standing.",
-     "binWhy": "A real-world publication or release date, not a moment in the story.",
-     "bin": null,
-     "facets": null
-    },
-    {
-     "id": "contact-sagan-death",
-     "year": 1996,
-     "date": "20 December 1996",
-     "title": "Carl Sagan dies",
-     "description": "Sagan dies before the film is finished; the adaptation arrives the following year carrying his and Druyan's story credit and a 'For Carl' dedication, which is why the film's dates track its own production decade rather than the novel's.",
-     "tier": "T3",
-     "phase": "prehistory",
-     "importance": 1,
-     "kind": "publication",
-     "inUniverse": null,
-     "confidence": "high",
-     "note": "Filming ran from September 1996 to February 1997 and was briefly halted by the news of his death.",
-     "binWhy": "A real-world publication or release date, not a moment in the story.",
-     "bin": null,
-     "facets": null
-    },
-    {
-     "id": "contact-vega-signal",
-     "year": 1997,
-     "date": "1997",
-     "title": "The Vega signal",
-     "description": "At the Very Large Array, Ellie Arroway finds a prime-number transmission from Vega, then a video of the 1936 Olympics and sixty-three thousand pages of machine schematics hidden beneath it.",
-     "tier": "T3",
-     "phase": "fork",
+     "id": "interstellar-endurance",
+     "year": 2067,
+     "date": "2067",
+     "title": "Cooper leaves on Endurance",
+     "description": "Dust storms and a failing harvest frame the film's present: Cooper joins NASA's last mission and the Endurance departs for Saturn and the wormhole while Murph stays behind with the gravity equation.",
+     "tier": "T2",
+     "phase": "aftermath",
      "importance": 3,
-     "kind": "first-contact",
+     "kind": "event",
      "inUniverse": null,
      "confidence": "medium",
-     "note": "Placed at the film's own present (1997) on the strength of its 'FOUR YEARS LATER' card and its Heaven's Gate news reference; the script allows 1996-97, and the novel never states a year for the detection.",
-     "bin": "first-contact",
-     "binWhy": "A non-human intelligence is confirmed, met or intervenes.",
+     "note": "Derived, not stated: 2019 plus the on-screen '48 years'. The film displays no year, and the day-level dates circulating online are fan reconstruction, so only the year is given here.",
+     "bin": "voyage-into-unknown",
+     "binWhy": "A first mission leaves for territory nobody has reached.",
      "facets": {
-      "change": "listening → a prime-number transmission answers",
-      "mechanism": "discovery",
-      "actor": "individual",
+      "change": "a failing harvest → the last mission leaves",
+      "mechanism": "expedition",
+      "actor": "state",
       "position": "inside",
       "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": -1
+      },
+      "preconditions": [
+       "existential-threat",
+       "crisis-ecological",
+       "secrecy"
+      ],
+      "outcomes": [
+       "exodus",
+       "time-lost"
+      ]
+     }
+    },
+    {
+     "id": "interstellar-millers-planet",
+     "year": 2069,
+     "date": "2069",
+     "title": "Miller's planet: three hours, twenty-three years",
+     "description": "One hour on the water world costs seven years outside it, so the landing party loses twenty-three years, Doyle, and any chance of catching the dead astronaut's signal.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "disaster",
+     "inUniverse": null,
+     "confidence": "medium",
+     "note": "Dated from the on-screen two-year transit to Saturn (2067-69) plus the stated dilation; the film gives the loss as twenty-three years, four months and eight days.",
+     "bin": "voyage-into-unknown",
+     "binWhy": "The voyage costs twenty-three years in three hours.",
+     "facets": {
+      "change": "three hours → twenty-three years lost",
+      "mechanism": "accident",
+      "actor": "nature",
+      "position": "above",
+      "scope": "local",
       "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "existential-threat"
+      ],
+      "outcomes": [
+       "time-lost",
+       "mass-death"
+      ]
+     }
+    },
+    {
+     "id": "interstellar-return",
+     "year": 2092,
+     "date": "2092",
+     "title": "Twenty-three years later: the return to Endurance",
+     "description": "Cooper and Brand come back to a ship where twenty-three years passed in three hours: Murph is an adult, Professor Brand is dead, and the mission moves on to Mann's planet, where Mann tries to kill Cooper and dies in orbit.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "note": "Derived from the on-screen 'twenty-three years, four months, eight days'; the same figure is why Murph's generation has grown up while Cooper has not aged.",
+     "binWhy": "A jump forward shows what the world became.",
+     "bin": "long-after",
+     "facets": {
+      "change": "the ship → reached after twenty-three years; a betrayal",
+      "mechanism": "arrival",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "local",
+      "domain": "technological",
       "direction": {
        "power": 0,
        "openness": 1,
@@ -524,37 +1335,35 @@
        "population": 0
       },
       "preconditions": [
-       "isolation",
-       "rivalry"
+       "time-lost"
       ],
       "outcomes": [
-       "contact",
-       "diplomacy",
-       "fervour"
+       "revelation",
+       "despair"
       ]
      }
     },
     {
-     "id": "contact-machine-1999",
-     "year": 1999,
-     "date": "31 December 1999",
-     "title": "Ellie Arroway rides the Machine",
-     "description": "After the first machine — Wyoming in the novel, Cape Canaveral in the film — is destroyed during testing by religious fanatics, a secretly built machine in Hokkaido carries Ellie through a wormhole to a station near the galactic centre and back, with almost no time passing on Earth.",
-     "tier": "T3",
-     "phase": "fork",
+     "id": "interstellar-tesseract",
+     "year": 2143,
+     "date": "c. 2143",
+     "title": "Gargantua, and the tesseract",
+     "description": "The slingshot around Gargantua costs fifty-one years; out of fuel, Cooper and TARS fall past the horizon into a tesseract built by future humans, where time is a physical dimension, and Cooper reaches back through Murph's bookshelf to hand her the quantum data that solves the gravity equation.",
+     "tier": "T2",
+     "phase": "deep",
      "importance": 3,
-     "kind": "first-contact",
+     "kind": "event",
      "inUniverse": null,
-     "confidence": "high",
-     "note": "The novel states the Hokkaido launch date outright and seats five travellers in a dodecahedron; the film keeps Hokkaido as the surviving site but makes it a one-person pod and gives no date. The novel's Hokkaido machine is the third built, the film's is the second.",
-     "bin": "gateway-opens",
-     "binWhy": "A passage to somewhere unreachable is found or made.",
+     "confidence": "medium",
+     "note": "Derived from the on-screen line that the manoeuvre 'will cost us 51 years' (2092 + 51). The tesseract's builders are outside time, so the scene's own dating is necessarily Cooper's, not theirs.",
+     "bin": "time-traveller-arrives",
+     "binWhy": "He reaches back through time to his daughter.",
      "facets": {
-      "change": "the schematics → a machine built and ridden",
-      "mechanism": "invention",
-      "actor": "state",
-      "position": "inside",
-      "scope": "planetary",
+      "change": "past the horizon → a message sent back through time",
+      "mechanism": "arrival",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "beyond",
       "domain": "cosmic",
       "direction": {
        "power": 0,
@@ -563,54 +1372,93 @@
        "population": 0
       },
       "preconditions": [
-       "contact-made",
-       "religious-fervour"
+       "existential-threat"
       ],
       "outcomes": [
-       "contact",
-       "cover-up"
+       "revelation",
+       "foreknowledge",
+       "transcendence"
       ]
      }
     },
     {
-     "id": "contact-pi-message",
-     "year": 2000,
-     "date": "2000",
-     "title": "The message hidden in pi",
-     "description": "Computing pi far beyond any practical need, Ellie finds a circle drawn in binary deep inside its expansion — evidence that the universe itself was engineered, and that her journey cannot be dismissed as a hoax.",
+     "id": "interstellar-cooper-station",
+     "year": 2156,
+     "date": "2156",
+     "title": "Cooper wakes, 124 years old",
+     "description": "Recovered near Saturn, Cooper wakes aboard Cooper Station, an O'Neill cylinder built with the equation Murph solved, finds his daughter an old woman on her deathbed, and steals a Ranger to go and find Brand.",
      "tier": "T2",
-     "phase": "aftermath",
+     "phase": "deep",
      "importance": 3,
-     "kind": "discovery",
+     "kind": "event",
      "inUniverse": null,
-     "confidence": "low",
-     "note": "The novel's last chapter is undated: the computation follows the 31 December 1999 journey and her mother's death, and summaries place it anywhere from immediately after to 'years later', so 2000 is an inference. The film drops the pi revelation and ends with eighteen hours of unexplained static instead, which is stated on screen.",
-     "bin": "truth-revealed",
-     "binWhy": "What was hidden is exposed.",
+     "confidence": "medium",
+     "note": "Derived from the on-screen 'you are 124 years old'; a 13-year gap between the 2143 fall and this recovery is unexplained by the film, and the final montage of Brand alone on Edmunds' planet is undated.",
+     "bin": "long-after",
+     "binWhy": "A jump forward shows what the world became.",
      "facets": {
-      "change": "a dismissed journey → proof written into mathematics",
-      "mechanism": "discovery",
+      "change": "a dying Earth → humanity living in orbit",
+      "mechanism": "arrival",
       "actor": "individual",
       "position": "inside",
-      "scope": "beyond",
-      "domain": "scientific",
+      "scope": "planetary",
+      "domain": "technological",
       "direction": {
        "power": 0,
        "openness": 1,
-       "capability": 0,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "exile",
+       "time-lost"
+      ],
+      "outcomes": [
+       "rebuilding",
+       "exodus"
+      ]
+     }
+    },
+    {
+     "id": "interstellar-bulk",
+     "year": 2500,
+     "date": "far future, undated",
+     "title": "The bulk",
+     "description": "Humanity's descendants have become five-dimensional beings for whom time is a navigable dimension, and by the film's own bootstrap logic they are the ones who opened the wormhole in 2019 and built the tesseract inside Gargantua.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "low",
+     "note": "Flagged deliberately: the film says only that they are us, 'a civilization that's evolved past the four dimensions', and never dates them, so 2500 is a marker for the branch's deep-time reach rather than a canon figure. If a strict no-invention reading is preferred, this is the one event to drop, leaving T1 empty.",
+     "bin": "beyond-human",
+     "binWhy": "Humanity's descendants are five-dimensional beings.",
+     "facets": {
+      "change": "humans → five-dimensional descendants who reached back",
+      "mechanism": "consolidation",
+      "actor": "movement",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
        "population": 0
       },
       "preconditions": [
-       "cover-up"
+       "exile"
       ],
       "outcomes": [
-       "revelation"
+       "transcendence",
+       "foreknowledge"
       ]
      }
     }
    ],
-   "groupingNote": "Belongs here because Sagan puts first contact barely a decade ahead of his readers and Zemeckis sets the film in its own release year: the Machine is funded, built and bombed by recognisable 1990s institutions, inside a world that is plainly ours. Tier coverage is honest but narrow — six T3 events (1936-1999) built from the 1936 broadcast, the novel, the film, Sagan's death and the signal; a single T2 beat (2000, the pi revelation); no T4, because the story's history reaches back only to the Berlin Olympics; and no T1, because no sequel, adaptation or tie-in ever carries Contact past the year 2000.",
-   "epoch": "present"
+   "groupingNote": "Belongs here because the film's fork is a single object — a wormhole that appears near Saturn in what is now our recent past — dropped into a recognisable, failing twenty-first-century Earth; the blight is slow climate catastrophe, not space opera, and everything after it is arithmetic on that one event. Tiers: nothing in the fiction reaches back before the Apollo era, so T4 is empty; T3 holds only 1969 and the film's own rewriting of it; T2 runs from the film's 2014 release through the blight, the Lazarus missions, the Endurance, the twenty-three lost years, the fifty-one-year slingshot and the 2156 Cooper Station epilogue; T1 holds one deliberately flagged marker for the undated fifth-dimensional 'bulk'. The film's final images — Brand alone on Edmunds' planet, the Plan B colony — are never dated, and the colony dates circulating online are fan reconstruction, so no event is given for them.",
+   "epoch": "far-future"
   },
   {
    "id": "the-expanse",
@@ -1257,634 +2105,6 @@
    ],
    "groupingNote": "The cleanest case in this group: no aliens arrive and no history is rewritten — this is what our own solar system becomes if one propulsion breakthrough lands, so the branch is drawn entirely in the fiction's own future. Tiers: T4 holds only the ring builders' two-billion-year-old payload; there is no T3 material, because the branch's history only starts in the twenty-first century; T2 carries the lunar and Martian settlements, the Epstein Drive and the Belt gold rush; T1 carries the whole series present, the ring gate, the Free Navy war, the Laconian conquest and the millennium after the gates close.",
    "epoch": "far-future"
-  },
-  {
-   "id": "interstellar",
-   "title": "Interstellar",
-   "medium": "film",
-   "creator": "Christopher Nolan",
-   "originYear": 2014,
-   "group": "near-future-branch",
-   "franchiseStatus": "concluded",
-   "divergence": {
-    "year": 2019,
-    "label": "The wormhole near Saturn",
-    "delta": "Real: 2019 is the year LIGO's catalogue fills with black-hole mergers and a Chinese lander touches down on the far side of the Moon. Fiction: something opens a traversable wormhole near Saturn, and by 2067 it is the only way off a starving Earth.",
-    "inUniverse": null,
-    "confidence": "medium",
-    "note": "Nothing is dated on screen: the film says only that the wormhole 'appeared 48 years ago'. The year 2019 comes from Kip Thorne's tie-in book The Science of Interstellar, which Thorne introduces as his own extrapolation rather than Nolan's; chaining 2019 + 48 gives the standard 2067 present. The whole dating of this lineage is arithmetic from a tie-in reference, and the 13-year gap between the black-hole fall and Cooper's recovery is unexplained by any source."
-   },
-   "ending": {
-    "valence": "optimistic",
-    "why": "The equation is solved from inside the tesseract, Earth is evacuated, and a new world waits at the end of the wormhole.",
-    "asOf": 2500
-   },
-   "events": [
-    {
-     "id": "interstellar-apollo",
-     "year": 1969,
-     "date": "20 July 1969",
-     "title": "Apollo 11, and the history the film rewrites",
-     "description": "The Moon landings happen; two generations later the film's schools teach that they were faked to bankrupt the Soviets, a measure of how far the blight era has rewritten its own past.",
-     "tier": "T3",
-     "phase": "prehistory",
-     "importance": 2,
-     "kind": "event",
-     "inUniverse": null,
-     "confidence": "medium",
-     "note": "The landing is real history; the classroom revisionism is canon dialogue in the film, undated there but implied to be a product of the crisis decades.",
-     "binWhy": "The state teaches that the Moon landings were faked.",
-     "bin": "secret-kept",
-     "facets": {
-      "change": "the landings → officially declared a hoax",
-      "mechanism": "law",
-      "actor": "state",
-      "position": "inside",
-      "scope": "national",
-      "domain": "political",
-      "direction": {
-       "power": 1,
-       "openness": -1,
-       "capability": -1,
-       "population": 0
-      },
-      "preconditions": [
-       "crisis-ecological",
-       "post-collapse"
-      ],
-      "outcomes": [
-       "ignorance",
-       "cover-up"
-      ]
-     }
-    },
-    {
-     "id": "interstellar-film-released",
-     "year": 2014,
-     "date": "November 2014",
-     "title": "Interstellar released",
-     "description": "Nolan's film arrives with Kip Thorne's gravitational physics attached, placing a wormhole 53 years into its own future and a blight only twenty years out.",
-     "tier": "T2",
-     "phase": "prehistory",
-     "importance": 2,
-     "kind": "publication",
-     "inUniverse": null,
-     "confidence": "high",
-     "note": "",
-     "binWhy": "A real-world publication or release date, not a moment in the story.",
-     "bin": null,
-     "facets": null
-    },
-    {
-     "id": "interstellar-wormhole",
-     "year": 2019,
-     "date": "2019",
-     "title": "The wormhole is found",
-     "description": "An anomaly near Saturn turns out to be an artificial traversable wormhole; NASA's Lazarus missions follow it, and it becomes humanity's only route off Earth.",
-     "tier": "T2",
-     "phase": "fork",
-     "importance": 3,
-     "kind": "discovery",
-     "inUniverse": null,
-     "confidence": "medium",
-     "note": "From the film's line that the wormhole appeared '48 years ago' relative to its 2067 present; the 2019 anchor itself is Kip Thorne's own extrapolation in the tie-in book, not something Nolan put on screen. The real 2019 produced gravitational-wave catalogues and no wormhole — the branch's fork is already behind us.",
-     "bin": "gateway-opens",
-     "binWhy": "A passage to somewhere unreachable is found or made.",
-     "facets": {
-      "change": "a dying world → a way off it appears near Saturn",
-      "mechanism": "discovery",
-      "actor": "outsider",
-      "position": "outside",
-      "scope": "planetary",
-      "domain": "cosmic",
-      "direction": {
-       "power": 0,
-       "openness": 1,
-       "capability": 1,
-       "population": 0
-      },
-      "preconditions": [
-       "crisis-ecological"
-      ],
-      "outcomes": [
-       "opening",
-       "exodus"
-      ]
-     }
-    },
-    {
-     "id": "interstellar-blight",
-     "year": 2032,
-     "date": "c. 2032",
-     "title": "The blight",
-     "description": "A global crop blight begins destroying wheat, okra and finally everything but corn, collapsing food systems, triggering the Resource Wars and shrinking the human population.",
-     "tier": "T2",
-     "phase": "aftermath",
-     "importance": 3,
-     "kind": "disaster",
-     "inUniverse": null,
-     "confidence": "low",
-     "note": "No year is spoken on screen; the onset in the 2030s is a reconstruction. The film supplies only relative escalation — by its 2067 present wheat has been gone 'seven years', okra that same year, and corn is all that is left.",
-     "bin": "plague",
-     "binWhy": "A blight destroys the food supply crop by crop.",
-     "facets": {
-      "change": "harvests → destroyed crop by crop",
-      "mechanism": "disaster",
-      "actor": "nature",
-      "position": "above",
-      "scope": "planetary",
-      "domain": "biological",
-      "direction": {
-       "power": 0,
-       "openness": -1,
-       "capability": -1,
-       "population": -1
-      },
-      "preconditions": [],
-      "outcomes": [
-       "collapse",
-       "mass-death"
-      ]
-     }
-    },
-    {
-     "id": "interstellar-lazarus",
-     "year": 2057,
-     "date": "2057",
-     "title": "The Lazarus missions",
-     "description": "With the Resource Wars over and NASA reduced to a hidden bunker, twelve one-way probes are sent through the wormhole; three worlds answer — Miller's water world, Mann's ice world and Edmunds' desert world.",
-     "tier": "T2",
-     "phase": "aftermath",
-     "importance": 2,
-     "kind": "discovery",
-     "inUniverse": null,
-     "confidence": "medium",
-     "note": "Reconstructed from the film's on-screen statement that the Lazarus missions left ten years before its present; the twelve astronauts are led by Dr Mann, and only Miller, Mann and Edmunds are named.",
-     "bin": "voyage-into-unknown",
-     "binWhy": "A first mission leaves for territory nobody has reached.",
-     "facets": {
-      "change": "no way out → twelve one-way probes sent through",
-      "mechanism": "expedition",
-      "actor": "state",
-      "position": "inside",
-      "scope": "beyond",
-      "domain": "technological",
-      "direction": {
-       "power": 0,
-       "openness": 1,
-       "capability": 1,
-       "population": 0
-      },
-      "preconditions": [
-       "crisis-ecological",
-       "secrecy",
-       "post-collapse"
-      ],
-      "outcomes": [
-       "exodus",
-       "foreknowledge"
-      ]
-     }
-    },
-    {
-     "id": "interstellar-endurance",
-     "year": 2067,
-     "date": "2067",
-     "title": "Cooper leaves on Endurance",
-     "description": "Dust storms and a failing harvest frame the film's present: Cooper joins NASA's last mission and the Endurance departs for Saturn and the wormhole while Murph stays behind with the gravity equation.",
-     "tier": "T2",
-     "phase": "aftermath",
-     "importance": 3,
-     "kind": "event",
-     "inUniverse": null,
-     "confidence": "medium",
-     "note": "Derived, not stated: 2019 plus the on-screen '48 years'. The film displays no year, and the day-level dates circulating online are fan reconstruction, so only the year is given here.",
-     "bin": "voyage-into-unknown",
-     "binWhy": "A first mission leaves for territory nobody has reached.",
-     "facets": {
-      "change": "a failing harvest → the last mission leaves",
-      "mechanism": "expedition",
-      "actor": "state",
-      "position": "inside",
-      "scope": "planetary",
-      "domain": "technological",
-      "direction": {
-       "power": 0,
-       "openness": 0,
-       "capability": 1,
-       "population": -1
-      },
-      "preconditions": [
-       "existential-threat",
-       "crisis-ecological",
-       "secrecy"
-      ],
-      "outcomes": [
-       "exodus",
-       "time-lost"
-      ]
-     }
-    },
-    {
-     "id": "interstellar-millers-planet",
-     "year": 2069,
-     "date": "2069",
-     "title": "Miller's planet: three hours, twenty-three years",
-     "description": "One hour on the water world costs seven years outside it, so the landing party loses twenty-three years, Doyle, and any chance of catching the dead astronaut's signal.",
-     "tier": "T2",
-     "phase": "aftermath",
-     "importance": 3,
-     "kind": "disaster",
-     "inUniverse": null,
-     "confidence": "medium",
-     "note": "Dated from the on-screen two-year transit to Saturn (2067-69) plus the stated dilation; the film gives the loss as twenty-three years, four months and eight days.",
-     "bin": "voyage-into-unknown",
-     "binWhy": "The voyage costs twenty-three years in three hours.",
-     "facets": {
-      "change": "three hours → twenty-three years lost",
-      "mechanism": "accident",
-      "actor": "nature",
-      "position": "above",
-      "scope": "local",
-      "domain": "cosmic",
-      "direction": {
-       "power": 0,
-       "openness": 0,
-       "capability": -1,
-       "population": -1
-      },
-      "preconditions": [
-       "existential-threat"
-      ],
-      "outcomes": [
-       "time-lost",
-       "mass-death"
-      ]
-     }
-    },
-    {
-     "id": "interstellar-return",
-     "year": 2092,
-     "date": "2092",
-     "title": "Twenty-three years later: the return to Endurance",
-     "description": "Cooper and Brand come back to a ship where twenty-three years passed in three hours: Murph is an adult, Professor Brand is dead, and the mission moves on to Mann's planet, where Mann tries to kill Cooper and dies in orbit.",
-     "tier": "T2",
-     "phase": "deep",
-     "importance": 3,
-     "kind": "event",
-     "inUniverse": null,
-     "confidence": "medium",
-     "note": "Derived from the on-screen 'twenty-three years, four months, eight days'; the same figure is why Murph's generation has grown up while Cooper has not aged.",
-     "binWhy": "A jump forward shows what the world became.",
-     "bin": "long-after",
-     "facets": {
-      "change": "the ship → reached after twenty-three years; a betrayal",
-      "mechanism": "arrival",
-      "actor": "individual",
-      "position": "inside",
-      "scope": "local",
-      "domain": "technological",
-      "direction": {
-       "power": 0,
-       "openness": 1,
-       "capability": 0,
-       "population": 0
-      },
-      "preconditions": [
-       "time-lost"
-      ],
-      "outcomes": [
-       "revelation",
-       "despair"
-      ]
-     }
-    },
-    {
-     "id": "interstellar-tesseract",
-     "year": 2143,
-     "date": "c. 2143",
-     "title": "Gargantua, and the tesseract",
-     "description": "The slingshot around Gargantua costs fifty-one years; out of fuel, Cooper and TARS fall past the horizon into a tesseract built by future humans, where time is a physical dimension, and Cooper reaches back through Murph's bookshelf to hand her the quantum data that solves the gravity equation.",
-     "tier": "T2",
-     "phase": "deep",
-     "importance": 3,
-     "kind": "event",
-     "inUniverse": null,
-     "confidence": "medium",
-     "note": "Derived from the on-screen line that the manoeuvre 'will cost us 51 years' (2092 + 51). The tesseract's builders are outside time, so the scene's own dating is necessarily Cooper's, not theirs.",
-     "bin": "time-traveller-arrives",
-     "binWhy": "He reaches back through time to his daughter.",
-     "facets": {
-      "change": "past the horizon → a message sent back through time",
-      "mechanism": "arrival",
-      "actor": "outsider",
-      "position": "outside",
-      "scope": "beyond",
-      "domain": "cosmic",
-      "direction": {
-       "power": 0,
-       "openness": 1,
-       "capability": 1,
-       "population": 0
-      },
-      "preconditions": [
-       "existential-threat"
-      ],
-      "outcomes": [
-       "revelation",
-       "foreknowledge",
-       "transcendence"
-      ]
-     }
-    },
-    {
-     "id": "interstellar-cooper-station",
-     "year": 2156,
-     "date": "2156",
-     "title": "Cooper wakes, 124 years old",
-     "description": "Recovered near Saturn, Cooper wakes aboard Cooper Station, an O'Neill cylinder built with the equation Murph solved, finds his daughter an old woman on her deathbed, and steals a Ranger to go and find Brand.",
-     "tier": "T2",
-     "phase": "deep",
-     "importance": 3,
-     "kind": "event",
-     "inUniverse": null,
-     "confidence": "medium",
-     "note": "Derived from the on-screen 'you are 124 years old'; a 13-year gap between the 2143 fall and this recovery is unexplained by the film, and the final montage of Brand alone on Edmunds' planet is undated.",
-     "bin": "long-after",
-     "binWhy": "A jump forward shows what the world became.",
-     "facets": {
-      "change": "a dying Earth → humanity living in orbit",
-      "mechanism": "arrival",
-      "actor": "individual",
-      "position": "inside",
-      "scope": "planetary",
-      "domain": "technological",
-      "direction": {
-       "power": 0,
-       "openness": 1,
-       "capability": 1,
-       "population": 1
-      },
-      "preconditions": [
-       "exile",
-       "time-lost"
-      ],
-      "outcomes": [
-       "rebuilding",
-       "exodus"
-      ]
-     }
-    },
-    {
-     "id": "interstellar-bulk",
-     "year": 2500,
-     "date": "far future, undated",
-     "title": "The bulk",
-     "description": "Humanity's descendants have become five-dimensional beings for whom time is a navigable dimension, and by the film's own bootstrap logic they are the ones who opened the wormhole in 2019 and built the tesseract inside Gargantua.",
-     "tier": "T1",
-     "phase": "deep",
-     "importance": 2,
-     "kind": "event",
-     "inUniverse": null,
-     "confidence": "low",
-     "note": "Flagged deliberately: the film says only that they are us, 'a civilization that's evolved past the four dimensions', and never dates them, so 2500 is a marker for the branch's deep-time reach rather than a canon figure. If a strict no-invention reading is preferred, this is the one event to drop, leaving T1 empty.",
-     "bin": "beyond-human",
-     "binWhy": "Humanity's descendants are five-dimensional beings.",
-     "facets": {
-      "change": "humans → five-dimensional descendants who reached back",
-      "mechanism": "consolidation",
-      "actor": "movement",
-      "position": "inside",
-      "scope": "beyond",
-      "domain": "cosmic",
-      "direction": {
-       "power": 0,
-       "openness": 1,
-       "capability": 1,
-       "population": 0
-      },
-      "preconditions": [
-       "exile"
-      ],
-      "outcomes": [
-       "transcendence",
-       "foreknowledge"
-      ]
-     }
-    }
-   ],
-   "groupingNote": "Belongs here because the film's fork is a single object — a wormhole that appears near Saturn in what is now our recent past — dropped into a recognisable, failing twenty-first-century Earth; the blight is slow climate catastrophe, not space opera, and everything after it is arithmetic on that one event. Tiers: nothing in the fiction reaches back before the Apollo era, so T4 is empty; T3 holds only 1969 and the film's own rewriting of it; T2 runs from the film's 2014 release through the blight, the Lazarus missions, the Endurance, the twenty-three lost years, the fifty-one-year slingshot and the 2156 Cooper Station epilogue; T1 holds one deliberately flagged marker for the undated fifth-dimensional 'bulk'. The film's final images — Brand alone on Edmunds' planet, the Plan B colony — are never dated, and the colony dates circulating online are fan reconstruction, so no event is given for them.",
-   "epoch": "far-future"
-  },
-  {
-   "id": "children-of-men",
-   "title": "Children of Men",
-   "medium": "film",
-   "creator": "Alfonso Cuaron (film); P. D. James (novel)",
-   "originYear": 2006,
-   "group": "near-future-branch",
-   "franchiseStatus": "concluded",
-   "divergence": {
-    "year": 2009,
-    "label": "Humanity stops reproducing",
-    "delta": "Real: 2009 — a financial crash, a new American president, the first iPhone 3GS; birth rates fall but babies keep arriving. Fiction: somewhere in 2009 the human race becomes infertile, and the last child born that year grows up to be the most famous person alive.",
-    "inUniverse": null,
-    "confidence": "medium",
-    "note": "The film never says 2009 out loud: it follows from Baby Diego being eighteen (his on-screen age is given to the hour) in the film's 2027 present, described as 'eighteen years of infertility'. P. D. James's novel puts the same event in 1995 ('Year Omega'), with the last birth on 19 October 1995, and sets its story in January 2021 — the adaptation keeps the roughly eighteen-year gap but shifts both forward and swaps male infertility for female."
-   },
-   "ending": {
-    "valence": "unknown",
-    "why": "One child is born and one boat is met at sea; whether the Human Project exists, or the species recovers, is never shown.",
-    "asOf": 2027
-   },
-   "events": [
-    {
-     "id": "children-of-men-novel",
-     "year": 1992,
-     "date": "1992",
-     "title": "P. D. James publishes The Children of Men",
-     "description": "James imagines England in 2021, twenty-six years after the last human birth, ruled by a self-appointed Warden and quietly organising its own extinction.",
-     "tier": "T3",
-     "phase": "prehistory",
-     "importance": 2,
-     "kind": "publication",
-     "inUniverse": null,
-     "confidence": "high",
-     "note": "The novel's own dates are 1995 for the onset of infertility and January 2021 (its first diary entry is headed Friday 1 January 2021) for the story.",
-     "binWhy": "A real-world publication or release date, not a moment in the story.",
-     "bin": null,
-     "facets": null
-    },
-    {
-     "id": "children-of-men-year-omega",
-     "year": 1995,
-     "date": "19 October 1995",
-     "title": "Year Omega (novel continuity)",
-     "description": "In the novel the human race stops reproducing: all human sperm, even frozen, loses potency, and the last child is born — Joseph Ricardo, who is killed in a Buenos Aires pub brawl at twenty-five as the novel opens.",
-     "tier": "T3",
-     "phase": "prehistory",
-     "importance": 2,
-     "kind": "publication",
-     "inUniverse": null,
-     "confidence": "medium",
-     "note": "Novel continuity only, and male infertility rather than the film's female infertility; the film moves the same event to 2009 and the last child is Baby Diego. James calls 1995 'Year Omega'.",
-     "historyContradicts": false,
-     "bin": "plague",
-     "binWhy": "Every human loses the ability to reproduce.",
-     "facets": {
-      "change": "fertile → no births anywhere",
-      "mechanism": "disaster",
-      "actor": "nature",
-      "position": "above",
-      "scope": "planetary",
-      "domain": "biological",
-      "direction": {
-       "power": 0,
-       "openness": -1,
-       "capability": 0,
-       "population": -1
-      },
-      "preconditions": [],
-      "outcomes": [
-       "despair",
-       "closing-borders",
-       "extinction-risk"
-      ]
-     }
-    },
-    {
-     "id": "children-of-men-film",
-     "year": 2006,
-     "date": "2006",
-     "title": "Cuaron's film released",
-     "description": "The adaptation keeps the infertility but moves the story to a Britain of internment camps and barricades, pushing the crisis into the audience's own recent past rather than the year of filming.",
-     "tier": "T2",
-     "phase": "prehistory",
-     "importance": 2,
-     "kind": "publication",
-     "inUniverse": null,
-     "confidence": "high",
-     "note": "Released in 2006 and set twenty-one years later, in 2027.",
-     "binWhy": "A real-world publication or release date, not a moment in the story.",
-     "bin": null,
-     "facets": null
-    },
-    {
-     "id": "children-of-men-infertility",
-     "year": 2009,
-     "date": "2009",
-     "title": "The last children are born",
-     "description": "Humanity becomes infertile; the cohort born in 2009 is the last, and the youngest of them — Baby Diego — is stabbed to death in Buenos Aires at eighteen as the film opens.",
-     "tier": "T2",
-     "phase": "fork",
-     "importance": 3,
-     "kind": "disaster",
-     "inUniverse": null,
-     "confidence": "medium",
-     "note": "Inferred from the film's 'eighteen years of infertility' and Baby Diego's age of eighteen years and four months, which puts his birth in mid-2009; the novel's equivalent is the male infertility of 1995, so the year is contested across adaptations — but real 2009 delivered no such thing, which is the point of plotting it.",
-     "bin": "plague",
-     "binWhy": "A disease or biological failure strikes on a mass scale.",
-     "facets": {
-      "change": "fertile → the last children born",
-      "mechanism": "disaster",
-      "actor": "nature",
-      "position": "above",
-      "scope": "planetary",
-      "domain": "biological",
-      "direction": {
-       "power": 0,
-       "openness": -1,
-       "capability": 0,
-       "population": -1
-      },
-      "preconditions": [],
-      "outcomes": [
-       "despair",
-       "closing-borders",
-       "extinction-risk"
-      ]
-     }
-    },
-    {
-     "id": "children-of-men-julian-baby",
-     "year": 2021,
-     "date": "January 2021",
-     "title": "Julian's baby (novel ending)",
-     "description": "In the novel's present the dissident Julian gives birth to a boy, the first human birth in twenty-six years, and Theo Faron kills the Warden and takes his ring.",
-     "tier": "T2",
-     "phase": "aftermath",
-     "importance": 2,
-     "kind": "event",
-     "inUniverse": null,
-     "confidence": "medium",
-     "note": "Novel continuity: the diary opens in January 2021 and the infertility dates from 1995. The film's equivalent birth happens in 2027 and is a girl, Kee's daughter.",
-     "bin": "chosen-one",
-     "binWhy": "A child is born or a person chosen on whom the future turns.",
-     "facets": {
-      "change": "twenty-six years without → a birth; the ruler killed",
-      "mechanism": "birth",
-      "actor": "individual",
-      "position": "below",
-      "scope": "national",
-      "domain": "biological",
-      "direction": {
-       "power": -1,
-       "openness": 1,
-       "capability": 0,
-       "population": 1
-      },
-      "preconditions": [
-       "one-party-state",
-       "existential-threat"
-      ],
-      "outcomes": [
-       "turning-point",
-       "succession-struggle"
-      ]
-     }
-    },
-    {
-     "id": "children-of-men-kee",
-     "year": 2027,
-     "date": "2027",
-     "title": "Kee's baby, and the ship Tomorrow",
-     "description": "In a Britain of refugee cages and closing borders, Kee gives birth to the first child in eighteen years and Theo gets her onto the fog-bound boat Tomorrow to reach the Human Project in the Azores.",
-     "tier": "T2",
-     "phase": "aftermath",
-     "importance": 3,
-     "kind": "event",
-     "inUniverse": null,
-     "confidence": "medium",
-     "note": "The film never displays the year, but its own poster announces 'The year 2027: the last days of the human race. No child has been born for 18 years', and the opening news copy calls Diego's death a reminder of 'the 18 years of infertility'. Real 2027 is close, and no such crisis has happened.",
-     "bin": "chosen-one",
-     "binWhy": "A child is born or a person chosen on whom the future turns.",
-     "facets": {
-      "change": "eighteen years without → a birth, and a boat out",
-      "mechanism": "birth",
-      "actor": "individual",
-      "position": "below",
-      "scope": "national",
-      "domain": "biological",
-      "direction": {
-       "power": 0,
-       "openness": 1,
-       "capability": 0,
-       "population": 1
-      },
-      "preconditions": [
-       "repression",
-       "existential-threat",
-       "isolation"
-      ],
-      "outcomes": [
-       "exodus",
-       "turning-point"
-      ]
-     }
-    }
-   ],
-   "groupingNote": "Belongs here because the branch is opened by one biological event inside living memory — the species simply stops conceiving in 2009 — and everything else in the film, from the siege of Seattle to the camps at Bexhill, is ordinary twenty-first-century politics reacting to it. Tier coverage is deliberately narrow and honest: T3 holds the two source works and the novel's 1995 onset; T2 holds the film's 2009 fork, the novel's 2021 ending and the film's 2027 present; T4 is empty because nothing in the story reaches back before living memory, and T1 is empty because the fiction simply stops — the last image is a boat vanishing into fog, and no adaptation, sequel or tie-in carries it beyond 2027. Its own arithmetic (a final cohort born in 2009, or 1995 in the novel) implies extinction in the 2060s-2080s if the Human Project fails, but no source dates that.",
-   "epoch": "present"
   }
  ]
 }

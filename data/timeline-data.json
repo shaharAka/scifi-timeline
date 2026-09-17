@@ -1,9 +1,9 @@
 {
  "meta": {
-  "generated": "2026-09-17T08:26:23Z",
+  "generated": "2026-09-17T20:40:45Z",
   "source": "data/parts/*.json",
-  "lineages": 24,
-  "events": 237,
+  "lineages": 25,
+  "events": 242,
   "groups": 5,
   "worlds": 24,
   "art": 24,
@@ -4763,6 +4763,226 @@
     }
    ],
    "groupingNote": "The Matrix is the archetype running backwards: the world that ends is a simulation of 1999 kept alive as a power plant, and the ruins the survivors inherit are their own cities under a black sky. Humanity loses a war to its own machines, scorches the sky to win it and is farmed in pods while the last free city hides underground, which is the group's mechanism taken to its logical end. The fork is the Machine War's start at 2139, the close of the canonically dated Second Renaissance range; Operation Dark Storm, which actually ends the human world, is undated on screen and placed at about 2145 here. Tiers: there is no T1, because under the dating the films themselves give (Morpheus's 'closer to 2199' plus the canonical sixty-year gap to Resurrections) this branch stops at 2259; only fan reconstructions that add five prior One-cycles push it past 2300, and that reading contradicts the dialogue. T4 is real-world background only (Babbage, 1834) and T3 holds the simulated 1999 alongside Turing's real 1950."
+  },
+  {
+   "id": "blade-runner",
+   "title": "Blade Runner",
+   "medium": "film",
+   "creator": "Philip K. Dick (novel); Ridley Scott (film)",
+   "originYear": 1982,
+   "group": "near-future-branch",
+   "franchiseStatus": "dormant",
+   "divergence": {
+    "year": 1980,
+    "label": "Tyrell Corporation is founded",
+    "delta": "Real: 1980 — the year before the IBM PC, when machine intelligence was a research programme and a phrase in a Philip K. Dick novel. Fiction: a company is already selling manufactured people, and the off-world colonies need them.",
+    "inUniverse": "Tyrell Corporation founded, 1980 (Blade Runner 2049 opening titles; the first of the dates the film states outright)",
+    "confidence": "high",
+    "note": "Blade Runner is unusual here in needing no conversion: the films state their own years, and their years are ours. The 1982 film is set in November 2019, and 2049 says 2049. The fork is placed at the founding of Tyrell in 1980, which the sequel states in its opening titles, rather than at the 1982 release — a lineage cannot share a year with its own origin, and 1980 is the earliest in-universe date either film gives."
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "The child exists, the reproduction is confirmed, and the wall between the made and the born is coming down — which is where K chooses a side and dies for it.",
+    "asOf": 2049
+   },
+   "events": [
+    {
+     "id": "br-tyrell-1980",
+     "year": 1980,
+     "date": "1980",
+     "title": "The Tyrell Corporation is founded",
+     "description": "A company begins selling manufactured humans while the rest of the world is still arguing about whether machines can think. The off-world colonies are the market: a workforce that cannot refuse, cannot organise and does not need to be fed properly.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The date is stated in the opening titles of Blade Runner 2049. In our 1980 the nearest equivalents are the first personal computers and a symbolic-AI research programme; the fiction's fork is that artificial people became a product two decades before they became a research result.",
+     "binWhy": "A company begins manufacturing people; the real 1980 has no equivalent.",
+     "bin": "new-technology-deployed",
+     "facets": {
+      "change": "theory → manufactured people for sale",
+      "mechanism": "invention",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "technological-race",
+       "prosperity"
+      ],
+      "outcomes": [
+       "dependency",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "br-2019",
+     "year": 2019,
+     "date": "2019-11",
+     "title": "Four Nexus-6 replicants come back to Earth",
+     "description": "A combat model with a four-year lifespan escapes an off-world colony, kills its crew and reaches Los Angeles looking for its maker. A retired blade runner is put on them; all four are dead within days, and so is the man who made them.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The film states November 2019 on screen. In our November 2019 Los Angeles there is no off-world traffic, no replicants and no blade runners; the fiction's 2019 is a fully industrialised version of ours with a manufactured underclass.",
+     "binWhy": "Manufactured people reach Earth and are hunted; in our 2019 they do not exist.",
+     "bin": "crackdown",
+     "facets": {
+      "change": "four replicants loose on Earth → all four dead",
+      "mechanism": "attack",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "local",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "segregation",
+       "machine-dependency"
+      ],
+      "outcomes": [
+       "hunt-begins",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "br-blackout-2022",
+     "year": 2022,
+     "date": "2022",
+     "title": "The Blackout",
+     "description": "A detonation above the West Coast destroys the world's data and its backups for days. Replicants are banned outright, Tyrell's remaining stock is legislated out of existence, and the records that would prove who was made and who was born are gone.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The Blackout is animation-anthology canon (Black Out 2022, written by Kenji Kamiyama and Shinichiro Watanabe's studio) and is treated as history by the 2049 film. Its real-world date sits inside living memory as an EMP event that never happened.",
+     "binWhy": "The archive that distinguished made from born is destroyed and replicants are banned outright.",
+     "bin": "crackdown",
+     "facets": {
+      "change": "records and replicants alike → a blackout and a ban",
+      "mechanism": "attack",
+      "actor": "faction",
+      "position": "below",
+      "scope": "civilisational",
+      "domain": "technological",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "segregation",
+       "machine-dependency"
+      ],
+      "outcomes": [
+       "suppression",
+       "collapse",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "br-wallace-2028",
+     "year": 2028,
+     "date": "2028",
+     "title": "Wallace rebuilds the industry",
+     "description": "Niander Wallace buys what is left of Tyrell, solves the protein supply and gets the ban lifted by making his new models obedient by construction. Within a decade the colonies run again and no one asks what the obedience costs.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Stated in the 2049 film's timeline. The real 2028 has no off-world colonies; the fiction's point is that the industry comes back with better compliance rather than better ethics.",
+     "binWhy": "A corporation restores replicant production and has the ban lifted.",
+     "bin": "new-technology-deployed",
+     "facets": {
+      "change": "banned industry → a licensed one",
+      "mechanism": "invention",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "economic",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "segregation",
+       "prosperity"
+      ],
+      "outcomes": [
+       "dependency",
+       "new-actors",
+       "recovery"
+      ]
+     }
+    },
+    {
+     "id": "br-miracle-2049",
+     "year": 2049,
+     "date": "2049",
+     "title": "A replicant is found to have been pregnant",
+     "description": "A blade runner uncovers a buried record: a replicant died giving birth. The corporation that makes replicants wants the method; the people who hid the child want her left alone; and the knowledge that the made can make is the end of the wall between them.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The film states 2049 on screen. The real 2049 is outside everything in this dataset's near-future group except as projection; the event is a census problem that turns into a political one.",
+     "binWhy": "Replicant reproduction is confirmed; the distinction between made and born fails.",
+     "bin": "truth-revealed",
+     "facets": {
+      "change": "a buried record → a species that can reproduce",
+      "mechanism": "disclosure",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 1
+      },
+      "preconditions": [
+       "segregation",
+       "cover-up",
+       "machine-dependency"
+      ],
+      "outcomes": [
+       "revelation",
+       "new-actors",
+       "resistance-forms"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs here because its fork is an invention inside a world that is plainly ours, and its dates are ours: the films state 2019 and 2049 outright, so nothing has to be converted. Tier coverage is T3 for the fork (1980) and T2 for everything after it (2019-2049); there is no T4 because the fiction reaches back only to its own founding, and no T1 because the story never leaves the century.",
+   "epoch": "present"
   },
   {
    "id": "contact",
