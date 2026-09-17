@@ -48,7 +48,7 @@ python3 test-fixture.py && node test-viewer.js && node test-render.js timeline.h
 | `vendor/*.js` | Cytoscape.js, dagre and the cytoscape-dagre adapter (MIT), used by the Moments page. Loaded by `<script src>`, never inlined, so the build stays dependency-free. | Only to upgrade; keep the three versions in step |
 | `DESIGN.md` | Design language, chart anatomy, extension guide. | When the design changes |
 | `BRIEF-order-axis.md` | The next piece of work: the Order and Moments views, phased. | As phases land |
-| `data/parts/*.json` | The editable dataset, one file per archetype. | Yes — this is the data |
+| `data/parts/*.json` | The editable dataset, one file per archetype. Every lineage carries an `ending` (`valence` optimistic / pessimistic / unknown, `why`): the state the story leaves the world in as far as it is told. | Yes — this is the data |
 | `data/parts/worlds/*.json` | World dossiers, one file per research pass. | Yes |
 | `data/groups.json` | Archetype display order. | Yes |
 | `data/SCHEMA.md` | The data contract. Read before adding anything. | When the contract changes |
@@ -387,7 +387,12 @@ Nothing is broken. In rough priority order:
    moment and the roads worlds take between them, ranked left to right by
    dagre on the shared roads and our own path, rendered by Cytoscape.js from
    `vendor/`. The owner's test for it is "what leads to what" - never anchor
-   it on a date or on a count-in-a-row. What remains: the dotted real path
+   it on a date or on a count-in-a-row. Every arc converges on one of three
+   ending sinks (ends well / ends badly / still open) from `lineage.ending`,
+   and ours on *still open*; a kind's panel opens with how the arcs through it
+   end. The 24 valences were called by hand from the stories as told
+   (`ending.why` is the evidence) - when a world is added, call its ending in
+   the same spirit and never derive it from `franchiseStatus`. What remains: the dotted real path
    crosses the map where our history visits kinds out of the fictions' order
    (dagre reverses those edges); the two-node "long after / a gateway opens"
    strays sit apart from everything; the bins are 33 hand-built kinds and the

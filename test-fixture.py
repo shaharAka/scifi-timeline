@@ -74,6 +74,7 @@ LIN_A = {
     "group": "hidden-history",
     "epoch": "present",
     "franchiseStatus": "ongoing",
+    "ending": {"valence": "unknown", "why": "A fixture: the arc is left open on purpose."},
     "divergence": {
         "year": 1947, "label": "The recovery", "delta": "Real: nothing happened. Fiction: everything did.",
         "inUniverse": None, "confidence": "high", "note": "fixture",
@@ -97,6 +98,7 @@ LIN_B = {
     "group": "alternate-past",
     "epoch": "present",
     "franchiseStatus": "concluded",
+    "ending": {"valence": "pessimistic", "why": "A fixture: the arc ends badly."},
     "divergence": {
         "year": 1933, "label": "The assassination succeeds",
         "delta": "Real: it failed. Fiction: it worked.", "inUniverse": None,

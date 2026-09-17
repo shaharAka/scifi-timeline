@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-09-16T22:52:05Z",
+  "generated": "2026-09-17T07:12:59Z",
   "source": "data/parts/*.json",
   "lineages": 24,
   "events": 237,
@@ -77,6 +77,11 @@
     "inUniverse": null,
     "confidence": "medium",
     "note": "The fiction opens in a parallel world that split long before the story starts, so this date is the branch the books describe rather than one they state; the trilogy never gives a year for the schism, and the shape of the divergence is unambiguous even where its date is not."
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "The Authority dies, the windows between worlds are closed at a personal cost, and the Republic of Heaven is left to be built by hand.",
+    "asOf": 2000
    },
    "events": [
     {
@@ -361,6 +366,11 @@
     "inUniverse": null,
     "confidence": "high",
     "note": "The story's present is our present: Mulder and Scully work in a 1990s FBI that is otherwise exactly ours, and the branch is a fifty-year conspiracy of silence rather than an open alternate history."
+   },
+   "ending": {
+    "valence": "unknown",
+    "why": "The conspiracy is exposed and reburied again and again; the files are open, the truth is still out there.",
+    "asOf": 2016
    },
    "events": [
     {
@@ -684,6 +694,11 @@
     "confidence": "medium",
     "note": "1961 is the franchise's founding date for the agency's public-facing mission; the films anchor the era through the young Agent K and the 1960s timeline of the third film rather than through a stated calendar year."
    },
+   "ending": {
+    "valence": "optimistic",
+    "why": "Every threat is contained, Earth stays protected and ignorant, and the branch that was exposed is quietly rebuilt.",
+    "asOf": 2019
+   },
    "events": [
     {
      "id": "mib-founding",
@@ -1003,6 +1018,11 @@
     "inUniverse": null,
     "confidence": "high",
     "note": "The concealment itself is far older — the International Statute of Secrecy took effect in 1692 — but the branch point that produces the story is Voldemort's attack on 31 October 1981."
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "The dark lord is destroyed, the world he threatened heals, and nineteen years later all is well.",
+    "asOf": 2017
    },
    "events": [
     {
@@ -1365,6 +1385,11 @@
     "confidence": "high",
     "note": "Vampires and demons have existed in secret for all of human history — there is no single break with real history, only the point where the fiction's present day begins; 1997 is where the series and the real calendar coincide."
    },
+   "ending": {
+    "valence": "unknown",
+    "why": "The line of Slayers is shared out and later renewed two centuries on; the fight is never over, which is the point.",
+    "asOf": 2200
+   },
    "events": [
     {
      "id": "btvs-first-slayer",
@@ -1614,6 +1639,11 @@
     "confidence": "high",
     "note": "Dick states the assassination and its consequences directly in the novel's background chapters. The attempt itself is historical; the fork is who it killed."
    },
+   "ending": {
+    "valence": "unknown",
+    "why": "The Reich stands but its succession is breaking open; Dick leaves the world mid-crisis, with a novel-within-the-novel hinting it is not the real one.",
+    "asOf": 1962
+   },
    "events": [
     {
      "id": "tmithc-crash-1929",
@@ -1822,6 +1852,11 @@
     "inUniverse": null,
     "confidence": "high",
     "note": "The comic's own backmatter dates the start of the Minutemen era to the late 1930s and names Hooded Justice as the first; the sharper break is 1959 and Doctor Manhattan, who is what actually rewrites global history."
+   },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "Peace is bought with a staged massacre and a lie, and Rorschach's journal sits in a slush pile waiting to unmake it.",
+    "asOf": 1985
    },
    "events": [
     {
@@ -2109,6 +2144,11 @@
     "inUniverse": null,
     "confidence": "high",
     "note": "Harris's author's note says the historical figures are accurate up to 1942 and fictional afterwards, which pins the fork to this year; the novel never spells the survival out in one sentence, but the whole backstory depends on it."
+   },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "The Reich endures, the detective dies at the camp, and only the faint chance that the evidence reaches America is left.",
+    "asOf": 1964
    },
    "events": [
     {
@@ -2472,6 +2512,11 @@
     "inUniverse": null,
     "confidence": "high",
     "note": "The arrival date is given on screen, which is unusual precision for the franchise. This is the special case in the group: the fork is caused by its own future, so 1984 is simultaneously the divergence and the first year of the fiction's own present."
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "As first told, the Resistance breaks Skynet in 2029 and humanity wins the war; every later loop reopens it, but the charted history ends in victory.",
+    "asOf": 2029
    },
    "events": [
     {
@@ -2838,6 +2883,11 @@
     "confidence": "low",
     "note": "Never stated on screen. The date comes from the official Mad Max 2 production preamble, which describes Iran striking Saudi Arabia and the oil majors failing, reinforced by the Main Force Patrol's 'est. 1983' plate; the first film's own signage reads 6 December 1984 and its title card says only 'a few years from now'. Later material makes it worse: the 2015 Fury Road comics place their own Fall in the 2010s and George Miller says the films have no strict chronology, so the 1980s dating belongs to the flagship trilogy rather than to the franchise."
    },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "One citadel is freed and its water released, but the wasteland is the world now and a generation has known nothing else.",
+    "asOf": 2060
+   },
    "events": [
     {
      "id": "mm-oil-1859",
@@ -3136,6 +3186,11 @@
     "inUniverse": null,
     "confidence": "medium",
     "note": "The pentalogy's first impossible event is actually 1973, when Zira and Cornelius arrive from the destroyed future and Caesar is born, but that is a closed bootstrap loop rather than a break in human history. 1983 is Conquest's 'eight years' before its 1991 uprising and is the first dated alteration to human civilisation; the revolt (1991) and the undated nuclear war are downstream. Confidence is medium because the film supplies only the relative 'eight years ago', not a year."
+   },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "The astronaut finds the ruins of New York; humanity blew itself up and the apes inherited the Earth.",
+    "asOf": 3978
    },
    "events": [
     {
@@ -3561,6 +3616,11 @@
     "confidence": "high",
     "note": "The 2035 scientists state the date on screen, describing the release as 'probably on December 13, 1996', with symptoms first detected in Philadelphia on 27 December; the film's opening card says five billion will die in 1997."
    },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "The plague happens exactly as remembered; the loop closes, five billion die, and the survivors live underground.",
+    "asOf": 2035
+   },
    "events": [
     {
      "id": "tm-flu-1889",
@@ -3823,6 +3883,11 @@
     "inUniverse": null,
     "confidence": "high",
     "note": "The date is uncontested: Fallout's 1997 intro and the Fallout 4 and Fallout 76 loading screens all give Saturday, 23 October 2077. The wider Fallout universe splits from ours after the Second World War in Bethesda's own framing, but this archetype branches on the catastrophe itself, so the War is the fork."
+   },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "Every game ends in a local victory inside a ruined continent, and the refrain holds: war never changes.",
+    "asOf": 2910
    },
    "events": [
     {
@@ -4410,6 +4475,11 @@
     "confidence": "medium",
     "note": "Canonical date text places the Second Renaissance in 2090-2139, and 2139 is the range's end, when the United Nations strikes Zero One; Wikipedia's Animatrix synopsis instead says 2148. Operation Dark Storm, the event that actually ends the human world, is undated on screen."
    },
+   "ending": {
+    "valence": "optimistic",
+    "why": "The war between humans and machines ends in an uneasy peace, and the survivors are left free to remake the world they were born into.",
+    "asOf": 2259
+   },
    "events": [
     {
      "id": "matrix-babbage-1834",
@@ -4710,6 +4780,11 @@
     "confidence": "medium",
     "note": "No calendar year is displayed on screen. The film runs from Ellie's move to the VLA (marked by an on-screen 'FOUR YEARS LATER' card) to a present that references the March 1997 Heaven's Gate suicides, so the signal lands c. 1997. Sagan's novel never dates the detection at all — Argus had been operating 'more than four years' when the signal came — and its one stated date is the Hokkaido Machine's launch on 31 December 1999."
    },
+   "ending": {
+    "valence": "optimistic",
+    "why": "Contact is made, the machine works, and the message hidden in pi says the universe was written by someone.",
+    "asOf": 2000
+   },
    "events": [
     {
      "id": "contact-berlin-1936",
@@ -4930,6 +5005,11 @@
     "inUniverse": null,
     "confidence": "medium",
     "note": "No date is spoken in the finished film: '12 April 2001' comes from the December 1965 shooting script, and the only visible on-screen date is a TMA-1 document stamped 021201 (read by some as 12 February 2001). The 1984 sequel 2010 says instead that the monolith was found in late 1999 and puts the Jupiter mission in 2001. Best-supported reading: 2001, the film's own title year."
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "A thousand years on, humanity has spread through the solar system and outlives the monolith that made it.",
+    "asOf": 3001
    },
    "events": [
     {
@@ -5303,6 +5383,11 @@
     "confidence": "medium",
     "note": "The film never says 2009 out loud: it follows from Baby Diego being eighteen (his on-screen age is given to the hour) in the film's 2027 present, described as 'eighteen years of infertility'. P. D. James's novel puts the same event in 1995 ('Year Omega'), with the last birth on 19 October 1995, and sets its story in January 2021 — the adaptation keeps the roughly eighteen-year gap but shifts both forward and swaps male infertility for female."
    },
+   "ending": {
+    "valence": "unknown",
+    "why": "One child is born and one boat is met at sea; whether the Human Project exists, or the species recovers, is never shown.",
+    "asOf": 2027
+   },
    "events": [
     {
      "id": "children-of-men-novel",
@@ -5507,6 +5592,11 @@
     "inUniverse": null,
     "confidence": "medium",
     "note": "Nothing is dated on screen: the film says only that the wormhole 'appeared 48 years ago'. The year 2019 comes from Kip Thorne's tie-in book The Science of Interstellar, which Thorne introduces as his own extrapolation rather than Nolan's; chaining 2019 + 48 gives the standard 2067 present. The whole dating of this lineage is arithmetic from a tie-in reference, and the 13-year gap between the black-hole fall and Cooper's recovery is unexplained by any source."
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "The equation is solved from inside the tesseract, Earth is evacuated, and a new world waits at the end of the wormhole.",
+    "asOf": 2500
    },
    "events": [
     {
@@ -5920,6 +6010,11 @@
     "inUniverse": null,
     "confidence": "medium",
     "note": "The year comes from the TV series' production design guide (the books say only 'colonised in the 21st century'); the same source puts a permanent lunar colony in 2025. The invention everyone remembers, the Epstein Drive, comes later, in 2213-14, and is what opens the Belt — but the Mars settlement is the first fork."
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "Humanity survives the ring gates, the empire and the things that ate the gate-builders; a thousand years on it is still here and still plural.",
+    "asOf": 3395
    },
    "events": [
     {
@@ -6564,6 +6659,11 @@
     "confidence": "medium",
     "note": "Conversion, stated explicitly: the Battle of Yavin (year 0 of the BBY/ABY system) is mapped to 1977, the release year and story present of the original film, so real = 1977 - BBY before Yavin and 1977 + ABY after it. The founding figure is the one printed and current-canon sources give: The Star Wars Book and Star Wars: Timelines place the Old Republic's founding at c. 25,000 BBY, as did the Legends reference books (The Essential Guide to Warfare, The New Essential Chronology, The Essential Atlas). The frequently quoted 25,053 BBY is web-only Legends material traced to a Star Wars: The Old Republic HoloNet entry and could not be found in any printed reference book - the live and archived HoloNet pages say only 'more than twenty thousand years' - and it would move this date 53 years earlier, to 23,076 BCE. Note the direction, which is the opposite of what an early draft of the brief assumed: 25,000 BBY is 23,023 years BEFORE the 1977 anchor, so the whole branch lies in our deep past, which is exactly what 'a long time ago in a galaxy far, far away' asserts. Nothing in Star Wars canon ties the BBY/ABY calendar to Earth - canon has no Earth and no Milky Way - so this is a placement convention, not a continuity claim."
    },
+   "ending": {
+    "valence": "optimistic",
+    "why": "Empire, Republic, First Order: the galaxy keeps relapsing into tyranny and keeps throwing it off; the saga as told ends with the tyrant's second fall.",
+    "asOf": 2011
+   },
    "events": [
     {
      "id": "sw-republic-founded",
@@ -7116,6 +7216,11 @@
     "inUniverse": "2063 (Star Trek dates itself in real-world years; stardates are a separate in-story convention)",
     "confidence": "high",
     "note": "The one branch in this group that needs no conversion: it is dated in our own calendar, and 5 April 2063 at Bozeman, Montana is stated on screen in Star Trek: First Contact and celebrated in-universe as First Contact Day. Strictly, the fiction's Earth already differs from ours earlier — the Eugenics Wars of the 1990s, the Bell Riots of 2024 and World War III of 2026–2053 all sit in the prehistory window below — but 2063 is the franchise's own threshold, the moment the human story stops being a lonely one. The 2009 reboot is a separate in-universe branch, not this one: Nero and Spock fall back from 2387 to 2233, and Nero's attack on the USS Kelvin forks the 'Kelvin timeline' off the prime timeline; its fork point is 2233 and its inciting event is the 2387 Hobus supernova."
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "Across a thousand years the Federation falls apart and is rebuilt; the arc bends toward a plural, curious, post-scarcity civilisation.",
+    "asOf": 3189
    },
    "events": [
     {
@@ -7747,6 +7852,11 @@
     "confidence": "medium",
     "note": "The one branch in this group whose calendar is literally ours: Imperial dates are Anno Domini on the Gregorian calendar, and Games Workshop says so - the years 'are based on the Anno Domini system, so the dates themselves are the ones that we are familiar with now' - so nothing needs converting except millennium notation. Year N of millennium MN is (N-1)x1000+N AD: 798.M30 = 29,798 CE, 005.M31 = 30,005 CE, 999.M41 = 40,999 CE, 012.M42 = 41,012 CE, and real 2025 is 025.M3. The lore's Age of Terra (M1-M15) explicitly includes real human history, so the branch is identical to ours through the present. Where it first departs is genuinely arguable and no source names a date: some material has humanity settling the Sol System in the late 2nd/early 3rd millennium and launching sublight colony ships in the mid-to-late M3, which would put the fork a few centuries from now; the Dark Age of Technology's start is M15 in the 6th-edition rulebook but M21 in the 3rd-edition 'Journal of Keeper Cripias'; and the rupture the setting itself remembers is the Cybernetic Revolt and Old Night in M23-M25. I take M15, the first era boundary in the current timeline that is not our history. A reader who prefers the earlier reading should move the fork a few centuries ahead and treat M15 as deep. Two further disputes are carried in the events below: the millennium boundary itself (M41 runs 40,001-41,000 in most sources, 40,000-40,999 in the 5th-edition rulebook - 999.M41 = 40,999 either way), and the deliberately unresolvable question of what year the setting's present actually is."
    },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "There is only war: a dying Imperium, a broken galaxy, and a setting built so that nothing can ever get better.",
+    "asOf": 41012
+   },
    "events": [
     {
      "id": "wh40k-emperor-born",
@@ -8315,6 +8425,11 @@
     "confidence": "low",
     "note": "A projection, and flagged as one. No Frank Herbert text, appendix or interview gives a real-world year for Dune: the novel's own glossary defines the epoch (B.G./A.G. = before/after the Spacing Guild's monopoly) and Appendix IV dates the story to 10,191 A.G., but nothing bridges that to Earth. The bridge used here is the non-canon Dune Encyclopedia, the only reference work with a Terran chronology: it dates the defeat of the Spanish Armada (1588 CE) to 14,512 B.G. and the first use of atomics in war (1945 CE) to 14,255 B.G., which puts the calendar epoch at roughly 16,100-16,200 CE. I take A.G. 0 = 16,200 CE, so the Jihad begins at 15,999 (rounded to 16,000 here), the novel's 10,191 A.G. falls at 26,391 and Chapterhouse at 15,240 A.G. at 41,440. Uncertainty is about a century from the Encyclopedia's own disagreeing anchors alone, and much more if the non-canon material is rejected: the canon-only reading is that interstellar travel had been underway for 'one hundred and ten centuries' before the Jihad, which supports 'tens of thousands of years in the future' and fixes no date. Standard Years are also some twenty hours shorter than Terran years, worth centuries of drift across 10,191 of them. Herbert himself never said."
    },
+   "ending": {
+    "valence": "unknown",
+    "why": "Herbert died with Duncan and Sheeana fleeing into an unmapped universe while the Honored Matres and the Bene Gesserit merge; nothing is settled.",
+    "asOf": 41440
+   },
    "events": [
     {
      "id": "dune-terran-atomics",
@@ -8770,6 +8885,11 @@
     "inUniverse": "1 G.E. (Galactic Era; 1 F.E. = 12,069 G.E.)",
     "confidence": "low",
     "note": "A projection, flagged as one, and resting on an inference as well. No Asimov text gives a real-world year for G.E. 1, and none states outright that G.E. 1 is the Empire's founding - that identification is reference-work inference from Frankenn I being called the first Emperor in Pebble in the Sky. The projection used is the only one Asimov himself published: his notebook chart in Thrilling Wonder Stories (Winter 1955) puts the hyperspatial drive at about 5,000 CE, 'Trantor becomes the Galactic Empire officially, about 35,000', Seldon's birth at about 47,000 and the Second Galactic Empire at 48,000. That scheme is corroborated twice by in-universe numerals - Seldon born 11,988 G.E. and the plan's thousand years counted from 1 F.E. = 12,069 G.E. - so I use real = G.E. + 34,999, giving 12,069 G.E. = 47,068 and the Second Empire's due date at 48,067. It is flatly irreconcilable with the Robot/Foundation merger Asimov wrote in 1982-86, which implies G.E. 1 at about 11,600-12,100 CE and would move every date here back by some 23,400 years; the alternative is a different dataset row, not a rounding error, and is not blended in. Asimov's own comment on his dating was that it was 'made up ad hoc'."
+   },
+   "ending": {
+    "valence": "unknown",
+    "why": "Asimov left the choice between a Second Empire and Galaxia open; the Plan is on schedule and its ending is deliberately unwritten.",
+    "asOf": 48067
    },
    "events": [
     {

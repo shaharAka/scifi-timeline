@@ -217,8 +217,18 @@ timeline in disguise and were removed.
   where it lies ahead of today. Pre-fork moves are not roads (the world was
   still with us). A road only one world takes is a whisper (7% opacity) until
   something is chosen. **Our own path** is the dotted line in our colour.
+- **Every arc converges on an ending.** Three sinks stand at the right edge of
+  the map: *ends well*, *ends badly*, *still open*. Each world's last kind of
+  moment runs into the one its `ending.valence` names (data/SCHEMA.md,
+  Endings), and our own path runs into *still open* because we are inside it.
+  This is what makes the page predictive rather than descriptive: a kind of
+  moment's panel opens with a three-colour bar, "of the worlds through this,
+  so many ended well, so many badly, so many are open", every world card
+  carries its ending as a badge, and the situation match shows where each
+  nearest fiction ended up. Click a sink for the last kinds before it and every
+  world that ends there with the one-sentence reason for the call.
 - **Layout is left to right by what leads to what**, ranked by dagre on the
-  shared roads and our path only. Ranking on every private road spread the map
+  shared roads, our path and the roads into the endings. Ranking on every private road spread the map
   over four thousand pixels; one world's detour is not the shape of the story.
   Kinds no shared road or real step touches sit in a row underneath, at the x
   their story position implies. There is no date and no rank of first visit
@@ -249,7 +259,10 @@ timeline in disguise and were removed.
 
 - `57-moments-page.js`: `momentsModel()` builds `{nodes, roads, ours, paths,
   at, order, todayIndex, lastReal}` from the bins, the real history and each
-  world's post-fork sequence; `renderMomentsCy(M)` keeps one Cytoscape instance
+  world's post-fork sequence; the three ending sinks (`MP_ENDINGS`) are nodes
+  with `ending:true`, every kind carries `outcomes` (the worlds through it by
+  valence), a road with `ending:true` runs from each arc's last kind into its
+  sink, and the last step of `ours` runs into `ending-unknown`; `renderMomentsCy(M)` keeps one Cytoscape instance
   and rebuilds elements only when `mpSignature(M)` changes; `mpCyLayout`,
   `mpCyFit`, `mpCyHome`, `mpCyReveal` are the camera; `renderMomentsPanel`
   writes into `#moments-body` (`mpKindHtml`, `mpBeatHtml`). Selection state is
@@ -264,7 +277,10 @@ timeline in disguise and were removed.
   opens the panel with one `.mp-card` per world and a *What it leads to*
   section, non-touching roads fade to `0.04`, a world button lights
   `.mp-world-road`, a beat button shows *Nearest situations*, empty canvas
-  clears, `matchNews` selects the kind. The shim loads no vendor code, so the
+  clears, `matchNews` selects the kind; three sinks whose counts match the
+  data, every arc runs into exactly one, ours into *still open*, a kind's
+  outcome tally sums to its worlds, a sink's panel lists one card per world
+  with its reason. The shim loads no vendor code, so the
   Cytoscape path is verified in a browser (see HANDOFF §6).
 
 ---

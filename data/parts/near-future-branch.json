@@ -25,6 +25,11 @@
     "confidence": "medium",
     "note": "No date is spoken in the finished film: '12 April 2001' comes from the December 1965 shooting script, and the only visible on-screen date is a TMA-1 document stamped 021201 (read by some as 12 February 2001). The 1984 sequel 2010 says instead that the monolith was found in late 1999 and puts the Jupiter mission in 2001. Best-supported reading: 2001, the film's own title year."
    },
+   "ending": {
+    "valence": "optimistic",
+    "why": "A thousand years on, humanity has spread through the solar system and outlives the monolith that made it.",
+    "asOf": 3001
+   },
    "events": [
     {
      "id": "2001-space-odyssey-dawn-of-man",
@@ -397,6 +402,11 @@
     "confidence": "medium",
     "note": "No calendar year is displayed on screen. The film runs from Ellie's move to the VLA (marked by an on-screen 'FOUR YEARS LATER' card) to a present that references the March 1997 Heaven's Gate suicides, so the signal lands c. 1997. Sagan's novel never dates the detection at all — Argus had been operating 'more than four years' when the signal came — and its one stated date is the Hokkaido Machine's launch on 31 December 1999."
    },
+   "ending": {
+    "valence": "optimistic",
+    "why": "Contact is made, the machine works, and the message hidden in pi says the universe was written by someone.",
+    "asOf": 2000
+   },
    "events": [
     {
      "id": "contact-berlin-1936",
@@ -617,6 +627,11 @@
     "inUniverse": null,
     "confidence": "medium",
     "note": "The year comes from the TV series' production design guide (the books say only 'colonised in the 21st century'); the same source puts a permanent lunar colony in 2025. The invention everyone remembers, the Epstein Drive, comes later, in 2213-14, and is what opens the Belt — but the Mars settlement is the first fork."
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "Humanity survives the ring gates, the empire and the things that ate the gate-builders; a thousand years on it is still here and still plural.",
+    "asOf": 3395
    },
    "events": [
     {
@@ -1259,6 +1274,11 @@
     "confidence": "medium",
     "note": "Nothing is dated on screen: the film says only that the wormhole 'appeared 48 years ago'. The year 2019 comes from Kip Thorne's tie-in book The Science of Interstellar, which Thorne introduces as his own extrapolation rather than Nolan's; chaining 2019 + 48 gives the standard 2067 present. The whole dating of this lineage is arithmetic from a tie-in reference, and the 13-year gap between the black-hole fall and Cooper's recovery is unexplained by any source."
    },
+   "ending": {
+    "valence": "optimistic",
+    "why": "The equation is solved from inside the tesseract, Earth is evacuated, and a new world waits at the end of the wormhole.",
+    "asOf": 2500
+   },
    "events": [
     {
      "id": "interstellar-apollo",
@@ -1671,6 +1691,11 @@
     "inUniverse": null,
     "confidence": "medium",
     "note": "The film never says 2009 out loud: it follows from Baby Diego being eighteen (his on-screen age is given to the hour) in the film's 2027 present, described as 'eighteen years of infertility'. P. D. James's novel puts the same event in 1995 ('Year Omega'), with the last birth on 19 October 1995, and sets its story in January 2021 — the adaptation keeps the roughly eighteen-year gap but shifts both forward and swaps male infertility for female."
+   },
+   "ending": {
+    "valence": "unknown",
+    "why": "One child is born and one boat is met at sea; whether the Human Project exists, or the species recovers, is never shown.",
+    "asOf": 2027
    },
    "events": [
     {

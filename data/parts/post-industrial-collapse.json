@@ -26,6 +26,11 @@
     "confidence": "medium",
     "note": "The pentalogy's first impossible event is actually 1973, when Zira and Cornelius arrive from the destroyed future and Caesar is born, but that is a closed bootstrap loop rather than a break in human history. 1983 is Conquest's 'eight years' before its 1991 uprising and is the first dated alteration to human civilisation; the revolt (1991) and the undated nuclear war are downstream. Confidence is medium because the film supplies only the relative 'eight years ago', not a year."
    },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "The astronaut finds the ruins of New York; humanity blew itself up and the apes inherited the Earth.",
+    "asOf": 3978
+   },
    "events": [
     {
      "id": "pota-darwin-1859",
@@ -450,6 +455,11 @@
     "confidence": "low",
     "note": "Never stated on screen. The date comes from the official Mad Max 2 production preamble, which describes Iran striking Saudi Arabia and the oil majors failing, reinforced by the Main Force Patrol's 'est. 1983' plate; the first film's own signage reads 6 December 1984 and its title card says only 'a few years from now'. Later material makes it worse: the 2015 Fury Road comics place their own Fall in the 2010s and George Miller says the films have no strict chronology, so the 1980s dating belongs to the flagship trilogy rather than to the franchise."
    },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "One citadel is freed and its water released, but the wasteland is the world now and a generation has known nothing else.",
+    "asOf": 2060
+   },
    "events": [
     {
      "id": "mm-oil-1859",
@@ -748,6 +758,11 @@
     "inUniverse": null,
     "confidence": "high",
     "note": "The date is uncontested: Fallout's 1997 intro and the Fallout 4 and Fallout 76 loading screens all give Saturday, 23 October 2077. The wider Fallout universe splits from ours after the Second World War in Bethesda's own framing, but this archetype branches on the catastrophe itself, so the War is the fork."
+   },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "Every game ends in a local victory inside a ruined continent, and the refrain holds: war never changes.",
+    "asOf": 2910
    },
    "events": [
     {
@@ -1335,6 +1350,11 @@
     "confidence": "medium",
     "note": "Canonical date text places the Second Renaissance in 2090-2139, and 2139 is the range's end, when the United Nations strikes Zero One; Wikipedia's Animatrix synopsis instead says 2148. Operation Dark Storm, the event that actually ends the human world, is undated on screen."
    },
+   "ending": {
+    "valence": "optimistic",
+    "why": "The war between humans and machines ends in an uneasy peace, and the survivors are left free to remake the world they were born into.",
+    "asOf": 2259
+   },
    "events": [
     {
      "id": "matrix-babbage-1834",
@@ -1635,6 +1655,11 @@
     "inUniverse": null,
     "confidence": "high",
     "note": "The 2035 scientists state the date on screen, describing the release as 'probably on December 13, 1996', with symptoms first detected in Philadelphia on 27 December; the film's opening card says five billion will die in 1997."
+   },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "The plague happens exactly as remembered; the loop closes, five billion die, and the survivors live underground.",
+    "asOf": 2035
    },
    "events": [
     {

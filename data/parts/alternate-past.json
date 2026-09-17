@@ -26,6 +26,11 @@
     "confidence": "high",
     "note": "Dick states the assassination and its consequences directly in the novel's background chapters. The attempt itself is historical; the fork is who it killed."
    },
+   "ending": {
+    "valence": "unknown",
+    "why": "The Reich stands but its succession is breaking open; Dick leaves the world mid-crisis, with a novel-within-the-novel hinting it is not the real one.",
+    "asOf": 1962
+   },
    "events": [
     {
      "id": "tmithc-crash-1929",
@@ -234,6 +239,11 @@
     "inUniverse": null,
     "confidence": "high",
     "note": "The comic's own backmatter dates the start of the Minutemen era to the late 1930s and names Hooded Justice as the first; the sharper break is 1959 and Doctor Manhattan, who is what actually rewrites global history."
+   },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "Peace is bought with a staged massacre and a lie, and Rorschach's journal sits in a slush pile waiting to unmake it.",
+    "asOf": 1985
    },
    "events": [
     {
@@ -521,6 +531,11 @@
     "inUniverse": null,
     "confidence": "high",
     "note": "Harris's author's note says the historical figures are accurate up to 1942 and fictional afterwards, which pins the fork to this year; the novel never spells the survival out in one sentence, but the whole backstory depends on it."
+   },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "The Reich endures, the detective dies at the camp, and only the faint chance that the evidence reaches America is left.",
+    "asOf": 1964
    },
    "events": [
     {
@@ -884,6 +899,11 @@
     "inUniverse": null,
     "confidence": "high",
     "note": "The arrival date is given on screen, which is unusual precision for the franchise. This is the special case in the group: the fork is caused by its own future, so 1984 is simultaneously the divergence and the first year of the fiction's own present."
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "As first told, the Resistance breaks Skynet in 2029 and humanity wins the war; every later loop reopens it, but the charted history ends in victory.",
+    "asOf": 2029
    },
    "events": [
     {

@@ -222,3 +222,33 @@ table.ev .iu{font-size:11px;color:var(--ink-3);display:block;margin-top:2px}
 .mp-yr{font-family:var(--font-mono);color:var(--ink-3);margin-right:4px}
 .mp-end{font-size:11px;color:var(--ink-4);font-style:italic;margin-top:4px}
 .mp-none{font-size:12.5px;color:var(--ink-3);font-style:italic}
+
+/* endings: where an arc converges */
+.mp-outcomes{margin:10px 0 4px}
+.mp-outcomes .mp-h{margin-top:10px}
+.mp-obar{display:flex;height:8px;border-radius:4px;overflow:hidden;background:var(--track-bg);gap:2px}
+.mp-obar i{display:block;height:100%}
+.mp-obar i.optimistic{background:var(--ok)}
+.mp-obar i.pessimistic{background:var(--bad)}
+.mp-obar i.unknown{background:var(--ink-4)}
+.mp-okeys{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}
+.mp-okey{font:inherit;font-size:11px;background:transparent;border:1px solid var(--line-1);border-radius:999px;padding:2px 9px;color:var(--ink-2);cursor:pointer;display:inline-flex;gap:5px;align-items:center}
+.mp-okey b{font-family:var(--font-mono);font-weight:700}
+.mp-okey.optimistic b{color:var(--ok)}
+.mp-okey.pessimistic b{color:var(--bad)}
+.mp-okey.unknown b{color:var(--ink-3)}
+.mp-okey.none{opacity:.45}
+.mp-okey:hover{border-color:var(--ink-3)}
+.mp-badge{font:inherit;font-size:10px;letter-spacing:.04em;text-transform:uppercase;font-weight:750;border-radius:999px;padding:1px 7px;border:1px solid;cursor:pointer;background:transparent;white-space:nowrap}
+.mp-badge.optimistic{color:var(--ok);border-color:var(--ok)}
+.mp-badge.pessimistic{color:var(--bad);border-color:var(--bad)}
+.mp-badge.unknown{color:var(--ink-3);border-color:var(--line-2);border-style:dashed}
+.mp-card-tools{display:inline-flex;align-items:center;gap:8px}
+.mp-kind.mp-kind-ending.optimistic{border-color:var(--ok);color:var(--ok)}
+.mp-kind.mp-kind-ending.pessimistic{border-color:var(--bad);color:var(--bad)}
+.mp-kind.mp-kind-ending.unknown{border-style:dashed}
+.mp-why{font-size:11.5px;color:var(--ink-2);line-height:1.5;margin-top:4px}
+.mp-title-optimistic{color:var(--ok)}
+.mp-title-pessimistic{color:var(--bad)}
+.mp-title-unknown{color:var(--ink-2)}
+.mp-card.ours{border-left-color:var(--trunk)}

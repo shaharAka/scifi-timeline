@@ -30,6 +30,7 @@ TIERS = {"T1", "T2", "T3", "T4"}
 PHASES = {"prehistory", "fork", "aftermath", "deep"}
 EPOCHS = {"deep-past", "far-future", "present"}
 CONF = {"high", "medium", "low"}
+VALENCES = {"optimistic", "pessimistic", "unknown"}   # how an arc ends, as far as it is told
 NOW_YEAR = datetime.now().year
 VOCAB = {}   # bin vocabulary, filled from data/bins.json in main()
 
@@ -544,6 +545,17 @@ def check_lineage(name, lin, group_id, seen_ids):
     if lin.get("franchiseStatus") not in STATUSES:
         warn("%s/%s: franchiseStatus %r not in %s"
              % (name, lid, lin.get("franchiseStatus"), sorted(STATUSES)))
+
+    en = lin.get("ending")
+    if not isinstance(en, dict):
+        err("%s/%s: ending is required: {valence, why[, asOf]} - how the arc ends as far as it is told" % (name, lid))
+    else:
+        if en.get("valence") not in VALENCES:
+            err("%s/%s: ending.valence %r not in %s" % (name, lid, en.get("valence"), sorted(VALENCES)))
+        if not en.get("why"):
+            err("%s/%s: ending.why is required (one sentence: the state the story leaves the world in)" % (name, lid))
+        if "asOf" in en and not isinstance(en.get("asOf"), int):
+            err("%s/%s: ending.asOf must be a real-calendar year" % (name, lid))
 
     dv = lin.get("divergence") or {}
     if not isinstance(dv.get("year"), int):

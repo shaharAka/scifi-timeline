@@ -706,8 +706,10 @@ attempt("moments page invariants", () => {
       if (e.bin && M.at[e.bin] && (seq.length === 0 || seq[seq.length - 1].bin !== e.bin)) seq.push({ bin: e.bin, year: e.year });
     });
     for (let i = 1; i < seq.length; i++) if (seq[i].year >= dv) want.add(seq[i - 1].bin + "|" + seq[i].bin);
+    /* and the arc's last kind runs into its ending */
+    if (seq.length) want.add(seq[seq.length - 1].bin + "|ending-" + ((l.ending && l.ending.valence) || "unknown"));
   });
-  check(roads.length === want.size, `${roads.length} roads drawn for ${want.size} post-fork transitions`);
+  check(roads.length === want.size, `${roads.length} roads drawn for ${want.size} post-fork transitions (endings included)`);
 
   /* a circle's count is the number of worlds through it */
   const expect = {};
@@ -716,8 +718,25 @@ attempt("moments page invariants", () => {
     here.forEach((b) => { expect[b] = (expect[b] || 0) + 1; });
   });
   let wrong = 0;
-  M.nodes.forEach((n) => { if (n.worlds !== (expect[n.id] || 0)) wrong++; });
+  M.nodes.forEach((n) => { if (!n.ending && n.worlds !== (expect[n.id] || 0)) wrong++; });
   check(wrong === 0, `${wrong} circle(s) miscount the worlds through them`);
+
+  /* endings: three sinks, every arc runs into exactly one, ours into "still open" */
+  const sinks = M.nodes.filter((n) => n.ending);
+  check(sinks.length === 3, `${sinks.length} ending sinks, expected 3`);
+  const tally = { optimistic: 0, pessimistic: 0, unknown: 0 };
+  t.lineages.forEach((l) => { tally[(l.ending && l.ending.valence) || "unknown"]++; });
+  sinks.forEach((n) => check(n.worlds === tally[n.valence], `${n.id}: ${n.worlds} worlds, data says ${tally[n.valence]}`));
+  const intoEnding = M.roads.filter((r) => r.ending);
+  const arcs = intoEnding.reduce((a, r) => a + r.worlds.length, 0);
+  const withPath = t.lineages.filter((l) => l.events.some((e) => e.bin && M.at[e.bin])).length;
+  check(arcs === withPath, `${arcs} arcs run into an ending, ${withPath} worlds have a path`);
+  const lastOurs = M.ours[M.ours.length - 1];
+  check(!!lastOurs && lastOurs.b === "ending-unknown", "our own path does not run into the open ending");
+  M.nodes.filter((n) => !n.ending && n.worlds).forEach((n) => {
+    const o = n.outcomes, sum = o.optimistic.length + o.pessimistic.length + o.unknown.length;
+    check(sum === n.worlds, `${n.id}: outcome tally ${sum} for ${n.worlds} worlds`);
+  });
 
   /* no tree furniture on this page */
   const FURNITURE = ["bundle-band", "bundle-label", "side-label", "trunk-core", "trunk-glow", "trunk-future",
@@ -729,13 +748,43 @@ attempt("moments page invariants", () => {
   soft(`moments: ${M.nodes.length} kinds (${M.realOrder.length} ours), ${M.roads.length} roads, ${M.ours.length} steps in our own path`);
 });
 
+/* ---- Moments: an ending is a node like any other - click it, read who ends there ---- */
+attempt("moments endings in the panel", () => {
+  setModeVia("moments");
+  const t = debug();
+  const M = t.moments();
+  if (!M || !M.nodes.some((n) => n.ending)) { soft("moments endings: no sinks, skipped"); return; }
+  const busiest = M.nodes.filter((n) => !n.ending && n.worlds).sort((a, b) => b.worlds - a.worlds)[0];
+  let body = "";
+  if (busiest) {
+    t.momentsSelectKind(busiest.id);
+    body = store["moments-body"].innerHTML;
+    check(body.includes("mp-outcomes"), "a kind's panel does not say how its arcs end");
+    check(body.includes("mp-badge"), "world cards carry no ending badge");
+  }
+  const sink = M.nodes.filter((n) => n.ending).sort((a, b) => b.worlds - a.worlds)[0];
+  t.momentsSelectKind(sink.id);
+  body = store["moments-body"].innerHTML;
+  check(t.momentsState().node === sink.id, "clicking an ending did not select it");
+  const cards = (body.match(/class="mp-card"/g) || []).length;
+  check(cards === sink.worlds, `${cards} cards for ${sink.worlds} worlds ending "${sink.spec.label}"`);
+  check(body.includes("mp-why"), "the ending panel gives no reason per world");
+  t.momentsSelectKind("ending-unknown");
+  body = store["moments-body"].innerHTML;
+  check(body.includes("Us, "), "the open ending does not place us in it");
+  t.momentsClear();
+  soft(`moments endings: ${M.nodes.filter((n) => n.ending).map((n) => `${n.spec.label} ${n.worlds}`).join(", ")}`);
+});
+
 /* ---- Moments: clicking does things, through the pointer path a browser uses ---- */
 attempt("moments clicks and camera", () => {
   setModeVia("moments");
   const t = debug();
   const M = t.moments();
   if (!M || !M.nodes.length) { soft("moments clicks: nothing to click, skipped"); return; }
-  const busiest = M.nodes.slice().sort((a, b) => b.worlds - a.worlds)[0];
+  /* a kind, not an ending sink: the sinks have their own test */
+  const busiest = M.nodes.filter((n) => !n.ending).sort((a, b) => b.worlds - a.worlds)[0];
+  if (!busiest) { soft("moments clicks: no kinds in this payload (only the ending sinks), skipped"); return; }
 
   /* a circle, clicked the way a browser delivers it: pointerdown then pointerup */
   const grp = svgNodes().find((n) => n.getAttribute("data-moment-node") === busiest.id);

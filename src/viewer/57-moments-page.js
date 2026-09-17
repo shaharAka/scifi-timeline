@@ -41,11 +41,25 @@ function mpUsableWidth(){
 
 function mpMean(a){ var s = 0; a.forEach(function(v){ s += v; }); return a.length ? s / a.length : 0; }
 function mpSpec(id){
+  var en = mpEndingSpec(id); if(en) return en;
   var out = null;
   ((typeof BINS !== "undefined" && BINS) || []).forEach(function(b){ if(b.id === id) out = b; });
   return out || { id:id, label:id, definition:"" };
 }
 function mpLabel(id){ return mpSpec(id).label || id; }
+
+/* Where an arc converges. Three sinks, drawn as the right edge of the map: every
+   world's path runs into one, and ours runs into "unknown" because we are still
+   inside it. The valence is the state the story leaves the world in as far as
+   it is told (data/SCHEMA.md, Endings), never the mood of the last beat. */
+var MP_ENDINGS = [
+  { id:"ending-optimistic",  valence:"optimistic",  label:"Ends well",  definition:"The world is left better, freer or safer than at the fork, or the threat that drove the story is ended." },
+  { id:"ending-pessimistic", valence:"pessimistic", label:"Ends badly", definition:"The world is left ruined, captive or doomed, and the story does not take that back." },
+  { id:"ending-unknown",     valence:"unknown",     label:"Still open", definition:"The author left it open, the franchise is mid-sentence, or the story refuses to say. Our own history ends here too." }
+];
+function mpEndingSpec(v){ var out = null; MP_ENDINGS.forEach(function(e){ if(e.valence === v || e.id === v) out = e; }); return out; }
+function mpEndingOf(l){ return (l && l.ending && mpEndingSpec(l.ending.valence)) || mpEndingSpec("unknown"); }
+function mpIsEnding(id){ return !!mpEndingSpec(id); }
 
 /* --- the model: kinds, our order, roads, what follows ------------------------ */
 function momentsModel(){
@@ -86,9 +100,39 @@ function momentsModel(){
       .sort(function(x, y){ return y.worlds.length - x.worlds.length; });
     nodes.push(n); at[b] = n;
   });
+  /* the three sinks: one node per valence, after every kind */
+  MP_ENDINGS.forEach(function(en, j){
+    var n = { id:en.id, i:order.length + j, spec:en, ending:true, valence:en.valence, ours: en.valence === "unknown",
+              visits:[], through:[], worlds:0, follow:[] };
+    list.forEach(function(l){
+      if(mpEndingOf(l).id !== en.id) return;
+      var seq = paths[l.id].seq, last = seq.length ? seq[seq.length - 1] : null;
+      n.through.push({ l:l, e:last ? last.e : null, i:seq.length, seq:seq, why:(l.ending || {}).why || "" });
+    });
+    n.worlds = n.through.length;
+    pos[en.id] = [1.06];
+    nodes.push(n); at[en.id] = n;
+  });
+  /* of the worlds through each kind, how their arcs end */
+  nodes.forEach(function(n){
+    if(n.ending) return;
+    var seen = {}, t = { optimistic:[], pessimistic:[], unknown:[] };
+    n.through.forEach(function(x){ if(seen[x.l.id]) return; seen[x.l.id] = true; t[mpEndingOf(x.l).valence].push(x.l); });
+    n.outcomes = t;
+  });
   var roads = {}, roadList = [];
   Object.keys(paths).forEach(function(id){
     var p = paths[id], dv = p.l.divergence.year;
+    /* the arc's last kind runs into its ending */
+    if(p.seq.length){
+      var lastS = p.seq[p.seq.length - 1], en = mpEndingOf(p.l), ek = lastS.bin + "|" + en.id;
+      if(at[lastS.bin]){
+        if(!roads[ek]){ roads[ek] = { a:lastS.bin, b:en.id, key:ek, worlds:[], future:false, ending:true }; roadList.push(roads[ek]); }
+        roads[ek].worlds.push(p.l);
+        if(lastS.year > NOW) roads[ek].future = true;
+        at[lastS.bin].follow.push({ bin:en.id, worlds:[p.l], ending:true });
+      }
+    }
     for(var i = 1; i < p.seq.length; i++){
       if(p.seq[i].year < dv) continue;
       var a = p.seq[i - 1].bin, b = p.seq[i].bin;
@@ -99,11 +143,24 @@ function momentsModel(){
       if(p.seq[i - 1].year > NOW) roads[k].future = true;
     }
   });
+  nodes.forEach(function(n){
+    if(n.ending) return;
+    var merged = {}, outF = [];
+    n.follow.forEach(function(f){
+      if(!merged[f.bin]){ merged[f.bin] = { bin:f.bin, worlds:[], ending:!!f.ending }; outF.push(merged[f.bin]); }
+      merged[f.bin].worlds = merged[f.bin].worlds.concat(f.worlds);
+    });
+    n.follow = outF.sort(function(x, y){ return y.worlds.length - x.worlds.length; });
+  });
   roadList.sort(function(x, y){ return y.worlds.length - x.worlds.length; });
   var ours = [];
   for(var j = 1; j < realEv.length; j++){
     var a2 = realEv[j - 1].bin, b2 = realEv[j].bin;
     if(a2 && b2 && a2 !== b2 && at[a2] && at[b2]) ours.push({ a:a2, b:b2, from:realEv[j - 1], to:realEv[j] });
+  }
+  var lastRealEv = realEv.length ? realEv[realEv.length - 1] : null;
+  if(lastRealEv && lastRealEv.bin && at[lastRealEv.bin]){
+    ours.push({ a:lastRealEv.bin, b:"ending-unknown", from:lastRealEv, to:{ year:NOW, title:"where we are now: not yet decided" }, ending:true });
   }
   return { nodes:nodes, at:at, order:order, realOrder:realOrder, fictionOnly:fictionOnly, pos:pos,
            roads:roadList, ours:ours, paths:paths, list:list,
@@ -275,7 +332,7 @@ function renderMomentsPage(svg){
     var A = M.at[r.a], B = M.at[r.b];
     var shared = r.worlds.length > 1;
     var p = sEl("path", {d:mpRoadPath(A.x, A.y, B.x, B.y), fill:"none"},
-                "mp-road" + (shared ? " shared" : "") + (r.future ? " future" : ""));
+                "mp-road" + (shared ? " shared" : "") + (r.future ? " future" : "") + (r.ending ? " into-ending " + (M.at[r.b].valence || "") : ""));
     p.setAttribute("data-road", r.key);
     p.setAttribute("stroke-width", (0.8 + Math.min(4, r.worlds.length * 0.9)).toFixed(2));
     if(shared || touches(r)) p.setAttribute("marker-end", "url(#mp-arrow)");
@@ -317,7 +374,7 @@ function renderMomentsPage(svg){
   var gNodes = sEl("g", null, "mp-nodes");
   M.nodes.forEach(function(k){
     var x = k.x, y = k.y, r = mpRadius(k);
-    var grp = sEl("g", null, "mp-node" + (k.ours ? " ours" : " notyet") + (k.id === selected ? " selected" : ""));
+    var grp = sEl("g", null, "mp-node" + (k.ending ? " ending " + k.valence : (k.ours ? " ours" : " notyet")) + (k.id === selected ? " selected" : ""));
     grp.setAttribute("data-moment-node", k.id);
     if(selected && k.id !== selected && !connected[k.id]) grp.setAttribute("opacity", "0.3");
     grp.appendChild(sEl("circle", {cx:x, cy:y, r:r + 7, fill:"transparent", "pointer-events":"all"}, "mp-hit"));
@@ -401,24 +458,29 @@ function mpElements(M){
   var todayId = M.lastReal ? M.lastReal.bin : null;
   M.nodes.forEach(function(k){
     var years = k.visits.length ? "us: " + k.visits.slice(0, 3).map(function(e){ return e.year; }).join(", ") + (k.visits.length > 3 ? " …" : "") : "";
-    els.push({ group:"nodes", data:{ id:k.id, label:mpLabel(k.id), years:years, worlds:k.worlds, ours:k.ours ? 1 : 0, p:k.p || 0 },
-               classes:(k.ours ? "ours" : "notyet") + (k.id === todayId ? " today" : "") });
+    els.push({ group:"nodes", data:{ id:k.id, label:mpLabel(k.id) + (k.ending ? "\n" + k.worlds + (k.worlds === 1 ? " world" : " worlds") : ""),
+               years:years, worlds:k.worlds, ours:k.ours ? 1 : 0, p:k.p || 0, valence:k.valence || "" },
+               classes:(k.ending ? "ending " + k.valence : (k.ours ? "ours" : "notyet")) + (k.id === todayId ? " today" : "") });
   });
   M.roads.forEach(function(r){
     els.push({ group:"edges", data:{ id:"r:" + r.key, source:r.a, target:r.b, weight:r.worlds.length,
                names:r.worlds.map(function(l){ return l.title; }).join(", ") },
-               classes:"road" + (r.worlds.length > 1 ? " shared" : "") + (r.future ? " future" : "") });
+               classes:"road" + (r.worlds.length > 1 ? " shared" : "") + (r.future ? " future" : "")
+                       + (r.ending ? " into-ending " + at(r.b).valence : "") });
   });
   M.ours.forEach(function(o, i){
     els.push({ group:"edges", data:{ id:"o:" + i, source:o.a, target:o.b, weight:1, names:o.from.year + " " + o.from.title + " → " + o.to.year + " " + o.to.title },
-               classes:"ours" });
+               classes:"ours" + (o.ending ? " into-ending" : "") });
   });
   return els;
+  function at(id){ return M.at[id] || {}; }
 }
 function mpCyStyle(){
   var trunk = mpCss("--trunk", "#1d3f6b"), ink2 = mpCss("--ink-2", "#4a5c6b"), ink4 = mpCss("--ink-4", "#9fafbd"),
       ink1 = mpCss("--ink-1", "#22323f"), surface = mpCss("--surface", "#f8fbfd"), line3 = mpCss("--line-3", "#8494a6"),
-      now = mpCss("--now", "#101c28"), font = mpCss("--font-sans", "sans-serif");
+      now = mpCss("--now", "#101c28"), font = mpCss("--font-sans", "sans-serif"),
+      ok = mpCss("--ok", "#1f7a55"), bad = mpCss("--bad", "#a03a34"), bg2 = mpCss("--bg-2", "#e4eaf1"),
+      okBg = "rgba(31,122,85,.10)", badBg = "rgba(160,58,52,.10)";
   return [
     { selector:"node", style:{
         "width":"mapData(worlds, 0, 12, 16, 46)", "height":"mapData(worlds, 0, 12, 16, 46)",
@@ -429,6 +491,16 @@ function mpCyStyle(){
         "min-zoomed-font-size":6,
         "transition-property":"opacity", "transition-duration":"120ms" } },
     { selector:"node.ours", style:{ "border-width":2.6, "border-color":trunk } },
+    { selector:"node.ending", style:{ "shape":"round-rectangle", "width":118, "height":44, "border-width":2,
+        "text-valign":"center", "text-halign":"center", "text-margin-y":0, "text-wrap":"wrap", "text-max-width":110,
+        "font-size":12, "text-background-opacity":0, "color":ink1 } },
+    { selector:"node.ending.optimistic",  style:{ "border-color":ok,  "background-color":okBg } },
+    { selector:"node.ending.pessimistic", style:{ "border-color":bad, "background-color":badBg } },
+    { selector:"node.ending.unknown",     style:{ "border-color":ink4, "background-color":bg2, "border-style":"dashed" } },
+    { selector:"edge.into-ending.optimistic",  style:{ "line-color":ok,  "target-arrow-color":ok } },
+    { selector:"edge.into-ending.pessimistic", style:{ "line-color":bad, "target-arrow-color":bad } },
+    { selector:"edge.into-ending.unknown",     style:{ "line-color":ink4, "target-arrow-color":ink4 } },
+    { selector:"edge.into-ending", style:{ "opacity":0.55, "target-arrow-shape":"triangle", "width":"mapData(weight, 1, 8, 1.4, 7)" } },
     { selector:"node.today", style:{ "border-style":"double", "border-width":5, "border-color":now } },
     { selector:"node.selected", style:{ "border-color":now, "border-width":4, "background-color":mpCss("--bg-2", "#e4eaf1") } },
     { selector:"node.dim", style:{ "opacity":0.28 } },
@@ -535,7 +607,7 @@ function mpCyLayout(){
      Ranking on every private road too spread 33 kinds over four thousand
      pixels: one world's idiosyncratic detour is not the shape of the story. */
   var ranking = cy.elements().filter(function(e){
-    return e.isNode() || e.hasClass("shared") || e.hasClass("ours");
+    return e.isNode() || e.hasClass("shared") || e.hasClass("ours") || e.hasClass("into-ending");
   });
   var opts = { name:"dagre", rankDir:"LR", nodeSep:40, rankSep:82, edgeSep:12, ranker:"tight-tree",
                padding:30, animate:false, eles:ranking,
@@ -548,8 +620,8 @@ function mpCyLayout(){
   }
   /* kinds that no shared road or real step touches were not ranked: place them
      at the x their story position implies, in a row under the rest */
-  var bb = cy.elements().filter(function(e){ return e.isNode() && ranking.contains(e) && e.connectedEdges(".shared, .ours").length; }).boundingBox();
-  var stray = cy.nodes().filter(function(n){ return !n.connectedEdges(".shared, .ours").length; });
+  var bb = cy.elements().filter(function(e){ return e.isNode() && ranking.contains(e) && e.connectedEdges(".shared, .ours, .into-ending").length; }).boundingBox();
+  var stray = cy.nodes().filter(function(n){ return !n.connectedEdges(".shared, .ours, .into-ending").length; });
   stray.forEach(function(n, i){
     n.position({ x: bb.x1 + (bb.w || 600) * (n.data("p") || 0.5), y: bb.y2 + 90 + (i % 2) * 44 });
   });
@@ -569,7 +641,8 @@ function mpCyHome(){
        the screen and only the kinds beyond us are off to the right. */
     var t = cy.nodes(".today"); var c = (t.length ? t : ours).boundingBox(), all = cy.elements().boundingBox();
     var z = 0.72, uw = Math.min(cy.width(), mpUsableWidth());
-    var right = Math.min(all.x2, c.x2 + 160);
+    /* the endings are the right edge now; keep them in view with today */
+    var right = all.x2;
     var yc = all.h * z < cy.height() - 40 ? all.y1 + all.h / 2 : c.y1 + c.h / 2;
     cy.viewport({ zoom:z, pan:{ x: (uw - 48) - right * z, y: cy.height() / 2 - yc * z } });
   }
@@ -587,6 +660,8 @@ function renderMomentsPanel(){
   var html = "";
   if(MP.beat){
     html += mpBeatHtml(MP.beat, M);
+  } else if(MP.node && M.at[MP.node] && M.at[MP.node].ending){
+    html += mpEndingHtml(M.at[MP.node], M);
   } else if(MP.node && M.at[MP.node]){
     html += mpKindHtml(M.at[MP.node], M);
   } else {
@@ -598,8 +673,12 @@ function renderMomentsPanel(){
       + '<p class="mp-intro"><b>Click a circle</b> for every world that passes through that kind of moment, what leads '
       + 'there and what it leads to. <b>Click a time it happened to us</b> to match that real moment by situation to '
       + 'the nearest fictional ones and read them forward. <b>Click a world</b> to light its whole road. '
-      + 'Scroll to zoom, drag to pan, Fit for the whole map.</p>';
-    var shared = M.roads.filter(function(r){ return r.worlds.length > 1; }).slice(0, 10);
+      + 'Scroll to zoom, drag to pan, Fit for the whole map.</p>'
+      + '<p class="mp-intro">Every arc converges on one of three endings at the right edge: it <b>ends well</b>, '
+      + '<b>ends badly</b>, or is <b>still open</b>. Our own path runs into <i>still open</i>, because we are inside it. '
+      + 'Click a kind of moment and its panel says how the worlds that passed through it ended.</p>';
+    html += mpOutcomesHtml(mpTallyAll(M), M.list.length, "How the " + M.list.length + " arcs end");
+    var shared = M.roads.filter(function(r){ return r.worlds.length > 1 && !r.ending; }).slice(0, 10);
     if(shared.length){
       html += '<h3 class="mp-h">Roads more than one world takes</h3><ol class="mp-roads">';
       shared.forEach(function(r){
@@ -627,12 +706,81 @@ function renderMomentsPanel(){
   if(back) back.onclick = function(){ if(MP.beat){ MP.beat = null; renderChart(); renderMomentsPanel(); } else momentsClear(); };
 }
 
+function mpTallyAll(M){
+  var t = { optimistic:[], pessimistic:[], unknown:[] };
+  M.list.forEach(function(l){ t[mpEndingOf(l).valence].push(l); });
+  return t;
+}
+/* a three-segment bar: how the arcs through something end; each key is a
+   button onto that ending */
+function mpOutcomesHtml(t, total, title){
+  if(!total) return "";
+  var html = '<div class="mp-outcomes">' + (title ? '<h3 class="mp-h">' + esc(title) + '</h3>' : '') + '<div class="mp-obar">';
+  MP_ENDINGS.forEach(function(en){
+    var n = t[en.valence].length; if(!n) return;
+    html += '<i class="' + en.valence + '" style="flex:' + n + '" title="' + esc(en.label) + ': ' + n + '"></i>';
+  });
+  html += '</div><div class="mp-okeys">';
+  MP_ENDINGS.forEach(function(en){
+    var n = t[en.valence].length;
+    html += '<button class="mp-okey ' + en.valence + (n ? '' : ' none') + '" data-kind="' + en.id + '" title="'
+      + esc(t[en.valence].map(function(l){ return l.title; }).join(", ")) + '"><b>' + n + '</b> ' + esc(en.label.toLowerCase()) + '</button>';
+  });
+  html += '</div></div>';
+  return html;
+}
+function mpBadge(l){
+  var en = mpEndingOf(l);
+  return '<button class="mp-badge ' + en.valence + '" data-kind="' + en.id + '" title="' + esc((l.ending && l.ending.why) || en.definition) + '">' + esc(en.label.toLowerCase()) + '</button>';
+}
+function mpEndingHtml(k, M){
+  var html = '<div class="mp-head"><div class="mp-kicker">How an arc ends' + (k.ours ? ' · where our own path runs' : '') + '</div>'
+    + '<h3 class="mp-title mp-title-' + k.valence + '">' + esc(k.spec.label) + '</h3>'
+    + '<p class="mp-def">' + esc(k.spec.definition) + '</p></div>';
+  var leads = M.roads.filter(function(r){ return r.b === k.id; });
+  if(leads.length){
+    var tot = 0; leads.forEach(function(r){ tot += r.worlds.length; });
+    html += '<h3 class="mp-h">The last kind of moment before it</h3><ul class="mp-follow">';
+    leads.forEach(function(r){
+      var pct = Math.round(100 * r.worlds.length / Math.max(1, tot));
+      html += '<li><button class="mp-kind" data-kind="' + esc(r.a) + '">' + esc(mpLabel(r.a)) + '</button> →'
+        + '<span class="mp-bar"><i style="width:' + pct + '%"></i></span>'
+        + '<span class="mp-n">' + r.worlds.length + ' of ' + tot + '</span>'
+        + '<span class="mp-who">' + r.worlds.map(function(l){ return esc(l.title); }).join(", ") + '</span></li>';
+    });
+    html += '</ul>';
+  }
+  if(k.ours){
+    html += '<div class="mp-card ours"><div class="mp-card-head"><span class="mp-world">Us, ' + NOW + '</span></div>'
+      + '<div class="mp-moment">' + (M.lastReal ? '<b>' + esc(String(M.lastReal.year)) + '</b> ' + esc(M.lastReal.title) : '') + '</div>'
+      + '<div class="mp-why">Not decided. Every road out of the kind we are in now has been walked by some fiction; read them from the circle.</div></div>';
+  }
+  html += '<h3 class="mp-h">' + k.worlds + (k.worlds === 1 ? ' world ends' : ' worlds end') + ' here</h3>';
+  if(!k.through.length) html += '<p class="mp-none">No world in the atlas ends this way.</p>';
+  else {
+    html += '<div class="mp-worlds">';
+    k.through.slice().sort(function(a, b){ return a.l.title < b.l.title ? -1 : 1; }).forEach(function(w){
+      html += '<div class="mp-card" style="--c:' + esc(w.l._g.color) + '">'
+        + '<div class="mp-card-head">' + mpWorldButton(w.l)
+        + '<button class="mp-open" data-open-world="' + esc(w.l.id) + '" title="open the world">dossier →</button></div>'
+        + (w.e ? '<div class="mp-moment"><b>' + esc(fmtYearFull(w.e.year)) + '</b> ' + esc(w.e.title)
+          + ' <button class="mp-kind small" data-kind="' + esc(w.e.bin) + '">' + esc(mpLabel(w.e.bin)) + '</button></div>' : '')
+        + '<div class="mp-why">' + esc(w.why) + '</div></div>';
+    });
+    html += '</div>';
+  }
+  return html;
+}
+
 function mpKindHtml(k, M){
   var html = '<div class="mp-head"><div class="mp-kicker">Kind of moment' + (k.ours ? '' : ' · not yet happened to us') + '</div>'
     + '<h3 class="mp-title">' + esc(mpLabel(k.id)) + '</h3>'
     + (k.spec.definition ? '<p class="mp-def">' + esc(k.spec.definition) + '</p>' : '')
     + (k.spec.exampleHeadline ? '<p class="mp-eg">as a headline: “' + esc(k.spec.exampleHeadline) + '”</p>' : '')
     + '</div>';
+  if(k.outcomes && k.worlds){
+    html += mpOutcomesHtml(k.outcomes, k.worlds, "How the arcs through it end");
+  }
   if(k.visits.length){
     html += '<h3 class="mp-h">Happened to us</h3><ul class="mp-visits">';
     k.visits.forEach(function(e){
@@ -659,7 +807,8 @@ function mpKindHtml(k, M){
     html += '<h3 class="mp-h">What it leads to</h3><ul class="mp-follow">';
     k.follow.slice(0, 8).forEach(function(f){
       var pct = Math.round(100 * f.worlds.length / Math.max(1, total));
-      html += '<li><button class="mp-kind" data-kind="' + esc(f.bin) + '">' + esc(mpLabel(f.bin)) + '</button>'
+      html += '<li><button class="mp-kind' + (f.ending ? ' mp-kind-ending ' + esc(M.at[f.bin].valence) : '') + '" data-kind="' + esc(f.bin) + '">'
+        + esc(f.ending ? "the arc " + mpLabel(f.bin).toLowerCase() : mpLabel(f.bin)) + '</button>'
         + '<span class="mp-bar"><i style="width:' + pct + '%"></i></span>'
         + '<span class="mp-n">' + f.worlds.length + ' of ' + total + '</span>'
         + '<span class="mp-who">' + f.worlds.map(function(l){ return esc(l.title); }).join(", ") + '</span></li>';
@@ -677,8 +826,8 @@ function mpKindHtml(k, M){
       .sort(function(a, b){ return a.l.title < b.l.title ? -1 : 1; })
       .forEach(function(w){
         html += '<div class="mp-card" style="--c:' + esc(w.l._g.color) + '">'
-          + '<div class="mp-card-head">' + mpWorldButton(w.l)
-          + '<button class="mp-open" data-open-world="' + esc(w.l.id) + '" title="open the world">dossier →</button></div>';
+          + '<div class="mp-card-head">' + mpWorldButton(w.l) + '<span class="mp-card-tools">' + mpBadge(w.l)
+          + '<button class="mp-open" data-open-world="' + esc(w.l.id) + '" title="open the world">dossier →</button></span></div>';
         w.hits.forEach(function(t){
           var nxt = t.seq.slice(t.i + 1, t.i + 4);
           html += '<div class="mp-moment"><b>' + esc(fmtYearFull(t.e.year)) + '</b> ' + esc(t.e.title)
@@ -691,7 +840,8 @@ function mpKindHtml(k, M){
             });
             html += '</ol>';
           } else {
-            html += '<div class="mp-end">the charted history ends here</div>';
+            html += '<div class="mp-end">the charted history ends here: ' + esc(mpEndingOf(w.l).label.toLowerCase())
+              + (w.l.ending && w.l.ending.why ? ' — ' + esc(w.l.ending.why) : '') + '</div>';
           }
         });
         html += '</div>';
@@ -734,7 +884,7 @@ function mpBeatHtml(e, M){
     var fwd = facetForward(m, 3);
     html += '<div class="mp-card" style="--c:' + esc(col) + '"><div class="mp-card-head">'
       + (l ? mpWorldButton(l) : '<span class="mp-world">' + esc(m.worldTitle) + '</span>')
-      + '<span class="mp-score">' + nb.score.toFixed(2) + ' match</span></div>'
+      + '<span class="mp-card-tools">' + (l ? mpBadge(l) : '') + '<span class="mp-score">' + nb.score.toFixed(2) + ' match</span></span></div>'
       + '<div class="mp-moment"><b>' + esc(fmtYearFull(m.e.year)) + '</b> ' + esc(m.e.title)
       + (m.e.bin ? ' <button class="mp-kind small" data-kind="' + esc(m.e.bin) + '">' + esc(mpLabel(m.e.bin)) + '</button>' : '') + '</div>'
       + '<div class="mp-change small">' + esc(m.e.facets ? m.e.facets.change : "") + '</div>';
@@ -746,6 +896,7 @@ function mpBeatHtml(e, M){
       });
       html += '</ol>';
     } else html += '<div class="mp-end">the charted history ends here</div>';
+    if(l && l.ending) html += '<div class="mp-why">' + esc(mpEndingOf(l).label) + ': ' + esc(l.ending.why) + '</div>';
     html += '</div>';
   });
   html += '</div>';

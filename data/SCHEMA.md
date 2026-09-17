@@ -164,6 +164,11 @@ If a real-world year is contested, pick the best-supported reading, set
         "confidence": "high",
         "note": "Only in the sense of a government concealment of extraterrestrial contact; the alternate history proper begins here."
       },
+      "ending": {
+        "valence": "unknown",
+        "why": "The conspiracy is exposed and reburied again and again; the files are open, the truth is still out there.",
+        "asOf": 2016
+      },
       "events": [
         {
           "id": "xf-roswell",
@@ -186,6 +191,34 @@ If a real-world year is contested, pick the best-supported reading, set
 }
 ```
 
+
+## Endings: where the arc converges
+
+Every arc ends somewhere, and the Moments page draws that: each world's path
+through the kinds of moment runs into one of three sinks, and our own path
+runs into `unknown` because we are still inside it. That is what makes the
+graph predictive rather than descriptive - a kind of moment can be read as
+"of the worlds that passed through this, so many ended well, so many badly,
+so many are still open".
+
+```json
+"ending": { "valence": "optimistic", "why": "One sentence.", "asOf": 3189 }
+```
+
+- `valence` is the state the story leaves the world in **as far as it is
+  told**, not the mood of the last charted event. Star Wars ends with the
+  First Order striking in the chart but the saga as told ends with the
+  tyrant's second fall: `optimistic`.
+- `optimistic`: the world is left better, freer or safer than at the fork,
+  or the threat that drove the story is ended. `pessimistic`: the world is
+  left ruined, captive or doomed and the story does not take that back.
+  `unknown`: the author left it open, the franchise is mid-sentence, or the
+  story deliberately refuses to say.
+- `why` is one sentence, the evidence for the call. `asOf` is the real year
+  of the last told moment the call rests on.
+- Do not infer valence from `franchiseStatus`. An `ongoing` franchise can
+  have an `optimistic` ending as told (Star Trek); a `concluded` one can be
+  `unknown` (Dune).
 
 ## Bins: the kind of moment
 
@@ -270,7 +303,8 @@ Rules:
 
 - group: `id`, `name`, `tagline`, `question`, `divergenceMechanism`, `color`
 - lineage: `id`, `title`, `medium`, `creator`, `originYear`, `group`, `epoch`,
-  `franchiseStatus`, `divergence`, `events`, `groupingNote`
+  `franchiseStatus`, `divergence`, `ending`, `events`, `groupingNote`
+- ending: `valence`, `why` (`asOf` optional)
 - divergence: `year`, `label`, `delta`, `confidence`
 - event: `id`, `year`, `title`, `description`, `tier`, `phase`, `importance`,
   `kind`, `confidence`, `bin`
@@ -282,6 +316,7 @@ Rules:
 2. Events strictly ascending by `year`. Never reorder for drama.
 3. `medium` is one of `film`, `tv`, `book`, `game`, `comic` — the primary medium.
 4. `franchiseStatus` is one of `ongoing`, `concluded`, `dormant`, `anthology`.
+   `ending.valence` is one of `optimistic`, `pessimistic`, `unknown`.
 5. At most one event per exact `(lineage, year)` pair. If two things happen the
    same year, merge them or pick the more significant.
 6. No in-universe years anywhere in `year`, `date`, or `title`. If a title needs

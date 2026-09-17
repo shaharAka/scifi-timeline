@@ -26,6 +26,11 @@
     "confidence": "high",
     "note": "The story's present is our present: Mulder and Scully work in a 1990s FBI that is otherwise exactly ours, and the branch is a fifty-year conspiracy of silence rather than an open alternate history."
    },
+   "ending": {
+    "valence": "unknown",
+    "why": "The conspiracy is exposed and reburied again and again; the files are open, the truth is still out there.",
+    "asOf": 2016
+   },
    "events": [
     {
      "id": "xf-roswell",
@@ -348,6 +353,11 @@
     "confidence": "medium",
     "note": "1961 is the franchise's founding date for the agency's public-facing mission; the films anchor the era through the young Agent K and the 1960s timeline of the third film rather than through a stated calendar year."
    },
+   "ending": {
+    "valence": "optimistic",
+    "why": "Every threat is contained, Earth stays protected and ignorant, and the branch that was exposed is quietly rebuilt.",
+    "asOf": 2019
+   },
    "events": [
     {
      "id": "mib-founding",
@@ -667,6 +677,11 @@
     "inUniverse": null,
     "confidence": "high",
     "note": "The concealment itself is far older — the International Statute of Secrecy took effect in 1692 — but the branch point that produces the story is Voldemort's attack on 31 October 1981."
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "The dark lord is destroyed, the world he threatened heals, and nineteen years later all is well.",
+    "asOf": 2017
    },
    "events": [
     {
@@ -1029,6 +1044,11 @@
     "confidence": "high",
     "note": "Vampires and demons have existed in secret for all of human history — there is no single break with real history, only the point where the fiction's present day begins; 1997 is where the series and the real calendar coincide."
    },
+   "ending": {
+    "valence": "unknown",
+    "why": "The line of Slayers is shared out and later renewed two centuries on; the fight is never over, which is the point.",
+    "asOf": 2200
+   },
    "events": [
     {
      "id": "btvs-first-slayer",
@@ -1277,6 +1297,11 @@
     "inUniverse": null,
     "confidence": "medium",
     "note": "The fiction opens in a parallel world that split long before the story starts, so this date is the branch the books describe rather than one they state; the trilogy never gives a year for the schism, and the shape of the divergence is unambiguous even where its date is not."
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "The Authority dies, the windows between worlds are closed at a personal cost, and the Republic of Heaven is left to be built by hand.",
+    "asOf": 2000
    },
    "events": [
     {

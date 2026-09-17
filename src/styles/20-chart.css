@@ -190,3 +190,12 @@ body:not(.mode-moments) .legend .m-only{display:none}
 .mp-beat-hit{cursor:pointer}
 .mp-beat-hit:hover + .mp-beat{fill:var(--trunk)}
 .mp-empty{font-size:13px;fill:var(--ink-3)}
+
+/* the SVG fallback's ending sinks */
+.mp-node.ending .mp-circle{stroke-width:2}
+.mp-node.ending.optimistic .mp-circle{stroke:var(--ok);fill:rgba(31,122,85,.10)}
+.mp-node.ending.pessimistic .mp-circle{stroke:var(--bad);fill:rgba(160,58,52,.10)}
+.mp-node.ending.unknown .mp-circle{stroke:var(--ink-4);stroke-dasharray:3 3}
+.mp-road.into-ending.optimistic{stroke:var(--ok)}
+.mp-road.into-ending.pessimistic{stroke:var(--bad)}
+.mp-road.into-ending.unknown{stroke:var(--ink-4)}
