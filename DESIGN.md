@@ -306,8 +306,9 @@ from `file://`). Keep function names unique and keep each file to one concern:
 | `40-select.js` | filtering, sorting, `overtaken()` |
 | `50-layout.js` | the tree layout: sides, bundles, lane rows, trunk position |
 | `55-order.js`, `56-moments.js` | the `AX` accessor: where a world's x comes from (Years, Order, Moments columns) |
-| `57-moments-page.js` | the Moments page: `momentsModel` (kinds, roads, our path), Cytoscape/dagre rendering with an SVG fallback, its camera and panel |
+| `57-moments-page.js` | the Moments page: `momentsModel` (strands, bundles, kinds, endings), the storyline layout, the SVG, its camera and its panel |
 | `58-facets.js` | facet similarity: `facetNeighbours`, `facetForward`, the weights |
+| `59-chains.js` | chain alignment: `chainKindSim`, `chainScore`, `chainAlign` (local), `chainMSA` (progressive multiple alignment, the map's columns) |
 | `60-chart.js` | drawing: backdrop, trunk, axis, bundles, `renderBranch`, prehistory nodes |
 | `65-motion.js` | grow-in, convergence, layout glide |
 | `70-interact.js` | pan, zoom, hover, click, tooltip |
@@ -326,13 +327,12 @@ painted once per size, never per frame, and skipped where canvas is
 unavailable.
 
 **The Moments page is not the tree.** `renderChart()` branches to
-`renderMomentsPage` before drawing anything, hides `#chart` behind `#cy`, and
-Cytoscape owns the canvas, its wheel and its drag. The graph is a directed
-flow of kinds of moment: dagre ranks it left to right on the roads several
-worlds take and on our own path, and a road one world takes is a whisper until
-a circle or a world is chosen. The libraries are vendored under `vendor/` and
-loaded as plain script tags so the page still opens over `file://`; with no
-vendor code (the test shim) the same model draws as SVG.
+`renderMomentsPage` before drawing anything. The page is a storyline: one
+strand per world from its fork to one of three endings, coloured by that
+ending, bundling through pills where chains reach the same kind of moment at
+the same step of a multiple alignment. It is drawn in our own SVG with the
+page's own camera (x and y scale separately at Fit so the map's width fits
+beside the panel while its height stays full). No library is involved.
 
 **Rendering model**: `renderChart()` rebuilds the SVG wholesale on every
 pan, zoom, filter and animation frame. A few hundred nodes; do not optimise

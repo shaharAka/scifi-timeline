@@ -200,88 +200,86 @@ law / state / inside / national / political, power up, openness down). A
 technology, an enemy - would separate them. Add it to `data/facets.json` and
 to every event before adding worlds, not after.
 
-### 2.3 The picture (built 2026-09-17: the Moments page, a flow of kinds anchored on us)
+### 2.3 The picture (built 2026-09-17: strands - one chain per world, converging on three endings)
 
-Moments is its own page, not a mode of the tree. Nothing of the tree is drawn
-on it and it has its own camera and its own panel (`src/viewer/57-moments-page.js`).
-The question it answers is *what leads to what*, so it is a directed graph,
-not a line: the arc-diagram and the column versions before it were still a
-timeline in disguise and were removed.
+Moments is its own page, not a mode of the tree. It has its own camera and its
+own panel (`src/viewer/57-moments-page.js`), and it is drawn in our own SVG
+with no library. Two earlier versions - a flow graph of kinds with counted
+roads, and before it an arc diagram - were removed: a graph with one node per
+kind is first-order Markov, and the stories are not memoryless. What follows a
+kind of moment depends on the chain that led there. So the unit here is the
+chain.
 
-- **One circle per kind of moment**, sized by how many worlds pass through it.
-  Kinds our own history has passed through (22 of 33) have a heavy border in
-  the trunk colour; the kind we are in now has a double border. Kinds only
-  fiction has reached are plain.
-- **Roads are edges**: a transition a fiction makes between two kinds after it
-  has forked, drawn once per pair, weighted by how many worlds take it, dashed
-  where it lies ahead of today. Pre-fork moves are not roads (the world was
-  still with us). A road only one world takes is a whisper (7% opacity) until
-  something is chosen. **Our own path** is the dotted line in our colour.
-- **Every arc converges on an ending.** Three sinks stand at the right edge of
-  the map: *ends well*, *ends badly*, *still open*. Each world's last kind of
-  moment runs into the one its `ending.valence` names (data/SCHEMA.md,
-  Endings), and our own path runs into *still open* because we are inside it.
-  This is what makes the page predictive rather than descriptive: a kind of
-  moment's panel opens with a three-colour bar, "of the worlds through this,
-  so many ended well, so many badly, so many are open", every world card
-  carries its ending as a badge, and the situation match shows where each
-  nearest fiction ended up. Click a sink for the last kinds before it and every
-  world that ends there with the one-sentence reason for the call.
-- **Layout is left to right by what leads to what**, ranked by dagre on the
-  shared roads, our path and the roads into the endings. Ranking on every private road spread the map
-  over four thousand pixels; one world's detour is not the shape of the story.
-  Kinds no shared road or real step touches sit in a row underneath, at the x
-  their story position implies. There is no date and no rank of first visit
-  anywhere in the placement.
-- **Nothing is coloured by world until asked.** Tap a circle: roads not
-  touching it recede, the neighbourhood stays lit, and the panel shows the kind,
-  its definition and example headline, *Happened to us* (each real beat as a
-  button), *What leads here* and *What it leads to* (counted, with bars, naming
-  the worlds), and every world through it with its moment there and its next
-  three beats. Click a world's name to light its whole road in its colour, with
-  the shared-with-us part dotted. Click a real beat for the situation match: the
-  beat's signature, then the nearest fictional moments by facets with their
-  scores and what followed. Tap empty canvas to clear.
-- **Camera**: wheel zooms around the cursor, drag pans, the +/- buttons and
-  Fit work. The page opens with our path framed at a readable zoom, the right
-  edge of the map (where today sits) just inside the view; Fit shows the whole
-  map inside the part of the canvas the panel does not cover; choosing a circle
-  pans the least distance needed to keep it out from under the panel. Labels
-  hide below a readable size rather than shrink to dust.
-- **Rendering**: Cytoscape.js with the dagre layout, vendored under `vendor/`
-  and loaded by `<script src>` from `src/page.html`, so the page still works
-  over `file://` and needs no build. When the vendor scripts are absent (the
-  Node test shim) the page falls back to an SVG flow drawn by the same model
-  (`momentsLayout`, `mpRoadPath`) with the same clicks, dispatched from the
-  svg's pointerup using the pressed element so they survive pointer capture.
+- **One strand per world.** It leaves our history at its fork (nothing before
+  the divergence is on it: that was shared with us) and runs right through its
+  kinds of moment to one of three endings. Left to right is position along
+  the chain, never a date. Strands that fork ahead of today leave from a short
+  dashed stretch of trunk after TODAY and are drawn dashed.
+- **Every strand is coloured by how its arc ends**, along its whole length:
+  green ends well, red ends badly, grey still open. The three endings are
+  boxes at the right edge, with counts. Our own history is the heavy trunk to
+  TODAY, then a dotted line into *still open*, because we are inside our
+  chain.
+- **A pill is where two or more strands reach the same kind of moment at the
+  same step of the alignment**; they bundle through it and split after. A kind
+  one strand reaches alone is a small mark. The same kind can appear at
+  several places on the map: that is the point. At overview zoom, bundles of
+  two are drawn as knots with a count; zoom in for the labels.
+- **Columns are a multiple alignment of the chains** (`59-chains.js`,
+  `chainMSA`): a progressive profile alignment where the same kind scores 1, a
+  facet-like kind scores part (`chainKindSim`: mean facet likeness between the
+  moments of two kinds), unlike kinds may share a column almost free, opening
+  a new column costs, skipping one costs a little. The map is as many columns
+  as the longest chain. Vertical order is a storyline layout: home rows by
+  ending (well above the trunk, open around it, badly below), then three
+  sweeps that pull strands together where they bundle and keep groups apart.
+- **Matching is by chain, not by step.** `chainAlign` is a local alignment
+  (Smith-Waterman) of two chains; its likeness is the score over the shorter
+  length. The opening panel aligns *our last six kinds of moment* against
+  every fictional chain and reads what each world did after the matched
+  stretch, with its ending. A strand's panel does the same for that chain. A
+  beat's panel does it for our chain up to that beat, above the single-moment
+  situation match from the facets.
+- **Clicks**: a strand lights alone and its panel shows the chain, the moments
+  behind it (with who it bundles with at each step), and the chains most like
+  it. A pill's panel shows every chain through that kind, whole, this step
+  marked, grouped by where on the map they reach it, the clicked bundle first,
+  and how the arcs through the kind end. An ending's panel shows the last
+  kinds before it, what the chains that end there have in common, and each
+  world with its reason. A dot on the trunk runs the chain match and the
+  situation match. Empty canvas clears. Clicks are dispatched from the svg's
+  pointerup using the pressed element (`data-strand`, `data-pill` =
+  `kind@column`, `data-ending`, `data-real`), so they survive pointer capture.
+- **Camera**: Fit squeezes the map's width into the canvas beside the panel
+  but keeps its full height, so the strands spread; wheel zooms both axes
+  alike from there, drag pans, Fit resets.
 
 ### 2.4 Code and tests
 
-- `57-moments-page.js`: `momentsModel()` builds `{nodes, roads, ours, paths,
-  at, order, todayIndex, lastReal}` from the bins, the real history and each
-  world's post-fork sequence; the three ending sinks (`MP_ENDINGS`) are nodes
-  with `ending:true`, every kind carries `outcomes` (the worlds through it by
-  valence), a road with `ending:true` runs from each arc's last kind into its
-  sink, and the last step of `ours` runs into `ending-unknown`; `renderMomentsCy(M)` keeps one Cytoscape instance
-  and rebuilds elements only when `mpSignature(M)` changes; `mpCyLayout`,
-  `mpCyFit`, `mpCyHome`, `mpCyReveal` are the camera; `renderMomentsPanel`
-  writes into `#moments-body` (`mpKindHtml`, `mpBeatHtml`). Selection state is
-  `MP.node / MP.world / MP.beat` and is applied as classes (`selected`, `dim`,
-  `touch`, `faded`, `world`, `on-world`).
-- `60-chart.js` branches to `renderMomentsPage` before any tree drawing;
-  `90-chrome.js` routes `zoomBy` / `fitAll` / boot to the Cytoscape camera
-  when `MP.cy` exists.
-- Tests (`test-render.js`, fallback path): node count equals kinds in use,
-  road count equals distinct post-fork transitions, our path equals consecutive
-  real kind transitions, TODAY marker present, a tap on a circle selects it and
-  opens the panel with one `.mp-card` per world and a *What it leads to*
-  section, non-touching roads fade to `0.04`, a world button lights
-  `.mp-world-road`, a beat button shows *Nearest situations*, empty canvas
-  clears, `matchNews` selects the kind; three sinks whose counts match the
-  data, every arc runs into exactly one, ours into *still open*, a kind's
-  outcome tally sums to its worlds, a sink's panel lists one card per world
-  with its reason. The shim loads no vendor code, so the
-  Cytoscape path is verified in a browser (see HANDOFF §6).
+- `59-chains.js`: `chainKindSim()`, `chainScore(a, b)` (1 .. -1),
+  `chainAlign(a, b)` -> `{score, likeness, pairs, a0, a1, b0, b1}`,
+  `chainMSA(chains)` -> `{C, cols}`. The five numbers at the top of the file
+  (`CH_GAP`, `CH_MISS`, `CH_INS`, `CH_SKIP`, `CH_SAME`/`CH_FAR`) are the
+  argument; change them there and nowhere else.
+- `57-moments-page.js`: `momentsModel()` builds strands (`seq`, `kinds`,
+  `cols`, `kindAt`, `ending`), `bundles`, `kinds` (with `hits` and
+  `outcomes`), `endings`, `tally`; `momentsLayout(M, width)` places the trunk,
+  the fork zone, the columns and the endings and returns `pills` and `marks`;
+  `renderMomentsPage` draws; `renderMomentsPanel` routes to
+  `mpBeatHtml` / `mpStrandHtml` / `mpEndingHtml` / `mpKindHtml` / the opening
+  panel; `mpQueryHtml(M, kinds)` is the chain match. State is `MP.node`
+  (a kind or an ending id), `MP.col`, `MP.world`, `MP.beat`.
+- Tests (`test-render.js`): one strand per world with a post-fork chain, one
+  column per step and strictly increasing, no pre-fork moment on a strand,
+  every strand from its fork to an ending, pills are kind+column with two or
+  more strands that all have that kind there, three endings with counts from
+  the data, a dot per real beat, identity alignment scores 1 and a chain is
+  fully alike itself; a pill click selects kind and step and leads the panel
+  with that bundle and dims the other strands, a strand click lights it alone
+  and matches it, a second click unlights, an ending click selects it, a beat
+  click runs both matches, empty canvas clears, wheel zooms, drag pans, Fit
+  resets, a news item selects its kind. The shim renders the same SVG the
+  browser does.
 
 ---
 

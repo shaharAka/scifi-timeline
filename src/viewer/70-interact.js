@@ -38,9 +38,12 @@ function attachInteractions(svg){
     if(!t || !t.getAttribute) return;
     if(axisMode === "moments"){
       /* the pressed element, or an ancestor, names what was clicked */
-      var nodeId = attrUp(t, "data-moment-node"), beatId = attrUp(t, "data-real");
+      var beatId = attrUp(t, "data-real"), strandId = attrUp(t, "data-strand"),
+          pillId = attrUp(t, "data-pill"), endingId = attrUp(t, "data-ending");
       if(beatId) momentsSelectBeat(beatId);
-      else if(nodeId) momentsSelectKind(nodeId);
+      else if(pillId){ var pv = pillId.split("@"); momentsSelectPill(pv[0], parseInt(pv[1], 10)); }
+      else if(endingId) momentsSelectKind(endingId);
+      else if(strandId) momentsSelectWorld(strandId);
       else momentsClear();
       return;
     }

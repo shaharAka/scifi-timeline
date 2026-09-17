@@ -297,6 +297,11 @@ const scripts = [...html.matchAll(/<script(?![^>]*id="embedded-data")[^>]*>([\s\
 if (!scripts.length) fail("no executable script block found in timeline.html");
 
 const ctx = vm.createContext(sandbox);
+/* The Moments page renders with Cytoscape when it is present, and falls back to
+   its own SVG drawing when it is not. This harness has no 2D context, so it
+   exercises the FALLBACK. That is a real limitation: the Cytoscape layout is
+   the one readers see, and test-moments-page.js measures it in a real browser
+   rather than pretending a stub DOM can stand in for it. */
 for (const src of scripts) {
   try {
     vm.runInContext(src, ctx, { filename: "timeline.html:inline" });
@@ -668,76 +673,56 @@ attempt("moments page invariants", () => {
   const binned = t.lineages.some((l) => l.events.some((e) => e.bin));
   if (!binned) { soft("moments: no binned events in this payload, skipped"); return; }
 
-  const circles = svgNodes().filter((n) => n.getAttribute("data-moment-node") !== null);
-  check(circles.length === M.nodes.length, `${circles.length} circles for ${M.nodes.length} kinds`);
-  const roads = svgNodes().filter((n) => n.getAttribute("data-road") !== null);
-  check(roads.length === M.roads.length, `${roads.length} roads drawn for ${M.roads.length} in the model`);
-  const ours = svgNodes().filter((n) => n.getAttribute("data-our-road") !== null);
-  check(ours.length === M.ours.length, `${ours.length} of our own arcs drawn for ${M.ours.length}`);
+  /* one strand per world with a post-fork binned moment, each with a hit path */
+  const want = t.lineages.filter((l) => l.events.some((e) => e.bin && e.year >= l.divergence.year)).length;
+  check(M.strands.length === want, `${M.strands.length} strands for ${want} worlds with a post-fork chain`);
+  const hits = svgNodes().filter((n) => n.getAttribute("data-strand") !== null);
+  check(hits.length === M.strands.length, `${hits.length} strand hit paths for ${M.strands.length} strands`);
 
-  /* x is where a kind tends to fall in a story; every kind is on canvas */
-  const byPos = M.nodes.slice().sort((a, b) => a.p - b.p);
-  for (let i = 1; i < byPos.length; i++) check(byPos[i].fx >= byPos[i - 1].fx - 0.01, "x does not follow story position");
-  M.nodes.forEach((n) => check(isFinite(n.x) && isFinite(n.y), `${n.id} has no position`));
-  const real = t.real();
-  if (real && real.events && real.events.length) {
-    const firstVisit = [];
-    real.events.forEach((e) => { if (e.bin && !firstVisit.includes(e.bin)) firstVisit.push(e.bin); });
-    M.fictionOnly.forEach((b) => check(!firstVisit.includes(b), `${b} is marked fiction-only but happened to us`));
-    const today = svgNodes().filter((n) => n.classList && n.classList.contains("mp-today"));
-    check(today.length === 1, `${today.length} TODAY markers, expected 1`);
-    const hits = svgNodes().filter((n) => n.getAttribute("data-real") !== null);
-    const expectN = real.events.filter((e) => e.bin).length;
-    check(hits.length === expectN, `${hits.length} real-beat dots for ${expectN} binned beats`);
-    hits.forEach((h) => {
-      const e = real.events.find((y) => y.id === h.getAttribute("data-real"));
-      const node = e && M.at[e.bin];
-      check(!!node && Math.abs(parseFloat(h.getAttribute("cx")) - node.x) < 40, `${e && e.year}: dot is not at its kind`);
-    });
-    const arrows = svgNodes().filter((n) => n.getAttribute("marker-end") !== null);
-    check(arrows.length >= M.roads.filter((r) => r.worlds.length > 1).length, "shared roads carry no arrowheads");
-  }
-
-  /* roads are post-fork moves only, counted from the data */
-  const want = new Set();
-  t.lineages.forEach((l) => {
-    const dv = l.divergence.year, seq = [];
-    l.events.forEach((e) => {
-      if (e.bin && M.at[e.bin] && (seq.length === 0 || seq[seq.length - 1].bin !== e.bin)) seq.push({ bin: e.bin, year: e.year });
-    });
-    for (let i = 1; i < seq.length; i++) if (seq[i].year >= dv) want.add(seq[i - 1].bin + "|" + seq[i].bin);
-    /* and the arc's last kind runs into its ending */
-    if (seq.length) want.add(seq[seq.length - 1].bin + "|ending-" + ((l.ending && l.ending.valence) || "unknown"));
+  /* the alignment: one column per step, strictly increasing, inside the map */
+  M.strands.forEach((st) => {
+    check(st.cols.length === st.kinds.length, `${st.id}: ${st.cols.length} columns for ${st.kinds.length} kinds`);
+    for (let i = 1; i < st.cols.length; i++) check(st.cols[i] > st.cols[i - 1], `${st.id}: columns do not increase along the chain`);
+    check(st.cols[st.cols.length - 1] < M.C, `${st.id}: a column lies past the map`);
+    check(st.pts[0].fork && st.pts[st.pts.length - 1].bucket, `${st.id}: the strand does not run from its fork to an ending`);
+    st.pts.forEach((p) => check(isFinite(p.x) && isFinite(p.y), `${st.id}: a point has no position`));
+    /* the strand starts at its fork: nothing before the divergence is on it */
+    st.seq.forEach((x) => check(x.year >= st.fork, `${st.id}: a pre-fork moment is on the strand`));
   });
-  check(roads.length === want.size, `${roads.length} roads drawn for ${want.size} post-fork transitions (endings included)`);
-
-  /* a circle's count is the number of worlds through it */
-  const expect = {};
-  t.lineages.forEach((l) => {
-    const here = new Set(); l.events.forEach((e) => { if (e.bin) here.add(e.bin); });
-    here.forEach((b) => { expect[b] = (expect[b] || 0) + 1; });
+  /* a pill is one kind, one column, more than one strand, and every member has that kind there */
+  const pills = svgNodes().filter((n) => n.classList && n.classList.contains("mp-pill"));
+  const geom = t.momentsState().geom;
+  check(pills.length === geom.pills.length, `${pills.length} pills drawn for ${geom.pills.length} bundles`);
+  geom.pills.forEach((p) => {
+    check(p.strands.length > 1, `${p.key}: a pill with one strand`);
+    p.strands.forEach((st) => check(st.kindAt[p.col] === p.kind, `${p.key}: ${st.id} does not have that kind there`));
   });
-  let wrong = 0;
-  M.nodes.forEach((n) => { if (!n.ending && n.worlds !== (expect[n.id] || 0)) wrong++; });
-  check(wrong === 0, `${wrong} circle(s) miscount the worlds through them`);
-
-  /* endings: three sinks, every arc runs into exactly one, ours into "still open" */
-  const sinks = M.nodes.filter((n) => n.ending);
-  check(sinks.length === 3, `${sinks.length} ending sinks, expected 3`);
+  M.bundles.forEach((bd) => {
+    const members = M.strands.filter((st) => st.kindAt[bd.col] === bd.kind);
+    check(members.length === bd.strands.length, `${bd.key}: bundle of ${bd.strands.length}, ${members.length} strands reach it`);
+  });
+  /* three endings, counts from the data, every strand into exactly one */
+  const buckets = svgNodes().filter((n) => n.getAttribute("data-ending") !== null);
+  check(buckets.length === 3, `${buckets.length} endings drawn, expected 3`);
   const tally = { optimistic: 0, pessimistic: 0, unknown: 0 };
   t.lineages.forEach((l) => { tally[(l.ending && l.ending.valence) || "unknown"]++; });
-  sinks.forEach((n) => check(n.worlds === tally[n.valence], `${n.id}: ${n.worlds} worlds, data says ${tally[n.valence]}`));
-  const intoEnding = M.roads.filter((r) => r.ending);
-  const arcs = intoEnding.reduce((a, r) => a + r.worlds.length, 0);
-  const withPath = t.lineages.filter((l) => l.events.some((e) => e.bin && M.at[e.bin])).length;
-  check(arcs === withPath, `${arcs} arcs run into an ending, ${withPath} worlds have a path`);
-  const lastOurs = M.ours[M.ours.length - 1];
-  check(!!lastOurs && lastOurs.b === "ending-unknown", "our own path does not run into the open ending");
-  M.nodes.filter((n) => !n.ending && n.worlds).forEach((n) => {
-    const o = n.outcomes, sum = o.optimistic.length + o.pessimistic.length + o.unknown.length;
-    check(sum === n.worlds, `${n.id}: outcome tally ${sum} for ${n.worlds} worlds`);
-  });
-
+  M.endings.forEach((en) => check(en.worlds.length === tally[en.valence], `${en.id}: ${en.worlds.length} worlds, data says ${tally[en.valence]}`));
+  const into = M.endings.reduce((a, en) => a + en.strands.length, 0);
+  check(into === M.strands.length, `${into} strands run into an ending, ${M.strands.length} exist`);
+  /* our history on the trunk, a dot per beat, TODAY marked */
+  const real = t.real();
+  if (real && real.events && real.events.length) {
+    const dots = svgNodes().filter((n) => n.getAttribute("data-real") !== null);
+    check(dots.length === real.events.length, `${dots.length} dots for ${real.events.length} real beats`);
+    const today = svgNodes().filter((n) => n.classList && n.classList.contains("mp-today"));
+    check(today.length === 1, `${today.length} TODAY markers, expected 1`);
+  }
+  /* the alignment scorer: identity is 1, a chain is fully alike itself */
+  const st0 = M.strands.slice().sort((a, b) => b.kinds.length - a.kinds.length)[0];
+  check(t.chainScore(st0.kinds[0], st0.kinds[0]) === 1, "the same kind does not score 1");
+  const self = t.chainAlign(st0.kinds, st0.kinds);
+  check(self.pairs.length === st0.kinds.length && Math.abs(self.likeness - 1) < 1e-9, "a chain is not fully alike itself");
+  check(t.chainAlign(st0.kinds, ["no-such-kind"]).pairs.length === 0, "an unknown kind aligned with something");
   /* no tree furniture on this page */
   const FURNITURE = ["bundle-band", "bundle-label", "side-label", "trunk-core", "trunk-glow", "trunk-future",
                      "trunk-label", "fork-zone", "now-plane", "branch", "hit"];
@@ -745,35 +730,39 @@ attempt("moments page invariants", () => {
   check(furniture.length === 0, `${furniture.length} piece(s) of tree furniture drawn on the Moments page`);
   const lanes = svgNodes().filter((n) => n.getAttribute("data-lane") !== null);
   check(lanes.length === 0, `${lanes.length} lane targets drawn on the Moments page`);
-  soft(`moments: ${M.nodes.length} kinds (${M.realOrder.length} ours), ${M.roads.length} roads, ${M.ours.length} steps in our own path`);
+  soft(`moments: ${M.strands.length} strands over ${M.C} steps, ${geom.pills.length} bundles, ${geom.marks.length} lone marks`);
 });
 
-/* ---- Moments: an ending is a node like any other - click it, read who ends there ---- */
+/* ---- Moments: the endings, the kinds and the chains in the panel -------------- */
 attempt("moments endings in the panel", () => {
   setModeVia("moments");
   const t = debug();
   const M = t.moments();
-  if (!M || !M.nodes.some((n) => n.ending)) { soft("moments endings: no sinks, skipped"); return; }
-  const busiest = M.nodes.filter((n) => !n.ending && n.worlds).sort((a, b) => b.worlds - a.worlds)[0];
-  let body = "";
+  if (!M || !M.strands.length) { soft("moments endings: no strands, skipped"); return; }
+  let body = store["moments-body"].innerHTML;
+  check(body.includes("mp-outcomes"), "the opening panel does not tally the endings");
+  if (M.ourKinds.length) check(/Our recent chain/.test(body), "the opening panel does not match our recent chain");
+  const busiest = Object.keys(M.kinds).map((k) => M.kinds[k]).filter((k) => k.worlds).sort((a, b) => b.worlds - a.worlds)[0];
   if (busiest) {
     t.momentsSelectKind(busiest.id);
     body = store["moments-body"].innerHTML;
     check(body.includes("mp-outcomes"), "a kind's panel does not say how its arcs end");
-    check(body.includes("mp-badge"), "world cards carry no ending badge");
+    const chains = (body.match(/class="mp-chain"/g) || []).length;
+    check(chains === busiest.hits.length, `${chains} chains shown for ${busiest.hits.length} passes through "${busiest.spec.label}"`);
+    check(body.includes("mp-badge"), "chains carry no ending badge");
   }
-  const sink = M.nodes.filter((n) => n.ending).sort((a, b) => b.worlds - a.worlds)[0];
+  const sink = M.endings.slice().sort((a, b) => b.strands.length - a.strands.length)[0];
   t.momentsSelectKind(sink.id);
   body = store["moments-body"].innerHTML;
-  check(t.momentsState().node === sink.id, "clicking an ending did not select it");
+  check(t.momentsState().node === sink.id, "selecting an ending did not select it");
   const cards = (body.match(/class="mp-card"/g) || []).length;
-  check(cards === sink.worlds, `${cards} cards for ${sink.worlds} worlds ending "${sink.spec.label}"`);
+  check(cards === sink.strands.length, `${cards} cards for ${sink.strands.length} chains ending "${sink.label}"`);
   check(body.includes("mp-why"), "the ending panel gives no reason per world");
   t.momentsSelectKind("ending-unknown");
   body = store["moments-body"].innerHTML;
   check(body.includes("Us, "), "the open ending does not place us in it");
   t.momentsClear();
-  soft(`moments endings: ${M.nodes.filter((n) => n.ending).map((n) => `${n.spec.label} ${n.worlds}`).join(", ")}`);
+  soft(`moments endings: ${M.endings.map((n) => `${n.label} ${n.strands.length}`).join(", ")}`);
 });
 
 /* ---- Moments: clicking does things, through the pointer path a browser uses ---- */
@@ -781,76 +770,77 @@ attempt("moments clicks and camera", () => {
   setModeVia("moments");
   const t = debug();
   const M = t.moments();
-  if (!M || !M.nodes.length) { soft("moments clicks: nothing to click, skipped"); return; }
-  /* a kind, not an ending sink: the sinks have their own test */
-  const busiest = M.nodes.filter((n) => !n.ending).sort((a, b) => b.worlds - a.worlds)[0];
-  if (!busiest) { soft("moments clicks: no kinds in this payload (only the ending sinks), skipped"); return; }
-
-  /* a circle, clicked the way a browser delivers it: pointerdown then pointerup */
-  const grp = svgNodes().find((n) => n.getAttribute("data-moment-node") === busiest.id);
-  const circle = grp.children.find((c) => c.classList && c.classList.contains("mp-circle")) || grp;
-  chart.onpointerdown({ button: 0, clientX: 300, clientY: 300, pointerId: 1, target: circle });
-  chart.onpointerup({ clientX: 300, clientY: 300, pointerId: 1, target: { getAttribute: () => null } });
-  check(t.momentsState().node === busiest.id, "clicking a circle did not select its kind");
-  check(store["drawer"].getAttribute("data-mode") === "moments", "clicking a circle did not open the Moments panel");
-  const body = String(store["moments-body"].innerHTML);
-  check(new RegExp(`${busiest.worlds} worlds? pass`).test(body), "the panel does not state how many worlds pass through");
-  const cards = store["moments-body"].querySelectorAll(".mp-card");
-  check(cards.length === busiest.worlds, `${cards.length} world cards for ${busiest.worlds} worlds`);
-  check(/What it leads to/.test(body) || busiest.follow.length === 0, "the panel does not say what it leads to");
-  /* roads not touching the selected kind recede */
-  const faded = svgNodes().filter((n) => n.getAttribute("data-road") !== null && n.getAttribute("opacity") === "0.04");
-  const touching = M.roads.filter((r) => r.a === busiest.id || r.b === busiest.id).length;
-  check(faded.length === M.roads.length - touching, `${faded.length} roads faded, expected ${M.roads.length - touching}`);
-
-  /* a world's name lights its whole road */
-  const firstWorld = store["moments-body"].querySelectorAll("[data-world]")[0];
-  if (firstWorld) {
-    firstWorld.onclick();
-    const wid = t.momentsState().world;
-    check(!!wid, "clicking a world did not light it");
-    const wroads = svgNodes().filter((n) => n.classList && n.classList.contains("mp-world-road"));
-    const seqLen = M.paths[wid].seq.length;
-    check(wroads.length === Math.max(0, seqLen - 1), `${wroads.length} coloured segments for a path of ${seqLen} kinds`);
-    firstWorld.onclick();
-    check(!t.momentsState().world, "clicking the world again did not unlight it");
+  if (!M || !M.strands.length) { soft("moments clicks: nothing to click, skipped"); return; }
+  const geom = t.momentsState().geom;
+  const up = (target) => {
+    chart.onpointerdown({ button: 0, clientX: 300, clientY: 300, pointerId: 1, target });
+    chart.onpointerup({ clientX: 300, clientY: 300, pointerId: 1, target: { getAttribute: () => null } });
+  };
+  /* a pill, clicked the way a browser delivers it: pointerdown then pointerup */
+  const pill = geom.pills.slice().sort((a, b) => b.strands.length - a.strands.length)[0];
+  if (pill) {
+    const grp = svgNodes().find((n) => n.getAttribute("data-pill") === pill.key);
+    const box = grp.children.find((c) => c.classList && c.classList.contains("mp-pill-box")) || grp;
+    up(box);
+    check(t.momentsState().node === pill.kind && t.momentsState().col === pill.col, "clicking a pill did not select its kind at that step");
+    check(store["drawer"].getAttribute("data-mode") === "moments", "clicking a pill did not open the Moments panel");
+    const body = String(store["moments-body"].innerHTML);
+    check(/mp-bundle on/.test(body), "the panel does not lead with the clicked bundle");
+    check((body.match(/class="mp-chain"/g) || []).length >= pill.strands.length, "the panel shows fewer chains than the bundle has");
+    /* strands not through the pill recede */
+    const dim = svgNodes().filter((n) => n.classList && n.classList.contains("mp-strand") && n.classList.contains("dim"));
+    check(dim.length === M.strands.length - pill.strands.length, `${dim.length} strands dimmed, expected ${M.strands.length - pill.strands.length}`);
   }
-
-  /* a real-beat dot runs the situation match */
+  /* a strand */
+  const st = M.strands[0];
+  up(svgNodes().find((n) => n.getAttribute("data-strand") === st.id));
+  check(t.momentsState().world === st.id, "clicking a strand did not light it");
+  let body = String(store["moments-body"].innerHTML);
+  check(/Chains most like this one/.test(body), "the strand panel does not match the chain");
+  check((body.match(/class="mp-chain"/g) || []).length >= 1, "the strand panel does not show the chain");
+  const lit = svgNodes().filter((n) => n.classList && n.classList.contains("mp-strand") && !n.classList.contains("dim"));
+  check(lit.length === 1, `${lit.length} strands lit for one chosen, expected 1`);
+  up(svgNodes().find((n) => n.getAttribute("data-strand") === st.id));
+  check(!t.momentsState().world, "clicking the strand again did not unlight it");
+  /* an ending */
+  const bucket = svgNodes().find((n) => n.getAttribute("data-ending") === "ending-pessimistic");
+  up(bucket.children[0] || bucket);
+  check(t.momentsState().node === "ending-pessimistic", "clicking an ending did not select it");
+  /* a beat on our history runs the situation match and the chain match */
   const real = t.real();
   const dot = svgNodes().find((n) => n.getAttribute("data-real") !== null);
   if (dot && real) {
-    chart.onpointerdown({ button: 0, clientX: 300, clientY: 300, pointerId: 1, target: dot });
-    chart.onpointerup({ clientX: 300, clientY: 300, pointerId: 1, target: { getAttribute: () => null } });
-    const st = t.momentsState();
-    check(!!st.beat && st.beat.id === dot.getAttribute("data-real"), "clicking a dot did not select the beat");
-    const b2 = String(store["moments-body"].innerHTML);
-    check(/Nearest situations/.test(b2), "the beat panel did not run the situation match");
-    check(store["moments-body"].querySelectorAll(".mp-card").length > 0, "the situation match returned no neighbours");
-    check(/match/.test(b2), "neighbours carry no similarity score");
+    up(dot);
+    const stt = t.momentsState();
+    check(!!stt.beat && stt.beat.id === dot.getAttribute("data-real"), "clicking a dot did not select the beat");
+    body = String(store["moments-body"].innerHTML);
+    check(/Nearest situations/.test(body), "the beat panel did not run the situation match");
+    check(/Our chain up to here/.test(body), "the beat panel did not match our chain up to that beat");
+    check(store["moments-body"].querySelectorAll(".mp-card").length > 0, "the matches returned nothing");
   }
-
   /* empty sky clears; the camera zooms and pans; fit resets */
   chart.onpointerdown({ button: 0, clientX: 10, clientY: 10, pointerId: 1, target: chart });
   chart.onpointerup({ clientX: 10, clientY: 10, pointerId: 1, target: { getAttribute: () => null } });
-  check(!t.momentsState().node && !t.momentsState().beat, "clicking empty sky did not clear the selection");
-  const spread = () => { const xs = debug().moments().nodes.map((k) => k.x); return Math.max(...xs) - Math.min(...xs); };
-  const x0 = spread();
+  check(!t.momentsState().node && !t.momentsState().beat && !t.momentsState().world, "clicking empty sky did not clear the selection");
+  const s0 = debug().momentsState().s;
   chart.onwheel({ deltaX: 0, deltaY: -400, clientX: 400, clientY: 300, preventDefault() {} });
-  const x1 = spread();
-  check(x1 > x0 * 1.3, `wheel did not zoom the flow (${x0.toFixed(1)} -> ${x1.toFixed(1)})`);
+  const s1 = debug().momentsState().s;
+  check(s1 > s0 * 1.3, `wheel did not zoom the map (${s0.toFixed(2)} -> ${s1.toFixed(2)})`);
   const before = debug().momentsState().tx;
   chart.onpointerdown({ button: 0, clientX: 800, clientY: 400, pointerId: 1, target: chart });
   chart.onpointermove({ clientX: 700, clientY: 400, pointerId: 1 });
   chart.onpointerup({ clientX: 700, clientY: 400, pointerId: 1, target: { getAttribute: () => null } });
-  check(debug().momentsState().tx < before, "drag did not pan the line");
+  check(debug().momentsState().tx < before, "drag did not pan the map");
   store["reset"].onclick();
-  check(Math.abs(spread() - x0) < 0.5, "Fit did not reset the zoom");
+  check(Math.abs(debug().momentsState().s - s0) < 1e-9, "Fit did not reset the zoom");
   /* a news item selects its kind here */
-  const n = t.matchNews({ headline: "test", bin: busiest.id });
-  check(n === busiest.worlds && t.momentsState().node === busiest.id, "a news item did not select its kind on the Moments page");
+  const busiest = Object.keys(M.kinds).map((k) => M.kinds[k]).filter((k) => k.worlds).sort((a, b) => b.worlds - a.worlds)[0];
+  if (busiest) {
+    const n = t.matchNews({ headline: "test", bin: busiest.id });
+    check(n === busiest.worlds && t.momentsState().node === busiest.id, "a news item did not select its kind on the Moments page");
+  }
   t.momentsClear();
-  soft(`moments clicks: "${busiest.spec.label}" -> ${busiest.worlds} worlds; zoom ${x0.toFixed(0)}->${x1.toFixed(0)}px`);
+  soft(`moments clicks: pill "${pill ? pill.kind : "-"}", strand ${st.id}, zoom ${s0.toFixed(2)}->${s1.toFixed(2)}`);
 });
 
 /* ---- real history on every axis ---------------------------------------------- */

@@ -99,8 +99,7 @@ function zoomAt(g, mx, my, ms){
    today means zooming in actually magnifies the part being looked at. */
 function zoomBy(g, ms){
   if(axisMode === "moments"){
-    if(MP.cy){ MP.cy.zoom({ level: MP.cy.zoom() / g, renderedPosition: { x: MP.cy.width() / 2, y: MP.cy.height() / 2 } }); }
-    else { momentsZoomAt(1 / g, W / 2, Hv / 2); renderChart(); }
+    momentsZoomAt(1 / g, W / 2, Hv / 2); renderChart();
     return;
   }
   var nx = pxFor(NOW);
@@ -152,7 +151,6 @@ function tweenTo(c, hs, z, ms){
 function fitAll(){
   if(axisMode === "moments"){
     momentsFit(); renderChart();
-    if(MP.cy) mpCyFit(36);
     return;
   }
   var lay = layout(visibleLineages());
@@ -308,8 +306,7 @@ function init(){
   /* Open on the fork cluster, where the argument is legible; the whole dataset
      is one preset away (Full reach). Opening on everything squashed twenty
      forks into a hundred pixels and hid the grouping. */
-  if(axisMode === "moments"){ momentsFit(); renderChart(); if(MP.cy) mpCyHome(); }
-  else fitAll();
+  fitAll();
   renderCards();
 
   on("zin", "onclick", function(){ zoomBy(0.7, CAM_MS); });

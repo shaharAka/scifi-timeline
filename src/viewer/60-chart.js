@@ -204,7 +204,6 @@ function renderChart(yOverride){
   /* Moments is its own page: an arc diagram with its own camera and panel.
      Nothing of the tree is drawn there. */
   var chartBody = document.getElementById("chartbody");
-  if(axisMode !== "moments" && chartBody && chartBody.classList) chartBody.classList.remove("cy-on");
   if(axisMode === "moments"){
     svg.setAttribute("class", (svg.getAttribute("class") || "") + " moments");
     cursorEls = null;
@@ -505,8 +504,9 @@ function publishTimeline(lay, nx){
     renderFutures:function(item, fx){ return renderFutures(item, fx); },
     moments:function(){ return MP.model; },
     momentsState:function(){ return MP; },
-    momentsZoom:function(g){ if(MP.cy){ zoomBy(1 / g, 0); } else { momentsZoomAt(g, W / 2); renderChart(); } },
-    momentsSelectKind:momentsSelectKind, momentsSelectBeat:momentsSelectBeat,
+    momentsZoom:function(g){ momentsZoomAt(g, W / 2); renderChart(); },
+    momentsSelectKind:momentsSelectKind, momentsSelectBeat:momentsSelectBeat, momentsSelectPill:momentsSelectPill,
+    chainAlign:chainAlign, chainMSA:chainMSA, chainScore:chainScore,
     momentsSelectWorld:momentsSelectWorld, momentsClear:momentsClear,
     litBin:function(){ return litBin; },
     litWorlds:function(){ return litWorlds; },
