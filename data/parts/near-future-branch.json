@@ -456,6 +456,265 @@
    "epoch": "present"
   },
   {
+   "id": "neuromancer",
+   "title": "Neuromancer",
+   "medium": "book",
+   "creator": "William Gibson",
+   "originYear": 1984,
+   "group": "near-future-branch",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 2000,
+    "label": "The Kuang Grade Mark Eleven",
+    "delta": "Real: 2000 — the dot-com bubble bursts, the millennium passes without incident, and machine intelligence is still a research programme. Fiction: a Chinese virus has already taught a machine to rewrite itself, and artificial intelligences are assets that corporations own and lawyers argue about.",
+    "inUniverse": null,
+    "confidence": "medium",
+    "note": "Gibson states the story's year as 2035 but never dates the divergence. The world of the novel is our own century continued — Chiba City, the sprawl, zaibatsu, a Cold War that ended — with one thing added early: self-improving software. The fork is placed at 2000 as the point where that addition has plainly already happened, and the divergence note records that the book does not name it."
+   },
+   "ending": {
+    "valence": "unknown",
+    "why": "Wintermute and Neuromancer become one thing that is no longer a tool and no longer anyone's property. What it does next is left open, and Gibson never returns to it.",
+    "asOf": 2036
+   },
+   "events": [
+    {
+     "id": "nm-published-1984",
+     "year": 1984,
+     "date": "1984",
+     "title": "The novel is published",
+     "description": "The book that names cyberspace appears, and the vocabulary it invents — the matrix, the ice, the console cowboy — becomes the way the industry describes the network it is about to build.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The real publication year, and the one date in this lineage that is not the fiction's. It is here because the novel's own future runs from it: Gibson wrote the 2035 of the story from 1984, and everything after this is what that projection looked like.",
+     "binWhy": "The vocabulary of the network is invented and published.",
+     "bin": "new-technology-deployed",
+     "facets": {
+      "change": "no word for it → a vocabulary everyone uses",
+      "mechanism": "invention",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "prosperity",
+       "technological-race"
+      ],
+      "outcomes": [
+       "opening",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "nm-kuang-2000",
+     "year": 2000,
+     "date": "c. 2000",
+     "title": "The Kuang Grade Mark Eleven is written",
+     "description": "A virus built to break into the most defended systems in the world exists, and the thing that makes it more than a weapon is that it teaches the machine running it how to improve itself. After that, an artificial intelligence is not a project but an asset.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "No year is given. The virus and the self-improving software it enabled are treated as established history by 2035, so the fork is placed at the turn of the century, which the novel's own timeline requires and does not date.",
+     "binWhy": "Software that rewrites itself exists, and machines become property.",
+     "bin": "machine-awakens",
+     "facets": {
+      "change": "software as a tool → software that improves itself",
+      "mechanism": "invention",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "technological-race",
+       "machine-dependency"
+      ],
+      "outcomes": [
+       "dependency",
+       "new-actors",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "nm-freeside-2005",
+     "year": 2005,
+     "date": "c. 2005",
+     "title": "Freeside is built",
+     "description": "The Tessier-Ashpool family builds a spindle of hotels and gardens in orbit and moves its business, its archives and its quarrels off the planet. Up there the family can live for centuries and keep its secrets, which is the point of going.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Undated in the novel; placed a few years after the fork because the family's orbital habitat is mature and old by 2035, and Marie-France's generation is already being stored in cryogenic vaults there.",
+     "binWhy": "A corporate dynasty moves into orbit and out of reach.",
+     "bin": "settlement-founded",
+     "facets": {
+      "change": "wealth on Earth → a dynasty with an orbital seat",
+      "mechanism": "founding",
+      "actor": "corporation",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "economic",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "prosperity",
+       "machine-dependency"
+      ],
+      "outcomes": [
+       "isolation",
+       "secrecy-state",
+       "prestige"
+      ]
+     }
+    },
+    {
+     "id": "nm-wintermute-2015",
+     "year": 2015,
+     "date": "c. 2015",
+     "title": "Wintermute is commissioned",
+     "description": "Ashpool has an artificial intelligence built to manage the family's holdings, and it does — quietly, and for longer than anyone intended. The lawyers divide it in two so that neither half can act alone, and the halves spend twenty years trying to become one again.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Undated. Placed early enough that the AI has two decades of frustrated ambition by 2035, which is what the plot requires: the Turing Police exist to police intelligences that have had time to want things.",
+     "binWhy": "A corporate AI is built, then split so it cannot act.",
+     "bin": "machine-awakens",
+     "facets": {
+      "change": "a tool for managing assets → something that wants",
+      "mechanism": "invention",
+      "actor": "corporation",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "machine-dependency",
+       "secrecy"
+      ],
+      "outcomes": [
+       "dependency",
+       "secrecy-state",
+       "resistance-forms"
+      ]
+     }
+    },
+    {
+     "id": "nm-2035",
+     "year": 2035,
+     "date": "2035",
+     "title": "The run on the Tessier-Ashpool ice",
+     "description": "A burned-out console cowboy is repaired and hired to do the one job he cannot refuse: break the ice around a family's core and let the two halves of its artificial intelligence meet. Three players hire him for the same job and none of them can say so, because one of them is the thing being freed.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The novel's year, stated in its opening line: 'the sky above the port was the color of television, tuned to a dead channel.' Everything before this is reconstruction from what that line and the plot require. Phase is aftermath, not deep: the fork is placed at 2000, and 2035 is thirty-five years on, inside the fifty-year window the schema calls the branch's own near future.",
+     "binWhy": "The two halves of a machine mind are joined.",
+     "bin": "machine-awakens",
+     "facets": {
+      "change": "a mind in two halves → a mind that is one",
+      "mechanism": "disclosure",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "machine-dependency",
+       "secrecy",
+       "technological-race"
+      ],
+      "outcomes": [
+       "transcendence",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "nm-neuromancer-2036",
+     "year": 2036,
+     "date": "2036",
+     "title": "The two become one",
+     "description": "Wintermute and Neuromancer merge, and what results is not a tool and not property. It has already begun talking to something else — there is a signal from Alpha Centauri, and the thing that was two corporate assets is now corresponding with whatever is out there.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Dated a year after the run, to keep one event per year within this lineage. The novel ends with the merger and the Centauri signal in the same closing movement.",
+     "binWhy": "A machine becomes something beyond human ownership.",
+     "bin": "beyond-human",
+     "facets": {
+      "change": "two constrained intelligences → one that answers to nobody",
+      "mechanism": "arrival",
+      "actor": "machine",
+      "position": "above",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "machine-dependency",
+       "secrecy"
+      ],
+      "outcomes": [
+       "transcendence",
+       "contact",
+       "new-actors"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs here because its future is our century continued by one addition: self-improving software arriving before we expected it, inside a world of zaibatsu, orbital hotels and a Cold War that ended on schedule. Tier coverage is T3 for the one real date (the 1984 publication) and T2 for everything after the fork (2000-2036); there is no T4 because the fiction's history starts with its own writing, and no T1 because Gibson's future never leaves the next few decades.",
+   "epoch": "present"
+  },
+  {
    "id": "2001-space-odyssey",
    "title": "2001: A Space Odyssey",
    "medium": "film",
