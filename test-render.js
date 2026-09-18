@@ -844,6 +844,47 @@ attempt("moments clicks and camera", () => {
 });
 
 /* ---- real history on every axis ---------------------------------------------- */
+/* ---- sources: a claim the reader can check ---------------------------------
+   The confidence field says how sure the dataset is; a source says where to
+   look. Both are useless if the second is missing or unrenderable, so the
+   payload must carry them and the drawer must show them as links. */
+attempt("sources reach the drawer", () => {
+  const t = debug();
+  const withSrc = t.lineages.filter((l) => (l.sources || []).length
+    || (l.divergence && (l.divergence.sources || []).length)
+    || l.events.some((e) => (e.sources || []).length));
+  if (!withSrc.length) { soft("sources: none in this payload, skipped"); return; }
+
+  let urls = 0, bad = 0;
+  withSrc.forEach((l) => {
+    const all = [].concat(l.sources || [], (l.divergence && l.divergence.sources) || [])
+      .concat(l.events.reduce((a, e) => a.concat(e.sources || []), []));
+    all.forEach((src) => {
+      if (!src || !src.title || !src.url) bad++;
+      else if (!/^https?:/.test(src.url)) bad++;
+      else urls++;
+    });
+  });
+  check(bad === 0, bad + " source(s) are missing a title or a usable url");
+  check(urls > 0, "no usable source urls in the payload");
+
+  /* reach the drawer the way a reader does - through the lane hit area - since
+     openWorld is inside the page's own scope. Lanes exist in the line-shaped
+     views, so this runs in one of them. */
+  const wasMode = debug().axisMode();
+  setModeVia("order");
+  const first = withSrc[0];
+  const target = svgNodes().find((n) => n.getAttribute && n.getAttribute("data-lane") === first.id);
+  if (!target) { soft("sources: no lane target for " + first.id + ", drawer not checked"); return; }
+  chart.onpointerup({ clientX: 10, clientY: 10, pointerId: 1, target });
+  const html = String(store["panel-world"].innerHTML);
+  check(/class="srcs"/.test(html), "the drawer shows no sources block for " + first.id);
+  check(/<a [^>]*href="https?:/.test(html), "sources for " + first.id + " are not links");
+  setModeVia(wasMode);
+  soft("sources: " + withSrc.length + " world(s) carry them, " + urls + " link(s) checked");
+});
+
+
 attempt("real history on every axis", () => {
   const t = debug();
   const real = t.real();

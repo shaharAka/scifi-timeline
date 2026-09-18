@@ -207,3 +207,10 @@ body:not(.mode-moments) .legend .m-only{display:none}
 .mp-knot{fill:var(--surface);stroke:var(--ink-3);stroke-width:1.4}
 .mp-pill:hover .mp-knot{stroke:var(--ink-1);stroke-width:2}
 .mp-knot-n{font-size:7.5px;font-weight:700;fill:var(--ink-2);font-family:var(--font-mono)}
+
+/* The convergence animation withdraws the TREE's branches into shared history.
+   The Moments page is not a tree - it has no branch paths to withdraw - and it
+   already shows its convergence as pills and the three endings. playConvergence
+   returns early there, so the button did nothing at all when pressed; hiding it
+   is more honest than leaving a control that silently no-ops. */
+body.mode-moments #converge{display:none}

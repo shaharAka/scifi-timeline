@@ -192,6 +192,34 @@ If a real-world year is contested, pick the best-supported reading, set
 ```
 
 
+## Sources: where a claim comes from
+
+Any level may carry `sources`: an array of `{ "title", "url" }`. The point is
+that a reader can check a date rather than trust it, which is the same standard
+the news items are held to - those already require a source and are validated
+for it.
+
+```json
+"sources": [
+  { "title": "Wikipedia: Blade Runner 2049", "url": "https://en.wikipedia.org/wiki/Blade_Runner_2049" }
+]
+```
+
+Put them where the claim is:
+
+- on the **lineage**, for who made it and when it is set;
+- on the **divergence**, for the one fact the fork depends on;
+- on an **event**, where a specific date or number is the sort of thing a reader
+  will want to check.
+
+Rules the build enforces:
+
+- `title` and `url` are both required, and `url` must start with `http`.
+- An entry that is not an object, or that is missing either field, is an error
+  rather than a silent drop - a source that does not render is worse than none,
+  because it looks like a claim that was checked.
+- `sources` is optional everywhere. A world with none is incomplete, not wrong.
+
 ## Endings: where the arc converges
 
 Every arc ends somewhere, and the Moments page draws that: each world's path

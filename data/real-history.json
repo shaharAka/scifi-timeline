@@ -1220,6 +1220,12 @@
    "kind": "event",
    "importance": 3,
    "confidence": "high",
+   "sources": [
+    {
+     "title": "Lawrence Livermore National Laboratory",
+     "url": "https://www.llnl.gov/article/49306/llnl-achieves-fusion-ignition"
+    }
+   ],
    "bin": "war-breaks-out",
    "binWhy": "",
    "facets": {
@@ -1255,6 +1261,12 @@
    "kind": "event",
    "importance": 3,
    "confidence": "high",
+   "sources": [
+    {
+     "title": "Lawrence Livermore National Laboratory",
+     "url": "https://www.llnl.gov/article/49306/llnl-achieves-fusion-ignition"
+    }
+   ],
    "bin": "new-technology-deployed",
    "binWhy": "",
    "facets": {
@@ -1289,6 +1301,12 @@
    "kind": "event",
    "importance": 3,
    "confidence": "high",
+   "sources": [
+    {
+     "title": "Lawrence Livermore National Laboratory",
+     "url": "https://www.llnl.gov/article/49306/llnl-achieves-fusion-ignition"
+    }
+   ],
    "bin": "breakthrough-science",
    "binWhy": "",
    "facets": {
@@ -1322,6 +1340,12 @@
    "kind": "event",
    "importance": 3,
    "confidence": "high",
+   "sources": [
+    {
+     "title": "ISRO",
+     "url": "https://www.isro.gov.in/Chandrayaan3.html"
+    }
+   ],
    "bin": "voyage-into-unknown",
    "binWhy": "",
    "facets": {
@@ -1356,6 +1380,12 @@
    "kind": "event",
    "importance": 3,
    "confidence": "high",
+   "sources": [
+    {
+     "title": "NASA",
+     "url": "https://www.nasa.gov/mission/artemis-ii/"
+    }
+   ],
    "bin": "voyage-into-unknown",
    "binWhy": "",
    "facets": {

@@ -414,6 +414,36 @@ def load_real_history():
     return doc
 
 
+
+def check_sources(node, tag, problems=None):
+    """Validate a `sources` array, wherever it hangs.
+
+    Optional everywhere: a world with none is incomplete, not wrong. But an
+    entry that IS present must be usable - a source that does not render is
+    worse than no source, because it reads as a claim somebody checked.
+    """
+    srcs = node.get("sources")
+    if srcs is None:
+        return 0
+    if not isinstance(srcs, list):
+        err("%s sources must be a list" % tag)
+        return 0
+    for i, src in enumerate(srcs):
+        where = "%s sources[%d]" % (tag, i)
+        if not isinstance(src, dict):
+            err("%s is not an object" % where)
+            continue
+        title = (src.get("title") or "").strip()
+        url = (src.get("url") or "").strip()
+        if not title:
+            err("%s has no title" % where)
+        if not url:
+            err("%s has no url" % where)
+        elif not url.startswith("http"):
+            err("%s url does not start with http: %r" % (where, url))
+    return len(srcs)
+
+
 def load_bins():
     """The bin vocabulary: which kinds of moment exist.
 
@@ -565,6 +595,7 @@ def check_lineage(name, lin, group_id, seen_ids):
     if dv.get("confidence") not in CONF:
         warn("%s/%s: divergence.confidence %r not in %s"
              % (name, lid, dv.get("confidence"), sorted(CONF)))
+        check_sources(dv, "%s/%s/divergence" % (name, lid))
 
     evs = lin.get("events")
     if not isinstance(evs, list) or not evs:
@@ -579,6 +610,7 @@ def check_lineage(name, lin, group_id, seen_ids):
         if not isinstance(e, dict):
             err("%s: not an object" % tag)
             continue
+        check_sources(e, tag)
         for key in ("id", "year", "title", "description", "tier", "phase",
                     "importance", "kind", "confidence"):
             if e.get(key) in (None, ""):
@@ -752,6 +784,7 @@ def main():
             if not isinstance(lin, dict):
                 err("%s: a lineage is not an object" % name)
                 continue
+            check_sources(lin, "%s/%s" % (name, lin.get("id", "?")))
             checked = check_lineage(name, lin, g["id"], seen_ids)
             if checked:
                 lineages.append(checked)

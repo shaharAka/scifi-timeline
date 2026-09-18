@@ -277,3 +277,12 @@ table.ev .iu{font-size:11px;color:var(--ink-3);display:block;margin-top:2px}
 .mp-next .mp-who{display:block;font-size:10.5px;color:var(--ink-3)}
 .mp-title .mp-badge{vertical-align:middle;margin-left:4px}
 .mp-title .mp-open{vertical-align:middle}
+
+/* sources: a claim the reader can check, not a footnote shape */
+.srcs{margin:10px 0 0}
+.srcs .kick{margin:0 0 4px;font-size:var(--fs-0);letter-spacing:.06em;text-transform:uppercase;
+  color:var(--ink-4)}
+.srcs ul{margin:0;padding-left:0;list-style:none}
+.srcs li{margin:2px 0;font-size:var(--fs-0);line-height:1.35}
+.srcs a{color:var(--trunk);text-decoration:none;border-bottom:1px solid var(--line-2)}
+.srcs a:hover{border-bottom-color:var(--trunk)}

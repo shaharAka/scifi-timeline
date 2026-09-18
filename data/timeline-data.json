@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-09-17T20:55:45Z",
+  "generated": "2026-09-18T20:57:08Z",
   "source": "data/parts/*.json",
   "lineages": 27,
   "events": 254,
@@ -2880,6 +2880,12 @@
     "delta": "Real: 1962 — the Cuban Missile Crisis ends in a withdrawal and a telephone hotline, and the war that the century spent preparing for does not come. Fiction: it comes, and then the survivors turn on the knowledge that made it.",
     "inUniverse": null,
     "confidence": "medium",
+    "sources": [
+     {
+      "title": "Wikipedia: A Canticle for Leibowitz — the Flame Deluge and the Simplification; the novel gives no year for either",
+      "url": "https://en.wikipedia.org/wiki/A_Canticle_for_Leibowitz"
+     }
+    ],
     "note": "Miller never puts a calendar year on the war. The novel was written in the late 1950s and its pre-war world is plainly the one its first readers lived in — Leibowitz is a Jewish electrical engineer working for the United States military, and the war is the one everybody expected. 1962 is chosen as the year that expectation came closest to being met, and the divergence note says so rather than implying the book dates it. The three parts that follow are six centuries apart, which the novel states; the second part is conventionally dated to 3174, the date the Japanese edition took for its title, and the other two follow from it."
    },
    "ending": {
@@ -2900,6 +2906,12 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: A Canticle for Leibowitz (the war and the backlash that follows)",
+       "url": "https://en.wikipedia.org/wiki/A_Canticle_for_Leibowitz"
+      }
+     ],
      "note": "The novel does not date the war; it is placed here in the year the crisis over Cuba nearly produced it, and the divergence field records that this is a choice. The story's own anchor is that its pre-war world is the reader's.",
      "binWhy": "The nuclear war that our 1962 avoided is fought.",
      "bin": "doomsday-weapon",
@@ -2940,6 +2952,12 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: A Canticle for Leibowitz (the Simplification)",
+       "url": "https://en.wikipedia.org/wiki/A_Canticle_for_Leibowitz"
+      }
+     ],
      "note": "The novel describes the Simplification as following the war but never dates it; the span is set here at about a decade after, which is as much as the book supports. What it states plainly is the mechanism: the learned were killed, and books were burned.",
      "binWhy": "The survivors destroy the knowledge that built the weapons.",
      "bin": "secret-kept",
@@ -3018,6 +3036,12 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: A Canticle for Leibowitz (the three parts are six centuries apart)",
+       "url": "https://en.wikipedia.org/wiki/A_Canticle_for_Leibowitz"
+      }
+     ],
      "note": "The novel states that the abbey still keeps its Memorabilia 'six hundred years after his death'; it does not print the year. 2574 is that interval measured from the founding, and the Japanese edition's title dates this part to the 26th century, which agrees.",
      "binWhy": "The buried record of the old world is found and read.",
      "bin": "truth-revealed",
@@ -3058,6 +3082,12 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: A Canticle for Leibowitz (the second part; 3174 is the Japanese edition's title date)",
+       "url": "https://en.wikipedia.org/wiki/A_Canticle_for_Leibowitz"
+      }
+     ],
      "note": "This is the second part, which the novel places six centuries after the first. The 3174 date is the one the Japanese edition used as its title; the book itself says only 'six hundred years later'.",
      "binWhy": "The recovered knowledge reaches nuclear weapons again.",
      "bin": "doomsday-weapon",
@@ -3128,7 +3158,13 @@
     }
    ],
    "groupingNote": "Belongs here because its fork is a war, not an invention, and its own history is the subject: the twentieth century ends the way the century feared, and everything after is the slow rebuilding and the second collapse. Tier coverage is T3 for the war, the burning and the founding (1962-1980) and T1 for the three six-century parts (2574, 3174, 3781); there is no T2 because the novel jumps from the decade after the war straight to the twenty-sixth century, and no T4 because its history begins in living memory.",
-   "epoch": "far-future"
+   "epoch": "far-future",
+   "sources": [
+    {
+     "title": "Wikipedia: A Canticle for Leibowitz",
+     "url": "https://en.wikipedia.org/wiki/A_Canticle_for_Leibowitz"
+    }
+   ]
   },
   {
    "id": "mad-max",
@@ -5042,6 +5078,12 @@
     "delta": "Real: 1980 — the year before the IBM PC, when machine intelligence was a research programme and a phrase in a Philip K. Dick novel. Fiction: a company is already selling manufactured people, and the off-world colonies need them.",
     "inUniverse": "Tyrell Corporation founded, 1980 (Blade Runner 2049 opening titles; the first of the dates the film states outright)",
     "confidence": "high",
+    "sources": [
+     {
+      "title": "Wikipedia: Blade Runner 2049 — the 1980 founding of Tyrell is stated in the opening titles",
+      "url": "https://en.wikipedia.org/wiki/Blade_Runner_2049"
+     }
+    ],
     "note": "Blade Runner is unusual here in needing no conversion: the films state their own years, and their years are ours. The 1982 film is set in November 2019, and 2049 says 2049. The fork is placed at the founding of Tyrell in 1980, which the sequel states in its opening titles, rather than at the 1982 release — a lineage cannot share a year with its own origin, and 1980 is the earliest in-universe date either film gives."
    },
    "ending": {
@@ -5062,6 +5104,12 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Blade Runner 2049 (opening titles date Tyrell to 1980)",
+       "url": "https://en.wikipedia.org/wiki/Blade_Runner_2049"
+      }
+     ],
      "note": "The date is stated in the opening titles of Blade Runner 2049. In our 1980 the nearest equivalents are the first personal computers and a symbolic-AI research programme; the fiction's fork is that artificial people became a product two decades before they became a research result.",
      "binWhy": "A company begins manufacturing people; the real 1980 has no equivalent.",
      "bin": "new-technology-deployed",
@@ -5100,6 +5148,12 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Blade Runner (set in November 2019)",
+       "url": "https://en.wikipedia.org/wiki/Blade_Runner"
+      }
+     ],
      "note": "The film states November 2019 on screen. In our November 2019 Los Angeles there is no off-world traffic, no replicants and no blade runners; the fiction's 2019 is a fully industrialised version of ours with a manufactured underclass.",
      "binWhy": "Manufactured people reach Earth and are hunted; in our 2019 they do not exist.",
      "bin": "crackdown",
@@ -5138,6 +5192,12 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Blade Runner 2049 (the 2022 Blackout is canon history in the film)",
+       "url": "https://en.wikipedia.org/wiki/Blade_Runner_2049"
+      }
+     ],
      "note": "The Blackout is animation-anthology canon (Black Out 2022, written by Kenji Kamiyama and Shinichiro Watanabe's studio) and is treated as history by the 2049 film. Its real-world date sits inside living memory as an EMP event that never happened.",
      "binWhy": "The archive that distinguished made from born is destroyed and replicants are banned outright.",
      "bin": "crackdown",
@@ -5246,7 +5306,17 @@
     }
    ],
    "groupingNote": "Belongs here because its fork is an invention inside a world that is plainly ours, and its dates are ours: the films state 2019 and 2049 outright, so nothing has to be converted. Tier coverage is T3 for the fork (1980) and T2 for everything after it (2019-2049); there is no T4 because the fiction reaches back only to its own founding, and no T1 because the story never leaves the century.",
-   "epoch": "present"
+   "epoch": "present",
+   "sources": [
+    {
+     "title": "Wikipedia: Blade Runner",
+     "url": "https://en.wikipedia.org/wiki/Blade_Runner"
+    },
+    {
+     "title": "Wikipedia: Blade Runner 2049",
+     "url": "https://en.wikipedia.org/wiki/Blade_Runner_2049"
+    }
+   ]
   },
   {
    "id": "contact",
@@ -5488,6 +5558,12 @@
     "delta": "Real: 2000 — the dot-com bubble bursts, the millennium passes without incident, and machine intelligence is still a research programme. Fiction: a Chinese virus has already taught a machine to rewrite itself, and artificial intelligences are assets that corporations own and lawyers argue about.",
     "inUniverse": null,
     "confidence": "medium",
+    "sources": [
+     {
+      "title": "Wikipedia: Neuromancer (2035 is stated in the opening line; the divergence year is not given)",
+      "url": "https://en.wikipedia.org/wiki/Neuromancer"
+     }
+    ],
     "note": "Gibson states the story's year as 2035 but never dates the divergence. The world of the novel is our own century continued — Chiba City, the sprawl, zaibatsu, a Cold War that ended — with one thing added early: self-improving software. The fork is placed at 2000 as the point where that addition has plainly already happened, and the divergence note records that the book does not name it."
    },
    "ending": {
@@ -5663,6 +5739,12 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Neuromancer (the novel is set in 2035)",
+       "url": "https://en.wikipedia.org/wiki/Neuromancer"
+      }
+     ],
      "note": "The novel's year, stated in its opening line: 'the sky above the port was the color of television, tuned to a dead channel.' Everything before this is reconstruction from what that line and the plot require. Phase is aftermath, not deep: the fork is placed at 2000, and 2035 is thirty-five years on, inside the fifty-year window the schema calls the branch's own near future.",
      "binWhy": "The two halves of a machine mind are joined.",
      "bin": "machine-awakens",
@@ -5731,7 +5813,13 @@
     }
    ],
    "groupingNote": "Belongs here because its future is our century continued by one addition: self-improving software arriving before we expected it, inside a world of zaibatsu, orbital hotels and a Cold War that ended on schedule. Tier coverage is T3 for the one real date (the 1984 publication) and T2 for everything after the fork (2000-2036); there is no T4 because the fiction's history starts with its own writing, and no T1 because Gibson's future never leaves the next few decades.",
-   "epoch": "present"
+   "epoch": "present",
+   "sources": [
+    {
+     "title": "Wikipedia: Neuromancer",
+     "url": "https://en.wikipedia.org/wiki/Neuromancer"
+    }
+   ]
   },
   {
    "id": "2001-space-odyssey",
@@ -14359,6 +14447,12 @@
     "kind": "event",
     "importance": 3,
     "confidence": "high",
+    "sources": [
+     {
+      "title": "Lawrence Livermore National Laboratory",
+      "url": "https://www.llnl.gov/article/49306/llnl-achieves-fusion-ignition"
+     }
+    ],
     "bin": "war-breaks-out",
     "binWhy": "",
     "facets": {
@@ -14394,6 +14488,12 @@
     "kind": "event",
     "importance": 3,
     "confidence": "high",
+    "sources": [
+     {
+      "title": "Lawrence Livermore National Laboratory",
+      "url": "https://www.llnl.gov/article/49306/llnl-achieves-fusion-ignition"
+     }
+    ],
     "bin": "new-technology-deployed",
     "binWhy": "",
     "facets": {
@@ -14428,6 +14528,12 @@
     "kind": "event",
     "importance": 3,
     "confidence": "high",
+    "sources": [
+     {
+      "title": "Lawrence Livermore National Laboratory",
+      "url": "https://www.llnl.gov/article/49306/llnl-achieves-fusion-ignition"
+     }
+    ],
     "bin": "breakthrough-science",
     "binWhy": "",
     "facets": {
@@ -14461,6 +14567,12 @@
     "kind": "event",
     "importance": 3,
     "confidence": "high",
+    "sources": [
+     {
+      "title": "ISRO",
+      "url": "https://www.isro.gov.in/Chandrayaan3.html"
+     }
+    ],
     "bin": "voyage-into-unknown",
     "binWhy": "",
     "facets": {
@@ -14495,6 +14607,12 @@
     "kind": "event",
     "importance": 3,
     "confidence": "high",
+    "sources": [
+     {
+      "title": "NASA",
+      "url": "https://www.nasa.gov/mission/artemis-ii/"
+     }
+    ],
     "bin": "voyage-into-unknown",
     "binWhy": "",
     "facets": {

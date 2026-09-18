@@ -23,6 +23,12 @@
     "delta": "Real: 1962 — the Cuban Missile Crisis ends in a withdrawal and a telephone hotline, and the war that the century spent preparing for does not come. Fiction: it comes, and then the survivors turn on the knowledge that made it.",
     "inUniverse": null,
     "confidence": "medium",
+    "sources": [
+     {
+      "title": "Wikipedia: A Canticle for Leibowitz — the Flame Deluge and the Simplification; the novel gives no year for either",
+      "url": "https://en.wikipedia.org/wiki/A_Canticle_for_Leibowitz"
+     }
+    ],
     "note": "Miller never puts a calendar year on the war. The novel was written in the late 1950s and its pre-war world is plainly the one its first readers lived in — Leibowitz is a Jewish electrical engineer working for the United States military, and the war is the one everybody expected. 1962 is chosen as the year that expectation came closest to being met, and the divergence note says so rather than implying the book dates it. The three parts that follow are six centuries apart, which the novel states; the second part is conventionally dated to 3174, the date the Japanese edition took for its title, and the other two follow from it."
    },
    "ending": {
@@ -43,6 +49,12 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: A Canticle for Leibowitz (the war and the backlash that follows)",
+       "url": "https://en.wikipedia.org/wiki/A_Canticle_for_Leibowitz"
+      }
+     ],
      "note": "The novel does not date the war; it is placed here in the year the crisis over Cuba nearly produced it, and the divergence field records that this is a choice. The story's own anchor is that its pre-war world is the reader's.",
      "binWhy": "The nuclear war that our 1962 avoided is fought.",
      "bin": "doomsday-weapon",
@@ -83,6 +95,12 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: A Canticle for Leibowitz (the Simplification)",
+       "url": "https://en.wikipedia.org/wiki/A_Canticle_for_Leibowitz"
+      }
+     ],
      "note": "The novel describes the Simplification as following the war but never dates it; the span is set here at about a decade after, which is as much as the book supports. What it states plainly is the mechanism: the learned were killed, and books were burned.",
      "binWhy": "The survivors destroy the knowledge that built the weapons.",
      "bin": "secret-kept",
@@ -161,6 +179,12 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: A Canticle for Leibowitz (the three parts are six centuries apart)",
+       "url": "https://en.wikipedia.org/wiki/A_Canticle_for_Leibowitz"
+      }
+     ],
      "note": "The novel states that the abbey still keeps its Memorabilia 'six hundred years after his death'; it does not print the year. 2574 is that interval measured from the founding, and the Japanese edition's title dates this part to the 26th century, which agrees.",
      "binWhy": "The buried record of the old world is found and read.",
      "bin": "truth-revealed",
@@ -201,6 +225,12 @@
      "kind": "event",
      "inUniverse": null,
      "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: A Canticle for Leibowitz (the second part; 3174 is the Japanese edition's title date)",
+       "url": "https://en.wikipedia.org/wiki/A_Canticle_for_Leibowitz"
+      }
+     ],
      "note": "This is the second part, which the novel places six centuries after the first. The 3174 date is the one the Japanese edition used as its title; the book itself says only 'six hundred years later'.",
      "binWhy": "The recovered knowledge reaches nuclear weapons again.",
      "bin": "doomsday-weapon",
@@ -271,7 +301,13 @@
     }
    ],
    "groupingNote": "Belongs here because its fork is a war, not an invention, and its own history is the subject: the twentieth century ends the way the century feared, and everything after is the slow rebuilding and the second collapse. Tier coverage is T3 for the war, the burning and the founding (1962-1980) and T1 for the three six-century parts (2574, 3174, 3781); there is no T2 because the novel jumps from the decade after the war straight to the twenty-sixth century, and no T4 because its history begins in living memory.",
-   "epoch": "far-future"
+   "epoch": "far-future",
+   "sources": [
+    {
+     "title": "Wikipedia: A Canticle for Leibowitz",
+     "url": "https://en.wikipedia.org/wiki/A_Canticle_for_Leibowitz"
+    }
+   ]
   },
   {
    "id": "planet-of-the-apes",

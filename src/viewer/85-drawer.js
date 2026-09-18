@@ -96,7 +96,7 @@ function worldPane(l, w){
   if(!w || !w.setting){
     return '<div class="pane on"><p style="color:var(--ink-3);font-size:13px">' +
       'No dossier has been written for this world yet &mdash; only its chronology is charted.</p>' +
-      deltaHtml(l) + pdBlock(l.id) + '</div>';
+      deltaHtml(l) + pdBlock(l.id) + sourcesBlock(l, "Where this comes from") + '</div>';
   }
   var themes = (w.themes || []).map(function(t){ return '<span class="tag">' + esc(t) + '</span>'; }).join(" ");
   var tags = (w.tags || []).map(function(t){
@@ -112,7 +112,7 @@ function worldPane(l, w){
         (w.mood ? '<div class="fact"><dt>Register</dt><dd>' + esc(w.mood) + '</dd></div>' : '') +
         '<div class="fact"><dt>Themes</dt><dd>' + themes + '</dd></div>' +
         '<div class="fact"><dt>Tags</dt><dd>' + tags + '</dd></div>' +
-      '</dl>' + deltaHtml(l) + pdBlock(l.id) +
+      '</dl>' + deltaHtml(l) + pdBlock(l.id) + sourcesBlock(l, "Where this comes from") +
     '</div><div>' +
       tileSection("Places that matter", w.locations) +
       tileSection("Who holds power", w.factions) +
@@ -162,7 +162,8 @@ function chronologyPane(l){
       '<td class="t">' + esc(e.title) +
         (e.inUniverse ? '<span class="iu">in-universe: ' + esc(e.inUniverse) + '</span>' : '') + '</td>' +
       '<td>' + esc(e.description || '') +
-        (e.note ? '<span class="enote">' + esc(e.note) + '</span>' : '') + '</td>' +
+        (e.note ? '<span class="enote">' + esc(e.note) + '</span>' : '') +
+        sourcesBlock(e, "Source") + '</td>' +
       '<td><span class="tier">' + esc(e.tier) + ' · ' + esc(e.phase) + '</span><br>' +
         '<span class="conf ' + esc(e.confidence) + '">' + esc(e.confidence) + '</span></td></tr>';
   }).join("");
@@ -206,6 +207,23 @@ function revealIn(){
    it and the exact prompt remain recorded in assets/ART-CREDITS.json, which the
    build carries into the payload, and the method note describes the practice -
    but the image itself is left clean. */
+
+/* Sources are the point of the confidence field: a reader who is told a date is
+   "high" confidence should be able to check it. Rendered as links, because a
+   source you cannot follow is a claim with a footnote drawn on it. */
+function sourcesBlock(node, kick){
+  var srcs = (node && node.sources) || [];
+  if(!srcs.length) return "";
+  var items = srcs.map(function(s){
+    var label = esc(s.title || s.url);
+    return s.url
+      ? '<li><a href="' + esc(s.url) + '" target="_blank" rel="noopener">' + label + ' \u2197</a></li>'
+      : '<li>' + label + '</li>';
+  }).join("");
+  return '<div class="srcs"><p class="kick">' + esc(kick || "Sources") + '</p>' +
+    '<ul>' + items + '</ul></div>';
+}
+
 /* The real-world counterpart for a world, or null. */
 function pdFor(id){
   return (DATA && DATA.pd && DATA.pd[id]) || null;
