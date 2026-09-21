@@ -30,8 +30,15 @@ var CH_GAP  = -0.35;    /* a step one chain has and the other skips (chainAlign)
 var CH_MISS = -0.05;    /* unlike kinds sharing a column of the map (chainMSA only) */
 var CH_INS  = -0.70;    /* opening a new column of the map for one chain's step (chainMSA only) */
 var CH_SKIP = -0.15;    /* a chain passing a column without a step of its own (chainMSA only) */
-var CH_SAME = 0.90;     /* facet likeness at or above this is as good as the same kind */
-var CH_FAR  = 0.55;     /* facet likeness at or below this is a plain mismatch (-1) */
+/* Calibrated to the atlas: the mean facet likeness between two DIFFERENT kinds
+   has a median of about 0.24 and never exceeds 0.55 (defeat-and-occupation vs
+   war-breaks-out). So 0.55 is as good as the same kind and 0.30 is a plain
+   mismatch; a transformative technology against a foundational discovery
+   (0.50) scores +0.6, a war beginning against a long war (0.43) scores about
+   0. Re-measure these if the facets or the bins change - tools/facet-match.py
+   prints the distribution. */
+var CH_SAME = 0.55;     /* facet likeness at or above this is as good as the same kind */
+var CH_FAR  = 0.30;     /* facet likeness at or below this is a plain mismatch (-1) */
 var CH_KIND_SIM = null;
 
 /* mean facet likeness between the moments of kind a and the moments of kind b,
