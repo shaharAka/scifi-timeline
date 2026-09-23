@@ -51,6 +51,41 @@
       "file": "The Blue Marble (remastered).jpg",
       "caption": "The Blue Marble, photographed by Apollo 17, 7 December 1972",
       "why": "The image that shaped the optimism the series is built on, taken five years after it first aired."
+    },
+    "for-all-mankind": {
+      "file": "Aldrin Apollo 11 original.jpg",
+      "caption": "Buzz Aldrin on the Moon, photographed by Neil Armstrong, 20 July 1969",
+      "why": "The landing the series takes away: in its 1969 a Soviet cosmonaut stood there three and a half weeks earlier."
+    },
+    "three-body-problem": {
+      "file": "Arecibo Observatory Aerial View.jpg",
+      "caption": "The Arecibo radio telescope, Puerto Rico",
+      "why": "In 1974 Arecibo sent humanity's first deliberate message to the stars. The novel's Red Coast Base sends one three years earlier, and is answered."
+    },
+    "canticle-for-leibowitz": {
+      "file": "Trinity Detonation T&B.jpg",
+      "caption": "The Trinity test, the first nuclear detonation, New Mexico, 16 July 1945",
+      "why": "The weapon the book's world uses in 1962, forgets, and builds again eighteen centuries later."
+    },
+    "station-eleven": {
+      "file": "Emergency hospital during Influenza epidemic, Camp Funston, Kansas - NCP 1603.jpg",
+      "caption": "An emergency hospital during the 1918 influenza pandemic, Camp Funston, Kansas",
+      "why": "The last pandemic on anything like the scale of the novel's Georgia Flu, photographed while it was happening."
+    },
+    "handmaids-tale": {
+      "file": "United States Capitol - west front.jpg",
+      "caption": "The United States Capitol, west front",
+      "why": "The building the novel's coup empties: Congress is killed there in one attack, and the Constitution is suspended."
+    },
+    "ministry-for-the-future": {
+      "file": "Thwaites Glacier.jpg",
+      "caption": "Thwaites Glacier, West Antarctica",
+      "why": "The kind of Antarctic glacier the novel's engineers slow by pumping meltwater from beneath it; its real retreat is what makes the idea urgent."
+    },
+    "parable-of-the-sower": {
+      "file": "Carr Fire.jpg",
+      "caption": "The Carr Fire, northern California, 2018",
+      "why": "The fires the Parable novels set around Los Angeles in the 2020s arrived in California's real 2010s."
     }
   }
 }

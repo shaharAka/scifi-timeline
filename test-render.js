@@ -893,6 +893,12 @@ attempt("stories picker", () => {
   check(story.includes("pk-endstep " + st.ending.valence), `${st.id}: the story does not end in its ending`);
   check(/Stories that walked part of the same road/.test(story), `${st.id}: the story does not list the stories most like it`);
   check(/data-share="world=/.test(story), `${st.id}: the story cannot be shared`);
+  /* a world with a real counterpart shows it, credited, on its phone screen */
+  const withPd = Object.keys(payload.pd || {}).find((id) => M.byId[id]);
+  if (withPd) {
+    const s2 = String(t.pickerStoryHtml(withPd));
+    check(s2.includes("the real counterpart") && s2.includes((payload.pd[withPd].license || "")), `${withPd}: the phone story does not show its credited counterpart photo`);
+  }
   soft(`stories: ${cards} cards; ${st.l.title} reads as ${steps} steps to ${st.ending.label.toLowerCase()}`);
 });
 

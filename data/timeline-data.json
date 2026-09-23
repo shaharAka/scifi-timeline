@@ -1,13 +1,13 @@
 {
  "meta": {
-  "generated": "2026-09-23T16:33:17Z",
+  "generated": "2026-09-23T22:09:47Z",
   "source": "data/parts/*.json",
   "lineages": 33,
   "events": 327,
   "groups": 5,
   "worlds": 30,
-  "art": 24,
-  "pd": 9,
+  "art": 33,
+  "pd": 16,
   "news": 3,
   "bins": 33,
   "real": 40,
@@ -17032,6 +17032,87 @@
    "lg": "assets/derived/fatherland-lg.jpg",
    "sm": "assets/derived/fatherland-sm.jpg",
    "full": "assets/fatherland.jpg"
+  },
+  "blade-runner": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A vast rain-soaked megacity at night seen from a high ledge, monolithic towers lost in smog, flares of gas burning from industrial stacks on the horizon, streets far below glowing with reflected neon in teal and magenta, no legible signs. Painted as an early-1980s airbrushed paperback cover: deep blacks, smoky gradients, wet specular highlights. Wide panoramic composition, lonely and immense. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/blade-runner-lg.jpg",
+   "sm": "assets/derived/blade-runner-sm.jpg",
+   "full": "assets/blade-runner.jpg"
+  },
+  "neuromancer": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "An abstract luminous data landscape: a grid of pale cyan light receding to a vanishing point, translucent geometric towers of information rising like skyscrapers, above it a flat grey sky of static. Painted as a mid-1980s airbrushed paperback cover: hard-edged geometry, glowing lines on deep indigo, chrome sheen. Wide panoramic composition, cold and electric. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/neuromancer-lg.jpg",
+   "sm": "assets/derived/neuromancer-sm.jpg",
+   "full": "assets/neuromancer.jpg"
+  },
+  "canticle-for-leibowitz": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A lone stone abbey in a vast desert under a pale bleached sky, a single robed figure leading a donkey along a dusty track, the broken edge of an old concrete highway half-buried in sand in the foreground. Painted as a 1950s gouache paperback cover: dusty ochre, sage and bone white, flat simplified shapes, quiet and devotional. Wide panoramic composition, patient and austere. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/canticle-for-leibowitz-lg.jpg",
+   "sm": "assets/derived/canticle-for-leibowitz-sm.jpg",
+   "full": "assets/canticle-for-leibowitz.jpg"
+  },
+  "handmaids-tale": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A quiet New England town square in grey early morning, a red-brick wall and a white clapboard church, bare elms, wet cobblestones, one small distant figure in a long red cloak walking away with head bowed, no faces. Painted as a 1980s literary paperback cover: muted greys and brick reds with that single saturated red, soft and still. Wide composition, hushed and oppressive. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/handmaids-tale-lg.jpg",
+   "sm": "assets/derived/handmaids-tale-sm.jpg",
+   "full": "assets/handmaids-tale.jpg"
+  },
+  "parable-of-the-sower": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "An empty eight-lane freeway running north through dry golden California hills at dusk, the sky orange with smoke from distant fires, a small group of walkers with heavy packs far down the road, a burned-out car at the verge. Painted as a 1990s literary paperback cover: warm ochre and ember orange against dusty violet shadows, painterly and plain. Wide panoramic composition, resolute and grieving. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/parable-of-the-sower-lg.jpg",
+   "sm": "assets/derived/parable-of-the-sower-sm.jpg",
+   "full": "assets/parable-of-the-sower.jpg"
+  },
+  "ministry-for-the-future": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "The edge of a vast Antarctic glacier under clear low polar sun, a line of tiny drilling rigs and pipelines crossing the white ice, long blue shadows, a thin band of pink dawn on the horizon. Painted as contemporary gouache editorial illustration: clean flat shapes, icy blues and whites with a warm accent, hopeful and industrious. Wide panoramic composition, vast and quietly optimistic. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/ministry-for-the-future-lg.jpg",
+   "sm": "assets/derived/ministry-for-the-future-sm.jpg",
+   "full": "assets/ministry-for-the-future.jpg"
+  },
+  "station-eleven": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A small caravan of horse-drawn wagons on an overgrown two-lane road beside a great freshwater lake in late summer, trees reclaiming an abandoned roadside petrol station, soft golden evening light, wildflowers through the cracked asphalt. Painted as a contemporary literary paperback cover: soft greens, gold and lake blue, gentle and luminous. Wide panoramic composition, elegiac and hopeful. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/station-eleven-lg.jpg",
+   "sm": "assets/derived/station-eleven-sm.jpg",
+   "full": "assets/station-eleven.jpg"
+  },
+  "three-body-problem": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A huge radar dish on a bare mountain ridge at night, pointed at a sky where three pale suns hang low together over a frozen horizon, harsh cold light on snow, the dish casting three shadows. Painted as a 2000s science-fiction paperback cover: deep indigo and steel grey with cold white light, crisp and monumental. Wide panoramic composition, ominous and vast. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/three-body-problem-lg.jpg",
+   "sm": "assets/derived/three-body-problem-sm.jpg",
+   "full": "assets/three-body-problem.jpg"
+  },
+  "for-all-mankind": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A lunar surface outpost of low cylindrical habitation modules half-buried in grey regolith near a crater rim, a small open rover beside them, the Earth rising blue over the black horizon, hard sunlight and sharp shadows. Painted as 1970s space-agency concept-art gouache: smooth gradients, warm module whites against velvet black, optimistic and engineered. Wide panoramic composition, confident and lonely. Full-bleed image to every edge: no paper, no margin, no border, no frame. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up, no flags or national insignia.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/for-all-mankind-lg.jpg",
+   "sm": "assets/derived/for-all-mankind-sm.jpg",
+   "full": "assets/for-all-mankind.jpg"
   }
  },
  "pd": {
@@ -17133,6 +17214,83 @@
    "author": "Credit: NASA, Jeff Hester, and Paul Scowen (Arizona State University)",
    "sourceTitle": "File:Pillars of Creation.jpg",
    "sourcePage": "https://commons.wikimedia.org/wiki/File:Eagle_nebula_pillars.jpg"
+  },
+  "canticle-for-leibowitz": {
+   "kind": "public-domain",
+   "file": "assets/pd/canticle-for-leibowitz.jpg",
+   "caption": "The Trinity test, the first nuclear detonation, New Mexico, 16 July 1945",
+   "why": "The weapon the book's world uses in 1962, forgets, and builds again eighteen centuries later.",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "author": "United States Department of Energy",
+   "sourceTitle": "File:Trinity Detonation T&B.jpg",
+   "sourcePage": "https://commons.wikimedia.org/wiki/File:Trinity_Detonation_T%26B.jpg"
+  },
+  "for-all-mankind": {
+   "kind": "public-domain",
+   "file": "assets/pd/for-all-mankind.jpg",
+   "caption": "Buzz Aldrin on the Moon, photographed by Neil Armstrong, 20 July 1969",
+   "why": "The landing the series takes away: in its 1969 a Soviet cosmonaut stood there three and a half weeks earlier.",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "author": "Neil Armstrong",
+   "sourceTitle": "File:Aldrin Apollo 11 original.jpg",
+   "sourcePage": "https://commons.wikimedia.org/wiki/File:Aldrin_Apollo_11_original.jpg"
+  },
+  "handmaids-tale": {
+   "kind": "public-domain",
+   "file": "assets/pd/handmaids-tale.jpg",
+   "caption": "The United States Capitol, west front",
+   "why": "The building the novel's coup empties: Congress is killed there in one attack, and the Constitution is suspended.",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "author": "Architect of the Capitol",
+   "sourceTitle": "File:United States Capitol - west front.jpg",
+   "sourcePage": "https://commons.wikimedia.org/wiki/File:United_States_Capitol_-_west_front.jpg"
+  },
+  "ministry-for-the-future": {
+   "kind": "public-domain",
+   "file": "assets/pd/ministry-for-the-future.jpg",
+   "caption": "Thwaites Glacier, West Antarctica",
+   "why": "The kind of Antarctic glacier the novel's engineers slow by pumping meltwater from beneath it; its real retreat is what makes the idea urgent.",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "author": "NASA",
+   "sourceTitle": "File:Thwaites Glacier.jpg",
+   "sourcePage": "https://commons.wikimedia.org/wiki/File:Thwaites_Glacier.jpg"
+  },
+  "parable-of-the-sower": {
+   "kind": "public-domain",
+   "file": "assets/pd/parable-of-the-sower.jpg",
+   "caption": "The Carr Fire, northern California, 2018",
+   "why": "The fires the Parable novels set around Los Angeles in the 2020s arrived in California's real 2010s.",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "author": "CAL FIRE",
+   "sourceTitle": "File:Carr Fire.jpg",
+   "sourcePage": "https://commons.wikimedia.org/wiki/File:Carr_Fire_28_July_2018_b.jpg"
+  },
+  "station-eleven": {
+   "kind": "public-domain",
+   "file": "assets/pd/station-eleven.jpg",
+   "caption": "An emergency hospital during the 1918 influenza pandemic, Camp Funston, Kansas",
+   "why": "The last pandemic on anything like the scale of the novel's Georgia Flu, photographed while it was happening.",
+   "license": "Public domain",
+   "licenseUrl": "",
+   "author": "Otis Historical Archives, National Museum of Health and Medicine",
+   "sourceTitle": "File:Emergency hospital during Influenza epidemic, Camp Funston, Kansas - NCP 1603.jpg",
+   "sourcePage": "https://commons.wikimedia.org/wiki/File:Emergency_hospital_during_Influenza_epidemic,_Camp_Funston,_Kansas_-_NCP_1603.jpg"
+  },
+  "three-body-problem": {
+   "kind": "open-license",
+   "file": "assets/pd/three-body-problem.jpg",
+   "caption": "The Arecibo radio telescope, Puerto Rico",
+   "why": "In 1974 Arecibo sent humanity's first deliberate message to the stars. The novel's Red Coast Base sends one three years earlier, and is answered.",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "author": "H. Schweiker/WIYN and NOAO/AURA/NSF",
+   "sourceTitle": "File:Arecibo Observatory Aerial View.jpg",
+   "sourcePage": "https://commons.wikimedia.org/wiki/File:Arecibo_Observatory_Aerial_View.jpg"
   }
  },
  "news": [

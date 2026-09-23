@@ -154,6 +154,8 @@ function pickerStoryHtml(st, M){
     + '<h2>' + esc(l.title) + '</h2>' + pkBadge(st) + '</div></div>';
   html += '<div class="pk-fork"><span class="pk-fork-y">' + esc(fmtYearFull(st.fork)) + '</span><span><b>Where it leaves our history.</b> ' + esc(l.divergence.label || "") + '</span></div>'
     + (l.divergence.delta ? '<p class="pk-delta">' + esc(l.divergence.delta) + '</p>' : '');
+  /* the real thing the story turns away from, photographed, credited as its licence asks */
+  if(typeof pdBlock === "function" && pdFor(l.id)) html += '<div class="pk-real">' + pdBlock(l.id) + '</div>';
   html += '<ol class="pk-steps">';
   st.seq.forEach(function(x, i){
     var b = (M.byKind[x.bin] || []).filter(function(bb){ return bb.col === st.cols[i]; })[0];

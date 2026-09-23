@@ -79,6 +79,34 @@
     },
     "buffy-sunnydale": {
       "prompt": "A quiet Californian suburban street at dusk, single-storey houses with dry lawns, a station wagon in a driveway, long shadows, hills on the horizon, no people. Painted in the style of a 1990s American realist illustration: flat muted colour, warm evening light, ordinary and faintly uneasy. Wide composition."
+    },
+    "blade-runner": {
+      "prompt": "A vast rain-soaked megacity at night seen from a high ledge, monolithic towers lost in smog, flares of gas burning from industrial stacks on the horizon, streets far below glowing with reflected neon in teal and magenta, no legible signs. Painted as an early-1980s airbrushed paperback cover: deep blacks, smoky gradients, wet specular highlights. Wide panoramic composition, lonely and immense."
+    },
+    "neuromancer": {
+      "prompt": "An abstract luminous data landscape: a grid of pale cyan light receding to a vanishing point, translucent geometric towers of information rising like skyscrapers, above it a flat grey sky of static. Painted as a mid-1980s airbrushed paperback cover: hard-edged geometry, glowing lines on deep indigo, chrome sheen. Wide panoramic composition, cold and electric."
+    },
+    "canticle-for-leibowitz": {
+      "prompt": "A lone stone abbey in a vast desert under a pale bleached sky, a single robed figure leading a donkey along a dusty track, the broken edge of an old concrete highway half-buried in sand in the foreground. Painted as a 1950s gouache paperback cover: dusty ochre, sage and bone white, flat simplified shapes, quiet and devotional. Wide panoramic composition, patient and austere."
+    },
+    "handmaids-tale": {
+      "prompt": "A quiet New England town square in grey early morning, a red-brick wall and a white clapboard church, bare elms, wet cobblestones, one small distant figure in a long red cloak walking away with head bowed, no faces. Painted as a 1980s literary paperback cover: muted greys and brick reds with that single saturated red, soft and still. Wide composition, hushed and oppressive."
+    },
+    "parable-of-the-sower": {
+      "prompt": "An empty eight-lane freeway running north through dry golden California hills at dusk, the sky orange with smoke from distant fires, a small group of walkers with heavy packs far down the road, a burned-out car at the verge. Painted as a 1990s literary paperback cover: warm ochre and ember orange against dusty violet shadows, painterly and plain. Wide panoramic composition, resolute and grieving."
+    },
+    "ministry-for-the-future": {
+      "prompt": "The edge of a vast Antarctic glacier under clear low polar sun, a line of tiny drilling rigs and pipelines crossing the white ice, long blue shadows, a thin band of pink dawn on the horizon. Painted as contemporary gouache editorial illustration: clean flat shapes, icy blues and whites with a warm accent, hopeful and industrious. Wide panoramic composition, vast and quietly optimistic."
+    },
+    "station-eleven": {
+      "prompt": "A small caravan of horse-drawn wagons on an overgrown two-lane road beside a great freshwater lake in late summer, trees reclaiming an abandoned roadside petrol station, soft golden evening light, wildflowers through the cracked asphalt. Painted as a contemporary literary paperback cover: soft greens, gold and lake blue, gentle and luminous. Wide panoramic composition, elegiac and hopeful."
+    },
+    "three-body-problem": {
+      "prompt": "A huge radar dish on a bare mountain ridge at night, pointed at a sky where three pale suns hang low together over a frozen horizon, harsh cold light on snow, the dish casting three shadows. Painted as a 2000s science-fiction paperback cover: deep indigo and steel grey with cold white light, crisp and monumental. Wide panoramic composition, ominous and vast."
+    },
+    "for-all-mankind": {
+      "prompt": "A lunar surface outpost of low cylindrical habitation modules half-buried in grey regolith near a crater rim, a small open rover beside them, the Earth rising blue over the black horizon, hard sunlight and sharp shadows. Painted as 1970s space-agency concept-art gouache: smooth gradients, warm module whites against velvet black, optimistic and engineered. Wide panoramic composition, confident and lonely. Full-bleed image to every edge: no paper, no margin, no border, no frame.",
+      "negative": "no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up, no flags or national insignia"
     }
   }
 }
