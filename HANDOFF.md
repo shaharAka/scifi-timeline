@@ -416,8 +416,12 @@ Nothing is broken. In rough priority order:
    from neighbouring lanes can still touch where forks stack at the same year.
    A second row becomes affordable once `LANE_GAP * Z` exceeds ~48px - gate it
    on that, not on a fixed pitch.
-5. **No remote.** `git remote -v` is empty. Upstreaming to GitHub is the natural
-   next step, and since the page is pure static it deploys to Pages with no server.
+5. **Published.** The repo is public at https://github.com/shaharAka/scifi-timeline
+   and GitHub Pages serves main at https://shaharaka.github.io/scifi-timeline/
+   (`index.html` redirects to `timeline.html`; `.nojekyll` stops Jekyll). A push
+   to main IS a publish: rebuild with `python3 build-data.py` and run the three
+   suites before pushing, and never commit anything from `.env`.
+
 6. **The old copy still exists** at `/Users/shahar/Documents/isramarket/timeline`,
    untracked inside the isramarket repo. It is **stale**, not a backup, and
    predates the tree chart entirely. Delete it, or at least `.gitignore` it there.
