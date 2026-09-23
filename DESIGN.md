@@ -371,16 +371,25 @@ Four rules follow from that, and they are the owner's:
 - **Selections are links.** Choosing news, a world or a kind writes
   `#news=<date>`, `#world=<id>` or `#kind=<id>`; a post can link straight to
   the reading it describes.
-- **A phone opens on Stories, not a canvas** (`93-picker.js`). Below
-  720px the front door is a list: the latest news, our own recent chain, and
-  a card per world sorted by how closely its chain matches ours, filterable
-  by ending. A card opens the story as a vertical chain with its ending and
-  the stories most like it; any kind of moment opens every story through
-  it. Each screen is a history entry, so the phone's back button works. The
-  map is the Map tab; there, pinch zooms, a tap centres the choice above the
-  bottom sheet, the zoom buttons float on the map, and a hint points to the
-  endings until the first drag. Order and Years are not offered on a phone:
-  the tree needs a wider screen.
+- **The phone is designed first, not adapted** (`93-picker.js`, below
+  720px, everything hangs off `body.phone`). A reader arrives from a link,
+  has a minute, reads a story or two and maybe shares it, so the phone is a
+  small app: a slim header with a share button, a tab bar at the bottom
+  (Today, Stories, Map, About), and screens that read top to bottom. *Today*
+  leads with the news, then the stories closest to our road as a swipeable
+  rail, our road lately as a tappable timeline, how the stories end, and more
+  news. A story is a hero image, its fork, its chain as a vertical timeline to
+  its ending, a share button, and the stories that walked part of the same
+  road. A kind of moment, a news item, one of our own moments and an ending
+  each open as compact rows of stories with *what came next*, never as chips.
+  Every screen is a history entry, so back works and any screen can be
+  linked. No modal on arrival; 16px text, 44px targets, safe areas, lazy
+  images, and a coloured initials tile where a world has no plate yet. The
+  map is a tab, with pinch, floating zoom and a bottom sheet.
+- **A shared link has a preview.** The build writes Open Graph and Twitter
+  tags from `share` in `data/atlas.json`, and writes the full page to
+  `index.html` too, so the site root is the atlas itself: link previews are
+  read from the first page fetched, without script.
 - **Fewer tools on the Moments page.** Eras, the time slider, the label
   toggle, the sort and the archetype chips act on the tree and are hidden on
   Moments. On a phone (< 720px) the bar is one compact block, the legend is

@@ -2,20 +2,21 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- @meta -->
 <title id="page-title">Where We Are Now - a converging timeline of science fiction</title>
 <!-- @styles -->
 </head>
 <body>
 <div class="app">
+<header class="pk-top" id="pk-top"><div class="pk-head" id="pk-head"></div>
+  <button class="pk-share" id="pk-share" aria-label="Share"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"/><path d="M7.5 7.5 12 3l4.5 4.5"/><path d="M5 12v7.5h14V12"/></svg></button></header>
 
 <header class="topbar">
   <div class="bar">
     <div class="brand" id="brand"><span class="brand-b">Where We Are Now</span> <span class="brand-a">science fiction&rsquo;s futures, lined up against ours</span></div>
 
     <nav class="nav-group">
-      <button class="nav phone-only" id="btn-stories">Stories</button>
-      <button class="nav phone-only" id="btn-map">Map</button>
       <button class="nav" id="btn-worlds" title="Browse every world (W)">Worlds</button>
       <button class="nav" id="btn-news" title="What has happened lately (N)">News</button>
       <button class="nav" id="btn-about" title="What this is and what to distrust">About</button>
@@ -67,6 +68,7 @@
     <div id="mp-hint" class="mp-hint" hidden>Drag to see how they end &rarr;</div>
   </div>
   <div id="picker" class="picker" aria-label="Stories"></div>
+  <div class="pk-mapctl" role="group" aria-label="Zoom the map"><button id="pk-zout" aria-label="Zoom out">&minus;</button><button id="pk-zin" aria-label="Zoom in">+</button><button id="pk-fit">Fit</button></div>
 
   <aside class="panel" id="drawer" data-mode="">
     <button class="grabber" id="grabber" aria-label="Resize the panel"><span></span></button>
@@ -110,6 +112,8 @@
   </aside>
 </main>
 
+<nav class="tabbar" id="tabbar" aria-label="Sections"><button data-tab="today"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3"/></svg><span>Today</span></button><button data-tab="stories"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="17" height="4.5" rx="1.2"/><rect x="3.5" y="10" width="17" height="4.5" rx="1.2"/><rect x="3.5" y="16" width="17" height="4.5" rx="1.2"/></svg><span>Stories</span></button><button data-tab="map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12h7"/><path d="M9.5 12c4 0 4-6 8-6h4"/><path d="M9.5 12c4 0 4 6 8 6h4"/><path d="M9.5 12h12"/></svg><span>Map</span></button><button data-tab="about"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6"/><circle cx="12" cy="7.6" r=".6"/></svg><span>About</span></button></nav>
+<div class="pk-toast" id="pk-toast" role="status" aria-live="polite"></div>
 <div id="welcome" class="welcome" hidden></div>
 
 <footer class="bottombar legend">

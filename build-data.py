@@ -764,10 +764,43 @@ def assemble():
     for marker in ("<!-- @styles -->", "<!-- @scripts -->", EMBED_MARK):
         if marker not in html:
             err("src/page.html is missing the %s marker" % marker)
+    html = html.replace("<!-- @meta -->", share_meta(), 1)
     html = html.replace("<!-- @styles -->", "<style>\n" + css + "</style>", 1)
     html = html.replace("<!-- @scripts -->", "<script>\n" + js + "</script>", 1)
     return html, css_names, js_names
 
+
+
+def share_meta():
+    """The link preview a social site shows when the page is shared. Those sites
+    do not run the page's script, so the tags must be in the HTML itself; they
+    come from `share` in data/atlas.json."""
+    try:
+        with open(os.path.join(ROOT, "data", "atlas.json"), "r", encoding="utf-8") as fh:
+            atlas = json.load(fh)
+    except (OSError, json.JSONDecodeError):
+        return ""
+    sh = atlas.get("share") or {}
+    title = sh.get("title") or atlas.get("brand") or atlas.get("title") or ""
+    desc = sh.get("description") or atlas.get("tagline") or ""
+    url, image = sh.get("url"), sh.get("image")
+    def a(v): return (v or "").replace("&", "&amp;").replace('"', "&quot;").replace("<", "&lt;")
+    out = ['<meta name="description" content="%s">' % a(desc),
+           '<meta name="theme-color" content="%s">' % a(sh.get("themeColor") or "#eef2f6"),
+           '<meta property="og:type" content="website">',
+           '<meta property="og:title" content="%s">' % a(title),
+           '<meta property="og:description" content="%s">' % a(desc),
+           '<meta name="twitter:card" content="summary_large_image">',
+           '<meta name="twitter:title" content="%s">' % a(title),
+           '<meta name="twitter:description" content="%s">' % a(desc)]
+    if url:
+        out.append('<meta property="og:url" content="%s">' % a(url))
+        out.append('<link rel="canonical" href="%s">' % a(url))
+    if image:
+        full = image if image.startswith("http") or not url else url.rstrip("/") + "/" + image.lstrip("/")
+        out.append('<meta property="og:image" content="%s">' % a(full))
+        out.append('<meta name="twitter:image" content="%s">' % a(full))
+    return "\n".join(out)
 
 
 def main():
@@ -926,6 +959,10 @@ def main():
                 else:
                     html = html[:body_start] + "\n" + compact + "\n" + html[end:]
                     with open(HTML, "w", encoding="utf-8") as fh:
+                        fh.write(html)
+                    # the site root serves the page itself, not a redirect: a link
+                    # preview is read from the first page fetched, without script
+                    with open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8") as fh:
                         fh.write(html)
                     embedded = True
 

@@ -1,82 +1,158 @@
 /* ============================================================================
-   Stories: the phone's way into the atlas.
+   The phone: the atlas designed for a thumb, not squeezed from a desktop.
 
-   A canvas you pan and pinch is the wrong front door on a phone. The Moments
-   map is still there (the Map tab), but a phone opens on a list: today's news,
-   our own recent chain, and one card per world, sorted by how much its chain
-   is like ours. A card opens that story as a vertical chain of moments with
-   its ending and the stories most like it; any kind of moment opens every
-   story that passed through it. Each screen is a real history entry (#world=,
-   #kind=, #news=), so the phone's back button walks back through them.
+   A reader arrives from a shared link, has a minute, reads a story or two, and
+   maybe passes it on. So the phone is a small app with a tab bar at the bottom
+   (Today, Stories, Map, About), a slim header with a share button, and screens
+   that read top to bottom:
 
-   The detail screens reuse the Moments panel's builders, so a story reads the
-   same here as it does beside the map on a desktop.
+     Today     the latest news, the stories closest to our own road, our road
+               lately as a short timeline, how the stories end, more news
+     Stories   every world as a card; search, filter by ending, sort
+     a story   its chain of moments as a vertical timeline down to its ending,
+               then the stories that walked part of the same road
+     a moment  every story that passed through that kind of moment, and what
+               came next in each
+     news      the item, the kind of moment it is, the stories that walked the
+               same road and what followed, and our recent road matched
+     Map       the Moments map, full screen, for whoever wants the whole picture
+
+   Every screen is a history entry (#stories, #world=, #kind=, #news=,
+   #beat=, #about, #map), so the phone's back button walks back through them
+   and any screen can be linked. The canvas is not the front door here.
    ========================================================================== */
 
-var PK = { sort:"alike", end:"all", on:false };
+var PK = { sort:"alike", end:"all", q:"", on:false };
+var PK_DEPTH = 0;
 
 function pickerActive(){ return !!PK.on; }
 function pickerModel(){ return MP.model || momentsModel(); }
+function pkThumb(id, cls){
+  var art = typeof artFor === "function" ? artFor(id) : null;
+  if(art && art.sm) return '<img class="' + (cls || "pk-thumb") + '" src="' + esc(art.sm) + '" alt="" loading="lazy" decoding="async">';
+  /* no plate yet: the archetype's colour and the title's initials, not a grey hole */
+  var l = null; (DATA.lineages || []).forEach(function(x){ if(x.id === id) l = x; });
+  var words = l ? l.title.replace(/^(The|A|An)\s+/i, "").split(/[\s:\-]+/).filter(function(w){ return /^[A-Za-z0-9]/.test(w); }) : [];
+  var ini = words.slice(0, 2).map(function(w){ return w.charAt(0).toUpperCase(); }).join("");
+  var col = l && l._g ? "var(--g-" + String(l._g.color).replace("#", "") + "-light)" : "var(--ink-3)";
+  return '<span class="' + (cls || "pk-thumb") + ' none" aria-hidden="true" style="--tc:' + col + '"><b>' + esc(ini) + '</b></span>';
+}
+function pkBadge(st){ return '<span class="mp-badge ' + st.ending.valence + '">' + esc(st.ending.label.toLowerCase()) + '</span>'; }
+function pkOurRoad(M, n){ return mpOurQuery(M, null, n || 6); }
+function pkScores(M, q){
+  var sc = {};
+  M.strands.forEach(function(st){ sc[st.id] = q.length ? chainAlign(q, st.kinds) : { score:0, pairs:[] }; });
+  return sc;
+}
+/* the shared stretch of an alignment, in words */
+function pkShared(q, st, r){
+  return r.pairs.map(function(p){ return mpLabel(st.kinds[p[1]]); }).join(" → ");
+}
 
-/* --- the list ------------------------------------------------------------------ */
-function pickerListHtml(M){
-  var news = mpNewsList();
-  var q = mpOurQuery(M, null, 6);
-  var html = '<div class="pk-intro">'
-    + '<p>' + M.list.length + ' science-fiction worlds, pinned to our calendar. Each leaves our history at one moment and walks its own chain of events to an ending. Which of them are on our road?</p></div>';
-  if(news.length){
-    var n = news[0];
-    html += '<button class="mp-news-card' + (mpNewsFresh(n) ? ' fresh' : '') + '" data-news="' + esc(mpNewsKey(n)) + '">'
-      + '<span class="mp-kicker">' + (mpNewsFresh(n) ? '<span class="mp-new">New</span> ' : 'Latest news · ') + esc(fmtNewsDate(n.date)) + '</span>'
-      + '<span class="mp-news-card-head">' + esc(n.headline) + '</span>'
-      + '<span class="mp-news-card-go">Which stories walked this road, and where it led →</span></button>';
+/* a compact story row: thumbnail, title, ending, one or two lines of context */
+function pkRow(st, line1, line2){
+  return '<button class="pk-row ' + st.ending.valence + '" data-world="' + esc(st.id) + '">'
+    + pkThumb(st.id, "pk-rthumb")
+    + '<span class="pk-rbody"><span class="pk-rtop"><span class="pk-rtitle">' + esc(st.l.title) + '</span>' + pkBadge(st) + '</span>'
+    + (line1 ? '<span class="pk-rline">' + line1 + '</span>' : '')
+    + (line2 ? '<span class="pk-rline sub">' + line2 + '</span>' : '')
+    + '</span></button>';
+}
+function pkNewsCard(n, big){
+  return '<button class="pk-news' + (big ? ' big' : '') + (mpNewsFresh(n) ? ' fresh' : '') + '" data-news="' + esc(mpNewsKey(n)) + '">'
+    + '<span class="pk-news-k">' + (mpNewsFresh(n) ? '<span class="mp-new">New</span> ' : (big ? 'Latest news · ' : '')) + esc(fmtNewsDate(n.date)) + '</span>'
+    + '<span class="pk-news-h">' + esc(n.headline) + '</span>'
+    + (big && n.bin ? '<span class="pk-news-go">Which stories walked this road →</span>' : '')
+    + '</button>';
+}
+function pkEndingsBar(M, title){
+  var t = M.tally, total = M.list.length;
+  return '<section class="pk-sec"><h3 class="pk-sh">' + esc(title) + '</h3>'
+    + '<div class="mp-obar">' + MP_ENDINGS.map(function(en){ var n = t[en.valence].length; return n ? '<i class="' + en.valence + '" style="flex:' + n + '"></i>' : ''; }).join("") + '</div>'
+    + '<div class="pk-ends3">' + MP_ENDINGS.map(function(en){
+        return '<button class="pk-end3 ' + en.valence + '" data-kind="' + en.id + '"><b>' + t[en.valence].length + '</b><span>' + esc(en.label.toLowerCase()) + '</span></button>';
+      }).join("") + '</div>'
+    + '<p class="pk-small">of ' + total + ' stories, as each is told</p></section>';
+}
+
+/* --- Today --------------------------------------------------------------------- */
+function pickerTodayHtml(M){
+  var news = mpNewsList(), q = pkOurRoad(M, 6), sc = pkScores(M, q);
+  var html = '<header class="pk-hello"><h1>Which stories are on our road?</h1>'
+    + '<p>' + M.list.length + ' science-fiction worlds, each pinned to our calendar, each walking its own chain of events to an ending. Read today’s news against them.</p></header>';
+  if(news.length) html += pkNewsCard(news[0], true);
+  var near = M.strands.slice().sort(function(a, b){ return sc[b.id].score - sc[a.id].score; })
+    .filter(function(st){ return sc[st.id].pairs.length; }).slice(0, 6);
+  if(near.length){
+    html += '<section class="pk-sec"><h3 class="pk-sh">Closest to our road</h3><div class="pk-rail">'
+      + near.map(function(st){
+        return '<button class="pk-tile" data-world="' + esc(st.id) + '">' + pkThumb(st.id, "pk-tthumb")
+          + '<span class="pk-ttitle">' + esc(st.l.title) + '</span>' + pkBadge(st)
+          + '<span class="pk-tline">shares ' + esc(pkShared(q, st, sc[st.id])) + '</span></button>';
+      }).join("") + '</div></section>';
   }
-  if(q.length){
-    html += '<div class="pk-road"><div class="mp-kicker">Our own road, lately</div><div class="mp-chain query">'
-      + q.map(function(k, i){ return (i ? '<span class="mp-arr">→</span>' : '') + '<button class="mp-chip us" data-kind="' + esc(k) + '">' + esc(mpLabel(k)) + '</button>'; }).join("")
-      + '<span class="mp-arr">→</span><span class="mp-chip open">?</span></div></div>';
+  var beats = (M.realEv || []).filter(function(e){ return e.bin; }).slice(-6).reverse();
+  if(beats.length){
+    html += '<section class="pk-sec"><h3 class="pk-sh">Our road lately</h3><ol class="pk-road">'
+      + beats.map(function(e){
+        return '<li><button data-beat="' + esc(e.id) + '"><span class="pk-yr">' + esc(String(e.year)) + '</span>'
+          + '<span class="pk-rt"><span class="pk-rtitle">' + esc(e.title) + '</span><span class="pk-kindtag">' + esc(mpLabel(e.bin)) + '</span></span></button></li>';
+      }).join("") + '</ol><p class="pk-small">Tap a moment to find the fictional worlds in the same situation, and what happened next there.</p></section>';
   }
-  /* score every story against our road once */
-  var score = {};
-  M.strands.forEach(function(st){ score[st.id] = q.length ? chainAlign(q, st.kinds).score : 0; });
-  var list = M.strands.slice();
-  if(PK.end !== "all") list = list.filter(function(st){ return st.ending.valence === PK.end; });
-  if(PK.sort === "alike") list.sort(function(a, b){ return score[b.id] - score[a.id] || a.l.title.localeCompare(b.l.title); });
-  else if(PK.sort === "fork") list.sort(function(a, b){ return a.fork - b.fork; });
-  else list.sort(function(a, b){ return a.l.title.localeCompare(b.l.title); });
-  var t = M.tally;
-  html += '<div class="pk-tools"><div class="pk-ends">'
-    + [["all", "All " + M.strands.length], ["optimistic", t.optimistic.length + " end well"], ["pessimistic", t.pessimistic.length + " end badly"], ["unknown", t.unknown.length + " still open"]]
-      .map(function(o){ return '<button class="pk-end ' + o[0] + (PK.end === o[0] ? ' on' : '') + '" data-end="' + o[0] + '">' + esc(o[1]) + '</button>'; }).join("")
-    + '</div><label class="pk-sort">Sort <select id="pk-sort">'
-    + [["alike", "most like our road"], ["fork", "where they leave us"], ["title", "A to Z"]]
-      .map(function(o){ return '<option value="' + o[0] + '"' + (PK.sort === o[0] ? ' selected' : '') + '>' + o[1] + '</option>'; }).join("")
-    + '</select></label></div>';
-  var best = list.length ? score[list[0].id] : 0;
-  html += '<div class="pk-list">';
-  list.forEach(function(st){
-    var l = st.l, art = typeof artFor === "function" ? artFor(l.id) : null;
-    var chain = st.kinds.slice(0, 4).map(function(k){ return esc(mpLabel(k)); }).join(' <i>→</i> ') + (st.kinds.length > 4 ? ' <i>→ …</i>' : '');
-    var alike = PK.sort === "alike" && q.length && best > 0 ? Math.round(100 * score[st.id] / best) : null;
-    html += '<button class="pk-card ' + st.ending.valence + '" data-world="' + esc(l.id) + '" style="--c:' + esc(st.color) + '">'
-      + (art && art.sm ? '<span class="pk-thumb" style="background-image:url(\'' + esc(art.sm) + '\')"></span>' : '<span class="pk-thumb none"></span>')
-      + '<span class="pk-body"><span class="pk-title">' + esc(l.title) + '</span>'
-      + '<span class="pk-meta">' + esc(mediumLabel(l.medium)) + ' · leaves us in ' + esc(fmtYearFull(st.fork)) + '</span>'
-      + '<span class="pk-chain">' + chain + '</span>'
-      + '<span class="pk-foot"><span class="mp-badge ' + st.ending.valence + '">' + esc(st.ending.label.toLowerCase()) + '</span>'
-      + (alike != null ? '<span class="pk-alike"><i style="width:' + alike + '%"></i></span>' : '') + '</span></span></button>';
-  });
-  html += '</div><p class="pk-foot-note">Sorted by how closely each story’s chain of moments matches ours: the same kind of moment counts fully, a similar one partly. <button class="pk-link" id="pk-map">See them all on the map →</button></p>';
+  html += pkEndingsBar(M, "How the stories end");
+  if(news.length > 1){
+    html += '<section class="pk-sec"><h3 class="pk-sh">More in the news</h3>' + news.slice(1).map(function(n){ return pkNewsCard(n, false); }).join("") + '</section>';
+  }
+  html += '<button class="pk-cta" data-go="stories">Browse all ' + M.strands.length + ' stories</button>';
   return html;
 }
 
-/* --- a story, as a vertical chain ------------------------------------------------ */
+/* --- Stories ------------------------------------------------------------------- */
+function pickerListHtml(M){
+  var q = pkOurRoad(M, 6), sc = pkScores(M, q), t = M.tally;
+  var list = M.strands.slice();
+  if(PK.end !== "all") list = list.filter(function(st){ return st.ending.valence === PK.end; });
+  if(PK.q){
+    var needle = PK.q.toLowerCase();
+    list = list.filter(function(st){
+      var w = st.l._w || {};
+      return (st.l.title + " " + (st.l.creator || "") + " " + (w.tags || []).join(" ") + " " + st.kinds.map(mpLabel).join(" ")).toLowerCase().indexOf(needle) >= 0;
+    });
+  }
+  if(PK.sort === "alike") list.sort(function(a, b){ return sc[b.id].score - sc[a.id].score || a.l.title.localeCompare(b.l.title); });
+  else if(PK.sort === "fork") list.sort(function(a, b){ return a.fork - b.fork; });
+  else list.sort(function(a, b){ return a.l.title.localeCompare(b.l.title); });
+  var html = '<div class="pk-tools"><input type="search" id="pk-q" class="pk-search" placeholder="Search stories, moments, tags" value="' + esc(PK.q) + '" aria-label="Search stories">'
+    + '<div class="pk-ends">'
+    + [["all", "All " + M.strands.length], ["optimistic", t.optimistic.length + " end well"], ["pessimistic", t.pessimistic.length + " end badly"], ["unknown", t.unknown.length + " still open"]]
+      .map(function(o){ return '<button class="pk-end ' + o[0] + (PK.end === o[0] ? ' on' : '') + '" data-end="' + o[0] + '">' + esc(o[1]) + '</button>'; }).join("")
+    + '</div><label class="pk-sort">Sort by <select id="pk-sort">'
+    + [["alike", "closest to our road"], ["fork", "when they leave us"], ["title", "A to Z"]]
+      .map(function(o){ return '<option value="' + o[0] + '"' + (PK.sort === o[0] ? ' selected' : '') + '>' + o[1] + '</option>'; }).join("")
+    + '</select></label></div>';
+  html += '<div class="pk-list">';
+  if(!list.length) html += '<p class="mp-none">No story matches that.</p>';
+  list.forEach(function(st){
+    var l = st.l;
+    var chain = st.kinds.slice(0, 3).map(function(k){ return esc(mpLabel(k)); }).join(' <i>→</i> ') + (st.kinds.length > 3 ? ' <i>→ …</i>' : '');
+    html += '<button class="pk-card ' + st.ending.valence + '" data-world="' + esc(l.id) + '">' + pkThumb(l.id)
+      + '<span class="pk-body"><span class="pk-title">' + esc(l.title) + '</span>'
+      + '<span class="pk-meta">' + esc(mediumLabel(l.medium)) + ' · leaves us in ' + esc(fmtYearFull(st.fork)) + '</span>'
+      + '<span class="pk-chain">' + chain + '</span>'
+      + '<span class="pk-foot">' + pkBadge(st) + '</span></span></button>';
+  });
+  html += '</div>';
+  return html;
+}
+
+/* --- a story --------------------------------------------------------------------- */
 function pickerStoryHtml(st, M){
   var l = st.l, art = typeof artFor === "function" ? artFor(l.id) : null;
-  var html = (art && (art.lg || art.sm) ? '<figure class="dhero pk-hero"><img src="' + esc(art.lg || art.sm) + '" alt=""></figure>' : '')
-    + '<div class="mp-kicker">' + esc(l._g.name || "") + ' · ' + esc(mediumLabel(l.medium)) + ' · ' + esc(String(l.originYear || "")) + '</div>'
-    + '<h2 class="pk-h">' + esc(l.title) + '</h2>'
-    + '<p class="mp-def"><b>Leaves our history in ' + esc(fmtYearFull(st.fork)) + ':</b> ' + esc(l.divergence.label || "") + '</p>'
+  var html = '<div class="pk-hero' + (art && art.lg ? '' : ' none') + '">'
+    + (art && art.lg ? '<img src="' + esc(art.lg) + '" alt="" decoding="async">' : '')
+    + '<div class="pk-hero-t"><span class="pk-hero-k">' + esc(l._g.name || "") + ' · ' + esc(mediumLabel(l.medium)) + ' · ' + esc(String(l.originYear || "")) + '</span>'
+    + '<h2>' + esc(l.title) + '</h2>' + pkBadge(st) + '</div></div>';
+  html += '<div class="pk-fork"><span class="pk-fork-y">' + esc(fmtYearFull(st.fork)) + '</span><span><b>Where it leaves our history.</b> ' + esc(l.divergence.label || "") + '</span></div>'
     + (l.divergence.delta ? '<p class="pk-delta">' + esc(l.divergence.delta) + '</p>' : '');
   html += '<ol class="pk-steps">';
   st.seq.forEach(function(x, i){
@@ -85,108 +161,254 @@ function pickerStoryHtml(st, M){
     html += '<li><span class="pk-yr">' + esc(fmtYear(x.e.year)) + '</span><div class="pk-step">'
       + '<div class="pk-step-t">' + esc(x.e.title) + '</div>'
       + (x.e.description ? '<div class="pk-step-d">' + esc(x.e.description) + '</div>' : '')
-      + '<button class="mp-kind small" data-pill="' + esc(x.bin + "@" + st.cols[i]) + '">' + esc(mpLabel(x.bin)) + '</button>'
+      + '<button class="pk-kindtag btn" data-kind="' + esc(x.bin) + '">' + esc(mpLabel(x.bin)) + '</button>'
       + (others.length ? '<span class="pk-with">also here: ' + others.map(function(o){ return '<button class="pk-link" data-world="' + esc(o.id) + '">' + esc(o.l.title) + '</button>'; }).join(", ") + '</span>' : '')
       + '</div></li>';
   });
   html += '<li class="pk-endstep ' + st.ending.valence + '"><span class="pk-yr"></span><div class="pk-step"><div class="pk-step-t">'
     + esc(st.ending.label) + '</div><div class="pk-step-d">' + esc((l.ending && l.ending.why) || "") + '</div></div></li></ol>';
-  html += '<div class="pk-actions"><button class="wl-btn" data-open-world="' + esc(l.id) + '">Full dossier</button>'
-    + '<button class="wl-btn" data-map-world="' + esc(l.id) + '">See it on the map</button></div>';
-  html += '<h3 class="mp-h">Stories most like this one</h3>'
-    + '<p class="mp-def">Aligned moment by moment. What each did after the shared stretch is where this story might have gone instead.</p>'
-    + mpQueryHtml(M, st.kinds, { k:4, exclude:st.id });
+  html += '<div class="pk-actions"><button class="pk-btn primary" data-share="world=' + esc(l.id) + '" data-share-title="' + esc(l.title + " — Where We Are Now") + '">Share this story</button>'
+    + '<button class="pk-btn" data-open-world="' + esc(l.id) + '">The world</button>'
+    + '<button class="pk-btn" data-map-world="' + esc(l.id) + '">On the map</button></div>';
+  /* the stories most like this one */
+  var near = [];
+  M.strands.forEach(function(o){ if(o === st) return; var r = chainAlign(st.kinds, o.kinds); if(r.pairs.length >= 2) near.push({ o:o, r:r }); });
+  near.sort(function(a, b){ return b.r.score - a.r.score; });
+  if(near.length){
+    html += '<section class="pk-sec"><h3 class="pk-sh">Stories that walked part of the same road</h3>'
+      + near.slice(0, 4).map(function(x){
+        var after = x.o.seq[x.r.b1 + 1];
+        return pkRow(x.o, 'shared: ' + esc(pkShared(st.kinds, x.o, x.r)),
+          after ? 'then, there: ' + esc(after.e.title) : 'and there it ended: ' + esc(x.o.ending.label.toLowerCase()));
+      }).join("") + '</section>';
+  }
   return html;
 }
 
+/* --- a kind of moment -------------------------------------------------------------- */
+function pkThroughRows(M, kindId, onlyCol){
+  var k = M.kinds[kindId]; if(!k) return "";
+  var seen = {}, rows = [];
+  k.hits.forEach(function(h){
+    if(onlyCol != null && h.col !== onlyCol) return;
+    if(seen[h.s.id]) return; seen[h.s.id] = true;
+    var x = h.s.seq[h.step], nx = h.s.seq[h.step + 1];
+    rows.push(pkRow(h.s, esc(fmtYearFull(x.e.year)) + ' · ' + esc(x.e.title),
+      nx ? 'then: ' + esc(nx.e.title) : 'the story ends here: ' + esc(h.s.ending.label.toLowerCase())));
+  });
+  return rows.join("");
+}
+function pickerKindHtml(k, M){
+  var html = '<div class="mp-kicker">Kind of moment' + (k.ours ? ' · it has happened to us' : ' · not yet happened to us') + '</div>'
+    + '<h2 class="pk-h">' + esc(mpLabel(k.id)) + '</h2>'
+    + (k.spec.definition ? '<p class="pk-lead">' + esc(k.spec.definition) + '</p>' : '')
+    + (k.spec.exampleHeadline ? '<p class="pk-eg">As a headline: “' + esc(k.spec.exampleHeadline) + '”</p>' : '');
+  if(k.worlds) html += mpOutcomesHtml(k.outcomes, k.worlds, k.worlds + (k.worlds === 1 ? " story passed through it. It ends:" : " stories passed through it. They end:"));
+  if(k.visits.length){
+    html += '<section class="pk-sec"><h3 class="pk-sh">When it happened to us</h3><ol class="pk-road">'
+      + k.visits.map(function(e){
+        return '<li><button data-beat="' + esc(e.id) + '"><span class="pk-yr">' + esc(String(e.year)) + '</span><span class="pk-rt"><span class="pk-rtitle">' + esc(e.title) + '</span><span class="pk-small">find the same situation in fiction →</span></span></button></li>';
+      }).join("") + '</ol></section>';
+  }
+  html += '<section class="pk-sec"><h3 class="pk-sh">The stories, and what came next</h3>'
+    + (k.hits.length ? pkThroughRows(M, k.id, null) : '<p class="mp-none">No story in the atlas reaches this kind of moment yet.</p>') + '</section>';
+  return html;
+}
+function pickerEndingHtml(en, M){
+  var html = '<div class="mp-kicker">How a story ends</div><h2 class="pk-h mp-title-' + en.valence + '">' + esc(en.label) + '</h2>'
+    + '<p class="pk-lead">' + esc(en.definition) + '</p>'
+    + '<section class="pk-sec"><h3 class="pk-sh">' + en.strands.length + (en.strands.length === 1 ? ' story ends' : ' stories end') + ' this way</h3>'
+    + en.strands.slice().sort(function(a, b){ return a.l.title.localeCompare(b.l.title); }).map(function(st){
+        var last = st.seq[st.seq.length - 1];
+        return pkRow(st, 'last: ' + esc(last.e.title), esc((st.l.ending && st.l.ending.why) || ""));
+      }).join("") + '</section>';
+  if(en.valence === "unknown") html += '<p class="pk-small">Our own history ends here too: we are still inside it.</p>';
+  return html;
+}
+
+/* --- news ---------------------------------------------------------------------------- */
+function pickerNewsHtml(n, M){
+  var k = n.bin ? M.kinds[n.bin] : null;
+  var html = '<div class="mp-kicker">' + (mpNewsFresh(n) ? '<span class="mp-new">New</span> ' : '') + 'In the news · ' + esc(fmtNewsDate(n.date)) + '</div>'
+    + '<h2 class="pk-h">' + esc(n.headline) + '</h2>'
+    + (n.summary ? '<p class="pk-lead">' + esc(n.summary) + '</p>' : '')
+    + (n.source && n.source.url ? '<a class="pk-src" href="' + esc(n.source.url) + '" target="_blank" rel="noopener">' + esc(n.source.title || "source") + ' ↗</a>' : '');
+  if(!k){ return html + '<p class="mp-none">Not matched to a kind of moment yet, so it cannot be read against the stories.</p>'; }
+  html += '<div class="pk-is">This is <button class="pk-kindtag btn big" data-kind="' + esc(k.id) + '">' + esc(mpLabel(k.id)) + '</button></div>';
+  if(k.worlds) html += mpOutcomesHtml(k.outcomes, k.worlds, k.worlds + (k.worlds === 1 ? " story went through this. It ends:" : " stories went through this. They end:"));
+  html += '<section class="pk-sec"><h3 class="pk-sh">The stories that walked this road, and what came next</h3>' + pkThroughRows(M, k.id, null) + '</section>';
+  var q = mpOurQuery(M, null, 5); if(q[q.length - 1] !== n.bin) q = q.concat([n.bin]).slice(-6);
+  var near = [];
+  M.strands.forEach(function(st){ var r = chainAlign(q, st.kinds); if(r.pairs.length >= 2) near.push({ st:st, r:r }); });
+  near.sort(function(a, b){ return b.r.score - a.r.score; });
+  if(near.length){
+    html += '<section class="pk-sec"><h3 class="pk-sh">Not just this moment: our whole recent road</h3>'
+      + '<p class="pk-small">' + q.map(mpLabel).map(esc).join(" → ") + '</p>'
+      + near.slice(0, 3).map(function(x){ var after = x.st.seq[x.r.b1 + 1];
+          return pkRow(x.st, 'shared: ' + esc(pkShared(q, x.st, x.r)), after ? 'then, there: ' + esc(after.e.title) : 'and there it ended'); }).join("")
+      + '</section>';
+  }
+  html += '<div class="pk-actions"><button class="pk-btn primary" data-share="news=' + esc(mpNewsKey(n)) + '" data-share-title="' + esc(n.headline + " — which stories walked this road?") + '">Share this reading</button></div>';
+  return html;
+}
 function pickerNewsListHtml(){
   var items = mpNewsList();
   if(!items.length) return '<p class="mp-none">No news yet.</p>';
-  return '<h2 class="pk-h">In the news</h2><p class="mp-def">Real events, each read against the stories that walked the same road.</p>'
-    + items.map(function(n){
-      return '<button class="mp-news-card' + (mpNewsFresh(n) ? ' fresh' : '') + '" data-news="' + esc(mpNewsKey(n)) + '">'
-        + '<span class="mp-kicker">' + (mpNewsFresh(n) ? '<span class="mp-new">New</span> ' : '') + esc(fmtNewsDate(n.date)) + '</span>'
-        + '<span class="mp-news-card-head">' + esc(n.headline) + '</span>'
-        + (n.bin ? '<span class="mp-news-card-go">' + esc(mpLabel(n.bin)) + ' →</span>' : '') + '</button>';
-    }).join("");
+  return '<h2 class="pk-h">In the news</h2><p class="pk-lead">Real events, each read against the stories that walked the same road.</p>'
+    + items.map(function(n, i){ return pkNewsCard(n, i === 0); }).join("");
 }
 
-/* --- routing ------------------------------------------------------------------------
-   The screen is named by the hash, so back and forward work and every screen
-   can be linked: "" the list, #world=, #kind=<id>[@col], #news=, #ending=, #newslist. */
+/* --- one of our own moments, matched by situation ---------------------------------------- */
+function pickerBeatHtml(e, M){
+  var html = '<div class="mp-kicker">A moment in our history</div><h2 class="pk-h"><span class="pk-hy">' + esc(String(e.year)) + '</span> ' + esc(e.title) + '</h2>'
+    + (e.description ? '<p class="pk-lead">' + esc(e.description) + '</p>' : '')
+    + (e.bin ? '<div class="pk-is">A kind of moment: <button class="pk-kindtag btn" data-kind="' + esc(e.bin) + '">' + esc(mpLabel(e.bin)) + '</button></div>' : '');
+  if(e.facets && typeof facetMoments === "function"){
+    var moments = facetMoments(), mine = null;
+    moments.forEach(function(m){ if(m.e === e) mine = m; });
+    var ns = mine ? facetNeighbours(mine, moments, 5) : [];
+    if(ns.length){
+      html += '<section class="pk-sec"><h3 class="pk-sh">The same situation, in fiction</h3>'
+        + '<p class="pk-small">Matched on how it happened, who did it and which way it moved power and openness; what followed is read from each world.</p>'
+        + ns.map(function(nb){
+          var st = M.byId[nb.m.world]; if(!st) return "";
+          var fwd = facetForward(nb.m, 1)[0];
+          return pkRow(st, esc(fmtYearFull(nb.m.e.year)) + ' · ' + esc(nb.m.e.title) + ' <span class="pk-score">' + Math.round(nb.score * 100) + '% alike</span>',
+            fwd ? 'then: ' + esc(fwd.title) : 'the story ends there');
+        }).join("") + '</section>';
+    }
+  }
+  return html;
+}
+
+/* --- About ------------------------------------------------------------------------------ */
+function pickerAboutHtml(M){
+  var lede = document.getElementById("hero-lede"), notes = document.getElementById("notes");
+  return '<h2 class="pk-h">About this atlas</h2>'
+    + (lede ? '<p class="pk-lead">' + lede.innerHTML + '</p>' : '')
+    + '<section class="pk-sec"><h3 class="pk-sh">How to read it</h3><ul class="pk-how">'
+    + '<li><b>A story</b> leaves our real history at one dated moment and walks a chain of events to an ending.</li>'
+    + '<li><b>A kind of moment</b> (a plague, a war begins, power is seized) is how stories are compared: two stories meet when they pass through the same kind of moment.</li>'
+    + '<li><b>An ending</b> is the state the story leaves the world in as far as it is told: well, badly, or still open.</li>'
+    + '<li><b>Closest to our road</b> lines up the order of our own recent moments against each story’s; the same kind counts fully, a similar one partly.</li>'
+    + '</ul></section>'
+    + (notes ? '<section class="pk-sec pk-notes">' + notes.innerHTML + '</section>' : '')
+    + '<p class="pk-small">' + M.list.length + ' worlds · dates, sources and confidence for every event are in each world’s full chronology. The map and the calendar views are best on a larger screen.</p>';
+}
+
+/* --- routing ------------------------------------------------------------------------------ */
 function pickerRoute(){
   var h = (typeof location !== "undefined" && location.hash) ? decodeURIComponent(location.hash.slice(1)) : "";
   var m = /^(world|kind|news|ending|beat)=(.+)$/.exec(h);
-  if(h === "newslist") return { view:"newslist" };
-  return m ? { view:m[1], id:m[2] } : { view:"list" };
+  if(m) return { view:m[1], id:m[2] };
+  if(h === "stories" || h === "about" || h === "map" || h === "newslist") return { view:h };
+  return { view:"today" };
 }
 function pickerGo(hash){
   PK_DEPTH++;
   if(typeof history !== "undefined" && history.pushState){
     try{ history.pushState(null, "", hash ? "#" + hash : location.pathname + location.search); }catch(e){}
   }
-  renderPicker();
+  pickerRender();
+}
+function pickerTab(view){
+  return view === "stories" || view === "world" ? "stories"
+       : view === "about" ? "about" : view === "map" ? "map" : "today";
+}
+function pickerRender(){
+  var r = pickerRoute();
+  pickerTabs(pickerTab(r.view));
+  if(r.view === "map"){ showMap(); return; }
+  if(!PK.on) showStories(true);
+  var host = document.getElementById("picker");
+  if(!host) return;
+  var M = pickerModel(), body = "", sub = true, title = "";
+  if(r.view === "world" && M.byId[r.id]){ body = pickerStoryHtml(M.byId[r.id], M); title = M.byId[r.id].l.title; }
+  else if(r.view === "kind" || r.view === "ending"){
+    var id = r.id.split("@")[0];
+    if(mpIsEnding(id)){ body = pickerEndingHtml(mpEndingRec(M, id), M); title = mpLabel(id); }
+    else if(M.kinds[id]){ body = pickerKindHtml(M.kinds[id], M); title = mpLabel(id); }
+  }
+  else if(r.view === "news"){ var n = mpNewsByKey(r.id); if(n){ body = pickerNewsHtml(n, M); title = "In the news"; } }
+  else if(r.view === "beat"){ var e = null; (M.realEv || []).forEach(function(x){ if(x.id === r.id) e = x; }); if(e){ body = pickerBeatHtml(e, M); title = String(e.year); } }
+  else if(r.view === "newslist"){ body = pickerNewsListHtml(); title = "News"; }
+  else if(r.view === "stories"){ body = pickerListHtml(M); sub = false; title = "Stories"; }
+  else if(r.view === "about"){ body = pickerAboutHtml(M); sub = false; title = "About"; }
+  if(!body){ body = pickerTodayHtml(M); sub = false; }
+  var head = document.getElementById("pk-head");
+  if(head) head.innerHTML = sub
+    ? '<button class="pk-back" id="pk-back" aria-label="Back">‹</button><span class="pk-htitle">' + esc(title) + '</span>'
+    : '<span class="pk-brand">Where We Are Now</span>';
+  var keepSearch = r.view === "stories" && document.activeElement && document.activeElement.id === "pk-q";
+  host.innerHTML = '<div class="pk-screen">' + body + '</div>';
+  if(!keepSearch) host.scrollTop = 0;
+  pickerWire(host);
+  var bk = document.getElementById("pk-back");
+  if(bk) bk.onclick = function(){ if(typeof history !== "undefined" && PK_DEPTH > 0) history.back(); else pickerGo(""); };
+  if(keepSearch){ var qi = document.getElementById("pk-q"); if(qi){ qi.focus(); try{ qi.setSelectionRange(qi.value.length, qi.value.length); }catch(e){} } }
+}
+/* kept for callers from before the phone was an app */
+function renderPicker(){ pickerRender(); }
+
+function pickerTabs(active){
+  Array.prototype.forEach.call(document.querySelectorAll("#tabbar [data-tab]"), function(b){
+    b.classList.toggle("on", b.getAttribute("data-tab") === active);
+    b.setAttribute("aria-current", b.getAttribute("data-tab") === active ? "page" : "false");
+  });
 }
 
-function renderPicker(){
-  var host = document.getElementById("picker");
-  if(!host || !PK.on) return;
-  var M = pickerModel(), r = pickerRoute(), body = "", back = true;
-  MP.col = null;
-  if(r.view === "world" && M.byId[r.id]) body = pickerStoryHtml(M.byId[r.id], M);
-  else if(r.view === "kind" || r.view === "ending"){
-    var v = r.id.split("@"), id = v[0];
-    if(mpIsEnding(id)) body = mpEndingHtml(mpEndingRec(M, id), M);
-    else if(M.kinds[id]){ if(v[1] != null) MP.col = parseInt(v[1], 10); body = mpKindHtml(M.kinds[id], M); }
+function pickerShare(hash, title){
+  var base = (typeof location !== "undefined") ? location.href.split("#")[0] : "";
+  var url = base + (hash ? "#" + hash : "");
+  var data = { title: title || "Where We Are Now", text: title || "Which science-fiction stories are on our road?", url: url };
+  if(typeof navigator !== "undefined" && navigator.share){
+    navigator.share(data).catch(function(){});
+    return;
   }
-  else if(r.view === "news"){ var n = mpNewsByKey(r.id); if(n) body = mpNewsHtml(n, M).replace(/<button class="ghost small" id="mp-back">[^<]*<\/button>/, ""); }
-  else if(r.view === "beat"){ var e = null; (M.realEv || []).forEach(function(x){ if(x.id === r.id) e = x; }); if(e) body = mpBeatHtml(e, M).replace(/<button class="ghost small" id="mp-back">[^<]*<\/button>/, ""); }
-  else if(r.view === "newslist") body = pickerNewsListHtml();
-  if(!body){ body = pickerListHtml(M); back = false; }
-  host.innerHTML = (back ? '<button class="pk-back" id="pk-back">← Back</button>' : '') + '<div class="pk-screen">' + body + '</div>';
-  host.scrollTop = 0;
-  pickerWire(host);
-  var bs = document.getElementById("btn-stories");
-  if(bs) bs.classList.toggle("on", true);
+  var done = function(){ pkToast("Link copied"); };
+  try{
+    if(navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, function(){ pkToast(url); });
+    else pkToast(url);
+  }catch(e){ pkToast(url); }
+}
+function pkToast(msg){
+  var t = document.getElementById("pk-toast");
+  if(!t) return;
+  t.textContent = msg; t.classList.add("on");
+  clearTimeout(pkToast._t); pkToast._t = setTimeout(function(){ t.classList.remove("on"); }, 2200);
 }
 
 function pickerWire(host){
   function each(sel, fn){ Array.prototype.forEach.call(host.querySelectorAll(sel), fn); }
   each("[data-world]", function(b){ b.onclick = function(){ pickerGo("world=" + b.getAttribute("data-world")); }; });
   each("[data-kind]", function(b){ b.onclick = function(){ pickerGo("kind=" + b.getAttribute("data-kind")); }; });
-  each("[data-pill]", function(b){ b.onclick = function(){ pickerGo("kind=" + b.getAttribute("data-pill")); }; });
+  each("[data-pill]", function(b){ b.onclick = function(){ pickerGo("kind=" + b.getAttribute("data-pill").split("@")[0]); }; });
   each("[data-news]", function(b){ b.onclick = function(){ pickerGo("news=" + b.getAttribute("data-news")); }; });
   each("[data-beat]", function(b){ b.onclick = function(){ pickerGo("beat=" + b.getAttribute("data-beat")); }; });
+  each("[data-go]", function(b){ b.onclick = function(){ pickerGo(b.getAttribute("data-go")); }; });
   each("[data-open-world]", function(b){ b.onclick = function(){ openWorld(b.getAttribute("data-open-world")); }; });
-  each("[data-map-world]", function(b){ b.onclick = function(){ showMap(); momentsSelectWorld(b.getAttribute("data-map-world")); }; });
-  each("[data-end]", function(b){ b.onclick = function(){ PK.end = b.getAttribute("data-end"); renderPicker(); }; });
+  each("[data-map-world]", function(b){ b.onclick = function(){ var id = b.getAttribute("data-map-world"); pickerGo("map"); momentsSelectWorld(id); }; });
+  each("[data-end]", function(b){ b.onclick = function(){ PK.end = b.getAttribute("data-end"); pickerRender(); }; });
+  each("[data-share]", function(b){ b.onclick = function(){ pickerShare(b.getAttribute("data-share"), b.getAttribute("data-share-title")); }; });
   var s = document.getElementById("pk-sort");
-  if(s) s.onchange = function(){ PK.sort = s.value; renderPicker(); };
-  var m = document.getElementById("pk-map");
-  if(m) m.onclick = function(){ showMap(); };
-  var bk = document.getElementById("pk-back");
-  if(bk) bk.onclick = function(){
-    if(typeof history !== "undefined" && history.length > 1 && pickerBackable()) history.back();
-    else pickerGo("");
-  };
+  if(s) s.onchange = function(){ PK.sort = s.value; pickerRender(); };
+  var qi = document.getElementById("pk-q");
+  if(qi) qi.oninput = function(){ PK.q = qi.value.trim(); pickerRender(); };
 }
-/* back only leaves the picker's own entries; a first screen reached from a link goes to the list */
-var PK_DEPTH = 0;
-function pickerBackable(){ return PK_DEPTH > 0; }
 
-/* --- the two phone views ---------------------------------------------------------- */
-function showStories(){
+/* --- the two surfaces: screens, or the map ------------------------------------------------ */
+function showStories(quiet){
   PK.on = true;
   if(document.body && document.body.classList){ document.body.classList.add("view-stories"); document.body.classList.remove("view-map"); }
   setPanel("");
-  var bm = document.getElementById("btn-map"); if(bm) bm.classList.remove("on");
-  renderPicker();
+  if(!quiet) pickerRender();
 }
 function showMap(){
   PK.on = false;
   if(document.body && document.body.classList){ document.body.classList.remove("view-stories"); document.body.classList.add("view-map"); }
-  var bs = document.getElementById("btn-stories"); if(bs) bs.classList.remove("on");
-  var bm = document.getElementById("btn-map"); if(bm) bm.classList.add("on");
+  var head = document.getElementById("pk-head");
+  if(head) head.innerHTML = '<span class="pk-brand">The map</span>';
+  pickerTabs("map");
   if(axisMode !== "moments") setAxis("moments", false);
   W = measureW(); Hv = measureH();
   momentsFit(); renderChart();
@@ -194,11 +416,22 @@ function showMap(){
 
 function pickerInit(){
   if(typeof mpIsPhone !== "function" || !mpIsPhone()) return false;
-  on("btn-stories", "onclick", function(){ if(PK.on) pickerGo(""); else { showStories(); } });
-  on("btn-map", "onclick", function(){ showMap(); });
-  /* the News button lists the news as a Stories screen on a phone */
-  on("btn-news", "onclick", function(){ if(!PK.on) showStories(); pickerGo("newslist"); });
-  window.addEventListener("popstate", function(){ PK_DEPTH = Math.max(0, PK_DEPTH - 1); if(PK.on) renderPicker(); });
-  showStories();
+  if(document.body && document.body.classList) document.body.classList.add("phone");
+  Array.prototype.forEach.call(document.querySelectorAll("#tabbar [data-tab]"), function(b){
+    b.onclick = function(){
+      var t = b.getAttribute("data-tab");
+      pickerGo(t === "today" ? "" : t);
+    };
+  });
+  on("pk-zin", "onclick", function(){ momentsZoomAt(1.4, W / 2, Hv / 2); renderChart(); });
+  on("pk-zout", "onclick", function(){ momentsZoomAt(1 / 1.4, W / 2, Hv / 2); renderChart(); });
+  on("pk-fit", "onclick", function(){ momentsFit(); renderChart(); });
+  on("pk-share", "onclick", function(){
+    var h = (location.hash || "").slice(1);
+    pickerShare(h === "map" ? "" : h, document.title);
+  });
+  window.addEventListener("popstate", function(){ PK_DEPTH = Math.max(0, PK_DEPTH - 1); pickerRender(); });
+  showStories(true);
+  pickerRender();
   return true;
 }

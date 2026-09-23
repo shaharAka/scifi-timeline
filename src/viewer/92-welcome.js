@@ -110,7 +110,8 @@ function welcomeInit(){
   var phone = typeof pickerInit === "function" && pickerInit();
   if(phone) linked = typeof location !== "undefined" && /^#(news|world|kind)=/.test(location.hash || "");
   else try{ linked = applyHash(); }catch(e){ linked = false; }
-  if(!linked && !welcomeSeen()) showWelcome();
+  /* no modal on a phone: its Today screen explains itself */
+  if(!linked && !welcomeSeen() && !phone) showWelcome();
   var again = document.getElementById("about-intro");
   if(again) again.onclick = function(){ setPanel(""); showWelcome(); };
 }

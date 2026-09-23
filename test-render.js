@@ -891,7 +891,8 @@ attempt("stories picker", () => {
   const steps = (story.match(/<li><span class="pk-yr">/g) || []).length;
   check(steps === st.seq.length, `${st.id}: ${steps} steps shown for a chain of ${st.seq.length}`);
   check(story.includes("pk-endstep " + st.ending.valence), `${st.id}: the story does not end in its ending`);
-  check(/Stories most like this one/.test(story), `${st.id}: the story does not list the stories most like it`);
+  check(/Stories that walked part of the same road/.test(story), `${st.id}: the story does not list the stories most like it`);
+  check(/data-share="world=/.test(story), `${st.id}: the story cannot be shared`);
   soft(`stories: ${cards} cards; ${st.l.title} reads as ${steps} steps to ${st.ending.label.toLowerCase()}`);
 });
 
