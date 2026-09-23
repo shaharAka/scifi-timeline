@@ -386,6 +386,17 @@ Four rules follow from that, and they are the owner's:
   linked. No modal on arrival; 16px text, 44px targets, safe areas, lazy
   images, and a coloured initials tile where a world has no plate yet. The
   map is a tab, with pinch, floating zoom and a bottom sheet.
+- **The desktop is the phone, laid out for width** (`body.shell`, set on
+  every real page). The same screens, with the tabs in the header instead of
+  a bottom bar, and each screen split into a main column and a sticky side
+  column (`.pk-main` / `.pk-aside`, stacked on a phone): Today puts the news
+  and a grid of the closest stories on the left and our road in the side
+  column; a story is a wide hero, its chain on the left, and on the right its
+  ending, share, the real photo and the stories that walked part of the same
+  road; Stories is a card grid under one row of tools. The Map tab is the
+  full Moments canvas with its tools and reading panel, which is where the
+  canvas earns its space. The test harness has no `location`, so it keeps the
+  bare canvas and its tests unchanged.
 - **A shared link has a preview.** The build writes Open Graph and Twitter
   tags from `share` in `data/atlas.json`, and writes the full page to
   `index.html` too, so the site root is the atlas itself: link previews are

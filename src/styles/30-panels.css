@@ -392,34 +392,45 @@ table.ev .iu{font-size:11px;color:var(--ink-3);display:block;margin-top:2px}
 .mp-hint[hidden]{display:none !important}
 @keyframes mp-nudge{0%,100%{transform:translate(0,-50%)}50%{transform:translate(-6px,-50%)}}
 
-/* --- the phone: an app shell, designed for a thumb ----------------------------------
-   Everything here hangs off body.phone, which the script sets when the screen is
-   narrow, so the desktop never sees any of it. */
+/* --- the app shell: designed for a thumb first, then laid out for width -------------
+   body.shell is set on every real page; body.phone below 720px. The desktop
+   gets the same screens with tabs in the header and two columns. */
 .pk-top,.tabbar,.pk-mapctl,.pk-toast{display:none}
 .picker{display:none}
 body.phone{font-size:16px}
-body.phone .topbar,body.phone .bottombar{display:none !important}
-body.phone .app{padding-top:env(safe-area-inset-top)}
-body.phone .pk-top{display:flex;flex:none;align-items:center;gap:8px;height:50px;padding:0 6px 0 14px;
-  background:var(--panel-solid);border-bottom:1px solid var(--line-1);z-index:40}
+body.shell.view-stories .topbar,body.shell.view-stories .bottombar,body.phone .topbar,body.phone .bottombar{display:none !important}
+body.shell.view-map .topbar .brand,body.shell.view-map .topbar .nav-group{display:none}
+body.shell .app{padding-top:env(safe-area-inset-top)}
+body.shell .pk-top{display:flex;flex:none;align-items:center;gap:8px;height:52px;padding:0 6px 0 14px;
+  background:var(--panel-solid);border-bottom:1px solid var(--line-1);z-index:40;position:relative}
 .pk-head{flex:1;display:flex;align-items:center;gap:4px;min-width:0}
-.pk-brand{font-size:16px;font-weight:720;letter-spacing:-.01em;color:var(--ink-0)}
+.pk-brand{font:inherit;font-size:16px;font-weight:720;letter-spacing:-.01em;color:var(--ink-0);background:none;border:0;padding:0;cursor:pointer;white-space:nowrap}
 .pk-htitle{font-size:16px;font-weight:650;color:var(--ink-0);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .pk-back{font:inherit;font-size:30px;line-height:1;background:none;border:0;color:var(--ink-1);width:40px;height:44px;
   margin-left:-10px;cursor:pointer;padding:0 0 4px}
+.pk-back2{font:inherit;font-size:14px;font-weight:600;background:none;border:0;color:var(--ink-2);cursor:pointer;padding:0;margin:0 0 14px}
+.pk-back2:hover{color:var(--ink-0)}
 .pk-share{width:44px;height:44px;border:0;background:none;color:var(--ink-1);cursor:pointer;display:flex;align-items:center;justify-content:center}
 .pk-share svg,.tabbar svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+body.shell.view-stories .canvas{margin:0;border:0;border-radius:0}
 body.phone .canvas{margin:0;border:0;border-radius:0}
-body.phone .tabbar{display:flex;flex:none;background:var(--panel-solid);border-top:1px solid var(--line-1);
+body.shell .tabbar{display:flex}
+body.phone .tabbar{flex:none;background:var(--panel-solid);border-top:1px solid var(--line-1);
   padding-bottom:env(safe-area-inset-bottom);z-index:40}
 .tabbar button{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;height:56px;
   border:0;background:none;color:var(--ink-3);font:inherit;font-size:11px;font-weight:600;cursor:pointer}
 .tabbar button.on{color:var(--ink-0)}
 .tabbar button.on svg{stroke-width:2.2}
-body.phone.view-stories .picker{display:block;position:absolute;inset:0;overflow-y:auto;-webkit-overflow-scrolling:touch;
+/* wide: the tabs sit in the header, centred */
+body.shell:not(.phone) .tabbar{position:fixed;top:0;left:50%;transform:translateX(-50%);height:52px;z-index:45;gap:4px;align-items:center}
+body.shell:not(.phone) .tabbar button{flex:none;flex-direction:row;gap:7px;height:36px;padding:0 14px;border-radius:8px;font-size:14px}
+body.shell:not(.phone) .tabbar button svg{width:18px;height:18px}
+body.shell:not(.phone) .tabbar button:hover{background:var(--card-bg-hover);color:var(--ink-0)}
+body.shell:not(.phone) .tabbar button.on{background:var(--card-bg-hover)}
+body.shell.view-stories .picker{display:block;position:absolute;inset:0;overflow-y:auto;-webkit-overflow-scrolling:touch;
   overscroll-behavior:contain;background:var(--bg);z-index:20}
-body.phone.view-stories #chartbody{visibility:hidden}
-body.phone.view-stories .mp-hint,body.phone .ctl-group{display:none !important}
+body.shell.view-stories #chartbody{visibility:hidden}
+body.shell.view-stories .mp-hint,body.phone .ctl-group{display:none !important}
 body.phone.view-map .pk-mapctl{display:flex;position:absolute;right:12px;bottom:12px;z-index:25;background:var(--panel-solid);
   border:1px solid var(--line-1);border-radius:10px;box-shadow:0 4px 14px rgba(16,28,40,.16);overflow:hidden}
 body.phone.view-map.sheet-open .pk-mapctl{bottom:calc(52% + 10px)}
@@ -429,10 +440,10 @@ body.phone.view-map.sheet-open.sheet-tall .pk-mapctl{display:none}
 .pk-mapctl #pk-fit{font-size:13px;font-weight:650;width:52px}
 body.phone .panel{height:55%}
 body.phone .panel.tall{height:92%}
-body.phone .pk-toast{display:block;position:fixed;left:50%;bottom:calc(76px + env(safe-area-inset-bottom));transform:translate(-50%,20px);
+body.shell .pk-toast{display:block;position:fixed;left:50%;bottom:calc(76px + env(safe-area-inset-bottom));transform:translate(-50%,20px);
   background:var(--ink-0);color:var(--surface);font-size:14px;padding:9px 16px;border-radius:999px;opacity:0;pointer-events:none;
   transition:opacity .2s,transform .2s;z-index:120;max-width:90vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-body.phone .pk-toast.on{opacity:1;transform:translate(-50%,0)}
+body.shell .pk-toast.on{opacity:1;transform:translate(-50%,0)}
 
 /* screens */
 .pk-screen{padding:16px 16px 36px;max-width:640px;margin:0 auto}
@@ -559,10 +570,10 @@ input.pk-search{font:inherit;font-size:16px;padding:10px 12px;border-radius:10px
 .pk-notes h3{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3);font-weight:750;margin:0 0 10px}
 .pk-notes p{font-size:14.5px;color:var(--ink-2);line-height:1.6;margin:0 0 10px}
 /* the outcome bar reused from the desktop panel, at phone size */
-body.phone .mp-outcomes .mp-h{font-size:12px;margin:18px 0 8px;text-transform:none;letter-spacing:0;color:var(--ink-2);font-weight:650}
-body.phone .mp-obar{height:10px}
-body.phone .mp-okey{font-size:13px;padding:5px 11px;min-height:34px}
-body.phone .mp-badge{font-size:10.5px;padding:2px 8px}
+body.shell .mp-outcomes .mp-h{font-size:12px;margin:18px 0 8px;text-transform:none;letter-spacing:0;color:var(--ink-2);font-weight:650}
+body.shell .pk-screen .mp-obar{height:10px}
+body.shell .pk-screen .mp-okey{font-size:13px;padding:5px 11px;min-height:34px}
+body.shell .pk-screen .mp-badge{font-size:10.5px;padding:2px 8px}
 
 /* a world with no plate yet */
 .pk-thumb.none,.pk-rthumb.none,.pk-tthumb.none{display:flex;align-items:center;justify-content:center;
@@ -575,10 +586,64 @@ body.phone #dback{display:none}
 /* the real counterpart photograph on a phone story */
 .pk-real{margin:14px 0 0}
 .pk-real figure.pd{margin:0;background:var(--surface);border:1px solid var(--line-1);border-radius:12px;overflow:hidden}
-.pk-real figure.pd img{display:block;width:100%;height:190px;object-fit:cover;object-position:center 30%}
+.pk-real figure.pd img{display:block;width:100%;height:190px;object-fit:cover;object-position:center 22%}
 .pk-real figure.pd .body{padding:10px 14px 12px}
 .pk-real .kick{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:750;margin:0 0 4px}
 .pk-real .cap{font-size:15px;font-weight:650;color:var(--ink-0);margin:0 0 4px;line-height:1.35}
 .pk-real .why{font-size:14px;color:var(--ink-2);margin:0 0 6px;line-height:1.5}
 .pk-real .attr{font-size:12px;color:var(--ink-3);margin:0}
 .pk-real .attr a{color:var(--ink-3)}
+
+/* the map card on Today, and the side-column ending card (desktop only: on a
+   phone the ending is the last step of the chain) */
+.pk-mapcard{display:flex;flex-direction:column;gap:4px;width:100%;text-align:left;font:inherit;cursor:pointer;margin:26px 0 0;
+  background:linear-gradient(135deg,var(--surface),var(--bg-2));border:1px solid var(--line-2);border-radius:12px;padding:16px;color:var(--ink-1)}
+.pk-mapcard-k{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:750}
+.pk-mapcard-h{font-size:16px;font-weight:650;color:var(--ink-0);line-height:1.4}
+.pk-mapcard-go{font-size:14px;color:var(--accent);font-weight:650}
+.pk-endcard{display:none}
+.pk-cols{display:block}
+.pk-aside > .pk-sec:first-child,.pk-aside > .pk-actions:first-child{margin-top:26px}
+
+/* --- wide screens: the same screens, laid out for width ------------------------------ */
+@media (min-width:720px){
+  body.shell .pk-screen{max-width:1180px;padding:28px 32px 56px}
+  body.shell .pk-screen.v-about,body.shell .pk-screen.v-newslist{max-width:760px}
+  body.shell .pk-cols{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(300px,1fr);gap:40px;align-items:start}
+  body.shell .pk-aside{position:sticky;top:20px}
+  body.shell .pk-aside > .pk-sec:first-child,body.shell .pk-aside > .pk-actions:first-child,body.shell .pk-aside > .pk-endcard:first-child{margin-top:0}
+  body.shell .pk-hello{margin:6px 0 22px;max-width:760px}
+  body.shell .pk-hello h1{font-size:38px;line-height:1.1}
+  body.shell .pk-hello p{font-size:17px}
+  body.shell .pk-news.big .pk-news-h{font-size:24px}
+  body.shell .pk-news:hover,body.shell .pk-card:hover,body.shell .pk-row:hover,body.shell .pk-tile:hover,body.shell .pk-mapcard:hover,body.shell .pk-end3:hover{border-color:var(--line-3);box-shadow:0 6px 18px rgba(16,28,40,.08)}
+  body.shell .pk-rail{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible;margin:0;padding:0;gap:14px}
+  body.shell .pk-rail:after{display:none}
+  body.shell .pk-tile{width:auto}
+  body.shell .pk-tthumb{height:130px}
+  body.shell .pk-tools{position:static;margin:0 0 18px;padding:0;border:0;background:none;flex-direction:row;flex-wrap:wrap;align-items:center;gap:12px}
+  body.shell input.pk-search{flex:1 1 280px;width:auto}
+  body.shell .pk-ends{margin:0;padding:0;overflow:visible}
+  body.shell .pk-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:14px}
+  body.shell .pk-rows{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px}
+  body.shell .pk-rows .pk-row{margin:0}
+  body.shell .v-world .pk-hero{margin:-28px -32px 24px;height:340px}
+  body.shell .v-world .pk-hero-t{padding:60px 32px 22px}
+  body.shell .v-world .pk-hero-t h2{font-size:40px}
+  body.shell .v-world .pk-hero.none{margin:0 0 16px}
+  body.shell .pk-endcard{display:block;background:var(--surface);border:1px solid var(--line-1);border-left:4px solid var(--ink-4);border-radius:12px;padding:14px 16px;margin:0 0 14px}
+  body.shell .pk-endcard.optimistic{border-left-color:var(--ok)}
+  body.shell .pk-endcard.pessimistic{border-left-color:var(--bad)}
+  body.shell .pk-endcard b{display:block;font-size:20px;margin:2px 0 4px;color:var(--ink-0)}
+  body.shell .pk-endcard.optimistic b{color:var(--ok)}
+  body.shell .pk-endcard.pessimistic b{color:var(--bad)}
+  body.shell .pk-endcard p{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.55}
+  body.shell .pk-endcard .pk-sh{margin:0}
+  body.shell .pk-actions .pk-btn{flex:1 1 40%}
+  body.shell .pk-real figure.pd img{height:220px}
+  body.shell .pk-toast{bottom:28px}
+  body.shell .pk-screen{position:relative}
+  body.shell .v-world .pk-back2{position:absolute;top:16px;left:18px;z-index:3;margin:0;color:#fff;background:rgba(10,16,24,.45);
+    padding:7px 13px;border-radius:8px;backdrop-filter:blur(4px)}
+  body.shell .v-world .pk-back2:hover{background:rgba(10,16,24,.65);color:#fff}
+}
