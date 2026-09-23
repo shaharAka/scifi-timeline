@@ -1569,6 +1569,818 @@
     }
    ],
    "groupingNote": "His Dark Materials is the inverse of the other four lineages: the concealment is not a modern cover-up but a whole parallel history, so the honest divergence is deep past rather than a twentieth-century secret. The branch described in the text is the Reformation that never happened — Calvin as Pope, the Magisterium unbroken, no scientific or industrial revolution — which makes the sixteenth century the last point at which Lyra's world and ours share a history. On the real axis the lineage splits into three bands: three events of ancient background in T4, the 1985-1997 beats in T3, and the war at the end of the trilogy in T2, with T1 empty because nothing in the story is set beyond the near future. The tension worth recording is that the story's own arc is inverted relative to ours: by divergence-relative reckoning the 1990s books are the deep end of the branch, more than four centuries past the fork, while the real calendar files them as the recent past — which is exactly why the events carry both a `tier` and a `phase`. Its present day is still our present day, since Will's Oxford is the real 1990s and the story walks between the two."
+  },
+  {
+   "id": "three-body-problem",
+   "title": "The Three-Body Problem",
+   "medium": "book",
+   "creator": "Liu Cixin (translated by Ken Liu and Joel Martinsen)",
+   "originYear": 2006,
+   "group": "hidden-history",
+   "epoch": "present",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 1971,
+    "label": "Ye Wenjie transmits to the stars from Red Coast",
+    "delta": "Real: 1971. China's first satellite had flown the year before, and humanity's first deliberate message to the stars, from Arecibo, was three years away. Fiction: a persecuted astrophysicist at a secret Chinese military base uses the Sun as an amplifier and sends a message that is heard four light years away.",
+    "inUniverse": "Red Coast Base, 1971; the reply arrives about eight years later, in October 1979",
+    "confidence": "medium",
+    "sources": [
+     {
+      "title": "Wikipedia: The Three-Body Problem (novel)",
+      "url": "https://en.wikipedia.org/wiki/The_Three-Body_Problem_(novel)"
+     },
+     {
+      "title": "Three-Body Problem Wiki (Fandom): Timeline, with the era ranges from Death's End's front-matter table",
+      "url": "https://three-body-problem.fandom.com/wiki/Timeline"
+     },
+     {
+      "title": "Wikipedia: Arecibo message (1974)",
+      "url": "https://en.wikipedia.org/wiki/Arecibo_message"
+     }
+    ],
+    "note": "Everything before 1971 in the novel is real history: the Cultural Revolution, the struggle sessions, the Inner Mongolia production corps. The fork is placed at the transmission, the first act that could not have happened in our world. The year comes from the fan timelines and from the novel's statement that the reply took about eight years; the 1979 reply is dated more firmly."
+   },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "The Solar System has been flattened into two dimensions, humanity survives only as a few scattered colonies, and the book ends with Cheng Xin returning her refuge's mass to a dying universe in the mere hope that it will be reborn.",
+    "asOf": 18906416
+   },
+   "events": [
+    {
+     "id": "tbp-ye-zhetai-1967",
+     "year": 1967,
+     "date": "1967",
+     "title": "Ye Zhetai is beaten to death at a struggle session",
+     "description": "At Tsinghua University, Red Guards beat the physicist Ye Zhetai to death for teaching relativity and the Big Bang, while his daughter Ye Wenjie watches and her mother denounces him. It is the moment Ye Wenjie loses faith in humanity, and every later link in the chain runs back to it.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: The Three-Body Problem (novel)",
+       "url": "https://en.wikipedia.org/wiki/The_Three-Body_Problem_(novel)"
+      },
+      {
+       "title": "Wikipedia: Cultural Revolution",
+       "url": "https://en.wikipedia.org/wiki/Cultural_Revolution"
+      }
+     ],
+     "note": "The Cultural Revolution and its struggle sessions at Tsinghua are real history; Ye Zhetai is fictional. The novel opens in 1967, and the English edition restored the Cultural Revolution chapters to the front of the book.",
+     "binWhy": "A movement sanctioned by the state kills a scientist for his physics; it is an attack on a group (intellectuals), not a war or a seizure of power.",
+     "bin": "crackdown",
+     "facets": {
+      "change": "a physicist teaching relativity → dead on a stage, his daughter watching",
+      "mechanism": "attack",
+      "actor": "movement",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "one-party-state",
+       "persecution",
+       "repression"
+      ],
+      "outcomes": [
+       "purge",
+       "despair"
+      ]
+     }
+    },
+    {
+     "id": "tbp-red-coast-1971",
+     "year": 1971,
+     "date": "1971",
+     "title": "Ye Wenjie uses the Sun to send a message to the stars",
+     "description": "At Red Coast, a secret military base on Radar Peak, Ye Wenjie aims the transmitter at the Sun, which she has worked out will amplify radio waves at certain frequencies, and so broadcasts a message about Earth into the galaxy. Nobody at the base knows that the message has been sent.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Red Coast transmission, 1971 (roughly eight years before the 1979 reply)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: The Three-Body Problem (novel)",
+       "url": "https://en.wikipedia.org/wiki/The_Three-Body_Problem_(novel)"
+      },
+      {
+       "title": "Three-Body Problem Wiki (Fandom): Timeline, with the era ranges from Death's End's front-matter table",
+       "url": "https://three-body-problem.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Wikipedia's summary has the reply arriving about eight years after her broadcast, and the fan timelines put the transmission in 1971, which gives 1979. The real first deliberate interstellar message, from Arecibo, was three years later in 1974 and did not use the Sun as an amplifier.",
+     "binWhy": "A transmitter is used in a way nobody had tried before, amplified by the Sun; what changes is that Earth can now be heard, and the reply comes later as a separate event.",
+     "bin": "new-technology-deployed",
+     "facets": {
+      "change": "a planet nobody could hear → one that has broadcast its presence",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "below",
+      "scope": "beyond",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "cold-war",
+       "persecution"
+      ],
+      "outcomes": [
+       "turning-point",
+       "contact"
+      ]
+     }
+    },
+    {
+     "id": "tbp-reply-1979",
+     "year": 1979,
+     "date": "1979-10-21",
+     "title": "Ye Wenjie answers Trisolaris",
+     "description": "A pacifist Trisolaran listener picks up the message and sends back a warning: do not answer, or your world will be invaded. Ye Wenjie answers anyway and invites them, then kills her husband and the political commissar who could have found the message. On Trisolaris the reply fixes Earth's location, and a fleet is sent on a journey of more than four hundred years.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "October 1979, Red Coast Base",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: The Three-Body Problem (novel)",
+       "url": "https://en.wikipedia.org/wiki/The_Three-Body_Problem_(novel)"
+      },
+      {
+       "title": "Three-Body Problem Wiki (Fandom): Timeline, with the era ranges from Death's End's front-matter table",
+       "url": "https://three-body-problem.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Douban review: 《三体》三部曲历史年表 (fan chronology; flags the 201X vs 2007 Crisis Era contradiction)",
+       "url": "https://book.douban.com/review/4544383/"
+      }
+     ],
+     "note": "Both the Fandom timeline and the Douban chronology give October 21, 1979. Trisolaris is about four light years away, which is why the round trip took about eight years. In our 1979 nothing has ever answered a signal from Earth.",
+     "binWhy": "Humanity, through one person, is contacted by a non-human intelligence and answers it.",
+     "bin": "first-contact",
+     "facets": {
+      "change": "a warning not to answer → an invitation to invade",
+      "mechanism": "disclosure",
+      "actor": "individual",
+      "position": "below",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "persecution",
+       "secrecy",
+       "cover-up"
+      ],
+      "outcomes": [
+       "contact",
+       "turning-point",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "tbp-eto-1988",
+     "year": 1988,
+     "date": "1988",
+     "title": "The Earth-Trisolaris Organization is founded",
+     "description": "Ye Wenjie and the American oil heir Mike Evans, who has given up on humanity, found an organisation to help the Trisolarans conquer Earth, with the ship Judgment Day as its base and the second Red Coast station aboard. Its members, many of them scientists, recruit through a virtual-reality game and spend two decades preparing for the fleet.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Founding of the ETO at the Second Red Coast Base, 1980s",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Three-Body Problem Wiki (Fandom): Earth-Trisolaris Organization",
+       "url": "https://three-body-problem.fandom.com/wiki/Earth-Trisolaris_Organization"
+      },
+      {
+       "title": "Three-Body Problem Wiki (Fandom): Timeline, with the era ranges from Death's End's front-matter table",
+       "url": "https://three-body-problem.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Douban review: 《三体》三部曲历史年表 (fan chronology; flags the 201X vs 2007 Crisis Era contradiction)",
+       "url": "https://book.douban.com/review/4544383/"
+      }
+     ],
+     "note": "The novel says only that the ETO was founded in the 1980s, after Evans received word from Trisolaris. 1988 is the year both the Fandom timeline and the Douban chronology give, but the novel does not state it outright.",
+     "binWhy": "A secret society is founded that shapes the next two decades, and after them the Crisis Era.",
+     "bin": "new-institution",
+     "facets": {
+      "change": "one woman's secret → an organisation working against its own species",
+      "mechanism": "founding",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "hidden-society",
+       "contact-made",
+       "secrecy"
+      ],
+      "outcomes": [
+       "parallel-society",
+       "collaboration",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "tbp-publication-2006",
+     "year": 2006,
+     "date": "2006",
+     "title": "The Three-Body Problem is serialized in Science Fiction World",
+     "description": "Liu Cixin's novel runs in the Chinese magazine Science Fiction World in 2006 and comes out as a book in 2008. Ken Liu's English translation followed in 2014 and won the 2015 Hugo Award.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: The Three-Body Problem (novel)",
+       "url": "https://en.wikipedia.org/wiki/The_Three-Body_Problem_(novel)"
+      }
+     ],
+     "note": "Wikipedia dates the serialization to 2006 without giving a month. The English release in 2014 is not a separate event, because a lineage has only one event per year and the 2014 slot in this chain is empty.",
+     "binWhy": "Publication of the original work; it has no bin because it is not a moment in the fiction's history.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "tbp-sophons-2007",
+     "year": 2007,
+     "date": "2007",
+     "title": "Physics stops working, and the world learns the fleet is coming",
+     "description": "Particle accelerators return impossible results and leading physicists kill themselves. Investigators trace the cause to the ETO and, in Operation Guzheng, slice the Judgment Day apart in the Panama Canal with nanofilament to capture its archive, which shows that proton-sized Trisolaran computers called sophons are sabotaging experiments and watching everything, and that the fleet will arrive in about four centuries. The Crisis Era begins.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Year 1 of the Crisis Era (the book's present)",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Wikipedia: The Three-Body Problem (novel)",
+       "url": "https://en.wikipedia.org/wiki/The_Three-Body_Problem_(novel)"
+      },
+      {
+       "title": "Three-Body Problem Wiki (Fandom): Timeline, with the era ranges from Death's End's front-matter table",
+       "url": "https://three-body-problem.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Douban review: 《三体》三部曲历史年表 (fan chronology; flags the 201X vs 2007 Crisis Era contradiction)",
+       "url": "https://book.douban.com/review/4544383/"
+      }
+     ],
+     "note": "The novel never gives its present a year. Death's End's era table dates the start of the Crisis Era only as '201X'. The fan chronology works back from the characters' ages (Ye Wenjie retired in 2004, Yang Dong was born in 1980) to 2007, which is the year used here. The sophon lockdown, Operation Guzheng and the public announcement all happen in the same short stretch and are merged into one event. In our 2007 the Large Hadron Collider was a year from switching on, and nobody found anything wrong with it.",
+     "binWhy": "What defines the moment is that knowledge the ETO had kept hidden for thirty years is exposed, and the whole world is told.",
+     "bin": "truth-revealed",
+     "facets": {
+      "change": "scientists dying over broken results → a world told the invasion is coming",
+      "mechanism": "disclosure",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "cosmic",
+      "direction": {
+       "power": 1,
+       "openness": 1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "cover-up",
+       "hidden-society",
+       "contact-made"
+      ],
+      "outcomes": [
+       "revelation",
+       "hunt-begins",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "tbp-wallfacers-2009",
+     "year": 2009,
+     "date": "2009",
+     "title": "The UN names four Wallfacers",
+     "description": "Because the sophons can see and hear everything humans do except what they think, the UN Planetary Defense Council gives four men power to carry out strategies they never have to explain. The ETO answers by naming a Wallbreaker for each of them. Luo Ji, an unknown sociologist, is chosen because Trisolaris wants him dead, and in Year 8 he casts a 'spell': he broadcasts the location of a nearby star to test what Ye Wenjie told him about the universe.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Crisis Era, Year 3 (Wallfacer Act passed at the 19th PDC session)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Three-Body Problem Wiki (Fandom): Wallfacer (Wallfacer Act, Crisis Era Year 3)",
+       "url": "https://three-body-problem.fandom.com/wiki/Wallfacer"
+      },
+      {
+       "title": "Wikipedia: The Dark Forest",
+       "url": "https://en.wikipedia.org/wiki/The_Dark_Forest"
+      }
+     ],
+     "note": "The Dark Forest heads the chapter 'Year 3, Crisis Era'. The conversion counts forward from the 2007 used for Year 1. If you count back from Death's End's 2208 instead, you get 2003, which is before the book's own present, so for the early Crisis Era the forward count is used.",
+     "binWhy": "A new body with its own powers is set up by international law, and it shapes the war for two centuries.",
+     "bin": "new-institution",
+     "facets": {
+      "change": "strategy an enemy can overhear → four men whose plans live only in their heads",
+      "mechanism": "law",
+      "actor": "state",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "existential-threat",
+       "secrecy",
+       "technological-race"
+      ],
+      "outcomes": [
+       "secrecy-state",
+       "consolidation",
+       "arms-race"
+      ]
+     }
+    },
+    {
+     "id": "tbp-staircase-2013",
+     "year": 2013,
+     "date": "2013",
+     "title": "The Staircase Project launches Yun Tianming's brain",
+     "description": "Humanity sends a probe toward the Trisolaran fleet, pushed by a chain of nuclear explosions and carrying only the frozen brain of Yun Tianming, a terminally ill man. A cable fails, and the probe drifts off course and is lost. Two and a half centuries later it turns out the Trisolarans caught it and rebuilt him, and that the fairy tales he later tells hide the secrets of lightspeed travel.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Crisis Era, Year 7 (Death's End)",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Wikipedia: Death's End",
+       "url": "https://en.wikipedia.org/wiki/Death%27s_End"
+      },
+      {
+       "title": "Three-Body Problem Wiki (Fandom): Timeline, with the era ranges from Death's End's front-matter table",
+       "url": "https://three-body-problem.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "The Fandom timeline puts the launch and Cheng Xin's hibernation in Crisis Year 7; that converts to 2013 by the same forward count from 2007. Wikipedia places it only in 'the 2010s'. There is another inconsistency: in Deterrence Year 61 (2269) Cheng Xin is said to have been asleep for 264 years, which would put the start of her sleep in 2005.",
+     "binWhy": "A first mission departs for somewhere nobody has reached: the enemy fleet, light years out.",
+     "bin": "voyage-into-unknown",
+     "facets": {
+      "change": "no human anywhere near the enemy → a frozen brain sent to meet them",
+      "mechanism": "expedition",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "existential-threat",
+       "technological-race"
+      ],
+      "outcomes": [
+       "contact",
+       "foreknowledge"
+      ]
+     }
+    },
+    {
+     "id": "tbp-doomsday-2205",
+     "year": 2205,
+     "date": "2205",
+     "title": "The Doomsday Battle: one droplet destroys the fleet",
+     "description": "After two centuries of rebuilding, a confident human fleet of about two thousand warships goes out to capture the first Trisolaran probe to arrive, a mirror-smooth droplet made of strong-interaction material. In under an hour it rams through almost all of them, and the few ships that escape into deep space turn on each other for supplies. The same year, astronomers see that the star Luo Ji named has been destroyed, which proves the dark-forest idea.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Crisis Era, Year 205",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Three-Body Problem Wiki (Fandom): Doomsday Battle (Crisis Era Year 205)",
+       "url": "https://three-body-problem.fandom.com/wiki/Doomsday_Battle"
+      },
+      {
+       "title": "Wikipedia: The Dark Forest",
+       "url": "https://en.wikipedia.org/wiki/The_Dark_Forest"
+      },
+      {
+       "title": "Three-Body Problem Wiki (Fandom): Timeline, with the era ranges from Death's End's front-matter table",
+       "url": "https://three-body-problem.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Year 205 is stated in The Dark Forest. Counted back from Death's End's statement that the Crisis Era ended in 2208, with deterrence in Crisis Year 208, it is 2205. The Fandom wiki counts forward instead and gets 2213; the Douban chronology gets 2214. The books' own anchors disagree by about eight years here.",
+     "binWhy": "A single battle decides the military contest: humanity's fleet is annihilated, and that settles that it cannot win by force.",
+     "bin": "decisive-victory",
+     "facets": {
+      "change": "a fleet sure of victory → a handful of fugitive ships",
+      "mechanism": "attack",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "existential-threat",
+       "prosperity",
+       "arms-race"
+      ],
+      "outcomes": [
+       "mass-death",
+       "despair",
+       "exile"
+      ]
+     }
+    },
+    {
+     "id": "tbp-deterrence-2208",
+     "year": 2208,
+     "date": "2208",
+     "title": "Luo Ji establishes dark-forest deterrence",
+     "description": "At Ye Wenjie's grave, Luo Ji reveals that the nuclear bombs he had placed around the Sun can broadcast Trisolaris's location to the rest of the galaxy, and threatens to set them off if the droplets move against Earth. That would doom both worlds, and Trisolaris backs down. Luo Ji becomes the Swordholder, and a balance of terror between two civilisations begins, with technology flowing to Earth.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Crisis Era, Year 208; the Deterrence Era begins",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Three-Body Problem Wiki (Fandom): Timeline, with the era ranges from Death's End's front-matter table",
+       "url": "https://three-body-problem.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Wikipedia: The Dark Forest",
+       "url": "https://en.wikipedia.org/wiki/The_Dark_Forest"
+      },
+      {
+       "title": "Three-Body Problem Wiki (Fandom): Deterrence Era (62 years)",
+       "url": "https://three-body-problem.fandom.com/wiki/Deterrence_Era"
+      }
+     ],
+     "note": "Death's End's era table dates the start of the Deterrence Era to 2208. That is the firmest anchor in the whole Crisis Era.",
+     "binWhy": "A weapon that could end both civilisations is armed, and the balance of power freezes around it; this is the definition of the bin.",
+     "bin": "doomsday-weapon",
+     "facets": {
+      "change": "a species waiting to be exterminated → a hostage holding its captor hostage",
+      "mechanism": "negotiation",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": 1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "existential-threat",
+       "disaster-just-struck",
+       "secrecy"
+      ],
+      "outcomes": [
+       "stalemate",
+       "cold-war",
+       "diplomacy"
+      ]
+     }
+    },
+    {
+     "id": "tbp-handover-2270",
+     "year": 2270,
+     "date": "2270-11-28",
+     "title": "Deterrence fails within minutes of the handover",
+     "description": "Luo Ji hands the switch to Cheng Xin, chosen by a softer age that no longer trusts hard men. Minutes later droplets attack the broadcast antennas, and she cannot bring herself to press it. Trisolaris takes Earth and orders the whole human population into Australia, where famine and violence kill hundreds of millions.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Deterrence Era, Year 62 (the Post-Deterrence Era begins)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Three-Body Problem Wiki (Fandom): Cheng Xin (Swordholder handover, Deterrence Era Year 62)",
+       "url": "https://three-body-problem.fandom.com/wiki/Cheng_Xin"
+      },
+      {
+       "title": "Three-Body Problem Wiki (Fandom): Timeline, with the era ranges from Death's End's front-matter table",
+       "url": "https://three-body-problem.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Wikipedia: Death's End",
+       "url": "https://en.wikipedia.org/wiki/Death%27s_End"
+      }
+     ],
+     "note": "2208 plus 62 gives 2270, which matches the table in Death's End. The Fandom wiki disagrees with itself about the day, giving November 27 on one page and November 28 on another. The Great Resettlement runs into 2271 and is folded into this event.",
+     "binWhy": "Humanity is disarmed and its territory occupied; people are moved into one continent under the invader's rule.",
+     "bin": "defeat-and-occupation",
+     "facets": {
+      "change": "a sixty-two-year balance of terror → a disarmed species herded into Australia",
+      "mechanism": "invasion",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "cold-war",
+       "weak-institutions",
+       "prosperity"
+      ],
+      "outcomes": [
+       "occupation",
+       "surrender",
+       "mass-death"
+      ]
+     }
+    },
+    {
+     "id": "tbp-broadcast-2272",
+     "year": 2272,
+     "date": "2272",
+     "title": "The Gravity broadcast reveals Trisolaris to the universe",
+     "description": "Far from Earth, the crews of the warships Blue Space and Gravity use four-dimensional space to destroy the droplets chasing them. They then vote to send the gravitational-wave broadcast that Cheng Xin did not. When it is known on Earth, the Trisolarans give up the occupation and leave, ending the internment in Australia, but the broadcast has also marked where the Sun is.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Beginning of the Broadcast Era (2272)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Three-Body Problem Wiki (Fandom): Broadcast Era",
+       "url": "https://three-body-problem.fandom.com/wiki/Broadcast_Era"
+      },
+      {
+       "title": "Three-Body Problem Wiki (Fandom): Timeline, with the era ranges from Death's End's front-matter table",
+       "url": "https://three-body-problem.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Wikipedia: Death's End",
+       "url": "https://en.wikipedia.org/wiki/Death%27s_End"
+      }
+     ],
+     "note": "The broadcast is sent from deep space soon after the 2270 handover. Death's End's table dates the Broadcast Era from 2272, when its effects reach Earth, and that is the year used here.",
+     "binWhy": "The one thing both worlds had kept hidden, where Trisolaris is, is exposed to everyone who might be listening.",
+     "bin": "truth-revealed",
+     "facets": {
+      "change": "coordinates held as a threat → coordinates broadcast to the galaxy",
+      "mechanism": "disclosure",
+      "actor": "faction",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "occupation",
+       "exile",
+       "existential-threat"
+      ],
+      "outcomes": [
+       "revelation",
+       "extinction-risk",
+       "exodus"
+      ]
+     }
+    },
+    {
+     "id": "tbp-trisolaris-destroyed-2275",
+     "year": 2275,
+     "date": "2275",
+     "title": "A photoid destroys the Trisolaran star",
+     "description": "Three years and ten months after the broadcast, an unknown civilisation fires a relativistic particle, a photoid, at one of Trisolaris's suns, and the planet and its world are destroyed. Earth now knows the dark forest is real. It knows its own location was exposed by the same broadcast, and it begins building bunker cities behind the gas giants.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Broadcast Era, Year 3 (three years ten months after the broadcast)",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Three-Body Problem Wiki (Fandom): Timeline, with the era ranges from Death's End's front-matter table",
+       "url": "https://three-body-problem.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Douban review: 《三体》三部曲历史年表 (fan chronology; flags the 201X vs 2007 Crisis Era contradiction)",
+       "url": "https://book.douban.com/review/4544383/"
+      },
+      {
+       "title": "Wikipedia: Death's End",
+       "url": "https://en.wikipedia.org/wiki/Death%27s_End"
+      }
+     ],
+     "note": "The Douban chronology puts the destruction in Broadcast Year 3 (2275). The Fandom timeline places it 3 years 10 months after the broadcast and has Earth's Sophon talks in Year 7. The exact year depends on whether you count from when the broadcast was sent or when it was received.",
+     "binWhy": "An attack from outside kills an entire civilisation's homeworld, and it changes how humanity lives from then on.",
+     "bin": "mass-death",
+     "facets": {
+      "change": "a living enemy homeworld → a destroyed star system",
+      "mechanism": "attack",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "existential-threat",
+       "contact-made"
+      ],
+      "outcomes": [
+       "mass-death",
+       "extinction-risk",
+       "shelter-society"
+      ]
+     }
+    },
+    {
+     "id": "tbp-flattening-2400",
+     "year": 2400,
+     "date": "2400",
+     "title": "A dual-vector foil flattens the Solar System",
+     "description": "A passing alien, the Singer, sends a scrap of two-dimensional space into the Solar System almost in passing. Over a few days, space collapses into it and everything, the Sun, the planets and the bunker cities built since 2333, is flattened into a picture on a plane. Luo Ji stays behind at a museum on Pluto; Cheng Xin and AA escape on the Halo, the one ship secretly fitted with a lightspeed drive.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Bunker Era, Year 67 (end of the Bunker Era)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Three-Body Problem Wiki (Fandom): Timeline, with the era ranges from Death's End's front-matter table",
+       "url": "https://three-body-problem.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Wikipedia: Death's End",
+       "url": "https://en.wikipedia.org/wiki/Death%27s_End"
+      }
+     ],
+     "note": "Death's End's table ends the Bunker Era in 2400. The Bunker Era begins in 2333, and 2333 plus 67 gives 2400, so the two anchors agree. The Douban fan chronology's 2354 does not match the table.",
+     "binWhy": "An attack kills almost all of humanity at once; nothing in the Solar System is left to rebuild.",
+     "bin": "mass-death",
+     "facets": {
+      "change": "a system of bunker cities → a painting on a plane",
+      "mechanism": "attack",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "shelter-society",
+       "existential-threat",
+       "contact-made"
+      ],
+      "outcomes": [
+       "mass-death",
+       "extinction-risk",
+       "scattering"
+      ]
+     }
+    },
+    {
+     "id": "tbp-universe-647-18906416",
+     "year": 18906416,
+     "date": "18906416",
+     "title": "Cheng Xin gives the mass of her small universe back",
+     "description": "Cheng Xin and Guan Yifan are stranded in the lightspeed-lowered black domain around DX3906 (from 2687). When they come out nearly nineteen million years later, they take shelter in Universe 647, a tiny pocket universe Yun Tianming left for them. A broadcast from the 'Returners' asks every pocket universe to give back its mass so that the main universe can collapse and be reborn, and they go back, leaving behind a bottle of messages and a small ecosystem.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Timeline for Universe 647 (begins 18906416, after the Black Domain Era for DX3906, 2687–18906416)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Three-Body Problem Wiki (Fandom): Timeline, with the era ranges from Death's End's front-matter table",
+       "url": "https://three-body-problem.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Wikipedia: Death's End",
+       "url": "https://en.wikipedia.org/wiki/Death%27s_End"
+      }
+     ],
+     "note": "Death's End's era table says the Universe 647 timeline begins in 18906416, and that is the year used here. The Returners' call reaches them after a year inside the pocket universe, when an unstated, far greater span has passed in the main universe; the book gives no date for the end of the universe.",
+     "binWhy": "The last jump forward shows what became of everything: the Solar System is long gone, the universe is dying, and one of the last humans decides its fate.",
+     "bin": "long-after",
+     "facets": {
+      "change": "a pocket universe to outlast the end → its mass returned to a dying cosmos",
+      "mechanism": "arrival",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "time-lost",
+       "isolation"
+      ],
+      "outcomes": [
+       "rebuilding",
+       "time-lost",
+       "transcendence"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "It belongs in hidden-history because the fork is a secret act inside real history. A message sent from a classified Chinese base during the Cultural Revolution is answered, and for three decades the answer is known only to a conspiracy (the ETO) while the world goes on looking like ours. It becomes public only in the book's present. This chain follows Liu Cixin's Chinese novels in their English translations, not the Tencent (2023) or Netflix (2024) adaptations, which move events around. Crisis Era dates are converted two ways because the books disagree with themselves. The start is given as '201X' and the book's present works out to 2007, so early Crisis years are counted forward from 2007. Death's End ends the Crisis Era in 2208 at Year 208, so late Crisis years are counted back from 2208. The Deterrence, Broadcast and Bunker eras follow Death's End's own table. Tiers: T4 is empty because the chain reaches back only to 1967. T3 holds the Cultural Revolution and the Red Coast years. T2 runs from 2006 to 2275. T1 holds the flattening of the Solar System in 2400 and the end of the universe, dated by the book's 18906416.",
+   "sources": [
+    {
+     "title": "Wikipedia: The Three-Body Problem (novel)",
+     "url": "https://en.wikipedia.org/wiki/The_Three-Body_Problem_(novel)"
+    },
+    {
+     "title": "Wikipedia: The Dark Forest",
+     "url": "https://en.wikipedia.org/wiki/The_Dark_Forest"
+    },
+    {
+     "title": "Wikipedia: Death's End",
+     "url": "https://en.wikipedia.org/wiki/Death%27s_End"
+    },
+    {
+     "title": "Three-Body Problem Wiki (Fandom): Timeline, with the era ranges from Death's End's front-matter table",
+     "url": "https://three-body-problem.fandom.com/wiki/Timeline"
+    },
+    {
+     "title": "Douban review: 《三体》三部曲历史年表 (fan chronology; flags the 201X vs 2007 Crisis Era contradiction)",
+     "url": "https://book.douban.com/review/4544383/"
+    }
+   ]
   }
  ]
 }

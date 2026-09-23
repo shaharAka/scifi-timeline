@@ -546,6 +546,12 @@ def load_worlds(lineage_ids):
                 if not isinstance(v, list) or not (lo <= len(v) <= hi):
                     err("%s: %s must be a list of %d-%d entries, got %r"
                         % (tag, key, lo, hi, len(v) if isinstance(v, list) else v))
+            # the drawer reads every entry of these by field; a bare string renders as nothing
+            for key, need in (("locations", ("name", "blurb")), ("factions", ("name", "blurb")),
+                              ("whereToStart", ("title",)), ("connections", ("id",))):
+                for i, it in enumerate(w.get(key) or []):
+                    if not isinstance(it, dict) or any(not it.get(f) for f in need):
+                        err("%s: %s[%d] must be an object with %s" % (tag, key, i, ", ".join(need)))
             for c in w.get("connections") or []:
                 if not isinstance(c, dict) or not c.get("id"):
                     err("%s: each connection needs an id" % tag)

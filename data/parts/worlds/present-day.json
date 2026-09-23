@@ -1,0 +1,579 @@
+{
+  "_comment": "World dossiers for the worlds added for their relevance to the present: chains that pass through the kinds of moment our own recent history has.",
+  "worlds": [
+    {
+      "id": "handmaids-tale",
+      "setting": "New England in the first years of the Republic of Gilead, the theocracy that replaced the United States after a staged massacre of its government at the end of the twentieth century. Cambridge, Massachusetts, is a garrison town: the old Harvard grounds hold the Wall where the executed are hung, and fertile women are assigned as Handmaids to bear children for the ruling Commanders. The sequel moves about sixteen years on, to Ardua Hall and to Toronto across the border.",
+      "conflict": "A regime built to reverse a collapse in births makes women state property, sorted by function and forbidden to read. Against it are the Mayday resistance and the Underground Femaleroad, women who remember their lives before, and, in the sequel, a senior Aunt who has spent years collecting the Commanders' crimes and needs two young women to carry them out.",
+      "politics": "A military theocracy run by the Commanders of the Faithful, who took power as the Sons of Jacob; its secret police are the Eyes and its soldiers the Angels and Guardians. Women are ranked by function (Wives, Daughters, Handmaids, Marthas, Econowives, Aunts), and those who fit nowhere are declared Unwomen and sent to the Colonies to clean up toxic waste. Canada stays independent and uneasy; the sequel mentions American holdouts that never submitted.",
+      "technology": "Late-twentieth-century technology turned to control: a cashless Compubank economy that let women's money be frozen in a day, Identipasses and roadblocks, surveillance by the Eyes, and medicine that cannot undo sterility caused by pollution, pesticides, nuclear accidents and disease. Shop signs are pictures because women may not read; the resistance moves its evidence on a microdot.",
+      "mood": "Claustrophobic and quiet in the first novel, told in the present tense by a woman who does not know how her story ends; brisker and more hopeful in the sequel, which is a thriller about getting the evidence out.",
+      "themes": [
+        "the state taking control of women's bodies",
+        "rights removed through emergency measures",
+        "complicity and the cost of survival",
+        "testimony, and who gets to tell history",
+        "religion used as an instrument of power"
+      ],
+      "tags": [
+        "dystopia",
+        "authoritarian",
+        "theocracy",
+        "fertility-crisis"
+      ],
+      "locations": [
+        {
+          "name": "Cambridge, Massachusetts",
+          "blurb": "Old Harvard neighbourhood: the Commander's house, the Wall, the shops Offred walks to."
+        },
+        {
+          "name": "Rachel and Leah Centre",
+          "blurb": "The 'Red Center', a former school where the Aunts train Handmaids."
+        },
+        {
+          "name": "Ardua Hall",
+          "blurb": "Headquarters of the Aunts, with forbidden books and Lydia's hidden files."
+        },
+        {
+          "name": "Toronto",
+          "blurb": "Where Daisy grows up above the Clothes Hound, a Mayday front."
+        },
+        {
+          "name": "University of Denay, Nunavit",
+          "blurb": "Arctic university hosting the 2195 symposium on Gileadean Studies."
+        }
+      ],
+      "factions": [
+        {
+          "name": "Sons of Jacob / Commanders of the Faithful",
+          "blurb": "The think-tank men who planned the coup and became the ruling class."
+        },
+        {
+          "name": "The Aunts",
+          "blurb": "Women who run Gilead's women's sphere from Ardua Hall under Aunt Lydia."
+        },
+        {
+          "name": "The Eyes",
+          "blurb": "Gilead's secret police; some, perhaps Nick, also serve Mayday."
+        },
+        {
+          "name": "Mayday",
+          "blurb": "Resistance network inside Gilead, linked to the Underground Femaleroad."
+        },
+        {
+          "name": "Handmaids",
+          "blurb": "Fertile women assigned to Commanders' households to bear their children."
+        }
+      ],
+      "whereToStart": [
+        {
+          "title": "The Handmaid's Tale",
+          "year": 1985,
+          "medium": "book",
+          "blurb": "Offred's account, and the 2195 epilogue that recasts it."
+        },
+        {
+          "title": "The Testaments",
+          "year": 2019,
+          "medium": "book",
+          "blurb": "Aunt Lydia and two daughters, and how Gilead's end begins."
+        },
+        {
+          "title": "The Handmaid's Tale (Hulu series)",
+          "year": 2017,
+          "medium": "tv",
+          "blurb": "A separate continuity: set in the 2010s, Offred is June and her story runs far past the novel."
+        }
+      ],
+      "connections": [
+        {
+          "id": "children-of-men",
+          "note": "Another near future organised around a collapse in human fertility."
+        },
+        {
+          "id": "man-in-the-high-castle",
+          "note": "An America turned authoritarian, with a resistance moving forbidden material across borders."
+        },
+        {
+          "id": "fatherland",
+          "note": "A regime's hidden crimes exposed when documents are carried out to the foreign press."
+        }
+      ],
+      "spoilerLevel": "heavy"
+    },
+    {
+      "id": "parable-of-the-sower",
+      "setting": "Southern California in the 2020s, and the Pacific Northwest after that. Climate change, debt and neglect have worn the United States down. Water costs more than food, the police charge fees, and families who can afford it live behind neighbourhood walls. Outside, people walk the freeways with everything they own, and addicts of a drug that makes fire feel good burn whatever they reach. Later a theocratic president comes to power and a new religion grows in the ruins.",
+      "conflict": "Lauren Olamina, who feels the pain of anyone she sees hurt, has to keep her people alive through a collapse that never ends. After Robledo burns she builds Acorn and preaches Earthseed. Jarret's Christian America then turns Acorn into a slave camp and takes her daughter. The question is whether a faith built on change can outlast the people who want the past back.",
+      "politics": "Formal democracy survives, but it hollows out. Donner trades labour law for room and board, corporations buy whole towns, and Jarret wins office on 'Make America Great Again' while his Crusaders enslave dissenters with no official link to the government.",
+      "technology": "Mostly a world that is losing technology. It has electronic shock collars, virtual-reality 'dream masks', the fire drug pyro, and a crippled space programme that still reaches Mars. It ends with a starship carrying colonists in suspended animation.",
+      "mood": "Grim, close and unsentimental, written as a teenager's journal in which hope has to be worked for every day.",
+      "themes": [
+        "change as the only god",
+        "community as survival",
+        "religious authoritarianism",
+        "slow, human-made collapse",
+        "slavery and debt bondage",
+        "the stars as a purpose"
+      ],
+      "tags": [
+        "dystopia",
+        "climate",
+        "authoritarian",
+        "post-apocalypse",
+        "space",
+        "religion"
+      ],
+      "locations": [
+        {
+          "name": "Robledo",
+          "blurb": "Walled neighbourhood about twenty miles from Los Angeles; Lauren's home until it burns in 2027."
+        },
+        {
+          "name": "Olivar",
+          "blurb": "Coastal city that sold itself to a multinational and became a company town."
+        },
+        {
+          "name": "Acorn / Camp Christian",
+          "blurb": "Earthseed's first community near Cape Mendocino, later a Crusader re-education camp."
+        },
+        {
+          "name": "Portland",
+          "blurb": "Where Lauren finds wealthy converts and Earthseed starts to spread."
+        },
+        {
+          "name": "The Christopher Columbus",
+          "blurb": "Earthseed's first starship, carrying colonists to another star in 2090."
+        }
+      ],
+      "factions": [
+        {
+          "name": "Earthseed",
+          "blurb": "Lauren Olamina's belief that God is Change and that humanity's destiny is the stars."
+        },
+        {
+          "name": "Church of Christian America and Jarret's Crusaders",
+          "blurb": "Jarret's movement; its Crusaders burn heretics and run re-education camps."
+        },
+        {
+          "name": "Kagimoto, Stamm, Frampton and Company (KSF)",
+          "blurb": "The multinational that buys Olivar and runs it as a company town."
+        },
+        {
+          "name": "Pyro addicts ('paints') and road raiders",
+          "blurb": "Addicts who set fires for the high, and raiders who loot what burns."
+        },
+        {
+          "name": "The walled communities",
+          "blurb": "Armed, shrinking neighbourhoods where the old middle class holds on behind walls."
+        }
+      ],
+      "whereToStart": [
+        {
+          "title": "Parable of the Sower",
+          "year": 1993,
+          "medium": "book",
+          "blurb": "Lauren's journal from 2024 to 2027: Robledo, the fire, the walk north and Earthseed's founding."
+        },
+        {
+          "title": "Parable of the Talents",
+          "year": 1998,
+          "medium": "book",
+          "blurb": "Acorn, Jarret, Camp Christian and the long road to the stars, told partly by the daughter Lauren lost."
+        }
+      ],
+      "connections": [
+        {
+          "id": "children-of-men",
+          "note": "Another slow social collapse in a recognisable near future, walked through by people on the move."
+        },
+        {
+          "id": "canticle-for-leibowitz",
+          "note": "A religious order carries meaning through collapse and ends by sending a ship to the stars."
+        },
+        {
+          "id": "man-in-the-high-castle",
+          "note": "An America ruled by an ideology that decides who is allowed to exist."
+        },
+        {
+          "id": "interstellar",
+          "note": "A failing Earth, and the stars treated as humanity's destiny rather than an escape hatch."
+        }
+      ],
+      "spoilerLevel": "heavy"
+    },
+    {
+      "id": "ministry-for-the-future",
+      "setting": "Our world from 2025, with our treaties, banks and summits. The only new thing at first is a small, underfunded UN body in Zurich charged with speaking for people not yet born. Then a heat wave kills twenty million people in India, and the next three decades are told in 106 short chapters. Some follow the Ministry's head, some follow a traumatised survivor, and some are eyewitness accounts, meeting minutes, or riddles narrated by a carbon atom and a photon.",
+      "conflict": "The book asks whether institutions can move fast enough once the dying has started. The Ministry has law, money and persuasion. The Children of Kali and the Ministry's own deniable 'black wing' have drones and assassinations. The fossil economy defends itself and the climate keeps getting worse. The novel never settles whether the violence or the policy did the work.",
+      "politics": "Nation-states under the Paris Agreement, with central banks as the real power. India changes government after the heat wave and acts on its own. Petrostates are turned by coups and bribes. Switzerland hosts the Ministry and houses refugees reluctantly. A global debt strike breaks the banks' hold. Throughout, the Ministry works in the gap between what treaties allow and what the situation needs.",
+      "technology": "Almost all of it exists or has been proposed: stratospheric aerosols, pumping water out from under glaciers, a carbon-backed complementary currency, a cooperative social network called YourLock, solar airships and sail-assisted freighters, kelp farming and wildlife corridors. The weapons are cheap and new: drone swarms that assemble into missiles, and prions delivered by dart.",
+      "mood": "Urgent, documentary, patient. The book opens with an atrocity and then spends five hundred pages on meetings. Hope comes as hard, administrative work, and grief never fully leaves.",
+      "themes": [
+        "institutions against catastrophe",
+        "the ethics of eco-violence",
+        "money as climate policy",
+        "speaking for future generations",
+        "trauma and survival",
+        "a good Anthropocene"
+      ],
+      "tags": [
+        "climate",
+        "geoengineering",
+        "eco-terrorism",
+        "utopia",
+        "global-governance"
+      ],
+      "locations": [
+        {
+          "name": "Uttar Pradesh",
+          "blurb": "Where the heat wave hits and Frank May survives when no one else does."
+        },
+        {
+          "name": "Zurich",
+          "blurb": "The Ministry's headquarters: offices, a lakeside, refugees, and carnival at the end."
+        },
+        {
+          "name": "Thwaites Glacier, Antarctica",
+          "blurb": "Where drillers pump meltwater from under the ice to slow its slide."
+        },
+        {
+          "name": "Davos",
+          "blurb": "The World Economic Forum, taken hostage by activists and made to listen."
+        }
+      ],
+      "factions": [
+        {
+          "name": "The Ministry for the Future",
+          "blurb": "A Paris Agreement body led by Mary Murphy, with lawyers, economists and a deniable black wing."
+        },
+        {
+          "name": "The Children of Kali",
+          "blurb": "An Indian-born underground that kills polluters, downs airliners and sinks ships."
+        },
+        {
+          "name": "The central bankers",
+          "blurb": "Reluctant gatekeepers of the carbon coin, and in the end the ones who pay for the drawdown."
+        },
+        {
+          "name": "India's new government",
+          "blurb": "Voted in after the heat wave; it geoengineers alone, then rebuilds on solar power."
+        }
+      ],
+      "whereToStart": [
+        {
+          "title": "The Ministry for the Future",
+          "year": 2020,
+          "medium": "book",
+          "blurb": "The novel itself. The first chapter is the hardest part to read, and it is short."
+        }
+      ],
+      "connections": [
+        {
+          "id": "interstellar",
+          "note": "Also climate ruin in the near future, but Nolan's answer is to leave Earth and Robinson's is to stay and fix it."
+        },
+        {
+          "id": "children-of-men",
+          "note": "Both are set in a Europe full of climate refugees. Britain cages them; Switzerland, reluctantly, takes them in."
+        },
+        {
+          "id": "the-expanse",
+          "note": "Both have a UN that actually governs, and Earth dealing with the sea-level rise this book is trying to prevent."
+        }
+      ],
+      "spoilerLevel": "heavy"
+    },
+    {
+      "id": "station-eleven",
+      "setting": "Twenty years after a flu killed almost everyone, the Great Lakes shore of Michigan is a scatter of small towns built in whatever survived, linked by footpaths and the old roads. There is no electricity, no engine fuel and no government. People farm, scavenge and trade, and a few hundred live at Severn City airport, where a lounge has become a museum of dead phones and credit cards. Between the towns travels a caravan orchestra that plays Shakespeare.",
+      "conflict": "The danger is not scarcity but what people make of survival. A wandering cult led by the Prophet teaches that the flu was a flood sent to purify the world, takes towns and children, and treats the Travelling Symphony as its enemy. Against it stand the Symphony's insistence that art is not a luxury and the airport's museum of the old world.",
+      "politics": "No state survives. Each settlement governs itself, usually by consensus among a few families; St. Deborah by the Water is run by the Prophet through armed followers and religious law. Trade, news and marriage move by foot and horse-drawn caravan, and a printed newspaper in New Petoskey is the region's only press.",
+      "technology": "Nineteenth-century tools in a twenty-first-century landscape: horse-drawn caravans made from gutted pickup trucks, hand weapons and a few guns with scarce ammunition, a hand-operated printing press. Laptops, phones and credit cards are museum pieces. The only electricity in the story is the grid of streetlamps seen at the end in a town to the south.",
+      "mood": "Quiet, elegiac and surprisingly tender. The novel moves between the last years of a glamorous, lonely celebrity world and the walked roads twenty years later, and treats small things, a comic book, a paperweight, a line of Shakespeare, as what survives.",
+      "themes": [
+        "art as survival",
+        "memory and the lost world",
+        "celebrity and loneliness",
+        "chance connections",
+        "faith and fanaticism after catastrophe"
+      ],
+      "tags": [
+        "pandemic",
+        "post-apocalypse",
+        "theatre",
+        "religious-cult"
+      ],
+      "locations": [
+        {
+          "name": "Severn City Airport",
+          "blurb": "Stranded passengers' settlement of about three hundred; home of the Museum of Civilization."
+        },
+        {
+          "name": "St. Deborah by the Water",
+          "blurb": "Lakeside town held by the Prophet and his armed followers."
+        },
+        {
+          "name": "Toronto",
+          "blurb": "Where Arthur dies playing Lear on the flu's first night."
+        },
+        {
+          "name": "New Petoskey",
+          "blurb": "Town with a library and the region's only printed newspaper."
+        },
+        {
+          "name": "McKinley",
+          "blurb": "Farming settlement in old Virginia where Jeevan becomes the doctor."
+        }
+      ],
+      "factions": [
+        {
+          "name": "The Travelling Symphony",
+          "blurb": "Caravan orchestra and Shakespeare company touring the Great Lakes since Year Five."
+        },
+        {
+          "name": "The Prophet's cult",
+          "blurb": "Armed believers who read the flu as a purifying flood; take towns and child brides."
+        },
+        {
+          "name": "The Severn City airport settlement",
+          "blurb": "Former passengers who stayed; Clark Thompson keeps their museum."
+        },
+        {
+          "name": "The people of St. Deborah by the Water",
+          "blurb": "Townspeople living under the Prophet's rule, some quietly warning his enemies."
+        }
+      ],
+      "whereToStart": [
+        {
+          "title": "Station Eleven",
+          "year": 2014,
+          "medium": "book",
+          "blurb": "The novel: the version the atlas follows, and complete in itself."
+        },
+        {
+          "title": "Station Eleven (miniseries)",
+          "year": 2021,
+          "medium": "tv",
+          "blurb": "HBO Max adaptation; rearranged and gentler, with a different Prophet."
+        }
+      ],
+      "connections": [
+        {
+          "id": "children-of-men",
+          "note": "Both end the world biologically in our own present and ask what people keep when the future stops."
+        },
+        {
+          "id": "canticle-for-leibowitz",
+          "note": "Both are about the keepers of a dead civilisation's culture: monks with blueprints, a museum and an orchestra."
+        },
+        {
+          "id": "twelve-monkeys",
+          "note": "Both kill most of humanity with a disease in the near present; Twelve Monkeys looks for its cause, Station Eleven at its aftermath."
+        }
+      ],
+      "spoilerLevel": "heavy"
+    },
+    {
+      "id": "three-body-problem",
+      "setting": "China and then the whole Solar System, from the Cultural Revolution to the end of the universe. At a secret radio base in the northern mountains, a persecuted astrophysicist invites an alien civilisation that lives on a planet thrown between three suns. Their fleet will take four centuries to arrive. In the meantime, particles smaller than an atom lock human physics and watch everything. Earth passes through eras named for the ways it tries to survive: Crisis, Deterrence, Broadcast, Bunker.",
+      "conflict": "Humanity against Trisolaris at first, and then against the universe itself. The galaxy turns out to be a dark forest, where every civilisation hides and destroys any other it finds. The war is fought with secret strategies, deterrence and broadcast coordinates more than with fleets. Its turning points depend on individuals, Ye Wenjie, Luo Ji and Cheng Xin, making choices for the whole species.",
+      "politics": "A UN Planetary Defense Council that gives unaccountable power to Wallfacers and later to a single Swordholder, an Earth-Trisolaris Organization of human traitors, periods of defeatism and of false optimism, and in the end a Solar System federation of bunker cities.",
+      "technology": "Sophons (protons unfolded into computers), Staircase nuclear-pulse probes, controlled fusion, strong-interaction droplets, gravitational-wave broadcasting, curvature (lightspeed) drives, black domains of lowered lightspeed, photoids and dual-vector foils that make space two-dimensional.",
+      "mood": "Cold and vast; history seen from far above, with individual choices weighed against the fate of the species and the heat death of everything.",
+      "themes": [
+        "the dark forest: cosmic sociology as a war of all against all",
+        "trust, betrayal and a species' faith in itself",
+        "deterrence and the person who must hold the switch",
+        "science locked or armed",
+        "deep time and the end of the universe",
+        "what the Cultural Revolution did to a generation of scientists"
+      ],
+      "tags": [
+        "first-contact",
+        "space",
+        "cold-war",
+        "authoritarian",
+        "deep-time"
+      ],
+      "locations": [
+        {
+          "name": "Red Coast Base",
+          "blurb": "A classified radio station on Radar Peak where Ye Wenjie sends and answers."
+        },
+        {
+          "name": "Panama Canal",
+          "blurb": "Where nanofilament slices the Judgment Day in Operation Guzheng."
+        },
+        {
+          "name": "Between Jupiter and Saturn",
+          "blurb": "Site of the Doomsday Battle, where one droplet destroys the fleet."
+        },
+        {
+          "name": "Australia",
+          "blurb": "Where the whole human population is interned after deterrence fails."
+        },
+        {
+          "name": "DX3906 and Planet Blue",
+          "blurb": "The star Yun Tianming gave Cheng Xin; the last refuge, later a black domain."
+        }
+      ],
+      "factions": [
+        {
+          "name": "Earth-Trisolaris Organization",
+          "blurb": "Human traitors: Adventists who want humanity punished, Redemptionists who worship Trisolaris."
+        },
+        {
+          "name": "Planetary Defense Council and the Wallfacers",
+          "blurb": "The UN body that gives four men secret, unaccountable strategies."
+        },
+        {
+          "name": "Trisolaris",
+          "blurb": "A civilisation on a chaotic three-sun world, invading to survive."
+        },
+        {
+          "name": "Halo Group",
+          "blurb": "Cheng Xin's company, which builds lightspeed ships in secret against the law."
+        },
+        {
+          "name": "The Singer's civilisation",
+          "blurb": "An indifferent power that flattens the Solar System almost in passing."
+        }
+      ],
+      "whereToStart": [
+        {
+          "title": "The Three-Body Problem",
+          "year": 2014,
+          "medium": "book",
+          "blurb": "Ken Liu's translation of the first novel; the Cultural Revolution opening sets up everything."
+        },
+        {
+          "title": "The Dark Forest",
+          "year": 2015,
+          "medium": "book",
+          "blurb": "The Wallfacers, the Doomsday Battle and the idea that names the trilogy's universe."
+        },
+        {
+          "title": "3 Body Problem",
+          "year": 2024,
+          "medium": "tv",
+          "blurb": "Netflix's adaptation, which moves the story to Britain and changes the chronology."
+        }
+      ],
+      "connections": [
+        {
+          "id": "contact",
+          "note": "Both are about a radio message from the stars; here the answer is a warning, not a gift."
+        },
+        {
+          "id": "the-expanse",
+          "note": "Both show the Solar System's politics under an alien threat that humanity cannot match."
+        },
+        {
+          "id": "interstellar",
+          "note": "Both use relativity and higher dimensions to stretch human lives across deep time."
+        },
+        {
+          "id": "foundation",
+          "note": "Both have secret plans carried out over centuries; the Wallfacers are Seldon plans kept in one person's head."
+        }
+      ],
+      "spoilerLevel": "heavy"
+    },
+    {
+      "id": "for-all-mankind",
+      "setting": "Our own late twentieth and early twenty-first centuries, rerouted by one Soviet Moon landing in June 1969. NASA never loses its budget: there are women astronauts from 1970, a permanent base at the lunar south pole from 1973, fusion power by the late 1980s, and crews on Mars in 1995. Each season jumps about a decade, so the same characters age from test pilots into the elders of a Martian colony of five thousand people by 2012.",
+      "conflict": "First a race between the superpowers that keeps turning armed, on the Moon in 1983 and on Mars after that; then, once the powers agree to share space, a struggle between the governments and companies that run the colonies and the workers who live in them, which ends with Mars fighting Earth for independence.",
+      "politics": "A Cold War that never thaws in the usual way: the USSR survives into the 2010s, American presidents include Ted Kennedy and Ellen Wilson, and space policy sits at the centre of elections. After 1997 Mars is governed by the Mars-7 (later M-6) Alliance of national agencies and contractors, which treats the colony as a workforce.",
+      "technology": "Plausible extensions of real programmes: Saturn-derived landers, nuclear-powered shuttles, Sea Dragon heavy lift, helium-3 fusion from lunar mining, nuclear-thermal and solar-sail Mars craft, asteroid capture, a Martian space elevator and a crewed mission to Titan.",
+      "mood": "Earnest and competitive, with a steady rate of deaths paid for progress; each season gets less triumphant and more about who pays for the frontier.",
+      "themes": [
+        "what a space race costs the people who run it",
+        "women and outsiders entering institutions built without them",
+        "rivalry as the engine of progress",
+        "who owns a frontier's wealth",
+        "colonies outgrowing the powers that founded them"
+      ],
+      "tags": [
+        "space",
+        "cold-war",
+        "alternate-history",
+        "mars",
+        "colonisation"
+      ],
+      "locations": [
+        {
+          "name": "Jamestown",
+          "blurb": "American lunar base at Shackleton crater, founded 1973, site of the 1983 firefight."
+        },
+        {
+          "name": "Johnson Space Center",
+          "blurb": "NASA's Houston mission control; bombed in 1995, renamed for Molly Cobb."
+        },
+        {
+          "name": "Happy Valley",
+          "blurb": "The shared Martian base founded in 1995, later an independent nation."
+        },
+        {
+          "name": "Goldilocks",
+          "blurb": "Iridium asteroid dragged into Mars orbit in 2003, now a mining station."
+        },
+        {
+          "name": "Titan",
+          "blurb": "Saturn's moon, where the Sojourner-T crew finds methane-based life."
+        }
+      ],
+      "factions": [
+        {
+          "name": "NASA",
+          "blurb": "The American agency, funded like a war department after losing the Moon."
+        },
+        {
+          "name": "Soviet space programme (Roscosmos)",
+          "blurb": "The rival that landed first and never let the race end."
+        },
+        {
+          "name": "Helios Aerospace",
+          "blurb": "Dev Ayesa's fusion-rich company, the first private entrant to Mars."
+        },
+        {
+          "name": "Mars-7 / M-6 Alliance",
+          "blurb": "The multinational body that governs Mars from Earth after 1997."
+        },
+        {
+          "name": "Sons and Daughters of Mars",
+          "blurb": "The Martian independence movement founded by Ed Baldwin."
+        }
+      ],
+      "whereToStart": [
+        {
+          "title": "For All Mankind, season 1",
+          "year": 2019,
+          "medium": "tv",
+          "blurb": "The fork itself: the Soviet landing, the women's corps and Jamestown."
+        },
+        {
+          "title": "For All Mankind, season 3",
+          "year": 2022,
+          "medium": "tv",
+          "blurb": "The three-way race to Mars, if you want the show at its biggest."
+        }
+      ],
+      "connections": [
+        {
+          "id": "the-expanse",
+          "note": "A Martian colony and asteroid-mining workers turn against the Earth that governs them."
+        },
+        {
+          "id": "man-in-the-high-castle",
+          "note": "Another alternate twentieth century forked from a single historical outcome."
+        },
+        {
+          "id": "watchmen",
+          "note": "An alternate American history in which one change reshapes the Cold War and its presidents."
+        }
+      ],
+      "spoilerLevel": "heavy"
+    }
+  ]
+}

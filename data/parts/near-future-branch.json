@@ -2416,6 +2416,1123 @@
    ],
    "groupingNote": "The cleanest case in this group: no aliens arrive and no history is rewritten — this is what our own solar system becomes if one propulsion breakthrough lands, so the branch is drawn entirely in the fiction's own future. Tiers: T4 holds only the ring builders' two-billion-year-old payload; there is no T3 material, because the branch's history only starts in the twenty-first century; T2 carries the lunar and Martian settlements, the Epstein Drive and the Belt gold rush; T1 carries the whole series present, the ring gate, the Free Navy war, the Laconian conquest and the millennium after the gates close.",
    "epoch": "far-future"
+  },
+  {
+   "id": "handmaids-tale",
+   "title": "The Handmaid's Tale",
+   "medium": "book",
+   "creator": "Margaret Atwood",
+   "originYear": 1985,
+   "group": "near-future-branch",
+   "epoch": "present",
+   "franchiseStatus": "ongoing",
+   "divergence": {
+    "year": 1999,
+    "label": "The President's Day Massacre",
+    "delta": "Real: February 1999 — the Senate acquits Bill Clinton at his impeachment trial on 12 February, three days before Presidents' Day, and the constitutional crisis ends with Congress and the presidency intact. Fiction: the President is shot and Congress machine-gunned, the army declares a state of emergency, the attack is blamed on Islamic fanatics, and the Constitution is suspended as a temporary measure that never ends.",
+    "inUniverse": "The President's Day Massacre (named in the Historical Notes, which suspect Commander B. Frederick Judd of orchestrating it); no year is ever stated",
+    "confidence": "low",
+    "note": "Neither novel gives a year, so it is derived. (1) The Historical Notes cite a paper titled 'Iran and Gilead: Two Late-Twentieth-Century Monotheocracies', so Gilead begins before 2001. (2) Offred is 33 in her narrative; her daughter was three or four when women's accounts were frozen, a few weeks after the attack, five when the family was caught at the border, and is eight in the narrative, so the narrative falls about four years after the coup. (3) Offred recalls riots over pornography and abortion, with clinics being bombed, when she was fourteen or fifteen; read against the real wave of clinic bombings in 1984, she was born about 1970, which puts her narrative about 2003 and the coup about 1999. (4) This agrees with Joyce Carol Oates's 2006 reading that the narrative is set around 2005, and with The Testaments, where Lydia is 53 at the takeover and in her early seventies at the climax and Offred about fifty. 1999 is the latest year that keeps Gilead plainly late-twentieth-century; anything from the mid-1990s to 2000 fits the text. The name places the attack in February. The fork is put at the coup rather than at the earlier fertility collapse because the collapse is never dated and blends into real 1980s anxieties. The Hulu series dates the attack to September 2014; that is a different continuity.",
+    "sources": [
+     {
+      "title": "Wikipedia: The Handmaid's Tale (the attack, the Sons of Jacob, the 2195 epilogue; setting speculated to be about 2005)",
+      "url": "https://en.wikipedia.org/wiki/The_Handmaid%27s_Tale"
+     },
+     {
+      "title": "Joyce Carol Oates, 'Margaret Atwood's Tale', New York Review of Books, 2 November 2006 (dates the narrative to about 2005)",
+      "url": "https://www.nybooks.com/articles/2006/11/02/margaret-atwoods-tale/"
+     },
+     {
+      "title": "The Handmaid's Tale Wiki (Fandom): President's Day Massacre",
+      "url": "https://the-handmaids-tale.fandom.com/wiki/President%27s_Day_Massacre"
+     },
+     {
+      "title": "Crossref-it: The Handmaid's Tale, chapter 28 (the attack, the suspended Constitution, frozen accounts)",
+      "url": "https://crossref-it.info/textguide/the-handmaids-tale/31/2127"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "The leaked files bring on a purge, a military coup and a popular revolt that end Gilead and restore the United States, and by 2197 the regime is a subject for historians while Becka's statue is dedicated by the sisters, their mother and their grandchildren.",
+    "asOf": 2197
+   },
+   "events": [
+    {
+     "id": "hmt-novel-1985",
+     "year": 1985,
+     "date": "1985",
+     "title": "The Handmaid's Tale is published",
+     "description": "Margaret Atwood publishes the novel she began in West Berlin in 1984: a Handmaid's account of the first years of a theocracy that has replaced the United States, closed by a scholarly epilogue set in 2195.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: The Handmaid's Tale",
+       "url": "https://en.wikipedia.org/wiki/The_Handmaid%27s_Tale"
+      }
+     ],
+     "note": "Published by McClelland & Stewart in Canada in 1985; winner of the Governor General's Award that year and of the first Arthur C. Clarke Award in 1987. Written after Reagan's election, with the Iranian revolution as a stated model.",
+     "binWhy": "A publication, not an event in the story's world, so it takes no bin.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "hmt-births-fail-1995",
+     "year": 1995,
+     "date": "1995",
+     "title": "The birth rate collapses",
+     "description": "Stillbirths, miscarriages and deformities rise and the birth rate falls steeply, which the Historical Notes blame on pollution, pesticides, nuclear accidents, leaks from chemical and biological weapons stockpiles, a strain of syphilis, AIDS and birth control. Men who will become the Sons of Jacob organise think tanks around the falling white birth rate, the grievance the coup will exploit.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "The pre-Gilead decline in births; the Sons of Jacob Think Tanks (Historical Notes)",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "LitCharts: Historical Notes on The Handmaid's Tale (causes of infertility; the Sons of Jacob)",
+       "url": "https://www.litcharts.com/lit/the-handmaid-s-tale/historical-notes-on-the-handmaid-s-tale"
+      },
+      {
+       "title": "BookRags: Notes on the Historical Notes (pollution, birth control, declining Caucasian birth rate)",
+       "url": "https://www.bookrags.com/notes/hmt/part16.html"
+      },
+      {
+       "title": "Encyclopedia.com: The Handmaid's Tale (waste and war leave most women sterile)",
+       "url": "https://www.encyclopedia.com/arts/encyclopedias-almanacs-transcripts-and-maps/handmaids-tale"
+      }
+     ],
+     "note": "Undated in both novels: the Historical Notes describe a late-twentieth-century decline, and the think tanks formed after a superpower arms stalemate and a classified Spheres of Influence Accord. The year is a marker, not a stated date: it is the approximate birth year of Offred's daughter (about four at the 1999 coup), placing the event inside the decade before the coup. Several of the causes it names (AIDS, pesticides, nuclear accidents) are real 1980s fears; the fiction's step is that together they sterilise most of a population. The novels describe no market crash, so no economic event is included.",
+     "binWhy": "A biological failure sterilises a society on a mass scale and gives the coup its pretext.",
+     "bin": "plague",
+     "facets": {
+      "change": "falling births → a society that cannot replace itself",
+      "mechanism": "disaster",
+      "actor": "nature",
+      "position": "outside",
+      "scope": "civilisational",
+      "domain": "biological",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "crisis-ecological",
+       "arms-race"
+      ],
+      "outcomes": [
+       "radicalisation",
+       "new-actors",
+       "despair"
+      ]
+     }
+    },
+    {
+     "id": "hmt-presidents-day-1999",
+     "year": 1999,
+     "date": "1999-02",
+     "title": "The President's Day Massacre and the suspension of the Constitution",
+     "description": "The Sons of Jacob shoot the President and machine-gun Congress, blame Islamic fanatics, and have the army declare a state of emergency and suspend the Constitution. Weeks later, on one day, every woman's account is frozen and passed to her nearest male relative and women are dismissed from their jobs; women who march are fired on, and women professionals are rounded up into a stadium.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "The President's Day Massacre (Historical Notes); the aftermath is Offred's chapter 28 and Lydia's arrest in The Testaments",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Crossref-it: The Handmaid's Tale, chapter 28",
+       "url": "https://crossref-it.info/textguide/the-handmaids-tale/31/2127"
+      },
+      {
+       "title": "Novelguide: The Handmaid's Tale, chapters 25-28 (Compunumbers wiped, women dismissed)",
+       "url": "https://novelguide.com/the-handmaids-tale/summaries/chapters25-28.html"
+      },
+      {
+       "title": "The Handmaid's Tale Wiki (Fandom): President's Day Massacre",
+       "url": "https://the-handmaids-tale.fandom.com/wiki/President%27s_Day_Massacre"
+      },
+      {
+       "title": "The Handmaid's Tale Wiki (Fandom): Aunt Lydia (novel), arrested as the credit cards are cancelled",
+       "url": "https://the-handmaids-tale.fandom.com/wiki/Aunt_Lydia_(Novel)"
+      }
+     ],
+     "note": "Year derived as set out in the divergence note; February follows from the name. Offred says things stayed in suspended animation for weeks, with newspapers censored, roadblocks and Identipasses, before the day women lost their money and work, so the freeze belongs to the same year and is merged here. The Testaments has Lydia's office raided the day the cards are cancelled. What made the freeze possible was a cashless Compubank economy already in place.",
+     "binWhy": "A faction massacres the government, blames an outside enemy and takes the state; the attack is the instrument, the seizure is the event.",
+     "bin": "power-seized",
+     "facets": {
+      "change": "a constitutional republic → emergency rule by the Sons of Jacob",
+      "mechanism": "coup",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "manufactured-emergency",
+       "crisis-ecological",
+       "religious-fervour"
+      ],
+      "outcomes": [
+       "theocracy",
+       "suppression",
+       "servitude"
+      ]
+     }
+    },
+    {
+     "id": "hmt-handmaids-2000",
+     "year": 2000,
+     "date": "2000",
+     "title": "Gilead founds the Handmaid system",
+     "description": "The new republic voids second marriages, declares the wives in them adulteresses and takes their children. Fertile women are trained by the Aunts at the Rachel and Leah Centre and assigned to Commanders' households to bear children for them. Offred, caught at the Canadian border with her husband and five-year-old daughter, is among the first wave.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Offred is 'among the first wave of women recruited for reproductive purposes' (Historical Notes)",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Wikipedia: The Handmaid's Tale (the capture, the voided divorce, the daughter taken)",
+       "url": "https://en.wikipedia.org/wiki/The_Handmaid%27s_Tale"
+      },
+      {
+       "title": "Wikipedia: The Testaments (Lydia chosen by Commander Judd to found the Aunts)",
+       "url": "https://en.wikipedia.org/wiki/The_Testaments"
+      }
+     ],
+     "note": "Derived: Offred's daughter was three or four at the 1999 freeze and five at the capture, so the capture and the Red Center fall about a year after the coup. The Aunts themselves were founded by Lydia and a few others picked out of the stadium by Commander Judd in the months after the attack. The Historical Notes say Gilead's forms were borrowed from other societies, and name Commander Frederick Waterford as the probable designer of the Handmaids' red dress.",
+     "binWhy": "The regime creates the institution the whole world is known by: a caste of conscripted child-bearers and the women who train them.",
+     "bin": "new-institution",
+     "facets": {
+      "change": "free women → state-assigned Handmaids",
+      "mechanism": "founding",
+      "actor": "state",
+      "position": "above",
+      "scope": "national",
+      "domain": "social",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": 1
+      },
+      "preconditions": [
+       "theocracy",
+       "crisis-ecological",
+       "repression"
+      ],
+      "outcomes": [
+       "servitude",
+       "closing-borders",
+       "new-order"
+      ]
+     }
+    },
+    {
+     "id": "hmt-offred-2003",
+     "year": 2003,
+     "date": "2003",
+     "title": "Offred's story",
+     "description": "On her third posting, with Commander Fred in Cambridge, Offred is drawn into the Commander's forbidden evenings, a sanctioned affair with the driver Nick, and the Mayday resistance, whose password her shopping partner Ofglen gives her. Ofglen hangs herself when the Eyes come; at the end men in a black van take Offred away, and Nick tells her it is Mayday.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "The narrative present of The Handmaid's Tale, spring to summer",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Wikipedia: The Handmaid's Tale",
+       "url": "https://en.wikipedia.org/wiki/The_Handmaid%27s_Tale"
+      },
+      {
+       "title": "The Handmaid's Tale Wiki (Fandom): Offred (novel), aged 33",
+       "url": "https://the-handmaids-tale.fandom.com/wiki/Offred_(Novel)"
+      },
+      {
+       "title": "The Handmaid's Tale Wiki (Fandom): Mayday",
+       "url": "https://the-handmaids-tale.fandom.com/wiki/Mayday"
+      }
+     ],
+     "note": "Derived: Offred is 33 and her daughter, five at the capture, 'must be' eight, about four years after the 1999 coup. Joyce Carol Oates put it at about 2005. The Historical Notes say the tapes were found in a U.S. Army footlocker in Bangor, Maine, on the Underground Femaleroad, which suggests she got out, and that Waterford was purged soon after. In our 2003 the United States invaded Iraq; the fiction's United States is closed, and its resistance runs on passwords and vans.",
+     "binWhy": "An ordinary woman is drawn into the hidden resistance and the Commander's secret life; the story is her call.",
+     "bin": "the-call",
+     "facets": {
+      "change": "a compliant Handmaid → a woman in Mayday's hands",
+      "mechanism": "recruitment",
+      "actor": "movement",
+      "position": "below",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "theocracy",
+       "slavery-or-servitude",
+       "hidden-society"
+      ],
+      "outcomes": [
+       "resistance-forms",
+       "exile"
+      ]
+     }
+    },
+    {
+     "id": "hmt-baby-nicole-2004",
+     "year": 2004,
+     "date": "2004",
+     "title": "Baby Nicole is smuggled into Canada",
+     "description": "The Handmaid conceives a daughter in her Commander's household, goes underground with the newborn and hands her to Mayday near the border to be carried into Canada. Gilead calls it kidnapping and demands her back for the next sixteen years; Canada's protesters put her face on their posters.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "'Baby Nicole', later raised in Toronto as Daisy (The Testaments)",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "The Handmaid's Tale Wiki (Fandom): Daisy (novel)",
+       "url": "https://the-handmaids-tale.fandom.com/wiki/Daisy_(Novel)"
+      },
+      {
+       "title": "Wikipedia: The Testaments",
+       "url": "https://en.wikipedia.org/wiki/The_Testaments"
+      }
+     ],
+     "note": "Derived: Offred ends the first novel possibly pregnant by Nick in summer 2003, so the birth falls about 2004, and Nicole's sixteenth birthday then lands in 2020, matching Offred being about fifty in the sequel. The Testaments' epilogue only suggests that the mother is Offred; the atlas follows that reading and says so.",
+     "binWhy": "A child is born and carried out on whom the regime's fall will later turn.",
+     "bin": "chosen-one",
+     "facets": {
+      "change": "a Commander's child → a symbol in exile",
+      "mechanism": "birth",
+      "actor": "individual",
+      "position": "below",
+      "scope": "national",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 0,
+       "population": 1
+      },
+      "preconditions": [
+       "theocracy",
+       "slavery-or-servitude",
+       "exile"
+      ],
+      "outcomes": [
+       "exile",
+       "resistance-forms"
+      ]
+     }
+    },
+    {
+     "id": "hmt-testaments-2019",
+     "year": 2019,
+     "date": "2019-09-10",
+     "title": "The Testaments is published",
+     "description": "Atwood publishes the sequel, told by Aunt Lydia and two young women, one raised in Gilead and one in Toronto, and closed by a second symposium in 2197. It shares the 2019 Booker Prize.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: The Testaments",
+       "url": "https://en.wikipedia.org/wiki/The_Testaments"
+      }
+     ],
+     "note": "Written while the Hulu series was running, with Atwood telling its producers where the sequel was going; the novel is the continuity followed here.",
+     "binWhy": "A publication, not an event in the story's world, so it takes no bin.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "hmt-microdot-2020",
+     "year": 2020,
+     "date": "2020",
+     "title": "The Commanders' files are carried out of Gilead",
+     "description": "Aunt Lydia, secretly Mayday's mole, has spent years collecting evidence of the Commanders' crimes. Nicole, sent into Gilead after her adoptive parents are murdered on her sixteenth birthday, escapes by sea with her half-sister Agnes carrying the files on a microdot in a tattoo, and the Canadian media publish them.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "The Ardua Hall Holograph and Witness Testimonies 369A and 369B (The Testaments)",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Wikipedia: The Testaments",
+       "url": "https://en.wikipedia.org/wiki/The_Testaments"
+      },
+      {
+       "title": "The Handmaid's Tale Wiki (Fandom): Daisy (novel)",
+       "url": "https://the-handmaids-tale.fandom.com/wiki/Daisy_(Novel)"
+      }
+     ],
+     "note": "Derived from Nicole's sixteenth birthday (born about 2004). The book is described as set fifteen years after The Handmaid's Tale, which fits its opening chapters (about 2018) rather than its climax. Lydia is in her early seventies, having been 53 at the takeover.",
+     "binWhy": "Evidence the regime hid from its own people and the world is carried out and published.",
+     "bin": "truth-revealed",
+     "facets": {
+      "change": "crimes buried in Ardua Hall → published in Canada",
+      "mechanism": "disclosure",
+      "actor": "movement",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "theocracy",
+       "cover-up",
+       "repression"
+      ],
+      "outcomes": [
+       "revelation",
+       "purge",
+       "resistance-forms"
+      ]
+     }
+    },
+    {
+     "id": "hmt-fall-2021",
+     "year": 2021,
+     "date": "2021",
+     "title": "Purge, military coup and the fall of Gilead",
+     "description": "The leaks set off a purge of the elite, which provokes a military coup and a popular revolt. Gilead is weakened and falls, and the United States is restored by Mayday and the American holdouts.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Wikipedia: The Testaments (the purge, the coup, the fall and restoration)",
+       "url": "https://en.wikipedia.org/wiki/The_Testaments"
+      }
+     ],
+     "note": "The Testaments gives the order (leak, purge, coup and revolt, fall) but no intervals. The purge and coup are placed in the year after the leak, the earliest separate year; the final fall and restoration may have taken years longer and are undated. Lydia plans to die by morphine overdose before she can be questioned.",
+     "binWhy": "The ruling Commanders are purged and deposed by a military coup, and the regime's succession is open until it falls.",
+     "bin": "ruler-falls",
+     "facets": {
+      "change": "the Commanders' regime → purged, overthrown, gone",
+      "mechanism": "coup",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-legitimacy",
+       "theocracy",
+       "one-party-state"
+      ],
+      "outcomes": [
+       "purge",
+       "succession-struggle",
+       "state-dissolves"
+      ]
+     }
+    },
+    {
+     "id": "hmt-denay-2195",
+     "year": 2195,
+     "date": "2195-06-25",
+     "title": "The Twelfth Symposium on Gileadean Studies",
+     "description": "At the University of Denay, Nunavit, Professor Pieixoto of Cambridge presents the transcribed cassettes found in a footlocker in Bangor, Maine, as 'The Handmaid's Tale'. Gilead is a period for academic study, with scarce records because its Great Purge destroyed them, and the scholars joke about the material.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Historical Notes on The Handmaid's Tale, 25 June 2195, chaired by Professor Maryann Crescent Moon",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Encyclopedia.com: The Handmaid's Tale (symposium held on 25 June 2195)",
+       "url": "https://www.encyclopedia.com/arts/encyclopedias-almanacs-transcripts-and-maps/handmaids-tale"
+      },
+      {
+       "title": "LitCharts: Historical Notes on The Handmaid's Tale",
+       "url": "https://www.litcharts.com/lit/the-handmaid-s-tale/historical-notes-on-the-handmaid-s-tale"
+      }
+     ],
+     "note": "The only date either novel states outright. The epilogue shows an Arctic Canada with Indigenous names, a woman chairing the session and a male scholar condescending to his source; Atwood's point is that the regime is gone but its attitudes survive in how its history is told.",
+     "binWhy": "A jump of nearly two centuries shows Gilead as a closed chapter studied by historians.",
+     "bin": "long-after",
+     "facets": {
+      "change": "a living regime → an academic field",
+      "mechanism": "disclosure",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "civilisational",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "time-lost",
+       "cover-up"
+      ],
+      "outcomes": [
+       "revelation",
+       "time-lost"
+      ]
+     }
+    },
+    {
+     "id": "hmt-passamaquoddy-2197",
+     "year": 2197,
+     "date": "2197",
+     "title": "The Thirteenth Symposium on Gileadean Studies",
+     "description": "Pieixoto presents two newer finds: Aunt Lydia's manuscript, hidden inside a copy of Newman's Apologia Pro Vita Sua, and the witness testimonies of Agnes and Nicole. He suggests their mother was Offred, and describes a statue of Becka put up by the sisters with their mother, both fathers, their children and grandchildren.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "The Thirteenth Symposium, the epilogue of The Testaments",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: The Testaments (Thirteenth Symposium, 2197)",
+       "url": "https://en.wikipedia.org/wiki/The_Testaments"
+      },
+      {
+       "title": "The Handmaid's Tale Wiki (Fandom): The Thirteenth Symposium",
+       "url": "https://the-handmaids-tale.fandom.com/wiki/The_Thirteenth_Symposium"
+      }
+     ],
+     "note": "The year is stated in the epilogue. The statue shows the survivors living long enough to have grandchildren after the fall, which confirms Gilead ended within their lifetimes.",
+     "binWhy": "A second jump forward shows what became of the women who brought Gilead down.",
+     "bin": "long-after",
+     "facets": {
+      "change": "hidden testimonies → the documented fall of Gilead",
+      "mechanism": "disclosure",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "civilisational",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 1
+      },
+      "preconditions": [
+       "time-lost",
+       "secrecy"
+      ],
+      "outcomes": [
+       "revelation",
+       "recovery"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs in the near-future branch because it leaves our history by one political event inside a recognisably real United States, a decade and a half after the book was written, and walks forward from there in our calendar. It follows the novels' continuity (The Handmaid's Tale, 1985, and The Testaments, 2019, including both epilogues); the Hulu series (2017-2025), which dates the attack to 2014, names Offred June and invents much of the middle, is not followed. Tiers covered are T3 (1985-1999) and T2 (2000-2197). T4 is empty because the fiction reaches back only to Offred's childhood, and T1 is empty because the last glimpse is the 2197 symposium.",
+   "sources": [
+    {
+     "title": "Wikipedia: The Handmaid's Tale",
+     "url": "https://en.wikipedia.org/wiki/The_Handmaid%27s_Tale"
+    },
+    {
+     "title": "Wikipedia: The Testaments",
+     "url": "https://en.wikipedia.org/wiki/The_Testaments"
+    },
+    {
+     "title": "Wikipedia: The Testaments (TV series)",
+     "url": "https://en.wikipedia.org/wiki/The_Testaments_(TV_series)"
+    },
+    {
+     "title": "The Handmaid's Tale Wiki (Fandom): Republic of Gilead (novels)",
+     "url": "https://the-handmaids-tale.fandom.com/wiki/Republic_of_Gilead_(Novel)"
+    }
+   ]
+  },
+  {
+   "id": "ministry-for-the-future",
+   "title": "The Ministry for the Future",
+   "medium": "book",
+   "creator": "Kim Stanley Robinson",
+   "originYear": 2020,
+   "group": "near-future-branch",
+   "epoch": "present",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 2025,
+    "label": "A wet-bulb heat wave kills about twenty million people in India",
+    "delta": "Real: in 2025 an India–Pakistan heat wave ran from April to 10 July, peaked at 48.0 °C at Sri Ganganagar on 12 June and had about 455 recorded deaths in India. Experts think heat deaths there are badly undercounted, but nothing near the novel's scale happened. Fiction: in a town in Uttar Pradesh, wet-bulb temperatures stay above what the body can survive for about two weeks, and around twenty million people die.",
+    "inUniverse": "The big heat wave in India (chapter 1). Chapter 3 says the Ministry was established in Zurich in January 2025 and that 'not long after that' the heat wave struck, which puts it in the pre-monsoon summer of 2025.",
+    "confidence": "high",
+    "note": "Chapter 1 gives no year, but chapter 3 does: January 2025 for the Ministry, and the heat wave soon after. Reviewers (McKibben in the NYRB, Wikipedia) place it in the summer of 2025. The book's first departure from our record is actually a little earlier, when COP29 votes to create the Ministry. That decision is kept as a prehistory event, because it made no difference until the heat wave gave the Ministry its purpose. The heat wave is what sets the world's chain going.",
+    "sources": [
+     {
+      "title": "Science Friday: excerpt from The Ministry for the Future (Ministry established in Zurich, January 2025; the heat wave 'not long after')",
+      "url": "https://www.sciencefriday.com/articles/ministry-for-the-future-excerpt/"
+     },
+     {
+      "title": "Wikipedia: 2025 India–Pakistan heat wave",
+      "url": "https://en.wikipedia.org/wiki/2025_India%E2%80%93Pakistan_heat_wave"
+     },
+     {
+      "title": "Bill McKibben, It's Not Science Fiction (NYRB, 2020)",
+      "url": "https://www.nybooks.com/articles/2020/12/17/kim-stanley-robinson-not-science-fiction/"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "By COP58 atmospheric CO2 is falling by several parts per million a year, the Antarctic glaciers have been slowed and stabilised, and the parties call it 'the birth of a good Anthropocene'. The dead of the 2020s and 2030s are not undone.",
+    "asOf": 2053
+   },
+   "events": [
+    {
+     "id": "mff-publication-2020",
+     "year": 2020,
+     "date": "2020-10-06",
+     "title": "The Ministry for the Future is published",
+     "description": "Orbit publishes Robinson's novel five years before its opening heat wave. It is a future history in 106 short chapters, told through two main characters, eyewitnesses, meeting minutes and riddles.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: The Ministry for the Future (published 6 October 2020 by Orbit)",
+       "url": "https://en.wikipedia.org/wiki/The_Ministry_for_the_Future"
+      }
+     ],
+     "note": "Hardcover publication date. The novel's first dated event lies only four to five years after it was written, so much of the chain now falls within the reader's own years.",
+     "binWhy": "A publication is the book coming out, not something that happens in its world, so it gets no bin.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "mff-cop29-ministry-2024",
+     "year": 2024,
+     "date": "2024 (COP29); the Ministry opens in Zurich in January 2025",
+     "title": "COP29 creates a Subsidiary Body to speak for future generations",
+     "description": "At COP29 in Bogotá, the parties to the Paris Agreement use Articles 16 and 18 to create a new Subsidiary Body. Its charge is to defend 'all living creatures present and future who cannot speak for themselves'. It opens in Zurich in January 2025 under Mary Murphy, a former Irish foreign minister, and the press nicknames it the Ministry for the Future.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "COP29, held in Bogotá; the Ministry is established in Zurich in January 2025 (chapter 3)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Science Friday: excerpt from The Ministry for the Future (COP29 in Bogotá creates the Subsidiary Body)",
+       "url": "https://www.sciencefriday.com/articles/ministry-for-the-future-excerpt/"
+      },
+      {
+       "title": "Wikipedia: 2024 United Nations Climate Change Conference (the real COP29, Baku, 11–22 November 2024)",
+       "url": "https://en.wikipedia.org/wiki/2024_United_Nations_Climate_Change_Conference"
+      }
+     ],
+     "note": "The book numbers the conference rather than dating it. COPs are annual, the real COP29 met in November 2024, and the book opens the Ministry in January 2025, so the decision is dated 2024. The Zurich opening itself is January 2025 and is stated. Our COP29 was held in Baku, not Bogotá, and was mostly about climate finance and carbon-credit rules; it created no body with legal standing for future generations.",
+     "binWhy": "A treaty body is founded, and it will shape the rest of the century's climate politics.",
+     "bin": "new-institution",
+     "facets": {
+      "change": "no one speaks for the future → a treaty body charged to",
+      "mechanism": "founding",
+      "actor": "state",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-ecological",
+       "weak-institutions"
+      ],
+      "outcomes": [
+       "new-actors",
+       "diplomacy"
+      ]
+     }
+    },
+    {
+     "id": "mff-heat-wave-2025",
+     "year": 2025,
+     "date": "2025 (pre-monsoon summer)",
+     "title": "The Indian heat wave: about twenty million dead",
+     "description": "A heat dome settles over the Gangetic plain, and wet-bulb temperatures stay above 35 °C for about two weeks. The power grid fails and air conditioning with it, and people who go into a lake to cool off die in water as hot as a bath. Frank May, an American aid worker, is the only survivor of his town, and the event radicalises India and eventually the world.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Chapter 1: 'a small city in Uttar Pradesh'; the heat wave follows the Ministry's January 2025 founding 'not long after'",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Bill McKibben, It's Not Science Fiction (NYRB) — 'the summer of 2025', about twenty million dead",
+       "url": "https://www.nybooks.com/articles/2020/12/17/kim-stanley-robinson-not-science-fiction/"
+      },
+      {
+       "title": "Wikipedia: 2025 India–Pakistan heat wave (the real one)",
+       "url": "https://en.wikipedia.org/wiki/2025_India%E2%80%93Pakistan_heat_wave"
+      }
+     ],
+     "note": "The real 2025 heat season in India peaked at 48.0 °C with about 455 recorded deaths. Undercounting is real: one study estimates a five-day heat wave causes about thirty thousand excess deaths in India. Even so, the fiction is roughly three orders of magnitude worse, and it depends on sustained wet-bulb 35 °C, which our 2025 did not reach.",
+     "binWhy": "A disaster kills twenty million people in two weeks and changes India's politics and the world's.",
+     "bin": "mass-death",
+     "facets": {
+      "change": "a hot summer → twenty million dead in two weeks",
+      "mechanism": "disaster",
+      "actor": "nature",
+      "position": "outside",
+      "scope": "national",
+      "domain": "biological",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "crisis-ecological",
+       "weak-institutions"
+      ],
+      "outcomes": [
+       "mass-death",
+       "radicalisation",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "mff-india-aerosols-2026",
+     "year": 2026,
+     "date": "shortly after the 2025 heat wave",
+     "title": "India sprays the stratosphere on its own",
+     "description": "India's new government ignores the treaty process and has its air force fly sulphur aerosols into the stratosphere. The aim is to copy the cooling of the 1991 Pinatubo eruption. The pulse works for a few years and then dissipates, and India goes on to build solar power and organic farming at scale.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Early chapters, directly after the heat wave; no year given",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Crooked Timber: On Solar Geoengineering and Kim Stanley Robinson (the programme follows 'shortly after' the opening)",
+       "url": "https://crookedtimber.org/2021/05/05/on-solar-geoengineering-and-kim-stanley-robinson/"
+      }
+     ],
+     "note": "The book says only that this follows shortly after the heat wave. It could be late 2025, but the atlas allows one event per year, so it is placed in 2026. In reality no state has carried out stratospheric aerosol injection; the only field activity by the mid-2020s has been small private balloon releases and research proposals.",
+     "binWhy": "A state switches on planetary-scale geoengineering, which no one had done before.",
+     "bin": "new-technology-deployed",
+     "facets": {
+      "change": "a debated idea → aerosols in the stratosphere",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "disaster-just-struck",
+       "crisis-ecological"
+      ],
+      "outcomes": [
+       "turning-point",
+       "rivalry"
+      ]
+     }
+    },
+    {
+     "id": "mff-glacier-pumping-2032",
+     "year": 2032,
+     "date": "2032 (the Arctic ice-free summer is stated; the glacier trials bracket it)",
+     "title": "The Antarctic glacier-slowing trials begin as the Arctic goes ice-free",
+     "description": "Glaciologists funded through the Ministry drill to the beds of Antarctic glaciers, starting with Thwaites. They pump the meltwater that lubricates the ice up to the surface, so the glaciers settle back onto bedrock and slide more slowly. That is the summer the Arctic Ocean first loses all its ice.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "'The Arctic's ice cover melted completely, for the first time, in 2032' (chapter 36); the pumping trials are chapters 29 and 44",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Bryan Alexander, Our Ministry for the Future reading: part 2 (Arctic ice-free in 2032, chapter 36; Thwaites trials, chapters 29 and 44)",
+       "url": "https://bryanalexander.org/book-club/our-ministry-for-the-future-reading-part-2/"
+      },
+      {
+       "title": "Eckard Smuts, Reading Notes: Ministry for the Future",
+       "url": "https://www.eckardsmuts.com/posts/ministry-for-the-future"
+      }
+     ],
+     "note": "2032 is one of the book's few explicit years, and it dates the Arctic event. The glacier trials are told in the chapters on either side of it, so 2032 dates them only approximately. This year has not yet come for readers. Basal-water pumping on Antarctic glaciers exists only in research proposals, and projections of a first ice-free Arctic September run from the 2030s to mid-century.",
+     "binWhy": "An untried engineering technique is used on the world's largest ice sheet to slow sea-level rise.",
+     "bin": "new-technology-deployed",
+     "facets": {
+      "change": "glaciers sliding on meltwater → pumped dry and slowed",
+      "mechanism": "expedition",
+      "actor": "movement",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-ecological",
+       "existential-threat"
+      ],
+      "outcomes": [
+       "rebuilding",
+       "collaboration"
+      ]
+     }
+    },
+    {
+     "id": "mff-crash-day-2035",
+     "year": 2035,
+     "date": "the 2030s ('the zombie years')",
+     "title": "Crash Day: the Children of Kali bring down sixty airliners",
+     "description": "The Children of Kali, a clandestine network that grew out of the heat wave, fly drone swarms into jet engines around the world. Sixty passenger jets go down within hours and about seven thousand people die, and the same year drones sink container ships. Commercial flying mostly stops, and airships and sail-assisted freight replace it. Later histories in the novel say the 'War for the Earth' began that day.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Chapter 51, 'the thirties were the zombie years'; Crash Day and the ship sinkings 'that same year'",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Necromancy Never Pays: The Ministry for the Future (Crash Day, sixty jets, about seven thousand dead; ships sunk that same year)",
+       "url": "https://necromancyneverpays.wordpress.com/2021/03/01/the-ministry-for-the-future/"
+      },
+      {
+       "title": "Bryan Alexander, Our Ministry for the Future reading: part 3 (chapters 51-68, the 2030s)",
+       "url": "https://bryanalexander.org/book-club/our-ministry-for-the-future-reading-part-3/"
+      }
+     ],
+     "note": "Chapter 51 is a survey of the 2030s and does not say which year Crash Day fell in. It is placed mid-decade, after the stated 2032 Arctic summer. The other dated 2030s chapter, a city whose taps run dry on 11 September 2034, cannot be placed relative to it. This is in readers' future; in our world no attack has downed more than a few aircraft at once.",
+     "binWhy": "A coordinated campaign against civilian aviation, short of war, stops global air travel.",
+     "bin": "terror-attack",
+     "facets": {
+      "change": "a flying world → flight as a death risk",
+      "mechanism": "attack",
+      "actor": "faction",
+      "position": "below",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-ecological",
+       "crisis-legitimacy",
+       "disaster-just-struck"
+      ],
+      "outcomes": [
+       "radicalisation",
+       "turning-point",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "mff-carbon-coin-2036",
+     "year": 2036,
+     "date": "the 2030s, after Crash Day",
+     "title": "The central banks issue the carbon coin",
+     "description": "The central bankers first turn Mary Murphy down. After Crash Day and the attacks on the Ministry, they agree to a 'carbon quantitative easing'. It is a complementary currency paid for each tonne of carbon kept out of the air for a century, and it gives oil owners a reason to leave their reserves in the ground. It slowly becomes a pillar of world finance.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Chapters 42-50 (first refused) and 63-73 (adopted); no year given",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Wikipedia: The Ministry for the Future (carbon quantitative easing and the carbon coin)",
+       "url": "https://en.wikipedia.org/wiki/The_Ministry_for_the_Future"
+      },
+      {
+       "title": "Robert Christgau, Avoiding Wet-Bulb 35C (Robinson: things 'I described in my novel as happening in the 2030s')",
+       "url": "https://robertchristgau.substack.com/p/avoiding-wet-bulb-35c"
+      }
+     ],
+     "note": "The adoption happens after Crash Day and before the Saudi turn, and Robinson has said it belongs to the 2030s, so the year is placed on that basis. The idea is real: it comes from Delton Chen's 'Global Carbon Reward' proposal. No central bank has adopted anything like it. The nearest real steps are central-bank climate-risk supervision and green-bond purchasing.",
+     "binWhy": "The world's central banks set up a standing monetary system that pays for carbon drawdown.",
+     "bin": "new-institution",
+     "facets": {
+      "change": "carbon as a free waste → carbon mitigation as money",
+      "mechanism": "negotiation",
+      "actor": "state",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "economic",
+      "direction": {
+       "power": 1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-ecological",
+       "resource-dependency"
+      ],
+      "outcomes": [
+       "new-order",
+       "reform",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "mff-saudi-coup-2038",
+     "year": 2038,
+     "date": "late 2030s",
+     "title": "A coup in Saudi Arabia turns the petrostate against oil",
+     "description": "A coup in Riyadh brings in a government that joins the carbon-coin system and moves the kingdom to solar power. It is one of several in a run of national turns, with Brazil protecting the Amazon and African states rejecting oil dependency. The world's largest oil exporter leaving oil breaks the fossil bloc.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Chapter 69; no year given",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Bryan Alexander, Our Ministry for the Future reading: part 4 (chapters 69-88: Saudi Arabia from petrostate to carbon currency)",
+       "url": "https://bryanalexander.org/book-club/our-ministry-for-the-future-reading-part-4/"
+      },
+      {
+       "title": "Eckard Smuts, Reading Notes (Saudi coup, chapter 69)",
+       "url": "https://www.eckardsmuts.com/posts/ministry-for-the-future"
+      }
+     ],
+     "note": "The year is placed from the chapter order: after the carbon coin, before the debt strike, and within the book's 2030s. It is well in readers' future; in our world Saudi Arabia is still a major oil exporter.",
+     "binWhy": "A faction takes the Saudi state by coup and reverses its reason for existing.",
+     "bin": "power-seized",
+     "facets": {
+      "change": "a petrostate → a solar state",
+      "mechanism": "coup",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "resource-dependency",
+       "crisis-legitimacy"
+      ],
+      "outcomes": [
+       "reform",
+       "new-order"
+      ]
+     }
+    },
+    {
+     "id": "mff-debt-strike-2039",
+     "year": 2039,
+     "date": "end of the 2030s",
+     "title": "The debt strike",
+     "description": "Students and other debtors stop paying at once, and revolts around the world demand cancellation of student and African sovereign debt. The banks fail and a 'super depression' follows. The crisis gives governments leverage over the banks, and they use it to push through the Ministry's financial reforms.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Chapter 75; no year given",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Bryan Alexander, Our Ministry for the Future reading: part 4 (the debt strike destabilises the financial sector)",
+       "url": "https://bryanalexander.org/book-club/our-ministry-for-the-future-reading-part-4/"
+      }
+     ],
+     "note": "Placed from the chapter order: after the Saudi turn and before the 2040s chapters where CO2 begins to fall. The real US student-loan moratorium of 2020-2023 was a government pause, not a strike; the fiction imagines debtors coordinating their refusal.",
+     "binWhy": "Debtors revolt against their creditors by refusing to pay; the financial crisis is the consequence.",
+     "bin": "uprising",
+     "facets": {
+      "change": "debt paid → debt refused",
+      "mechanism": "uprising",
+      "actor": "movement",
+      "position": "below",
+      "scope": "planetary",
+      "domain": "economic",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-economic",
+       "crisis-legitimacy"
+      ],
+      "outcomes": [
+       "recession",
+       "reform"
+      ]
+     }
+    },
+    {
+     "id": "mff-tatiana-2045",
+     "year": 2045,
+     "date": "the 2040s",
+     "title": "Tatiana Voznesenskaya is assassinated",
+     "description": "The Ministry's Russian legal chief, who had been suing fossil companies and states on behalf of future generations, is murdered. Her killing shows the old order is still fighting as it loses. The same chapters record atmospheric CO2 falling for the first time, helped by kelp farming, carbon-coin drawdown and the end of flying.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": "Chapter 89; no year given",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Bryan Alexander, Our Ministry for the Future reading: the end (Tatiana assassinated, chapter 89; CO2 drops for the first time)",
+       "url": "https://bryanalexander.org/book-club/our-ministry-for-the-future-reading-the-end/"
+      }
+     ],
+     "note": "Reviewers put the CO2 turn in the 2040s, and the book's peak figures are given as about 470-478 ppm. Tatiana's death is in the same chapter, so it is placed mid-decade. For comparison, the real Mauna Loa record passed about 425 ppm in 2025 and is still rising.",
+     "binWhy": "A targeted killing of the Ministry's legal chief, short of war.",
+     "bin": "terror-attack",
+     "facets": {
+      "change": "the Ministry's lawyer → a martyr",
+      "mechanism": "attack",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "local",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "rivalry",
+       "crisis-legitimacy"
+      ],
+      "outcomes": [
+       "resistance-forms",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "mff-cop58-2053",
+     "year": 2053,
+     "date": "COP58 (chapter 94)",
+     "title": "COP58: 'the birth of a good Anthropocene'",
+     "description": "About three decades after the heat wave, the parties meet with the Keeling curve heading down by several parts per million a year and the Antarctic glaciers stabilised. Half-Earth wildlife corridors are being built and world population has begun to decline. They call it a break point in the history of humans and the Earth, and the costs are still there: extinctions, refugees and the dead of the 2030s. Soon afterwards Mary Murphy retires and Badim Bahadur succeeds her.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "COP58 (chapter 94); Mary retires in chapter 98",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Third Act PA: Review of The Ministry for the Future (COP58 occurs in chapter 94)",
+       "url": "https://thirdact.org/pennsylvania/2024/02/20/review-of-kim-stanley-robinsons-the-ministry-for-the-future/"
+      },
+      {
+       "title": "Bill McKibben, It's Not Science Fiction (NYRB) — by the 2050s CO2 falls about five ppm a year",
+       "url": "https://www.nybooks.com/articles/2020/12/17/kim-stanley-robinson-not-science-fiction/"
+      }
+     ],
+     "note": "Dated by counting conferences. The book's COP29 comes just before January 2025, which in our calendar is 2024, and COPs are annual, so COP58 is 29 conferences later: 2053. That matches McKibben's 'by the 2050s'. Mary's retirement and the closing Fasnacht in Zurich come after this, in years the book leaves unstated, so they are folded in here rather than given invented dates.",
+     "binWhy": "The novel jumps forward to show what its decades of crisis have made of the world.",
+     "bin": "long-after",
+     "facets": {
+      "change": "a rising curve → a falling one",
+      "mechanism": "negotiation",
+      "actor": "state",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 1,
+       "population": -1
+      },
+      "preconditions": [
+       "crisis-ecological",
+       "war-just-ended"
+      ],
+      "outcomes": [
+       "recovery",
+       "new-order",
+       "rebuilding"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs to the near-future branch because it leaves our history only months after the book was written, at a heat wave in a world otherwise plainly ours, and its main instruments are real ones: the Paris Agreement, central banks and the COPs. All events are T2 (2020-2053). T4 and T3 are empty because the book reaches back no further than its own conference, and T1 is empty because it ends in mid-century. Only 2025, January 2025, 2032 and 11 September 2034 are stated outright. The 2034 date belongs to a vignette that cannot be ordered against the rest, so it is not an event. The other 2030s and 2040s events are placed by chapter order and the book's own decade labels, at low confidence. COP58 is dated by counting conferences. The COP29 decision is shown as a prehistory event before the fork: it is the book's first departure from our record, but it only matters once the heat wave happens.",
+   "sources": [
+    {
+     "title": "Wikipedia: The Ministry for the Future",
+     "url": "https://en.wikipedia.org/wiki/The_Ministry_for_the_Future"
+    },
+    {
+     "title": "Bill McKibben, It's Not Science Fiction (NYRB, 2020)",
+     "url": "https://www.nybooks.com/articles/2020/12/17/kim-stanley-robinson-not-science-fiction/"
+    },
+    {
+     "title": "Bryan Alexander's chapter-by-chapter book club (part 1)",
+     "url": "https://bryanalexander.org/book-club/our-ministry-for-the-future-reading-part-1/"
+    },
+    {
+     "title": "Eckard Smuts, Reading Notes: Ministry for the Future",
+     "url": "https://www.eckardsmuts.com/posts/ministry-for-the-future"
+    }
+   ]
   }
  ]
 }

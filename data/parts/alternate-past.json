@@ -1252,6 +1252,704 @@
     }
    ],
    "groupingNote": "The special case in this archetype: the divergence is caused by its own future. The loop runs 2029 back to 1984 and forward again - the Terminator sent to prevent John Connor fathers him by dying, and its own wreckage is what lets Cyberdyne build Skynet, so Judgment Day is less a break from real history than a break real history produces. The 12 May 1984 arrival is the first real-world year this timeline is no longer ours (phase fork); 29 August 1997 is the load-bearing date; and the franchise then repeatedly pushes it, to 24 July 2004 in Rise of the Machines and to October 2017 in Genisys, while the Dark Fate branch cancels Skynet outright, kills John Connor in 1998 instead, and substitutes a different AI called Legion. Those later films reboot rather than continue, so the dates do not form one chain and the 1998 death is flagged as its own branch. On coverage: this is the only lineage in the group that leaves the twentieth century, with the 2003, 2004, 2017 and 2029 beats in T2 - so 2029 is our near future on the real axis even though it is the deep end of the story's own arc, which is exactly the distinction phase exists to record. The lineage is silent about T1: no Terminator film or series goes past 2029, and no deep-time event was invented to fill that tier."
+  },
+  {
+   "id": "for-all-mankind",
+   "title": "For All Mankind",
+   "medium": "tv",
+   "creator": "Ronald D. Moore, Matt Wolpert and Ben Nedivi",
+   "originYear": 2019,
+   "group": "alternate-past",
+   "epoch": "present",
+   "franchiseStatus": "ongoing",
+   "divergence": {
+    "year": 1969,
+    "label": "Alexei Leonov lands on the Moon first",
+    "delta": "Real: 20 July 1969 — Armstrong and Aldrin land, the Soviet N1 has just exploded on its pad, and the race is effectively over. Fiction: on 26 June 1969 a Soviet cosmonaut is already on the Moon, and the race never stops.",
+    "inUniverse": "26 June 1969 (season 1, 'Red Moon')",
+    "confidence": "high",
+    "note": "The showrunner has said the true point of divergence is 14 January 1966, when in the fiction Sergei Korolev survives the surgery that killed him in our history. That change is never shown and has no dated consequence on screen until the landing, so the atlas forks at the first visible, dated difference.",
+    "sources": [
+     {
+      "title": "For All Mankind Wiki (Fandom): Point of Divergence",
+      "url": "https://for-all-mankind.fandom.com/wiki/Point_of_Divergence"
+     },
+     {
+      "title": "For All Mankind Wiki (Fandom): Timeline",
+      "url": "https://for-all-mankind.fandom.com/wiki/Timeline"
+     },
+     {
+      "title": "Wikipedia: For All Mankind (TV series)",
+      "url": "https://en.wikipedia.org/wiki/For_All_Mankind_(TV_series)"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "unknown",
+    "why": "Season 5 leaves Mars independent under a fresh ceasefire and life confirmed on Titan, but Mars still depends on Earth for supplies, the peace is days old, and a final season announced for 2027 opens on a derelict Soviet ship waking up near Saturn in 2020, so the story stops mid-sentence.",
+    "asOf": 2013
+   },
+   "events": [
+    {
+     "id": "fam-leonov-1969",
+     "year": 1969,
+     "date": "1969-06-26",
+     "title": "Alexei Leonov lands on the Moon first",
+     "description": "A Soviet N1 lands Alexei Leonov on the Moon three and a half weeks before Apollo 11. NASA and the Nixon administration take the defeat as a national humiliation, and the space race, instead of ending in 1969, becomes permanent state policy with the budget to match.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: For All Mankind (TV series)",
+       "url": "https://en.wikipedia.org/wiki/For_All_Mankind_(TV_series)"
+      },
+      {
+       "title": "Wikipedia: List of For All Mankind episodes",
+       "url": "https://en.wikipedia.org/wiki/List_of_For_All_Mankind_episodes"
+      },
+      {
+       "title": "For All Mankind Wiki (Fandom): Timeline",
+       "url": "https://for-all-mankind.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Shown in the first episode, 'Red Moon'. In our 1969 the second N1 exploded on the pad on 3 July and Armstrong walked on the Moon on 20 July; the Soviet crewed lunar programme was quietly abandoned. In the fiction the race does not end, and every later event follows from NASA refusing to lose again.",
+     "binWhy": "The first crewed landing on another world, made by the side that never made it in our history.",
+     "bin": "voyage-into-unknown",
+     "facets": {
+      "change": "an American Moon → a Soviet one",
+      "mechanism": "expedition",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "cold-war",
+       "technological-race"
+      ],
+      "outcomes": [
+       "rivalry",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "fam-shackleton-ice-1971",
+     "year": 1971,
+     "date": "1971-10-25",
+     "title": "Molly Cobb finds water ice at Shackleton crater",
+     "description": "Apollo 15 diverts to the lunar south pole and Molly Cobb, from the women's astronaut group NASA formed in 1970 after a Soviet woman walked on the Moon, rappels into Shackleton crater and brings up ice. Water on the Moon turns flags-and-footprints into a case for living there.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "For All Mankind Wiki (Fandom): Timeline",
+       "url": "https://for-all-mankind.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Wikipedia: List of For All Mankind episodes",
+       "url": "https://en.wikipedia.org/wiki/List_of_For_All_Mankind_episodes"
+      }
+     ],
+     "note": "Season 1, 'Prime Crew' and 'Into the Abyss'; the fan wiki's timeline gives landing on 22 October and the ice on 25 October 1971. Our Apollo 15 landed at Hadley Rille in July 1971 with an all-male crew; lunar polar ice was not confirmed until the 2009 LCROSS impact. The women's corps itself (first class presented October 1970) is folded in here because it has no separate world-changing moment.",
+     "binWhy": "A discovery about the Moon that makes a permanent base worth building.",
+     "bin": "breakthrough-science",
+     "facets": {
+      "change": "a dry Moon → a Moon with water",
+      "mechanism": "discovery",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "technological-race",
+       "rivalry"
+      ],
+      "outcomes": [
+       "colonisation",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "fam-jamestown-1973",
+     "year": 1973,
+     "date": "1973-10-12",
+     "title": "Jamestown base lands at Shackleton",
+     "description": "The United States sets down a permanent crewed base beside the Shackleton ice. It is a military-minded outpost from the start: Nixon's people wanted a Moon base with a strategic purpose, and the base's name frames it as a colony.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "For All Mankind Wiki (Fandom): Timeline",
+       "url": "https://for-all-mankind.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Wikipedia: List of For All Mankind episodes",
+       "url": "https://en.wikipedia.org/wiki/List_of_For_All_Mankind_episodes"
+      }
+     ],
+     "note": "Season 1, 'Into the Abyss' dates the landing to 12 October 1973. In our October 1973 Skylab was in orbit and the last Apollo had flown the previous December; there was no lunar base plan with money behind it.",
+     "binWhy": "A permanent crewed base is founded on the Moon.",
+     "bin": "settlement-founded",
+     "facets": {
+      "change": "visits to the Moon → a base on it",
+      "mechanism": "founding",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "frontier-open",
+       "technological-race",
+       "rivalry"
+      ],
+      "outcomes": [
+       "colonisation",
+       "arms-race"
+      ]
+     }
+    },
+    {
+     "id": "fam-zvezda-1974",
+     "year": 1974,
+     "date": "1974",
+     "title": "The Soviets build Zvezda, and the Moon becomes a front",
+     "description": "About ten months after Jamestown, the Soviet Union founds Zvezda base roughly 13 km away. With the Apollo 23 pad explosion killing eleven ground crew including Gene Kranz, and cosmonauts bugging the American base, the Moon becomes a standing Cold War frontier rather than a finish line.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "For All Mankind Wiki (Fandom): Zvezda (founded 1974)",
+       "url": "https://for-all-mankind.fandom.com/wiki/Zvezda"
+      },
+      {
+       "title": "For All Mankind Wiki (Fandom): Timeline",
+       "url": "https://for-all-mankind.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Season 1, 'Home Again' and 'Rupture' (set in 1974); the month is not stated. In our 1974 the Soviet Union cancelled the N1 and its lunar base project (also named Zvezda) in May; the fiction builds the base that was cancelled.",
+     "binWhy": "The superpower rivalry settles onto the Moon as years of armed coexistence.",
+     "bin": "long-war",
+     "facets": {
+      "change": "one base on the Moon → two rival ones",
+      "mechanism": "founding",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "cold-war",
+       "frontier-open",
+       "rivalry"
+      ],
+      "outcomes": [
+       "cold-war",
+       "arms-race"
+      ]
+     }
+    },
+    {
+     "id": "fam-jamestown-crisis-1983",
+     "year": 1983,
+     "date": "1983-09",
+     "title": "The Jamestown crisis ends in a handshake in orbit",
+     "description": "A lithium claim on the Moon leads to Soviet seizure of a mining site, American Moon Marines retaking it, and, after the Soviets shoot down KAL 007 with NASA's administrator aboard, an armed cosmonaut attack on Jamestown that nearly melts its reactor. Gordo and Tracy Stevens die stopping the meltdown; an Apollo-Soyuz handshake televised from orbit pulls both sides back, and in 1984 Reagan and Andropov sign a treaty dividing the Moon into zones.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "For All Mankind Wiki (Fandom): Jamestown crisis (May-September 1983)",
+       "url": "https://for-all-mankind.fandom.com/wiki/Jamestown_crisis"
+      },
+      {
+       "title": "For All Mankind Wiki (Fandom): Timeline",
+       "url": "https://for-all-mankind.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Wikipedia: List of For All Mankind episodes",
+       "url": "https://en.wikipedia.org/wiki/List_of_For_All_Mankind_episodes"
+      }
+     ],
+     "note": "Season 2 is dated to 1983 on screen; the fan wiki places the crisis from late May to late September 1983. KAL 007 is real (1 September 1983), but in the fiction it kills NASA Administrator Thomas Paine, who in our history died in 1992. The 1984 Lunar Peace Agreement is shown in the season 3 opening montage and is folded in here as the settlement of this crisis. The Rogers Commission covers up the reactor's plutonium role.",
+     "binWhy": "Superpowers exchange fire on the Moon, then step back into a truce and a partition treaty.",
+     "bin": "peace-made",
+     "facets": {
+      "change": "a firefight on the Moon → a truce and a divided Moon",
+      "mechanism": "negotiation",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "cold-war",
+       "arms-race",
+       "rivalry"
+      ],
+      "outcomes": [
+       "diplomacy",
+       "partition",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "fam-fusion-1986",
+     "year": 1986,
+     "date": "1986",
+     "title": "The first working fusion reactor",
+     "description": "Dev Ayesa and Richard Hilliard build the first successful fusion reactor, fuelled by helium-3; Ayesa's Helios Aerospace wins a NASA contract to mine it on the Moon. By 1989 the show's James Hansen testifies that global warming has slowed as the world moves off fossil fuels, and a private company now has the money to race states.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "For All Mankind Wiki (Fandom): Timeline",
+       "url": "https://for-all-mankind.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Shown only in the season 3 opening news montage; the fan wiki lists the breakthrough under 1986 but cites it to its 1987 bonus material, and the helium-3 contract to April 1987. The year could be 1986 or 1987. In our 1986 fusion was, as always, decades away.",
+     "binWhy": "A new energy source is switched on that remakes the economy and funds private spaceflight.",
+     "bin": "new-technology-deployed",
+     "facets": {
+      "change": "fossil fuel → helium-3 fusion",
+      "mechanism": "invention",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "technological-race",
+       "prosperity"
+      ],
+      "outcomes": [
+       "gold-rush",
+       "new-actors",
+       "prestige"
+      ]
+     }
+    },
+    {
+     "id": "fam-mars-race-1994",
+     "year": 1994,
+     "date": "1994-10",
+     "title": "Three crews race for Mars",
+     "description": "Helios launches its private Phoenix, commanded by Ed Baldwin, against NASA's Sojourner 1 and the Soviet Mars-94, while North Korea sends a secret crew of its own. The Soviets push their engine too hard; the rescue costs two astronauts and a cosmonaut.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "For All Mankind Wiki (Fandom): Timeline",
+       "url": "https://for-all-mankind.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Wikipedia: List of For All Mankind episodes",
+       "url": "https://en.wikipedia.org/wiki/List_of_For_All_Mankind_episodes"
+      }
+     ],
+     "note": "Season 3, 'All In' and 'Happy Valley', set in 1994; the fan wiki dates the North Korean launch to September and Helios to October 1994. Our 1994 had no crewed mission beyond low Earth orbit; the first private crewed orbital flight came in 2020.",
+     "binWhy": "The first crewed missions leave for Mars, one of them run by a company.",
+     "bin": "voyage-into-unknown",
+     "facets": {
+      "change": "a state monopoly on deep space → a corporation in the race",
+      "mechanism": "expedition",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "technological",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "technological-race",
+       "rivalry",
+       "prosperity"
+      ],
+      "outcomes": [
+       "colonisation",
+       "rivalry"
+      ]
+     }
+    },
+    {
+     "id": "fam-mars-landing-1995",
+     "year": 1995,
+     "date": "1995-02",
+     "title": "People land on Mars, and Happy Valley is founded",
+     "description": "Danielle Poole and Grigory Kuznetsov step onto Mars together, and the stranded American and Soviet crews end up sharing one base, Happy Valley, beside Helios's. A North Korean, Lee Jung-Gil, had crash-landed days earlier and survived unseen. That September a bombing at Johnson Space Center kills nearly 200, including Karen Baldwin and Molly Cobb.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "For All Mankind Wiki (Fandom): Timeline",
+       "url": "https://for-all-mankind.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Wikipedia: List of For All Mankind episodes",
+       "url": "https://en.wikipedia.org/wiki/List_of_For_All_Mankind_episodes"
+      }
+     ],
+     "note": "Season 3, 'Seven Minutes of Terror' onward; the fan wiki dates Lee's crash to 8 February and the Poole-Kuznetsov landing to mid-February 1995, and the JSC bombing to 4 September 1995 (folded in here). The season 2 finale's flash-forward also shows a human on Mars in 1995. In our 1995 no one had been further than the Moon since 1972.",
+     "binWhy": "The first human settlement on another planet, shared by former enemies.",
+     "bin": "settlement-founded",
+     "facets": {
+      "change": "rival Mars crews → a shared Martian base",
+      "mechanism": "founding",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "frontier-open",
+       "technological-race",
+       "rivalry"
+      ],
+      "outcomes": [
+       "colonisation",
+       "collaboration"
+      ]
+     }
+    },
+    {
+     "id": "fam-m7-1997",
+     "year": 1997,
+     "date": "1997",
+     "title": "The Mars-7 Alliance is signed",
+     "description": "President Ellen Wilson and Premier Gorbachev sign a treaty in Brussels that puts Mars under joint management by the US, USSR, ESA, Japan, India, North Korea and a communist-bloc coalition. The race becomes a consortium, and Mars becomes a workplace governed from Earth.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "For All Mankind Wiki (Fandom): Mars-7 Alliance (formed 1997)",
+       "url": "https://for-all-mankind.fandom.com/wiki/Mars-7_Alliance"
+      },
+      {
+       "title": "For All Mankind Wiki (Fandom): Timeline",
+       "url": "https://for-all-mankind.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "The treaty is established history in season 4; the 1997 date and Brussels signing come from the fan wiki's account of season 4 material, with no month stated. Our 1997 had the International Space Station still unlaunched and no Mars plans with a crew.",
+     "binWhy": "Rival powers join under one charter to govern Mars.",
+     "bin": "union-founded",
+     "facets": {
+      "change": "a race for Mars → a consortium running it",
+      "mechanism": "negotiation",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "cold-war",
+       "frontier-open"
+      ],
+      "outcomes": [
+       "union",
+       "collaboration",
+       "dependency"
+      ]
+     }
+    },
+    {
+     "id": "fam-goldilocks-2003",
+     "year": 2003,
+     "date": "2003-10",
+     "title": "The Goldilocks asteroid is stolen into Mars orbit",
+     "description": "An iridium asteroid worth an estimated $20 trillion is found in 2003; the M-7 plans to bring it to Earth. After a strike by underpaid Mars workers, Ed Baldwin, Dev Ayesa, Margo Madison and Aleida Rosales divert it into Mars orbit instead, giving Mars the resource Earth wanted. A riot follows and North Korea is expelled from the alliance, which becomes the M-6.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "For All Mankind Wiki (Fandom): Goldilocks (2003LC, captured fall 2003)",
+       "url": "https://for-all-mankind.fandom.com/wiki/Goldilocks"
+      },
+      {
+       "title": "For All Mankind Wiki (Fandom): Timeline",
+       "url": "https://for-all-mankind.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Wikipedia: List of For All Mankind episodes",
+       "url": "https://en.wikipedia.org/wiki/List_of_For_All_Mankind_episodes"
+      }
+     ],
+     "note": "Season 4 is set in 2003; the fan wiki gives discovery on 2 July and the capture mission on 7 October 2003. The same year a coup in Moscow removes Gorbachev for Fyodor Korzhenko. In our 2003 asteroid mining was a business-plan fantasy and the first sample-return probe, Hayabusa, launched that May.",
+     "binWhy": "Mars workers and their allies take the colony's wealth out of Earth's hands.",
+     "bin": "uprising",
+     "facets": {
+      "change": "an Earth-owned asteroid → a Mars-held one",
+      "mechanism": "uprising",
+      "actor": "faction",
+      "position": "below",
+      "scope": "beyond",
+      "domain": "economic",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "dependency-on-centre",
+       "resource-dependency"
+      ],
+      "outcomes": [
+       "resistance-forms",
+       "gold-rush",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "fam-mars-rising-2012",
+     "year": 2012,
+     "date": "2012-07",
+     "title": "Mars rises against the M-6",
+     "description": "Mars now holds 5,000 people, many of them illegal 'craters'. Alex Poletov and Lily Dale leak an M-6 plan to automate the colony and send 98% of its population back to Earth; peacekeepers fire on protesters, an armed group seizes the Martian government and halts iridium exports, and President Bragg embargoes Mars. The same day as the leak, Sojourner-T leaves Mars for Titan.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "For All Mankind Wiki (Fandom): Timeline",
+       "url": "https://for-all-mankind.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Wikipedia: List of For All Mankind episodes",
+       "url": "https://en.wikipedia.org/wiki/List_of_For_All_Mankind_episodes"
+      }
+     ],
+     "note": "Season 5 opens in May 2012; the fan wiki dates the leak and the Titan launch to 19 July 2012. Our 2012 had Curiosity landing on Mars in August, with no one there to protest.",
+     "binWhy": "A dependent colony revolts against the alliance that governs it.",
+     "bin": "uprising",
+     "facets": {
+      "change": "a governed colony → an insurgent one under embargo",
+      "mechanism": "uprising",
+      "actor": "movement",
+      "position": "below",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "dependency-on-centre",
+       "repression",
+       "cover-up"
+      ],
+      "outcomes": [
+       "resistance-forms",
+       "closing-borders",
+       "radicalisation"
+      ]
+     }
+    },
+    {
+     "id": "fam-independence-2013",
+     "year": 2013,
+     "date": "2013",
+     "title": "Mars wins its independence, and life is found on Titan",
+     "description": "M-6 marines land on Mars and fire on civilians; the Martian militia traps the M-6 command staff and burns them out. News arrives that Korzhenko has fallen, the USSR has left the M-6 and Earth has called a ceasefire; Miles Dale is sworn in as president of an independent Happy Valley. On Titan, Kelly Baldwin's crew finds methane-based life, and Kelly dies so the others can get home.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "For All Mankind Wiki (Fandom): This Land Is Our Land (season 5 finale)",
+       "url": "https://for-all-mankind.fandom.com/wiki/This_Land_Is_Our_Land"
+      },
+      {
+       "title": "For All Mankind Wiki (Fandom): The Sirens of Titan (six months after the insurrection)",
+       "url": "https://for-all-mankind.fandom.com/wiki/The_Sirens_of_Titan"
+      },
+      {
+       "title": "Gizmodo: Let's Talk About the Ending of For All Mankind Season 5",
+       "url": "https://gizmodo.com/for-all-mankind-season-5-finale-this-land-is-our-land-ending-recap-2000764688"
+      },
+      {
+       "title": "The A.V. Club: For All Mankind season 5 finale recap",
+       "url": "https://www.avclub.com/for-all-mankind-recap-season-5-finale-apple-this-land-is-our-land"
+      },
+      {
+       "title": "For All Mankind Wiki (Fandom): Timeline",
+       "url": "https://for-all-mankind.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "The finale does not state its year. 'The Sirens of Titan' opens six months after the July 2012 insurrection, which puts the last episodes around early 2013, and the fan wiki lists Miles's presidency under 2013; some recaps say 2012. The finale closes with a coda eight years on, in 2020, as the derelict Mars-94 near Saturn reactivates, which is not given its own event because nothing is yet shown to happen.",
+     "binWhy": "The colony defeats the force sent to hold it and Earth concedes a ceasefire; Mars declares independence.",
+     "bin": "decisive-victory",
+     "facets": {
+      "change": "an M-6 colony → an independent Mars",
+      "mechanism": "secession",
+      "actor": "movement",
+      "position": "below",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "dependency-on-centre",
+       "repression",
+       "occupation"
+      ],
+      "outcomes": [
+       "independence",
+       "new-order",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "fam-publication-2019",
+     "year": 2019,
+     "date": "2019-11-01",
+     "title": "For All Mankind premieres on Apple TV+",
+     "description": "Ronald D. Moore, Matt Wolpert and Ben Nedivi's series launches with Apple TV+ itself, covering 1969 to 1974 in its first season; each later season jumps about a decade.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: For All Mankind (TV series)",
+       "url": "https://en.wikipedia.org/wiki/For_All_Mankind_(TV_series)"
+      }
+     ],
+     "note": "Season 5 aired 27 March to 29 May 2026; a sixth and final season is announced for 2027, and the Soviet-side spin-off Star City (set 1969-70) premiered on 29 May 2026.",
+     "binWhy": "A release date, not an event in the world's history, so it takes no bin.",
+     "bin": null,
+     "facets": null
+    }
+   ],
+   "groupingNote": "Belongs in alternate-past because it forks from a dated, real event (the 1969 Moon landing) and then follows our calendar decade by decade, with real people (Nixon, Kennedy, Reagan, Gorbachev, Gore) living different histories. Events are T3 from 1969 to 1997 and T2 from 2003 to 2013; there is no T4 because nothing before 1900 differs, and no T1 because the aired story ends in 2013 with a coda in 2020. Continuity follows the five aired seasons of the main series; the Star City spin-off and the bonus video series are not used for events.",
+   "sources": [
+    {
+     "title": "Wikipedia: For All Mankind (TV series)",
+     "url": "https://en.wikipedia.org/wiki/For_All_Mankind_(TV_series)"
+    },
+    {
+     "title": "Wikipedia: List of For All Mankind episodes",
+     "url": "https://en.wikipedia.org/wiki/List_of_For_All_Mankind_episodes"
+    },
+    {
+     "title": "For All Mankind Wiki (Fandom): Timeline",
+     "url": "https://for-all-mankind.fandom.com/wiki/Timeline"
+    },
+    {
+     "title": "For All Mankind Wiki (Fandom): Point of Divergence",
+     "url": "https://for-all-mankind.fandom.com/wiki/Point_of_Divergence"
+    },
+    {
+     "title": "Wikipedia: Star City (TV series)",
+     "url": "https://en.wikipedia.org/wiki/Star_City_(TV_series)"
+    },
+    {
+     "title": "Gizmodo: Let's Talk About the Ending of For All Mankind Season 5",
+     "url": "https://gizmodo.com/for-all-mankind-season-5-finale-this-land-is-our-land-ending-recap-2000764688"
+    }
+   ]
   }
  ]
 }

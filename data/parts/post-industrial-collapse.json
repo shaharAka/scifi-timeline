@@ -2206,6 +2206,1154 @@
     }
    ],
    "groupingNote": "The Matrix is the archetype running backwards: the world that ends is a simulation of 1999 kept alive as a power plant, and the ruins the survivors inherit are their own cities under a black sky. Humanity loses a war to its own machines, scorches the sky to win it and is farmed in pods while the last free city hides underground, which is the group's mechanism taken to its logical end. The fork is the Machine War's start at 2139, the close of the canonically dated Second Renaissance range; Operation Dark Storm, which actually ends the human world, is undated on screen and placed at about 2145 here. Tiers: there is no T1, because under the dating the films themselves give (Morpheus's 'closer to 2199' plus the canonical sixty-year gap to Resurrections) this branch stops at 2259; only fan reconstructions that add five prior One-cycles push it past 2300, and that reading contradicts the dialogue. T4 is real-world background only (Babbage, 1834) and T3 holds the simulated 1999 alongside Turing's real 1950."
+  },
+  {
+   "id": "parable-of-the-sower",
+   "title": "Parable of the Sower",
+   "medium": "book",
+   "creator": "Octavia E. Butler",
+   "originYear": 1993,
+   "group": "post-industrial-collapse",
+   "epoch": "present",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 2015,
+    "label": "The Pox begins, as journalists date it",
+    "delta": "Real: 2015. Climate, inequality and a hollowed-out state are in the news, but the institutions still hold. Fiction: this is when the slide the books call the Pox is usually said to start. Nobody fixes the climate, the economy or the social problems, and by the 2020s American towns are walled, water costs more than food, and fire and debt stand in for government.",
+    "inUniverse": "Parable of the Talents opens with Bankole's memoir: journalists date 'the Apocalypse', or more often 'the Pox', from 2015 through 2030. Bankole says it began well before 2015 and has not ended.",
+    "confidence": "medium",
+    "note": "The books give 2015 as the start of the Pox, and it is the only start year they state. Bankole, who is 57 in 2032 and lived through the whole thing, says the slide began well before 2015, possibly before 2000, and was the result of refusing to deal with obvious climatic, economic and social problems rather than a run of bad luck. So there is no single fork. There is an unchecked drift, and 2015 is the conventional date the world of the novels puts on it. The first dated journal entry, Lauren's fifteenth birthday on 20 July 2024, is already deep inside the decline, so it cannot be the divergence. 2015 is used because it is the novels' own date for the period, and it is marked medium because the novels also argue with that date.",
+    "sources": [
+     {
+      "title": "ReadingGroupGuides: Parable of the Talents excerpt (Bankole's account of the Pox, 2015-2030)",
+      "url": "https://www.readinggroupguides.com/reviews/parable-of-the-talents/excerpt"
+     },
+     {
+      "title": "Wikipedia: Parable of the Talents (novel)",
+      "url": "https://en.wikipedia.org/wiki/Parable_of_the_Talents_(novel)"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "By 2090 Jarret is disgraced, Earthseed is a world movement that pays for scholarships, and its first shuttles have lifted colonists to the starship Christopher Columbus. The cost is also on the page: Acorn was destroyed, Lauren's daughter never forgives her, and Lauren dies soon after the launch at 81.",
+    "asOf": 2090
+   },
+   "events": [
+    {
+     "id": "pos-sower-publication-1993",
+     "year": 1993,
+     "date": "1993",
+     "title": "Parable of the Sower is published",
+     "description": "Octavia E. Butler publishes the first Earthseed novel. It is Lauren Olamina's journal from 2024 to 2027, written from the early 1990s about a California thirty years ahead.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Parable of the Sower (novel)",
+       "url": "https://en.wikipedia.org/wiki/Parable_of_the_Sower_(novel)"
+      }
+     ],
+     "note": "Published by Four Walls Eight Windows in 1993. The book extrapolates from the California of the early 1990s: the Los Angeles riots, drought, privatisation and the growth of gated communities.",
+     "binWhy": "A publication, not an event in the story; it has no bin.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "pos-talents-publication-1998",
+     "year": 1998,
+     "date": "1998",
+     "title": "Parable of the Talents is published",
+     "description": "The second novel follows the story from 2032 to 2090 through Lauren's journals, her husband's memoir and her daughter's commentary. Butler's planned third book, Parable of the Trickster, was never finished, so this one ends the chain.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Parable of the Talents (novel)",
+       "url": "https://en.wikipedia.org/wiki/Parable_of_the_Talents_(novel)"
+      }
+     ],
+     "note": "Published by Seven Stories Press in 1998. It won the Nebula Award for Best Novel.",
+     "binWhy": "A publication, not an event in the story; it has no bin.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "pos-pox-2015",
+     "year": 2015,
+     "date": "2015",
+     "title": "The Pox: the slow collapse begins",
+     "description": "Climate change, economic collapse and social breakdown compound, and nothing is done about any of them. Over the next fifteen years the public order of the United States falls apart: water and food prices soar, cities burn, and anyone who can afford it lives behind walls.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Journalists date 'the Apocalypse' or 'the Pox' from 2015 through 2030 (Parable of the Talents, Bankole's memoir)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "ReadingGroupGuides: Parable of the Talents excerpt",
+       "url": "https://www.readinggroupguides.com/reviews/parable-of-the-talents/excerpt"
+      }
+     ],
+     "note": "The years 2015-2030 are the journalists' dating as the novel reports it. Bankole rejects both ends of it: the Pox began earlier, and it has not ended. What the fiction adds to our 2015 is not a single shock but the failure of every correction.",
+     "binWhy": "Public order breaks down across the country and, as the books tell it, does not come back in its old form.",
+     "bin": "civilisation-collapses",
+     "facets": {
+      "change": "a strained republic → walled enclaves and open road",
+      "mechanism": "disaster",
+      "actor": "nature",
+      "position": "inside",
+      "scope": "national",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "crisis-ecological",
+       "crisis-economic",
+       "weak-institutions"
+      ],
+      "outcomes": [
+       "collapse",
+       "shelter-society",
+       "despair"
+      ]
+     }
+    },
+    {
+     "id": "pos-donner-2024",
+     "year": 2024,
+     "date": "2024-11",
+     "title": "Christopher Donner is elected president",
+     "description": "Donner wins the presidency promising to dismantle the space programme and suspend 'overly restrictive' minimum-wage, environmental and worker-protection laws for employers who take on homeless workers in exchange for room and board. That opens the door to company towns and debt bondage.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Lauren's journal entry of 6 November 2024 records Donner's win",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Shmoop: Parable of the Sower chapter 3 summary (entries July-November 2024)",
+       "url": "https://www.shmoop.com/study-guides/parable-of-the-sower/chapter-3-summary.html"
+      },
+      {
+       "title": "LitCharts: President Christopher Donner",
+       "url": "https://www.litcharts.com/lit/the-parable-of-the-sower/characters/president-christopher-donner"
+      }
+     ],
+     "note": "The journal entry is dated 6 November 2024. In the real calendar that is the day after the 2024 US presidential election, which is one reason the novel has been so widely reread. The election itself is lawful. Its effect in the story is to hand labour and land to whoever can pay for them.",
+     "binWhy": "The nearest bin: the state passes, by election rather than force, to a man who uses it to strip labour and environmental law.",
+     "bin": "power-seized",
+     "facets": {
+      "change": "labour protections → labour for room and board",
+      "mechanism": "election",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-economic",
+       "crisis-legitimacy",
+       "post-collapse"
+      ],
+      "outcomes": [
+       "servitude",
+       "programme-winds-down",
+       "dependency"
+      ]
+     }
+    },
+    {
+     "id": "pos-earthseed-named-2025",
+     "year": 2025,
+     "date": "2025-04-26",
+     "title": "Lauren Olamina names Earthseed",
+     "description": "A fifteen-year-old preacher's daughter in the walled Los Angeles-area neighbourhood of Robledo gives a name, Earthseed, to the verses she has been writing. Their core claim is that God is Change. By her sixteenth birthday she has added the belief that everything later turns on: the destiny of Earthseed is to take root among the stars.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Journal entry of Saturday 26 April 2025; the destiny verse follows on 20 July 2025, her sixteenth birthday",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Shmoop: Parable of the Sower chapter 7 summary (entries April-July 2025)",
+       "url": "https://www.shmoop.com/study-guides/parable-of-the-sower/chapter-7-summary.html"
+      }
+     ],
+     "note": "Lauren commits to writing the verses in August 2024 and names them in April 2025. She was born on 20 July 2009 and has hyperempathy syndrome, which makes her feel the pain she sees. Nothing in our 2025 corresponds to this; the event is private and matters only for what it later becomes.",
+     "binWhy": "An ordinary teenager starts the belief system the rest of the chain turns on.",
+     "bin": "the-call",
+     "facets": {
+      "change": "private verses → a named faith",
+      "mechanism": "founding",
+      "actor": "individual",
+      "position": "below",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "shelter-society"
+      ],
+      "outcomes": [
+       "new-actors",
+       "foreknowledge"
+      ]
+     }
+    },
+    {
+     "id": "pos-olivar-2026",
+     "year": 2026,
+     "date": "2026-10",
+     "title": "Olivar sells itself to KSF",
+     "description": "The coastal city of Olivar votes to privatise itself and hands its land, jobs and policing to the multinational Kagimoto, Stamm, Frampton and Company. Residents get safety in exchange for low wages and rent paid to their employer. It is the company town Donner's labour rules made possible, and Lauren sees it as slavery by debt.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Discussed in Lauren's journal entries of 17-31 October 2026",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Shmoop: Parable of the Sower chapter 11 summary (entries October 2026)",
+       "url": "https://www.shmoop.com/study-guides/parable-of-the-sower/chapter-11-summary.html"
+      },
+      {
+       "title": "Shmoop: Lauren Olamina timeline",
+       "url": "https://shmoop.com/parable-of-the-sower/lauren-olamina-timeline.html"
+      }
+     ],
+     "note": "The year is the year of the journal entries in which Lauren hears of the takeover and KSF advertises for teachers. The novel treats it as recent news, so the vote may have come slightly earlier. Keith's death (August 2026) and her father's disappearance (later that year) fall in the same stretch and are left out to keep one event per year.",
+     "binWhy": "A corporation takes over the running of a city and becomes its landlord, employer and police. That is a new kind of governing body, not just a change of ruler.",
+     "bin": "new-institution",
+     "facets": {
+      "change": "a city → a company town",
+      "mechanism": "consolidation",
+      "actor": "corporation",
+      "position": "outside",
+      "scope": "local",
+      "domain": "economic",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-economic",
+       "weak-institutions",
+       "street-violence"
+      ],
+      "outcomes": [
+       "servitude",
+       "dependency",
+       "shelter-society"
+      ]
+     }
+    },
+    {
+     "id": "pos-robledo-2027",
+     "year": 2027,
+     "date": "2027-07-31",
+     "title": "Robledo is overrun and burned; the survivors walk north",
+     "description": "Raiders, many of them addicts of the fire drug 'pyro', drive a truck through Robledo's gate, loot it, burn the houses and shoot the residents. Lauren's family is among the dead. She walks north up the ruined highways with a few survivors, preaching Earthseed as the group grows, and on 10 October 2027 they settle on Bankole's land in the hills near Cape Mendocino and name the place Acorn.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Journal entry of 31 July 2027 records the raid; Acorn is named in the entry of 10 October 2027",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Parable of the Sower (novel) (2027 attack; Acorn founded near Cape Mendocino)",
+       "url": "https://en.wikipedia.org/wiki/Parable_of_the_Sower_(novel)"
+      },
+      {
+       "title": "Fordham Eloquentia Perfecta: Change, Liberation, and Freedom in Parable of the Sower (Robledo destroyed 31 July 2027)",
+       "url": "https://eloquentiaperfecta.blog.fordham.edu/change-liberation-and-freedom-in-parable-of-the-sower/"
+      },
+      {
+       "title": "Shmoop: Lauren Olamina timeline (Acorn founded 10 October 2027)",
+       "url": "https://shmoop.com/parable-of-the-sower/lauren-olamina-timeline.html"
+      }
+     ],
+     "note": "The raid and the founding of Acorn happen in the same year, so they are merged into one event. The bin describes the raid because that is what the event is; the walk north and Acorn are its result, and Acorn is what the 2033 event destroys. In our July 2027 there is nothing to compare, but readers match this moment against walled suburbs, wildfire and drug epidemics.",
+     "binWhy": "A targeted massacre of a single walled community, short of war, that sends its survivors into exile and leads to a new settlement.",
+     "bin": "terror-attack",
+     "facets": {
+      "change": "a walled street → ashes and a road north",
+      "mechanism": "attack",
+      "actor": "faction",
+      "position": "below",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "street-violence",
+       "shelter-society",
+       "post-collapse"
+      ],
+      "outcomes": [
+       "exodus",
+       "mass-death",
+       "parallel-society"
+      ]
+     }
+    },
+    {
+     "id": "pos-jarret-2032",
+     "year": 2032,
+     "date": "2032-11",
+     "title": "Andrew Steele Jarret wins the presidency",
+     "description": "A senator from Texas and leader of the Church of Christian America wins the White House on the slogan 'Make America Great Again'. His followers want a Christian nation. They burn 'witches', attack people of other faiths, and treat order as something to restore by force. The zealots he refuses to restrain become his Crusaders.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "The 2032 election, followed in Lauren's journal and Bankole's memoir from September 2032",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: Parable of the Talents (novel) (Jarret, 'Make America Great Again')",
+       "url": "https://en.wikipedia.org/wiki/Parable_of_the_Talents_(novel)"
+      },
+      {
+       "title": "EBSCO Research Starters: Parable of the Sower and Parable of the Talents",
+       "url": "https://www.ebsco.com/research-starters/literature-and-writing/parable-sower-and-parable-talents-octavia-e-butler"
+      }
+     ],
+     "note": "The novel dates the election to 2032. The month is marked medium because it is inferred from the US electoral calendar, not read off a journal entry. The slogan was already an American campaign phrase before 1998, but it is why the book was widely reread after 2016.",
+     "binWhy": "A religious movement's leader takes control of the federal state by election on a platform of forced conversion, which is a seizure in everything but the method.",
+     "bin": "power-seized",
+     "facets": {
+      "change": "a secular republic in ruins → a Christian America",
+      "mechanism": "election",
+      "actor": "movement",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "religious-fervour",
+       "crisis-legitimacy",
+       "post-collapse"
+      ],
+      "outcomes": [
+       "fervour",
+       "theocracy",
+       "purge"
+      ]
+     }
+    },
+    {
+     "id": "pos-camp-christian-2033",
+     "year": 2033,
+     "date": "2033-09",
+     "title": "Crusaders overrun Acorn and make it Camp Christian",
+     "description": "Jarret's Crusaders come to Acorn in armoured vehicles, take it, and turn it into a re-education camp. The adults are held in electronic shock collars and made to work, and they are raped and tortured. The children, including Lauren's infant daughter Larkin, are taken and placed with Christian America families.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "September 2033, when Larkin is about two months old",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Books That Slay: Parable of the Talents summary (September 2033 attack)",
+       "url": "https://booksthatslay.com/parable-of-the-talents-summary/"
+      },
+      {
+       "title": "Wikipedia: Parable of the Talents (novel)",
+       "url": "https://en.wikipedia.org/wiki/Parable_of_the_Talents_(novel)"
+      }
+     ],
+     "note": "Dated September 2033 in the novel's journal sequence. Larkin is renamed Asha Vere and raised in Seattle, and Lauren does not find her for more than thirty years. The camp is run by zealots whom the government never officially owns, and that distance is what lets it happen.",
+     "binWhy": "A movement in power attacks a religious minority's community, enslaves the adults and takes the children.",
+     "bin": "crackdown",
+     "facets": {
+      "change": "a free commune → a slave camp",
+      "mechanism": "attack",
+      "actor": "movement",
+      "position": "above",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "theocracy",
+       "persecution",
+       "religious-fervour"
+      ],
+      "outcomes": [
+       "servitude",
+       "suppression",
+       "purge"
+      ]
+     }
+    },
+    {
+     "id": "pos-escape-2035",
+     "year": 2035,
+     "date": "2035-02",
+     "title": "The prisoners of Camp Christian rise and scatter",
+     "description": "After about seventeen months, a landslide knocks out the control system for the collars. The prisoners kill their guards, take what they can and burn the camp. Lauren decides Earthseed can no longer live as one visible commune and sends its people out to live and teach separately.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Early 2035, seventeen months after the September 2033 capture",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Books That Slay: Parable of the Talents summary (2035 overthrow)",
+       "url": "https://booksthatslay.com/parable-of-the-talents-summary/"
+      },
+      {
+       "title": "Wikipedia: Parable of the Talents (novel) (2035 rebellion)",
+       "url": "https://en.wikipedia.org/wiki/Parable_of_the_Talents_(novel)"
+      }
+     ],
+     "note": "Wikipedia and several guides give 2035. The month follows from the seventeen-month captivity counted from September 2033.",
+     "binWhy": "An enslaved group revolts and kills the people holding it.",
+     "bin": "uprising",
+     "facets": {
+      "change": "collared prisoners → a scattered faith",
+      "mechanism": "uprising",
+      "actor": "movement",
+      "position": "below",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "slavery-or-servitude",
+       "persecution",
+       "theocracy"
+      ],
+      "outcomes": [
+       "scattering",
+       "exile",
+       "resistance-forms"
+      ]
+     }
+    },
+    {
+     "id": "pos-jarret-falls-2036",
+     "year": 2036,
+     "date": "2036",
+     "title": "Jarret is voted out after one term",
+     "description": "The public turns on Jarret over the war he waged against Alaska and Canada and over revelations about Crusader witch-burnings. He loses after a single term, Christian America loses its hold on the state, and the country moves slowly toward a post-war recovery in which Earthseed can grow.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Jarret is defeated in the 2036 election",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: Parable of the Talents (novel) (Jarret defeated after a single term)",
+       "url": "https://en.wikipedia.org/wiki/Parable_of_the_Talents_(novel)"
+      }
+     ],
+     "note": "2036 follows from a single term that began in January 2033. The novel does not stage the vote; it reports the result and its causes. Christian America survives as a church and as the family that raises Asha, but it is out of power.",
+     "binWhy": "A ruler leaves office in disgrace and his movement loses the state.",
+     "bin": "ruler-falls",
+     "facets": {
+      "change": "a crusading president → a disgraced one",
+      "mechanism": "election",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "theocracy",
+       "crisis-legitimacy",
+       "long-war"
+      ],
+      "outcomes": [
+       "reform",
+       "recovery",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "pos-asha-2067",
+     "year": 2067,
+     "date": "2067",
+     "title": "Earthseed is famous, and Asha finds her mother",
+     "description": "The movement that started with verses in Portland and wealthy converts is now national and international. It funds scholarships, runs its own communities and keeps pressing for the stars. Asha Vere, now 34, sees her own face in its founder, learns she is Larkin, and meets Lauren, but she will not forgive her for choosing Earthseed over the search.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Asha is 34 when she meets Lauren",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Books That Slay: Parable of the Talents summary (2067 reunion)",
+       "url": "https://booksthatslay.com/parable-of-the-talents-summary/"
+      },
+      {
+       "title": "Spoil The Ending: The ending of Parable of the Talents (Asha is 34)",
+       "url": "https://spoiltheending.com/2021/07/09/the-ending-of-parable-of-the-talents/"
+      }
+     ],
+     "note": "Derived: Larkin is born in 2033 and is 34 at the meeting, which gives 2067, or early 2068 depending on her birthday. The novel covers Earthseed's growth from the late 2030s to the 2060s in summary rather than dated events, so this meeting is the dated point that shows how far it has come.",
+     "binWhy": "The story jumps three decades to show what Earthseed and the country have become.",
+     "bin": "long-after",
+     "facets": {
+      "change": "a hunted sect → a rich, famous movement",
+      "mechanism": "consolidation",
+      "actor": "movement",
+      "position": "inside",
+      "scope": "national",
+      "domain": "social",
+      "direction": {
+       "power": 1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "persecution"
+      ],
+      "outcomes": [
+       "rebuilding",
+       "new-actors",
+       "revelation"
+      ]
+     }
+    },
+    {
+     "id": "pos-christopher-columbus-2090",
+     "year": 2090,
+     "date": "2090",
+     "title": "The first Earthseed shuttles leave for the Christopher Columbus",
+     "description": "Shuttles lift Earthseed colonists to the starship Christopher Columbus. They travel in suspended animation with embryos and seeds, bound for humanity's first colony on a world around another star. Lauren, 81, watches the launch and dies soon after, estranged from her daughter.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Lauren's final journal entry, 2090",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "EBSCO Research Starters: Parable of the Sower and Parable of the Talents (2090 launch)",
+       "url": "https://www.ebsco.com/research-starters/literature-and-writing/parable-sower-and-parable-talents-octavia-e-butler"
+      },
+      {
+       "title": "Wikipedia: Parable of the Talents (novel) (Christopher Columbus; Lauren dies at 81)",
+       "url": "https://en.wikipedia.org/wiki/Parable_of_the_Talents_(novel)"
+      }
+     ],
+     "note": "2090 is stated, and it squares with Lauren's birth in July 2009 and her age of 81. Butler meant Parable of the Trickster to follow the colonists to the planet Bow, but she abandoned it, so the launch is where the published chain ends. Earthseed chose the ship's name, and the novel leaves the irony of naming it after Columbus in plain view.",
+     "binWhy": "The first colony ship leaves for a star no one has reached.",
+     "bin": "voyage-into-unknown",
+     "facets": {
+      "change": "a destiny in verse → colonists in orbit",
+      "mechanism": "expedition",
+      "actor": "movement",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "post-collapse",
+       "prophecy",
+       "frontier-open"
+      ],
+      "outcomes": [
+       "colonisation",
+       "exodus",
+       "turning-point"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "It belongs in post-industrial-collapse because nothing cuts this world off from ours. Industrial America runs itself down through climate, debt and neglect (the Pox), and the story is about what gets built in the wreckage, from a walled street to a theocracy to a religion aimed at the stars. Continuity is the two published novels only; the abandoned Parable of the Trickster is not used. T3 holds only the two publications (1993, 1998), and every story event from the 2015 fork to the 2090 launch is T2. T4 is empty because the novels give no history before the late twentieth century. T1 is empty because the published chain ends in 2090 as the ship leaves.",
+   "sources": [
+    {
+     "title": "Wikipedia: Parable of the Sower (novel)",
+     "url": "https://en.wikipedia.org/wiki/Parable_of_the_Sower_(novel)"
+    },
+    {
+     "title": "Wikipedia: Parable of the Talents (novel)",
+     "url": "https://en.wikipedia.org/wiki/Parable_of_the_Talents_(novel)"
+    },
+    {
+     "title": "EBSCO Research Starters: Parable of the Sower and Parable of the Talents",
+     "url": "https://www.ebsco.com/research-starters/literature-and-writing/parable-sower-and-parable-talents-octavia-e-butler"
+    }
+   ]
+  },
+  {
+   "id": "station-eleven",
+   "title": "Station Eleven",
+   "medium": "book",
+   "creator": "Emily St. John Mandel (novel); Patrick Somerville (HBO Max series)",
+   "originYear": 2014,
+   "group": "post-industrial-collapse",
+   "epoch": "present",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 2015,
+    "label": "The Georgia Flu reaches Toronto",
+    "delta": "Real: 2015 — the West African Ebola epidemic is being brought under control and no influenza pandemic comes. Fiction: a flu from the Republic of Georgia kills almost everyone on Earth within weeks, and the grid, the internet and every government go with them.",
+    "inUniverse": "Year Zero: the winter night Arthur Leander dies playing King Lear in Toronto. The novel never names a calendar year.",
+    "confidence": "low",
+    "note": "Station Eleven counts time from the collapse (Year One, Year Fifteen, Year Twenty) and never states the calendar year of the outbreak; readers asking the question are told only that it starts in the present. The book was written in the early 2010s and published in September 2014, and its pre-collapse chapters are the world of its first readers, down to the iPhones and laptops in Clark's museum. The atlas therefore places Year Zero in the first Toronto winter after publication, 2015 (the opening night is snowy), which keeps the outbreak in its readers' present without predating the book. A reader who takes 2013 or 2014 moves every date here back by one or two years; nothing in the text rules either out. The 2021 HBO series sets its outbreak in its own present, December 2020; that is its continuity, not the novel's. The novel's pre-collapse flashbacks (Arthur's marriages, Miranda's comic) are counted in years before the outbreak and are not dated here.",
+    "sources": [
+     {
+      "title": "Goodreads Q&A: 'What year does the Georgian flu hit?' (no year is given)",
+      "url": "https://www.goodreads.com/questions/1006057-what-year-does-the-georgian-flu-hit-i"
+     },
+     {
+      "title": "Wikipedia: Station Eleven (novel)",
+      "url": "https://en.wikipedia.org/wiki/Station_Eleven"
+     },
+     {
+      "title": "Pan Macmillan: Emily St. John Mandel on Station Eleven ('the pandemic was entirely incidental')",
+      "url": "https://www.panmacmillan.com/blogs/literary/emily-st-john-mandel-station-eleven-book"
+     },
+     {
+      "title": "TheWrap: Station Eleven timeline explained (the series dates its outbreak to December 2020)",
+      "url": "https://www.thewrap.com/station-eleven-timeline-explained/"
+     },
+     {
+      "title": "LitCharts: Station Eleven chapter 1 (the King Lear night; snow in Toronto)",
+      "url": "https://www.litcharts.com/lit/station-eleven/chapter-1"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "Twenty years after the flu the Prophet is dead, the airport town and the Symphony have survived, and a town to the south has electric streetlamps again: the novel ends on the first sign that the industrial world is being rebuilt.",
+    "asOf": 2035
+   },
+   "events": [
+    {
+     "id": "se-novel-2014",
+     "year": 2014,
+     "date": "2014-09-09",
+     "title": "Emily St. John Mandel publishes Station Eleven",
+     "description": "Knopf and HarperCollins Canada publish the novel in September 2014. It opens on a winter night in Toronto in a world indistinguishable from its readers' own, then moves between that world's last years and the twentieth year after it ends.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Station Eleven (novel)",
+       "url": "https://en.wikipedia.org/wiki/Station_Eleven"
+      }
+     ],
+     "note": "First published 9 September 2014; it won the Arthur C. Clarke Award in 2015 and was a National Book Award finalist. The publication precedes the atlas's Year Zero by a few months, which is deliberate: see divergence.note.",
+     "binWhy": "A publication date is not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "se-georgia-flu-2015",
+     "year": 2015,
+     "date": "2015",
+     "title": "Arthur Leander dies on stage, and the Georgia Flu reaches Toronto",
+     "description": "A fifty-one-year-old film star has a heart attack playing King Lear in Toronto; that same night a doctor at Toronto General warns his friend that a flu first reported in the Republic of Georgia is filling the hospital. It spreads faster than anything he has seen, and within weeks it has killed something like ninety-nine per cent of the world.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "disaster",
+     "inUniverse": "Year Zero: the night of Arthur Leander's King Lear, in winter (snow in Toronto)",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Wikipedia: Station Eleven (novel)",
+       "url": "https://en.wikipedia.org/wiki/Station_Eleven"
+      },
+      {
+       "title": "GradeSaver: Station Eleven section 1 (Arthur, fifty-one, dies playing Lear)",
+       "url": "https://www.gradesaver.com/station-eleven/study-guide/summary-section-1-the-theater"
+      },
+      {
+       "title": "LitCharts: Station Eleven chapter 1 (the King Lear night; snow in Toronto)",
+       "url": "https://www.litcharts.com/lit/station-eleven/chapter-1"
+      }
+     ],
+     "note": "The novel gives no calendar year for the outbreak; it counts time from it. The atlas takes 2015, the first Toronto winter after the book's publication, as Year Zero; the reasoning and the alternatives are in divergence.note. Everything else here, the theatre night, the flu's origin in Georgia and its speed, is stated in the text.",
+     "binWhy": "A new influenza kills almost everyone alive in a few weeks; that is the plague bin by definition.",
+     "bin": "plague",
+     "facets": {
+      "change": "an ordinary winter → ninety-nine per cent of humanity dead within weeks",
+      "mechanism": "disaster",
+      "actor": "nature",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "biological",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "global-travel",
+       "prosperity"
+      ],
+      "outcomes": [
+       "mass-death",
+       "collapse"
+      ]
+     }
+    },
+    {
+     "id": "se-year-one-2016",
+     "year": 2016,
+     "date": "2016",
+     "title": "The lights do not come back",
+     "description": "Within the first month the internet, the electrical grid and running water fail, and in the year that follows nothing restarts: no government, no rescue, no news. At Severn City, a small Great Lakes airport where flights were diverted on the first day, the stranded passengers become a settlement, and on Day 100 Clark Thompson puts his dead iPhone and laptop in a display case and starts the Museum of Civilization.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "disaster",
+     "inUniverse": "Year One (the grid and the internet fail in the first weeks of the flu; the museum begins on Day 100)",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "The Bibliofile: Station Eleven recap, with the novel's Day and Year markers",
+       "url": "https://the-bibliofile.com/station-eleven/"
+      },
+      {
+       "title": "Wikipedia: Station Eleven (novel)",
+       "url": "https://en.wikipedia.org/wiki/Station_Eleven"
+      },
+      {
+       "title": "LitCharts: Station Eleven plot summary",
+       "url": "https://www.litcharts.com/lit/station-eleven/summary"
+      }
+     ],
+     "note": "The novel's recaps place the failures of internet, power and water in the first thirty days and the museum on Day 100, which may fall in the same calendar year as the outbreak; the event is dated to Year One, the novel's name for the first year after, and merges the collapse with the airport's founding because they fall in the same span. The Year label is the novel's; the calendar year is Year Zero = 2015 plus that count (see divergence.note), so the whole chain moves with that choice.",
+     "binWhy": "The order of the industrial world breaks and does not return: the grid, the internet and the state are gone for good. The airport town is what survives inside that collapse.",
+     "bin": "civilisation-collapses",
+     "facets": {
+      "change": "a grounded flight and a failing grid → no power, no internet, no state, and a town inside an airport",
+      "mechanism": "disaster",
+      "actor": "nature",
+      "position": "above",
+      "scope": "civilisational",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "disaster-just-struck",
+       "plague-running",
+       "machine-dependency"
+      ],
+      "outcomes": [
+       "collapse",
+       "shelter-society",
+       "scattering"
+      ]
+     }
+    },
+    {
+     "id": "se-year-two-2017",
+     "year": 2017,
+     "date": "2017",
+     "title": "Tyler and Elizabeth leave the airport with a religious group",
+     "description": "Arthur's son Tyler, a child at the airport who reads the New Testament alongside the Station Eleven comics his father gave him, has come to believe the dead were not good enough to be spared. He and his mother Elizabeth leave Severn City with a wandering group of believers; he will grow up to lead it.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Year Two",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "The Bibliofile: Station Eleven recap, with the novel's Day and Year markers",
+       "url": "https://the-bibliofile.com/station-eleven/"
+      },
+      {
+       "title": "LitCharts: Tyler Leander / the Prophet",
+       "url": "https://www.litcharts.com/lit/station-eleven/characters/tyler-leander-the-prophet"
+      }
+     ],
+     "note": "Year Two for the departure is stated in the novel's airport chapters. The Year label is the novel's; the calendar year is Year Zero = 2015 plus that count (see divergence.note), so the whole chain moves with that choice.",
+     "binWhy": "A boy leaves convinced that the survivors were chosen and the dead were judged; the cult he will lead turns on that belief.",
+     "bin": "chosen-one",
+     "facets": {
+      "change": "a stranded boy → a believer that the flu was a judgment, gone with a cult",
+      "mechanism": "recruitment",
+      "actor": "faction",
+      "position": "below",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "religious-fervour",
+       "disaster-just-struck"
+      ],
+      "outcomes": [
+       "fervour",
+       "radicalisation"
+      ]
+     }
+    },
+    {
+     "id": "se-mckinley-2018",
+     "year": 2018,
+     "date": "2018",
+     "title": "Jeevan Chaudhary walks into McKinley and becomes its doctor",
+     "description": "Jeevan, the would-be paramedic who tried to save Arthur, walks south for years and reaches McKinley, a farming settlement of a few dozen families in what was Virginia. He becomes its doctor, marries one of its founders in Year Ten and raises a family there.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "founding",
+     "inUniverse": "Year Three",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "The Bibliofile: Station Eleven recap, with the novel's Day and Year markers",
+       "url": "https://the-bibliofile.com/station-eleven/"
+      }
+     ],
+     "note": "Year Three for his arrival and Year Ten for his marriage to Daria are stated in the novel; the settlement's own founding predates his arrival by an unstated span, so the event is dated to his arrival. The Year label is the novel's; the calendar year is Year Zero = 2015 plus that count (see divergence.note), so the whole chain moves with that choice.",
+     "binWhy": "A permanent farming settlement takes root in new, empty country; it is the first place in the chain where the collapse turns into ordinary life.",
+     "bin": "settlement-founded",
+     "facets": {
+      "change": "a man walking south → the doctor of a permanent settlement in what was Virginia",
+      "mechanism": "arrival",
+      "actor": "individual",
+      "position": "below",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "post-collapse",
+       "isolation"
+      ],
+      "outcomes": [
+       "rebuilding",
+       "recovery"
+      ]
+     }
+    },
+    {
+     "id": "se-symphony-2020",
+     "year": 2020,
+     "date": "2020",
+     "title": "The Travelling Symphony takes to the road",
+     "description": "A group of musicians sets out between the settlements of the Great Lakes, merges a few months later with a company of actors, and becomes the Travelling Symphony: horse-drawn caravans, an orchestra and Shakespeare on a two-year circuit. The lead caravan carries a line from Star Trek: Voyager, 'Survival is insufficient'.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "founding",
+     "inUniverse": "Year Five",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "LitCharts: Station Eleven chapter 7 (the Symphony on the road since Year Five; Year Twenty in July)",
+       "url": "https://www.litcharts.com/lit/station-eleven/chapter-7"
+      },
+      {
+       "title": "Wikipedia: Station Eleven (novel)",
+       "url": "https://en.wikipedia.org/wiki/Station_Eleven"
+      }
+     ],
+     "note": "The novel states the Symphony has travelled since Year Five. Kirsten, eight at the outbreak, joins it after her brother's death; its actors perform only Shakespeare because audiences want the best of the old world. The Year label is the novel's; the calendar year is Year Zero = 2015 plus that count (see divergence.note), so the whole chain moves with that choice.",
+     "binWhy": "A lasting body is founded that carries a culture between isolated towns; it is the story's central institution.",
+     "bin": "new-institution",
+     "facets": {
+      "change": "scattered survivors with instruments → a touring company carrying Shakespeare between towns",
+      "mechanism": "founding",
+      "actor": "movement",
+      "position": "below",
+      "scope": "national",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "isolation"
+      ],
+      "outcomes": [
+       "rebuilding",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "se-series-2021",
+     "year": 2021,
+     "date": "2021-12-16",
+     "title": "HBO Max releases the Station Eleven miniseries",
+     "description": "Patrick Somerville's ten-episode adaptation premieres on HBO Max, moving the outbreak to Chicago and to its own present, and giving Tyler a redemption the novel does not.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Station Eleven (miniseries)",
+       "url": "https://en.wikipedia.org/wiki/Station_Eleven_(miniseries)"
+      },
+      {
+       "title": "TheWrap: Station Eleven timeline explained (the series dates its outbreak to December 2020)",
+       "url": "https://www.thewrap.com/station-eleven-timeline-explained/"
+      }
+     ],
+     "note": "Premiered 16 December 2021 and concluded 13 January 2022. The series dates its outbreak to December 2020; the atlas follows the novel's undated continuity instead.",
+     "binWhy": "A release date is not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "se-year-fifteen-2030",
+     "year": 2030,
+     "date": "2030",
+     "title": "The New Petoskey News interviews Kirsten Raymonde",
+     "description": "François Diallo, who keeps a library and prints a newspaper in New Petoskey, interviews Kirsten about the old world and the first years after. She remembers almost nothing of Year One on the road with her brother, and carries tattooed knives for the people she has killed.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": "Year Fifteen",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "LitCharts: Station Eleven plot summary",
+       "url": "https://www.litcharts.com/lit/station-eleven/summary"
+      },
+      {
+       "title": "LitCharts: Kirsten Raymonde",
+       "url": "https://www.litcharts.com/lit/station-eleven/characters/kirsten-raymonde"
+      }
+     ],
+     "note": "Year Fifteen for the interview is stated in the novel, which quotes it in pieces across the book. The Year label is the novel's; the calendar year is Year Zero = 2015 plus that count (see divergence.note), so the whole chain moves with that choice.",
+     "binWhy": "A jump fifteen years on shows a world with a printing press, a library and an oral history, and no electricity.",
+     "bin": "long-after",
+     "facets": {
+      "change": "fifteen unrecorded years → a newspaper asking survivors what they remember",
+      "mechanism": "disclosure",
+      "actor": "individual",
+      "position": "below",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "isolation"
+      ],
+      "outcomes": [
+       "rebuilding",
+       "revelation"
+      ]
+     }
+    },
+    {
+     "id": "se-prophet-2034",
+     "year": 2034,
+     "date": "2034",
+     "title": "The Prophet holds St. Deborah by the Water",
+     "description": "The cult Tyler grew up in, now armed and led by him as the Prophet, controls the lakeside town of St. Deborah by the Water and takes young girls as his wives. Two Symphony members who had stayed there with their newborn flee to Severn City, and from their description Clark realises the Prophet is Tyler.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "politics",
+     "inUniverse": "Year Nineteen (between the Symphony's Year Eighteen visit and the fugitives' arrival at the airport)",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "The Bibliofile: Station Eleven recap, with the novel's Day and Year markers",
+       "url": "https://the-bibliofile.com/station-eleven/"
+      },
+      {
+       "title": "LitCharts: Tyler Leander / the Prophet",
+       "url": "https://www.litcharts.com/lit/station-eleven/characters/tyler-leander-the-prophet"
+      }
+     ],
+     "note": "The novel does not show the takeover. The Symphony left Charlie and Jeremy at St. Deborah on its previous pass two years before Year Twenty, and they reach the airport in Year Nineteen, so the Prophet held the town by then; dated to Year Nineteen. The Year label is the novel's; the calendar year is Year Zero = 2015 plus that count (see divergence.note), so the whole chain moves with that choice.",
+     "binWhy": "An armed religious faction takes control of a town and rules it by doctrine and force.",
+     "bin": "power-seized",
+     "facets": {
+      "change": "a lakeside town → a cult's town where girls are taken as wives",
+      "mechanism": "arrival",
+      "actor": "faction",
+      "position": "outside",
+      "scope": "local",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "religious-fervour",
+       "weak-institutions"
+      ],
+      "outcomes": [
+       "theocracy",
+       "exile"
+      ]
+     }
+    },
+    {
+     "id": "se-year-twenty-2035",
+     "year": 2035,
+     "date": "2035-07",
+     "title": "The Prophet is killed, and electric light is seen to the south",
+     "description": "The Symphony passes through St. Deborah, is hunted by the Prophet's men and loses members; when he holds Kirsten at gunpoint on the road she answers him with lines from Station Eleven, and the boy guarding him shoots him and then himself. At Severn City the Symphony finds its missing members, and Clark takes Kirsten up the control tower to see, through a telescope, a town to the south lit by electric streetlamps.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Year Twenty (July onward)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "GradeSaver: Station Eleven sections 8-9 (the Prophet's death; the lights from the control tower)",
+       "url": "https://www.gradesaver.com/station-eleven/study-guide/summary-section-8-the-prophet-and-section-9-station-eleven"
+      },
+      {
+       "title": "LitCharts: Station Eleven chapter 7 (the Symphony on the road since Year Five; Year Twenty in July)",
+       "url": "https://www.litcharts.com/lit/station-eleven/chapter-7"
+      },
+      {
+       "title": "Wikipedia: Station Eleven (novel)",
+       "url": "https://en.wikipedia.org/wiki/Station_Eleven"
+      }
+     ],
+     "note": "The confrontation and the sighting both fall in Year Twenty, whose narrative opens in July, so they are merged into one event (at most one per year). The bin follows the confrontation, the event's action; the lights, which another town switched on offstage, carry the ending. The Year label is the novel's; the calendar year is Year Zero = 2015 plus that count (see divergence.note), so the whole chain moves with that choice.",
+     "binWhy": "The cult's leader is killed by one of his own and his hold on the Lakes ends with him; the lights are the news that arrives at the same time.",
+     "bin": "ruler-falls",
+     "facets": {
+      "change": "a prophet who takes towns → a dead prophet, and a town with electric light",
+      "mechanism": "death",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "local",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "theocracy",
+       "post-collapse",
+       "religious-fervour"
+      ],
+      "outcomes": [
+       "recovery",
+       "turning-point"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs in Post-Industrial Collapse because its fork is a single catastrophe in our own present, a pandemic that ends the grid and the state within weeks, and the story is about what the survivors keep. The novel follows one continuity (Mandel's 2014 text); the 2021 series moves the outbreak to 2020 and Chicago and softens the Prophet, and is recorded only as a release. Every event is T2 (2014-2035). T3 and T4 are empty because the pre-collapse chapters reach back only a few decades into Arthur's life and are counted in years before the outbreak rather than dated; T1 is empty because the story ends in Year Twenty.",
+   "sources": [
+    {
+     "title": "Wikipedia: Station Eleven (novel)",
+     "url": "https://en.wikipedia.org/wiki/Station_Eleven"
+    },
+    {
+     "title": "Wikipedia: Station Eleven (miniseries)",
+     "url": "https://en.wikipedia.org/wiki/Station_Eleven_(miniseries)"
+    },
+    {
+     "title": "The Bibliofile: Station Eleven recap, with the novel's Day and Year markers",
+     "url": "https://the-bibliofile.com/station-eleven/"
+    },
+    {
+     "title": "LitCharts: Station Eleven plot summary",
+     "url": "https://www.litcharts.com/lit/station-eleven/summary"
+    }
+   ]
   }
  ]
 }
