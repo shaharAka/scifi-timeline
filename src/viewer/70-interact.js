@@ -1,10 +1,26 @@
 /* ============================================================ interactions */
 
 var drag = null, tip = document.getElementById("tip");
+/* Touch: every finger down, so two of them can pinch. A pinch zooms around the
+   midpoint between the fingers and pans with it; whatever the fingers were on
+   is not clicked when they lift. */
+var touches = {}, pinch = null, swallowClick = false;
+function touchCount(){ return Object.keys(touches).length; }
+function touchPair(){
+  var k = Object.keys(touches); if(k.length < 2) return null;
+  var a = touches[k[0]], b = touches[k[1]];
+  return { d: Math.max(1, Math.hypot(a.x - b.x, a.y - b.y)), x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
+}
 
 function attachInteractions(svg){
   svg.onpointerdown = function(ev){
-    if(ev.button !== 0) return;
+    if(ev.button !== 0 && ev.button !== undefined) return;
+    if(ev.pointerId !== undefined) touches[ev.pointerId] = { x:ev.clientX, y:ev.clientY };
+    if(touchCount() >= 2 && axisMode === "moments"){
+      pinch = touchPair(); drag = null; swallowClick = true;
+      return;
+    }
+    swallowClick = false;
     /* remember what was pressed: once the svg captures the pointer, pointerup is
        retargeted to the svg itself and ev.target no longer names the branch */
     drag = { x0:ev.clientX, y0:ev.clientY, c0:view.c, p0:panY, t0:MP.tx, ty0:MP.ty, moved:0, target:ev.target };
@@ -12,6 +28,15 @@ function attachInteractions(svg){
     try{ svg.setPointerCapture(ev.pointerId); }catch(e){}
   };
   svg.onpointermove = function(ev){
+    if(ev.pointerId !== undefined && touches[ev.pointerId]) touches[ev.pointerId] = { x:ev.clientX, y:ev.clientY };
+    if(pinch && touchCount() >= 2){
+      var now = touchPair(), rect = svg.getBoundingClientRect ? svg.getBoundingClientRect() : { left:0, top:0 };
+      momentsPan(now.x - pinch.x, MP.tx, now.y - pinch.y, MP.ty);
+      momentsZoomAt(now.d / pinch.d, now.x - rect.left, now.y - rect.top);
+      pinch = now;
+      renderChart();
+      return;
+    }
     if(drag){
       var dx = ev.clientX - drag.x0, dy = (ev.clientY || 0) - (drag.y0 || 0);
       drag.moved = Math.max(drag.moved, Math.abs(dx), Math.abs(dy));
@@ -27,8 +52,17 @@ function attachInteractions(svg){
     branchHover(ev);
     cursorMove(ev, svg);
   };
+  svg.onpointercancel = function(ev){
+    if(ev && ev.pointerId !== undefined) delete touches[ev.pointerId];
+    if(touchCount() < 2) pinch = null;
+    drag = null; svg.classList.remove("dragging");
+  };
   svg.onpointerup = function(ev){
-    var wasDrag = drag && drag.moved > 4;
+    if(ev && ev.pointerId !== undefined) delete touches[ev.pointerId];
+    if(pinch){ if(touchCount() < 2) pinch = null; drag = null; return; }
+    if(swallowClick){ if(touchCount() === 0) swallowClick = false; drag = null; return; }
+    /* a finger drag moves further than a mouse jitter before it means "drag" */
+    var wasDrag = drag && drag.moved > (ev && ev.pointerType === "touch" ? 9 : 4);
     var pressed = drag && drag.target;
     drag = null;
     svg.classList.remove("dragging");

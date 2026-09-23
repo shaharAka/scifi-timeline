@@ -31,7 +31,7 @@
    (wheel zooms, drag pans, Fit shows the whole map beside the panel).
    ========================================================================== */
 
-var MP = { s:1, sy:1, fitS:1, tx:0, ty:0, node:null, col:null, world:null, beat:null, news:null, model:null, geom:null, width:900, fit:true };
+var MP = { s:1, sy:1, fitS:1, tx:0, ty:0, node:null, col:null, world:null, beat:null, news:null, focus:false, panned:false, model:null, geom:null, width:900, fit:true };
 var MP_PAD = 72;
 var MP_MIN_S = 0.35;
 var MP_MAX_S = 9;
@@ -169,6 +169,7 @@ function momentsZoomAt(g, mx, my){
   MP.tx = mx - wx * s2; MP.ty = my - wy * sy2; MP.s = s2; MP.sy = sy2; MP.fit = false;
 }
 function momentsPan(dx, tx0, dy, ty0){
+  if(Math.abs(dx) > 8) MP.panned = true;
   MP.tx = tx0 + dx;
   if(ty0 !== undefined) MP.ty = ty0 + (dy || 0);
   MP.fit = false;
@@ -176,6 +177,7 @@ function momentsPan(dx, tx0, dy, ty0){
 
 /* --- selection ------------------------------------------------------------------- */
 function mpShow(){
+  MP.focus = true;               /* bring the choice into view where the map is narrow */
   if(typeof setPanel === "function") setPanel("moments");
   renderChart(); renderMomentsPanel();
   var d = document.getElementById("drawer"); if(d) d.scrollTop = 0;
@@ -355,6 +357,37 @@ function momentsLayout(M, width){
            bucketH:bucketH, bucketY:bucketY, total:total, realX:realX, realXForYear:realXForYear, pills:pills, marks:marks };
 }
 
+/* On a phone the map is wider than the screen, so a choice made in the panel
+   or on the map can be off to the side. Slide the map, never zoom it, so the
+   chosen thing sits a third of the way in. */
+function mpFocus(M, L){
+  if(!mpIsPhone()) return;
+  var x = null, y = L.trunkY;
+  if(MP.news) x = L.forkR;
+  else if(MP.world && M.byId[MP.world]){ var st = M.byId[MP.world]; x = L.xc(st.first); y = st.Y[st.first]; }
+  else if(MP.node && mpIsEnding(MP.node)){ x = L.bucketX + L.bucketW; var en = mpEndingRec(M, MP.node); y = L.bucketY[en ? en.valence : "unknown"]; }
+  else if(MP.node && M.kinds[MP.node]){
+    var k = M.kinds[MP.node], cols = k.hits.map(function(h){ return h.col; });
+    var c = MP.col != null ? MP.col : Math.min.apply(null, cols.length ? cols : [0]);
+    x = L.xc(c);
+    var ys = k.hits.filter(function(h){ return h.col === c; }).map(function(h){ return h.s.Y[c]; });
+    if(ys.length) y = mpMean(ys);
+  } else if(MP.beat) x = L.realX[MP.beat.id];
+  if(x == null || isNaN(x)) return;
+  var target = MP.node && mpIsEnding(MP.node) ? W - 16 : W * 0.34;
+  MP.tx = Math.min(0, target - x * MP.s);
+  if(y != null && !isNaN(y)) MP.ty = mpUsableHeight() * 0.45 - y * MP.sy;
+}
+/* "the endings are this way": shown on a phone until the reader first pans */
+function mpHint(L){
+  var el = document.getElementById("mp-hint");
+  if(!el) return;
+  var off = mpT(L.bucketX) > MP.width - 20;
+  var show = mpIsPhone() && !MP.panned && off && !MP.node && !MP.world && !MP.news;
+  el.hidden = !show;
+  if(show && el.classList) el.classList.add("on");
+}
+
 /* --- drawing helpers ------------------------------------------------------------- */
 function mpSeg(x1, y1, x2, y2){
   var dx = Math.max(12, (x2 - x1) * 0.5);
@@ -408,6 +441,8 @@ function renderMomentsPage(svg){
     MP.fitS = mpIsPhone() ? 0.5 : Math.max(MP_MIN_S, Math.min(1, (MP.width - 12) / L.total));
     MP.s = MP.fitS; MP.sy = 1; MP.tx = 0; MP.ty = 0; MP.fit = false;
   }
+  if(MP.focus){ MP.focus = false; mpFocus(M, L); }
+  mpHint(L);
   var T = mpT, TY = mpTY, s = MP.s;
   var lit = mpLit(M);
   function isLit(id){ return !lit || lit[id]; }
@@ -625,11 +660,13 @@ function mpDrawNews(g, L, T, TY){
     grp.appendChild(t);
     gN.appendChild(grp);
   });
-  /* the flag for the newest item (or the chosen one) */
+  /* the flag for the newest item (or the chosen one); on a phone it steps aside
+     while something else is chosen, so it does not cover the choice */
+  if(mpIsPhone() && !MP.news && (MP.node || MP.world || MP.beat)){ g.appendChild(gN); return; }
   var n0 = MP.news || items[0];
   var fx = T(L.realXForYear(mpNewsYear(n0))), top = y - 92;
-  var head = mpClip(n0.headline, 40), fresh = mpNewsFresh(n0);
-  var w = Math.max(190, Math.min(300, head.length * 6.4 + 24)), h = 46;
+  var head = mpClip(n0.headline, mpIsPhone() ? 30 : 40), fresh = mpNewsFresh(n0);
+  var w = Math.max(170, Math.min(300, head.length * 6.4 + 24)), h = 46;
   var bx = Math.max(6, fx - w + 18);
   var flag = sEl("g", null, "mp-news-flag" + (fresh ? " fresh" : "") + (MP.news ? " selected" : ""));
   flag.setAttribute("data-news", mpNewsKey(n0));

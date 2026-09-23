@@ -198,6 +198,14 @@ function setPanel(mode){
   var d = document.getElementById("drawer");
   d.setAttribute("data-mode", panelMode);
   d.classList.toggle("open", !!panelMode);
+  /* on a phone, reading panels open tall; the Moments panel opens half so the
+     map above it stays in view */
+  if(panelMode && typeof mpIsPhone === "function" && mpIsPhone()){
+    d.classList.toggle("tall", panelMode !== "moments");
+    if(document.body && document.body.classList) document.body.classList.toggle("sheet-tall", panelMode !== "moments");
+  }
+  if(!panelMode){ d.classList.remove("tall"); if(document.body && document.body.classList) document.body.classList.remove("sheet-tall"); }
+  if(document.body && document.body.classList) document.body.classList.toggle("sheet-open", !!panelMode);
   ["index","news","world","about","moments"].forEach(function(m){
     var el = document.getElementById("panel-" + m);
     if(el) el.classList.toggle("on", m === panelMode);
@@ -290,6 +298,8 @@ function renderAxisToggle(){
   });
   var stored = null;
   try{ stored = localStorage.getItem("scifi-timeline-axis"); }catch(e){}
+  /* the tree views need a wider screen than a phone; there, Moments is the atlas */
+  if(typeof mpIsPhone === "function" && mpIsPhone()) stored = "moments";
   setAxis(stored || axisMode, false);
 }
 
@@ -338,6 +348,7 @@ function init(){
   on("pclose-index", "onclick", function(){ setPanel(""); });
   on("pclose-about", "onclick", function(){ setPanel(""); });
   on("pclose-moments", "onclick", function(){ setPanel(""); });
+  initSheet();
 
   window.addEventListener("resize", function(){
     if(measureW() !== W || measureH() !== Hv){
@@ -365,4 +376,23 @@ function init(){
   revealIn();
   growIn();
   if(typeof welcomeInit === "function") welcomeInit();
+}
+
+/* On a phone the panel is a sheet from the bottom: tap the handle to make it
+   tall or half, drag it down to close it. */
+function initSheet(){
+  var g = document.getElementById("grabber"), d = document.getElementById("drawer");
+  if(!g || !d) return;
+  var y0 = null, moved = 0;
+  g.onpointerdown = function(ev){ y0 = ev.clientY; moved = 0; try{ g.setPointerCapture(ev.pointerId); }catch(e){} };
+  g.onpointermove = function(ev){ if(y0 != null) moved = ev.clientY - y0; };
+  g.onpointerup = function(){
+    if(y0 == null) return;
+    y0 = null;
+    if(moved > 50){ if(d.classList.contains("tall")) d.classList.remove("tall"); else setPanel(""); }
+    else if(moved < -50) d.classList.add("tall");
+    else d.classList.toggle("tall");
+    document.body.classList.toggle("sheet-tall", d.classList.contains("tall"));
+    if(axisMode === "moments") renderChart();
+  };
 }

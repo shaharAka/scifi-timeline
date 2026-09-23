@@ -876,6 +876,25 @@ attempt("moments news on the map", () => {
   soft(`moments news: ${news.length} marks, "${withBin.headline}" reads as ${withBin.bin}`);
 });
 
+/* ---- Stories: the phone's front door lists every story and reads one whole ---- */
+attempt("stories picker", () => {
+  setModeVia("moments");
+  const t = debug();
+  const M = t.moments();
+  if (!M || !M.strands.length) { soft("stories: nothing to list, skipped"); return; }
+  const list = String(t.pickerListHtml());
+  const cards = (list.match(/class="pk-card /g) || []).length;
+  check(cards === M.strands.length, `${cards} story cards for ${M.strands.length} stories`);
+  check(/data-end="pessimistic"/.test(list), "the list cannot be filtered by ending");
+  const st = M.strands.slice().sort((a, b) => b.seq.length - a.seq.length)[0];
+  const story = String(t.pickerStoryHtml(st.id));
+  const steps = (story.match(/<li><span class="pk-yr">/g) || []).length;
+  check(steps === st.seq.length, `${st.id}: ${steps} steps shown for a chain of ${st.seq.length}`);
+  check(story.includes("pk-endstep " + st.ending.valence), `${st.id}: the story does not end in its ending`);
+  check(/Stories most like this one/.test(story), `${st.id}: the story does not list the stories most like it`);
+  soft(`stories: ${cards} cards; ${st.l.title} reads as ${steps} steps to ${st.ending.label.toLowerCase()}`);
+});
+
 /* ---- real history on every axis ---------------------------------------------- */
 /* ---- sources: a claim the reader can check ---------------------------------
    The confidence field says how sure the dataset is; a source says where to

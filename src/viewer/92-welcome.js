@@ -28,6 +28,7 @@ function welcomeHtml(){
   ls.forEach(function(l){ t[(l.ending && l.ending.valence) || "unknown"]++; });
   var news = (typeof mpNewsList === "function") ? mpNewsList()[0] : null;
   var fresh = news && typeof mpNewsFresh === "function" && mpNewsFresh(news);
+  var phone = typeof mpIsPhone === "function" && mpIsPhone();
   return '<div class="wl-card" role="dialog" aria-modal="true" aria-labelledby="wl-title">'
     + '<button class="wl-x" id="wl-x" aria-label="Close">×</button>'
     + '<div class="wl-kicker">An atlas of science-fiction futures</div>'
@@ -41,14 +42,14 @@ function welcomeHtml(){
         + '<span class="wl-news-k">' + (fresh ? '<span class="mp-new">New</span> ' : 'Latest news · ') + esc(fmtNewsDate(news.date)) + '</span>'
         + '<span class="wl-news-h">' + esc(news.headline) + '</span>'
         + '<span class="wl-news-go">See which futures passed through this →</span></button>' : '')
-    + '<ul class="wl-how">'
+    + (phone ? '' : '<ul class="wl-how">'
     + '<li><svg width="34" height="14" aria-hidden="true"><line x1="1" y1="7" x2="33" y2="7" style="stroke:var(--trunk)" stroke-width="3.2" stroke-linecap="round"/></svg><span><b>Our history</b> is the heavy blue line, up to today.</span></li>'
     + '<li><svg width="34" height="14" aria-hidden="true"><path d="M1 12 C12 12,16 3,33 3" fill="none" style="stroke:var(--ok)" stroke-width="2"/><path d="M1 2 C12 2,16 11,33 11" fill="none" style="stroke:var(--bad)" stroke-width="2"/></svg><span><b>Each line is one world</b>, coloured by how it ends.</span></li>'
     + '<li><svg width="34" height="14" aria-hidden="true"><rect x="3" y="1" width="28" height="12" rx="6" style="fill:var(--surface);stroke:var(--ink-3)" stroke-width="1.2"/></svg><span>A <b>pill</b> is where several worlds reach the same kind of moment. Tap anything to read it.</span></li>'
-    + '</ul>'
+    + '</ul>')
     + '<div class="wl-actions">'
     + (news ? '<button class="wl-btn primary" id="wl-go-news">Start with the news</button>' : '')
-    + '<button class="wl-btn" id="wl-go-map">Explore the map</button>'
+    + '<button class="wl-btn" id="wl-go-map">' + (phone ? 'Browse the stories' : 'Explore the map') + '</button>'
     + '</div></div>';
 }
 
@@ -63,6 +64,7 @@ function showWelcome(){
     close();
     var n = mpNewsList()[0];
     if(!n) return;
+    if(typeof pickerActive === "function" && pickerActive()){ pickerGo("news=" + mpNewsKey(n)); return; }
     if(axisMode !== "moments") setAxis("moments", false);
     momentsSelectNews(n);
   }
@@ -104,7 +106,10 @@ function applyHash(){
 function welcomeInit(){
   renderNewsBadge();
   var linked = false;
-  try{ linked = applyHash(); }catch(e){ linked = false; }
+  /* a phone opens on Stories, which reads the link itself */
+  var phone = typeof pickerInit === "function" && pickerInit();
+  if(phone) linked = typeof location !== "undefined" && /^#(news|world|kind)=/.test(location.hash || "");
+  else try{ linked = applyHash(); }catch(e){ linked = false; }
   if(!linked && !welcomeSeen()) showWelcome();
   var again = document.getElementById("about-intro");
   if(again) again.onclick = function(){ setPanel(""); showWelcome(); };

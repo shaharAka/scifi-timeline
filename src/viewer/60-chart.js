@@ -507,6 +507,8 @@ function publishTimeline(lay, nx){
     momentsZoom:function(g){ momentsZoomAt(g, W / 2); renderChart(); },
     momentsSelectKind:momentsSelectKind, momentsSelectBeat:momentsSelectBeat, momentsSelectPill:momentsSelectPill,
     momentsSelectNews:momentsSelectNews, newsByKey:mpNewsByKey,
+    pickerListHtml:function(){ return pickerListHtml(MP.model || momentsModel()); },
+    pickerStoryHtml:function(id){ var M = MP.model || momentsModel(); return M.byId[id] ? pickerStoryHtml(M.byId[id], M) : ""; },
     chainAlign:chainAlign, chainMSA:chainMSA, chainScore:chainScore,
     momentsSelectWorld:momentsSelectWorld, momentsClear:momentsClear,
     litBin:function(){ return litBin; },

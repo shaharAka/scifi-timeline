@@ -14,6 +14,8 @@
     <div class="brand" id="brand"><span class="brand-b">Where We Are Now</span> <span class="brand-a">science fiction&rsquo;s futures, lined up against ours</span></div>
 
     <nav class="nav-group">
+      <button class="nav phone-only" id="btn-stories">Stories</button>
+      <button class="nav phone-only" id="btn-map">Map</button>
       <button class="nav" id="btn-worlds" title="Browse every world (W)">Worlds</button>
       <button class="nav" id="btn-news" title="What has happened lately (N)">News</button>
       <button class="nav" id="btn-about" title="What this is and what to distrust">About</button>
@@ -62,9 +64,12 @@
     <div id="plate" class="plate" aria-hidden="true"></div>
     <canvas id="backdrop"></canvas>
     <svg id="chart" xmlns="http://www.w3.org/2000/svg"></svg>
+    <div id="mp-hint" class="mp-hint" hidden>Drag to see how they end &rarr;</div>
   </div>
+  <div id="picker" class="picker" aria-label="Stories"></div>
 
   <aside class="panel" id="drawer" data-mode="">
+    <button class="grabber" id="grabber" aria-label="Resize the panel"><span></span></button>
     <div class="panel-mode" id="panel-index">
       <div class="phead"><h2>Every world</h2><button class="ghost" id="pclose-index">Close</button></div>
       <div class="stats" id="stats"></div>

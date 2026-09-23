@@ -18,7 +18,7 @@ body{
 .mono{font-family:var(--font-mono)}
 
 /* ---------------------------------------------------------------- one canvas */
-.app{display:flex;flex-direction:column;height:100vh;min-height:0}
+.app{display:flex;flex-direction:column;height:100vh;height:100dvh;min-height:0}
 .topbar{flex:none;padding:8px 10px 0;z-index:40}
 .canvas{flex:1;position:relative;min-height:0;margin:8px 10px;
   border:1px solid var(--line-1);border-radius:var(--r-3);overflow:hidden;

@@ -310,6 +310,7 @@ from `file://`). Keep function names unique and keep each file to one concern:
 | `58-facets.js` | facet similarity: `facetNeighbours`, `facetForward`, the weights |
 | `59-chains.js` | chain alignment: `chainKindSim`, `chainScore`, `chainAlign` (local), `chainMSA` (progressive multiple alignment, the map's columns) |
 | `92-welcome.js` | arriving: the first-visit card, the News button's count, and `#news=` / `#world=` / `#kind=` links |
+| `93-picker.js` | Stories, the phone's front door: the list, a story as a vertical chain, routing by hash |
 | `60-chart.js` | drawing: backdrop, trunk, axis, bundles, `renderBranch`, prehistory nodes |
 | `65-motion.js` | grow-in, convergence, layout glide |
 | `70-interact.js` | pan, zoom, hover, click, tooltip |
@@ -370,6 +371,16 @@ Four rules follow from that, and they are the owner's:
 - **Selections are links.** Choosing news, a world or a kind writes
   `#news=<date>`, `#world=<id>` or `#kind=<id>`; a post can link straight to
   the reading it describes.
+- **A phone opens on Stories, not a canvas** (`93-picker.js`). Below
+  720px the front door is a list: the latest news, our own recent chain, and
+  a card per world sorted by how closely its chain matches ours, filterable
+  by ending. A card opens the story as a vertical chain with its ending and
+  the stories most like it; any kind of moment opens every story through
+  it. Each screen is a history entry, so the phone's back button works. The
+  map is the Map tab; there, pinch zooms, a tap centres the choice above the
+  bottom sheet, the zoom buttons float on the map, and a hint points to the
+  endings until the first drag. Order and Years are not offered on a phone:
+  the tree needs a wider screen.
 - **Fewer tools on the Moments page.** Eras, the time slider, the label
   toggle, the sort and the archetype chips act on the tree and are hidden on
   Moments. On a phone (< 720px) the bar is one compact block, the legend is
