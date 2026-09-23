@@ -153,8 +153,16 @@ function fitAll(){
     momentsFit(); renderChart();
     return;
   }
-  var lay = layout(visibleLineages());
+  /* Part of the layout's height does not scale with Z (the trunk's lower margin,
+     the header rows), so one division overshoots and the last lanes fall off the
+     bottom. Refine a few times until the whole tree fits. */
+  var list = visibleLineages(), lay = layout(list);
   Z = clamp((Hv - 12) / Math.max(1, lay.height1), Z_MIN, 1.15);
+  for(var it = 0; it < 4; it++){
+    lay = layout(list);
+    if(lay.height <= Hv - 8 || Z <= Z_MIN) break;
+    Z = clamp(Z * (Hv - 12) / lay.height, Z_MIN, 1.15);
+  }
   panY = 0;
   if(axisMode === "years"){
     var h = homeEra();
@@ -283,6 +291,9 @@ function setAxis(mode, persist){
   if(typeof document !== "undefined" && document.body && document.body.classList){
     document.body.classList.toggle("mode-moments", axisMode === "moments");
   }
+  /* the mode swaps the legend and the tools, which changes the canvas's size:
+     measure again before fitting, or the fit is made for the old canvas */
+  if(typeof measureW === "function" && document.getElementById("chartbody")){ W = measureW(); Hv = measureH(); }
   if(axisMode === "moments"){ momentsFit(); renderChart(); renderMomentsPanel(); if((panelMode === "" || panelMode === "news") && !(typeof mpIsPhone === "function" && mpIsPhone())) setPanel("moments"); }
   else if(axisMode === "years") fitEverything();
   else fitAll();

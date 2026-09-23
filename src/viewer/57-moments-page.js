@@ -1092,7 +1092,8 @@ function graphMode(){ return axisMode === "moments"; }
 
 /* Real history's beats in the line-shaped views (Order, Years): a strip at the
    head of the drawing area. The Moments page draws its own. */
-function drawRealBeats(host, list, left, right){
+function drawRealBeats(host, list, left, right, ty){
+  ty = ty || 0;
   if(!REAL || !REAL.events || !REAL.events.length) return;
   if(graphMode()) return;
   var g = sEl("g", null, "real-beats");
@@ -1101,7 +1102,7 @@ function drawRealBeats(host, list, left, right){
     var x = AX.realX ? AX.realX(e) : null;
     if(x == null || isNaN(x) || x < left - 4 || x > right + 4) return;
     shown++;
-    var hit = sEl("circle", {cx:x, cy:0, r:11, fill:"transparent", "pointer-events":"all"}, "real-hit");
+    var hit = sEl("circle", {cx:x, cy:ty, r:9, fill:"transparent", "pointer-events":"all"}, "real-hit");
     hit.setAttribute("data-real", e.id);
     hit.style.cursor = "pointer";
     var t = sEl("title");
@@ -1109,13 +1110,9 @@ function drawRealBeats(host, list, left, right){
       + "\nclick to read what followed in worlds in this situation";
     hit.appendChild(t);
     g.appendChild(hit);
-    g.appendChild(paintC(sEl("circle", {cx:x, cy:0, r:3.1}, "real-dot"), "fill", "#ffffff"));
+    g.appendChild(paintC(sEl("circle", {cx:x, cy:ty, r:3.1}, "real-dot"), "fill", "#ffffff"));
   });
-  if(shown){
-    var lab = sEl("text", {x:left + 4, y:-13}, "real-label");
-    lab.textContent = "REAL HISTORY · " + shown + " beats";
-    g.appendChild(lab);
-  }
+  /* the trunk is already labelled "real history"; the dots need no second caption */
   host.appendChild(g);
   Array.prototype.forEach.call(g.querySelectorAll("[data-real]"), function(el){
     el.onclick = function(ev){

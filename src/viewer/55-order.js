@@ -165,7 +165,8 @@ function axisOrder(list, left, right){
     /* The trunk is not a lane, so real beats are not placed by any world's
        fork rule: they spread along the full width by their own order, which is
        the same reading the fork zone and the beats get in this view. */
-    realX: function(e){ return left + realBeatT(e) * (right - left); },
+    /* real history has all happened: it spans the past, up to the today column */
+    realX: function(e){ return left + realBeatT(e) * (nowX - 6 - left); },
     offCanvas: false,
     caption: { zoneA: zoneA, zoneB: zoneB,
                text: "worlds leave our history, in the order they do" },

@@ -151,7 +151,8 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:12px;heigh
 .ax+.ax{border-left:1px solid var(--line-2)}
 .ax:hover{background:var(--card-bg-hover);color:var(--ink-0)}
 .ax.on{background:var(--ink-0);color:var(--surface)}
-.eras.disabled,#zoom.disabled{opacity:.35;pointer-events:none}
+/* calendar-only controls are not offered outside the calendar view */
+.eras.disabled,#zoom.disabled{display:none}
 
 /* --- the Moments page asks for fewer tools -----------------------------------------
    Eras, the time slider, the label toggle and the archetype chips all act on the

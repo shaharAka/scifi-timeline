@@ -944,6 +944,26 @@ attempt("sources reach the drawer", () => {
 });
 
 
+attempt("tree views at rest", () => {
+  /* nothing chosen: no branch dims, every world is named, real history is all
+     before today */
+  for (const mode of ["order", "years"]) {
+    setModeVia(mode);
+    debug().closeWorld();
+    debug().clearMatch();
+    const t = debug();
+    const dimmed = svgNodes().filter((n) => n.classList && n.classList.contains("branch") && n.classList.contains("dim"));
+    check(dimmed.length === 0, `${mode}: ${dimmed.length} branches dimmed with nothing selected`);
+    const named = svgNodes().filter((n) => n.getAttribute("data-lane-title") !== null).length;
+    check(named === t.lineages.length, `${mode}: ${named} world names for ${t.lineages.length} worlds`);
+    if (mode === "order") {
+      const now = t.axis().now;
+      const late = svgNodes().filter((n) => n.getAttribute("data-real") !== null && parseFloat(n.getAttribute("cx")) > now + 0.5);
+      check(late.length === 0, `order: ${late.length} real beats drawn past the today column`);
+    }
+  }
+});
+
 attempt("real history on every axis", () => {
   const t = debug();
   const real = t.real();

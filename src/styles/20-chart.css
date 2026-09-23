@@ -229,3 +229,11 @@ body.mode-moments #converge{display:none}
 .mp-news-head{font-size:12px;font-weight:650;fill:var(--ink-0)}
 .mp-news-pulse{fill:var(--bad);animation:mp-pulse 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
 @keyframes mp-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(1.7)}}
+
+/* a world's name at a tight lane pitch */
+.branch .title.compact{font-size:10px}
+
+/* labels on the tree read through the lines behind them: a halo in the canvas
+   colour breaks any strand that passes under a word */
+.trunk-label,.bundle-label,.branch .title,.now-cap,.axis-caption,.side-label{
+  paint-order:stroke;stroke:var(--surface);stroke-width:3.5px;stroke-linejoin:round}

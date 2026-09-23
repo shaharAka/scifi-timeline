@@ -217,7 +217,7 @@ function renderChart(yOverride){
   var grad = sEl("linearGradient", {id:"nowGrad", x1:"0", x2:"1", y1:"0", y2:"0"});
   /* stop-color must be a token so the today-plane reads on light and dark alike */
   grad.appendChild(sEl("stop", {offset:"0", style:"stop-color:var(--now)", "stop-opacity":"0"}));
-  grad.appendChild(sEl("stop", {offset:"0.5", style:"stop-color:var(--now)", "stop-opacity":"0.22"}));
+  grad.appendChild(sEl("stop", {offset:"0.5", style:"stop-color:var(--now)", "stop-opacity":"0.08"}));
   grad.appendChild(sEl("stop", {offset:"1", style:"stop-color:var(--now)", "stop-opacity":"0"}));
   defs.appendChild(grad);
   var tgrad = sEl("linearGradient", {id:"trunkGrad", x1:"0", x2:"1", y1:"0", y2:"0"});
@@ -422,7 +422,7 @@ function renderChart(yOverride){
   /* the present day */
   /* the graph places today on the last kind we reached and draws its own cap */
   if(!graphMode() && nx > -30 && nx < W + 30){
-    gPlane.appendChild(sEl("rect", {x:nx-26, y:0, width:52, height:Hv, fill:"url(#nowGrad)"}));
+    gPlane.appendChild(sEl("rect", {x:nx-18, y:0, width:36, height:Hv, fill:"url(#nowGrad)"}));
     var nl = sEl("line", {x1:nx, y1:0, x2:nx, y2:Hv}, "now-line");
     if(!REDUCED) nl.classList.add("now-pulse");
     gNow.appendChild(nl);
@@ -460,7 +460,7 @@ function renderChart(yOverride){
      decoration: a world's divergence is a divergence from THESE, and clicking
      one asks the question the atlas exists for - which fictions are in a
      comparable situation, and what followed there. */
-  drawRealBeats(gTrunk, list, left, right);
+  drawRealBeats(gTrunk, list, left, right, ty);
 
   /* the scrubber lives in its own group and is moved in place, never re-rendered */
   var tyv = clamp(ty + panY, 30, Hv - 60);
@@ -524,7 +524,7 @@ function publishTimeline(lay, nx){
     },
     layout:lay,
     lineages:DATA.lineages,
-    openWorld:openWorld,
+    openWorld:openWorld, closeWorld:closeWorld, clearMatch:function(){ if(typeof clearMatch === "function") clearMatch(); },
     playConvergence:playConvergence
   };
 }
@@ -538,11 +538,12 @@ function renderBranch(ln, lay, budget, left, right, nx){
      reading". When a news item is matched, it is "which worlds passed through
      this kind of moment" - and that lights several branches at once, which is
      the whole point of the Moments view. */
-  var lit = (typeof litBin !== "undefined" && litBin)
-    ? !!(litWorlds && litWorlds[l.id])
-    : (l === sel);
+  var matching = typeof litBin !== "undefined" && litBin;
+  /* nothing chosen: every branch at full strength. Dimming only means something
+     against a choice - one world opened, or the worlds a news item matched. */
+  var lit = matching ? !!(litWorlds && litWorlds[l.id]) : (!sel || l === sel);
   if(!lit) g.classList.add("dim");
-  if(lit) g.classList.add("sel");
+  if(matching ? lit : (sel && l === sel)) g.classList.add("sel");
 
   var dv = l.divergence.year, evs = l.events;
   var lastYear = dv;
@@ -627,21 +628,29 @@ function renderBranch(ln, lay, budget, left, right, nx){
   var titleW = shown.length * 6.4 + subText.length * 5.3 + 10;
   var tx = Math.max(left + 4, flatStart + 6);
   var tAttrs = {x:tx, y:titleY};
-  if(tx + titleW > right){ tAttrs.x = right - 2; tAttrs["text-anchor"] = "end"; }  /* forks near the right edge hang their title off it */
+  /* a name that would sit on its archetype's heading moves along past it */
+  (lay.bundles || []).forEach(function(b){
+    var ly = b.y0 - 7, lw = (b.g.name.length + 4) * 7.6;
+    if(Math.abs(titleY - ly) < 12 && tAttrs.x < left - 14 + lw + 8) tAttrs.x = left - 14 + lw + 8;
+  });
+  if(tAttrs.x + titleW > right){ tAttrs.x = right - 2; tAttrs["text-anchor"] = "end"; }  /* forks near the right edge hang their title off it */
   /* A branch title needs roughly a lane's worth of vertical room. At the widest
      zoom the pitch is about 16px, so every title would sit on top of the next
      one and the middle of the chart turned into a wall of words. Below that
      threshold only the selected and hovered branches name themselves; the rest
      are identified by the panel and by hovering. */
-  var titleFits = lay.gap >= 19;
+  /* names stay on at a tighter pitch in a smaller type: a branch nobody can
+     name is a line, not a world */
+  var titleFits = lay.gap >= 11;
+  var compactTitle = lay.gap < 19;
   var showTitle = titleFits || l === sel || l.id === hoverId;
   if(showTitle){
-    var tt = sEl("text", tAttrs, "title");
+    var tt = sEl("text", tAttrs, "title" + (compactTitle ? " compact" : ""));
     /* tagged so a test can assert every world is named, which is the thing
        that matters - not how many text nodes the axis happens to draw */
     tt.setAttribute("data-lane-title", l.id);
     tt.textContent = shown + "  ";
-    if(lay.lod >= 1){
+    if(lay.lod >= 1 && !compactTitle){
       var sub = sEl("tspan", null, "sub");
       sub.textContent = subText;
       tt.appendChild(sub);

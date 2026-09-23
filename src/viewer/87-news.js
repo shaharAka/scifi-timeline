@@ -103,13 +103,17 @@ function renderNewsBand(parent, nx, top, height){
      items anchored to the right edge would be attached to nothing. The panel
      keeps every item, and in Moments the match is what replaces the band. */
   if(AX && AX.mode !== "years") return;   /* Moments draws its own flag on the trunk */
+  /* the box belongs to the today line; when the line is off screen, so is the box */
+  if(!(nx >= 0 && nx <= W)) return;
 
   var w = 250;
   var x = W - w - 14;
-  var y0 = top + 30;
-  var maxRows = Math.max(1, Math.floor((height - y0 - 26) / 21));
-  var rows = items.slice(0, maxRows);
+  /* bottom right: the far-future titles hang off the top right edge, and the
+     lower right quarter is where the fewest branches run */
+  var maxRows = Math.max(1, Math.floor((height - 90) / 21));
+  var rows = items.slice(0, Math.min(maxRows, 4));
   var h = 30 + rows.length * 21 + 6;
+  var y0 = Math.max(top + 30, height - h - 40);
 
   var g = sEl("g", null, "news-band");
   g.appendChild(sEl("rect", {x:x, y:y0, width:w, height:h, rx:4}, "news-field"));

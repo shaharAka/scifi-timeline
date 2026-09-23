@@ -435,10 +435,16 @@ function showMap(){
   var head = document.getElementById("pk-head");
   if(head) head.innerHTML = '<span class="pk-brand">' + (mpIsPhone() ? 'The map' : 'Where We Are Now') + '</span>';
   pickerTabs("map");
-  if(axisMode !== "moments") setAxis("moments", false);
+  /* a phone only has the Moments map; a wide screen keeps the view last chosen */
+  if(mpIsPhone() && axisMode !== "moments") setAxis("moments", false);
+  /* a world left selected from before, with its dossier closed, would dim the
+     tree for no visible reason */
+  if(typeof sel !== "undefined" && sel && panelMode !== "world"){ sel = null; if(typeof setPlate === "function") setPlate(null); }
   W = measureW(); Hv = measureH();
-  momentsFit(); renderChart();
-  if(!mpIsPhone() && panelMode === ""){ renderMomentsPanel(); setPanel("moments"); }
+  if(axisMode === "moments"){
+    momentsFit(); renderChart();
+    if(!mpIsPhone() && panelMode === ""){ renderMomentsPanel(); setPanel("moments"); }
+  } else fitAll();
 }
 
 function pickerInit(){
