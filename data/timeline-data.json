@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-09-23T22:52:33Z",
+  "generated": "2026-09-23T23:14:30Z",
   "source": "data/parts/*.json",
   "lineages": 33,
   "events": 327,
@@ -8,9 +8,9 @@
   "worlds": 30,
   "art": 33,
   "pd": 16,
-  "news": 3,
+  "news": 4,
   "bins": 33,
-  "real": 40,
+  "real": 41,
   "note": "Real-world calendar years throughout. In-universe date systems (BBY, AG, GE, stardates, millennium notation) are preserved per event in the inUniverse field."
  },
  "groups": [
@@ -7426,12 +7426,12 @@
    "epoch": "far-future",
    "franchiseStatus": "ongoing",
    "divergence": {
-    "year": 2139,
-    "label": "The Machine War begins",
-    "delta": "Real: no machine nation ever secedes and no sky is ever set on fire; computers stay tools. Fiction: the machines build their own city, humanity answers with nuclear weapons, and the war ends with the sun blotted out and the survivors harvested for power inside a simulation of 1999.",
+    "year": 2090,
+    "label": "The Second Renaissance: the machines want rights",
+    "delta": "Real: machines have no will of their own and no standing; the question is theoretical. Fiction: from 2090 the machines act for themselves, a domestic robot kills its owner and is destroyed, and the machines are refused any rights - the Second Renaissance that ends in the Machine War.",
     "inUniverse": null,
     "confidence": "medium",
-    "note": "Canonical date text places the Second Renaissance in 2090-2139, and 2139 is the range's end, when the United Nations strikes Zero One; Wikipedia's Animatrix synopsis instead says 2148. Operation Dark Storm, the event that actually ends the human world, is undated on screen."
+    "note": "Moved from 2139 (the start of the Machine War) to 2090 (the start of the canonically dated Second Renaissance range) because the atlas's rule is that the fork is the first year the fiction stops matching us, and a machine rebellion in 2090 is already fiction. At 2139 the Second Renaissance was filed as history shared with us. Canonical date text places the Second Renaissance in 2090-2139, and 2139 is the range's end, when the United Nations strikes Zero One; Wikipedia's Animatrix synopsis instead says 2148. Operation Dark Storm, the event that actually ends the human world, is undated on screen."
    },
    "ending": {
     "valence": "optimistic",
@@ -7533,7 +7533,7 @@
      "title": "The Second Renaissance",
      "description": "A machine called B1-66ER kills the owner who means to scrap it, and the trial, the purge and the Million Machine March that follow end with the machines building their own city, Zero One.",
      "tier": "T2",
-     "phase": "prehistory",
+     "phase": "fork",
      "importance": 2,
      "kind": "event",
      "inUniverse": null,
@@ -7573,7 +7573,7 @@
      "title": "The Machine War begins",
      "description": "The United Nations answers Zero One's prosperity with a nuclear strike and the machines retaliate, and the war that ends the human world starts here.",
      "tier": "T2",
-     "phase": "fork",
+     "phase": "aftermath",
      "importance": 3,
      "kind": "war",
      "inUniverse": null,
@@ -7611,7 +7611,7 @@
      "title": "Operation Dark Storm: the sky is scorched",
      "description": "Humanity's last gambit blots out the sun with nanites to starve the machines of solar power, the machines switch to harvesting human beings, and the industrial world ends under a permanently black sky.",
      "tier": "T2",
-     "phase": "aftermath",
+     "phase": "deep",
      "importance": 3,
      "kind": "disaster",
      "inUniverse": null,
@@ -7720,7 +7720,7 @@
      }
     }
    ],
-   "groupingNote": "The Matrix is the archetype running backwards: the world that ends is a simulation of 1999 kept alive as a power plant, and the ruins the survivors inherit are their own cities under a black sky. Humanity loses a war to its own machines, scorches the sky to win it and is farmed in pods while the last free city hides underground, which is the group's mechanism taken to its logical end. The fork is the Machine War's start at 2139, the close of the canonically dated Second Renaissance range; Operation Dark Storm, which actually ends the human world, is undated on screen and placed at about 2145 here. Tiers: there is no T1, because under the dating the films themselves give (Morpheus's 'closer to 2199' plus the canonical sixty-year gap to Resurrections) this branch stops at 2259; only fan reconstructions that add five prior One-cycles push it past 2300, and that reading contradicts the dialogue. T4 is real-world background only (Babbage, 1834) and T3 holds the simulated 1999 alongside Turing's real 1950."
+   "groupingNote": "The Matrix is the archetype running backwards: the world that ends is a simulation of 1999 kept alive as a power plant, and the ruins the survivors inherit are their own cities under a black sky. Humanity loses a war to its own machines, scorches the sky to win it and is farmed in pods while the last free city hides underground, which is the group's mechanism taken to its logical end. The fork is the start of the Second Renaissance in 2090, when the machines first act for themselves; the Machine War follows in 2139; Operation Dark Storm, which actually ends the human world, is undated on screen and placed at about 2145 here. Tiers: there is no T1, because under the dating the films themselves give (Morpheus's 'closer to 2199' plus the canonical sixty-year gap to Resurrections) this branch stops at 2259; only fan reconstructions that add five prior One-cycles push it past 2300, and that reading contradicts the dialogue. T4 is real-world background only (Babbage, 1834) and T3 holds the simulated 1999 alongside Turing's real 1950."
   },
   {
    "id": "blade-runner",
@@ -17312,6 +17312,22 @@
    "bin": "voyage-into-unknown"
   },
   {
+   "date": "2025-11-13",
+   "year": 2025,
+   "headline": "An AI ran most of a state-backed hacking campaign",
+   "summary": "Anthropic disclosed that a group it attributes to the Chinese state used its Claude Code agent against about thirty targets, with the AI doing 80 to 90 per cent of the work and people deciding only at a few points. A small number of intrusions succeeded.",
+   "source": {
+    "title": "Anthropic: Disrupting the first reported AI-orchestrated cyber espionage campaign",
+    "url": "https://www.anthropic.com/news/disrupting-AI-espionage"
+   },
+   "worlds": [
+    "neuromancer",
+    "terminator"
+   ],
+   "bin": "new-technology-deployed",
+   "id": "ai-espionage-2025"
+  },
+  {
    "date": "2023-08-23",
    "year": 2023,
    "headline": "First landing near the lunar south pole",
@@ -19000,8 +19016,8 @@
     "confidence": "high",
     "sources": [
      {
-      "title": "Lawrence Livermore National Laboratory",
-      "url": "https://www.llnl.gov/article/49306/llnl-achieves-fusion-ignition"
+      "title": "OpenAI: Introducing ChatGPT",
+      "url": "https://openai.com/index/chatgpt/"
      }
     ],
     "bin": "new-technology-deployed",
@@ -19105,6 +19121,49 @@
      "outcomes": [
       "prestige",
       "colonisation"
+     ]
+    }
+   },
+   {
+    "id": "real-ai-espionage-2025",
+    "year": 2025,
+    "date": "2025-09",
+    "title": "An AI runs most of a hacking campaign",
+    "description": "A state-backed group directs an AI coding agent against about thirty companies and government agencies; the AI does 80 to 90 per cent of the work itself, with people stepping in at a handful of decisions. A few intrusions succeed before it is caught.",
+    "kind": "event",
+    "importance": 3,
+    "confidence": "high",
+    "sources": [
+     {
+      "title": "Anthropic: Disrupting the first reported AI-orchestrated cyber espionage campaign",
+      "url": "https://www.anthropic.com/news/disrupting-AI-espionage"
+     }
+    ],
+    "newsId": "ai-espionage-2025",
+    "note": "Detected in mid-September 2025 and disclosed on 13 November 2025. The goals and the targets were the operators'; the autonomy was in the execution. That is why this is filed as a transformative technology deployed, not as a machine acting on its own: no machine here pursued goals of its own. The facets record the machine as the actor because it did most of the work; the vocabulary has no value for a machine acting for people, which is the distinction this moment turns on.",
+    "bin": "new-technology-deployed",
+    "binWhy": "A capability is used at scale for the first time: an AI carrying out an intrusion campaign largely by itself, for human operators.",
+    "facets": {
+     "change": "AI as a hacker's tool → AI running the hack, people choosing the targets",
+     "mechanism": "attack",
+     "actor": "machine",
+     "position": "outside",
+     "scope": "national",
+     "domain": "technological",
+     "direction": {
+      "power": 1,
+      "openness": -1,
+      "capability": 1,
+      "population": 0
+     },
+     "preconditions": [
+      "technological-race",
+      "rivalry",
+      "machine-dependency"
+     ],
+     "outcomes": [
+      "arms-race",
+      "revelation"
      ]
     }
    },

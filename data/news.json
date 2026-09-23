@@ -32,6 +32,21 @@
       "bin": "voyage-into-unknown"
     },
     {
+      "id": "ai-espionage-2025",
+      "date": "2025-11-13",
+      "headline": "An AI ran most of a state-backed hacking campaign",
+      "summary": "Anthropic disclosed that a group it attributes to the Chinese state used its Claude Code agent against about thirty targets, with the AI doing 80 to 90 per cent of the work and people deciding only at a few points. A small number of intrusions succeeded.",
+      "source": {
+        "title": "Anthropic: Disrupting the first reported AI-orchestrated cyber espionage campaign",
+        "url": "https://www.anthropic.com/news/disrupting-AI-espionage"
+      },
+      "worlds": [
+        "neuromancer",
+        "terminator"
+      ],
+      "bin": "new-technology-deployed"
+    },
+    {
       "date": "2023-08-23",
       "headline": "First landing near the lunar south pole",
       "summary": "India's Chandrayaan-3 puts a lander and rover down at high southern latitude, where water ice is expected in permanently shadowed craters. The date is now marked as National Space Day in India.",

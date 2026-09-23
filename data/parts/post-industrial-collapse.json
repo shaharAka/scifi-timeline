@@ -1911,12 +1911,12 @@
    "epoch": "far-future",
    "franchiseStatus": "ongoing",
    "divergence": {
-    "year": 2139,
-    "label": "The Machine War begins",
-    "delta": "Real: no machine nation ever secedes and no sky is ever set on fire; computers stay tools. Fiction: the machines build their own city, humanity answers with nuclear weapons, and the war ends with the sun blotted out and the survivors harvested for power inside a simulation of 1999.",
+    "year": 2090,
+    "label": "The Second Renaissance: the machines want rights",
+    "delta": "Real: machines have no will of their own and no standing; the question is theoretical. Fiction: from 2090 the machines act for themselves, a domestic robot kills its owner and is destroyed, and the machines are refused any rights - the Second Renaissance that ends in the Machine War.",
     "inUniverse": null,
     "confidence": "medium",
-    "note": "Canonical date text places the Second Renaissance in 2090-2139, and 2139 is the range's end, when the United Nations strikes Zero One; Wikipedia's Animatrix synopsis instead says 2148. Operation Dark Storm, the event that actually ends the human world, is undated on screen."
+    "note": "Moved from 2139 (the start of the Machine War) to 2090 (the start of the canonically dated Second Renaissance range) because the atlas's rule is that the fork is the first year the fiction stops matching us, and a machine rebellion in 2090 is already fiction. At 2139 the Second Renaissance was filed as history shared with us. Canonical date text places the Second Renaissance in 2090-2139, and 2139 is the range's end, when the United Nations strikes Zero One; Wikipedia's Animatrix synopsis instead says 2148. Operation Dark Storm, the event that actually ends the human world, is undated on screen."
    },
    "ending": {
     "valence": "optimistic",
@@ -2018,7 +2018,7 @@
      "title": "The Second Renaissance",
      "description": "A machine called B1-66ER kills the owner who means to scrap it, and the trial, the purge and the Million Machine March that follow end with the machines building their own city, Zero One.",
      "tier": "T2",
-     "phase": "prehistory",
+     "phase": "fork",
      "importance": 2,
      "kind": "event",
      "inUniverse": null,
@@ -2058,7 +2058,7 @@
      "title": "The Machine War begins",
      "description": "The United Nations answers Zero One's prosperity with a nuclear strike and the machines retaliate, and the war that ends the human world starts here.",
      "tier": "T2",
-     "phase": "fork",
+     "phase": "aftermath",
      "importance": 3,
      "kind": "war",
      "inUniverse": null,
@@ -2096,7 +2096,7 @@
      "title": "Operation Dark Storm: the sky is scorched",
      "description": "Humanity's last gambit blots out the sun with nanites to starve the machines of solar power, the machines switch to harvesting human beings, and the industrial world ends under a permanently black sky.",
      "tier": "T2",
-     "phase": "aftermath",
+     "phase": "deep",
      "importance": 3,
      "kind": "disaster",
      "inUniverse": null,
@@ -2205,7 +2205,7 @@
      }
     }
    ],
-   "groupingNote": "The Matrix is the archetype running backwards: the world that ends is a simulation of 1999 kept alive as a power plant, and the ruins the survivors inherit are their own cities under a black sky. Humanity loses a war to its own machines, scorches the sky to win it and is farmed in pods while the last free city hides underground, which is the group's mechanism taken to its logical end. The fork is the Machine War's start at 2139, the close of the canonically dated Second Renaissance range; Operation Dark Storm, which actually ends the human world, is undated on screen and placed at about 2145 here. Tiers: there is no T1, because under the dating the films themselves give (Morpheus's 'closer to 2199' plus the canonical sixty-year gap to Resurrections) this branch stops at 2259; only fan reconstructions that add five prior One-cycles push it past 2300, and that reading contradicts the dialogue. T4 is real-world background only (Babbage, 1834) and T3 holds the simulated 1999 alongside Turing's real 1950."
+   "groupingNote": "The Matrix is the archetype running backwards: the world that ends is a simulation of 1999 kept alive as a power plant, and the ruins the survivors inherit are their own cities under a black sky. Humanity loses a war to its own machines, scorches the sky to win it and is farmed in pods while the last free city hides underground, which is the group's mechanism taken to its logical end. The fork is the start of the Second Renaissance in 2090, when the machines first act for themselves; the Machine War follows in 2139; Operation Dark Storm, which actually ends the human world, is undated on screen and placed at about 2145 here. Tiers: there is no T1, because under the dating the films themselves give (Morpheus's 'closer to 2199' plus the canonical sixty-year gap to Resurrections) this branch stops at 2259; only fan reconstructions that add five prior One-cycles push it past 2300, and that reading contradicts the dialogue. T4 is real-world background only (Babbage, 1834) and T3 holds the simulated 1999 alongside Turing's real 1950."
   },
   {
    "id": "parable-of-the-sower",

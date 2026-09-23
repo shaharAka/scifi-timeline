@@ -1263,8 +1263,8 @@
    "confidence": "high",
    "sources": [
     {
-     "title": "Lawrence Livermore National Laboratory",
-     "url": "https://www.llnl.gov/article/49306/llnl-achieves-fusion-ignition"
+     "title": "OpenAI: Introducing ChatGPT",
+     "url": "https://openai.com/index/chatgpt/"
     }
    ],
    "bin": "new-technology-deployed",
@@ -1368,6 +1368,49 @@
     "outcomes": [
      "prestige",
      "colonisation"
+    ]
+   }
+  },
+  {
+   "id": "real-ai-espionage-2025",
+   "year": 2025,
+   "date": "2025-09",
+   "title": "An AI runs most of a hacking campaign",
+   "description": "A state-backed group directs an AI coding agent against about thirty companies and government agencies; the AI does 80 to 90 per cent of the work itself, with people stepping in at a handful of decisions. A few intrusions succeed before it is caught.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "sources": [
+    {
+     "title": "Anthropic: Disrupting the first reported AI-orchestrated cyber espionage campaign",
+     "url": "https://www.anthropic.com/news/disrupting-AI-espionage"
+    }
+   ],
+   "newsId": "ai-espionage-2025",
+   "note": "Detected in mid-September 2025 and disclosed on 13 November 2025. The goals and the targets were the operators'; the autonomy was in the execution. That is why this is filed as a transformative technology deployed, not as a machine acting on its own: no machine here pursued goals of its own. The facets record the machine as the actor because it did most of the work; the vocabulary has no value for a machine acting for people, which is the distinction this moment turns on.",
+   "bin": "new-technology-deployed",
+   "binWhy": "A capability is used at scale for the first time: an AI carrying out an intrusion campaign largely by itself, for human operators.",
+   "facets": {
+    "change": "AI as a hacker's tool → AI running the hack, people choosing the targets",
+    "mechanism": "attack",
+    "actor": "machine",
+    "position": "outside",
+    "scope": "national",
+    "domain": "technological",
+    "direction": {
+     "power": 1,
+     "openness": -1,
+     "capability": 1,
+     "population": 0
+    },
+    "preconditions": [
+     "technological-race",
+     "rivalry",
+     "machine-dependency"
+    ],
+    "outcomes": [
+     "arms-race",
+     "revelation"
     ]
    }
   },
