@@ -962,7 +962,9 @@ def main():
                         fh.write(html)
                     # the site root serves the page itself, not a redirect: a link
                     # preview is read from the first page fetched, without script
-                    with open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8") as fh:
+                    # beside the page, wherever the page is being written: a run
+                    # that redirects HTML (test-fixture.py) must not touch the repo
+                    with open(os.path.join(os.path.dirname(HTML), "index.html"), "w", encoding="utf-8") as fh:
                         fh.write(html)
                     embedded = True
 

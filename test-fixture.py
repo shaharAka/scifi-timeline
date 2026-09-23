@@ -12,6 +12,7 @@ provably working before the researched data lands.
 import importlib.util
 import json
 import os
+import hashlib
 import shutil
 import subprocess
 import sys
@@ -114,7 +115,29 @@ LIN_B = {
 }
 
 
+def _page_fingerprints():
+    """The shipped pages, so the run can prove it left them alone."""
+    out = {}
+    for name in ("timeline.html", "index.html"):
+        path = os.path.join(ROOT, name)
+        if os.path.exists(path):
+            with open(path, "rb") as fh:
+                out[name] = hashlib.sha256(fh.read()).hexdigest()
+    return out
+
+
 def main():
+    before = _page_fingerprints()
+    rc = _main()
+    after = _page_fingerprints()
+    for name in before:
+        if after.get(name) != before[name]:
+            print("\nfixture: FAILED - the fixture run overwrote the shipped %s" % name)
+            return 1
+    return rc
+
+
+def _main():
     tmp = tempfile.mkdtemp(prefix="timeline-fixture-")
     try:
         parts = os.path.join(tmp, "data", "parts")
