@@ -309,6 +309,7 @@ from `file://`). Keep function names unique and keep each file to one concern:
 | `57-moments-page.js` | the Moments page: `momentsModel` (strands, bundles, kinds, endings), the storyline layout, the SVG, its camera and its panel |
 | `58-facets.js` | facet similarity: `facetNeighbours`, `facetForward`, the weights |
 | `59-chains.js` | chain alignment: `chainKindSim`, `chainScore`, `chainAlign` (local), `chainMSA` (progressive multiple alignment, the map's columns) |
+| `92-welcome.js` | arriving: the first-visit card, the News button's count, and `#news=` / `#world=` / `#kind=` links |
 | `60-chart.js` | drawing: backdrop, trunk, axis, bundles, `renderBranch`, prehistory nodes |
 | `65-motion.js` | grow-in, convergence, layout glide |
 | `70-interact.js` | pan, zoom, hover, click, tooltip |
@@ -349,6 +350,31 @@ sceneH,LANE_R,W,H}`, the panel `#drawer[data-mode]` with `#panel-index`
 (the `.dtitle`, `[data-tab]` tabs, `#dchart`). Keep those names if you restyle.
 
 ---
+
+### Arriving from a link, and news on the map
+
+Most readers arrive from a shared link, often on a phone, knowing nothing.
+Four rules follow from that, and they are the owner's:
+
+- **Say what it is first.** The first visit opens a card (`92-welcome.js`):
+  the atlas in two sentences, the ending tally, the latest news as the way
+  in, and the three things needed to read the lines. Once per browser;
+  About can reopen it. A link that names something skips it.
+- **News is on the map, not only in a list.** Every item in
+  `data/news.json` is a diamond on our history at its date, and the newest
+  carries a flag above TODAY with its headline. An item younger than
+  `MP_FRESH_DAYS` (30) gets a red NEW badge, a pulse on the flag, and a count
+  on the News button. Clicking any of them reads the item against the
+  chains: its kind of moment, how the arcs through it end, our chain with it
+  added matched against every fiction, then every chain through the kind.
+- **Selections are links.** Choosing news, a world or a kind writes
+  `#news=<date>`, `#world=<id>` or `#kind=<id>`; a post can link straight to
+  the reading it describes.
+- **Fewer tools on the Moments page.** Eras, the time slider, the label
+  toggle, the sort and the archetype chips act on the tree and are hidden on
+  Moments. On a phone (< 720px) the bar is one compact block, the legend is
+  gone, the panel is a bottom sheet, and the map opens readable on our
+  history and the first steps rather than squeezed to fit.
 
 ## 5. Extending it
 

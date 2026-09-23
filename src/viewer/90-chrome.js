@@ -227,8 +227,9 @@ function renderAtlasCopy(){
   if(ATLAS.headline){
     setText("hero-title", esc(ATLAS.headline) +
       (ATLAS.headlineAccent ? ' <span class="accent">' + esc(ATLAS.headlineAccent) + '</span>' : ''));
-    setText("brand", '<span class="brand-a">' + esc(ATLAS.headline) + '</span> ' +
-      (ATLAS.headlineAccent ? '<span class="brand-b">' + esc(ATLAS.headlineAccent) + '</span>' : ''));
+    /* the bar carries the atlas's name; the thesis line is the About heading */
+    setText("brand", '<span class="brand-b">' + esc(ATLAS.brand || ATLAS.headlineAccent || "") + '</span>' +
+      (ATLAS.tagline ? ' <span class="brand-a">' + esc(ATLAS.tagline) + '</span>' : ''));
   }
   if(ATLAS.lede) setText("hero-lede", mark(ATLAS.lede));
   if(ATLAS.legendHint) setText("legend-hint", esc(ATLAS.legendHint));
@@ -274,9 +275,11 @@ function setAxis(mode, persist){
   if(typeof document !== "undefined" && document.body && document.body.classList){
     document.body.classList.toggle("mode-moments", axisMode === "moments");
   }
-  if(axisMode === "moments"){ momentsFit(); renderChart(); renderMomentsPanel(); if(panelMode === "" || panelMode === "news") setPanel("moments"); }
+  if(axisMode === "moments"){ momentsFit(); renderChart(); renderMomentsPanel(); if((panelMode === "" || panelMode === "news") && !(typeof mpIsPhone === "function" && mpIsPhone())) setPanel("moments"); }
   else if(axisMode === "years") fitEverything();
   else fitAll();
+  /* the Moments panel reads the Moments page; it has nothing to say over the tree */
+  if(axisMode !== "moments" && panelMode === "moments") setPanel("");
 }
 
 function renderAxisToggle(){
@@ -361,4 +364,5 @@ function init(){
 
   revealIn();
   growIn();
+  if(typeof welcomeInit === "function") welcomeInit();
 }

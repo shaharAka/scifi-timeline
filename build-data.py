@@ -309,14 +309,26 @@ def load_news(lineage_ids):
         if raw in seen:
             warn("%s duplicates the date %s; both will sit on the same marker" % (tag, raw))
         seen.add(raw)
-        out.append({
+        # the kind of moment it is: what the Moments page reads it by
+        bin_id = it.get("bin")
+        if bin_id is not None and VOCAB and bin_id not in VOCAB:
+            err("%s has bin %r, which data/bins.json does not define" % (tag, bin_id))
+            bin_id = None
+        if bin_id is None:
+            warn("%s has no bin; it cannot be read against the chains" % tag)
+        item = {
             "date": raw,
             "year": when.year,
             "headline": it["headline"],
             "summary": it.get("summary", ""),
             "source": {"title": src.get("title", ""), "url": src["url"]},
             "worlds": [w for w in worlds if w in lineage_ids],
-        })
+        }
+        if bin_id:
+            item["bin"] = bin_id
+        if it.get("id"):
+            item["id"] = str(it["id"])
+        out.append(item)
     out.sort(key=lambda x: x["date"], reverse=True)
     return out
 

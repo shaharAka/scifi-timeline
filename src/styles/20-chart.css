@@ -214,3 +214,18 @@ body:not(.mode-moments) .legend .m-only{display:none}
    returns early there, so the button did nothing at all when pressed; hiding it
    is more honest than leaving a control that silently no-ops. */
 body.mode-moments #converge{display:none}
+
+/* --- news on the Moments trunk -------------------------------------------------- */
+.mp-news-mark{cursor:pointer}
+.mp-news-diamond{fill:var(--surface);stroke:var(--accent);stroke-width:1.6}
+.mp-news-mark:hover .mp-news-diamond,.mp-news-mark.selected .mp-news-diamond{fill:var(--accent)}
+.mp-news-mark.fresh .mp-news-diamond{fill:var(--accent)}
+.mp-news-flag{cursor:pointer}
+.mp-news-stem{stroke:var(--accent);stroke-width:1.4;stroke-dasharray:2 3}
+.mp-news-box{fill:var(--surface);stroke:var(--accent);stroke-width:1.4;filter:drop-shadow(0 4px 10px rgba(16,28,40,.12))}
+.mp-news-flag:hover .mp-news-box{stroke-width:2.2}
+.mp-news-flag.selected .mp-news-box{fill:var(--bg-2);stroke-width:2.2}
+.mp-news-kicker{font-size:9px;font-weight:750;letter-spacing:.12em;fill:var(--accent);font-family:var(--font-mono)}
+.mp-news-head{font-size:12px;font-weight:650;fill:var(--ink-0)}
+.mp-news-pulse{fill:var(--bad);animation:mp-pulse 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes mp-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(1.7)}}

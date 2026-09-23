@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-09-21T20:13:43Z",
+  "generated": "2026-09-23T15:41:26Z",
   "source": "data/parts/*.json",
   "lineages": 27,
   "events": 254,
@@ -12801,7 +12801,8 @@
     "contact",
     "2001-space-odyssey",
     "the-expanse"
-   ]
+   ],
+   "bin": "voyage-into-unknown"
   },
   {
    "date": "2023-08-23",
@@ -12816,7 +12817,8 @@
     "the-expanse",
     "2001-space-odyssey",
     "interstellar"
-   ]
+   ],
+   "bin": "voyage-into-unknown"
   },
   {
    "date": "2022-12-05",
@@ -12831,7 +12833,8 @@
     "the-expanse",
     "interstellar",
     "foundation"
-   ]
+   ],
+   "bin": "breakthrough-science"
   }
  ],
  "bins": [
@@ -14643,9 +14646,11 @@
  "atlas": {
   "id": "scifi",
   "title": "Where We Are Now - a converging timeline of science fiction",
+  "brand": "Where We Are Now",
+  "tagline": "science fiction's futures, lined up against ours",
   "headline": "Every one of these histories",
   "headlineAccent": "converges on today",
-  "lede": "Twenty-four science-fiction worlds, each pinned to the **real calendar** rather than its own. Every one of them rode along our history, broke away at one dated moment, and is drawn right up to the line where ==we are now==. Grouped by **how** they break with us rather than by genre - because that is what decides whether a world is hiding underneath this one, downstream of a war we won, or waiting ten thousand years ahead.",
+  "lede": "Science-fiction worlds, each pinned to the **real calendar** rather than its own. Every one of them rode along our history, broke away at one dated moment, and is drawn right up to the line where ==we are now==. Grouped by **how** they break with us rather than by genre - because that is what decides whether a world is hiding underneath this one, downstream of a war we won, or waiting ten thousand years ahead.",
   "trunkLabel": "REAL HISTORY   ← the past",
   "futureLabel": "the future →   the years none of us have reached",
   "eras": [

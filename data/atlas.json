@@ -2,9 +2,11 @@
  "_comment": "Everything the page says about THIS atlas. The viewer is generic; swap this file and the dataset and you have a different atlas. Inline markup: **bold**, *italic*, `code`, ==present-day highlight==. Era presets: the axis is a symmetric log around the CENTRE of from..to, so put the centre where the detail should be (usually the fork cluster around 2000) and let the edges be wide. 'sides' names the two halves of the canvas; each archetype picks its half with group.side in its part file.",
  "id": "scifi",
  "title": "Where We Are Now - a converging timeline of science fiction",
+ "brand": "Where We Are Now",
+ "tagline": "science fiction's futures, lined up against ours",
  "headline": "Every one of these histories",
  "headlineAccent": "converges on today",
- "lede": "Twenty-four science-fiction worlds, each pinned to the **real calendar** rather than its own. Every one of them rode along our history, broke away at one dated moment, and is drawn right up to the line where ==we are now==. Grouped by **how** they break with us rather than by genre - because that is what decides whether a world is hiding underneath this one, downstream of a war we won, or waiting ten thousand years ahead.",
+ "lede": "Science-fiction worlds, each pinned to the **real calendar** rather than its own. Every one of them rode along our history, broke away at one dated moment, and is drawn right up to the line where ==we are now==. Grouped by **how** they break with us rather than by genre - because that is what decides whether a world is hiding underneath this one, downstream of a war we won, or waiting ten thousand years ahead.",
  "trunkLabel": "REAL HISTORY   ← the past",
  "futureLabel": "the future →   the years none of us have reached",
  "eras": [

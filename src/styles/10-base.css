@@ -152,3 +152,15 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:12px;heigh
 .ax:hover{background:var(--card-bg-hover);color:var(--ink-0)}
 .ax.on{background:var(--ink-0);color:var(--surface)}
 .eras.disabled,#zoom.disabled{opacity:.35;pointer-events:none}
+
+/* --- the Moments page asks for fewer tools -----------------------------------------
+   Eras, the time slider, the label toggle and the archetype chips all act on the
+   calendar tree; on the Moments page they did nothing and made the bar look like
+   a cockpit. They are hidden there, not disabled. */
+body.mode-moments #eras,
+body.mode-moments #zoom,
+body.mode-moments #allev,
+body.mode-moments #sort,
+body.mode-moments .topbar .bar.sub{display:none}
+.brand .brand-a{font-weight:500;color:var(--ink-3)}
+.brand .brand-b{font-size:14px}

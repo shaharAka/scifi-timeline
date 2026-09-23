@@ -44,7 +44,7 @@ function renderNews(){
     var spec = null;
     (BINS || []).forEach(function(b){ if(b.id === binId) spec = b; });
     var kind = binId
-      ? '<button class="news-kind" data-bin="' + esc(binId) + '">Read the futures: '
+      ? '<button class="news-kind" data-bin="' + esc(binId) + '" data-key="' + esc(n.id || n.date) + '">Read the futures: '
         + esc(spec ? (spec.label || binId) : binId) + ' \u2192</button>'
       : '<div class="news-kind none">not matched to a kind of moment yet</div>';
     return '<article class="news-item' + (binId ? ' matched' : '') + '">' +
@@ -65,8 +65,11 @@ function renderNews(){
   /* the match: one click reads every world forward from this kind of moment */
   Array.prototype.forEach.call(host.querySelectorAll("[data-bin]"), function(b){
     b.onclick = function(){
-      var id = b.getAttribute("data-bin");
-      var item = newsItems().filter(function(n){ return n.bin === id; })[0] || { headline: id, bin: id };
+      var id = b.getAttribute("data-bin"), key = b.getAttribute("data-key");
+      var item = newsItems().filter(function(n){ return (n.id || n.date) === key; })[0]
+              || newsItems().filter(function(n){ return n.bin === id; })[0] || { headline: id, bin: id };
+      /* the reading lives on the Moments page, so go there */
+      if(axisMode !== "moments" && typeof setAxis === "function") setAxis("moments", false);
       matchNews(item);
     };
   });
@@ -99,7 +102,7 @@ function renderNewsBand(parent, nx, top, height){
      what has happened; in Moments the x-axis is a kind of moment, so a band of
      items anchored to the right edge would be attached to nothing. The panel
      keeps every item, and in Moments the match is what replaces the band. */
-  if(AX && AX.mode !== "years") return;
+  if(AX && AX.mode !== "years") return;   /* Moments draws its own flag on the trunk */
 
   var w = 250;
   var x = W - w - 14;

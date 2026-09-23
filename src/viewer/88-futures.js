@@ -53,7 +53,7 @@ function futuresFor(binId, limit){
 function matchNews(item){
   var binId = binForNews(item);
   if(axisMode === "moments"){
-    if(binId) momentsSelectKind(binId);
+    if(binId) momentsSelectNews(item && item.headline ? item : { headline:binId, bin:binId, date:"" });
     return Object.keys(worldsThroughBin(binId)).length;
   }
   if(!binId){

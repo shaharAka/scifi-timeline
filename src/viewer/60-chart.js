@@ -8,7 +8,7 @@ function sEl(tag, attrs, cls){
 }
 function measureW(){
   var b = document.getElementById("chartbody");
-  return Math.max(620, b.clientWidth || 1100);
+  return Math.max(axisMode === "moments" ? 300 : 620, b.clientWidth || 1100);
 }
 function measureH(){
   var b = document.getElementById("chartbody");
@@ -506,6 +506,7 @@ function publishTimeline(lay, nx){
     momentsState:function(){ return MP; },
     momentsZoom:function(g){ momentsZoomAt(g, W / 2); renderChart(); },
     momentsSelectKind:momentsSelectKind, momentsSelectBeat:momentsSelectBeat, momentsSelectPill:momentsSelectPill,
+    momentsSelectNews:momentsSelectNews, newsByKey:mpNewsByKey,
     chainAlign:chainAlign, chainMSA:chainMSA, chainScore:chainScore,
     momentsSelectWorld:momentsSelectWorld, momentsClear:momentsClear,
     litBin:function(){ return litBin; },

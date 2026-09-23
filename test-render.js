@@ -843,6 +843,39 @@ attempt("moments clicks and camera", () => {
   soft(`moments clicks: pill "${pill ? pill.kind : "-"}", strand ${st.id}, zoom ${s0.toFixed(2)}->${s1.toFixed(2)}`);
 });
 
+/* ---- Moments: news is on the map, and reads against the chains ---------------- */
+attempt("moments news on the map", () => {
+  setModeVia("moments");
+  const t = debug();
+  const news = payload.news || [];
+  if (!news.length) { soft("moments news: none in this payload, skipped"); return; }
+  /* the build must carry the kind of moment through, or nothing can be matched */
+  const src = JSON.parse(fs.readFileSync(path.join(__dirname, "data", "news.json"), "utf8")).items || [];
+  const wanted = src.filter((n) => n.bin).length;
+  /* only the real payload is built from data/news.json; the fixture has its own */
+  if (news.length !== src.length) soft("moments news: payload is not built from data/news.json, source check skipped");
+  else check(news.filter((n) => n.bin).length === wanted, `${news.filter((n) => n.bin).length} news items carry a bin in the payload, the source has ${wanted}`);
+  const marks = svgNodes().filter((n) => n.getAttribute("data-news") !== null && n.classList && n.classList.contains("mp-news-mark"));
+  check(marks.length === news.length, `${marks.length} news marks on the trunk for ${news.length} items`);
+  const flag = svgNodes().find((n) => n.classList && n.classList.contains("mp-news-flag"));
+  check(!!flag, "the newest news item has no flag on the map");
+  const withBin = news.find((n) => n.bin);
+  if (!withBin) return;
+  const key = withBin.id || withBin.date;
+  const mark = marks.find((m) => m.getAttribute("data-news") === key) || flag;
+  chart.onpointerdown({ button: 0, clientX: 300, clientY: 300, pointerId: 1, target: mark });
+  chart.onpointerup({ clientX: 300, clientY: 300, pointerId: 1, target: { getAttribute: () => null } });
+  const st = t.momentsState();
+  check(!!st.news && (st.news.id || st.news.date) === key, "clicking a news mark did not select that item");
+  check(st.node === withBin.bin, "selecting news did not select its kind of moment");
+  const body = String(store["moments-body"].innerHTML);
+  check(body.includes(withBin.headline), "the news panel does not show the headline");
+  check(/Our chain up to this, matched/.test(body), "the news panel does not match our chain with it");
+  check(!/not matched to a kind of moment/.test(body), "the news panel says the item is unmatched");
+  t.momentsClear();
+  soft(`moments news: ${news.length} marks, "${withBin.headline}" reads as ${withBin.bin}`);
+});
+
 /* ---- real history on every axis ---------------------------------------------- */
 /* ---- sources: a claim the reader can check ---------------------------------
    The confidence field says how sure the dataset is; a source says where to

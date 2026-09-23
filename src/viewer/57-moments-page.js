@@ -31,17 +31,29 @@
    (wheel zooms, drag pans, Fit shows the whole map beside the panel).
    ========================================================================== */
 
-var MP = { s:1, sy:1, fitS:1, tx:0, ty:0, node:null, col:null, world:null, beat:null, model:null, geom:null, width:900, fit:true };
+var MP = { s:1, sy:1, fitS:1, tx:0, ty:0, node:null, col:null, world:null, beat:null, news:null, model:null, geom:null, width:900, fit:true };
 var MP_PAD = 72;
 var MP_MIN_S = 0.35;
 var MP_MAX_S = 9;
 
 /* the width the map may use: the canvas minus the panel when it is open */
 function mpUsableWidth(){
+  if(mpIsPhone()) return W;                 /* the panel is a bottom sheet there */
   var d = document.getElementById("drawer");
   var open = d && d.classList && d.classList.contains("open");
   var pw = open ? (d.offsetWidth || Math.min(480, W * 0.94)) : 0;
   return Math.max(320, W - pw);
+}
+/* A phone: the panel sits under the map instead of beside it, so the map
+   loses height rather than width. */
+function mpIsPhone(){
+  return typeof window !== "undefined" && window.innerWidth > 0 && window.innerWidth < 720;
+}
+function mpUsableHeight(){
+  if(!mpIsPhone()) return Hv;
+  var d = document.getElementById("drawer");
+  var open = d && d.classList && d.classList.contains("open");
+  return Math.max(300, Hv - (open ? (d.offsetHeight || Hv * 0.5) : 0));
 }
 function mpMean(a){ var s = 0; a.forEach(function(v){ s += v; }); return a.length ? s / a.length : 0; }
 
@@ -163,25 +175,46 @@ function momentsPan(dx, tx0, dy, ty0){
 }
 
 /* --- selection ------------------------------------------------------------------- */
-function mpShow(){ renderChart(); renderMomentsPanel(); if(typeof setPanel === "function") setPanel("moments"); }
-function momentsSelectKind(id){ MP.node = id; MP.col = null; MP.beat = null; MP.world = null; mpShow(); }
-function momentsSelectPill(kind, col){ MP.node = kind; MP.col = col; MP.beat = null; MP.world = null; mpShow(); }
+function mpShow(){
+  if(typeof setPanel === "function") setPanel("moments");
+  renderChart(); renderMomentsPanel();
+  var d = document.getElementById("drawer"); if(d) d.scrollTop = 0;
+  mpSyncHash();
+}
+function momentsSelectKind(id){ MP.node = id; MP.col = null; MP.beat = null; MP.world = null; MP.news = null; mpShow(); }
+function momentsSelectPill(kind, col){ MP.node = kind; MP.col = col; MP.beat = null; MP.world = null; MP.news = null; mpShow(); }
+/* A news item: its kind lights the chains through it, and the panel reads
+   them with the news on top. */
+function momentsSelectNews(n){
+  if(!n) return;
+  MP.news = n; MP.node = n.bin || null; MP.col = null; MP.beat = null; MP.world = null;
+  mpShow();
+}
+/* The selection as a link someone can share: #news=, #world=, #kind=. */
+function mpNewsKey(n){ return n.id || n.date; }
+function mpSyncHash(){
+  if(typeof history === "undefined" || !history.replaceState || typeof location === "undefined") return;
+  var h = MP.news ? "news=" + mpNewsKey(MP.news)
+        : MP.world ? "world=" + MP.world
+        : MP.node ? "kind=" + MP.node : "";
+  try{ history.replaceState(null, "", h ? "#" + h : location.pathname + location.search); }catch(e){}
+}
 function momentsSelectBeat(id){
   var e = null;
   ((REAL && REAL.events) || []).forEach(function(x){ if(x.id === id) e = x; });
   if(!e) return;
-  MP.beat = e; MP.world = null;
+  MP.beat = e; MP.world = null; MP.news = null;
   if(e.bin){ MP.node = e.bin; MP.col = null; }
   mpShow();
 }
 function momentsSelectWorld(id){
   MP.world = (MP.world === id) ? null : id;
-  if(MP.world) MP.beat = null;
+  if(MP.world){ MP.beat = null; MP.news = null; }
   mpShow();
 }
 function momentsClear(){
-  MP.node = null; MP.col = null; MP.world = null; MP.beat = null;
-  renderChart(); renderMomentsPanel();
+  MP.node = null; MP.col = null; MP.world = null; MP.beat = null; MP.news = null;
+  renderChart(); renderMomentsPanel(); mpSyncHash();
 }
 
 /* --- layout: a storyline ----------------------------------------------------------
@@ -189,7 +222,8 @@ function momentsClear(){
    column, then the endings. y: strands pulled together where they bundle and
    kept apart elsewhere, home rows by ending. Deterministic. */
 function momentsLayout(M, width){
-  var left = MP_PAD, top = 62, bottom = Hv - 72;
+  var phone = mpIsPhone();
+  var left = phone ? 28 : MP_PAD, top = phone ? 70 : 92, bottom = mpUsableHeight() - (phone ? 54 : 72);
   var trunkY = Math.round((top + bottom) / 2);
   var forkL = left + 34, forkR = left + Math.max(170, Math.min(260, width * 0.17));
   var futL = forkR + 14, futR = forkR + 56;
@@ -223,6 +257,7 @@ function momentsLayout(M, width){
   fut.forEach(function(s, i){ s.forkX = futL + (fut.length > 1 ? (futR - futL) * i / (fut.length - 1) : (futR - futL) / 2); });
   mid.forEach(function(s){ s.forkX = forkXFor(s.fork); });
   var trunkL = forkL - 34;
+  function realXForYear(year){ return year >= NOW ? forkR : Math.min(forkR, forkXFor(year)); }
 
   /* home rows: ends well above our path, still open around it, ends badly below */
   var rank = { optimistic:0, unknown:1, pessimistic:2 };
@@ -317,7 +352,7 @@ function momentsLayout(M, width){
 
   return { left:left, top:top, bottom:bottom, trunkY:trunkY, trunkL:trunkL, forkL:forkL, forkR:forkR,
            futL:futL, futR:futR, colX0:colX0, colW:colW, C:C, xc:xc, bucketX:bucketX, bucketW:bucketW,
-           bucketH:bucketH, bucketY:bucketY, total:total, realX:realX, pills:pills, marks:marks };
+           bucketH:bucketH, bucketY:bucketY, total:total, realX:realX, realXForYear:realXForYear, pills:pills, marks:marks };
 }
 
 /* --- drawing helpers ------------------------------------------------------------- */
@@ -370,7 +405,7 @@ function renderMomentsPage(svg){
   var L = momentsLayout(M, MP.width);
   MP.geom = L;
   if(MP.fit){
-    MP.fitS = Math.max(MP_MIN_S, Math.min(1, (MP.width - 12) / L.total));
+    MP.fitS = mpIsPhone() ? 0.5 : Math.max(MP_MIN_S, Math.min(1, (MP.width - 12) / L.total));
     MP.s = MP.fitS; MP.sy = 1; MP.tx = 0; MP.ty = 0; MP.fit = false;
   }
   var T = mpT, TY = mpTY, s = MP.s;
@@ -391,10 +426,12 @@ function renderMomentsPage(svg){
     tx.textContent = String(c + 1);
     ax.appendChild(tx);
   }
-  var axl = sEl("text", {x:T(L.xc(L.C - 1)) + 16, y:TY(L.bottom) + 30, "text-anchor":"start"}, "mp-region");
-  axl.textContent = "← STEPS ALONG THE CHAIN";
-  ax.appendChild(axl);
-  var axf = sEl("text", {x:T((L.trunkL + L.forkR) / 2), y:TY(L.bottom) + 30, "text-anchor":"middle"}, "mp-region");
+  if(T(L.xc(0)) - T(L.trunkL) > 230){      /* only where it cannot collide with the caption on its left */
+    var axl = sEl("text", {x:T(L.xc(0)) - 12, y:TY(L.bottom) + 30, "text-anchor":"end"}, "mp-region");
+    axl.textContent = "STEP";
+    ax.appendChild(axl);
+  }
+  var axf = sEl("text", {x:T(L.trunkL), y:TY(L.bottom) + 30, "text-anchor":"start"}, "mp-region");
   axf.textContent = "WHERE THEY LEAVE US";
   ax.appendChild(axf);
   g.appendChild(ax);
@@ -528,6 +565,8 @@ function renderMomentsPage(svg){
   });
   g.appendChild(gP);
 
+  mpDrawNews(g, L, T, TY);
+
   /* the endings */
   var gE = sEl("g", null, "mp-endings");
   M.endings.forEach(function(en){
@@ -549,8 +588,98 @@ function renderMomentsPage(svg){
   g.appendChild(gE);
 
   var cap = sEl("text", {x:MP.width - MP_PAD, y:22, "text-anchor":"end"}, "axis-caption");
-  cap.textContent = M.strands.length + " chains · " + L.pills.length + " bundles over " + L.C + " steps · zoom " + MP.s.toFixed(2) + "×";
+  cap.textContent = M.strands.length + " worlds · " + L.pills.length + " places where their chains meet · drag to move, scroll to zoom";
   g.appendChild(cap);
+}
+
+/* --- news on the trunk ------------------------------------------------------------
+   Every curated item is a diamond on our history at its date. The newest one
+   also carries a flag above TODAY with its headline, and a NEW badge while it
+   is fresh, because a reader arriving from a link should see first that this
+   map is about the present. Click either to read the news against the chains. */
+var MP_FRESH_DAYS = 30;
+function mpNewsList(){ return (typeof newsItems === "function") ? newsItems() : ((DATA && DATA.news) || []); }
+function mpNewsAgeDays(n){
+  var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(n && n.date || ""));
+  if(!m) return Infinity;
+  var t = Date.UTC(+m[1], +m[2] - 1, +m[3]);
+  return (Date.now() - t) / 86400000;
+}
+function mpNewsFresh(n){ return mpNewsAgeDays(n) <= MP_FRESH_DAYS; }
+function mpNewsYear(n){ var y = parseInt(String(n.date || "").slice(0, 4), 10); return isNaN(y) ? NOW : y; }
+function mpClip(s, n){ s = String(s || ""); return s.length > n ? s.slice(0, n - 1) + "\u2026" : s; }
+function mpDrawNews(g, L, T, TY){
+  var items = mpNewsList();
+  if(!items.length) return;
+  var gN = sEl("g", null, "mp-news");
+  var y = TY(L.trunkY);
+  items.forEach(function(n){
+    var x = T(L.realXForYear(mpNewsYear(n)));
+    var on = MP.news && mpNewsKey(MP.news) === mpNewsKey(n);
+    var grp = sEl("g", null, "mp-news-mark" + (on ? " selected" : "") + (mpNewsFresh(n) ? " fresh" : ""));
+    grp.setAttribute("data-news", mpNewsKey(n));
+    grp.appendChild(sEl("circle", {cx:x, cy:y - 11, r:9, fill:"transparent", "pointer-events":"all"}, "mp-hit"));
+    grp.appendChild(sEl("path", {d:"M" + x + " " + (y - 16) + " l5 5 l-5 5 l-5 -5 z"}, "mp-news-diamond"));
+    var t = sEl("title");
+    t.textContent = fmtNewsDate(n.date) + " · " + n.headline + "\nclick: which fictional chains passed through this kind of moment, and where they went";
+    grp.appendChild(t);
+    gN.appendChild(grp);
+  });
+  /* the flag for the newest item (or the chosen one) */
+  var n0 = MP.news || items[0];
+  var fx = T(L.realXForYear(mpNewsYear(n0))), top = y - 92;
+  var head = mpClip(n0.headline, 40), fresh = mpNewsFresh(n0);
+  var w = Math.max(190, Math.min(300, head.length * 6.4 + 24)), h = 46;
+  var bx = Math.max(6, fx - w + 18);
+  var flag = sEl("g", null, "mp-news-flag" + (fresh ? " fresh" : "") + (MP.news ? " selected" : ""));
+  flag.setAttribute("data-news", mpNewsKey(n0));
+  flag.appendChild(sEl("line", {x1:fx, y1:top + h, x2:fx, y2:y - 17}, "mp-news-stem"));
+  flag.appendChild(sEl("rect", {x:bx, y:top, width:w, height:h, rx:6}, "mp-news-box"));
+  var k = sEl("text", {x:bx + 10, y:top + 16}, "mp-news-kicker");
+  k.textContent = (fresh ? "NEW \u00b7 " : (MP.news ? "IN THE NEWS \u00b7 " : "LATEST NEWS \u00b7 ")) + fmtNewsDate(n0.date).toUpperCase();
+  flag.appendChild(k);
+  var hl = sEl("text", {x:bx + 10, y:top + 34}, "mp-news-head");
+  hl.textContent = head;
+  flag.appendChild(hl);
+  if(fresh) flag.appendChild(sEl("circle", {cx:bx + w - 12, cy:top + 12, r:4}, "mp-news-pulse"));
+  var ft = sEl("title");
+  ft.textContent = n0.headline + "\nclick: read it against the chains";
+  flag.appendChild(ft);
+  gN.appendChild(flag);
+  g.appendChild(gN);
+}
+function mpNewsByKey(key){
+  var out = null;
+  mpNewsList().forEach(function(n){ if(mpNewsKey(n) === key) out = n; });
+  return out;
+}
+/* A news item, read against the atlas: what kind of moment it is, how the arcs
+   through that kind end, our chain with it added, and every chain through it. */
+function mpNewsHtml(n, M){
+  var k = n.bin ? M.kinds[n.bin] : null;
+  var html = '<div class="mp-head mp-news-head"><button class="ghost small" id="mp-back">\u2190 all strands</button>'
+    + '<div class="mp-kicker">' + (mpNewsFresh(n) ? '<span class="mp-new">New</span> ' : '') + 'In the news \u00b7 ' + esc(fmtNewsDate(n.date)) + '</div>'
+    + '<h3 class="mp-title">' + esc(n.headline) + '</h3>'
+    + (n.summary ? '<p class="mp-def">' + esc(n.summary) + '</p>' : '')
+    + (n.source && n.source.url ? '<a class="news-src" href="' + esc(n.source.url) + '" target="_blank" rel="noopener">' + esc(n.source.title || "source") + ' \u2197</a>' : '')
+    + '</div>';
+  if(!k){
+    html += '<p class="mp-none">This item is not matched to a kind of moment yet, so it cannot be read against the chains.</p>';
+    return html;
+  }
+  html += '<p class="mp-lead">This is a kind of moment the atlas knows: <button class="mp-kind" data-kind="' + esc(k.id) + '">'
+    + esc(mpLabel(k.id)) + '</button>. ' + (k.worlds ? '<b>' + k.worlds + (k.worlds === 1 ? ' fictional world has' : ' fictional worlds have') + '</b> passed through it; they are lit on the map.' : 'No fictional world has passed through it yet.') + '</p>';
+  if(k.worlds) html += mpOutcomesHtml(k.outcomes, k.worlds, "How their arcs end");
+  var q = mpOurQuery(M, null, 5);
+  if(q[q.length - 1] !== n.bin) q = q.concat([n.bin]).slice(-6);
+  html += '<h3 class="mp-h">Our chain up to this, matched</h3>'
+    + '<div class="mp-chain query">' + q.map(function(x, i){ return (i ? '<span class="mp-arr">\u2192</span>' : '')
+        + '<button class="mp-chip us' + (i === q.length - 1 ? ' on' : '') + '" data-kind="' + esc(x) + '">' + esc(mpLabel(x)) + '</button>'; }).join("")
+    + '<span class="mp-arr">\u2192</span><span class="mp-chip open">?</span></div>'
+    + '<p class="mp-def">Not just this one moment: the stretch of our history that led to it, aligned against every fictional chain. What each world did next is read from that world.</p>'
+    + mpQueryHtml(M, q, { k:4 });
+  html += '<div class="mp-sep"></div>' + mpKindHtml(k, M).replace('<div class="mp-head">', '<div class="mp-head sub">');
+  return html;
 }
 
 /* --- the panel ------------------------------------------------------------------ */
@@ -655,7 +784,9 @@ function renderMomentsPanel(){
   if(!host) return;
   var M = MP.model || momentsModel();
   var html = "";
-  if(MP.beat){
+  if(MP.news){
+    html += mpNewsHtml(MP.news, M);
+  } else if(MP.beat){
     html += mpBeatHtml(MP.beat, M);
   } else if(MP.world && M.byId[MP.world]){
     html += mpStrandHtml(M.byId[MP.world], M);
@@ -664,14 +795,19 @@ function renderMomentsPanel(){
   } else if(MP.node && M.kinds[MP.node]){
     html += mpKindHtml(M.kinds[MP.node], M);
   } else {
-    html += '<p class="mp-intro">One strand per world, leaving our history where it forks and running right to how it '
-      + 'ends. Left to right is position along the chain, never a date. Where several strands reach the same kind of '
-      + 'moment at about the same point in their story they bundle through a pill and split after; a kind one strand '
-      + 'reaches alone is a small mark. Every strand is coloured by its ending along its whole length, so a red and a '
-      + 'green strand can be seen leaving the same pill.</p>'
-      + '<p class="mp-intro"><b>Click a strand</b> for its chain and the chains most like it. <b>Click a pill</b> for '
-      + 'the chains through it, before and after. <b>Click an ending</b> for every chain that runs there. '
-      + '<b>Click a dot on our history</b> to match that moment by situation. Scroll to zoom, drag to pan, Fit for the whole map.</p>';
+    var latest = mpNewsList()[0];
+    if(latest){
+      html += '<button class="mp-news-card' + (mpNewsFresh(latest) ? ' fresh' : '') + '" data-news="' + esc(mpNewsKey(latest)) + '">'
+        + '<span class="mp-kicker">' + (mpNewsFresh(latest) ? '<span class="mp-new">New</span> ' : 'Latest news \u00b7 ') + esc(fmtNewsDate(latest.date)) + '</span>'
+        + '<span class="mp-news-card-head">' + esc(latest.headline) + '</span>'
+        + '<span class="mp-news-card-go">Which fictions walked this road, and where it led \u2192</span></button>';
+    }
+    html += '<p class="mp-intro"><b>Each line is one fictional world.</b> It leaves our history, the blue line, at the moment the story breaks from ours, and runs right through the kinds of moment it lives through to how it ends.</p>'
+      + '<ul class="mp-how">'
+      + '<li><i class="sw ok"></i><i class="sw bad"></i><i class="sw open"></i><span>Its colour is its ending: <b>well</b>, <b>badly</b>, or <b>still open</b>.</span></li>'
+      + '<li><i class="sw pill"></i><span>A <b>pill</b> is where several worlds reach the same kind of moment at the same point in their story.</span></li>'
+      + '<li><i class="sw tap"></i><span>Tap a line, a pill or an ending to read it. Drag to move, scroll or +/\u2212 to zoom.</span></li>'
+      + '</ul>';
     html += mpOutcomesHtml(M.tally, M.list.length, "How the " + M.list.length + " arcs end");
     var q = mpOurQuery(M, null, 6);
     if(q.length){
@@ -704,6 +840,9 @@ function renderMomentsPanel(){
   Array.prototype.forEach.call(host.querySelectorAll("[data-pill]"), function(b){
     b.onclick = function(){ var v = b.getAttribute("data-pill").split("@"); momentsSelectPill(v[0], parseInt(v[1], 10)); };
   });
+  Array.prototype.forEach.call(host.querySelectorAll("[data-news]"), function(b){
+    b.onclick = function(){ momentsSelectNews(mpNewsByKey(b.getAttribute("data-news"))); };
+  });
   Array.prototype.forEach.call(host.querySelectorAll("[data-beat]"), function(b){
     b.onclick = function(){ momentsSelectBeat(b.getAttribute("data-beat")); };
   });
@@ -712,7 +851,8 @@ function renderMomentsPanel(){
   });
   var back = document.getElementById("mp-back");
   if(back) back.onclick = function(){
-    if(MP.beat){ MP.beat = null; renderChart(); renderMomentsPanel(); }
+    if(MP.news){ momentsClear(); }
+    else if(MP.beat){ MP.beat = null; renderChart(); renderMomentsPanel(); }
     else if(MP.world){ MP.world = null; renderChart(); renderMomentsPanel(); }
     else momentsClear();
   };

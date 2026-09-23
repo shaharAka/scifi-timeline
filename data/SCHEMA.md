@@ -403,3 +403,12 @@ trunk's own chronology, the arc every fiction shares up to its fork and the
 tail that today's news extends. Its bins anchor the vocabulary: a bin's
 clearest real instance is the best definition of it. The build checks it like
 any lineage's events and publishes it as `payload.real`.
+
+## News
+
+`data/news.json` holds hand-curated items: `date` (YYYY-MM-DD), `headline`,
+`summary`, `source {title, url}`, `worlds` (lineage ids it touches), and
+`bin`, the kind of moment it is. The bin is what the Moments page reads the
+item by; an item without one is drawn on the map but cannot be matched, and
+the build warns. An unknown bin is a build error. Optional `id` names the
+item in `#news=` links; without it the date is used.

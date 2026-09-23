@@ -286,3 +286,80 @@ table.ev .iu{font-size:11px;color:var(--ink-3);display:block;margin-top:2px}
 .srcs li{margin:2px 0;font-size:var(--fs-0);line-height:1.35}
 .srcs a{color:var(--trunk);text-decoration:none;border-bottom:1px solid var(--line-2)}
 .srcs a:hover{border-bottom-color:var(--trunk)}
+
+/* --- the Moments panel, first read ------------------------------------------------ */
+.mp-news-card{display:flex;flex-direction:column;gap:3px;width:100%;text-align:left;font:inherit;cursor:pointer;
+  background:var(--card-bg);border:1px solid var(--accent);border-radius:var(--r-3);padding:10px 12px;margin:0 0 12px;color:var(--ink-1)}
+.mp-news-card:hover{background:var(--card-bg-hover)}
+.mp-news-card .mp-kicker{color:var(--accent)}
+.mp-news-card-head{font-size:14.5px;font-weight:680;letter-spacing:-.01em;color:var(--ink-0)}
+.mp-news-card-go{font-size:12px;color:var(--accent);font-weight:600}
+.mp-new{display:inline-block;background:var(--bad);color:#fff;border-radius:3px;padding:0 5px;margin-right:3px;
+  font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:750}
+.mp-how{list-style:none;padding:0;margin:0 0 12px;display:flex;flex-direction:column;gap:6px;font-size:12.5px;color:var(--ink-2)}
+.mp-how li{display:flex;gap:8px;align-items:flex-start;line-height:1.45}
+.mp-how .sw{display:inline-block;width:14px;height:3px;border-radius:2px;margin-top:8px;flex:none}
+.mp-how .sw + .sw{margin-left:-5px}
+.mp-how .sw.ok{background:var(--ok)}.mp-how .sw.bad{background:var(--bad)}.mp-how .sw.open{background:var(--ink-4)}
+.mp-how .sw.pill{width:24px;height:12px;border:1.2px solid var(--ink-3);border-radius:6px;background:var(--surface);margin-top:3px}
+.mp-how .sw.tap{width:10px;height:10px;border-radius:50%;border:1.5px solid var(--ink-3);margin:4px 7px 0}
+.mp-lead{font-size:13px;color:var(--ink-1);line-height:1.55;margin:10px 0 6px}
+.mp-sep{height:1px;background:var(--line-1);margin:18px 0 12px}
+.mp-head.sub .mp-title{font-size:16px}
+.mp-news-head .news-src{font-size:12px}
+
+/* the News button's count */
+.nav-badge{display:inline-block;min-width:16px;height:16px;line-height:16px;border-radius:8px;background:var(--bad);
+  color:#fff;font-size:10px;font-weight:750;text-align:center;margin-left:5px;padding:0 4px;vertical-align:1px}
+
+/* --- the first-visit card --------------------------------------------------------- */
+.welcome{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;
+  background:rgba(16,28,40,.38);padding:16px}
+.welcome.on{display:flex;animation:fade .25s var(--ease-out)}
+.wl-card{position:relative;background:var(--panel-solid);border:1px solid var(--line-1);border-radius:10px;
+  box-shadow:0 18px 50px rgba(16,28,40,.25);max-width:560px;width:100%;max-height:calc(100vh - 32px);overflow:auto;
+  padding:22px 24px 20px}
+.wl-x{position:absolute;top:8px;right:10px;background:transparent;border:0;font-size:22px;line-height:1;color:var(--ink-3);cursor:pointer;padding:4px 8px}
+.wl-x:hover{color:var(--ink-0)}
+.wl-kicker{font-size:var(--fs-0);letter-spacing:var(--track);text-transform:uppercase;color:var(--ink-3);font-weight:750}
+.wl-card h1{margin:4px 0 10px;font-size:28px}
+.wl-lede{margin:0 0 10px;color:var(--ink-2);font-size:14.5px;line-height:1.6}
+.wl-lede b.ok{color:var(--ok)}.wl-lede b.bad{color:var(--bad)}.wl-lede b.open{color:var(--ink-2)}
+.wl-news{display:flex;flex-direction:column;gap:3px;width:100%;text-align:left;font:inherit;cursor:pointer;margin:6px 0 14px;
+  background:var(--card-bg);border:1px solid var(--accent);border-radius:var(--r-3);padding:10px 12px;color:var(--ink-1)}
+.wl-news:hover{background:var(--card-bg-hover)}
+.wl-news-k{font-size:var(--fs-0);letter-spacing:var(--track);text-transform:uppercase;color:var(--accent);font-weight:750}
+.wl-news-h{font-size:15px;font-weight:680;color:var(--ink-0)}
+.wl-news-go{font-size:12.5px;color:var(--accent);font-weight:600}
+.wl-how{list-style:none;padding:0;margin:0 0 16px;display:flex;flex-direction:column;gap:7px;font-size:13px;color:var(--ink-2)}
+.wl-how li{display:flex;gap:10px;align-items:center}
+.wl-how svg{flex:none}
+.wl-actions{display:flex;gap:8px;flex-wrap:wrap}
+.wl-btn{font:inherit;font-size:13.5px;font-weight:620;padding:8px 14px;border-radius:var(--r-2);cursor:pointer;
+  background:var(--bg-2);border:1px solid var(--line-2);color:var(--ink-1)}
+.wl-btn:hover{border-color:var(--ink-3)}
+.wl-btn.primary{background:var(--ink-0);border-color:var(--ink-0);color:var(--surface)}
+.wl-btn.primary:hover{background:var(--trunk)}
+#about-intro{margin:0 0 12px}
+
+/* --- phones: the map first ----------------------------------------------------------
+   One compact bar, no legend, and the panel as a sheet from the bottom so the
+   map keeps the full width. */
+@media (max-width:719px){
+  .topbar{padding:6px 6px 0}
+  .bar{gap:4px;padding:5px 6px}
+  .brand{width:100%;margin:0 0 2px}
+  .brand .brand-a{display:none}
+  .search-wrap,#sort,#allev,#eras,#zoom,#converge,.topbar .bar.sub{display:none !important}
+  button.nav{padding:4px 7px;font-size:12.5px}
+  .ax{padding:4px 8px}
+  .ctl-group{margin-left:auto}
+  .canvas{margin:6px 6px 6px}
+  .bottombar,.bottombar.legend{display:none !important}
+  .panel{top:auto !important;left:0;right:0;bottom:0;width:100% !important;height:52%;border-left:0;border-top:1px solid var(--line-2);
+    border-radius:12px 12px 0 0;transform:translateY(104%);padding:12px 14px 24px}
+  .panel.open{transform:none}
+  .wl-card{padding:18px 16px 16px}
+  .wl-card h1{font-size:24px}
+  body.mode-moments .axis-caption{display:none}
+}
