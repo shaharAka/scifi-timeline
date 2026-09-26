@@ -933,6 +933,13 @@ attempt("ranking", () => {
   check(!bad.length, `ranking: hypothetical next steps that never happened to us: ${bad.map((x) => x.kind).join(", ")}`);
   const today = String(t.pickerTodayHtml());
   check(today.includes('class="rk-card ') && today.includes(top.st.l.title.replace(/&/g, "&amp;").replace(/'/g, "&#39;").split(":")[0]), "Today does not feature the top candidate");
+  /* the poster cards and the race: the leader named, a line per story drawn */
+  const post = String(t.rankCard("post")), og = String(t.rankCard("og"));
+  const title = top.st.l.title.replace(/&/g, "&amp;").replace(/'/g, "&#39;");
+  check(post.includes(title) && post.includes('class="rk-race"'), "the post card does not show the leader and the race");
+  check(og.includes(title) && og.includes("rkc-og"), "the link-preview card does not show the leader");
+  const race = String(t.rankRace({ w:600, h:260 }));
+  check((race.match(/<path /g) || []).length >= 3, "the race draws fewer than three lines");
   soft(`ranking: ${top.st.l.title} leads with ${(top.share * 100).toFixed(0)}% over ${R.threads.map((th) => th.spec.short).join(" / ")}; ${hist.filter((h, i) => i && hist[i - 1].top.st !== h.top.st).length} lead changes over the last ${hist.length} moments`);
 });
 

@@ -328,7 +328,7 @@ function pickerAboutHtml(M){
 /* --- routing ------------------------------------------------------------------------------ */
 function pickerRoute(){
   var h = (typeof location !== "undefined" && location.hash) ? decodeURIComponent(location.hash.slice(1)) : "";
-  var m = /^(world|kind|news|ending|beat)=(.+)$/.exec(h);
+  var m = /^(world|kind|news|ending|beat|card)=(.+)$/.exec(h);
   if(m) return { view:m[1], id:m[2] };
   if(h === "stories" || h === "about" || h === "map" || h === "newslist" || h === "rank") return { view:h };
   return { view:"today" };
@@ -346,6 +346,8 @@ function pickerTab(view){
 }
 function pickerRender(){
   var r = pickerRoute();
+  if(r.view === "card"){ rkShowCard(r.id); return; }
+  rkHideCard();
   pickerTabs(pickerTab(r.view));
   if(r.view === "map"){ showMap(); return; }
   if(!PK.on) showStories(true);

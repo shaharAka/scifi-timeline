@@ -414,6 +414,19 @@ Four rules follow from that, and they are the owner's:
   "if the next headline is…" for next steps the leaders take that have
   happened to us before. Today features the leader and the next six; a story
   shows its rank. The constants at the top of the file are the argument.
+- **The race is the picture.** A bump chart (`rkRaceSvg`) of the top five
+  after each of our last ten moments, one colour per story, a big dot on the
+  leader, a solid column where the lead changed; a story that drops out simply
+  leaves the chart and is named underneath. It sits under the hero on a phone
+  and tops the side column on a wide screen.
+- **Posting is a snapshot.** `#card=post` (1080×1350, the portrait size a
+  feed shows largest) and `#card=og` (1200×630) are fixed-size posters of the
+  live ranking: the leader's plate, its share, the race and each thread's
+  leader. `sh tools/snap-cards.sh` photographs both with headless Chrome:
+  `share/rank-post-<date>.png` to post by hand, and
+  `assets/share/og-rank.png`, which `data/atlas.json` names as the link
+  preview, so a shared link shows today's leader. After adding news: rebuild,
+  snap, commit.
 - **A shared link has a preview.** The build writes Open Graph and Twitter
   tags from `share` in `data/atlas.json`, and writes the full page to
   `index.html` too, so the site root is the atlas itself: link previews are

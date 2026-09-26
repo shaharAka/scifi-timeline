@@ -20,6 +20,9 @@ the entry point and it tells you what to trust and what will bite you.
   lineages, 443 events. The Ranking tab (`94-ranking.js`) ranks every story
   against our road thread by thread and replays the leader; ten worlds were
   added through `tools/world-brief.py` and `tools/check-world.py`.
+  After each news update: `python3 build-data.py && sh tools/snap-cards.sh`,
+  then commit `assets/share/og-rank.png` so the link preview shows the new
+  leader (LinkedIn caches previews; its Post Inspector refreshes one).
 - **Earlier state:** 24 lineages, 237 events,
   24 world dossiers. The viewer was rebuilt on 2026-09-16: tree chart, `src/`
   modules assembled by the build, design tokens, atlas config, single-canvas

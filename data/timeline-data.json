@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-09-26T16:07:27Z",
+  "generated": "2026-09-26T16:20:18Z",
   "source": "data/parts/*.json",
   "lineages": 43,
   "events": 443,
@@ -26296,9 +26296,9 @@
   "tagline": "science fiction's futures, lined up against ours",
   "share": {
    "title": "Where We Are Now: science fiction's futures, lined up against ours",
-   "description": "33 science-fiction worlds pinned to the real calendar. Each leaves our history at one moment and walks a chain of events to an ending. Which of them are on our road?",
+   "description": "43 science-fiction worlds pinned to the real calendar, and our own road ranked against them: which story are we in? Each world leaves our history at one moment and walks a chain of events to an ending.",
    "url": "https://shaharaka.github.io/scifi-timeline/",
-   "image": "assets/derived/interstellar-lg.jpg"
+   "image": "assets/share/og-rank.png"
   },
   "headline": "Every one of these histories",
   "headlineAccent": "converges on today",

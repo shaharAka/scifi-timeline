@@ -297,6 +297,7 @@ function pickerRankHtml(M){
     + '<span class="rk-top-t"><span class="rk-top-k">Top candidate' + (wasTop ? ' · new, taking over from ' + esc(wasTop.st.l.title) : since && since !== hist[hist.length - 1] ? ' since ' + esc(rkWhen(since.step.e)) : '') + '</span>'
     + '<span class="rk-top-title">' + esc(l.title) + '</span>'
     + '<span class="rk-top-share"><b>' + rkPct(top.share) + '</b> of the fit · ' + esc(rkLine(R, top)) + '</span></span></button>'
+    + (mpIsPhone() ? rkRaceHtml(M, false) : '')
     + '<div class="rk-top-body"><h3 class="pk-sh">Why it fits: our road beside its road</h3>' + rkWhyHtml(R, top)
     + '<h3 class="pk-sh">If we are in ' + esc(l.title) + ', what comes next</h3>' + rkNextHtml(top, 3)
     + '<div class="pk-actions"><button class="pk-btn primary" data-share="rank" data-share-title="' + esc("Which story are we in? Today: " + l.title + " (" + rkPct(top.share) + " of the fit)") + '">Share today’s ranking</button>'
@@ -325,6 +326,7 @@ function pickerRankHtml(M){
     }).join("") + '</ol>'
     + '<p class="pk-small rk-honest">A share of the fit, not a forecast: it says whose road looks most like ours so far, not what will happen next. The same kind of moment counts fully and a similar one partly; newer steps count more, and a thread that has gone quiet counts less. A quarter of each fit is how alike the situations were: who acted, how, and which way power moved.</p></section>';
   html += '</div><aside class="pk-aside">';
+  if(!mpIsPhone()) html += rkRaceHtml(M, true);
   /* the leader over time */
   html += '<section class="pk-sec"><h3 class="pk-sh">Top candidate after each of our moments</h3><ol class="rk-hist">'
     + hist.slice().reverse().map(function(x, i, arr){
@@ -344,4 +346,152 @@ function pickerRankHtml(M){
   }
   html += '</aside></div>';
   return html;
+}
+
+/* --- the race: who led after each of our moments ----------------------------------
+   A bump chart. Columns are our last moments, rows are ranks, one line per
+   story that was in the top three at any of them. It is the picture of the
+   whole idea: every headline re-sorts the stories. Drawn as a string of SVG at
+   a given pixel size so the same code serves the page and the poster cards. */
+var RK_HUES = ["#3b7ddd", "#e0703c", "#2f9e6e", "#b25bb0", "#d2a32a", "#48b2c6", "#d45b73", "#8c9a2e", "#7a6fe0"];
+/* the stories the race draws: any that reached the top three, most often
+   ahead first, and today's top three always */
+function rkRaceLines(M, hist, n){
+  var pick = {}, order = [];
+  hist.forEach(function(h){ h.R.rows.slice(0, 3).forEach(function(r, i){
+    if(!pick[r.st.id]){ pick[r.st.id] = { st:r.st, score:0 }; order.push(pick[r.st.id]); }
+    pick[r.st.id].score += 3 - i;
+  }); });
+  var last = hist[hist.length - 1].R;
+  order.sort(function(a, b){ return b.score - a.score; });
+  order = order.slice(0, n || 6);  /* plus today's top three: at most nine, one hue each */
+  last.rows.slice(0, 3).forEach(function(r){ if(!order.some(function(x){ return x.st === r.st; })) order.push({ st:r.st, score:0 }); });
+  order.forEach(function(x, k){ x.hue = RK_HUES[k % RK_HUES.length]; x.now = rkRankOf(last, x.st.id); });
+  return order;
+}
+function rkRaceSvg(M, o){
+  o = o || {};
+  var hist = rkHistory(M), W = o.w || 640, H = o.h || 300, dark = !!o.dark;
+  var fs = o.font || 12, labW = o.labW || Math.min(170, W * 0.34), top = fs * 0.8, bot = o.axis === false ? 12 : fs * 2.6 + 10;
+  var maxR = o.ranks || 5, n = hist.length, last = hist[n - 1].R;
+  var order = rkRaceLines(M, hist, o.lines);
+  var x0 = fs * 1.6, x1 = W - labW - 8, y0 = top, y1 = H - bot;
+  function X(i){ return n > 1 ? x0 + (x1 - x0) * i / (n - 1) : (x0 + x1) / 2; }
+  function Y(rank){ return y0 + (y1 - y0) * (rank - 1) / Math.max(1, maxR - 1); }
+  var ink = dark ? "rgba(255,255,255,.9)" : "var(--ink-0)", ink3 = dark ? "rgba(255,255,255,.5)" : "var(--ink-3)", grid = dark ? "rgba(255,255,255,.09)" : "var(--line-1)", bg = dark ? "#151c26" : "var(--surface)";
+  var s = '<svg class="rk-race" viewBox="0 0 ' + W + ' ' + H + '" width="' + W + '" height="' + H + '" role="img" aria-label="Which story led after each of our last ' + n + ' moments">';
+  for(var r = 1; r <= maxR; r++){
+    s += '<line x1="' + x0 + '" x2="' + x1 + '" y1="' + Y(r).toFixed(1) + '" y2="' + Y(r).toFixed(1) + '" stroke="' + grid + '" stroke-width="1"/>'
+      + '<text x="' + (x0 - fs * 0.7) + '" y="' + (Y(r) + fs * 0.33).toFixed(1) + '" font-size="' + fs * 0.8 + '" text-anchor="end" fill="' + ink3 + '" font-family="ui-monospace,monospace">' + r + '</text>';
+  }
+  /* columns: a short date per moment; a solid column where the lead changed */
+  hist.forEach(function(h, i){
+    var chg = i && hist[i - 1].top.st !== h.top.st;
+    s += '<line x1="' + X(i).toFixed(1) + '" x2="' + X(i).toFixed(1) + '" y1="' + y0 + '" y2="' + y1 + '" stroke="' + grid + '" stroke-width="' + (chg ? 1.5 : 1) + '" stroke-dasharray="' + (chg ? '0' : '2 5') + '"/>';
+    if(o.axis !== false && (W / n > fs * 3.4 || i % 2 === (n - 1) % 2)){
+      var d = String(h.step.e.date || h.step.e.year), mon = /^\d{4}-\d{2}/.test(d) ? RK_MON[parseInt(d.slice(5, 7), 10) - 1] : "";
+      s += '<text x="' + X(i).toFixed(1) + '" y="' + (y1 + fs + 8) + '" font-size="' + fs * 0.85 + '" text-anchor="middle" fill="' + ink3 + '">' + esc(mon) + '</text>'
+        + '<text x="' + X(i).toFixed(1) + '" y="' + (y1 + fs * 2 + 9) + '" font-size="' + fs * 0.85 + '" text-anchor="middle" fill="' + ink3 + '" font-family="ui-monospace,monospace">’' + esc(d.slice(2, 4)) + '</text>';
+    }
+    s += '<rect x="' + (X(i) - 12).toFixed(1) + '" y="' + y0 + '" width="24" height="' + (y1 - y0) + '" fill="transparent"><title>' + esc(rkWhen(h.step.e) + ': ' + h.step.e.title + ' → ' + h.top.st.l.title + ' leads') + '</title></rect>';
+  });
+  /* lines: drawn only while a story is in the top ranks, so one that drops
+     out simply leaves the chart; the current leader last, on top */
+  order.slice().reverse().forEach(function(x){
+    var lead = last.rows[0].st === x.st, w = lead ? fs * 0.46 : fs * 0.26;
+    var pts = hist.map(function(h, i){ var rr = rkRankOf(h.R, x.st.id); return rr && rr.rank <= maxR ? [X(i), Y(rr.rank), rr.rank] : null; });
+    var d = "";
+    pts.forEach(function(p, i){
+      if(!p) return;
+      var q = i ? pts[i - 1] : null;
+      if(!q){ d += 'M' + p[0].toFixed(1) + ' ' + p[1].toFixed(1); return; }
+      var mx = (q[0] + p[0]) / 2;
+      d += 'C' + mx.toFixed(1) + ' ' + q[1].toFixed(1) + ' ' + mx.toFixed(1) + ' ' + p[1].toFixed(1) + ' ' + p[0].toFixed(1) + ' ' + p[1].toFixed(1);
+    });
+    if(d) s += '<path d="' + d + '" fill="none" stroke="' + x.hue + '" stroke-width="' + w + '" stroke-linecap="round" stroke-linejoin="round"/>';
+    pts.forEach(function(p){
+      if(!p) return;
+      var big = p[2] === 1;
+      s += '<circle cx="' + p[0].toFixed(1) + '" cy="' + p[1].toFixed(1) + '" r="' + (big ? fs * 0.5 : w * 0.95) + '" fill="' + x.hue + '" stroke="' + bg + '" stroke-width="' + (big ? 2.5 : 0) + '"/>';
+    });
+    if(x.now && x.now.rank <= maxR){
+      var ly = Y(x.now.rank);
+      s += '<text x="' + (x1 + fs * 0.9) + '" y="' + (ly + fs * 0.36).toFixed(1) + '" font-size="' + fs + '" font-weight="' + (lead ? 760 : 600) + '" fill="' + ink + '">'
+        + esc(mpClip(x.st.l.title, Math.floor(labW / (fs * 0.55)) - 4)) + ' <tspan fill="' + ink3 + '" font-weight="500" font-family="ui-monospace,monospace" font-size="' + fs * 0.85 + '">' + rkPct(x.now.share) + '</tspan></text>';
+    }
+  });
+  return s + '</svg>';
+}
+/* the lines that led once but are out of the top ranks now */
+function rkRaceLegend(M, o){
+  o = o || {};
+  var maxR = o.ranks || 5, hist = rkHistory(M);
+  var gone = rkRaceLines(M, hist, o.lines).filter(function(x){ return !x.now || x.now.rank > maxR; });
+  if(!gone.length) return "";
+  return '<div class="rk-gone"><span>Led before, now further down:</span>' + gone.map(function(x){
+    return '<b><i style="background:' + x.hue + '"></i>' + esc(x.st.l.title) + ' <em>#' + (x.now ? x.now.rank : "?") + '</em></b>';
+  }).join("") + '</div>';
+}
+function rkRaceHtml(M, side){
+  var host = document.getElementById("picker"), hw = (host && host.clientWidth) || 700;
+  /* on a phone it spans the screen; on a wide one it tops the side column */
+  var w = side ? Math.max(300, Math.min(440, Math.round((Math.min(hw, 1180) - 104) / 2.55) - 34)) : Math.max(300, Math.min(700, hw - 66));
+  var phone = w < 480;
+  return '<section class="pk-sec rk-racebox"><h3 class="pk-sh">The race: who led after each of our moments</h3>'
+    + rkRaceSvg(M, { w:w, h:phone ? 230 : side ? 250 : 280, font:phone ? 11.5 : side ? 12 : 13, labW:side ? 176 : phone ? 132 : 190 })
+    + rkRaceLegend(M, {})
+    + '<p class="pk-small">The top five after each of our last moments. A big dot is the leader; a solid column is where the lead changed hands.</p></section>';
+}
+
+/* --- poster cards, for posting ---------------------------------------------------------
+   #card=post  1080 x 1350, the portrait size a feed shows largest
+   #card=og    1200 x 630, the link preview
+   A fixed-size page over everything else, so tools/snap-cards.sh can
+   photograph it with a headless browser. On a smaller screen it scales to fit. */
+function rkToday(){ var d = new Date(); return d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2); }
+function rkCardHtml(M, kind){
+  var R = rkRank(M), top = R.rows[0], st = top.st, l = st.l, art = typeof artFor === "function" ? artFor(l.id) : null;
+  var prev = R.upto > 1 ? rkRank(M, R.upto - 1) : null, was = prev && prev.rows[0].st !== st ? prev.rows[0].st : null;
+  var site = "shaharaka.github.io/scifi-timeline";
+  var img = art && art.lg ? '<img class="rkc-art" src="' + esc(art.lg) + '" alt="">' : '';
+  var endTxt = st.ending.valence === "optimistic" ? "It ends well" : st.ending.valence === "pessimistic" ? "It ends badly" : "Its ending is still open";
+  if(kind === "og"){
+    return '<div class="rkc rkc-og">' + img + '<div class="rkc-shade"></div>'
+      + '<div class="rkc-in"><div class="rkc-k">Which science-fiction story are we in?</div>'
+      + '<div class="rkc-title">' + esc(l.title) + '</div>'
+      + '<div class="rkc-share"><b>' + rkPct(top.share) + '</b> of the fit, top of ' + R.rows.length + ' stories' + (was ? ' · taking over from ' + esc(was.l.title) : '') + '</div>'
+      + '<ol class="rkc-top3">' + R.rows.slice(1, 4).map(function(r){ return '<li><span>' + r.rank + '</span>' + esc(r.st.l.title) + ' <em>' + rkPct(r.share) + '</em></li>'; }).join("") + '</ol>'
+      + '<div class="rkc-foot">Where We Are Now · ' + site + '</div></div></div>';
+  }
+  var th = R.threads.filter(function(t){ return t.weight >= 0.5; }).map(function(t){
+    return '<div class="rkc-th"><span>' + esc(t.spec.label) + '</span><b>' + esc(t.rows[0].st.l.title) + '</b><em>' + rkPct(t.rows[0].share) + '</em></div>';
+  }).join("");
+  return '<div class="rkc rkc-post">' + img + '<div class="rkc-shade"></div>'
+    + '<div class="rkc-k rkc-k-top">Which science-fiction story are we in? · ' + esc(fmtNewsDate(rkToday())) + '</div>'
+    + '<div class="rkc-in"><div class="rkc-lbl">Top candidate of ' + R.rows.length + ' stories' + (was ? ', taking over from ' + esc(was.l.title) : '') + '</div>'
+    + '<div class="rkc-title">' + esc(l.title) + '</div>'
+    + '<div class="rkc-share"><b>' + rkPct(top.share) + '</b> of the fit · ' + esc(endTxt.toLowerCase()) + '</div>'
+    + '<div class="rkc-after">after: ' + esc(R.last.e.title) + '</div></div>'
+    + '<div class="rkc-panel"><div class="rkc-ph">The lead after each of our last ' + rkHistory(M).length + ' moments</div>'
+    + rkRaceSvg(M, { w:1000, h:320, font:24, labW:340, dark:true })
+    + rkRaceLegend(M, {})
+    + '<div class="rkc-ths">' + th + '</div>'
+    + '<div class="rkc-foot"><span>Where We Are Now · ' + site + '</span><span>a share of the fit, not a forecast</span></div></div></div>';
+}
+function rkShowCard(kind){
+  var M = pickerModel(), id = "rk-card-host", host = document.getElementById(id);
+  if(!host){ host = document.createElement("div"); host.id = id; document.body.appendChild(host); }
+  host.className = "rkc-host " + (kind === "og" ? "og" : "post");
+  host.innerHTML = rkCardHtml(M, kind);
+  var cw = kind === "og" ? 1200 : 1080, chh = kind === "og" ? 630 : 1350;
+  /* fit the width only: a headless window of exactly the card's size reports
+     a slightly shorter viewport, and the snapshot must not shrink */
+  var sc = Math.min(1, window.innerWidth / cw);
+  host.firstChild.style.transform = sc < 1 ? "scale(" + sc + ")" : "";
+  document.body.classList.add("card-mode");
+}
+function rkHideCard(){
+  var host = document.getElementById("rk-card-host");
+  if(host && host.parentNode) host.parentNode.removeChild(host);
+  if(document.body) document.body.classList.remove("card-mode");
 }

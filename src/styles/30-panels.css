@@ -681,6 +681,63 @@ body.phone #dback{display:none}
 .rk-mine b{font-family:var(--font-mono);font-size:17px;color:var(--ink-0)}
 .rk-mine .pk-sh{margin:0}
 
+/* the race chart on the page */
+.rk-racebox{background:var(--surface);border:1px solid var(--line-1);border-radius:14px;padding:14px 16px 12px;margin-top:18px}
+.rk-top .rk-racebox{border:0;border-radius:0;margin:0;padding:14px 16px 4px;border-bottom:1px solid var(--line-1)}
+.pk-aside > .rk-racebox:first-child{margin-top:0}
+.rk-racebox .pk-sh{margin-bottom:6px}
+.rk-race{display:block;max-width:100%;height:auto;font-family:var(--font-sans);overflow:visible}
+/* the hero label stays legible on a bright plate */
+.rk-top-t{background:linear-gradient(rgba(8,12,18,0),rgba(8,12,18,.62) 38%,rgba(8,12,18,.9))}
+.rk-top-t > span{text-shadow:0 1px 10px rgba(0,0,0,.45)}
+
+.rk-gone{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font-size:12.5px;color:var(--ink-3);margin:8px 0 0}
+.rk-gone b{font-weight:600;color:var(--ink-2);display:inline-flex;align-items:center;gap:5px}
+.rk-gone i{display:inline-block;width:10px;height:10px;border-radius:50%}
+.rk-gone em{font-style:normal;font-family:var(--font-mono);color:var(--ink-3);font-weight:500}
+.rkc .rk-gone{font-size:19px;color:rgba(255,255,255,.5);margin:6px 8px 0}
+.rkc .rk-gone b{color:rgba(255,255,255,.85)}.rkc .rk-gone em{color:rgba(255,255,255,.5)}
+.rkc .rk-gone i{width:14px;height:14px}
+/* poster cards (#card=post, #card=og): a fixed-size page over everything */
+body.card-mode{overflow:hidden}
+.rkc-host{position:fixed;inset:0;z-index:9999;background:#0b1016;overflow:hidden}
+.rkc{position:relative;transform-origin:top left;overflow:hidden;background:#0d131b;color:#fff;font-family:var(--font-sans)}
+.rkc-post{width:1080px;height:1350px}
+.rkc-og{width:1200px;height:630px}
+.rkc-art{position:absolute;left:0;top:0;width:100%;object-fit:cover}
+.rkc-post .rkc-art{height:760px}
+.rkc-og .rkc-art{height:100%;width:62%;left:auto;right:0}
+.rkc-shade{position:absolute;inset:0}
+.rkc-post .rkc-shade{background:linear-gradient(rgba(13,19,27,.75),rgba(13,19,27,0) 16%,rgba(13,19,27,0) 24%,rgba(13,19,27,.72) 38%,#0d131b 54%)}
+.rkc-og .rkc-shade{background:linear-gradient(90deg,#0d131b 38%,rgba(13,19,27,.8) 52%,rgba(13,19,27,.1) 75%)}
+.rkc-in{position:absolute;left:64px;right:64px}
+.rkc-post .rkc-in{bottom:650px}
+.rkc-k-top{position:absolute;left:64px;right:64px;top:56px}
+.rkc-og .rkc-in{top:64px;bottom:48px;right:auto;width:620px;display:flex;flex-direction:column}
+.rkc-k{font-size:24px;letter-spacing:.12em;text-transform:uppercase;font-weight:750;color:rgba(255,255,255,.72)}
+.rkc-og .rkc-k{font-size:21px}
+.rkc-lbl{margin-top:0;font-size:30px;font-weight:600;color:#ffd27a}
+.rkc-title{font-size:112px;line-height:.98;font-weight:800;letter-spacing:-.035em;margin-top:8px;text-shadow:0 4px 30px rgba(0,0,0,.5)}
+.rkc-og .rkc-title{font-size:80px;margin-top:18px}
+.rkc-share{font-size:34px;margin-top:18px;color:rgba(255,255,255,.9)}
+.rkc-share b{font-family:var(--font-mono);font-size:44px;color:#ffd27a;font-weight:800}
+.rkc-og .rkc-share{font-size:26px}.rkc-og .rkc-share b{font-size:34px}
+.rkc-after{font-size:26px;margin-top:10px;color:rgba(255,255,255,.6)}
+.rkc-panel{position:absolute;left:40px;right:40px;bottom:36px;padding:26px 24px 20px;border-radius:26px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1)}
+.rkc-ph{font-size:22px;letter-spacing:.1em;text-transform:uppercase;font-weight:750;color:rgba(255,255,255,.6);margin:0 0 6px 8px}
+.rkc-panel .rk-race{margin:0 auto}
+.rkc-ths{display:flex;gap:12px;margin-top:6px}
+.rkc-th{flex:1;display:flex;flex-direction:column;gap:2px;padding:10px 14px;border-radius:14px;background:rgba(255,255,255,.06)}
+.rkc-th span{font-size:17px;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.55);font-weight:700}
+.rkc-th b{font-size:24px;line-height:1.15}
+.rkc-th em{font-style:normal;font-family:var(--font-mono);font-size:19px;color:#ffd27a}
+.rkc-foot{display:flex;justify-content:space-between;margin-top:14px;font-size:19px;color:rgba(255,255,255,.55)}
+.rkc-og .rkc-foot{margin-top:auto;font-size:19px}
+.rkc-top3{list-style:none;padding:0;margin:26px 0 0;display:flex;flex-direction:column;gap:8px}
+.rkc-top3 li{font-size:25px;color:rgba(255,255,255,.85)}
+.rkc-top3 span{display:inline-block;width:34px;font-family:var(--font-mono);color:rgba(255,255,255,.5)}
+.rkc-top3 em{font-style:normal;font-family:var(--font-mono);font-size:21px;color:rgba(255,255,255,.55)}
+
 /* --- wide screens: the same screens, laid out for width ------------------------------ */
 @media (min-width:720px){
   body.shell .pk-screen{max-width:1180px;padding:28px 32px 56px}
