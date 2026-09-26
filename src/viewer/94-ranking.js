@@ -49,8 +49,19 @@ var RK_COMMON = 0.2;
    different roads. Skipping one of our steps is free, because no story walks
    every thread we do; skipping one of the story's costs a little; our steps
    after the story's last match cost RK_CHAIN_TAIL, so the present counts. */
-var RK_LEN = 20;            /* our last 20 moments: since the end of the Cold War */
-var RK_CHAIN_DECAY = 0.93;  /* each older step counts this much of the next: the present counts more, the past still counts */
+var RK_MIN_IMPORTANCE = 2;
+var RK_SINCE = 1991;        /* our road since the end of the Cold War: a window in years, so adding moments does not shrink it */
+var RK_LEN = 400;           /* a safety cap on how many moments the window holds */
+var RK_HALFLIFE = 15;       /* a moment this many years old counts half as much as today's */
+/* how much a moment's size counts: importance 1, 2, 3 (set from its magnitude) */
+var RK_IMPORTANCE = { 1:0.6, 2:0.8, 3:1 };
+/* Order against chance: each story's in-order match is compared with the same
+   story's steps in RK_SHUFFLES random orders, and RK_CHANCE of that chance
+   level is taken off. A story sharing our steps in a scrambled order scores
+   little; one sharing them in our order keeps its score. */
+var RK_SHUFFLES = 10;
+var RK_CHANCE = 0.7;
+var RK_CHANCE_TOP = 30;
 var RK_CHAIN_STORYGAP = 0;  /* a story may take any number of steps between ours */
 var RK_CHAIN_TAIL = -0.05;  /* a little for each of our steps after the story's last match */
 var RK_CACHE = { key:null, out:{} };
@@ -132,7 +143,9 @@ function rkThreadSpec(id){ var o = null; RK_THREADS.forEach(function(t){ if(t.id
 /* our road: every real moment with a kind, in order, each with its thread */
 function rkRoad(M){
   var out = [];
-  (M.realEv || []).forEach(function(e){ if(e.bin) out.push({ kind:e.bin, tok:rkTok(e.bin, e.sub), e:e, thread:rkThreadOf(e.bin, e.facets) }); });
+  /* only moments of the size a story's beats have: world-scale and major
+     (importance 3 and 2); the smaller ones stay in our history, not the chain */
+  (M.realEv || []).forEach(function(e){ if(e.bin && (e.importance || 2) >= RK_MIN_IMPORTANCE) out.push({ kind:e.bin, tok:rkTok(e.bin, e.sub), e:e, thread:rkThreadOf(e.bin, e.facets) }); });
   return out;
 }
 
@@ -194,6 +207,20 @@ function rkSituation(qr, st){
   return tw ? s / tw : 0;
 }
 
+/* the match a story would get with its own steps in random order: the same
+   steps, no order. Seeded by the story's id so a ranking never flickers. */
+function rkSeed(str){ var h = 2166136261; for(var i = 0; i < str.length; i++){ h ^= str.charCodeAt(i); h = Math.imul(h, 16777619); } return h >>> 0; }
+function rkRand(seed){ return function(){ seed |= 0; seed = seed + 0x6D2B79F5 | 0; var t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+function rkChance(q, w, toks, fo, id){
+  if(toks.length < 2) return 0;
+  var rnd = rkRand(rkSeed(id)), sum = 0;
+  for(var k = 0; k < RK_SHUFFLES; k++){
+    var b = toks.slice();
+    for(var i = b.length - 1; i > 0; i--){ var j = Math.floor(rnd() * (i + 1)); var tmp = b[i]; b[i] = b[j]; b[j] = tmp; }
+    sum += rkFit(q, w, b, fo).norm;
+  }
+  return sum / RK_SHUFFLES;
+}
 function rkSoftmax(rows, key, out){
   var mx = -Infinity; rows.forEach(function(r){ if(r[key] > mx) mx = r[key]; });
   var z = 0; rows.forEach(function(r){ r._x = Math.exp((r[key] - mx) / RK_TEMP); z += r._x; });
@@ -227,31 +254,50 @@ function rkRank(M, upto, add){
   /* the one chain: every thread together, repeats of a step collapsed */
   var cqr = [];
   mine.forEach(function(r){ if(cqr.length && cqr[cqr.length - 1].tok === r.tok) cqr[cqr.length - 1] = r; else cqr.push(r); });
-  cqr = cqr.slice(-RK_LEN);
+  cqr = cqr.filter(function(r){ return r.e.year >= RK_SINCE; }).slice(-RK_LEN);
   var cq = cqr.map(function(r){ return r.tok; });
-  var cw = cq.map(function(tok, i){ return Math.pow(RK_CHAIN_DECAY, cq.length - 1 - i) * (RK_COMMON + (1 - RK_COMMON) * rkSpecific(M, tok)); });
+  var cw = cqr.map(function(r){
+    var age = Math.max(0, nowY - r.e.year);
+    return Math.pow(0.5, age / RK_HALFLIFE) * (RK_IMPORTANCE[r.e.importance] || RK_IMPORTANCE[2]) * (RK_COMMON + (1 - RK_COMMON) * rkSpecific(M, r.tok));
+  });
   var chain = { qr:cqr, q:cq, w:cw };
   var rows = M.strands.map(function(st){
     var toks = rkToks(st), per = {};
-    var f = rkFit(cq, cw, toks, { ourGap:0, storyGap:RK_CHAIN_STORYGAP, tail:RK_CHAIN_TAIL, noMismatch:true }), sit = rkSituation(cqr.slice(-3), st);
-    /* the threads, for the page's thread-by-thread view only */
-    threads.forEach(function(t){
-      var tf = rkFit(t.q, t.w, toks), tsit = rkSituation(t.qr, st);
-      var x = { st:st, thread:t, fit:(1 - RK_SIT) * tf.norm + RK_SIT * tsit, chain:tf.norm, sit:tsit, pairs:tf.pairs, at:tf.at };
-      per[t.id] = x; t.rows.push(x);
-    });
-    return { st:st, fit:(1 - RK_SIT) * f.norm + RK_SIT * sit, chain:f.norm, sit:sit, pairs:f.pairs, at:f.at, per:per };
+    var fo = { ourGap:0, storyGap:RK_CHAIN_STORYGAP, tail:RK_CHAIN_TAIL, noMismatch:true };
+    var f = rkFit(cq, cw, toks, fo), sit = rkSituation(cqr.slice(-3), st);
+    var chance = null, orderFit = f.norm;
+    return { st:st, fit:0, chain:f.norm, chance:chance, sit:sit, pairs:f.pairs, at:f.at, per:per, toks:toks };
+  });
+  /* the chance baseline is costly (RK_SHUFFLES alignments a story), so it is
+     measured for the RK_CHANCE_TOP strongest raw matches; the rest cannot lead,
+     and are scored as if their order were no better than chance */
+  var byRaw = rows.slice().sort(function(a, b){ return b.chain - a.chain; });
+  byRaw.forEach(function(r, i){
+    r.chance = i < RK_CHANCE_TOP ? rkChance(cq, cw, r.toks, { ourGap:0, storyGap:RK_CHAIN_STORYGAP, tail:RK_CHAIN_TAIL, noMismatch:true }, r.st.id) : r.chain;
+    r.orderFit = Math.max(0, r.chain - RK_CHANCE * r.chance);
+    r.fit = (1 - RK_SIT) * r.orderFit + RK_SIT * r.sit;
   });
   rkSoftmax(rows, "fit", "share");
   rows.sort(function(a, b){ return b.fit - a.fit || a.st.l.title.localeCompare(b.st.l.title); });
   rows.forEach(function(r, i){ r.rank = i + 1; });
-  threads.forEach(function(t){
-    rkSoftmax(t.rows, "fit", "share");
-    t.rows.sort(function(a, b){ return b.fit - a.fit || a.st.l.title.localeCompare(b.st.l.title); });
-  });
   var out = { rows:rows, threads:threads, chain:chain, road:road, mine:mine, upto:upto, add:add || null, last:mine[mine.length - 1] || null };
   RK_CACHE.out[key] = out;
   return out;
+}
+/* the threads, for the ranking page's thread-by-thread view only: fitted on
+   demand, since nothing else needs them */
+function rkThreadRows(M, R){
+  if(R._threadsDone) return R.threads;
+  R.threads.forEach(function(t){
+    t.rows = M.strands.map(function(st){
+      var tf = rkFit(t.q, t.w, rkToks(st)), tsit = rkSituation(t.qr, st);
+      return { st:st, thread:t, fit:(1 - RK_SIT) * tf.norm + RK_SIT * tsit, chain:tf.norm, sit:tsit, pairs:tf.pairs, at:tf.at };
+    });
+    rkSoftmax(t.rows, "fit", "share");
+    t.rows.sort(function(a, b){ return b.fit - a.fit || a.st.l.title.localeCompare(b.st.l.title); });
+  });
+  R._threadsDone = true;
+  return R.threads;
 }
 function rkRankOf(R, id){ var o = null; R.rows.forEach(function(r){ if(r.st.id === id) o = r; }); return o; }
 /* every matched pair of a story, over all threads, as {thread, ours, theirs, same} */
@@ -290,7 +336,7 @@ function rkWhatIf(M, R){
   }
   function after(st, at){ var nx = at >= 0 ? st.seq[at + 1] : null; if(nx) tryKind(rkTok(nx.bin, nx.e.sub), st.l.title); }
   R.rows.slice(0, 8).forEach(function(r){ after(r.st, r.at); });
-  R.threads.forEach(function(t){ t.rows.slice(0, 3).forEach(function(x){ after(x.st, x.at); }); });
+
   out.sort(function(a, b){ return (b.changes - a.changes) || (b.top.share - a.top.share); });
   return out.slice(0, 6);
 }
@@ -375,7 +421,7 @@ function pickerRankHtml(M){
     + '<button class="pk-btn" data-world="' + esc(l.id) + '">Read the whole story</button></div></div></section>';
   /* thread by thread */
   html += '<section class="pk-sec"><h3 class="pk-sh">Thread by thread</h3><div class="rk-threads">'
-    + R.threads.map(function(t){
+    + rkThreadRows(M, R).map(function(t){
       var lead = t.rows.slice(0, 3);
       return '<div class="rk-thread"><div class="rk-th"><span class="rk-thl">' + esc(t.spec.label) + '</span>'
         + (t.weight < 0.75 ? '<span class="rk-thn">quiet lately, counts ' + Math.round(t.weight * 100) + '%</span>' : '') + '</div>'
@@ -597,7 +643,7 @@ function rkAnswer(M){
            runners:R.rows.slice(1, 5), asOf:fmtNewsDate(rkToday()) };
 }
 var RK_ASK = "Which sci-fi story are we living in?";
-function rkAbout(n){ return n + " sci-fi timelines, checked against the real news. This is the closest one."; }
+function rkAbout(n){ return n + " sci-fi timelines, checked against the real news. This is the closest partial match."; }
 function rkMatchLine(A){ return A.pct + " match · #1 of " + A.n + " stories"; }
 /* "4 of our recent moments happen in Cyberpunk 2077. No other story has more than 2." */
 function rkEvidenceLine(A){
@@ -607,7 +653,11 @@ function rkEvidenceLine(A){
   var head = (since ? "Since " + since + ", " : "") + (n === 1 ? "one of our moments happens in " + t + "."
            : n + " of our moments happen in " + t + ", in the same order.");
   head = head.charAt(0).toUpperCase() + head.slice(1);
-  var tail = A.rivals ? " " + A.rivals + " other " + (A.rivals === 1 ? "story matches" : "stories match") + " as many in order."
+  /* honest about chance: the same story with its steps shuffled matches us
+     almost as well unless its order really follows ours */
+  var top = A.top, byChance = top && top.chance != null && top.chain > 0 && top.chance >= 0.75 * top.chain;
+  var tail = byChance ? " About what chance alone would give: no story clearly follows our road yet."
+           : A.rivals ? " " + A.rivals + " other " + (A.rivals === 1 ? "story matches" : "stories match") + " as many in order."
            : " No other story has more than " + A.rivalMax + " in order.";
   return head + tail;
 }
@@ -633,10 +683,10 @@ function rkAnswerHtml(M){
   return '<section class="ans">'
     + '<div class="ans-head"><h1>' + esc(RK_ASK) + '</h1><p class="ans-about">' + esc(rkAbout(A.n)) + '</p></div>'
     + '<button class="ans-hero' + (art && art.lg ? '' : ' none') + '" data-world="' + esc(l.id) + '">' + (art && art.lg ? '<img src="' + esc(art.lg) + '" alt="" decoding="async">' : '')
-    + '<span class="ans-t"><span class="ans-k">Right now, we\u2019re closest to</span><span class="ans-title">' + esc(l.title) + '</span>'
+    + '<span class="ans-t"><span class="ans-k">The closest partial match</span><span class="ans-title">' + esc(l.title) + '</span>'
     + '<span class="ans-pct">' + esc(rkMatchLine(A)) + '</span></span></button>'
     + '<div class="ans-body">' + rkEvidenceHtml(A, "ans")
-    + (p ? '<button class="ans-push" ' + (p.news ? 'data-news="' + esc(mpNewsKey(p.news)) + '"' : 'data-beat="' + esc(p.e.id) + '"') + '><span class="ans-pk">The headline that did it</span>'
+    + (p ? '<button class="ans-push" ' + (p.news ? 'data-news="' + esc(mpNewsKey(p.news)) + '"' : 'data-beat="' + esc(p.e.id) + '"') + '><span class="ans-pk">The headline that moved it most</span>'
         + '<span class="ans-ph">' + esc(p.news ? p.news.headline : p.e.title) + '</span><span class="ans-pd">' + esc(rkWhen(p.e)) + '</span></button>' : '')
     + '<div class="ans-end ' + A.end + '">Spoiler: ' + esc(A.endTxt) + '.</div>'
     + '<div class="ans-acts"><button class="pk-btn primary" data-world="' + esc(l.id) + '">Read the story</button>'
@@ -652,7 +702,7 @@ function rkCardHtml(M, kind){
   var site = "shaharaka.github.io/scifi-timeline";
   var img = art && art.lg ? '<img class="rkc-art" src="' + esc(art.lg) + '" alt="">' : '';
   var ends = '<div class="rkc-end ' + A.end + '">Spoiler: ' + esc(A.endTxt) + '.</div>';
-  var push = p ? '<div class="rkc-push"><span>The headline that did it</span><b>' + esc(p.e.title) + '</b><em>' + esc(rkWhen(p.e)) + '</em></div>' : '';
+  var push = p ? '<div class="rkc-push"><span>The headline that moved it most</span><b>' + esc(p.e.title) + '</b><em>' + esc(rkWhen(p.e)) + '</em></div>' : '';
   if(kind === "og"){
     return '<div class="rkc rkc-og">' + img + '<div class="rkc-shade"></div>'
       + '<div class="rkc-in"><div class="rkc-ask">' + esc(RK_ASK) + '</div><div class="rkc-title">' + esc(l.title) + '</div>'
@@ -667,7 +717,7 @@ function rkCardHtml(M, kind){
   }).join("");
   return '<div class="rkc rkc-post">' + img + '<div class="rkc-shade"></div>'
     + '<div class="rkc-top"><div class="rkc-ask">' + esc(RK_ASK) + '</div><div class="rkc-date">' + esc(fmtNewsDate(rkToday())) + '</div></div>'
-    + '<div class="rkc-main"><div class="rkc-lbl">Right now, we\u2019re closest to</div>'
+    + '<div class="rkc-main"><div class="rkc-lbl">The closest partial match</div>'
     + '<div class="rkc-title">' + esc(l.title) + '</div>'
     + '<div class="rkc-pct">' + esc(rkMatchLine(A)) + '</div>'
     + rkEvidenceHtml(A, "rkc") + push + ends
@@ -686,7 +736,7 @@ function rkLightPoster(A, site, img, push, ends){
   return '<div class="rkc rkl">'
     + '<div class="rkl-top"><div class="rkl-ask">' + esc(RK_ASK) + '</div><div class="rkl-date">' + esc(fmtNewsDate(rkToday())) + '</div></div>'
     + '<div class="rkl-card"><div class="rkl-art">' + img + '</div><div class="rkl-body">'
-    + '<div class="rkl-lbl">Right now, we\u2019re closest to</div>'
+    + '<div class="rkl-lbl">The closest partial match</div>'
     + '<div class="rkl-title">' + esc(l.title) + '</div>'
     + '<div class="rkl-pct">' + esc(rkMatchLine(A)) + '</div>'
     + rkEvidenceHtml(A, "rkl") + push.replace('rkc-push', 'rkl-push') + ends.replace('rkc-end', 'rkl-end')

@@ -921,7 +921,7 @@ attempt("ranking", () => {
   check(R.rows.every((r, i) => i === 0 || R.rows[i - 1].fit >= r.fit), "ranking: rows are not in order of fit");
   check(R.threads.length >= 1, "ranking: our road has no threads");
   const top = R.rows[0];
-  const shared = R.threads.reduce((a, th) => a + ((top.per[th.id] || {}).pairs || []).length, 0);
+  const shared = top.pairs.length;
   check(shared > 0, `ranking: the leader ${top.st.id} shares no step with our road`);
   const html = String(t.pickerRankHtml());
   const rows = (html.match(/class="rk-row /g) || []).length;
@@ -946,12 +946,12 @@ attempt("ranking", () => {
   const answer = String(t.answerHtml());
   check(today.indexOf('<section class="ans">') === 0, "Today does not open on the answer");
   check(answer.includes(title) && post.includes(title), "the landing answer and the poster name different stories");
-  check(/The headline that did it/.test(post) && /The headline that did it/.test(answer), "the news that pushed us is missing from the poster or the landing page");
+  check(/The headline that moved it most/.test(post) && /The headline that moved it most/.test(answer), "the news that pushed us is missing from the poster or the landing page");
   check(/checked against the real news/.test(post) && /checked against the real news/.test(answer), "the one-line explanation of the atlas is missing");
   check(/% match/.test(post) && /% match/.test(answer), "the match percentage is missing");
   /* the evidence is every step shared exactly, with how many stories have it,
      and a line on whether any rival matches as many */
-  check(/of our moments? happen/.test(post) && /(No other story has more than|other stor(y|ies) match)/.test(post), "the poster does not say how strong the match is");
+  check(/of our moments? happen/.test(post) && /(No other story has more than|other stor(y|ies) match|what chance alone would give)/.test(post), "the poster does not say how strong the match is");
   /* a chain, not a bag of steps: every pair the ranking matched comes in the
      same order for us and in the story */
   R.rows.slice(0, 20).forEach((r) => {
