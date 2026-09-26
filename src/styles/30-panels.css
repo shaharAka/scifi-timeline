@@ -622,7 +622,7 @@ body.phone #dback{display:none}
 .rk-top-hero .rk-top-k{color:inherit;opacity:.85}
 .rk-top-title{font-size:28px;font-weight:750;line-height:1.1;letter-spacing:-.02em}
 .rk-top-share{font-size:14px;line-height:1.4;opacity:.95}
-.rk-top-share b{font-family:var(--font-mono);font-size:17px}
+.rk-top-share b{font-size:18px;font-variant-numeric:tabular-nums}
 .rk-top-body{padding:14px 16px 12px}
 .rk-top-body .pk-sh{margin-top:14px}
 .rk-th{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin:12px 0 6px}
@@ -720,7 +720,7 @@ body.card-mode{overflow:hidden}
 .rkc-title{font-size:112px;line-height:.98;font-weight:800;letter-spacing:-.035em;margin-top:8px;text-shadow:0 4px 30px rgba(0,0,0,.5)}
 .rkc-og .rkc-title{font-size:80px;margin-top:18px}
 .rkc-share{font-size:34px;margin-top:18px;color:rgba(255,255,255,.9)}
-.rkc-share b{font-family:var(--font-mono);font-size:44px;color:#ffd27a;font-weight:800}
+.rkc-share b{font-family:var(--font-sans);font-variant-numeric:tabular-nums;font-size:48px;color:#ffd27a;font-weight:800}
 .rkc-og .rkc-share{font-size:26px}.rkc-og .rkc-share b{font-size:34px}
 .rkc-after{font-size:26px;margin-top:10px;color:rgba(255,255,255,.6)}
 .rkc-panel{position:absolute;left:40px;right:40px;bottom:36px;padding:26px 24px 20px;border-radius:26px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1)}

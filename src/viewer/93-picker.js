@@ -111,7 +111,7 @@ function pickerTodayHtml(M){
     html += '<section class="pk-sec"><h3 class="pk-sh">Our road lately</h3><ol class="pk-road">'
       + beats.map(function(e){
         return '<li><button data-beat="' + esc(e.id) + '"><span class="pk-yr">' + esc(String(e.year)) + '</span>'
-          + '<span class="pk-rt"><span class="pk-rtitle">' + esc(e.title) + '</span><span class="pk-kindtag">' + esc(mpLabel(e.bin)) + '</span></span></button></li>';
+          + '<span class="pk-rt"><span class="pk-rtitle">' + esc(e.title) + '</span><span class="pk-kindtag">' + esc(rkLabel(rkTok(e.bin, e.sub))) + '</span></span></button></li>';
       }).join("") + '</ol><p class="pk-small">Tap a moment to find the fictional worlds in the same situation, and what happened next there.</p></section>';
   }
   if(news.length > 1){
@@ -177,7 +177,7 @@ function pickerStoryHtml(st, M){
     html += '<li><span class="pk-yr">' + esc(fmtYear(x.e.year)) + '</span><div class="pk-step">'
       + '<div class="pk-step-t">' + esc(x.e.title) + '</div>'
       + (x.e.description ? '<div class="pk-step-d">' + esc(x.e.description) + '</div>' : '')
-      + '<button class="pk-kindtag btn" data-kind="' + esc(x.bin) + '">' + esc(mpLabel(x.bin)) + '</button>'
+      + '<button class="pk-kindtag btn" data-kind="' + esc(x.bin) + '">' + esc(rkLabel(rkTok(x.bin, x.e.sub))) + '</button>'
       + (others.length ? '<span class="pk-with">also here: ' + others.map(function(o){ return '<button class="pk-link" data-world="' + esc(o.id) + '">' + esc(o.l.title) + '</button>'; }).join(", ") + '</span>' : '')
       + '</div></li>';
   });
@@ -217,7 +217,8 @@ function pkThroughRows(M, kindId, onlyCol){
     if(onlyCol != null && h.col !== onlyCol) return;
     if(seen[h.s.id]) return; seen[h.s.id] = true;
     var x = h.s.seq[h.step], nx = h.s.seq[h.step + 1];
-    rows.push(pkRow(h.s, esc(fmtYearFull(x.e.year)) + ' · ' + esc(x.e.title),
+    var sl = x.e.sub ? rkSubLabel(x.bin, x.e.sub) : "";
+    rows.push(pkRow(h.s, esc(fmtYearFull(x.e.year)) + ' · ' + esc(x.e.title) + (sl ? ' <span class="pk-score">' + esc(sl) + '</span>' : ''),
       nx ? 'then: ' + esc(nx.e.title) : 'the story ends here: ' + esc(h.s.ending.label.toLowerCase())));
   });
   return rows.join("");
@@ -291,7 +292,7 @@ function pickerNewsListHtml(){
 function pickerBeatHtml(e, M){
   var html = '<div class="mp-kicker">A moment in our history</div><h2 class="pk-h"><span class="pk-hy">' + esc(String(e.year)) + '</span> ' + esc(e.title) + '</h2>'
     + (e.description ? '<p class="pk-lead">' + esc(e.description) + '</p>' : '')
-    + (e.bin ? '<div class="pk-is">A kind of moment: <button class="pk-kindtag btn" data-kind="' + esc(e.bin) + '">' + esc(mpLabel(e.bin)) + '</button></div>' : '');
+    + (e.bin ? '<div class="pk-is">A kind of moment: <button class="pk-kindtag btn" data-kind="' + esc(e.bin) + '">' + esc(rkLabel(rkTok(e.bin, e.sub))) + '</button></div>' : '');
   if(e.facets && typeof facetMoments === "function"){
     var moments = facetMoments(), mine = null;
     moments.forEach(function(m){ if(m.e === e) mine = m; });

@@ -248,6 +248,19 @@ so many are still open".
   have an `optimistic` ending as told (Star Trek); a `concluded` one can be
   `unknown` (Dune).
 
+## Sub-kinds: the kind, told apart
+
+A busy kind carries `subs` in `data/bins.json`, and each event in that kind
+names one in `sub`: a *voyage into the unknown* is crewed to orbit or the
+Moon, crewed to the planets, to the stars, an uncrewed probe, or an expedition
+on Earth. The map still groups by kind (a pill is a kind); the ranking matches
+on kind **and** sub-kind, so Apollo 11 and a robotic lander are a near miss
+(`RK_SUB_MISS`), not a match. The sub-kind says what the event IS, the same
+rule as the kind. `build-data.py` hard-errors on a sub that is not one of its
+kind's, and warns on an event in a split kind with no sub (it then scores as
+unknown, `RK_SUB_UNKNOWN`). A few events carry no sub because none fits; most
+of those are filed under the wrong kind and are the next thing to fix.
+
 ## Bins: the kind of moment
 
 `bin` on an event is a pointer into `data/bins.json`: the **kind of moment** it

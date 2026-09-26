@@ -106,7 +106,15 @@ function paintC(node, prop, color){
   node.setAttribute(prop, accessible(color));
   return node;
 }
+/* the darkened colour depends only on the input colour, and it is asked for
+   for every node of every branch on every frame: remember each answer */
+var ACCESSIBLE_MEMO = {};
 function accessible(hex){
+  var key = String(hex || "");
+  if(Object.prototype.hasOwnProperty.call(ACCESSIBLE_MEMO, key)) return ACCESSIBLE_MEMO[key];
+  return (ACCESSIBLE_MEMO[key] = accessibleCompute(hex));
+}
+function accessibleCompute(hex){
   var m = /^#([0-9a-f]{6})$/i.exec(String(hex || ""));
   if(!m) return hex;
   function lin(c){ c/=255; return c<=0.03928 ? c/12.92 : Math.pow((c+0.055)/1.055, 2.4); }
@@ -508,6 +516,7 @@ function publishTimeline(lay, nx){
     momentsSelectKind:momentsSelectKind, momentsSelectBeat:momentsSelectBeat, momentsSelectPill:momentsSelectPill,
     momentsSelectNews:momentsSelectNews, newsByKey:mpNewsByKey,
     pickerListHtml:function(){ return pickerListHtml(MP.model || momentsModel()); },
+    modelBuildMs:function(){ var t0 = Date.now(); momentsModelBuild(); return Date.now() - t0; },
     pickerRankHtml:function(){ return pickerRankHtml(MP.model || momentsModel()); },
     pickerTodayHtml:function(){ return pickerTodayHtml(MP.model || momentsModel()); },
     rank:function(upto, add){ return rkRank(MP.model || momentsModel(), upto, add); },

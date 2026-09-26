@@ -18,6 +18,10 @@ var CURVE_W = 76;         /* horizontal length of the fork curve */
 
 /* camera */
 var Z = 1, Z_MIN = 0.28, Z_MAX = 3.2;
+/* the fit never goes below the pitch a world's name needs (60-chart.js draws
+   titles from an 11px lane): with ninety-odd worlds the tree then runs taller
+   than the screen and scrolls, rather than squeezing into unnamed lines */
+var Z_FIT_MIN = 11.2 / LANE_GAP;
 /* The whole dataset, as one window: the opening view shows all of it. */
 var ATLAS_FULL = { from:-48000, to:52000 };
 var CAM_MS = 420;                  /* camera tween duration */   /* vertical zoom: lane pitch multiplier */

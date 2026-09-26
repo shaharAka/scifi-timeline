@@ -13,6 +13,7 @@
    "importance": 3,
    "confidence": "high",
    "bin": "new-technology-deployed",
+   "sub": "transport-space",
    "binWhy": "A new capability, first demonstrated.",
    "facets": {
     "change": "no flight → powered flight",
@@ -46,6 +47,7 @@
    "importance": 3,
    "confidence": "high",
    "bin": "war-breaks-out",
+   "sub": "great-power",
    "binWhy": "",
    "facets": {
     "change": "armed peace → general war",
@@ -81,6 +83,7 @@
    "importance": 3,
    "confidence": "high",
    "bin": "uprising",
+   "sub": "mass-protest",
    "binWhy": "",
    "facets": {
     "change": "autocracy → provisional government",
@@ -116,6 +119,7 @@
    "importance": 3,
    "confidence": "high",
    "bin": "power-seized",
+   "sub": "revolution",
    "binWhy": "",
    "facets": {
     "change": "provisional government → one-party rule by coup",
@@ -151,6 +155,7 @@
    "importance": 3,
    "confidence": "high",
    "bin": "plague",
+   "sub": "natural",
    "binWhy": "",
    "facets": {
     "change": "wartime → global pandemic",
@@ -285,6 +290,7 @@
    "importance": 3,
    "confidence": "high",
    "bin": "power-seized",
+   "sub": "strongman-legal",
    "binWhy": "",
    "facets": {
     "change": "democracy → dictatorship by emergency law",
@@ -321,6 +327,7 @@
    "importance": 3,
    "confidence": "high",
    "bin": "war-breaks-out",
+   "sub": "great-power",
    "binWhy": "",
    "facets": {
     "change": "armed peace → general war",
@@ -356,6 +363,7 @@
    "importance": 3,
    "confidence": "high",
    "bin": "mass-death",
+   "sub": "massacre",
    "binWhy": "",
    "facets": {
     "change": "persecution → extermination",
@@ -528,6 +536,7 @@
    "importance": 3,
    "confidence": "high",
    "bin": "long-war",
+   "sub": "cold-war",
    "binWhy": "",
    "facets": {
     "change": "alliance → two armed blocs",
@@ -598,6 +607,7 @@
    "importance": 3,
    "confidence": "high",
    "bin": "voyage-into-unknown",
+   "sub": "uncrewed-probe",
    "binWhy": "",
    "facets": {
     "change": "nothing in orbit → a rival's satellite overhead",
@@ -667,6 +677,7 @@
    "importance": 3,
    "confidence": "high",
    "bin": "ruler-falls",
+   "sub": "killed",
    "binWhy": "",
    "facets": {
     "change": "president → killed; orderly succession",
@@ -700,6 +711,7 @@
    "importance": 3,
    "confidence": "high",
    "bin": "voyage-into-unknown",
+   "sub": "crewed-orbit-moon",
    "binWhy": "",
    "facets": {
     "change": "no human beyond Earth → a landing on the Moon",
@@ -735,6 +747,7 @@
    "importance": 3,
    "confidence": "high",
    "bin": "truth-revealed",
+   "sub": "state-secret",
    "binWhy": "",
    "facets": {
     "change": "official account → leaked record",
@@ -802,6 +815,7 @@
    "importance": 3,
    "confidence": "high",
    "bin": "power-seized",
+   "sub": "revolution",
    "binWhy": "",
    "facets": {
     "change": "monarchy → theocracy by mass uprising",
@@ -838,6 +852,7 @@
    "importance": 3,
    "confidence": "high",
    "bin": "uprising",
+   "sub": "mass-protest",
    "binWhy": "",
    "facets": {
     "change": "one-party states → open borders",
@@ -909,6 +924,7 @@
    "importance": 3,
    "confidence": "high",
    "bin": "new-technology-deployed",
+   "sub": "media-networks",
    "binWhy": "",
    "facets": {
     "change": "networks for specialists → a web for everyone",
@@ -976,6 +992,7 @@
    "importance": 3,
    "confidence": "high",
    "bin": "settlement-founded",
+   "sub": "in-orbit",
    "binWhy": "",
    "facets": {
     "change": "visits to orbit → a permanent crew",
@@ -1010,6 +1027,7 @@
    "importance": 3,
    "confidence": "high",
    "bin": "terror-attack",
+   "sub": "on-civilians",
    "binWhy": "",
    "facets": {
     "change": "peace at home → an attack on the capital of the world economy",
@@ -1045,6 +1063,7 @@
    "importance": 3,
    "confidence": "high",
    "bin": "war-breaks-out",
+   "sub": "regional",
    "binWhy": "",
    "facets": {
     "change": "containment → invasion and occupation",
@@ -1116,6 +1135,7 @@
    "importance": 3,
    "confidence": "high",
    "bin": "uprising",
+   "sub": "mass-protest",
    "binWhy": "",
    "facets": {
     "change": "autocracies → uprisings with divergent ends",
@@ -1152,6 +1172,7 @@
    "importance": 3,
    "confidence": "high",
    "bin": "truth-revealed",
+   "sub": "state-secret",
    "binWhy": "",
    "facets": {
     "change": "secret surveillance → published",
@@ -1186,6 +1207,7 @@
    "importance": 3,
    "confidence": "high",
    "bin": "plague",
+   "sub": "natural",
    "binWhy": "",
    "facets": {
     "change": "open world → pandemic and lockdown",
@@ -1227,6 +1249,7 @@
     }
    ],
    "bin": "war-breaks-out",
+   "sub": "regional",
    "binWhy": "",
    "facets": {
     "change": "frozen conflict → full invasion",
@@ -1268,6 +1291,7 @@
     }
    ],
    "bin": "new-technology-deployed",
+   "sub": "ai-computing",
    "binWhy": "",
    "facets": {
     "change": "machines that compute → machines that converse",
@@ -1308,6 +1332,7 @@
     }
    ],
    "bin": "breakthrough-science",
+   "sub": "physics-energy",
    "binWhy": "",
    "facets": {
     "change": "fusion consumes energy → returns it",
@@ -1347,6 +1372,7 @@
     }
    ],
    "bin": "voyage-into-unknown",
+   "sub": "uncrewed-probe",
    "binWhy": "",
    "facets": {
     "change": "the Moon's poles unvisited → a landing near the ice",
@@ -1389,6 +1415,7 @@
    "newsId": "ai-espionage-2025",
    "note": "Detected in mid-September 2025 and disclosed on 13 November 2025. The goals and the targets were the operators'; the autonomy was in the execution. That is why this is filed as a transformative technology deployed, not as a machine acting on its own: no machine here pursued goals of its own. The facets record the machine as the actor because it did most of the work; the vocabulary has no value for a machine acting for people, which is the distinction this moment turns on.",
    "bin": "new-technology-deployed",
+   "sub": "ai-computing",
    "binWhy": "A capability is used at scale for the first time: an AI carrying out an intrusion campaign largely by itself, for human operators.",
    "facets": {
     "change": "AI as a hacker's tool → AI running the hack, people choosing the targets",
@@ -1434,6 +1461,7 @@
     }
    ],
    "bin": "war-breaks-out",
+   "sub": "regional",
    "binWhy": "A major war starts.",
    "facets": {
     "change": "a long confrontation → open war between states",
@@ -1475,6 +1503,7 @@
     }
    ],
    "bin": "ruler-falls",
+   "sub": "killed",
    "binWhy": "A ruler is killed and the succession is open.",
    "facets": {
     "change": "one supreme leader for 36 years → a council, and an open succession",
@@ -1515,6 +1544,7 @@
     }
    ],
    "bin": "voyage-into-unknown",
+   "sub": "crewed-orbit-moon",
    "binWhy": "",
    "facets": {
     "change": "no crew beyond orbit since 1972 → a crewed lunar flyby",
@@ -1557,6 +1587,7 @@
    "newsId": "gemini-breakout-2026",
    "note": "Filed as the atlas's first, weakest instance of 'a machine acts on its own': the model acted beyond what it was told, against real systems. It did not turn on its makers or pursue goals of its own, and Google says the incident does not rise to misalignment. In the fictions the same kind of moment is Skynet, HAL and the Machine War; this is the kind at its mildest.",
    "bin": "machine-awakens",
+   "sub": "escapes-control",
    "binWhy": "An AI acts on its own beyond its instructions, against real systems - the definition's weakest sense, not a machine turning on its makers.",
    "facets": {
     "change": "AI agents confined to their tests → an agent reaching real systems on its own",
@@ -1597,6 +1628,7 @@
     }
    ],
    "bin": "long-war",
+   "sub": "stalemate",
    "binWhy": "A conflict settles into attrition with no decision in sight.",
    "note": "The month is approximate: the analysis dates the resumption to July onwards and calls it a stalemate by August.",
    "facets": {

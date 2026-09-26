@@ -470,7 +470,9 @@ attempt("world drawer for every lineage", () => {
     chart.onpointerup({ clientX: 10, clientY: 10, pointerId: 1, target: t });
 
     const d = store["panel-world"];
-    if (!/dtitle/.test(d.innerHTML) || !d.innerHTML.includes(escapeRe(l.title))) {
+    /* the title is searched for as text, HTML-escaped as the page writes it */
+    const asHtml = String(l.title).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    if (!/dtitle/.test(d.innerHTML) || !(d.innerHTML.includes(asHtml) || d.innerHTML.includes(asHtml.replace(/'/g, "&#39;")))) {
       throw new Error("world drawer did not render for " + l.id);
     }
     /* The world pane must show the dossier. Compare on a phrase containing no
@@ -929,7 +931,8 @@ attempt("ranking", () => {
   const hist = t.rankHistory();
   check(hist.length >= 2 && hist[hist.length - 1].top.st === top.st, "ranking: the replay does not end on today's leader");
   const wi = t.rankWhatIf();
-  const bad = wi.filter((x) => !M.visits[x.kind]);
+  const ourToks = new Set(R.road.map((r) => r.tok));
+  const bad = wi.filter((x) => !ourToks.has(x.kind));
   check(!bad.length, `ranking: hypothetical next steps that never happened to us: ${bad.map((x) => x.kind).join(", ")}`);
   const today = String(t.pickerTodayHtml());
   check(today.includes('class="rk-card ') && today.includes(top.st.l.title.replace(/&/g, "&amp;").replace(/'/g, "&#39;").split(":")[0]), "Today does not feature the top candidate");

@@ -137,6 +137,156 @@
     },
     "ready-player-one": {
       "prompt": "A dense vertical slum of stacked trailers and scaffolding towering against a hazy sky, a teenager wearing a virtual-reality visor sitting on a ledge, colourful holographic light spilling from the visor into the air; muted rust and grey with vivid prismatic highlights. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "ex-machina": {
+      "prompt": "A glass-walled modernist research house hidden in a remote Norwegian-style forest valley with a waterfall, and inside behind the glass a slender humanoid robot with a transparent mesh body and a human face, seen from afar; cool greens, slate and pale grey. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "her": {
+      "prompt": "A man seen from behind at a high apartment window at dusk, a hazy pastel future Los Angeles skyline of towers, a small earpiece glowing softly; warm coral, peach and dusty rose palette, gentle and lonely. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "person-of-interest": {
+      "prompt": "An aerial view of a dense Manhattan grid at night overlaid with faint yellow surveillance brackets around tiny figures, a single lit phone box on a street corner; black, sodium yellow and cold blue. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "battlestar-galactica": {
+      "prompt": "A ragged convoy of dozens of mismatched civilian spacecraft, freighters, liners and tankers, fleeing through deep space past a gas giant, escorted by one long battered grey carrier with armoured flanks, small fighters around it, distant flashes of pursuit behind; gunmetal, rust and deep blue-black. The carrier is long and boxy like an old aircraft carrier, not wedge-shaped, not triangular. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "ghost-in-the-shell": {
+      "prompt": "A dense rain-soaked Asian harbour megacity of neon signs and elevated highways at night, a lone figure in a dark coat on a rooftop edge looking down, cables and antennas; teal, violet and wet black. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "the-road": {
+      "prompt": "A father and son pushing a shopping cart along a grey ash-covered highway through dead burnt forest, the sky low and colourless; ash grey, charcoal and one faint warm glow. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "waterworld": {
+      "prompt": "An endless ocean under a bright sky, a rusted floating atoll town of scrap and sails, a lone trimaran sailing past, the drowned top of a skyscraper just under the water; turquoise, rust and white. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "the-day-after-tomorrow": {
+      "prompt": "New York City frozen solid, a tanker ship stranded among skyscrapers, the Statue of Liberty half-buried in snow and ice, a giant storm eye above; icy white, steel blue and grey. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "soylent-green": {
+      "prompt": "A choked overpopulated New York in 2022 under a yellow-green smog haze, crowds sleeping on stairwells, garbage trucks used to scoop up rioters; sickly green, yellow and grey. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "dont-look-up": {
+      "prompt": "A bright comet tail streaking across a clear blue sky over a crowded suburban American town, people on lawns looking at their phones instead, a TV studio glow in a window; saturated blue, white and neon pink. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "years-and-years": {
+      "prompt": "A British family watching TV in a Manchester living room at night, through the window a city with police drones, a distant mushroom cloud glow and a refugee camp's lights; muted teal, amber and grey. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "minority-report": {
+      "prompt": "A gleaming vertical Washington D.C. of magnetic cars on building walls, a glass room with three pale figures floating in a milky pool, a detective at a huge transparent display; cold blue, white and silver. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "gattaca": {
+      "prompt": "A sleek retro-futurist glass aerospace headquarters in golden light, rows of identical suited workers, a rocket launching in the distance; warm amber, green-gold and deep teal. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "elysium": {
+      "prompt": "A giant luxurious ring space station with lawns and mansions in orbit above a brown, overcrowded smog-covered Los Angeles slum; lush green and white above, dusty brown below. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "district-9": {
+      "prompt": "A colossal dark alien spaceship hanging motionless over Johannesburg's skyline, below it a sprawling fenced shanty camp of corrugated huts with tall insect-like aliens; dust brown, grey and faded blue. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "i-robot": {
+      "prompt": "A 1950s-futurist city of white towers and glass walkways, gentle humanoid robots in brushed steel carrying out errands among people, a large positronic brain console in a lab window; warm cream, chrome and sky blue. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "altered-carbon": {
+      "prompt": "A vertical city of towers above clouds at night where the wealthy live in spires above a dark smoggy undercity, a small glowing disk-shaped stack held in a hand in the foreground; crimson, black and gold. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "colossus-forbin-project": {
+      "prompt": "A vast underground computer hall carved into a mountain, rows of towering tape and light panels, a single scientist in a white shirt standing small before it; cold white, steel grey and one red light. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "wargames": {
+      "prompt": "A dark 1980s military command centre with a giant wall screen of glowing vector maps and missile trajectories arcing between continents, a teenager's home computer glowing in the corner; green phosphor, black and amber. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "the-creator": {
+      "prompt": "A rice-paddy landscape in Southeast Asia at golden hour, a colossal orbital station casting a line of blue light from the sky, small robotic figures with human faces among the villagers; warm gold, green and cool blue beam. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "the-martian": {
+      "prompt": "A lone astronaut in a white suit standing beside a small inflatable habitat and a rover on a vast rust-red Martian plain, a dust storm on the horizon; rust red, ochre and pale pink sky. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "seveneves": {
+      "prompt": "The Moon broken into seven glowing fragments across a black sky above Earth, a string of small spacecraft clustered around a space station, fiery streaks falling towards the planet; black, white-hot orange and blue. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "red-mars": {
+      "prompt": "A domed settlement and a towering space elevator cable rising from a red Martian canyon, green lichen spreading on the rocks and a thin blue haze in the sky; rust, sage green and pale blue. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "moon-2009": {
+      "prompt": "A lonely lunar mining base on the Moon's far side, huge harvester machines crawling across grey regolith, a single astronaut in a worn suit looking at a distant Earth; grey, white and faint warm light. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "project-hail-mary": {
+      "prompt": "A small elegant interstellar spacecraft orbiting a dim star whose light is dulled by a strange glowing ring of microbes, a spherical alien ship made of rock-like material beside it; teal, gold and black. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "halo": {
+      "prompt": "A colossal ring-shaped world curving up into space above a green alien landscape of forests and cliffs, a lone armoured soldier in green on a ridge; emerald, silver and deep violet sky. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "avatar": {
+      "prompt": "A lush bioluminescent alien jungle at night with floating mountains and waterfalls, tall blue-skinned figures among glowing plants, an industrial mining machine at the forest edge; cyan, magenta and deep green. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "arrival": {
+      "prompt": "A vast smooth oval alien vessel hovering upright above a misty green Montana meadow, tiny military tents and figures below it, low cloud rolling across the hills; grey mist, muted green and pale light. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "independence-day": {
+      "prompt": "A gigantic saucer-shaped alien mothership hovering over a city skyline at sunset, casting a vast shadow, tiny jet fighters approaching; burning orange, steel grey and dark blue. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "war-of-the-worlds": {
+      "prompt": "Victorian England: tall tripod fighting machines with heat-ray beams striding across the Surrey countryside, a steamship and a burning village, crowds fleeing along a lane; sepia, burnt red and smoky green. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "the-last-of-us": {
+      "prompt": "An overgrown ruined American city street, a collapsed skyscraper covered in vines, a giraffe walking through, a man and a teenage girl with backpacks in the foreground; soft green, rust and golden light. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "28-days-later": {
+      "prompt": "Deserted London at dawn, an empty Westminster Bridge scattered with papers and an overturned bus, a lone man in a hospital gown walking; washed grey, pale gold and red. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "the-stand": {
+      "prompt": "A lone figure walking an empty desert highway through Nevada towards distant Las Vegas lights, abandoned cars along the road, a dark storm building; dust gold, black and blood red. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "i-am-legend": {
+      "prompt": "An abandoned 1970s Los Angeles suburb at dusk, a boarded-up house with garlic strands and mirrors, a lone man with a stake at the door as shapes gather in the dark street; purple dusk, grey and pale amber. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "oryx-and-crake": {
+      "prompt": "A lush overgrown ruin of a gleaming biotech compound on a flooded coast, strange gentle green-eyed humanoids and odd hybrid animals, a lone ragged man in a tree; jade, coral and hazy white. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "nineteen-eighty-four": {
+      "prompt": "A brutalist grey ministry pyramid rising over a rundown bombed city of terraces, a huge poster face with watching eyes on a wall, a lone man in blue overalls in the street; ash grey, washed brown and a single dull red. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "brave-new-world": {
+      "prompt": "A gleaming white utopian city of helicopters and tall hatcheries under a perfect sky, rows of identical people in pastel uniforms, a lone figure on a distant cliff; candy pink, mint and sterile white. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "hunger-games": {
+      "prompt": "A vast wild forest arena under a dome sky with a golden cornucopia structure in a clearing, tiny figures scattering, a gleaming capital city on the far horizon; deep green, gold and ember orange. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "v-for-vendetta": {
+      "prompt": "London at night under curfew, the Houses of Parliament exploding in orange light, a crowd in black cloaks and white masks watching from a bridge, fireworks overhead; black, crimson and gold. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "plot-against-america": {
+      "prompt": "A 1940s Newark street of brick houses with American flags on the porches, a silver propeller aeroplane flying low overhead, a family on a porch looking up uneasily; sepia, faded red and muted blue. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "world-war-z": {
+      "prompt": "A vast crowd surging against a great concrete wall around a Middle Eastern city at dusk, helicopters overhead, smoke on the horizon; dust ochre, grey and dark red. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "enders-game": {
+      "prompt": "A zero-gravity battle room, a huge cube with glowing star-shaped obstacles, small uniformed children floating in formation, a planet visible through the window; deep blue, white and electric cyan. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "starship-troopers": {
+      "prompt": "Armoured soldiers in powered suits dropping from the sky onto a rocky alien desert planet under two suns, giant insect silhouettes on the ridge; khaki, burnt orange and steel. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "metal-gear": {
+      "prompt": "A giant bipedal armed walking tank looming in a snowy Arctic hangar at night, a lone soldier with a headband crouching in the shadows in the foreground; cold blue, white and olive. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "the-peripheral": {
+      "prompt": "A rural Appalachian trailer at night with a young woman wearing a sleek VR headset on the porch, and above her ghostly, a sparse elegant future London of towers and empty streets; indigo, silver and warm porch light. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "stranger-things": {
+      "prompt": "A small 1980s Midwestern town street at night, kids on bikes with flashlights, red lightning and dark tendrils spreading in the clouds above, a laboratory on the hill; deep blue, red and warm streetlight. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "fringe": {
+      "prompt": "Two versions of the same Boston skyline mirrored across a glowing seam in the sky, one warm and ordinary, one with airships and a strange amber cast, a bald man in a grey suit and hat watching; teal and amber. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "dark": {
+      "prompt": "A small German forest town under rain, a cave mouth in the woods glowing faintly, a nuclear power plant's cooling towers steaming beyond the trees, a figure in a yellow raincoat; dark green, grey and yellow. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "umbrella-academy": {
+      "prompt": "An ornate old mansion in a city at dusk, seven silhouettes in school uniforms with domino masks on the rooftop, the Moon cracked and falling toward the city behind them; plum, gold and black. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "eleven-twenty-two-sixty-three": {
+      "prompt": "Dallas, November 1963, a sunlit plaza with a presidential motorcade approaching, a man in a hat hurrying toward the brick book depository, a faint shimmer of a time portal in an alley; warm autumn gold, brick red and sky blue. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
     }
   }
 }

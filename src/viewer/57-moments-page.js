@@ -79,7 +79,19 @@ function mpSpec(id){
 function mpLabel(id){ return mpSpec(id).label || id; }
 
 /* --- the model: strands, their alignment, the bundles, the kinds, the endings ---- */
+/* The model aligns every chain against every other (chainMSA), which grows
+   roughly with the square of the worlds and took seconds at ninety of them. It
+   depends only on which worlds are visible, so it is built once per set of
+   worlds and reused by every render and every click. */
+var MP_MODEL_CACHE = { key:null, model:null };
 function momentsModel(){
+  var key = visibleLineages().map(function(l){ return l.id; }).join(",");
+  if(MP_MODEL_CACHE.key === key && MP_MODEL_CACHE.model) return MP_MODEL_CACHE.model;
+  var model = momentsModelBuild();
+  MP_MODEL_CACHE.key = key; MP_MODEL_CACHE.model = model;
+  return model;
+}
+function momentsModelBuild(){
   var realEv = (REAL && REAL.events) || [];
   var realKinds = [], visits = {};
   realEv.forEach(function(e){

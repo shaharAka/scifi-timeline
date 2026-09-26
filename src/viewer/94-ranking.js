@@ -68,12 +68,39 @@ function rkKindThread(bin){
   }
   return RK_KIND_THREAD[bin] || "power";
 }
+/* A step is a token: its kind, and its sub-kind when it has one ("war-breaks-out|regional").
+   The same kind with the same sub-kind is a full match; the same kind with a
+   different sub-kind is a near miss (a crewed Moon flight against a robotic
+   lander); the same kind where either side names no sub-kind scores between
+   the two, and different kinds score by facet likeness as before. */
+var RK_SUB_MISS = 0.35;
+var RK_SUB_UNKNOWN = 0.7;
+function rkTok(bin, sub){ return sub ? bin + "|" + sub : bin; }
+function rkBin(tok){ return String(tok).split("|")[0]; }
+function rkScore(a, b){
+  if(a === b) return 1;
+  var A = String(a).split("|"), B = String(b).split("|");
+  if(A[0] !== B[0]) return chainScore(A[0], B[0]);
+  return (A[1] && B[1]) ? RK_SUB_MISS : RK_SUB_UNKNOWN;
+}
+/* a story's chain as tokens, cached on the strand */
+function rkToks(st){ return st._toks || (st._toks = st.seq.map(function(x){ return rkTok(x.bin, x.e.sub); })); }
+/* "A voyage into the unknown: crewed, to the Moon" */
+function rkSubLabel(bin, sub){
+  var sp = mpSpec(bin), o = null;
+  (sp.subs || []).forEach(function(x){ if(x.id === sub) o = x; });
+  return o ? o.label : "";
+}
+function rkLabel(tok){
+  var bin = rkBin(tok), sub = String(tok).split("|")[1], sl = sub ? rkSubLabel(bin, sub) : "";
+  return mpLabel(bin) + (sl ? ": " + sl : "");
+}
 function rkThreadSpec(id){ var o = null; RK_THREADS.forEach(function(t){ if(t.id === id) o = t; }); return o; }
 
 /* our road: every real moment with a kind, in order, each with its thread */
 function rkRoad(M){
   var out = [];
-  (M.realEv || []).forEach(function(e){ if(e.bin) out.push({ kind:e.bin, e:e, thread:rkThreadOf(e.bin, e.facets) }); });
+  (M.realEv || []).forEach(function(e){ if(e.bin) out.push({ kind:e.bin, tok:rkTok(e.bin, e.sub), e:e, thread:rkThreadOf(e.bin, e.facets) }); });
   return out;
 }
 
@@ -82,7 +109,7 @@ function rkFit(q, w, b){
   for(i = 0; i <= n; i++){ H.push(new Array(m + 1)); for(j = 0; j <= m; j++) H[i][j] = 0; }
   for(i = 1; i <= n; i++){
     for(j = 1; j <= m; j++){
-      var d = H[i - 1][j - 1] + w[i - 1] * chainScore(q[i - 1], b[j - 1]);
+      var d = H[i - 1][j - 1] + w[i - 1] * rkScore(q[i - 1], b[j - 1]);
       var u = H[i - 1][j] + w[i - 1] * CH_GAP;       /* one of our steps the story lacks */
       var l = H[i][j - 1] + w[i - 1] * CH_GAP * 0.5; /* a step of the story's we skipped: cheaper, stories compress and stretch */
       H[i][j] = Math.max(0, d, u, l);
@@ -95,7 +122,7 @@ function rkFit(q, w, b){
   for(i = n; i >= 1; i--) tail[n - i + 1] = tail[n - i] + w[i - 1] * RK_TAIL;
   for(i = 1; i <= n; i++){
     for(j = 1; j <= m; j++){
-      var sc = chainScore(q[i - 1], b[j - 1]);
+      var sc = rkScore(q[i - 1], b[j - 1]);
       if(sc <= 0) continue;
       var v = H[i - 1][j - 1] + w[i - 1] * sc + tail[n - i];
       if(v > best){ best = v; bi = i; bj = j; }
@@ -106,7 +133,7 @@ function rkFit(q, w, b){
   if(bi){ pairs.push([i - 1, j - 1]); i--; j--; }
   while(i > 0 && j > 0 && H[i][j] > 0){
     var here = H[i][j];
-    if(Math.abs(here - (H[i - 1][j - 1] + w[i - 1] * chainScore(q[i - 1], b[j - 1]))) < 1e-9){ pairs.push([i - 1, j - 1]); i--; j--; }
+    if(Math.abs(here - (H[i - 1][j - 1] + w[i - 1] * rkScore(q[i - 1], b[j - 1]))) < 1e-9){ pairs.push([i - 1, j - 1]); i--; j--; }
     else if(Math.abs(here - (H[i - 1][j] + w[i - 1] * CH_GAP)) < 1e-9) i--;
     else j--;
   }
@@ -144,17 +171,17 @@ function rkRank(M, upto, add){
   var key = upto + "|" + (add || "");
   if(RK_CACHE.out[key]) return RK_CACHE.out[key];
   var mine = road.slice(0, upto), last = mine[mine.length - 1];
-  if(add) mine = mine.concat([{ kind:add, thread:rkKindThread(add), e:{ title:"If the next headline is: " + mpLabel(add).toLowerCase(), year:last ? last.e.year : NOW, hypothetical:true } }]);
+  if(add) mine = mine.concat([{ kind:rkBin(add), tok:add, thread:rkKindThread(rkBin(add)), e:{ title:"If the next headline is: " + rkLabel(add).toLowerCase(), year:last ? last.e.year : NOW, hypothetical:true } }]);
   var nowY = mine.length ? mine[mine.length - 1].e.year : NOW;
   /* each thread's recent steps, repeats of one kind collapsed into the latest */
   var threads = RK_THREADS.map(function(t){
     var qr = [];
     mine.forEach(function(r){
       if(r.thread !== t.id) return;
-      if(qr.length && qr[qr.length - 1].kind === r.kind) qr[qr.length - 1] = r; else qr.push(r);
+      if(qr.length && qr[qr.length - 1].tok === r.tok) qr[qr.length - 1] = r; else qr.push(r);
     });
     qr = qr.slice(-RK_TLEN);
-    var q = qr.map(function(r){ return r.kind; });
+    var q = qr.map(function(r){ return r.tok; });
     var w = q.map(function(_, i){ return Math.pow(RK_DECAY, q.length - 1 - i); });
     var lastY = qr.length ? qr[qr.length - 1].e.year : -Infinity;
     return { id:t.id, spec:t, qr:qr, q:q, w:w, weight:qr.length ? Math.pow(0.5, Math.max(0, nowY - lastY) / RK_HALF) : 0, rows:[] };
@@ -163,7 +190,7 @@ function rkRank(M, upto, add){
   var rows = M.strands.map(function(st){
     var per = {}, fit = 0, at = -1;
     threads.forEach(function(t){
-      var f = rkFit(t.q, t.w, st.kinds), sit = rkSituation(t.qr, st);
+      var f = rkFit(t.q, t.w, rkToks(st)), sit = rkSituation(t.qr, st);
       var x = { st:st, thread:t, fit:(1 - RK_SIT) * f.norm + RK_SIT * sit, chain:f.norm, sit:sit, pairs:f.pairs, at:f.at };
       per[t.id] = x; t.rows.push(x);
       fit += t.weight * x.fit;
@@ -188,7 +215,7 @@ function rkPairs(R, r){
   var out = [];
   R.threads.forEach(function(t){
     var x = r.per[t.id]; if(!x) return;
-    x.pairs.forEach(function(p){ out.push({ thread:t, ours:t.qr[p[0]], theirs:r.st.seq[p[1]], same:t.q[p[0]] === r.st.kinds[p[1]] }); });
+    x.pairs.forEach(function(p){ out.push({ thread:t, ours:t.qr[p[0]], theirs:r.st.seq[p[1]], same:t.q[p[0]] === rkToks(r.st)[p[1]], kin:rkBin(t.q[p[0]]) === r.st.kinds[p[1]] }); });
   });
   return out;
 }
@@ -206,22 +233,28 @@ function rkHistory(M){
 /* what the next step would do: the kinds the leading stories go on to, each
    tried as our next step */
 function rkWhatIf(M, R){
-  var tried = {}, out = [];
+  /* our own steps as tokens: a kind counts as "happened to us" only in the
+     sub-kind it happened in (we have had regional wars, not machine coups) */
+  var tried = {}, out = [], ours = {};
+  R.road.forEach(function(r){ ours[r.tok] = true; if(r.tok === r.kind) ours[r.kind] = true; });
   function tryKind(k, why){
     /* only kinds of moment that have happened to us: a real headline could
        be one, a time traveller arriving could not */
-    if(!k || tried[k] || !M.visits[k]) return;
+    if(!k || tried[k] || !ours[k]) return;
     tried[k] = true;
     var R2 = rkRank(M, R.upto, k), top = R2.rows[0];
     out.push({ kind:k, why:why, top:top, R:R2, changes:top.st !== R.rows[0].st });
   }
-  function after(st, at){ var nx = at >= 0 ? st.seq[at + 1] : null; if(nx) tryKind(nx.bin, st.l.title); }
+  function after(st, at){ var nx = at >= 0 ? st.seq[at + 1] : null; if(nx) tryKind(rkTok(nx.bin, nx.e.sub), st.l.title); }
   R.rows.slice(0, 8).forEach(function(r){ after(r.st, r.at); });
   R.threads.forEach(function(t){ t.rows.slice(0, 3).forEach(function(x){ after(x.st, x.at); }); });
   out.sort(function(a, b){ return (b.changes - a.changes) || (b.top.share - a.top.share); });
   return out.slice(0, 6);
 }
 
+/* how many times an average story's share: among ninety-odd stories a lead of
+   7% is seven times the rest, and "7%" alone reads as nothing */
+function rkTimes(R, r){ var x = r.share * R.rows.length; return x >= 1.5 ? (x >= 10 ? Math.round(x) : Math.round(x * 10) / 10) + "\u00d7 an average story\u2019s share" : ""; }
 function rkPct(x){ var p = x * 100; return (p >= 10 ? Math.round(p) : p >= 1 ? p.toFixed(1).replace(/\.0$/, "") : p > 0 ? "<1" : "0") + "%"; }
 var RK_MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 function rkWhen(e){
@@ -247,9 +280,9 @@ function rkWhyHtml(R, r){
     var pos = t.rows.indexOf(x) + 1;
     html += '<div class="rk-th"><span class="rk-thl">' + esc(t.spec.label) + '</span><span class="rk-thn">#' + pos + ' of ' + t.rows.length + ' on this thread</span></div><ol class="rk-pairs">';
     x.pairs.forEach(function(p){
-      var ours = t.qr[p[0]], theirs = r.st.seq[p[1]], same = ours.kind === theirs.bin;
+      var ours = t.qr[p[0]], theirs = r.st.seq[p[1]], ttok = rkToks(r.st)[p[1]], same = ours.tok === ttok;
       html += '<li class="' + (same ? 'same' : 'near') + '"><div class="rk-us"><span class="pk-yr">' + esc(rkWhen(ours.e)) + '</span><span>' + esc(ours.e.title) + '</span></div>'
-        + '<div class="rk-k"><button class="pk-kindtag btn" data-kind="' + esc(theirs.bin) + '">' + esc(mpLabel(ours.kind)) + (same ? '' : ' ≈ ' + esc(mpLabel(theirs.bin))) + '</button></div>'
+        + '<div class="rk-k"><button class="pk-kindtag btn" data-kind="' + esc(theirs.bin) + '">' + esc(rkLabel(ours.tok)) + (same ? '' : ' ≈ ' + esc(ours.kind === theirs.bin ? (rkSubLabel(theirs.bin, theirs.e.sub) || mpLabel(theirs.bin)) : rkLabel(ttok))) + '</button></div>'
         + '<div class="rk-them"><span class="pk-yr">' + esc(fmtYearFull(theirs.e.year)) + '</span><span>' + esc(theirs.e.title) + '</span></div></li>';
     });
     html += '</ol>';
@@ -261,7 +294,7 @@ function rkNextHtml(r, n){
   var html = '<ol class="pk-steps rk-next">';
   rest.forEach(function(x){
     html += '<li><span class="pk-yr">' + esc(fmtYear(x.e.year)) + '</span><div class="pk-step"><div class="pk-step-t">' + esc(x.e.title) + '</div>'
-      + '<button class="pk-kindtag btn" data-kind="' + esc(x.bin) + '">' + esc(mpLabel(x.bin)) + '</button></div></li>';
+      + '<button class="pk-kindtag btn" data-kind="' + esc(x.bin) + '">' + esc(rkLabel(rkTok(x.bin, x.e.sub))) + '</button></div></li>';
   });
   var l = r.st.l;
   html += '<li class="pk-endstep ' + r.st.ending.valence + '"><span class="pk-yr"></span><div class="pk-step"><div class="pk-step-t">' + esc(r.st.ending.label) + '</div>'
@@ -296,7 +329,7 @@ function pickerRankHtml(M){
     + '<button class="rk-top-hero' + (art && art.lg ? '' : ' none') + '" data-world="' + esc(l.id) + '">' + (art && art.lg ? '<img src="' + esc(art.lg) + '" alt="" decoding="async">' : '')
     + '<span class="rk-top-t"><span class="rk-top-k">Top candidate' + (wasTop ? ' · new, taking over from ' + esc(wasTop.st.l.title) : since && since !== hist[hist.length - 1] ? ' since ' + esc(rkWhen(since.step.e)) : '') + '</span>'
     + '<span class="rk-top-title">' + esc(l.title) + '</span>'
-    + '<span class="rk-top-share"><b>' + rkPct(top.share) + '</b> of the fit · ' + esc(rkLine(R, top)) + '</span></span></button>'
+    + '<span class="rk-top-share"><b>' + rkPct(top.share) + '</b> of the fit' + (rkTimes(R, top) ? ', ' + esc(rkTimes(R, top)) : '') + ' · ' + esc(rkLine(R, top)) + '</span></span></button>'
     + (mpIsPhone() ? rkRaceHtml(M, false) : '')
     + '<div class="rk-top-body"><h3 class="pk-sh">Why it fits: our road beside its road</h3>' + rkWhyHtml(R, top)
     + '<h3 class="pk-sh">If we are in ' + esc(l.title) + ', what comes next</h3>' + rkNextHtml(top, 3)
@@ -308,7 +341,7 @@ function pickerRankHtml(M){
       var lead = t.rows.slice(0, 3);
       return '<div class="rk-thread"><div class="rk-th"><span class="rk-thl">' + esc(t.spec.label) + '</span>'
         + (t.weight < 0.75 ? '<span class="rk-thn">quiet lately, counts ' + Math.round(t.weight * 100) + '%</span>' : '') + '</div>'
-        + '<p class="rk-road">' + t.qr.map(function(r){ return '<span>' + esc(fmtYearFull(r.e.year)) + ' ' + esc(mpLabel(r.kind).toLowerCase()) + '</span>'; }).join(' <i>→</i> ') + '</p>'
+        + '<p class="rk-road">' + t.qr.map(function(r){ return '<span>' + esc(fmtYearFull(r.e.year)) + ' ' + esc(rkLabel(r.tok).toLowerCase()) + '</span>'; }).join(' <i>→</i> ') + '</p>'
         + lead.map(function(x, i){
           return '<button class="rk-trow' + (i ? '' : ' lead') + '" data-world="' + esc(x.st.id) + '"><span class="rk-n">' + (i + 1) + '</span><span class="pk-rtitle">' + esc(x.st.l.title) + '</span><em>' + rkPct(x.share) + '</em>' + pkBadge(x.st) + '</button>';
         }).join("") + '</div>';
@@ -324,7 +357,7 @@ function pickerRankHtml(M){
         + '<span class="rk-bar"><i style="width:' + Math.max(1.5, 100 * r.share / mxs).toFixed(1) + '%"></i><em>' + rkPct(r.share) + '</em></span>'
         + '<span class="pk-rline sub">' + (any ? (nx ? 'next there: ' + esc(nx.e.title) : 'and there it ends: ' + esc(r.st.ending.label.toLowerCase())) : 'walks a different road') + '</span></span></button></li>';
     }).join("") + '</ol>'
-    + '<p class="pk-small rk-honest">A share of the fit, not a forecast: it says whose road looks most like ours so far, not what will happen next. The same kind of moment counts fully and a similar one partly; newer steps count more, and a thread that has gone quiet counts less. A quarter of each fit is how alike the situations were: who acted, how, and which way power moved.</p></section>';
+    + '<p class="pk-small rk-honest">A share of the fit, not a forecast: it says whose road looks most like ours so far, not what will happen next. The same kind of moment counts fully, the same kind done differently (a crewed Moon flight against a robotic lander) about a third, and a similar kind partly; newer steps count more, and a thread that has gone quiet counts less. A quarter of each fit is how alike the situations were: who acted, how, and which way power moved.</p></section>';
   html += '</div><aside class="pk-aside">';
   if(!mpIsPhone()) html += rkRaceHtml(M, true);
   /* the leader over time */
@@ -340,7 +373,7 @@ function pickerRankHtml(M){
   if(wi.length){
     html += '<section class="pk-sec"><h3 class="pk-sh">If the next headline is…</h3><div class="rk-if">'
       + wi.map(function(x){
-        return '<button class="rk-ifrow" data-world="' + esc(x.top.st.id) + '"><span class="rk-ifk">' + esc(mpLabel(x.kind)) + '</span>'
+        return '<button class="rk-ifrow" data-world="' + esc(x.top.st.id) + '"><span class="rk-ifk">' + esc(rkLabel(x.kind)) + '</span>'
           + '<span class="rk-ifv">' + (x.changes ? 'the lead passes to <b>' + esc(x.top.st.l.title) + '</b>' : '<b>' + esc(x.top.st.l.title) + '</b> stays ahead') + ' <em>' + rkPct(x.top.share) + '</em></span></button>';
       }).join("") + '</div><p class="pk-small">Each is a step one of the leading stories takes next, and has happened to us before, tried as our next step.</p></section>';
   }
@@ -470,8 +503,9 @@ function rkCardHtml(M, kind){
     + '<div class="rkc-k rkc-k-top">Which science-fiction story are we in? · ' + esc(fmtNewsDate(rkToday())) + '</div>'
     + '<div class="rkc-in"><div class="rkc-lbl">Top candidate of ' + R.rows.length + ' stories' + (was ? ', taking over from ' + esc(was.l.title) : '') + '</div>'
     + '<div class="rkc-title">' + esc(l.title) + '</div>'
-    + '<div class="rkc-share"><b>' + rkPct(top.share) + '</b> of the fit · ' + esc(endTxt.toLowerCase()) + '</div>'
-    + '<div class="rkc-after">after: ' + esc(R.last.e.title) + '</div></div>'
+    + '<div class="rkc-share"><b>' + rkPct(top.share) + '</b> of the fit' + (rkTimes(R, top) ? ', ' + esc(rkTimes(R, top)) : '') + '</div>'
+    + '<div class="rkc-after">' + esc(endTxt) + ' · after: ' + esc(R.last.e.title) + '</div>'
+    + '</div>'
     + '<div class="rkc-panel"><div class="rkc-ph">The lead after each of our last ' + rkHistory(M).length + ' moments</div>'
     + rkRaceSvg(M, { w:1000, h:320, font:24, labW:340, dark:true })
     + rkRaceLegend(M, {})

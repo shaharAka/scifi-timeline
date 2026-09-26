@@ -127,14 +127,32 @@ function chainMSA(chains){
      a match (or a near-miss by facets) is rewarded. That keeps the map to
      about as many columns as the longest chain; in chainAlign, where the
      question is likeness, a mismatch costs -1 as it should. */
-  function colScore(kind, column){
-    var s = 0; column.forEach(function(m){ s += Math.max(CH_MISS, chainScore(kind, m.kind)); });
-    return s / column.length;
+  /* colScore(kind, column) is the mean of max(CH_MISS, chainScore) over the
+     column's members. With ninety-odd chains a column holds dozens of members
+     and every chain is aligned to the profile after every merge, so it is
+     computed once per profile: a column's score for every kind, from how many
+     of each kind it holds. Rounded to 1e-9 so that ties in this greedy
+     alignment break the same way whatever order the sum was taken in. */
+  var kindIx = {}, kindList = [];
+  todo.forEach(function(c){ c.kinds.forEach(function(k){ if(kindIx[k] == null){ kindIx[k] = kindList.length; kindList.push(k); } }); });
+  var K = kindList.length, pair = [];
+  for(var a = 0; a < K; a++){ pair.push(new Array(K)); for(var b = 0; b < K; b++) pair[a][b] = Math.max(CH_MISS, chainScore(kindList[a], kindList[b])); }
+  function profileTable(profile){
+    if(profile._tab) return profile._tab;
+    var tab = profile.map(function(column){
+      var hist = {}, n = column.length, row = new Array(K);
+      column.forEach(function(m){ var h = kindIx[m.kind]; hist[h] = (hist[h] || 0) + 1; });
+      var hs = Object.keys(hist);
+      for(var a = 0; a < K; a++){ var sum = 0; hs.forEach(function(h){ sum += hist[h] * pair[a][h]; }); row[a] = Math.round(sum / n * 1e9) / 1e9; }
+      return row;
+    });
+    profile._tab = tab;
+    return tab;
   }
   /* align one chain to the profile. Returns {score, ops} where ops walk the
      profile: {type:"match", step, col} | {type:"ins", step} (new column) | {type:"skip", col} */
   function alignToProfile(chain, profile){
-    var n = chain.kinds.length, m = profile.length, i, j;
+    var n = chain.kinds.length, m = profile.length, i, j, tab = profileTable(profile);
     var H = [], T = [];
     for(i = 0; i <= n; i++){ H.push(new Array(m + 1)); T.push(new Array(m + 1)); }
     for(i = 0; i <= n; i++) for(j = 0; j <= m; j++){ H[i][j] = 0; T[i][j] = 0; }
@@ -143,7 +161,7 @@ function chainMSA(chains){
     for(i = 1; i <= n; i++){ H[i][0] = i * CH_INS; T[i][0] = 2; }
     for(i = 1; i <= n; i++){
       for(j = 1; j <= m; j++){
-        var d = H[i - 1][j - 1] + colScore(chain.kinds[i - 1], profile[j - 1]);
+        var d = H[i - 1][j - 1] + tab[j - 1][kindIx[chain.kinds[i - 1]]];
         var u = H[i - 1][j] + CH_INS;         /* chain step with no column: insertion */
         var l = H[i][j - 1] + CH_SKIP;        /* column the chain skips */
         var v = d, t = 1;

@@ -115,7 +115,7 @@ function fitEverything(){
   view.c = (ATLAS_FULL.from + ATLAS_FULL.to) / 2;
   view.hs = clampSpan((ATLAS_FULL.to - ATLAS_FULL.from) / 2);
   var lay0 = layout(visibleLineages());
-  Z = clamp((Hv - 12) / Math.max(1, lay0.height1), Z_MIN, 1.15);
+  Z = clamp((Hv - 12) / Math.max(1, lay0.height1), Z_FIT_MIN, 1.15);
   panY = 0;
   renderChart();
   var host = document.getElementById("eras");
@@ -157,11 +157,11 @@ function fitAll(){
      the header rows), so one division overshoots and the last lanes fall off the
      bottom. Refine a few times until the whole tree fits. */
   var list = visibleLineages(), lay = layout(list);
-  Z = clamp((Hv - 12) / Math.max(1, lay.height1), Z_MIN, 1.15);
+  Z = clamp((Hv - 12) / Math.max(1, lay.height1), Z_FIT_MIN, 1.15);
   for(var it = 0; it < 4; it++){
     lay = layout(list);
-    if(lay.height <= Hv - 8 || Z <= Z_MIN) break;
-    Z = clamp(Z * (Hv - 12) / lay.height, Z_MIN, 1.15);
+    if(lay.height <= Hv - 8 || Z <= Z_FIT_MIN) break;
+    Z = clamp(Z * (Hv - 12) / lay.height, Z_FIT_MIN, 1.15);
   }
   panY = 0;
   if(axisMode === "years"){

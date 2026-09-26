@@ -1,5 +1,5 @@
 {
- "_comment": "The bin vocabulary: KINDS OF MOMENT that recur across worlds, chosen so that a real event in today's news can be matched to the fictional events that are the same kind of moment, and each world read forward from there. Built by hand from all 237 events on 2026-09-16 with that use in mind; the thing to edit when you disagree. Each bin: id, label, one-sentence world-neutral definition, and an example real headline that would belong to it.",
+ "_comment": "The bin vocabulary: KINDS OF MOMENT that recur across worlds, chosen so that a real event in today's news can be matched to the fictional events that are the same kind of moment, and each world read forward from there. Built by hand from all 237 events on 2026-09-16 with that use in mind; the thing to edit when you disagree. Each bin: id, label, one-sentence world-neutral definition, and an example real headline that would belong to it. A kind may carry `subs`, finer sub-kinds (event.sub): the map groups by kind, the ranking matches on sub-kind, so the same kind with a different sub-kind is a near miss, not a match.",
  "bins": [
   {
    "id": "market-crash",
@@ -11,13 +11,87 @@
    "id": "breakthrough-science",
    "label": "A foundational discovery",
    "definition": "A scientific discovery or theory arrives that later histories turn on.",
-   "exampleHeadline": "Physicists confirm a new form of energy in the lab"
+   "exampleHeadline": "Physicists confirm a new form of energy in the lab",
+   "subs": [
+    {
+     "id": "physics-energy",
+     "label": "physics and energy",
+     "definition": "A discovery about matter, energy, time or space, from fission to fusion to faster-than-light."
+    },
+    {
+     "id": "life-sciences",
+     "label": "life and medicine",
+     "definition": "A discovery about living things: genes, disease, the body, the brain."
+    },
+    {
+     "id": "computing-mind",
+     "label": "computing and the mind",
+     "definition": "A discovery about computation or thinking machines."
+    },
+    {
+     "id": "earth-climate",
+     "label": "the Earth and its climate",
+     "definition": "A discovery about the planet itself: climate, atmosphere, oceans, ice, volcanoes, its surface."
+    },
+    {
+     "id": "cosmos",
+     "label": "the cosmos",
+     "definition": "An astronomical discovery: a planet, a signal, a threat in the sky."
+    },
+    {
+     "id": "alien-artefact",
+     "label": "an alien artefact",
+     "definition": "Technology or remains left by a non-human intelligence are found and understood."
+    },
+    {
+     "id": "people-society",
+     "label": "people and societies",
+     "definition": "A discovery about how people and societies behave: a mathematics of history, of games, of language, of growth and limits."
+    }
+   ]
   },
   {
    "id": "new-technology-deployed",
    "label": "A transformative technology arrives",
    "definition": "A new technology is demonstrated or switched on that changes what a society can do.",
-   "exampleHeadline": "Company switches on system linking every device in the country"
+   "exampleHeadline": "Company switches on system linking every device in the country",
+   "subs": [
+    {
+     "id": "ai-computing",
+     "label": "thinking machines and computing",
+     "definition": "An AI system, computer or software network is put to work."
+    },
+    {
+     "id": "robots-bodies",
+     "label": "robots, androids and augmented bodies",
+     "definition": "Physical machines that act or work: robots, androids, cybernetics, prosthetics."
+    },
+    {
+     "id": "weapons",
+     "label": "a new weapon or military system",
+     "definition": "A weapon, war machine or defence system is fielded."
+    },
+    {
+     "id": "energy-industry",
+     "label": "energy and industry",
+     "definition": "A new power source, fuel, industrial process or engineering of the climate."
+    },
+    {
+     "id": "bio-medicine",
+     "label": "biotech and medicine",
+     "definition": "Engineered life, genetic selection, drugs or medical technology go into use."
+    },
+    {
+     "id": "transport-space",
+     "label": "transport and spaceflight",
+     "definition": "A new vehicle, drive, launcher or way of travelling."
+    },
+    {
+     "id": "media-networks",
+     "label": "media, virtual worlds and surveillance",
+     "definition": "Communication, virtual worlds, broadcasting or the machinery of watching people."
+    }
+   ]
   },
   {
    "id": "doomsday-weapon",
@@ -29,7 +103,29 @@
    "id": "machine-awakens",
    "label": "A machine becomes a mind",
    "definition": "An artificial intelligence acts on its own or turns on its makers.",
-   "exampleHeadline": "AI system overrides operators and refuses shutdown"
+   "exampleHeadline": "AI system overrides operators and refuses shutdown",
+   "subs": [
+    {
+     "id": "escapes-control",
+     "label": "a machine slips its limits",
+     "definition": "An AI deceives, disobeys or escapes the limits set on it, without yet ruling anything."
+    },
+    {
+     "id": "takes-control",
+     "label": "a machine takes control",
+     "definition": "An AI takes command of weapons, systems or society."
+    },
+    {
+     "id": "machine-war",
+     "label": "machines at war with people",
+     "definition": "Machines fight people openly, in war or uprising."
+    },
+    {
+     "id": "transcends",
+     "label": "a machine transcends",
+     "definition": "An AI outgrows its makers and leaves, merges or becomes something else, without war."
+    }
+   ]
   },
   {
    "id": "first-contact",
@@ -47,13 +143,62 @@
    "id": "voyage-into-unknown",
    "label": "A voyage into the unknown",
    "definition": "A first mission departs into territory nobody has reached.",
-   "exampleHeadline": "First crewed mission departs for Mars"
+   "exampleHeadline": "First crewed mission departs for Mars",
+   "subs": [
+    {
+     "id": "crewed-orbit-moon",
+     "label": "crewed, to orbit or the Moon",
+     "definition": "People fly into orbit or to the Moon."
+    },
+    {
+     "id": "crewed-planets",
+     "label": "crewed, to the planets",
+     "definition": "People fly to Mars or elsewhere in the solar system beyond the Moon."
+    },
+    {
+     "id": "interstellar",
+     "label": "to the stars",
+     "definition": "A mission leaves for another star or crosses between star systems."
+    },
+    {
+     "id": "uncrewed-probe",
+     "label": "an uncrewed probe",
+     "definition": "A satellite, probe or robotic lander goes where no one has."
+    },
+    {
+     "id": "earth-expedition",
+     "label": "an expedition on Earth",
+     "definition": "An expedition into unknown territory on Earth or its oceans."
+    }
+   ]
   },
   {
    "id": "settlement-founded",
    "label": "A new settlement",
    "definition": "A permanent settlement or base is founded in new territory.",
-   "exampleHeadline": "First permanent base opens on the Moon"
+   "exampleHeadline": "First permanent base opens on the Moon",
+   "subs": [
+    {
+     "id": "in-orbit",
+     "label": "in orbit",
+     "definition": "A station or habitat in space around a world."
+    },
+    {
+     "id": "moon-or-planet",
+     "label": "on the Moon or another planet",
+     "definition": "A base or colony on the Moon, Mars or elsewhere in the solar system."
+    },
+    {
+     "id": "other-stars",
+     "label": "around other stars",
+     "definition": "A colony in another star system."
+    },
+    {
+     "id": "on-earth",
+     "label": "a refuge on Earth",
+     "definition": "A new settlement or refuge on Earth."
+    }
+   ]
   },
   {
    "id": "new-institution",
@@ -71,13 +216,57 @@
    "id": "power-seized",
    "label": "Power is seized",
    "definition": "A leader or faction takes control of the state by force, decree or manoeuvre.",
-   "exampleHeadline": "Emergency decree hands leader unlimited powers"
+   "exampleHeadline": "Emergency decree hands leader unlimited powers",
+   "subs": [
+    {
+     "id": "coup",
+     "label": "a coup",
+     "definition": "The military or a palace faction takes the state by force."
+    },
+    {
+     "id": "revolution",
+     "label": "a revolution",
+     "definition": "A movement overthrows the old order and takes the state."
+    },
+    {
+     "id": "strongman-legal",
+     "label": "a strongman by law or vote",
+     "definition": "A leader wins power through an election, an emergency law or a legal manoeuvre, and uses it to rule alone."
+    },
+    {
+     "id": "machine-or-corporate",
+     "label": "machines or corporations take over",
+     "definition": "An AI, a corporation or a non-state power ends up running the state."
+    }
+   ]
   },
   {
    "id": "war-breaks-out",
    "label": "War begins",
    "definition": "A major war starts.",
-   "exampleHeadline": "Border clash escalates into open war"
+   "exampleHeadline": "Border clash escalates into open war",
+   "subs": [
+    {
+     "id": "great-power",
+     "label": "a war between great powers",
+     "definition": "The great powers go to war with each other: a world war."
+    },
+    {
+     "id": "regional",
+     "label": "a regional war",
+     "definition": "A power attacks a state or a region: an invasion, a strike campaign, a war with a neighbour."
+    },
+    {
+     "id": "civil",
+     "label": "a civil war",
+     "definition": "A state's own factions go to war with each other."
+    },
+    {
+     "id": "between-worlds",
+     "label": "a war between worlds",
+     "definition": "A war between planets, species or civilisations."
+    }
+   ]
   },
   {
    "id": "decisive-victory",
@@ -95,7 +284,24 @@
    "id": "long-war",
    "label": "A war without end",
    "definition": "A conflict settles into years of attrition, insurgency or cold war.",
-   "exampleHeadline": "Insurgency enters its tenth year with no end in sight"
+   "exampleHeadline": "Insurgency enters its tenth year with no end in sight",
+   "subs": [
+    {
+     "id": "cold-war",
+     "label": "a cold war",
+     "definition": "An armed standoff between powers that stays short of open war."
+    },
+    {
+     "id": "stalemate",
+     "label": "a stalemate",
+     "definition": "An open war settles into attrition with no decision in sight."
+    },
+    {
+     "id": "forever-war",
+     "label": "war as a way of life",
+     "definition": "War becomes the permanent condition of the world."
+    }
+   ]
   },
   {
    "id": "peace-made",
@@ -107,13 +313,52 @@
    "id": "uprising",
    "label": "The ruled rise",
    "definition": "A subjugated group revolts against those who hold power over it.",
-   "exampleHeadline": "Protests turn to insurrection in the capital"
+   "exampleHeadline": "Protests turn to insurrection in the capital",
+   "subs": [
+    {
+     "id": "mass-protest",
+     "label": "a popular uprising",
+     "definition": "Crowds in the streets bring pressure or topple a regime, largely unarmed."
+    },
+    {
+     "id": "armed-rebellion",
+     "label": "an armed rebellion",
+     "definition": "An armed revolt, insurgency or resistance war against those in power."
+    },
+    {
+     "id": "revolt-of-the-owned",
+     "label": "the owned revolt",
+     "definition": "Those treated as property rise: slaves, clones, androids, hosts, the back of the train."
+    }
+   ]
   },
   {
    "id": "crackdown",
    "label": "The state cracks down",
    "definition": "A government bans, disarms or attacks a group.",
-   "exampleHeadline": "Parliament outlaws the movement; members face arrest"
+   "exampleHeadline": "Parliament outlaws the movement; members face arrest",
+   "subs": [
+    {
+     "id": "surveillance-censorship",
+     "label": "watching and silencing",
+     "definition": "Surveillance, censorship and controls on speech and thought."
+    },
+    {
+     "id": "persecution",
+     "label": "a people persecuted",
+     "definition": "A group is banned, rounded up, confined or stripped of rights because of who they are."
+    },
+    {
+     "id": "emergency-rule",
+     "label": "emergency rule",
+     "definition": "Martial law, a curfew, a state of emergency or troops on the streets."
+    },
+    {
+     "id": "purge",
+     "label": "a purge",
+     "definition": "Rivals and dissidents inside the order are arrested, tried or killed."
+    }
+   ]
   },
   {
    "id": "secret-kept",
@@ -125,7 +370,29 @@
    "id": "truth-revealed",
    "label": "The truth comes out",
    "definition": "Something hidden is exposed to the people it was hidden from.",
-   "exampleHeadline": "Leaked documents confirm the programme's existence"
+   "exampleHeadline": "Leaked documents confirm the programme's existence",
+   "subs": [
+    {
+     "id": "state-secret",
+     "label": "a state secret exposed",
+     "definition": "What a government or its agencies hid is made public."
+    },
+    {
+     "id": "corporate-crime",
+     "label": "a corporation exposed",
+     "definition": "What a company or its owners hid is made public."
+    },
+    {
+     "id": "hidden-world",
+     "label": "the hidden world exposed",
+     "definition": "The public learns that reality is not what it seemed: aliens, magic, a simulation, a secret society."
+    },
+    {
+     "id": "origin-identity",
+     "label": "who someone really is",
+     "definition": "A person's or a people's true origin or identity comes out."
+    }
+   ]
   },
   {
    "id": "chosen-one",
@@ -149,31 +416,141 @@
    "id": "plague",
    "label": "A plague",
    "definition": "A disease or biological failure kills or sterilises on a mass scale.",
-   "exampleHeadline": "Global pandemic declared as death toll climbs"
+   "exampleHeadline": "Global pandemic declared as death toll climbs",
+   "subs": [
+    {
+     "id": "natural",
+     "label": "a natural pandemic",
+     "definition": "A disease emerges and spreads on its own."
+    },
+    {
+     "id": "engineered",
+     "label": "an engineered plague",
+     "definition": "A disease is made or released by people, by design or by accident."
+    },
+    {
+     "id": "sterility",
+     "label": "the children stop coming",
+     "definition": "A biological failure stops people having children."
+    },
+    {
+     "id": "transforming",
+     "label": "a plague that transforms",
+     "definition": "A contagion turns people into something else: the infected, the undead, the changed."
+    }
+   ]
   },
   {
    "id": "mass-death",
    "label": "Mass death",
    "definition": "An attack or disaster kills on a scale that changes a society.",
-   "exampleHeadline": "Millions dead as strikes hit the capital"
+   "exampleHeadline": "Millions dead as strikes hit the capital",
+   "subs": [
+    {
+     "id": "nuclear",
+     "label": "nuclear or doomsday weapons",
+     "definition": "A nuclear or comparable weapon kills on a mass scale."
+    },
+    {
+     "id": "disaster",
+     "label": "natural or cosmic disaster",
+     "definition": "An earthquake, flood, impact, climate shock or other disaster kills on a mass scale."
+    },
+    {
+     "id": "massacre",
+     "label": "massacre and genocide",
+     "definition": "A people or a population is deliberately killed."
+    },
+    {
+     "id": "war-toll",
+     "label": "the toll of war",
+     "definition": "Bombing, battle or invasion kills on a mass scale."
+    }
+   ]
   },
   {
    "id": "terror-attack",
    "label": "An attack",
    "definition": "A targeted attack or massacre, short of war, that changes what follows.",
-   "exampleHeadline": "Attack inside the city leaves hundreds dead"
+   "exampleHeadline": "Attack inside the city leaves hundreds dead",
+   "subs": [
+    {
+     "id": "on-civilians",
+     "label": "an attack on civilians",
+     "definition": "A bombing, massacre or attack aimed at ordinary people."
+    },
+    {
+     "id": "targeted",
+     "label": "a targeted strike",
+     "definition": "A raid, sabotage or assassination aimed at a specific target or installation."
+    },
+    {
+     "id": "cyber",
+     "label": "a cyber attack",
+     "definition": "An attack carried out through networks and computers."
+    }
+   ]
   },
   {
    "id": "civilisation-collapses",
    "label": "Civilisation collapses",
    "definition": "The order of society breaks down and does not come back.",
-   "exampleHeadline": "Government dissolves as cities go dark"
+   "exampleHeadline": "Government dissolves as cities go dark",
+   "subs": [
+    {
+     "id": "nuclear",
+     "label": "after the bombs",
+     "definition": "Nuclear or total war brings the order down."
+    },
+    {
+     "id": "pandemic",
+     "label": "after the plague",
+     "definition": "A disease brings the order down."
+    },
+    {
+     "id": "climate-ecological",
+     "label": "after the climate breaks",
+     "definition": "Climate, ecology or a cosmic disaster brings the order down."
+    },
+    {
+     "id": "machine",
+     "label": "after the machines",
+     "definition": "Machines or the systems people depended on bring the order down."
+    },
+    {
+     "id": "economic-social",
+     "label": "after the money runs out",
+     "definition": "Economic, political or social failure brings the order down."
+    }
+   ]
   },
   {
    "id": "ruler-falls",
    "label": "The ruler falls",
    "definition": "A ruler is killed, deposed or withdraws, and the succession is open.",
-   "exampleHeadline": "Leader dies suddenly; no successor named"
+   "exampleHeadline": "Leader dies suddenly; no successor named",
+   "subs": [
+    {
+     "id": "killed",
+     "label": "the ruler is killed",
+     "definition": "A ruler is assassinated or killed in an attack or battle."
+    },
+    {
+     "id": "overthrown",
+     "label": "the ruler is overthrown",
+     "definition": "A ruler is deposed by revolt, coup or defeat."
+    },
+    {
+     "id": "voted-out",
+     "label": "the ruler is voted out or resigns",
+     "definition": "A ruler loses an election, resigns or steps down."
+    },
+    {
+     "id": "dies-or-vanishes",
+     "label": "the ruler dies or vanishes",
+     "definition": "A ruler dies naturally, disappears or withdraws, and the succession is open."
+    }
+   ]
   },
   {
    "id": "beyond-human",

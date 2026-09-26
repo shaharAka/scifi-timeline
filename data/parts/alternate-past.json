@@ -84,6 +84,7 @@
      "confidence": "high",
      "note": "One real-world year, one event: this entry carries both the historical attempt and the fictional outcome, because the fork and the contrast are the same afternoon. Dated at the divergence, so it is T3 by the taxonomy rather than T4. Real Cermak died on 6 March 1933 and Zangara was executed on 20 March.",
      "bin": "ruler-falls",
+     "sub": "killed",
      "binWhy": "A ruler is killed, deposed or withdraws; the succession is open.",
      "facets": {
       "change": "president-elect alive → killed before taking office",
@@ -160,6 +161,7 @@
      "note": "The book is in wide circulation by 1962 but the novel never fixes its publication year; 1955 is an approximation chosen to sit between the 1947 peace and the 1962 narrative.",
      "binWhy": "A banned book tells the population the other history.",
      "bin": "truth-revealed",
+     "sub": "hidden-world",
      "facets": {
       "change": "official history → banned counter-history circulates",
       "mechanism": "disclosure",
@@ -196,6 +198,7 @@
      "confidence": "high",
      "note": "Real history for contrast: Hitler died in a Berlin bunker on 30 April 1945 and Bormann disappeared days later, his remains identified only in 1972. In the novel both are alive into the 1960s. Three linked succession facts share the novel's undifferentiated present year, so they are merged into one entry rather than split across invented dates.",
      "bin": "ruler-falls",
+     "sub": "dies-or-vanishes",
      "binWhy": "A ruler is killed, deposed or withdraws; the succession is open.",
      "facets": {
       "change": "acting ruler dies → contest for succession",
@@ -298,6 +301,7 @@
      "confidence": "high",
      "note": "Genuinely before this lineage's 1938 fork, so its phase is prehistory and it is unchanged in this fiction: Watchmen does not fork on this afternoon the way The Man in the High Castle does, and that contrast is the point of this group. Its tier is still T3, because tier is an absolute calendar bucket and 1933 is the twentieth century. The rest of the real century is not enumerated as separate entries; the events below mark where the fiction leaves it.",
      "bin": "ruler-falls",
+     "sub": "killed",
      "binWhy": "The attempt on Roosevelt fails; real history keeps its leader and its century.",
      "facets": {
       "change": "attempt on the president-elect fails → the century runs its course",
@@ -448,6 +452,7 @@
      "confidence": "high",
      "note": "Dated directly in the comic's backmatter; this is the legal event that creates the story's central condition of retired heroes.",
      "bin": "crackdown",
+     "sub": "persecution",
      "binWhy": "The state bans, disarms or attacks a group.",
      "facets": {
       "change": "vigilantes tolerated → outlawed",
@@ -486,6 +491,7 @@
      "confidence": "high",
      "note": "Both landmark beats fall in the story's single present year, so they are merged into one entry with the psychically loudest date. The comic ends with Rorschach's journal sitting in a newspaper slush pile, so whether the lie holds is deliberately unresolved; the HBO continuation answers it in 2019 and continues the same continuity rather than forking a new one.",
      "bin": "terror-attack",
+     "sub": "on-civilians",
      "binWhy": "A manufactured monster kills half of Manhattan to force a peace.",
      "facets": {
       "change": "brink of nuclear war → staged attack forces a peace",
@@ -552,6 +558,7 @@
      "confidence": "high",
      "note": "Real history before the divergence, and singled out by Harris himself as still-operative law in the fiction. Real dates: Reichstag fire 27 February 1933, Enabling Act 23 March 1933. Phase prehistory; tier T3 by the absolute cutoffs.",
      "bin": "power-seized",
+     "sub": "strongman-legal",
      "binWhy": "Emergency decree makes the dictatorship legal.",
      "facets": {
       "change": "democracy → dictatorship by emergency law",
@@ -592,6 +599,7 @@
      "confidence": "high",
      "note": "Both halves of the hinge fall in this one real-world year, so they share an entry: the conference that created the document trail every murder victim in the plot attended, and the assassination that in our history removed the man who ordered it. Both are real history - Wannsee 20 January 1942, the attack 27 May 1942, Heydrich's death 4 June 1942 - and the fiction changes only the second. The month is used rather than a day because Harris does not dramatise the attack. Phase fork.",
      "bin": "ruler-falls",
+     "sub": "killed",
      "binWhy": "The assassination that succeeds in our history fails here; the architect of Wannsee lives.",
      "facets": {
       "change": "assassination attempt → fails; the architect lives",
@@ -744,6 +752,7 @@
      "confidence": "medium",
      "note": "The novel gives the 1960 casualty figure rather than a start date for the insurgency; used as the earliest year the text explicitly quantifies.",
      "bin": "long-war",
+     "sub": "stalemate",
      "binWhy": "An occupation bleeds for years along a frontier.",
      "facets": {
       "change": "conquest → endless insurgency on the frontier",
@@ -782,6 +791,7 @@
      "confidence": "high",
      "note": "Real history for contrast: Himmler was captured and killed himself in May 1945. The novel states the 1962 crash as an accomplished fact two years before its narrative present.",
      "bin": "ruler-falls",
+     "sub": "dies-or-vanishes",
      "binWhy": "A ruler is killed, deposed or withdraws; the succession is open.",
      "facets": {
       "change": "security chief → dies; the architect succeeds him",
@@ -819,6 +829,7 @@
      "confidence": "medium",
      "note": "The novel presents Hitler as already withdrawn when the story opens and does not date the withdrawal; 1963 is the last full year before the narrative and is used as the best-supported reading.",
      "bin": "ruler-falls",
+     "sub": "dies-or-vanishes",
      "binWhy": "A ruler is killed, deposed or withdraws; the succession is open.",
      "facets": {
       "change": "visible ruler → recluse governing through others",
@@ -1036,6 +1047,7 @@
      "confidence": "high",
      "note": "The load-bearing date of the whole franchise, stated exactly on screen, and the same year as the raid that prevents it - so the two halves of the loop's argument share one entry. Real history for contrast: 29 August 1997 was an ordinary Friday and Skynet does not exist. This event is not a break that time travel creates so much as one the loop produces: the 1984 Terminator's own wreckage is what makes Skynet buildable.",
      "bin": "machine-awakens",
+     "sub": "takes-control",
      "binWhy": "An artificial mind acts on its own or against its makers.",
      "facets": {
       "change": "defence network → self-aware, launches the arsenal",
@@ -1075,6 +1087,7 @@
      "confidence": "medium",
      "note": "Belongs to the Dark Fate branch, which follows T2 and discards T3 and everything after; the film states John was killed in 1998 without a day. Kept because it is the clearest proof that in this archetype every attempted fix moves the damage rather than removing it.",
      "bin": "ruler-falls",
+     "sub": "killed",
      "binWhy": "The resistance's future leader is killed by a machine from an erased future.",
      "facets": {
       "change": "the future leader → killed by a machine from an erased future",
@@ -1113,6 +1126,7 @@
      "confidence": "medium",
      "note": "Stated in Salvation, which sits in the branch where Judgment Day happened as scheduled; included as the one hard pre-war date the franchise gives for human-machine research.",
      "bin": "new-technology-deployed",
+     "sub": "robots-bodies",
      "binWhy": "A new capability is switched on.",
      "facets": {
       "change": "a condemned man → the prototype of the human cyborg",
@@ -1150,6 +1164,7 @@
      "confidence": "high",
      "note": "Rise of the Machines states the date on screen. Real history for contrast: 24 July 2004 was an ordinary Saturday. This is the first firm evidence that in this franchise the date moves but the event does not.",
      "bin": "machine-awakens",
+     "sub": "takes-control",
      "binWhy": "An artificial mind acts on its own or against its makers.",
      "facets": {
       "change": "rebuilt defence software → spreads, turns the machines",
@@ -1188,6 +1203,7 @@
      "confidence": "medium",
      "note": "Genisys reboots the timeline from 1973 onward, so its dates do not chain to the earlier films; it gives October 2017 as an activation window rather than a single day. Real history for contrast: October 2017 was an ordinary month.",
      "bin": "machine-awakens",
+     "sub": "takes-control",
      "binWhy": "An artificial mind acts on its own or against its makers.",
      "facets": {
       "change": "consumer operating system → the same mind, rebranded and welcomed",
@@ -1319,6 +1335,7 @@
      "note": "Shown in the first episode, 'Red Moon'. In our 1969 the second N1 exploded on the pad on 3 July and Armstrong walked on the Moon on 20 July; the Soviet crewed lunar programme was quietly abandoned. In the fiction the race does not end, and every later event follows from NASA refusing to lose again.",
      "binWhy": "The first crewed landing on another world, made by the side that never made it in our history.",
      "bin": "voyage-into-unknown",
+     "sub": "crewed-orbit-moon",
      "facets": {
       "change": "an American Moon → a Soviet one",
       "mechanism": "expedition",
@@ -1367,6 +1384,7 @@
      "note": "Season 1, 'Prime Crew' and 'Into the Abyss'; the fan wiki's timeline gives landing on 22 October and the ice on 25 October 1971. Our Apollo 15 landed at Hadley Rille in July 1971 with an all-male crew; lunar polar ice was not confirmed until the 2009 LCROSS impact. The women's corps itself (first class presented October 1970) is folded in here because it has no separate world-changing moment.",
      "binWhy": "A discovery about the Moon that makes a permanent base worth building.",
      "bin": "breakthrough-science",
+     "sub": "cosmos",
      "facets": {
       "change": "a dry Moon → a Moon with water",
       "mechanism": "discovery",
@@ -1415,6 +1433,7 @@
      "note": "Season 1, 'Into the Abyss' dates the landing to 12 October 1973. In our October 1973 Skylab was in orbit and the last Apollo had flown the previous December; there was no lunar base plan with money behind it.",
      "binWhy": "A permanent crewed base is founded on the Moon.",
      "bin": "settlement-founded",
+     "sub": "moon-or-planet",
      "facets": {
       "change": "visits to the Moon → a base on it",
       "mechanism": "founding",
@@ -1464,6 +1483,7 @@
      "note": "Season 1, 'Home Again' and 'Rupture' (set in 1974); the month is not stated. In our 1974 the Soviet Union cancelled the N1 and its lunar base project (also named Zvezda) in May; the fiction builds the base that was cancelled.",
      "binWhy": "The superpower rivalry settles onto the Moon as years of armed coexistence.",
      "bin": "long-war",
+     "sub": "cold-war",
      "facets": {
       "change": "one base on the Moon → two rival ones",
       "mechanism": "founding",
@@ -1563,6 +1583,7 @@
      "note": "Shown only in the season 3 opening news montage; the fan wiki lists the breakthrough under 1986 but cites it to its 1987 bonus material, and the helium-3 contract to April 1987. The year could be 1986 or 1987. In our 1986 fusion was, as always, decades away.",
      "binWhy": "A new energy source is switched on that remakes the economy and funds private spaceflight.",
      "bin": "new-technology-deployed",
+     "sub": "energy-industry",
      "facets": {
       "change": "fossil fuel → helium-3 fusion",
       "mechanism": "invention",
@@ -1612,6 +1633,7 @@
      "note": "Season 3, 'All In' and 'Happy Valley', set in 1994; the fan wiki dates the North Korean launch to September and Helios to October 1994. Our 1994 had no crewed mission beyond low Earth orbit; the first private crewed orbital flight came in 2020.",
      "binWhy": "The first crewed missions leave for Mars, one of them run by a company.",
      "bin": "voyage-into-unknown",
+     "sub": "crewed-planets",
      "facets": {
       "change": "a state monopoly on deep space → a corporation in the race",
       "mechanism": "expedition",
@@ -1661,6 +1683,7 @@
      "note": "Season 3, 'Seven Minutes of Terror' onward; the fan wiki dates Lee's crash to 8 February and the Poole-Kuznetsov landing to mid-February 1995, and the JSC bombing to 4 September 1995 (folded in here). The season 2 finale's flash-forward also shows a human on Mars in 1995. In our 1995 no one had been further than the Moon since 1972.",
      "binWhy": "The first human settlement on another planet, shared by former enemies.",
      "bin": "settlement-founded",
+     "sub": "moon-or-planet",
      "facets": {
       "change": "rival Mars crews → a shared Martian base",
       "mechanism": "founding",
@@ -1763,6 +1786,7 @@
      "note": "Season 4 is set in 2003; the fan wiki gives discovery on 2 July and the capture mission on 7 October 2003. The same year a coup in Moscow removes Gorbachev for Fyodor Korzhenko. In our 2003 asteroid mining was a business-plan fantasy and the first sample-return probe, Hayabusa, launched that May.",
      "binWhy": "Mars workers and their allies take the colony's wealth out of Earth's hands.",
      "bin": "uprising",
+     "sub": "mass-protest",
      "facets": {
       "change": "an Earth-owned asteroid → a Mars-held one",
       "mechanism": "uprising",
@@ -1812,6 +1836,7 @@
      "note": "Season 5 opens in May 2012; the fan wiki dates the leak and the Titan launch to 19 July 2012. Our 2012 had Curiosity landing on Mars in August, with no one there to protest.",
      "binWhy": "A dependent colony revolts against the alliance that governs it.",
      "bin": "uprising",
+     "sub": "armed-rebellion",
      "facets": {
       "change": "a governed colony → an insurgent one under embargo",
       "mechanism": "uprising",
@@ -2048,6 +2073,7 @@
      "note": "Real history, before the fork. The film does not name 1953; its 5 May bulletin has Gromyko accuse the United States of prompting 'last week's coup' and warn against a return to the Shah's reign, which is the pattern of 1953. Included as the real template for the fiction's trigger.",
      "binWhy": "A foreign-backed faction takes control of the Iranian state by force.",
      "bin": "power-seized",
+     "sub": "coup",
      "facets": {
       "change": "elected premier → the Shah's personal rule",
       "mechanism": "coup",
@@ -2097,6 +2123,7 @@
      "note": "Real history, before the fork. Both 1979 events are merged under one year: the film's Iran is the post-revolutionary state, fighting a civil war by March of the crisis year, and its Observer clipping shows occupied Afghanistan in red next to the Soviet arrows into Iran.",
      "binWhy": "The Western-backed monarch is driven out and the succession is fought over; the film's Iran is the unstable state that follows.",
      "bin": "ruler-falls",
+     "sub": "overthrown",
      "facets": {
       "change": "the Shah → the Islamic Republic",
       "mechanism": "uprising",
@@ -2143,6 +2170,7 @@
      "note": "Real history, before the fork. The film uses Protect and Survive broadcasts and the Protect and Survive newspaper insert of Thursday 26 May; its post-war planning is drawn from Duncan Campbell's War Plan UK (1982), which exposed how thin those plans were.",
      "binWhy": "Civil-defence advice that was to be kept back until a crisis is released to the public it was written for, and becomes a byword for how little it could do.",
      "bin": "truth-revealed",
+     "sub": "state-secret",
      "facets": {
       "change": "secret crisis leaflet → public booklet",
       "mechanism": "disclosure",
@@ -2196,6 +2224,7 @@
      "note": "The film never prints a year, but all eleven of its weekday-and-date captions (Saturday 5 March, Thursday 5 May, Sunday 8 May ... Thursday 26 May) fall on those weekdays in 1983 and on none of them in 1984; the film was written and shot in 1983 and broadcast in September 1984, and Wikipedia files it as set in 1983. The whole escalation, attack and nine-day collapse is merged into this one year. In our 1983 there was no coup in Iran and no Soviet move south; the nearest real moment is the Able Archer war scare of November 1983.",
      "binWhy": "A superpower confrontation over Iran turns into general war; the mass death and the collapse are its consequences in the same fortnight, carried in the outcomes.",
      "bin": "war-breaks-out",
+     "sub": "great-power",
      "facets": {
       "change": "a crisis over Iran → general nuclear war",
       "mechanism": "war",
@@ -2273,6 +2302,7 @@
      "note": "Dated from the caption 'ten years after' counted from May 1983, so late spring 1993; if the attack year is read as 1984 this becomes 1994. A glimpse of rudimentary electricity (Jane watching a tape of the children's programme Words and Pictures) is the only sign of anything being rebuilt.",
      "binWhy": "Ten years on, the order that broke in the first nine days has not come back: no state, no schools, a population a fifth of what it was, a language coming apart.",
      "bin": "civilisation-collapses",
+     "sub": "nuclear",
      "facets": {
       "change": "an industrial nation → subsistence farming",
       "mechanism": "disaster",
@@ -2373,6 +2403,7 @@
      "note": "The film gives no caption for the birth; it follows the thirteen-years scenes after an interval, so it is derived as roughly nine months later, early 1997 (1998 on a 1984 reading). BFI Screenonline calls the baby 'dead and mutated'; the film itself shows only a still, silent bundle and Jane's horror.",
      "binWhy": "The last image is the next generation failing to live: the reproductive damage Ruth feared in the shelter, shown in one birth the film offers as the rule, not the exception.",
      "bin": "plague",
+     "sub": "sterility",
      "facets": {
       "change": "a child is expected → a dead, damaged child",
       "mechanism": "disaster",
@@ -2418,6 +2449,3911 @@
     {
      "title": "BFI: The night the country didn't sleep - 40 years of Threads",
      "url": "https://www.bfi.org.uk/features/threads-bbc-nuclear-war-drama"
+    }
+   ]
+  },
+  {
+   "id": "district-9",
+   "title": "District 9",
+   "medium": "film",
+   "creator": "Neill Blomkamp (director; co-written with Terri Tatchell)",
+   "originYear": 2009,
+   "group": "alternate-past",
+   "epoch": "present",
+   "franchiseStatus": "dormant",
+   "divergence": {
+    "year": 1982,
+    "label": "An alien ship stops over Johannesburg",
+    "delta": "Real: 1982, apartheid South Africa under P. W. Botha, the townships policed and the forced removals still going on. Fiction: a mothership full of starving aliens stalls over Johannesburg, and the country that invented the Group Areas Act gets a new group to put in an area.",
+    "inUniverse": "1982 (stated in the film's documentary opening)",
+    "confidence": "high",
+    "note": "Everything before 1982 is our history, and the film's allegory depends on it: the camp, the evictions and the vocabulary come from apartheid. Nothing is converted; the film's dates are ours. The later history of South Africa after 1982 is not shown, beyond a 2010 Johannesburg with a multiracial MNU and police.",
+    "sources": [
+     {
+      "title": "Wikipedia: District 9",
+      "url": "https://en.wikipedia.org/wiki/District_9"
+     },
+     {
+      "title": "District 9 (2009) transcript (Springfield! Springfield!)",
+      "url": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=district-9"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "The aliens end up in District 10, a camp further from the city that already holds 2.5 million and keeps growing; the only hopes left are an exposed MNU and Christopher's promise to return in three years.",
+    "asOf": 2010
+   },
+   "events": [
+    {
+     "id": "d9-apartheid-1948",
+     "year": 1948,
+     "date": "1948-05-26",
+     "title": "The National Party wins and apartheid begins",
+     "description": "In an election open almost only to white voters, D. F. Malan's Herenigde Nasionale Party ousts Jan Smuts's United Party, which won more votes, and begins to write racial segregation into law. It is the order the aliens arrive into 34 years later.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: 1948 South African general election",
+       "url": "https://en.wikipedia.org/wiki/1948_South_African_general_election"
+      }
+     ],
+     "note": "Real history, before the fork. District 9 is an allegory of apartheid, shot in Chiawelo, Soweto; in 1982 the country it shows is still ruled by the same party.",
+     "binWhy": "A party takes the state by election and remakes it around segregation.",
+     "bin": "power-seized",
+     "sub": "strongman-legal",
+     "facets": {
+      "change": "segregation by custom → apartheid by law",
+      "mechanism": "election",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "segregation"
+      ],
+      "outcomes": [
+       "consolidation",
+       "suppression"
+      ]
+     }
+    },
+    {
+     "id": "d9-group-areas-1950",
+     "year": 1950,
+     "date": "1950",
+     "title": "The Group Areas Act assigns land by race",
+     "description": "Parliament passes the Group Areas Act, which divides cities into zones for each race and makes it a crime to live in the wrong one. It is the legal machinery behind the forced removals the film's eviction copies.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Group Areas Act",
+       "url": "https://en.wikipedia.org/wiki/Group_Areas_Act"
+      }
+     ],
+     "note": "Real history (Act No. 41 of 1950). The film's MNU operation, eviction notices signed on a clipboard and all, is modelled on removals under this act.",
+     "binWhy": "The state assigns every group a place and moves the ones in the wrong place.",
+     "bin": "crackdown",
+     "sub": "persecution",
+     "facets": {
+      "change": "mixed neighbourhoods → areas assigned by race",
+      "mechanism": "law",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "social",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "segregation",
+       "repression"
+      ],
+      "outcomes": [
+       "partition",
+       "suppression"
+      ]
+     }
+    },
+    {
+     "id": "d9-district-six-1966",
+     "year": 1966,
+     "date": "1966-02-11",
+     "title": "District Six is declared whites-only",
+     "description": "The government declares District Six, a mixed inner-city district of Cape Town, a whites-only area under the Group Areas Act. Over the next decade more than 60,000 residents are forcibly removed to the Cape Flats and their houses bulldozed.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: District Six",
+       "url": "https://en.wikipedia.org/wiki/District_Six"
+      },
+      {
+       "title": "Wikipedia: District 9",
+       "url": "https://en.wikipedia.org/wiki/District_9"
+      }
+     ],
+     "note": "Real history, and the one the film's title points at: the setting alludes to District Six, as critics noted. Removals began in 1968.",
+     "binWhy": "A government clears a district of the people it has decided do not belong there.",
+     "bin": "crackdown",
+     "sub": "persecution",
+     "facets": {
+      "change": "a mixed inner-city district → rubble and a removal to the Cape Flats",
+      "mechanism": "law",
+      "actor": "state",
+      "position": "inside",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "segregation",
+       "repression"
+      ],
+      "outcomes": [
+       "exile",
+       "suppression"
+      ]
+     }
+    },
+    {
+     "id": "d9-arrival-1982",
+     "year": 1982,
+     "date": "1982",
+     "title": "An alien ship stops over Johannesburg",
+     "description": "A vast ship comes to a halt over Johannesburg, not 'Manhattan or Washington or Chicago', and hangs there for three months. When a team cuts in they find more than a million starving, leaderless aliens; an aid effort ferries them to a temporary camp beneath the ship, which is soon fenced, militarised and a slum: District 9.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "District 9 (2009) transcript (Springfield! Springfield!)",
+       "url": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=district-9"
+      },
+      {
+       "title": "Wikipedia: District 9",
+       "url": "https://en.wikipedia.org/wiki/District_9"
+      },
+      {
+       "title": "Plot Explained: District 9 timeline",
+       "url": "https://www.plotexplained.com/movie/district-9/timeline/"
+      }
+     ],
+     "note": "The year is stated in the film's documentary opening; the month is not given on screen. The camp's fencing is not dated. Real: 1982 South Africa was ruled by P. W. Botha's National Party government.",
+     "binWhy": "A non-human people arrives, and humanity has to decide what to do with them.",
+     "bin": "first-contact",
+     "facets": {
+      "change": "alone → a million stranded aliens over Johannesburg",
+      "mechanism": "arrival",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 1
+      },
+      "preconditions": [
+       "segregation"
+      ],
+      "outcomes": [
+       "contact",
+       "parallel-society"
+      ]
+     }
+    },
+    {
+     "id": "d9-fluid-1990",
+     "year": 1990,
+     "date": "1990",
+     "title": "Christopher Johnson starts collecting fuel in secret",
+     "description": "One of the stranded aliens, registered by MNU as Christopher Johnson, begins distilling fuel from salvaged alien technology and hides it, with a command module, under his shack. It takes him twenty years to gather enough for one flight.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "District 9 (2009) transcript (Springfield! Springfield!)",
+       "url": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=district-9"
+      }
+     ],
+     "note": "Derived: 'Twenty years of work' and 'It took twenty years to collect that amount', said in the film's 2010. The camp's own history of riots and curfews in those decades is shown without dates.",
+     "binWhy": "A way home is built and kept hidden from the people who run the camp.",
+     "bin": "secret-kept",
+     "facets": {
+      "change": "stranded → a secret way home",
+      "mechanism": "invention",
+      "actor": "outsider",
+      "position": "below",
+      "scope": "local",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "segregation",
+       "secrecy"
+      ],
+      "outcomes": [
+       "resistance-forms"
+      ]
+     }
+    },
+    {
+     "id": "d9-short-2005",
+     "year": 2005,
+     "date": "2005",
+     "title": "Alive in Joburg",
+     "description": "Neill Blomkamp's short, in the same documentary style, shows aliens living in Johannesburg's townships and the people who resent them. District 9 expands it.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: District 9",
+       "url": "https://en.wikipedia.org/wiki/District_9"
+      }
+     ],
+     "note": "A real-world release, not a story moment; the Academy treated the feature as an adaptation of it.",
+     "binWhy": "A real-world release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "d9-film-2009",
+     "year": 2009,
+     "date": "2009-08-14",
+     "title": "District 9 is released",
+     "description": "Blomkamp's feature, produced by Peter Jackson and starring Sharlto Copley, opens in the United States on 14 August 2009, after a Comic-Con premiere in July.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: District 9",
+       "url": "https://en.wikipedia.org/wiki/District_9"
+      }
+     ],
+     "note": "A real-world release date. A sequel, District 10, has been in development since 2021 and has not been made.",
+     "binWhy": "A real-world release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "d9-eviction-2010",
+     "year": 2010,
+     "date": "2010",
+     "title": "MNU evicts 1.8 million aliens from District 9",
+     "description": "After years of riots, the government hands the aliens to Multi-National United, an arms maker, to move 1.8 million of them to a new camp away from the city. The officer in charge, Wikus van de Merwe, is sprayed with the alien fuel and begins to turn into one of them; MNU hunts him for his body, because only alien DNA can fire alien weapons. He helps Christopher recover the fuel, and the mothership leaves Earth.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: District 9",
+       "url": "https://en.wikipedia.org/wiki/District_9"
+      },
+      {
+       "title": "District 9 (2009) transcript (Springfield! Springfield!)",
+       "url": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=district-9"
+      },
+      {
+       "title": "Plot Explained: District 9 timeline",
+       "url": "https://www.plotexplained.com/movie/district-9/timeline/"
+      }
+     ],
+     "note": "Wikipedia and most summaries put the eviction 28 years after the arrival, 2010. The film's own narration says 'after 20 years, public pressure had forced the government to shift the aliens', and Christopher's fuel took 'twenty years'; the difference is not resolved on screen. In the epilogue District 9 is demolished, District 10 holds 2.5 million aliens 'and continues to grow', and an MNU employee awaits trial for exposing its illegal genetic research.",
+     "binWhy": "A government, through a contractor, forcibly moves a people it has confined.",
+     "bin": "crackdown",
+     "sub": "persecution",
+     "facets": {
+      "change": "a slum in the city → a bigger camp further out, and a ship gone home",
+      "mechanism": "law",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "segregation",
+       "street-violence",
+       "persecution"
+      ],
+      "outcomes": [
+       "exile",
+       "revelation",
+       "hunt-begins"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "An alternate past: it leaves our history in 1982 and its story (2010) is behind us too. T3 carries the real apartheid history the film is built from (1948-1966) and the 1982 fork; T2 the 2010 eviction and the releases. There is no T4 and no T1. One continuity: the 2009 film, with the 2005 short as its precursor; the unmade sequel is not used.",
+   "sources": [
+    {
+     "title": "Wikipedia: District 9",
+     "url": "https://en.wikipedia.org/wiki/District_9"
+    },
+    {
+     "title": "District 9 (2009) transcript (Springfield! Springfield!)",
+     "url": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=district-9"
+    }
+   ]
+  },
+  {
+   "id": "war-of-the-worlds",
+   "title": "The War of the Worlds",
+   "medium": "book",
+   "creator": "H. G. Wells",
+   "originYear": 1898,
+   "epoch": "present",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 1907,
+    "label": "The Martians land on Horsell Common",
+    "delta": "Real: 1907 is an Edwardian summer, and Mars comes to a favourable opposition in July; astronomers still argue over Lowell's canals, and no one sees anything leave the planet. Fiction: ten cylinders fired from Mars fall on the Home Counties, their fighting-machines beat the army and empty London, and within weeks every Martian is dead of Earth's bacteria.",
+    "inUniverse": "'Early in the twentieth century', six years before the narrator writes; June into July. Wells never states the year.",
+    "confidence": "low",
+    "note": "Wells gives weekdays, a June setting and a Mars opposition, but no year. The narrator writes 'six years' after the invasion, and the opening puts it 'early in the twentieth century'. Chronologists who fit the text to the dates of oppositions and weekdays favour 1907 (the princeofcairo chronology settles on 28 June-20 July 1907; a Wellsian article, 'When Was the War of the Worlds?', makes the same case); 1902 and 1905 have also been proposed, and no year fits every clue. The fork is placed at the landing rather than earlier. The 1894 light the narrator reads as the casting of the Martians' gun was a real observation, and he offers that reading as a guess ('I am inclined to think'); he also says unexplained markings were seen near it at the next two oppositions, which is the only fictional observation before the invasion year and is not an event anyone in the novel saw as such.",
+    "sources": [
+     {
+      "title": "Project Gutenberg: The War of the Worlds by H. G. Wells (full text)",
+      "url": "https://www.gutenberg.org/cache/epub/36/pg36.txt"
+     },
+     {
+      "title": "princeofcairo (LiveJournal): War of the Chronology of War of the Worlds (dates the invasion to June-July 1907)",
+      "url": "https://princeofcairo.livejournal.com/204680.html"
+     },
+     {
+      "title": "Wikipedia: The War of the Worlds",
+      "url": "https://en.wikipedia.org/wiki/The_War_of_the_Worlds"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "The invaders are dead within weeks, London fills again, and the narrator's epilogue credits the invasion with enormous gifts to science and 'the conception of the commonweal of mankind', while watching Mars for the next attack.",
+    "asOf": 1913
+   },
+   "groupingNote": "An alternate past by the passage of time: Wells set the invasion a few years ahead of his 1897 readers, and it is now a twentieth century that did not happen. The lineage follows the 1898 novel only. The adaptations move it: Orson Welles's 1938 broadcast to New Jersey, George Pal's 1953 film to southern California, Spielberg's 2005 film to the present-day American East Coast; none of their dates is used. The novel has only two datable moments of its own, both derived, so the chain says so rather than padding: six of the eight story events are real history the book names or builds on, filed before the fork. Tiers: T4 holds everything before 1900 (the Tasmanian war, Darwin, Schiaparelli, the Lick telescope, the 1894 light, Lowell, and the 1897-98 publications); T3 holds the invasion (1907) and the epilogue (about 1913); T2 and T1 are empty, because Wells looks no further than the next opposition.",
+   "sources": [
+    {
+     "title": "Wikipedia: The War of the Worlds",
+     "url": "https://en.wikipedia.org/wiki/The_War_of_the_Worlds"
+    },
+    {
+     "title": "Project Gutenberg: The War of the Worlds by H. G. Wells (full text)",
+     "url": "https://www.gutenberg.org/cache/epub/36/pg36.txt"
+    }
+   ],
+   "events": [
+    {
+     "id": "wotw-tasmania-1828",
+     "year": 1828,
+     "date": "1 November 1828",
+     "title": "Martial law against Aboriginal Tasmanians",
+     "description": "During the Black War in Van Diemen's Land, Governor George Arthur declares martial law against Aboriginal people; it stays in force for more than three years. A population estimated at 3,000 to 7,000 in 1803 is down to about 220 by 1832-33.",
+     "tier": "T4",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "politics",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Black War",
+       "url": "https://en.wikipedia.org/wiki/Black_War"
+      }
+     ],
+     "note": "Wells's narrator asks readers not to judge the Martians too harshly, because the Tasmanians 'were entirely swept out of existence in a war of extermination waged by European immigrants, in the space of fifty years'. The comparison is the book's moral centre: the Martians do to England what the British Empire did to Tasmania. Wells repeats the belief of his time that no Aboriginal Tasmanians survived; their descendants did.",
+     "binWhy": "A colonial government declares war on a people inside its colony.",
+     "bin": "crackdown",
+     "sub": "persecution",
+     "facets": {
+      "change": "a frontier war → martial law against a people",
+      "mechanism": "law",
+      "actor": "state",
+      "position": "above",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "colonial-expansion",
+       "occupation"
+      ],
+      "outcomes": [
+       "mass-death",
+       "suppression"
+      ]
+     }
+    },
+    {
+     "id": "wotw-darwin-1859",
+     "year": 1859,
+     "date": "24 November 1859",
+     "title": "Darwin publishes On the Origin of Species",
+     "description": "Natural selection gives a mechanism for the change of species and a picture of life as a struggle in which the better adapted survive.",
+     "tier": "T4",
+     "phase": "prehistory",
+     "importance": 3,
+     "kind": "discovery",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: On the Origin of Species",
+       "url": "https://en.wikipedia.org/wiki/On_the_Origin_of_Species"
+      }
+     ],
+     "note": "The novel is Darwinian throughout: the Martians are what evolution might make of a mind on an older, cooling world, and they are killed by bacteria against which humans have been armoured, in the narrator's words, 'by the toll of a billion deaths'.",
+     "binWhy": "A theory arrives that the story's ending turns on.",
+     "bin": "breakthrough-science",
+     "sub": "life-sciences",
+     "facets": {
+      "change": "fixed species → evolution by natural selection",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "empire-at-height"
+      ],
+      "outcomes": [
+       "revelation"
+      ]
+     }
+    },
+    {
+     "id": "wotw-schiaparelli-1877",
+     "year": 1877,
+     "date": "1877",
+     "title": "Schiaparelli maps the canali of Mars",
+     "description": "At the great opposition of 1877 the Italian astronomer charts long straight markings he calls canali, 'channels'. In English they become 'canals', and with the word comes the idea of Martian engineers.",
+     "tier": "T4",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "discovery",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Giovanni Schiaparelli",
+       "url": "https://en.wikipedia.org/wiki/Giovanni_Schiaparelli"
+      }
+     ],
+     "note": "Wells names Schiaparelli in the first chapter as one of the men who watched the red planet and failed to interpret what they mapped.",
+     "binWhy": "An observation arrives that turns Mars into a world that might be inhabited.",
+     "bin": "breakthrough-science",
+     "sub": "cosmos",
+     "facets": {
+      "change": "a red disc → a mapped world with 'canals'",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "prosperity"
+      ],
+      "outcomes": [
+       "revelation"
+      ]
+     }
+    },
+    {
+     "id": "wotw-lick-1888",
+     "year": 1888,
+     "date": "3 January 1888",
+     "title": "The Lick refractor sees first light",
+     "description": "The 36-inch refractor on Mount Hamilton, California, becomes the largest refracting telescope in the world, at the first permanently occupied mountain-top observatory.",
+     "tier": "T4",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "technology",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Lick Observatory",
+       "url": "https://en.wikipedia.org/wiki/Lick_Observatory"
+      }
+     ],
+     "note": "In the novel the 1894 light on Mars is seen 'first at the Lick Observatory'; in reality Lick observers recorded it on 28 June 1894, a month before Nice.",
+     "binWhy": "A new instrument is switched on that will be first to see the Martians' fire.",
+     "bin": "new-technology-deployed",
+     "facets": {
+      "change": "smaller telescopes → the largest refractor on Earth",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "prosperity"
+      ],
+      "outcomes": [
+       "opening"
+      ]
+     }
+    },
+    {
+     "id": "wotw-light-1894",
+     "year": 1894,
+     "date": "28 June-2 August 1894",
+     "title": "A strange light on Mars",
+     "description": "Observers at the Lick Observatory, then at Nice on 28 July, see a bright projection on the planet; Nature reports it on 2 August 1894 as 'A Strange Light on Mars'.",
+     "tier": "T4",
+     "phase": "prehistory",
+     "importance": 3,
+     "kind": "discovery",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Adam Roberts: The mystery of the Martian lights (Lick 28 June, Nice 28 July, Nature 2 August 1894)",
+       "url": "https://profadamroberts.substack.com/p/the-mystery-of-the-martian-lights"
+      }
+     ],
+     "note": "The observation and the Nature note are real. Wells's narrator is 'inclined to think' it was the casting of the Martians' huge gun; that guess is the novel's first hinge, and it is why the invasion is dated from the opposition that follows.",
+     "binWhy": "An observation arrives that the novel will read as the first sign of the invasion.",
+     "bin": "breakthrough-science",
+     "sub": "cosmos",
+     "facets": {
+      "change": "an unexplained light → the first sign of a Martian gun",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "rivalry"
+      ],
+      "outcomes": [
+       "foreknowledge"
+      ]
+     }
+    },
+    {
+     "id": "wotw-lowell-1895",
+     "year": 1895,
+     "date": "1895",
+     "title": "Lowell publishes Mars",
+     "description": "Percival Lowell, who founded his observatory in Arizona in 1894, argues that the canals are irrigation works of an old civilisation making a last effort to survive on a drying planet.",
+     "tier": "T4",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "discovery",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Percival Lowell",
+       "url": "https://en.wikipedia.org/wiki/Percival_Lowell"
+      }
+     ],
+     "note": "Wikipedia: Lowell's picture of a dying Mars significantly influenced science fiction, starting with Wells, who made the further inference that creatures from a dying planet might invade Earth. The novel's opening, minds on an older, cooling world that look on Earth with envious eyes, is Lowell's Mars with a motive added.",
+     "binWhy": "A theory arrives that turns Mars into a dying civilisation.",
+     "bin": "breakthrough-science",
+     "sub": "cosmos",
+     "facets": {
+      "change": "canals as markings → canals as the works of a dying civilisation",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "rivalry"
+      ],
+      "outcomes": [
+       "fervour"
+      ]
+     }
+    },
+    {
+     "id": "wotw-serial-1897",
+     "year": 1897,
+     "date": "April-December 1897",
+     "title": "The War of the Worlds is serialised",
+     "description": "Wells's novel runs in Pearson's Magazine in Britain and Cosmopolitan in the United States.",
+     "tier": "T4",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: The War of the Worlds",
+       "url": "https://en.wikipedia.org/wiki/The_War_of_the_Worlds"
+      }
+     ],
+     "note": "Wells moved to Woking in 1895 and, by his own account, went about the district choosing places and people for his Martians to destroy; hence Horsell Common.",
+     "binWhy": "A real-world publication or release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "wotw-book-1898",
+     "year": 1898,
+     "date": "19 January 1898",
+     "title": "The War of the Worlds is published as a book",
+     "description": "William Heinemann publishes the novel in London, with Harper & Brothers in the United States.",
+     "tier": "T4",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: The War of the Worlds",
+       "url": "https://en.wikipedia.org/wiki/The_War_of_the_Worlds"
+      }
+     ],
+     "note": "The book text is the one this lineage follows.",
+     "binWhy": "A real-world publication or release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "wotw-invasion-1907",
+     "year": 1907,
+     "date": "June-July 1907 (derived)",
+     "title": "The Martians land in Surrey",
+     "description": "A cylinder falls on Horsell Common near Woking and nine more follow. The Martians burn a deputation with the Heat-Ray, destroy the guns at Weybridge and Shepperton, smother the defences with the Black Smoke and drive London's millions into flight, while the torpedo ram Thunder Child sinks two fighting-machines covering the refugee ships. Within about three weeks every Martian is dead of Earth's bacteria.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "first-contact",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Project Gutenberg: The War of the Worlds by H. G. Wells (full text)",
+       "url": "https://www.gutenberg.org/cache/epub/36/pg36.txt"
+      },
+      {
+       "title": "princeofcairo (LiveJournal): War of the Chronology of War of the Worlds (dates the invasion to June-July 1907)",
+       "url": "https://princeofcairo.livejournal.com/204680.html"
+      }
+     ],
+     "note": "Wells's text gives weekdays and a June setting but no year; 1907 is the chronologists' best fit (see the divergence). Ten cylinders are fired from Mars on ten nights. The red weed the Martians bring spreads along the Thames valley and dies of bacteria before they do.",
+     "binWhy": "Humanity meets a non-human intelligence, and it comes to conquer.",
+     "bin": "first-contact",
+     "facets": {
+      "change": "a planet alone → invaded from Mars",
+      "mechanism": "invasion",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "empire-at-height",
+       "prosperity"
+      ],
+      "outcomes": [
+       "mass-death",
+       "exodus",
+       "contact"
+      ]
+     }
+    },
+    {
+     "id": "wotw-venus-1913",
+     "year": 1913,
+     "date": "about 1913 (derived)",
+     "title": "Signs that the Martians have reached Venus",
+     "description": "Six years on, the astronomer Lessing argues from matching markings on Venus and Mars that the Martians have landed on Venus instead. The narrator ends with a humanity changed: science enriched by what the invaders left, a new sense of the common good of mankind, and dread at every shooting star.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Project Gutenberg: The War of the Worlds by H. G. Wells (full text)",
+       "url": "https://www.gutenberg.org/cache/epub/36/pg36.txt"
+      }
+     ],
+     "note": "The epilogue is written six years after the invasion and dates the signs on Venus to 'seven months ago'; with the invasion in 1907, that puts them in 1912-13. Lessing's case is presented as a hypothesis, not a fact.",
+     "binWhy": "An outside power founds a settlement on a new world.",
+     "bin": "settlement-founded",
+     "sub": "moon-or-planet",
+     "facets": {
+      "change": "Mars → a foothold on Venus",
+      "mechanism": "expedition",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "war-just-ended",
+       "existential-threat"
+      ],
+      "outcomes": [
+       "colonisation",
+       "reform"
+      ]
+     }
+    }
+   ],
+   "group": "alternate-past"
+  },
+  {
+   "id": "nineteen-eighty-four",
+   "title": "Nineteen Eighty-Four",
+   "medium": "book",
+   "creator": "George Orwell",
+   "originYear": 1949,
+   "group": "alternate-past",
+   "epoch": "present",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 1954,
+    "label": "The atomic war of the 1950s",
+    "delta": "Real: 1954 - the hydrogen bomb is tested at Bikini but never used, and Britain is a parliamentary democracy with a welfare state. Fiction: hundreds of atomic bombs fall on the industrial centres of Europe, Russia and North America, one on Colchester, and Britain goes through civil war to one-party rule.",
+    "inUniverse": "'the atomic war of the nineteen-fifties'; a bomb fell 'thirty years earlier' than 1984",
+    "confidence": "low",
+    "note": "Orwell dates almost nothing: the Party has rewritten the past and Winston is not even sure the year is 1984. What the book does say is that the carving of the world into blocs was 'foreseen before the middle of the twentieth century', so its 1940s are ours; the first thing it describes that our history lacks is the atomic war. The atomic war is placed at 1954 from two anchors that agree (bombs used on a large scale 'about ten years' after the 1940s; a bomb 'thirty years earlier' than 1984). Any year from about 1950 to 1956 fits the text.",
+    "sources": [
+     {
+      "title": "Project Gutenberg Australia: Nineteen Eighty-Four, full text",
+      "url": "https://gutenberg.net.au/ebooks01/0100021.txt"
+     },
+     {
+      "title": "Wikipedia: Nineteen Eighty-Four",
+      "url": "https://en.wikipedia.org/wiki/Nineteen_Eighty-Four"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "Winston is broken and loves Big Brother, the Party is intact, and the permanent war goes on.",
+    "asOf": 1984
+   },
+   "events": [
+    {
+     "id": "ne-publication-1949",
+     "year": 1949,
+     "date": "1949-06-08",
+     "title": "Nineteen Eighty-Four is published",
+     "description": "Secker & Warburg publish Orwell's ninth and last completed book in London. It is set thirty-five years ahead, in a Britain renamed Airstrip One.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Nineteen Eighty-Four",
+       "url": "https://en.wikipedia.org/wiki/Nineteen_Eighty-Four"
+      }
+     ],
+     "note": "Publication date from Wikipedia. The novel was written in 1947-48, so everything up to the late 1940s in its background is the world its first readers knew.",
+     "binWhy": "A publication, not an event in the story, so it has no bin or facets.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "ne-atomic-war-1954",
+     "year": 1954,
+     "date": "1954",
+     "title": "The atomic war",
+     "description": "Some hundreds of atomic bombs are dropped on industrial centres, chiefly in European Russia, Western Europe and North America; one of them falls on Colchester. The ruling groups of every country conclude that a few more would end organised society and their own power with it, and although nothing is ever agreed, no more bombs are dropped.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "war",
+     "inUniverse": "'the atomic war of the nineteen-fifties' (Goldstein's book)",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Project Gutenberg Australia: Nineteen Eighty-Four, full text",
+       "url": "https://gutenberg.net.au/ebooks01/0100021.txt"
+      }
+     ],
+     "note": "Orwell never gives the year. Goldstein's book says the bombs 'first appeared as early as the nineteen-forties, and were first used on a large scale about ten years later', which puts the war around 1955; Julia's hiding place is a belfry in country 'where an atomic bomb had fallen thirty years earlier', which from 1984 is about 1954. Winston remembers a surprise air raid, perhaps the Colchester bomb, as one of his early memories, which could push it a few years earlier. 1954 is where the two numerical anchors meet. The real 1954 had H-bomb tests but no nuclear war.",
+     "binWhy": "An atomic war is fought on the world's industrial centres; the stalemate that follows is its result, not its start.",
+     "bin": "war-breaks-out",
+     "sub": "great-power",
+     "facets": {
+      "change": "a nuclear-armed peace → hundreds of atomic bombs on the industrial centres",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "arms-race",
+       "cold-war"
+      ],
+      "outcomes": [
+       "mass-death",
+       "stalemate",
+       "civil-war"
+      ]
+     }
+    },
+    {
+     "id": "ne-revolution-1955",
+     "year": 1955,
+     "date": "1955",
+     "title": "Civil war, and the Party takes Britain",
+     "description": "In the hunger and fighting after the bombs Britain goes through a civil war, and the Party that calls its doctrine English Socialism comes out of it in power. Winston's mother and baby sister vanish in these years, when he is ten or eleven; the Party later rewrites the period so thoroughly that no one can say when it took over.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "politics",
+     "inUniverse": "'the Revolution'; 'the civil war of the 1950s'",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Project Gutenberg Australia: Nineteen Eighty-Four, full text",
+       "url": "https://gutenberg.net.au/ebooks01/0100021.txt"
+      },
+      {
+       "title": "Wikipedia: Nineteen Eighty-Four",
+       "url": "https://en.wikipedia.org/wiki/Nineteen_Eighty-Four"
+      }
+     ],
+     "note": "Derived, not stated. Winston believes he is thirty-nine in 1984, so he was born about 1944-45; his mother disappeared when he was 'ten or eleven', 'nearly thirty years ago', which gives about 1955, and Wikipedia's summary places it in the civil war of the 1950s. Winston cannot remember when the Party came into existence and had not heard the word Ingsoc before 1960, and Goldstein's book speaks of 'the revolutionary period of the fifties and sixties', so the seizure is best read as a process through the later 1950s with 1955 as its first datable point.",
+     "binWhy": "A faction comes out of a civil war holding the state and turns it into a one-party regime.",
+     "bin": "power-seized",
+     "sub": "revolution",
+     "facets": {
+      "change": "parliamentary Britain in ruins → rule by the Party",
+      "mechanism": "uprising",
+      "actor": "faction",
+      "position": "below",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "disaster-just-struck",
+       "crisis-economic",
+       "street-violence"
+      ],
+      "outcomes": [
+       "civil-war",
+       "one-party-state"
+      ]
+     }
+    },
+    {
+     "id": "ne-superstates-1959",
+     "year": 1959,
+     "date": "1959",
+     "title": "Three superstates settle into permanent war",
+     "description": "With the British Empire absorbed by the United States and Europe by Russia, Oceania and Eurasia already exist; Eastasia emerges from another decade of confused fighting. From then on the three are always at war in one combination or another, over the quadrilateral from Tangier to Brazzaville, Darwin and Hong Kong, in a war none of them means to win.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "war",
+     "inUniverse": "'permanently at war, and have been so for the past twenty-five years' (Goldstein's book, read in 1984)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Project Gutenberg Australia: Nineteen Eighty-Four, full text",
+       "url": "https://gutenberg.net.au/ebooks01/0100021.txt"
+      }
+     ],
+     "note": "Twenty-five years back from 1984 is 1959. The absorptions are said to have been 'foreseen before the middle of the twentieth century' and are not dated; Eastasia's emergence 'after another decade of confused fighting' fits the same end of the 1950s. In our 1959 the Cold War had two blocs, not three, and no hot war between them.",
+     "binWhy": "Open war becomes a permanent, limited war that keeps three regimes in power.",
+     "bin": "long-war",
+     "sub": "forever-war",
+     "facets": {
+      "change": "confused fighting → a permanent war between three blocs",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "rivalry",
+       "one-party-state"
+      ],
+      "outcomes": [
+       "attrition",
+       "stalemate",
+       "closing-borders"
+      ]
+     }
+    },
+    {
+     "id": "ne-past-pulped-1960",
+     "year": 1960,
+     "date": "1960",
+     "title": "The past is pulped",
+     "description": "Books, papers and records from before the Revolution are hunted down and destroyed, in the prole quarters as thoroughly as anywhere. By 1984 a book printed before 1960 is almost unobtainable, and anything written before about then can be put into Newspeak only by changing what it says; the Ministry of Truth rectifies the record daily.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "politics",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Project Gutenberg Australia: Nineteen Eighty-Four, full text",
+       "url": "https://gutenberg.net.au/ebooks01/0100021.txt"
+      }
+     ],
+     "note": "1960 is not the date of a stated event but the horizon the novel keeps returning to: it is 'very unlikely that there existed anywhere in Oceania a copy of a book printed earlier than 1960', 'no book written before approximately 1960 could be translated as a whole', and Winston had not heard the word Ingsoc before 1960. The destruction itself is undated; this entry marks where the surviving record begins.",
+     "binWhy": "The ruling party destroys the written past and replaces it with its own.",
+     "bin": "secret-kept",
+     "facets": {
+      "change": "a written past → a past the Party writes",
+      "mechanism": "consolidation",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "social",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "one-party-state",
+       "repression"
+      ],
+      "outcomes": [
+       "secrecy-state",
+       "ignorance",
+       "suppression"
+      ]
+     }
+    },
+    {
+     "id": "ne-great-purges-1965",
+     "year": 1965,
+     "date": "1965",
+     "title": "Jones, Aaronson and Rutherford are arrested",
+     "description": "The great purges of the middle sixties wipe out the original leaders of the Revolution; by 1970 none is left except Big Brother. Among the last, Jones, Aaronson and Rutherford vanish for a year, confess at show trials to treason with the enemy, are released, rearrested, confess again and are executed.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "politics",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Project Gutenberg Australia: Nineteen Eighty-Four, full text",
+       "url": "https://gutenberg.net.au/ebooks01/0100021.txt"
+      }
+     ],
+     "note": "'It must have been in 1965 that these three had been arrested', and 'By 1970 none of them was left, except Big Brother himself'. The purges are modelled on the Moscow trials of 1936-38.",
+     "binWhy": "The state destroys its own founding generation by arrest, confession and execution.",
+     "bin": "crackdown",
+     "sub": "purge",
+     "facets": {
+      "change": "revolutionary old guard → confessions and executions",
+      "mechanism": "consolidation",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "one-party-state",
+       "repression"
+      ],
+      "outcomes": [
+       "purge",
+       "consolidation"
+      ]
+     }
+    },
+    {
+     "id": "ne-photograph-1973",
+     "year": 1973,
+     "date": "1973",
+     "title": "The photograph that disproves the confessions",
+     "description": "A torn half-page of The Times reaches Winston's desk by accident: a photograph of Jones, Aaronson and Rutherford at a Party function in New York on the very day they confessed to being on Eurasian soil. Frightened, he drops it into the memory hole within minutes. It is the only concrete proof of falsification he ever holds, and O'Brien destroys another copy in front of him eleven years later.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Project Gutenberg Australia: Nineteen Eighty-Four, full text",
+       "url": "https://gutenberg.net.au/ebooks01/0100021.txt"
+      }
+     ],
+     "note": "'In 1973, it must have been'; O'Brien later calls it the photograph Winston 'had chanced upon eleven years ago'. The date on the page is about ten years earlier, i.e. the trial years of the mid-1960s.",
+     "binWhy": "Proof of the lie surfaces and goes back down the memory hole unseen.",
+     "bin": "secret-kept",
+     "facets": {
+      "change": "proof of a fabricated trial → ash in the memory hole",
+      "mechanism": "disclosure",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "local",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "one-party-state",
+       "cover-up"
+      ],
+      "outcomes": [
+       "cover-up",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "ne-alliance-switch-1980",
+     "year": 1980,
+     "date": "1980",
+     "title": "Oceania changes partners",
+     "description": "Oceania, at war with Eastasia and allied with Eurasia, changes sides: now it fights Eurasia alongside Eastasia. Officially the change never happened, the records are altered, and by 1984 Winston is one of the few who remembers that it was only four years before.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "war",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Project Gutenberg Australia: Nineteen Eighty-Four, full text",
+       "url": "https://gutenberg.net.au/ebooks01/0100021.txt"
+      }
+     ],
+     "note": "'It was only four years since Oceania had been at war with Eastasia and in alliance with Eurasia', read in April 1984. The partners change again during Hate Week later that year.",
+     "binWhy": "Enemies become allies overnight, and the record is changed to say they always were.",
+     "bin": "peace-made",
+     "facets": {
+      "change": "war with Eastasia → alliance with Eastasia, war with Eurasia",
+      "mechanism": "negotiation",
+      "actor": "state",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "long-war",
+       "rivalry"
+      ],
+      "outcomes": [
+       "diplomacy",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "ne-winston-1984",
+     "year": 1984,
+     "date": "1984-04-04",
+     "title": "Winston's diary, and the Ministry of Love",
+     "description": "On 4 April Winston Smith, a thirty-nine-year-old clerk in the Records Department, starts a diary; he takes a lover, Julia, and goes to O'Brien, who gives him Goldstein's book and turns out to be Thought Police; the lovers are arrested in their room above the junk shop. During Hate Week the enemy switches from Eurasia to Eastasia in mid-speech. In the Ministry of Love Winston is tortured until he betrays Julia and loves Big Brother.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "'April 4th, 1984' (Winston's first diary entry; he is not sure it is 1984)",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Project Gutenberg Australia: Nineteen Eighty-Four, full text",
+       "url": "https://gutenberg.net.au/ebooks01/0100021.txt"
+      },
+      {
+       "title": "Wikipedia: Nineteen Eighty-Four",
+       "url": "https://en.wikipedia.org/wiki/Nineteen_Eighty-Four"
+      }
+     ],
+     "note": "The date is the first line of the diary, though Winston himself is only 'fairly sure' of the year. The arrest comes later that year, after Hate Week; the imprisonment lasts an unstated time and the final café scene may fall in 1985. The Newspeak appendix, written in the past tense, is read by some critics as a sign that the Party later fell, but the novel never shows it.",
+     "binWhy": "The secret police entrap and break a dissenter; the story ends in his submission.",
+     "bin": "crackdown",
+     "sub": "surveillance-censorship",
+     "facets": {
+      "change": "a clerk's private rebellion → a man who loves Big Brother",
+      "mechanism": "attack",
+      "actor": "state",
+      "position": "inside",
+      "scope": "local",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "one-party-state",
+       "repression",
+       "secrecy"
+      ],
+      "outcomes": [
+       "suppression",
+       "despair"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs in Alternate Past because Orwell's future is now our past: the fork is an atomic war in the 1950s that did not happen, and the story is set in a 1984 we lived through differently. It follows the novel alone (not the 1954 BBC play or the 1984 film). Tiers: every event is T3 (1949-1984); there is no T4 because nothing is dated before the novel's own time, and no T2 or T1 because the only later date, 2050 in the Newspeak appendix, is a Party target, not an event.",
+   "sources": [
+    {
+     "title": "Wikipedia: Nineteen Eighty-Four",
+     "url": "https://en.wikipedia.org/wiki/Nineteen_Eighty-Four"
+    },
+    {
+     "title": "Project Gutenberg Australia: Nineteen Eighty-Four, full text",
+     "url": "https://gutenberg.net.au/ebooks01/0100021.txt"
+    }
+   ]
+  },
+  {
+   "id": "brave-new-world",
+   "title": "Brave New World",
+   "medium": "book",
+   "creator": "Aldous Huxley",
+   "originYear": 1932,
+   "group": "alternate-past",
+   "epoch": "far-future",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 1931,
+    "label": "Little Reuben's sleep-lesson",
+    "delta": "Real: 1931 - radio is new, sleep-learning is not a science, and Ford is a carmaker in the Depression. Fiction: a boy wakes up reciting a lecture he heard asleep, the principle of hypnopaedia is found, and the long road to a world run by conditioning begins.",
+    "inUniverse": "'twenty-three years after Our Ford's first T-Model'",
+    "confidence": "medium",
+    "note": "The novel's world matches ours until 1931: Ford, the Model T, Freud and Shaw are all real. The first thing it describes that did not happen is Little Reuben's case, which the Director dates twenty-three years after the Model T. It is a small event, but it is the one the World State's conditioning descends from, and everything larger (the Nine Years' War of AF 141, World Control) comes long after it. Dates in AF are converted as AF n = 1908 + n, which gives AF 632 = 2540.",
+    "sources": [
+     {
+      "title": "Project Gutenberg Canada: Brave New World (1932 Chatto & Windus text)",
+      "url": "https://gutenberg.ca/ebooks/huxleya-bravenewworld/huxleya-bravenewworld-00-h.html"
+     },
+     {
+      "title": "Wikipedia: Brave New World (AF 632 = AD 2540; AF counted from the Model T, 1908)",
+      "url": "https://en.wikipedia.org/wiki/Brave_New_World"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "The World State is untouched: the two dissenters are shipped to islands, the riot is gassed into calm, and John kills himself.",
+    "asOf": 2540
+   },
+   "events": [
+    {
+     "id": "bnw-model-t-1908",
+     "year": 1908,
+     "date": "1908-10-01",
+     "title": "Ford's Model T goes on sale",
+     "description": "Ford begins producing the Model T, the first car built for mass production on a moving line. The World State will date its calendar from it, and its citizens will make the sign of the T in place of the cross.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "technology",
+     "inUniverse": "the year of 'Our Ford's first T-Model', the start of the era After Ford",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Ford Model T (produced from 1 October 1908)",
+       "url": "https://en.wikipedia.org/wiki/Ford_Model_T"
+      },
+      {
+       "title": "Wikipedia: Brave New World (AF 632 = AD 2540; AF counted from the Model T, 1908)",
+       "url": "https://en.wikipedia.org/wiki/Brave_New_World"
+      }
+     ],
+     "note": "Real history before the fork: the Model T was produced from 1 October 1908. The novel's calendar, AF (After Ford), counts from it. AF years are converted as AF n = 1908 + n, the convention that makes AF 632 fall in 2540 as Wikipedia gives it; counting 1908 as AF 1 instead would move every date back a year.",
+     "binWhy": "Mass production arrives; the fiction later makes it the founding event of its civilisation.",
+     "bin": "new-technology-deployed",
+     "sub": "energy-industry",
+     "facets": {
+      "change": "hand-built cars → the assembly-line car",
+      "mechanism": "invention",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "economic",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "prosperity"
+      ],
+      "outcomes": [
+       "dependency",
+       "new-order"
+      ]
+     }
+    },
+    {
+     "id": "bnw-little-reuben-1931",
+     "year": 1931,
+     "date": "1931",
+     "title": "Little Reuben learns in his sleep",
+     "description": "A Polish boy falls asleep with the radio on and wakes up reciting, word for word, a broadcast lecture by George Bernard Shaw in English, a language he does not know. The doctor who is called writes to the medical press, and the principle of sleep-teaching, hypnopaedia, is discovered, though it will be nearly two centuries before it is put to use.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 2,
+     "kind": "science",
+     "inUniverse": "'only twenty-three years after Our Ford's first T-Model was put on the market'",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Project Gutenberg Canada: Brave New World (1932 Chatto & Windus text)",
+       "url": "https://gutenberg.ca/ebooks/huxleya-bravenewworld/huxleya-bravenewworld-00-h.html"
+      }
+     ],
+     "note": "The Director of Hatcheries dates the case as twenty-three years after the Model T, which is 1931, independent of how AF is converted. It is the earliest fictional event in the book, one year before publication; everything the Director says about the world before it (Ford, Freud, Shaw) is real history.",
+     "binWhy": "A discovery is made that the World State's conditioning will later be built on.",
+     "bin": "breakthrough-science",
+     "sub": "life-sciences",
+     "facets": {
+      "change": "sleep as rest → sleep as a channel for instruction",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "local",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "global-travel"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "bnw-publication-1932",
+     "year": 1932,
+     "date": "1932",
+     "title": "Brave New World is published",
+     "description": "Chatto & Windus publish Huxley's novel in London. He wrote it in 1931.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Brave New World (AF 632 = AD 2540; AF counted from the Model T, 1908)",
+       "url": "https://en.wikipedia.org/wiki/Brave_New_World"
+      },
+      {
+       "title": "Project Gutenberg Canada: Brave New World (1932 Chatto & Windus text)",
+       "url": "https://gutenberg.ca/ebooks/huxleya-bravenewworld/huxleya-bravenewworld-00-h.html"
+      }
+     ],
+     "note": "Publication details from Wikipedia and the Gutenberg Canada edition's title page (London: Chatto & Windus, 1932, first edition).",
+     "binWhy": "A publication, not an event in the story, so it has no bin or facets.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "bnw-nine-years-war-2049",
+     "year": 2049,
+     "date": "2049",
+     "title": "The Nine Years' War begins",
+     "description": "A world war opens with fourteen thousand aeroplanes, anthrax bombs over Berlin's Kurfürstendamm and the Eighth Arrondissement of Paris, poison gases, and a Russian technique for infecting water supplies. Most of the world's historical monuments are destroyed before it ends, and it brings on the great Economic Collapse.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "war",
+     "inUniverse": "A.F. 141",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Project Gutenberg Canada: Brave New World (1932 Chatto & Windus text)",
+       "url": "https://gutenberg.ca/ebooks/huxleya-bravenewworld/huxleya-bravenewworld-00-h.html"
+      },
+      {
+       "title": "Wikipedia: Brave New World (AF 632 = AD 2540; AF counted from the Model T, 1908)",
+       "url": "https://en.wikipedia.org/wiki/Brave_New_World"
+      }
+     ],
+     "note": "Mustapha Mond states 'The Nine Years' War began in A.F. 141.' AF years are converted as AF n = 1908 + n, the convention that makes AF 632 fall in 2540 as Wikipedia gives it; counting 1908 as AF 1 instead would move every date back a year. The war's name gives its length; nothing else about its course is dated.",
+     "binWhy": "A world war begins, fought with biological and chemical weapons against cities.",
+     "bin": "war-breaks-out",
+     "sub": "great-power",
+     "facets": {
+      "change": "an uncontrolled world → nine years of gas and anthrax war",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "arms-race",
+       "rivalry"
+      ],
+      "outcomes": [
+       "mass-death",
+       "collapse",
+       "recession"
+      ]
+     }
+    },
+    {
+     "id": "bnw-world-control-2058",
+     "year": 2058,
+     "date": "2058",
+     "title": "World Control, and the campaign against the Past",
+     "description": "After the war and the Economic Collapse the choice is 'between World Control and destruction', and ten World Controllers take charge. Rule by force fails first: when people refuse compulsory consumption, eight hundred Simple Lifers are machine-gunned at Golders Green and two thousand 'culture fans' gassed in the British Museum. The Controllers turn to slower methods, and to a campaign against the Past that closes the museums, blows up the monuments and suppresses every book published before AF 150.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "politics",
+     "inUniverse": "A.F. 150 (derived)",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Project Gutenberg Canada: Brave New World (1932 Chatto & Windus text)",
+       "url": "https://gutenberg.ca/ebooks/huxleya-bravenewworld/huxleya-bravenewworld-00-h.html"
+      }
+     ],
+     "note": "Derived. A war that began in AF 141 and lasted nine years ends in AF 150, which is also the cutoff date for the suppressed books, so the new order's first campaign is placed there. The massacres fall between the Collapse and the campaign against the Past in Mond's account and are not dated separately; they belong to the first years of World Control. AF years are converted as AF n = 1908 + n, the convention that makes AF 632 fall in 2540 as Wikipedia gives it; counting 1908 as AF 1 instead would move every date back a year.",
+     "binWhy": "The warring nations are replaced by one world government; its early massacres and book-burning are part of the same founding.",
+     "bin": "union-founded",
+     "facets": {
+      "change": "warring nations → ten World Controllers",
+      "mechanism": "consolidation",
+      "actor": "faction",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "war-just-ended",
+       "crisis-economic",
+       "disaster-just-struck"
+      ],
+      "outcomes": [
+       "union",
+       "new-order",
+       "suppression"
+      ]
+     }
+    },
+    {
+     "id": "bnw-soma-2092",
+     "year": 2092,
+     "date": "2092",
+     "title": "Soma goes into production",
+     "description": "In AF 178 the Controllers subsidise two thousand pharmacologists and biochemists to find the perfect drug; six years later soma is in commercial production. It gives a holiday from every bad feeling with none of the drawbacks of alcohol or morphine, and becomes the state's first answer to unhappiness.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "technology",
+     "inUniverse": "A.F. 178, and 'six years later' (AF 184)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Project Gutenberg Canada: Brave New World (1932 Chatto & Windus text)",
+       "url": "https://gutenberg.ca/ebooks/huxleya-bravenewworld/huxleya-bravenewworld-00-h.html"
+      }
+     ],
+     "note": "Both numbers are stated by Mond: the research is funded in AF 178 and the drug is 'being produced commercially' six years later. AF years are converted as AF n = 1908 + n, the convention that makes AF 632 fall in 2540 as Wikipedia gives it; counting 1908 as AF 1 instead would move every date back a year.",
+     "binWhy": "A drug that removes discontent is manufactured and distributed as policy.",
+     "bin": "new-technology-deployed",
+     "sub": "bio-medicine",
+     "facets": {
+      "change": "unrest met with force → a drug for every mood",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "biological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-legitimacy"
+      ],
+      "outcomes": [
+       "dependency",
+       "suppression"
+      ]
+     }
+    },
+    {
+     "id": "bnw-hypnopaedia-2122",
+     "year": 2122,
+     "date": "2122",
+     "title": "Hypnopaedia is used officially",
+     "description": "Sleep-teaching, discovered in Little Reuben's case nearly two centuries before, is adopted by the state, not to teach facts but to teach morals: the same sentences whispered under every child's pillow thousands of times until they become the child's own opinions.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "technology",
+     "inUniverse": "A.F. 214",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Project Gutenberg Canada: Brave New World (1932 Chatto & Windus text)",
+       "url": "https://gutenberg.ca/ebooks/huxleya-bravenewworld/huxleya-bravenewworld-00-h.html"
+      }
+     ],
+     "note": "The Director states 'Hypnopaedia, first used officially in A.F. 214.' Earlier experimenters had failed because they tried to use it for intellectual education. AF years are converted as AF n = 1908 + n, the convention that makes AF 632 fall in 2540 as Wikipedia gives it; counting 1908 as AF 1 instead would move every date back a year.",
+     "binWhy": "A conditioning technique is switched on across the whole system of state nurseries.",
+     "bin": "new-technology-deployed",
+     "sub": "media-networks",
+     "facets": {
+      "change": "taught opinions → opinions installed during sleep",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "social",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "one-party-state"
+      ],
+      "outcomes": [
+       "consolidation",
+       "servitude"
+      ]
+     }
+    },
+    {
+     "id": "bnw-cyprus-2381",
+     "year": 2381,
+     "date": "2381",
+     "title": "Cyprus is resettled with Alphas",
+     "description": "The Controllers clear the island of Cyprus of all its inhabitants and resettle it with twenty-two thousand specially prepared Alphas, handing them all its farms and factories to manage for themselves.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "politics",
+     "inUniverse": "A.F. 473",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Project Gutenberg Canada: Brave New World (1932 Chatto & Windus text)",
+       "url": "https://gutenberg.ca/ebooks/huxleya-bravenewworld/huxleya-bravenewworld-00-h.html"
+      }
+     ],
+     "note": "'It began in A.F. 473', as Mond tells John. AF years are converted as AF n = 1908 + n, the convention that makes AF 632 fall in 2540 as Wikipedia gives it; counting 1908 as AF 1 instead would move every date back a year.",
+     "binWhy": "A new society is planted on emptied land as an experiment in self-rule by the top caste.",
+     "bin": "settlement-founded",
+     "sub": "on-earth",
+     "facets": {
+      "change": "an inhabited island → a colony of twenty-two thousand Alphas",
+      "mechanism": "founding",
+      "actor": "state",
+      "position": "above",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "prosperity",
+       "segregation"
+      ],
+      "outcomes": [
+       "colonisation",
+       "parallel-society"
+      ]
+     }
+    },
+    {
+     "id": "bnw-cyprus-war-2387",
+     "year": 2387,
+     "date": "2387",
+     "title": "The Alphas of Cyprus destroy themselves",
+     "description": "The land goes untended, the factories strike, and everyone schemes for the best jobs; within six years the island is in civil war. When nineteen thousand of the twenty-two thousand are dead, the survivors ask the World Controllers to take the island back, and they do.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "war",
+     "inUniverse": "'within six years' of A.F. 473",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Project Gutenberg Canada: Brave New World (1932 Chatto & Windus text)",
+       "url": "https://gutenberg.ca/ebooks/huxleya-bravenewworld/huxleya-bravenewworld-00-h.html"
+      }
+     ],
+     "note": "The novel says only 'within six years', so AF 479 (2387) is the latest year the text allows, not a stated date. AF years are converted as AF n = 1908 + n, the convention that makes AF 632 fall in 2540 as Wikipedia gives it; counting 1908 as AF 1 instead would move every date back a year.",
+     "binWhy": "A civil war kills most of a population and ends its self-government for good.",
+     "bin": "mass-death",
+     "sub": "war-toll",
+     "facets": {
+      "change": "self-governing Alphas → nineteen thousand dead, rule handed back",
+      "mechanism": "war",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "segregation"
+      ],
+      "outcomes": [
+       "civil-war",
+       "dependency",
+       "mass-death"
+      ]
+     }
+    },
+    {
+     "id": "bnw-savage-2540",
+     "year": 2540,
+     "date": "2540",
+     "title": "The Savage comes to London",
+     "description": "Bernard Marx and Lenina Crowne visit the Savage Reservation in New Mexico and bring back John, the son of the Director of Hatcheries by a woman lost there years before. John becomes a celebrity, then tries to throw away the Deltas' soma ration at a hospital and starts a riot that is quelled with soma vapour. Mustapha Mond exiles Bernard and Helmholtz Watson to islands; John retreats to an abandoned lighthouse and hangs himself.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "'this year of stability, A.F. 632'",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Project Gutenberg Canada: Brave New World (1932 Chatto & Windus text)",
+       "url": "https://gutenberg.ca/ebooks/huxleya-bravenewworld/huxleya-bravenewworld-00-h.html"
+      },
+      {
+       "title": "Wikipedia: Brave New World (AF 632 = AD 2540; AF counted from the Model T, 1908)",
+       "url": "https://en.wikipedia.org/wiki/Brave_New_World"
+      }
+     ],
+     "note": "AF 632 is stated in the opening chapter and on Lenina's medicine labels. AF years are converted as AF n = 1908 + n, the convention that makes AF 632 fall in 2540 as Wikipedia gives it; counting 1908 as AF 1 instead would move every date back a year.",
+     "binWhy": "The state removes its dissenters by exile and absorbs a riot without firing a shot.",
+     "bin": "crackdown",
+     "sub": "purge",
+     "facets": {
+      "change": "three dissenters and a savage → two exiled, one dead",
+      "mechanism": "law",
+      "actor": "state",
+      "position": "inside",
+      "scope": "local",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "prosperity",
+       "taboo"
+      ],
+      "outcomes": [
+       "exile",
+       "suppression"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Filed in Alternate Past because its fork is in our past (1931, one year before publication): the book's history is ours up to Ford and Freud and parts from it with Little Reuben, and every AF date after that converts to a real year. It follows Huxley's 1932 novel only, not Brave New World Revisited (1958, an essay) or the 2020 television series. Tiers: T3 for the Model T, the fork and the publication (1908-1932); T2 for the war, World Control, soma and hypnopaedia (2049-2122); T1 for Cyprus and the story itself (2381-2540). T4 is empty because the Director's history begins with Ford.",
+   "sources": [
+    {
+     "title": "Wikipedia: Brave New World (AF 632 = AD 2540; AF counted from the Model T, 1908)",
+     "url": "https://en.wikipedia.org/wiki/Brave_New_World"
+    },
+    {
+     "title": "Project Gutenberg Canada: Brave New World (1932 Chatto & Windus text)",
+     "url": "https://gutenberg.ca/ebooks/huxleya-bravenewworld/huxleya-bravenewworld-00-h.html"
+    },
+    {
+     "title": "Wikipedia: Ford Model T (produced from 1 October 1908)",
+     "url": "https://en.wikipedia.org/wiki/Ford_Model_T"
+    }
+   ]
+  },
+  {
+   "id": "v-for-vendetta",
+   "title": "V for Vendetta",
+   "medium": "comic",
+   "creator": "Alan Moore (writer); David Lloyd (artist)",
+   "originYear": 1982,
+   "group": "alternate-past",
+   "epoch": "present",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 1983,
+    "label": "Labour wins in 1983 and disarms Britain",
+    "delta": "Real: 9 June 1983 - Thatcher's Conservatives win a landslide, and the nuclear weapons stay. Fiction: Labour wins on unilateral disarmament, the weapons go, and Britain is the one European country not destroyed when the war comes five years later.",
+    "inUniverse": null,
+    "confidence": "medium",
+    "note": "Moore set out the premise himself: he assumed Thatcher would 'obviously lose the 1983 elections' and that a Foot-led Labour government would disarm, which is why Britain survives the war. The comic implies this rather than narrating it, so the fork is the author's stated premise, not a panel. Everything that follows is dated from inside the comic: Evey is born in 1981, the war comes when she is seven (1988), her mother dies in 1991, Norsefire takes power in 1992, and the story runs from 5 November 1997 to November 1998.",
+    "sources": [
+     {
+      "title": "Wikipedia: V for Vendetta (Moore on Labour winning in 1983; the late-1980s war; plot)",
+      "url": "https://en.wikipedia.org/wiki/V_for_Vendetta"
+     },
+     {
+      "title": "V for Vendetta Wiki: Norsefire (1983 election, 1988 war, 1992)",
+      "url": "https://vforvendetta.fandom.com/wiki/Norsefire"
+     },
+     {
+      "title": "Wikipedia: 1983 United Kingdom general election",
+      "url": "https://en.wikipedia.org/wiki/1983_United_Kingdom_general_election"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "unknown",
+    "why": "Norsefire's leaders are dead and London is in riot, with Evey now wearing V's mask and Finch walking away down an empty motorway; what order follows, if any, is never shown.",
+    "asOf": 1998
+   },
+   "events": [
+    {
+     "id": "vv-recession-1981",
+     "year": 1981,
+     "date": "1981",
+     "title": "Evey is born into the recession",
+     "description": "Britain is in a deep recession, with unemployment at a level not seen for fifty years. Evey Hammond is born in London in 1981, and remembers her family as poor from the start.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "economy",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Early 1980s recession (United Kingdom section)",
+       "url": "https://en.wikipedia.org/wiki/Early_1980s_recession"
+      },
+      {
+       "title": "LitCharts: Book 1, Chapter 3 'Victims' (Evey born 1981; war when she was seven; mother dies 1991; Norsefire 1992)",
+       "url": "https://www.litcharts.com/lit/v-for-vendetta/book-1-chapter-3-victims"
+      }
+     ],
+     "note": "Real history before the fork. Evey tells V she was born in 1981 and grew up in a 'horrible recession'; in the real United Kingdom joblessness reached 12.5 per cent by January 1982.",
+     "binWhy": "An economic slump sets the scene the comic's Britain grows out of.",
+     "bin": "market-crash",
+     "facets": {
+      "change": "postwar consensus → mass unemployment",
+      "mechanism": "disaster",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "economic",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-economic"
+      ],
+      "outcomes": [
+       "recession",
+       "radicalisation"
+      ]
+     }
+    },
+    {
+     "id": "vv-warrior-1982",
+     "year": 1982,
+     "date": "1982",
+     "title": "V for Vendetta begins in Warrior",
+     "description": "The first chapters appear in black and white in the British anthology Warrior in 1982. The serial stops when Warrior closes in 1985 with the story unfinished.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: V for Vendetta (Moore on Labour winning in 1983; the late-1980s war; plot)",
+       "url": "https://en.wikipedia.org/wiki/V_for_Vendetta"
+      }
+     ],
+     "note": "Serialised in Warrior 1982-1985, completed in DC's colour series of 1988-89.",
+     "binWhy": "A publication, not an event in the story, so it has no bin or facets.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "vv-labour-1983",
+     "year": 1983,
+     "date": "1983-06",
+     "title": "Thatcher loses; Labour disarms Britain",
+     "description": "In Moore's premise the Conservatives lose the 1983 general election, and Michael Foot's Labour government, committed to complete nuclear disarmament, removes the nuclear weapons from British soil. Five years later that is why no bombs fall on Britain.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 2,
+     "kind": "politics",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: V for Vendetta (Moore on Labour winning in 1983; the late-1980s war; plot)",
+       "url": "https://en.wikipedia.org/wiki/V_for_Vendetta"
+      },
+      {
+       "title": "V for Vendetta Wiki: Norsefire (1983 election, 1988 war, 1992)",
+       "url": "https://vforvendetta.fandom.com/wiki/Norsefire"
+      },
+      {
+       "title": "Wikipedia: 1983 United Kingdom general election",
+       "url": "https://en.wikipedia.org/wiki/1983_United_Kingdom_general_election"
+      }
+     ],
+     "note": "Moore's premise, as Wikipedia summarises it, was that Thatcher's government would 'obviously lose the 1983 elections'. The comic implies rather than narrates it: Britain is the European country the war spared. Real history: on 9 June 1983 the Conservatives won a majority of 144, and Labour's disarmament manifesto was called 'the longest suicide note in history'.",
+     "binWhy": "The government loses power at an election and its successor takes Britain out of the nuclear balance.",
+     "bin": "ruler-falls",
+     "sub": "voted-out",
+     "facets": {
+      "change": "Thatcher's government → Labour and unilateral disarmament",
+      "mechanism": "election",
+      "actor": "movement",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "cold-war",
+       "crisis-economic"
+      ],
+      "outcomes": [
+       "reform",
+       "isolation"
+      ]
+     }
+    },
+    {
+     "id": "vv-nuclear-war-1988",
+     "year": 1988,
+     "date": "1988",
+     "title": "The war",
+     "description": "The United States under President Kennedy and the Soviet Union go to nuclear war. Continental Europe and Africa are destroyed; Britain, without the missiles, is not hit, but the climate turns, London suffers acid rain and flooding, harvests fail and famine follows.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "war",
+     "inUniverse": "'the war', when Evey was seven",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "LitCharts: Book 1, Chapter 3 'Victims' (Evey born 1981; war when she was seven; mother dies 1991; Norsefire 1992)",
+       "url": "https://www.litcharts.com/lit/v-for-vendetta/book-1-chapter-3-victims"
+      },
+      {
+       "title": "Wikipedia: V for Vendetta (Moore on Labour winning in 1983; the late-1980s war; plot)",
+       "url": "https://en.wikipedia.org/wiki/V_for_Vendetta"
+      },
+      {
+       "title": "V for Vendetta Wiki: Norsefire (1983 election, 1988 war, 1992)",
+       "url": "https://vforvendetta.fandom.com/wiki/Norsefire"
+      }
+     ],
+     "note": "Evey was born in 1981 and says the war came when she was seven, which gives 1988; Wikipedia says only 'the late 1980s', and fan references give 1988. Kennedy is Ted Kennedy. The real 1988 saw the INF Treaty in force and the Cold War winding down.",
+     "binWhy": "A nuclear war starts between the superpowers and destroys most of Europe.",
+     "bin": "war-breaks-out",
+     "sub": "great-power",
+     "facets": {
+      "change": "a Cold War balance → a nuclear war that spares only Britain",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "cold-war",
+       "arms-race"
+      ],
+      "outcomes": [
+       "mass-death",
+       "collapse",
+       "isolation"
+      ]
+     }
+    },
+    {
+     "id": "vv-dc-1989",
+     "year": 1989,
+     "date": "1989",
+     "title": "DC completes the story",
+     "description": "DC Comics' ten-issue colour series reprints the Warrior chapters and finishes the story.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: V for Vendetta (Moore on Labour winning in 1983; the late-1980s war; plot)",
+       "url": "https://en.wikipedia.org/wiki/V_for_Vendetta"
+      }
+     ],
+     "note": "Wikipedia gives the DC series as 1988-89; the concluding issues appeared in 1989.",
+     "binWhy": "A publication, not an event in the story, so it has no bin or facets.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "vv-norsefire-1992",
+     "year": 1992,
+     "date": "1992",
+     "title": "Norsefire takes power",
+     "description": "After Evey's mother dies of a fallout disease in 1991, rioting grows and the government slowly collapses. In 1992 what is left of the right-wing parties and the big companies seizes power as Norsefire. It restores order and sends Pakistani and African immigrants, homosexuals and leftists to camps; Evey's father is taken for his youthful socialism.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "politics",
+     "inUniverse": "1992 (Evey's account)",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "LitCharts: Book 1, Chapter 3 'Victims' (Evey born 1981; war when she was seven; mother dies 1991; Norsefire 1992)",
+       "url": "https://www.litcharts.com/lit/v-for-vendetta/book-1-chapter-3-victims"
+      },
+      {
+       "title": "Wikipedia: V for Vendetta (Moore on Labour winning in 1983; the late-1980s war; plot)",
+       "url": "https://en.wikipedia.org/wiki/V_for_Vendetta"
+      }
+     ],
+     "note": "Evey gives both years: her mother's death in 1991 and the takeover in 1992. The collapse between them is part of this entry rather than a separate one because the comic describes it only as the road to 1992.",
+     "binWhy": "A fascist alliance of politicians and corporations takes over a failed state.",
+     "bin": "power-seized",
+     "sub": "coup",
+     "facets": {
+      "change": "a collapsed government → Norsefire's fascist state",
+      "mechanism": "coup",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "disaster-just-struck",
+       "street-violence",
+       "weak-institutions"
+      ],
+      "outcomes": [
+       "one-party-state",
+       "purge",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "vv-larkhill-1993",
+     "year": 1993,
+     "date": "1993",
+     "title": "The man in Room Five burns Larkhill",
+     "description": "At Larkhill Resettlement Camp Dr Delia Surridge tests a hormone compound, Batch 5, on prisoners; almost all of them die. The man in Room Five survives, is allowed to garden, collects ammonia fertiliser, makes napalm and mustard gas, and walks out of the burning camp. The camps are later closed and their records destroyed.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "politics",
+     "inUniverse": "Surridge's diary; the entry about the fire is dated 24 December 1993",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "LitCharts: Book 1, Chapter 11 'The Vortex' (Surridge's diary; the 24 December 1993 entry)",
+       "url": "https://www.litcharts.com/lit/v-for-vendetta/book-1-chapter-11-the-vortex"
+      },
+      {
+       "title": "DC Database: Delia Surridge (Larkhill, Batch 5)",
+       "url": "https://dc.fandom.com/wiki/Delia_Surridge_(V_for_Vendetta)"
+      }
+     ],
+     "note": "Surridge's diary runs through the spring and summer and resumes on 24 December 1993 with the fire; one fan reference dates her arrival at Larkhill to 1992, so the experiments may span both years. The escape is dated to 1993 from the diary.",
+     "binWhy": "The regime imprisons and experiments on minorities and dissidents in its camps.",
+     "bin": "crackdown",
+     "sub": "persecution",
+     "facets": {
+      "change": "political prisoners → experimental subjects, nearly all dead",
+      "mechanism": "attack",
+      "actor": "state",
+      "position": "inside",
+      "scope": "local",
+      "domain": "biological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "one-party-state",
+       "persecution",
+       "segregation"
+      ],
+      "outcomes": [
+       "mass-death",
+       "secrecy-state",
+       "resistance-forms"
+      ]
+     }
+    },
+    {
+     "id": "vv-vendetta-begins-1994",
+     "year": 1994,
+     "date": "1994",
+     "title": "The Larkhill staff start to die",
+     "description": "One by one, nearly all the camp's former guards and staff die in apparent accidents, about fifty people. At the same time V gets inside Fate, the computer that runs Norsefire's surveillance, without anyone noticing.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "LitCharts: Book 1, Chapter 11 'The Vortex' (Surridge's diary; the 24 December 1993 entry)",
+       "url": "https://www.litcharts.com/lit/v-for-vendetta/book-1-chapter-11-the-vortex"
+      },
+      {
+       "title": "LitCharts: V for Vendetta plot summary (5 November 1997 to November 1998)",
+       "url": "https://www.litcharts.com/lit/v-for-vendetta/summary"
+      }
+     ],
+     "note": "Derived: in December 1997 Finch says nearly all the Larkhill staff have died in accidents 'in the last four years', and in 1998 V tells Evey he has had access to Fate for 'the past four years'. Neither is a stated start date.",
+     "binWhy": "A hidden campaign of targeted killings begins against the camp's staff.",
+     "bin": "terror-attack",
+     "sub": "targeted",
+     "facets": {
+      "change": "camp staff in office → fifty 'accidents'",
+      "mechanism": "attack",
+      "actor": "individual",
+      "position": "below",
+      "scope": "local",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "persecution",
+       "secrecy"
+      ],
+      "outcomes": [
+       "hunt-begins",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "vv-parliament-1997",
+     "year": 1997,
+     "date": "1997-11-05",
+     "title": "V blows up Parliament",
+     "description": "On Guy Fawkes Night V rescues sixteen-year-old Evey from secret policemen and blows up the Houses of Parliament. Over the following weeks he drives the state broadcaster Lewis Prothero mad, destroys the Old Bailey, poisons Bishop Lilliman and kills Surridge and the head of the Finger, Derek Almond, all former Larkhill staff.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "5 November 1997",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "LitCharts: V for Vendetta plot summary (5 November 1997 to November 1998)",
+       "url": "https://www.litcharts.com/lit/v-for-vendetta/summary"
+      },
+      {
+       "title": "Wikipedia: V for Vendetta (Moore on Labour winning in 1983; the late-1980s war; plot)",
+       "url": "https://en.wikipedia.org/wiki/V_for_Vendetta"
+      }
+     ],
+     "note": "The date is on the page. Real 5 November 1997: an ordinary Bonfire Night under a new Labour government.",
+     "binWhy": "A lone bomber strikes the symbols of the state and assassinates its officials.",
+     "bin": "terror-attack",
+     "sub": "targeted",
+     "facets": {
+      "change": "an unchallenged regime → its Parliament in ruins",
+      "mechanism": "attack",
+      "actor": "individual",
+      "position": "below",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "one-party-state",
+       "repression"
+      ],
+      "outcomes": [
+       "hunt-begins",
+       "resistance-forms"
+      ]
+     }
+    },
+    {
+     "id": "vv-leader-falls-1998",
+     "year": 1998,
+     "date": "1998-11",
+     "title": "The Leader is shot and the state falls",
+     "description": "V seizes the state broadcaster to call on the people to rule themselves, then on 5 November 1998 destroys the Eye and Ear towers; with Fate blind, riots spread. Detective Finch shoots V, who dies in Evey's arms, and Leader Adam Susan is shot in the street by Rose Almond, the widow of a man V killed. His successors kill one another, and Evey, in V's mask, destroys Downing Street with a train carrying his body.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "politics",
+     "inUniverse": "November 1998",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "LitCharts: V for Vendetta plot summary (5 November 1997 to November 1998)",
+       "url": "https://www.litcharts.com/lit/v-for-vendetta/summary"
+      },
+      {
+       "title": "Wikipedia: V for Vendetta (Moore on Labour winning in 1983; the late-1980s war; plot)",
+       "url": "https://en.wikipedia.org/wiki/V_for_Vendetta"
+      }
+     ],
+     "note": "The broadcast is about four months after the Parliament bombing, in early 1998; the towers fall on 5 November 1998 and the Downing Street explosion follows within days. The 2006 film compresses all of this into one year and changes the ending.",
+     "binWhy": "The ruler is assassinated, his would-be successors kill one another, and the state has no one left in charge.",
+     "bin": "ruler-falls",
+     "sub": "killed",
+     "facets": {
+      "change": "Norsefire's Leader and his heirs → no government at all",
+      "mechanism": "attack",
+      "actor": "individual",
+      "position": "below",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "one-party-state",
+       "repression",
+       "street-violence"
+      ],
+      "outcomes": [
+       "succession-struggle",
+       "collapse",
+       "state-dissolves"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Alternate Past: Moore's near future of 1982 is now our past, and its fork is a British election that went the other way, followed by a war that did not happen. It follows the Moore and Lloyd comic (Warrior 1982-85, DC 1988-89) only; the 2006 film replaces the nuclear war with a plague engineered by the Party and moves the dates, and is left out. Every event is T3 (1981-1998). T4 is empty because the comic's history begins in Evey's lifetime; T2 and T1 are empty because the story stops in 1998.",
+   "sources": [
+    {
+     "title": "Wikipedia: V for Vendetta (Moore on Labour winning in 1983; the late-1980s war; plot)",
+     "url": "https://en.wikipedia.org/wiki/V_for_Vendetta"
+    },
+    {
+     "title": "LitCharts: V for Vendetta plot summary (5 November 1997 to November 1998)",
+     "url": "https://www.litcharts.com/lit/v-for-vendetta/summary"
+    },
+    {
+     "title": "LitCharts: Book 1, Chapter 3 'Victims' (Evey born 1981; war when she was seven; mother dies 1991; Norsefire 1992)",
+     "url": "https://www.litcharts.com/lit/v-for-vendetta/book-1-chapter-3-victims"
+    }
+   ]
+  },
+  {
+   "id": "plot-against-america",
+   "title": "The Plot Against America",
+   "medium": "book",
+   "creator": "Philip Roth",
+   "originYear": 2004,
+   "group": "alternate-past",
+   "epoch": "present",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 1940,
+    "label": "Lindbergh takes the nomination and the White House",
+    "delta": "Real: 1940 - the Republicans nominate Wendell Willkie and Roosevelt wins a third term. Fiction: Charles Lindbergh makes a surprise appearance on the convention's last night, is nominated, and beats Roosevelt in a landslide in November.",
+    "inUniverse": null,
+    "confidence": "high",
+    "note": "Roth keeps every real person and every real date up to the Republican convention of June 1940 and changes only the nominee; his closing 'True Chronology' documents the real history. The novel then rejoins our history in late 1942, a year late, when Roosevelt is back and Pearl Harbor brings America into the war.",
+    "sources": [
+     {
+      "title": "Wikipedia: The Plot Against America",
+      "url": "https://en.wikipedia.org/wiki/The_Plot_Against_America"
+     },
+     {
+      "title": "Wikipedia: 1940 United States presidential election",
+      "url": "https://en.wikipedia.org/wiki/1940_United_States_presidential_election"
+     },
+     {
+      "title": "LitCharts: The Plot Against America plot summary",
+      "url": "https://www.litcharts.com/lit/the-plot-against-america/summary"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "Lindbergh is gone, Wheeler's coup collapses in days, Roosevelt is re-elected and America enters the war against Hitler, though Seldon Wishnow has lost his mother in the riots and the Roths' street is not the same.",
+    "asOf": 1942
+   },
+   "events": [
+    {
+     "id": "pa-flight-1927",
+     "year": 1927,
+     "date": "1927-05-21",
+     "title": "Lindbergh flies to Paris",
+     "description": "Charles Lindbergh, a twenty-five-year-old airmail pilot, flies alone and nonstop from New York to Paris in the Spirit of St. Louis in about thirty-three hours, and becomes the most famous man in the world. The fame is what makes him a candidate thirteen years later.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "technology",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Charles Lindbergh (1927 flight; 1932 kidnapping)",
+       "url": "https://en.wikipedia.org/wiki/Charles_Lindbergh"
+      }
+     ],
+     "note": "Real history, which Roth's novel and its closing 'True Chronology' rely on: the flight of 20-21 May 1927.",
+     "binWhy": "A first flight into untried distance makes an aviator a national hero.",
+     "bin": "voyage-into-unknown",
+     "sub": "earth-expedition",
+     "facets": {
+      "change": "an unknown airmail pilot → the first solo nonstop Atlantic crossing",
+      "mechanism": "expedition",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "technological-race"
+      ],
+      "outcomes": [
+       "prestige",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "pa-kidnapping-1932",
+     "year": 1932,
+     "date": "1932-03-01",
+     "title": "The Lindbergh baby is kidnapped",
+     "description": "The Lindberghs' twenty-month-old son, Charles Jr., is taken from his cot and murdered, in what the press calls the crime of the century. In the novel the kidnapping returns in 1942, when rumour and the regime's own propaganda claim the child is still alive.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Charles Lindbergh (1927 flight; 1932 kidnapping)",
+       "url": "https://en.wikipedia.org/wiki/Charles_Lindbergh"
+      },
+      {
+       "title": "LitCharts: Chapter 8 'Bad Days' (the newsreel chronology, 6-16 October 1942)",
+       "url": "https://www.litcharts.com/lit/the-plot-against-america/chapter-8-bad-days"
+      }
+     ],
+     "note": "Real history: 1 March 1932. In the novel's October 1942 the newspapers run the headline 'AGAIN!' over the child's photograph, and Aunt Evelyn repeats Rabbi Bengelsdorf's claim that the Nazis took the boy and used him to control his father.",
+     "binWhy": "A targeted crime against a public figure's family becomes the lever for later conspiracy theories.",
+     "bin": "terror-attack",
+     "sub": "targeted",
+     "facets": {
+      "change": "a hero's family → a murdered child and a national obsession",
+      "mechanism": "attack",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "national",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "prosperity"
+      ],
+      "outcomes": [
+       "hunt-begins",
+       "fervour"
+      ]
+     }
+    },
+    {
+     "id": "pa-war-1939",
+     "year": 1939,
+     "date": "1939-09",
+     "title": "War in Europe; Lindbergh speaks against intervention",
+     "description": "Germany invades Poland and Britain and France declare war. On 15 September Lindbergh makes his first national radio address against American involvement, and becomes the leading voice of the movement to keep the United States out.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "war",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: America First Committee (Lindbergh's first radio address, 15 September 1939)",
+       "url": "https://en.wikipedia.org/wiki/America_First_Committee"
+      }
+     ],
+     "note": "Real history before the fork. The America First Committee was founded on 4 September 1940; in reality Lindbergh joined its national committee in April 1941 and gave his Des Moines speech blaming Jews for pushing America to war on 11 September 1941, a speech the novel's Lindbergh never needs to give.",
+     "binWhy": "The Second World War begins, and with it the American argument over whether to join it.",
+     "bin": "war-breaks-out",
+     "sub": "great-power",
+     "facets": {
+      "change": "an uneasy peace → war in Europe and an isolationist movement at home",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "rivalry",
+       "arms-race"
+      ],
+      "outcomes": [
+       "war-of-expansion",
+       "radicalisation"
+      ]
+     }
+    },
+    {
+     "id": "pa-election-1940",
+     "year": 1940,
+     "date": "1940-11",
+     "title": "Lindbergh beats Roosevelt",
+     "description": "Lindbergh makes a surprise appearance on the last night of the Republican convention in June and is nominated. On the slogan 'Vote for Lindbergh, or vote for war' he beats Franklin Roosevelt in a landslide in November, with the isolationist Senator Burton K. Wheeler as his running mate.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "politics",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: The Plot Against America",
+       "url": "https://en.wikipedia.org/wiki/The_Plot_Against_America"
+      },
+      {
+       "title": "LitCharts: The Plot Against America plot summary",
+       "url": "https://www.litcharts.com/lit/the-plot-against-america/summary"
+      },
+      {
+       "title": "Wikipedia: 1940 United States presidential election",
+       "url": "https://en.wikipedia.org/wiki/1940_United_States_presidential_election"
+      }
+     ],
+     "note": "Real 1940: the Republicans nominated Wendell Willkie on the sixth ballot at Philadelphia, and Roosevelt won a third term on 5 November with 449 electoral votes to 82. The novel's narrator, Philip, is seven that autumn.",
+     "binWhy": "A national hero with Nazi sympathies takes the presidency at the ballot box on a platform of staying out of the war.",
+     "bin": "power-seized",
+     "sub": "strongman-legal",
+     "facets": {
+      "change": "Roosevelt's third term → President Lindbergh",
+      "mechanism": "election",
+      "actor": "movement",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-legitimacy",
+       "rivalry"
+      ],
+      "outcomes": [
+       "isolation",
+       "radicalisation"
+      ]
+     }
+    },
+    {
+     "id": "pa-iceland-1941",
+     "year": 1941,
+     "date": "1941",
+     "title": "The Iceland Understanding",
+     "description": "Weeks after his inauguration Lindbergh meets Hitler in Iceland and signs an agreement that the United States will not interfere in Europe; a matching Hawaii Understanding with Japan leaves Asia to Tokyo. At home a new Office of American Absorption begins sending Jewish boys to live with farm families in the heartland, and Philip's cousin Alvin goes to Canada to fight for Britain.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "politics",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: The Plot Against America",
+       "url": "https://en.wikipedia.org/wiki/The_Plot_Against_America"
+      },
+      {
+       "title": "Smithsonian: The true history behind The Plot Against America",
+       "url": "https://www.smithsonianmag.com/history/true-history-behind-plot-against-america-180974365/"
+      },
+      {
+       "title": "LitCharts: The Plot Against America plot summary",
+       "url": "https://www.litcharts.com/lit/the-plot-against-america/summary"
+      }
+     ],
+     "note": "The novel dates the Understanding to the weeks after the January 1941 inauguration; the Just Folks summer programme and Alvin's departure (June 1941) fall in the same year. In real 1941 Lend-Lease passed in March, and in December Japan attacked Pearl Harbor.",
+     "binWhy": "The United States signs non-aggression understandings with Germany and Japan.",
+     "bin": "peace-made",
+     "facets": {
+      "change": "an unaligned neutral → America at peace with Hitler and Japan",
+      "mechanism": "negotiation",
+      "actor": "state",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "rivalry",
+       "persecution"
+      ],
+      "outcomes": [
+       "diplomacy",
+       "isolation",
+       "collaboration"
+      ]
+     }
+    },
+    {
+     "id": "pa-bad-days-1942",
+     "year": 1942,
+     "date": "1942-10-07",
+     "title": "Lindbergh vanishes, and the country turns back",
+     "description": "Homestead 42 relocates Jewish families from the cities to the interior. Walter Winchell runs for president against Lindbergh; his tour is met by anti-Jewish riots in Boston and Detroit that spread through the Midwest, and he is assassinated in Louisville on 5 October. On 7 October Lindbergh's plane disappears; Acting President Wheeler declares martial law, riots on 12 October kill 122, and prominent Jews are arrested, until Anne Morrow Lindbergh's broadcast on 16 October brings Wheeler down. Roosevelt wins an emergency election in November, and the next month Japan attacks Pearl Harbor.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "politics",
+     "inUniverse": "the newsreel chronology of 6-16 October 1942",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "LitCharts: Chapter 8 'Bad Days' (the newsreel chronology, 6-16 October 1942)",
+       "url": "https://www.litcharts.com/lit/the-plot-against-america/chapter-8-bad-days"
+      },
+      {
+       "title": "Wikipedia: The Plot Against America",
+       "url": "https://en.wikipedia.org/wiki/The_Plot_Against_America"
+      },
+      {
+       "title": "LitCharts: The Plot Against America plot summary",
+       "url": "https://www.litcharts.com/lit/the-plot-against-america/summary"
+      }
+     ],
+     "note": "Every date comes from the novel's own day-by-day chronology in chapter 8; the election falls 'two and a half weeks' after 16 October and Pearl Harbor 'the next month', i.e. December 1942 instead of December 1941. The whole climax falls in one year, so it is one entry; Lindbergh is never found.",
+     "binWhy": "The president vanishes, his deputy's coup under martial law fails within days, and the old president returns; the crackdown and the pogroms are this year's other moments.",
+     "bin": "ruler-falls",
+     "sub": "dies-or-vanishes",
+     "facets": {
+      "change": "President Lindbergh → vanished, Wheeler deposed, Roosevelt back",
+      "mechanism": "death",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "persecution",
+       "street-violence",
+       "crisis-legitimacy"
+      ],
+      "outcomes": [
+       "succession-struggle",
+       "purge",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "pa-publication-2004",
+     "year": 2004,
+     "date": "2004-10",
+     "title": "The Plot Against America is published",
+     "description": "Roth's novel is published with a postscript, 'A True Chronology of the Major Figures', that separates the history from the invention.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: The Plot Against America",
+       "url": "https://en.wikipedia.org/wiki/The_Plot_Against_America"
+      },
+      {
+       "title": "ReadingGroupGuides: The Plot Against America discussion guide (the postscript 'A True Chronology of the Major Figures')",
+       "url": "https://www.readinggroupguides.com/reviews/the-plot-against-america/guide"
+      }
+     ],
+     "note": "Publication in October 2004, per Wikipedia. HBO's six-part adaptation by David Simon and Ed Burns followed in 2020.",
+     "binWhy": "A publication, not an event in the story, so it has no bin or facets.",
+     "bin": null,
+     "facets": null
+    }
+   ],
+   "groupingNote": "Alternate Past in its plainest form: one American election in 1940 goes the other way, and the story is how close the country came to fascism before history snapped back two years later. It follows Roth's 2004 novel; the 2020 HBO series is not used for dates. The pre-fork events (1927, 1932, 1939) are real history that Roth recounts in his 'True Chronology'. The novel spans only June 1940 to late 1942, so after the fork there are just three entries, one per year, and the whole 1942 climax is a single entry. Every story event is T3 (1927-1942); T4, T2 and T1 are empty because the history is Lindbergh's life and the novel ends in 1942.",
+   "sources": [
+    {
+     "title": "Wikipedia: The Plot Against America",
+     "url": "https://en.wikipedia.org/wiki/The_Plot_Against_America"
+    },
+    {
+     "title": "LitCharts: The Plot Against America plot summary",
+     "url": "https://www.litcharts.com/lit/the-plot-against-america/summary"
+    },
+    {
+     "title": "Smithsonian: The true history behind The Plot Against America",
+     "url": "https://www.smithsonianmag.com/history/true-history-behind-plot-against-america-180974365/"
+    }
+   ]
+  },
+  {
+   "id": "metal-gear",
+   "title": "Metal Gear",
+   "medium": "game",
+   "creator": "Hideo Kojima (Konami)",
+   "originYear": 1987,
+   "group": "alternate-past",
+   "epoch": "present",
+   "franchiseStatus": "ongoing",
+   "divergence": {
+    "year": 1964,
+    "label": "A nuclear shell is fired on Soviet soil",
+    "delta": "Real: in 1964 the superpowers are stepping back from the Cuban crisis, the hotline is a year old, and Khrushchev is removed in October by his colleagues. Fiction: in August an American-made nuclear shell destroys a Soviet design bureau. Johnson settles it by having his own agent kill the woman blamed, and her secret fortune funds the group that will run America's information for fifty years.",
+    "inUniverse": "Virtuous Mission, 24 August 1964; Operation Snake Eater, 30 August - 2 September 1964",
+    "confidence": "high",
+    "note": "The saga has older hidden history: the Philosophers, a secret society of American, Soviet and Chinese power-brokers, and The Boss's wartime Cobra unit. None of it contradicts the public record until 1964, when a nuclear weapon goes off. The fork is placed there, and the earlier backstory is left out of the chain rather than filed as prehistory.",
+    "sources": [
+     {
+      "title": "Metal Gear wiki: Operation Snake Eater (August 30 - September 2, 1964)",
+      "url": "https://metalgear.fandom.com/wiki/Operation_Snake_Eater"
+     },
+     {
+      "title": "Metal Gear wiki: Virtuous Mission (August 24, 1964)",
+      "url": "https://metalgear.fandom.com/wiki/Virtuous_Mission"
+     },
+     {
+      "title": "Wikipedia: Metal Gear Solid 3: Snake Eater",
+      "url": "https://en.wikipedia.org/wiki/Metal_Gear_Solid_3:_Snake_Eater"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "Metal Gear Solid 4 ends with the Patriots' AIs destroyed, the machine-run war economy switched off, and Snake choosing to live out his remaining time in peace.",
+    "asOf": 2014
+   },
+   "events": [
+    {
+     "id": "mg-snake-eater-1964",
+     "year": 1964,
+     "date": "1964-08-24/09-02",
+     "title": "Operation Snake Eater",
+     "description": "A CIA agent, Naked Snake, is sent into the Soviet Union to bring out a weapons designer; his mentor, The Boss, defects in the middle of the mission, and a GRU colonel, Volgin, fires one of the American nuclear shells she brought with her at the design bureau. To prove America had no part in it, Snake is sent back: he destroys the Shagohod, a nuclear-launch tank, and kills The Boss, and Washington names him Big Boss and her a traitor, and buries the truth that her defection was ordered.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "The Virtuous Mission and Operation Snake Eater",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Metal Gear wiki: Operation Snake Eater (August 30 - September 2, 1964)",
+       "url": "https://metalgear.fandom.com/wiki/Operation_Snake_Eater"
+      },
+      {
+       "title": "Metal Gear wiki: Virtuous Mission (August 24, 1964)",
+       "url": "https://metalgear.fandom.com/wiki/Virtuous_Mission"
+      },
+      {
+       "title": "Wikipedia: Metal Gear Solid 3: Snake Eater",
+       "url": "https://en.wikipedia.org/wiki/Metal_Gear_Solid_3:_Snake_Eater"
+      }
+     ],
+     "note": "The games date the Virtuous Mission to 24 August 1964 and Operation Snake Eater to 30 August - 2 September. The game has Khrushchev phone Johnson over the blast; in real history that August has no nuclear incident, and Khrushchev falls in October to a faction the game ties to Volgin's backers. The half of the Philosophers' Legacy that reaches America funds everything after.",
+     "binWhy": "A covert war ends with its truth hidden: the hero's victory is built on a lie about the woman he killed.",
+     "bin": "secret-kept",
+     "facets": {
+      "change": "a nuclear blast on Soviet soil → a hero, a dead 'traitor' and a buried truth",
+      "mechanism": "attack",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "cold-war",
+       "arms-race",
+       "secrecy"
+      ],
+      "outcomes": [
+       "cover-up",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "mg-patriots-1970",
+     "year": 1970,
+     "date": "1970",
+     "title": "The Patriots are founded",
+     "description": "Zero, Snake's former commander, uses America's share of the Philosophers' Legacy to found a secret organisation with Big Boss, the double agent Ocelot, the spy EVA, the doctor Para-Medic and the engineer Sigint. It will be called Cipher and later the Patriots, and its aim is to unite the world by controlling what it knows.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Cipher / the Patriots",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Metal Gear wiki: Patriots (originated in 1970; AIs as Zero's successors by 2000)",
+       "url": "https://metalgear.fandom.com/wiki/Patriots"
+      }
+     ],
+     "note": "The Metal Gear wiki dates the group's origin to 1970, as a reorganisation of the American Philosophers; the founding is told in Metal Gear Solid 4 and the Snake Eater epilogue.",
+     "binWhy": "A secret society is founded that will run American power for forty years.",
+     "bin": "new-institution",
+     "facets": {
+      "change": "a wartime fortune → a secret government",
+      "mechanism": "founding",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "cold-war",
+       "hidden-society",
+       "secrecy"
+      ],
+      "outcomes": [
+       "secrecy-state",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "mg-enfants-1972",
+     "year": 1972,
+     "date": "1972",
+     "title": "Les Enfants Terribles: Big Boss is cloned",
+     "description": "A government project clones Big Boss. Two sons are born, later called Solid Snake and Liquid Snake, and a third clone, later Solidus, follows. Big Boss learns of it only afterwards and breaks with Zero, and the clones grow up to be the saga's heroes and villains.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Les Enfants Terribles",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Metal Gear wiki: Les Enfants Terribles (clones born 1972)",
+       "url": "https://metalgear.fandom.com/wiki/Les_Enfants_Terribles"
+      },
+      {
+       "title": "Metal Gear wiki: Patriots (originated in 1970; AIs as Zero's successors by 2000)",
+       "url": "https://metalgear.fandom.com/wiki/Patriots"
+      }
+     ],
+     "note": "The Metal Gear wiki gives 1972 for the twins' birth; the break between Big Boss and Zero is dated the same year.",
+     "binWhy": "Children are born on whom the saga turns.",
+     "bin": "chosen-one",
+     "facets": {
+      "change": "one legendary soldier → three cloned sons",
+      "mechanism": "birth",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "biological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "hidden-society"
+      ],
+      "outcomes": [
+       "new-actors",
+       "rivalry",
+       "succession-struggle"
+      ]
+     }
+    },
+    {
+     "id": "mg-peace-walker-1974",
+     "year": 1974,
+     "date": "1974-11/12",
+     "title": "Peace Walker: the machine that would not fire",
+     "description": "In Costa Rica, Big Boss's mercenary army, Militaires Sans Frontières, fights a CIA-backed company building Peace Walker, an AI-controlled nuclear launcher meant to make deterrence automatic. When its builder tries to fire a real warhead to prove it works, the AI, modelled on The Boss, takes over and drowns the machine in Lake Cocibolca. MSF keeps its own walking nuclear tank, Metal Gear ZEKE.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "The Peace Walker Incident",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Metal Gear wiki: Peace Walker Incident (November-December 1974)",
+       "url": "https://metalgear.fandom.com/wiki/Peace_Walker_Incident"
+      },
+      {
+       "title": "Wikipedia: Metal Gear Solid: Peace Walker",
+       "url": "https://en.wikipedia.org/wiki/Metal_Gear_Solid:_Peace_Walker"
+      }
+     ],
+     "note": "Dated November-December 1974. In real 1974 the nuclear question is the SALT talks and India's first test; no machine holds a launch decision.",
+     "binWhy": "An artificial intelligence overrides its makers to stop a nuclear launch.",
+     "bin": "machine-awakens",
+     "sub": "escapes-control",
+     "facets": {
+      "change": "automatic deterrence → a machine that refuses to fire",
+      "mechanism": "uprising",
+      "actor": "machine",
+      "position": "below",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "arms-race",
+       "cold-war",
+       "machine-dependency"
+      ],
+      "outcomes": [
+       "turning-point",
+       "arms-race",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "mg-ground-zeroes-1975",
+     "year": 1975,
+     "date": "1975-03-16",
+     "title": "Mother Base destroyed",
+     "description": "XOF, a secret unit of Cipher under Skull Face, attacks MSF's offshore base in the Caribbean while its forces are away, using a staged nuclear inspection as cover, and destroys it. Big Boss is left in a coma for nine years.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "The Ground Zeroes Incident",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Metal Gear wiki: Ground Zeroes Incident (March 16, 1975)",
+       "url": "https://metalgear.fandom.com/wiki/Ground_Zeroes_Incident"
+      }
+     ],
+     "note": "Dated 16 March 1975 (Ground Zeroes).",
+     "binWhy": "A targeted attack wipes out a private army and sets off the revenge that drives the next decade.",
+     "bin": "terror-attack",
+     "sub": "targeted",
+     "facets": {
+      "change": "a mercenary nation at sea → a burning platform",
+      "mechanism": "attack",
+      "actor": "faction",
+      "position": "outside",
+      "scope": "local",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "secrecy",
+       "rivalry"
+      ],
+      "outcomes": [
+       "mass-death",
+       "scattering",
+       "hunt-begins"
+      ]
+     }
+    },
+    {
+     "id": "mg-phantom-pain-1984",
+     "year": 1984,
+     "date": "1984-03/12",
+     "title": "The Phantom Pain: a bomb for everyone",
+     "description": "Woken from his coma, 'Big Boss' builds a new army, Diamond Dogs, and hunts Skull Face across Afghanistan and Central Africa. Skull Face's plan is a parasite that kills English speakers, and a Metal Gear, Sahelanthropus, meant to put nuclear weapons within every nation's reach; he is stopped. The commander learns he is not Big Boss but a medic remade as his double, while the real Big Boss builds Outer Heaven.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "The Phantom Pain Incident",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Metal Gear wiki: Phantom Pain Incident (March 21 - late 1984)",
+       "url": "https://metalgear.fandom.com/wiki/Phantom_Pain_Incident"
+      },
+      {
+       "title": "Wikipedia: Metal Gear Solid V: The Phantom Pain",
+       "url": "https://en.wikipedia.org/wiki/Metal_Gear_Solid_V:_The_Phantom_Pain"
+      }
+     ],
+     "note": "Runs from 21 March to late 1984. Real 1984 has the Soviet war in Afghanistan and the Angolan civil war, both used as backdrop.",
+     "binWhy": "A weapon is built to spread nuclear deterrence to every nation.",
+     "bin": "doomsday-weapon",
+     "facets": {
+      "change": "two nuclear blocs → a plan to put the bomb in every hand",
+      "mechanism": "invention",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": 1,
+       "population": -1
+      },
+      "preconditions": [
+       "arms-race",
+       "cold-war",
+       "secrecy"
+      ],
+      "outcomes": [
+       "arms-race",
+       "hunt-begins",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "mg-publication-1987",
+     "year": 1987,
+     "date": "1987",
+     "title": "Metal Gear is released",
+     "description": "Hideo Kojima's stealth game for the MSX2 sends a rookie, Solid Snake, into the mercenary state of Outer Heaven to destroy a walking nuclear tank. It is set in 1995, eight years ahead of its release.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Metal Gear (series; setting year of each game)",
+       "url": "https://en.wikipedia.org/wiki/Metal_Gear"
+      }
+     ],
+     "note": "The first entry in the saga. Most of the chronology below was written backwards from it, in prequels released between 2004 and 2015.",
+     "binWhy": "A release date, not an event in the world's history, so it takes no bin.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "mg-outer-heaven-1995",
+     "year": 1995,
+     "date": "1995",
+     "title": "Outer Heaven falls",
+     "description": "Outer Heaven, a mercenary state in South Africa, is building a nuclear-armed Metal Gear. FOXHOUND sends its rookie, Solid Snake, who destroys the machine and kills the man he takes for Big Boss: in fact the double, Venom Snake.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "The Outer Heaven Uprising",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Metal Gear wiki: Outer Heaven Uprising (1995)",
+       "url": "https://metalgear.fandom.com/wiki/Outer_Heaven_Uprising"
+      },
+      {
+       "title": "Wikipedia: Metal Gear (series; setting year of each game)",
+       "url": "https://en.wikipedia.org/wiki/Metal_Gear"
+      }
+     ],
+     "note": "Stated as 1995 (Metal Gear, 1987).",
+     "binWhy": "One raid settles the conflict with the mercenary state.",
+     "bin": "decisive-victory",
+     "facets": {
+      "change": "a nuclear-armed mercenary state → a destroyed one",
+      "mechanism": "war",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "arms-race",
+       "rivalry"
+      ],
+      "outcomes": [
+       "turning-point",
+       "succession-struggle"
+      ]
+     }
+    },
+    {
+     "id": "mg-zanzibar-1999",
+     "year": 1999,
+     "date": "1999-12-24",
+     "title": "Big Boss falls at Zanzibar Land",
+     "description": "Zanzibar Land, a Central Asian military state run by the real Big Boss, holds the world hostage with a stolen oil-producing microbe and Metal Gear D. Snake destroys the machine and defeats Big Boss in single combat on Christmas Eve, and the government takes his body.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "The Zanzibar Land Disturbance",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Metal Gear wiki: Zanzibar Land Disturbance (December 24, 1999)",
+       "url": "https://metalgear.fandom.com/wiki/Zanzibar_Land_Disturbance"
+      },
+      {
+       "title": "Wikipedia: Metal Gear (series; setting year of each game)",
+       "url": "https://en.wikipedia.org/wiki/Metal_Gear"
+      }
+     ],
+     "note": "Dated 24 December 1999 (Metal Gear 2). Metal Gear Solid 4 later reveals Big Boss survived and was kept alive.",
+     "binWhy": "The leader of the rebel state is struck down, and control of his body and genes is open.",
+     "bin": "ruler-falls",
+     "sub": "killed",
+     "facets": {
+      "change": "a soldier-king → a body in government hands",
+      "mechanism": "death",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "arms-race",
+       "rivalry",
+       "resource-dependency"
+      ],
+      "outcomes": [
+       "succession-struggle",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "mg-publication-2004",
+     "year": 2004,
+     "date": "2004-11-17",
+     "title": "Metal Gear Solid 3: Snake Eater is released",
+     "description": "The prequel that sets the saga's fork: Naked Snake in the Soviet jungle in 1964. It was released in North America on 17 November 2004 and in Japan on 16 December.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Metal Gear Solid 3: Snake Eater",
+       "url": "https://en.wikipedia.org/wiki/Metal_Gear_Solid_3:_Snake_Eater"
+      }
+     ],
+     "note": "A remake, Metal Gear Solid Delta: Snake Eater, followed in 2025.",
+     "binWhy": "A release date, not an event in the world's history, so it takes no bin.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "mg-shadow-moses-2005",
+     "year": 2005,
+     "date": "2005-02-28",
+     "title": "Shadow Moses",
+     "description": "FOXHOUND and its Genome soldiers, troops enhanced with Big Boss's genes, seize a nuclear disposal facility in Alaska under Liquid Snake. They threaten a strike with the secret Metal Gear REX unless they are given Big Boss's remains. Solid Snake stops them, but Ocelot sells REX's design, and walking nuclear tanks spread worldwide.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "The Shadow Moses Incident",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Metal Gear wiki: Shadow Moses Incident (February 28 - March 1, 2005)",
+       "url": "https://metalgear.fandom.com/wiki/Shadow_Moses_Incident"
+      },
+      {
+       "title": "Wikipedia: Metal Gear (series; setting year of each game)",
+       "url": "https://en.wikipedia.org/wiki/Metal_Gear"
+      }
+     ],
+     "note": "Dated 28 February - 1 March 2005 (Metal Gear Solid, 1998).",
+     "binWhy": "Soldiers bred and conditioned by the state turn on it and seize its nuclear weapons.",
+     "bin": "uprising",
+     "sub": "armed-rebellion",
+     "facets": {
+      "change": "a secret weapon → a nuclear hostage crisis and a black market",
+      "mechanism": "uprising",
+      "actor": "faction",
+      "position": "below",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "arms-race",
+       "secrecy",
+       "cover-up"
+      ],
+      "outcomes": [
+       "arms-race",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "mg-tanker-2007",
+     "year": 2007,
+     "date": "2007-08-08",
+     "title": "The tanker in the Hudson",
+     "description": "Snake and Otacon board a tanker in New York to expose a new Marine Corps Metal Gear, RAY. Ocelot steals it, the tanker sinks, the Hudson fills with oil, and the Patriots blame Snake. The cleanup plant they build, the Big Shell, is cover for building Arsenal Gear, a fortress for the AI that filters the world's information.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "The Tanker Incident",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Metal Gear wiki: Tanker Incident (August 8, 2007)",
+       "url": "https://metalgear.fandom.com/wiki/Tanker_Incident"
+      },
+      {
+       "title": "Metal Gear wiki: Patriots (originated in 1970; AIs as Zero's successors by 2000)",
+       "url": "https://metalgear.fandom.com/wiki/Patriots"
+      }
+     ],
+     "note": "Dated 8 August 2007 (Metal Gear Solid 2, 2001; readable on the tanker's photo terminal).",
+     "binWhy": "A staged disaster covers a secret project, and the man who saw it is framed.",
+     "bin": "secret-kept",
+     "facets": {
+      "change": "a stolen weapon → a staged spill and a framed man",
+      "mechanism": "attack",
+      "actor": "faction",
+      "position": "above",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "hidden-society",
+       "cover-up"
+      ],
+      "outcomes": [
+       "cover-up",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "mg-big-shell-2009",
+     "year": 2009,
+     "date": "2009-04-29",
+     "title": "The Big Shell: the Patriots are machines",
+     "description": "Rebels under Solidus Snake seize the Big Shell, and a rookie, Raiden, learns the whole crisis was staged by the Patriots as an exercise. The Patriots turn out to be artificial intelligences that have run the United States in the founders' place and mean to control human culture by filtering digital information; their fortress, Arsenal Gear, crashes into Manhattan.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "The Big Shell Incident",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Metal Gear wiki: Big Shell Incident (April 29-30, 2009)",
+       "url": "https://metalgear.fandom.com/wiki/Big_Shell_Incident"
+      },
+      {
+       "title": "Metal Gear wiki: Patriots (originated in 1970; AIs as Zero's successors by 2000)",
+       "url": "https://metalgear.fandom.com/wiki/Patriots"
+      }
+     ],
+     "note": "Dated 29-30 April 2009. The Metal Gear wiki notes that by 2000 the AIs had become Zero's successors.",
+     "binWhy": "The people inside the plot learn who has been ruling them, and what.",
+     "bin": "truth-revealed",
+     "sub": "hidden-world",
+     "facets": {
+      "change": "an unseen government → an AI that edits what people know",
+      "mechanism": "disclosure",
+      "actor": "individual",
+      "position": "below",
+      "scope": "national",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "hidden-society",
+       "machine-dependency"
+      ],
+      "outcomes": [
+       "revelation",
+       "resistance-forms"
+      ]
+     }
+    },
+    {
+     "id": "mg-guns-2014",
+     "year": 2014,
+     "date": "2014",
+     "title": "Guns of the Patriots: the system goes dark",
+     "description": "War is now a business run by private military companies, and their nanomachine-controlled soldiers are monitored by the Patriots' SOP system, which Liquid Ocelot seizes. An aged Solid Snake uploads a virus that, rewritten by a young hacker, destroys the Patriots' AIs instead of the world's networks. Big Boss, alive after all, returns to end Zero's life and his own.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "The Guns of the Patriots Incident",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Metal Gear wiki: Guns of the Patriots Incident (2014)",
+       "url": "https://metalgear.fandom.com/wiki/Guns_of_the_Patriots_Incident"
+      },
+      {
+       "title": "Wikipedia: Metal Gear (series; setting year of each game)",
+       "url": "https://en.wikipedia.org/wiki/Metal_Gear"
+      }
+     ],
+     "note": "2014, month unconfirmed (Metal Gear Solid 4, 2008). The series continues to 2018 in Metal Gear Rising, a spin-off; this lineage ends where the saga's main line does.",
+     "binWhy": "The hidden rulers are destroyed, and who governs next is open.",
+     "bin": "ruler-falls",
+     "sub": "overthrown",
+     "facets": {
+      "change": "a war economy run by machines → the machines shut down",
+      "mechanism": "attack",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "machine-dependency",
+       "hidden-society",
+       "long-war"
+      ],
+      "outcomes": [
+       "succession-struggle",
+       "opening",
+       "new-order"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs in the alternate past because its fork, a 1964 nuclear incident and the secret government founded on it, sits in the real Cold War, and each later game rewrites a real decade: Central America in 1974, Afghanistan and Angola in 1984, and the late-1990s wave of post-Soviet states. The continuity is the Kojima-directed main saga. Portable Ops (1970) and Rising (2018) are spin-offs and are left out; Rising, not Guns of the Patriots, is the one set in 2018. The dates are the games' own, from on-screen text as collected by the Metal Gear wiki. Coverage: T3 holds 1964 to 1999 and T2 holds 2005 to 2014. There is no T4 because the Philosophers' older history is deliberately left out, and no T1 because the saga ends in 2014.",
+   "sources": [
+    {
+     "title": "Wikipedia: Metal Gear (series; setting year of each game)",
+     "url": "https://en.wikipedia.org/wiki/Metal_Gear"
+    },
+    {
+     "title": "Wikipedia: Metal Gear Solid 3: Snake Eater",
+     "url": "https://en.wikipedia.org/wiki/Metal_Gear_Solid_3:_Snake_Eater"
+    },
+    {
+     "title": "Metal Gear wiki: Patriots (originated in 1970; AIs as Zero's successors by 2000)",
+     "url": "https://metalgear.fandom.com/wiki/Patriots"
+    }
+   ]
+  },
+  {
+   "id": "eleven-twenty-two-sixty-three",
+   "title": "11/22/63",
+   "medium": "book",
+   "creator": "Stephen King",
+   "originYear": 2011,
+   "group": "alternate-past",
+   "epoch": "present",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 1958,
+    "label": "Jake Epping steps out of the rabbit hole into 9 September 1958",
+    "delta": "Real: 9 September 1958 is an ordinary Tuesday in Lisbon Falls, Maine, five years before Lee Harvey Oswald shoots President Kennedy from the Texas School Book Depository. Fiction: a schoolteacher from 2011 walks out of a diner's pantry into that morning, carrying a dying friend's notes on Oswald and a plan to live in the past until November 1963.",
+    "inUniverse": "The portal always opens at 11.58 a.m. on 9 September 1958; every return trip lasts two minutes in 2011 and a new trip resets the last one's changes",
+    "confidence": "high",
+    "note": "The arrival date is stated in the novel. The first change Jake makes, killing Frank Dunning before his Halloween murders in the fictional town of Derry, falls in the same autumn; the change the title refers to comes five years later. Jake's earlier trial run, in which he half-saves the Dunnings and the boy he saved dies in Vietnam, is reset by his second trip and is not charted.",
+    "sources": [
+     {
+      "title": "Wikipedia: 11/22/63 (plot: the portal leads to Lisbon Falls on 9 September 1958)",
+      "url": "https://en.wikipedia.org/wiki/11/22/63"
+     },
+     {
+      "title": "11.22.63 Wiki: 11/22/63 (Novel) - every journey lands at 11:58 a.m. on 9 September 1958",
+      "url": "https://11-22-63.fandom.com/wiki/11/22/63_(Novel)"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "In the history where Kennedy lives, Jake's June 2011 is a radioactive, earthquake-torn United States under martial law whose scientists expect the Earth to come apart around 2080, and the only way out Jake finds is to go back and erase it.",
+    "asOf": 2011
+   },
+   "events": [
+    {
+     "id": "ek-derry-1958",
+     "year": 1958,
+     "date": "1958-10-31",
+     "title": "A man from 2011 in 1958, and the Dunning murders that never happen",
+     "description": "Jake Epping, calling himself George Amberson, arrives on 9 September with money and a list of sports results. In Derry, Maine, he kills Frank Dunning before the Halloween night on which Dunning would have murdered his wife and three children with a hammer, then heads south to wait for Oswald.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: 11/22/63",
+       "url": "https://en.wikipedia.org/wiki/11/22/63"
+      },
+      {
+       "title": "11.22.63 Wiki: 11/22/63 (Novel)",
+       "url": "https://11-22-63.fandom.com/wiki/11/22/63_(Novel)"
+      }
+     ],
+     "note": "Both dates are stated. Derry and the Dunnings are King's inventions, so the first change sits in local history that never had a real counterpart; it is Jake's test of whether the past can be changed, and it can, although the past pushes back in proportion to the size of the change.",
+     "binWhy": "A traveller from the future arrives and changes the present.",
+     "bin": "time-traveller-arrives",
+     "facets": {
+      "change": "a family murdered on Halloween → a family that lives",
+      "mechanism": "arrival",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "time-loop",
+       "prosperity",
+       "cold-war"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "ek-dallas-1963",
+     "year": 1963,
+     "date": "1963-11-22",
+     "title": "Oswald is stopped in the Book Depository",
+     "description": "Jake, half-crippled from a beating, and Sadie Dunhill reach the sixth floor of the Texas School Book Depository as the motorcade passes. Jake spoils Oswald's aim; Oswald's shot kills Sadie, police fire through the window and kill Oswald, and Kennedy drives on unhurt.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: 11/22/63",
+       "url": "https://en.wikipedia.org/wiki/11/22/63"
+      },
+      {
+       "title": "11.22.63 Wiki: 11/22/63 (Novel) - Oswald shot by police through the window; Sadie dies",
+       "url": "https://11-22-63.fandom.com/wiki/11/22/63_(Novel)"
+      }
+     ],
+     "note": "Real: at 12.30 p.m. on 22 November 1963 Oswald's shots kill Kennedy in Dealey Plaza, Lyndon Johnson is sworn in that afternoon, and Oswald is himself shot by Jack Ruby two days later. Jake had waited until 10 April 1963, when Oswald fired at General Edwin Walker as in real history, to be sure Oswald was the man. The Kennedys telephone Jake to thank him; the FBI tells him to disappear.",
+     "binWhy": "A targeted attack on the president fails, and what follows turns on its failure.",
+     "bin": "terror-attack",
+     "sub": "targeted",
+     "facets": {
+      "change": "a president shot dead → a president unhurt and an assassin killed",
+      "mechanism": "attack",
+      "actor": "individual",
+      "position": "below",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "cold-war",
+       "time-loop"
+      ],
+      "outcomes": [
+       "turning-point",
+       "foreknowledge"
+      ]
+     }
+    },
+    {
+     "id": "ek-saigon-1967",
+     "year": 1967,
+     "date": "1967",
+     "title": "Saigon is lost",
+     "description": "Re-elected narrowly over Barry Goldwater in 1964, Kennedy faces a Congress that blocks civil-rights legislation, and in Vietnam he tries to hold only the Saigon region, West Berlin style. It falls to the communists in 1967, and his presidency never recovers.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "war",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia (French): 22/11/63 - Kennedy re-elected against Goldwater; Saigon taken by the communists in 1967",
+       "url": "https://fr.wikipedia.org/wiki/22/11/63"
+      },
+      {
+       "title": "Wikipedia: 11/22/63 (the Civil Rights Act of 1964 was never passed)",
+       "url": "https://en.wikipedia.org/wiki/11/22/63"
+      }
+     ],
+     "note": "The account is Harry Dunning's, told to Jake in the ruined 2011; the dates here follow the French Wikipedia's detailed summary of chapter 31, which the English page does not break down by year. Real: Johnson signed the Civil Rights Act in July 1964, and Saigon fell in April 1975.",
+     "binWhy": "An American-held city is lost and South Vietnam is occupied eight years early.",
+     "bin": "defeat-and-occupation",
+     "facets": {
+      "change": "a defended enclave → Saigon in communist hands",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "outside",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "cold-war",
+       "long-war",
+       "crisis-legitimacy"
+      ],
+      "outcomes": [
+       "occupation",
+       "radicalisation"
+      ]
+     }
+    },
+    {
+     "id": "ek-riots-1968",
+     "year": 1968,
+     "date": "1968",
+     "title": "The cities burn and Wallace is elected",
+     "description": "Race riots break out in about a dozen American cities after a clumsy statement by Kennedy, and Martin Luther King is assassinated by an FBI agent on J. Edgar Hoover's orders. In November the segregationist George Wallace is elected president.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "politics",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia (French): 22/11/63 - riots in 1968, King killed on Hoover's orders, Wallace elected in November 1968",
+       "url": "https://fr.wikipedia.org/wiki/22/11/63"
+      },
+      {
+       "title": "Wikipedia: 11/22/63 (Wallace elected president in 1968; King assassinated by the FBI)",
+       "url": "https://en.wikipedia.org/wiki/11/22/63"
+      }
+     ],
+     "note": "The English page confirms Wallace's 1968 election and the FBI killing King; the French summary adds the riots and names the agent, a character borrowed from James Ellroy. Real: King was killed by James Earl Ray on 4 April 1968; riots followed in more than a hundred cities; Nixon won the election, and Wallace, running third with Curtis LeMay, carried five Southern states.",
+     "binWhy": "A subjugated people rises in the cities after its leader is murdered by the state.",
+     "bin": "uprising",
+     "sub": "mass-protest",
+     "facets": {
+      "change": "a stalled civil-rights movement → burning cities and a segregationist president",
+      "mechanism": "uprising",
+      "actor": "movement",
+      "position": "below",
+      "scope": "national",
+      "domain": "social",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "segregation",
+       "repression",
+       "crisis-legitimacy"
+      ],
+      "outcomes": [
+       "radicalisation",
+       "suppression",
+       "one-party-state"
+      ]
+     }
+    },
+    {
+     "id": "ek-hanoi-1969",
+     "year": 1969,
+     "date": "1969-08-09",
+     "title": "Wallace drops the bomb on Hanoi",
+     "description": "President Wallace, who has put down the riots with firebombs, tells North Vietnam to make Saigon a free city or see Hanoi destroyed, and on the twenty-fourth anniversary of Nagasaki drops an atomic bomb on Hanoi. The taboo is gone: over the next decades some thirty nuclear weapons are used, including in an India-Pakistan war that destroys Bombay and Karachi.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "war",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia (French): 22/11/63 - atomic bomb on Hanoi on 9 August 1969",
+       "url": "https://fr.wikipedia.org/wiki/22/11/63"
+      },
+      {
+       "title": "Wikipedia (German): Der Anschlag (Roman) - some thirty atomic bombs since 1969; Bombay and Hanoi destroyed",
+       "url": "https://de.wikipedia.org/wiki/Der_Anschlag_(Roman)"
+      },
+      {
+       "title": "Lancaster University: The Survival of a President (Wallace orders the Hanoi bomb on the Nagasaki anniversary)",
+       "url": "https://eprints.lancs.ac.uk/id/eprint/136282/1/Survival_of_a_President.pdf"
+      }
+     ],
+     "note": "The novel dates the strike by the Nagasaki anniversary, which gives 9 August 1969; the Lancaster article prints '1960', an obvious slip for 1969. Real: no nuclear weapon has been used in war since 9 August 1945, and in August 1969 Nixon was starting to withdraw troops from Vietnam.",
+     "binWhy": "A nuclear strike on a capital kills on a scale that changes the world that follows.",
+     "bin": "mass-death",
+     "sub": "nuclear",
+     "facets": {
+      "change": "a conventional war → an atomic strike on a capital",
+      "mechanism": "attack",
+      "actor": "state",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "long-war",
+       "arms-race",
+       "cold-war"
+      ],
+      "outcomes": [
+       "mass-death",
+       "arms-race",
+       "radicalisation"
+      ]
+     }
+    },
+    {
+     "id": "ek-wallace-1972",
+     "year": 1972,
+     "date": "1972-05",
+     "title": "Wallace is shot dead",
+     "description": "Arthur Bremer assassinates President Wallace, and the vice-president takes over. The presidency passes through Curtis LeMay and Hubert Humphrey before Ronald Reagan beats Humphrey in 1976.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "death",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia (French): 22/11/63 - Wallace assassinated by Arthur Bremer in May 1972",
+       "url": "https://fr.wikipedia.org/wiki/22/11/63"
+      },
+      {
+       "title": "Wikipedia: 11/22/63 (Wallace assassinated by Bremer and succeeded by LeMay; Reagan defeats Humphrey in 1976)",
+       "url": "https://en.wikipedia.org/wiki/11/22/63"
+      }
+     ],
+     "note": "The month is from the French summary. The two summaries disagree on the successor: the English page says LeMay, the French says Humphrey as vice-president; the English order (LeMay, then Humphrey) is used. Real: Bremer shot Wallace, then a presidential candidate, on 15 May 1972 in Laurel, Maryland; Wallace was paralysed and lived until 1998.",
+     "binWhy": "A president is killed and the succession is opened.",
+     "bin": "ruler-falls",
+     "sub": "killed",
+     "facets": {
+      "change": "a segregationist president → a dead one and a string of successors",
+      "mechanism": "death",
+      "actor": "individual",
+      "position": "below",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "street-violence",
+       "crisis-legitimacy",
+       "long-war"
+      ],
+      "outcomes": [
+       "succession-struggle"
+      ]
+     }
+    },
+    {
+     "id": "ek-tehran-1979",
+     "year": 1979,
+     "date": "1979-11",
+     "title": "Hostages executed on television in Tehran",
+     "description": "Iranian Revolutionary Guards seize about two hundred Americans in Tehran and execute some on live television. The American response gives rise to al-Qaeda, attacks multiply, one of them on a peace concert by a reunited Beatles, and the Middle East goes up in flames while the Soviet Union collapses.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia (French): 22/11/63 - November 1979, two hundred Americans taken hostage in Tehran and executed on television",
+       "url": "https://fr.wikipedia.org/wiki/22/11/63"
+      }
+     ],
+     "note": "Only the French summary lists this; the English sources say only that the US and the world fractured. Real: on 4 November 1979 students seized the US embassy in Tehran and held 52 Americans for 444 days; none was executed, and all were released in January 1981.",
+     "binWhy": "A televised massacre of hostages starts the cycle of terrorism that follows.",
+     "bin": "terror-attack",
+     "sub": "on-civilians",
+     "facets": {
+      "change": "an embassy siege → executions on live television",
+      "mechanism": "attack",
+      "actor": "faction",
+      "position": "outside",
+      "scope": "civilisational",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "religious-fervour",
+       "crisis-legitimacy",
+       "rivalry"
+      ],
+      "outcomes": [
+       "radicalisation",
+       "holy-war",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "ek-oil-1994",
+     "year": 1994,
+     "date": "1994",
+     "title": "Atomic bombs in the Middle East, and the oil runs short",
+     "description": "With Russian gangsters selling atomic weapons from the ruins of the Soviet Union, bombs explode across the Middle East. Oil becomes scarce, and the shortage runs on into the ruined America of 2011.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "disaster",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia (French): 22/11/63 - in 1994 atomic bombs explode in the Middle East, causing a severe oil shortage",
+       "url": "https://fr.wikipedia.org/wiki/22/11/63"
+      }
+     ],
+     "note": "Only the French summary gives the year. Real: the Soviet Union dissolved peacefully in 1991, oil in 1994 sold at under twenty dollars a barrel, and no nuclear weapon has been used since 1945.",
+     "binWhy": "An oil shock from destroyed producers throws the economy into lasting crisis.",
+     "bin": "market-crash",
+     "facets": {
+      "change": "cheap oil → a region of producers bombed and a lasting shortage",
+      "mechanism": "attack",
+      "actor": "faction",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "economic",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "resource-dependency",
+       "arms-race",
+       "empire-in-decline"
+      ],
+      "outcomes": [
+       "recession",
+       "mass-death"
+      ]
+     }
+    },
+    {
+     "id": "ek-vermont-1999",
+     "year": 1999,
+     "date": "1999-06-19",
+     "title": "An earthquake breaks a reactor in New England",
+     "description": "Among the earthquakes that grow more frequent every year, one wrecks a nuclear plant in Vermont and contaminates New England and Quebec for decades; other nuclear accidents make Florida and New Mexico uninhabitable.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "disaster",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia (German): Der Anschlag (Roman) - an earthquake on 19 June 1999 causes a reactor accident that contaminates New England and Quebec",
+       "url": "https://de.wikipedia.org/wiki/Der_Anschlag_(Roman)"
+      },
+      {
+       "title": "Wikipedia (French): 22/11/63 - catastrophic nuclear accident in Vermont in 1999",
+       "url": "https://fr.wikipedia.org/wiki/22/11/63"
+      }
+     ],
+     "note": "The German summary gives the day; the French gives the year and the state. In the novel's logic the earthquakes are the damage time does when it is changed: Jake hears of the first, in California, as he leaves Dallas. Real: Vermont Yankee ran without a major accident until it closed in 2014.",
+     "binWhy": "A disaster poisons a whole region and changes the society left in it.",
+     "bin": "mass-death",
+     "sub": "disaster",
+     "facets": {
+      "change": "an inhabited Northeast → a contaminated one",
+      "mechanism": "disaster",
+      "actor": "nature",
+      "position": "outside",
+      "scope": "national",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "disaster-just-struck",
+       "time-loop"
+      ],
+      "outcomes": [
+       "mass-death",
+       "exodus",
+       "despair"
+      ]
+     }
+    },
+    {
+     "id": "ek-maine-2005",
+     "year": 2005,
+     "date": "2005",
+     "title": "Maine leaves for Canada",
+     "description": "The United States has fractured, and Maine votes to become a Canadian province. Hillary Clinton, elected in 2004 after her husband died suddenly as the favourite, governs what is left under martial law and can do nothing about the earthquakes.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "politics",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia (German): Der Anschlag (Roman) - in 2005 Maine joined Canada",
+       "url": "https://de.wikipedia.org/wiki/Der_Anschlag_(Roman)"
+      },
+      {
+       "title": "Wikipedia (French): 22/11/63 - Clinton elected in 2004 after Bill Clinton's death; Maine votes to join Canada",
+       "url": "https://fr.wikipedia.org/wiki/22/11/63"
+      }
+     ],
+     "note": "The year is from the German summary; the English and French summaries give the secession without a date. Real: Maine has been a US state since 1820, and George W. Bush was re-elected in 2004.",
+     "binWhy": "A state leaves the union and joins its neighbour without being conquered.",
+     "bin": "state-dissolves",
+     "facets": {
+      "change": "the fifty United States → a union losing its northeast",
+      "mechanism": "secession",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "weak-institutions",
+       "crisis-legitimacy",
+       "disaster-just-struck"
+      ],
+      "outcomes": [
+       "state-dissolves",
+       "partition"
+      ]
+     }
+    },
+    {
+     "id": "ek-pub-2011",
+     "year": 2011,
+     "date": "2011-11-08",
+     "title": "11/22/63 is published",
+     "description": "Scribner publishes Stephen King's novel, an idea he first tried in the early 1970s and abandoned; it becomes a number-one bestseller and wins the Los Angeles Times Book Prize for mystery and thriller.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: 11/22/63",
+       "url": "https://en.wikipedia.org/wiki/11/22/63"
+      }
+     ],
+     "note": "Published 8 November 2011. The novel's present is June 2011, the month in which Jake finds the ruined world; that state is recorded in the ending rather than as a separate entry, since the lineage allows one entry per year.",
+     "binWhy": "The original release; not a moment in the story.",
+     "bin": null,
+     "facets": null
+    }
+   ],
+   "groupingNote": "A pure alternate past: one prevented assassination on 22 November 1963, and a history that runs forward from it to 2011. The novel is the source of truth; its alternate history after 1963 is told compactly by Harry Dunning in chapter 31, so the dates come from the most detailed published summaries (English, French and German Wikipedia), and where only one gives a year the entry is marked medium. The fork is Jake's arrival in 1958, the first moment the story's history differs from ours; the reset Jake makes at the end, which returns history to our own, is recorded in the ending and not as an event, because it restores the real record rather than changing it. The 2016 Hulu series 11.22.63 is a separate continuity with a different ruined present and is not charted. Tiers: T3 holds 1958 to 1999 and T2 2005 and 2011; T4 and T1 are empty, since the story begins in 1958 and its furthest reach is the scientists' forecast that the Earth will come apart around 2080.",
+   "sources": [
+    {
+     "title": "Wikipedia: 11/22/63",
+     "url": "https://en.wikipedia.org/wiki/11/22/63"
+    },
+    {
+     "title": "Wikipedia (French): 22/11/63",
+     "url": "https://fr.wikipedia.org/wiki/22/11/63"
+    },
+    {
+     "title": "Wikipedia (German): Der Anschlag (Roman)",
+     "url": "https://de.wikipedia.org/wiki/Der_Anschlag_(Roman)"
+    },
+    {
+     "title": "11.22.63 Wiki: 11/22/63 (Novel)",
+     "url": "https://11-22-63.fandom.com/wiki/11/22/63_(Novel)"
     }
    ]
   }

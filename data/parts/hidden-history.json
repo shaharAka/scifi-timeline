@@ -199,6 +199,7 @@
      "confidence": "high",
      "note": "The film sits between seasons five and six and is set in the summer of 1998.",
      "bin": "truth-revealed",
+     "sub": "hidden-world",
      "binWhy": "What was hidden is exposed.",
      "facets": {
       "change": "sightings → proof the presence is planetary",
@@ -235,6 +236,7 @@
      "confidence": "high",
      "note": "",
      "bin": "terror-attack",
+     "sub": "targeted",
      "binWhy": "The investigator is taken by the enemy he was investigating.",
      "facets": {
       "change": "the investigator → taken by what he investigated",
@@ -272,6 +274,7 @@
      "confidence": "medium",
      "note": "2012 is stated on screen as the colonization date, but the invasion never happens on screen between the original run and the 2016 revival, which treats the date as passed and the conspiracy as broken; the fiction's deepest reach therefore stops here.",
      "bin": "truth-revealed",
+     "sub": "hidden-world",
      "binWhy": "The invasion date the conspiracy was built on passes and the plan is exposed as broken.",
      "facets": {
       "change": "the fixed date → passes; the plan is broken",
@@ -561,6 +564,7 @@
      "confidence": "high",
      "note": "The second film is set five years after the first, in its own release year.",
      "bin": "truth-revealed",
+     "sub": "origin-identity",
      "binWhy": "What was hidden is exposed.",
      "facets": {
       "change": "headquarters → seized by an alien queen; a hidden royal revealed",
@@ -811,6 +815,7 @@
      "confidence": "high",
      "note": "Dated by the books' own chronology: Harry is fifteen months old at the attack and turns eleven in 1991.",
      "bin": "ruler-falls",
+     "sub": "killed",
      "binWhy": "The dark lord is destroyed; his war ends overnight and the survivor is hidden.",
      "facets": {
       "change": "the dark lord ascendant → destroyed trying to kill a child",
@@ -887,6 +892,7 @@
      "confidence": "high",
      "note": "The second book spans the 1992-1993 school year.",
      "bin": "terror-attack",
+     "sub": "on-civilians",
      "binWhy": "Students attacked inside the school by a hidden enemy within.",
      "facets": {
       "change": "a school → attacked from within by a hidden enemy",
@@ -1179,6 +1185,7 @@
      "confidence": "medium",
      "note": "The reveal happens in the eighth season of the canonical comics, published 2008-2009; the in-universe date of that season is only pinned by its publication window, so the year is the best-supported reading rather than a stated one.",
      "bin": "truth-revealed",
+     "sub": "hidden-world",
      "binWhy": "The supernatural stops being a secret and becomes a news cycle.",
      "facets": {
       "change": "a secret world → a celebrity on television",
@@ -1216,6 +1223,7 @@
      "confidence": "medium",
      "note": "Placed in the publication year of the eighth season's final arc; the comics' chronology is loose and the season is usually read as spanning about a year and a half after 2003.",
      "bin": "civilisation-collapses",
+     "sub": "climate-ecological",
      "binWhy": "Magic leaves the world; every witch loses her power.",
      "facets": {
       "change": "a world with magic → magic ends to end the war",
@@ -1318,6 +1326,7 @@
      "confidence": "medium",
      "note": "Lyra's world's own texts date the beginning of the Church to roughly eighteen centuries before the story; the fiction presents it as a claim made by an angel rather than as a divine act, but gives no firm year.",
      "bin": "power-seized",
+     "sub": "coup",
      "binWhy": "The first angel gathers the powers of the world under himself.",
      "facets": {
       "change": "many powers → the first angel claims to be God",
@@ -1466,6 +1475,7 @@
      "confidence": "medium",
      "note": "The first book is explicitly set contemporary to its writing in the mid-1990s and was published in 1995; the trilogy gives no in-story years, so the story's present is dated by that contemporary setting.",
      "bin": "truth-revealed",
+     "sub": "state-secret",
      "binWhy": "What was hidden is exposed.",
      "facets": {
       "change": "a friend taken → the church's programme uncovered",
@@ -1632,6 +1642,7 @@
      "note": "The Cultural Revolution and its struggle sessions at Tsinghua are real history; Ye Zhetai is fictional. The novel opens in 1967, and the English edition restored the Cultural Revolution chapters to the front of the book.",
      "binWhy": "A movement sanctioned by the state kills a scientist for his physics; it is an attack on a group (intellectuals), not a war or a seizure of power.",
      "bin": "crackdown",
+     "sub": "persecution",
      "facets": {
       "change": "a physicist teaching relativity → dead on a stage, his daughter watching",
       "mechanism": "attack",
@@ -1681,6 +1692,7 @@
      "note": "Wikipedia's summary has the reply arriving about eight years after her broadcast, and the fan timelines put the transmission in 1971, which gives 1979. The real first deliberate interstellar message, from Arecibo, was three years later in 1974 and did not use the Sun as an amplifier.",
      "binWhy": "A transmitter is used in a way nobody had tried before, amplified by the Sun; what changes is that Earth can now be heard, and the reply comes later as a separate event.",
      "bin": "new-technology-deployed",
+     "sub": "media-networks",
      "facets": {
       "change": "a planet nobody could hear → one that has broadcast its presence",
       "mechanism": "discovery",
@@ -1865,6 +1877,7 @@
      "note": "The novel never gives its present a year. Death's End's era table dates the start of the Crisis Era only as '201X'. The fan chronology works back from the characters' ages (Ye Wenjie retired in 2004, Yang Dong was born in 1980) to 2007, which is the year used here. The sophon lockdown, Operation Guzheng and the public announcement all happen in the same short stretch and are merged into one event. In our 2007 the Large Hadron Collider was a year from switching on, and nobody found anything wrong with it.",
      "binWhy": "What defines the moment is that knowledge the ETO had kept hidden for thirty years is exposed, and the whole world is told.",
      "bin": "truth-revealed",
+     "sub": "hidden-world",
      "facets": {
       "change": "scientists dying over broken results → a world told the invasion is coming",
       "mechanism": "disclosure",
@@ -1965,6 +1978,7 @@
      "note": "The Fandom timeline puts the launch and Cheng Xin's hibernation in Crisis Year 7; that converts to 2013 by the same forward count from 2007. Wikipedia places it only in 'the 2010s'. There is another inconsistency: in Deterrence Year 61 (2269) Cheng Xin is said to have been asleep for 264 years, which would put the start of her sleep in 2005.",
      "binWhy": "A first mission departs for somewhere nobody has reached: the enemy fleet, light years out.",
      "bin": "voyage-into-unknown",
+     "sub": "interstellar",
      "facets": {
       "change": "no human anywhere near the enemy → a frozen brain sent to meet them",
       "mechanism": "expedition",
@@ -2179,6 +2193,7 @@
      "note": "The broadcast is sent from deep space soon after the 2270 handover. Death's End's table dates the Broadcast Era from 2272, when its effects reach Earth, and that is the year used here.",
      "binWhy": "The one thing both worlds had kept hidden, where Trisolaris is, is exposed to everyone who might be listening.",
      "bin": "truth-revealed",
+     "sub": "state-secret",
      "facets": {
       "change": "coordinates held as a threat → coordinates broadcast to the galaxy",
       "mechanism": "disclosure",
@@ -2233,6 +2248,7 @@
      "note": "The Douban chronology puts the destruction in Broadcast Year 3 (2275). The Fandom timeline places it 3 years 10 months after the broadcast and has Earth's Sophon talks in Year 7. The exact year depends on whether you count from when the broadcast was sent or when it was received.",
      "binWhy": "An attack from outside kills an entire civilisation's homeworld, and it changes how humanity lives from then on.",
      "bin": "mass-death",
+     "sub": "nuclear",
      "facets": {
       "change": "a living enemy homeworld → a destroyed star system",
       "mechanism": "attack",
@@ -2282,6 +2298,7 @@
      "note": "Death's End's table ends the Bunker Era in 2400. The Bunker Era begins in 2333, and 2333 plus 67 gives 2400, so the two anchors agree. The Douban fan chronology's 2354 does not match the table.",
      "binWhy": "An attack kills almost all of humanity at once; nothing in the Solar System is left to rebuild.",
      "bin": "mass-death",
+     "sub": "nuclear",
      "facets": {
       "change": "a system of bunker cities → a painting on a plane",
       "mechanism": "attack",
@@ -2379,6 +2396,2103 @@
     {
      "title": "Douban review: 《三体》三部曲历史年表 (fan chronology; flags the 201X vs 2007 Crisis Era contradiction)",
      "url": "https://book.douban.com/review/4544383/"
+    }
+   ]
+  },
+  {
+   "id": "stranger-things",
+   "title": "Stranger Things",
+   "medium": "tv",
+   "creator": "The Duffer Brothers",
+   "originYear": 2016,
+   "group": "hidden-history",
+   "epoch": "present",
+   "franchiseStatus": "ongoing",
+   "divergence": {
+    "year": 1959,
+    "label": "The Creel murders, and Henry Creel becomes Hawkins Lab's first subject",
+    "delta": "Real: in 1959 the CIA's MKUltra programme is six years old, drugging unwitting subjects in search of mind control and producing nothing of the kind. Fiction: in Hawkins, Indiana, a twelve-year-old with real psychic powers kills his mother and sister, his father is convicted in his place, and Dr Martin Brenner takes the boy into Hawkins National Laboratory as test subject 001.",
+    "inUniverse": "Henry Creel, born in Nevada in 1947, moves to Hawkins with his family in 1959; the murders are the first dated event the series itself shows (season 4)",
+    "confidence": "high",
+    "note": "The series states 1959 for the Creels' move to Hawkins and the murders. Earlier canon exists only in the licensed stage play Stranger Things: The First Shadow (2023), which dates a USS Eldridge accident to 1943 and puts young Henry's contact with the Abyss in a Nevada cave in the mid-1950s; season 5 shows a memory of that cave but gives it no date. This lineage follows the Netflix series, so the fork is the first year the series itself dates. The exact day of the murders is not given on screen.",
+    "sources": [
+     {
+      "title": "Wikipedia: Vecna (Stranger Things) - born in Nevada in 1947, family moves to Hawkins in 1959",
+      "url": "https://en.wikipedia.org/wiki/Vecna_(Stranger_Things)"
+     },
+     {
+      "title": "Stranger Things Wiki: Timeline (1959 Creel murders; Henry designated 001)",
+      "url": "https://strangerthings.fandom.com/wiki/Timeline"
+     },
+     {
+      "title": "Wikipedia: Stranger Things: The First Shadow (1943 prologue, Nevada cave)",
+      "url": "https://en.wikipedia.org/wiki/Stranger_Things:_The_First_Shadow"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "On 6 November 1987 Vecna and the Mind Flayer are killed and the Upside Down is destroyed, the military leaves Hawkins, and eighteen months later the town is rebuilding and the friends graduate.",
+    "asOf": 1989
+   },
+   "events": [
+    {
+     "id": "st-mkultra-1953",
+     "year": 1953,
+     "date": "1953-04-13",
+     "title": "MKUltra is authorised",
+     "description": "The CIA approves a programme of secret experiments on human minds using drugs, hypnosis and sensory deprivation. The series places its fictional laboratory inside this real programme.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history. Allen Dulles's CIA approved MKUltra on 13 April 1953 and it ran until 1973; the fan timeline also dates experiments at fictional Hawkins to 1953. Nothing in the real programme produced psychic powers; that is where the fiction starts.",
+     "sources": [
+      {
+       "title": "Wikipedia: Stranger Things (Cold War-era experiments as inspiration)",
+       "url": "https://en.wikipedia.org/wiki/Stranger_Things"
+      },
+      {
+       "title": "Stranger Things Wiki: Timeline (1953: MKUltra sanctioned, experiments begin at Hawkins)",
+       "url": "https://strangerthings.fandom.com/wiki/Timeline"
+      }
+     ],
+     "binWhy": "A state programme of human experiments is started and kept from the public.",
+     "bin": "secret-kept",
+     "facets": {
+      "change": "open psychology research → secret experiments on unwitting people",
+      "mechanism": "founding",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "scientific",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "cold-war",
+       "secrecy",
+       "arms-race"
+      ],
+      "outcomes": [
+       "secrecy-state",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "st-creel-1959",
+     "year": 1959,
+     "date": "1959",
+     "title": "The Creel house murders",
+     "description": "Henry Creel uses his powers to kill his mother and sister and leaves his father in a trance. Victor Creel is convicted and sent to an asylum; Henry is told to the world as dead and taken into Hawkins Lab by Dr Brenner as subject 001.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Vecna (Stranger Things)",
+       "url": "https://en.wikipedia.org/wiki/Vecna_(Stranger_Things)"
+      },
+      {
+       "title": "Stranger Things Wiki: Timeline (1959)",
+       "url": "https://strangerthings.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Season 4 gives the year; the day is not stated (the fan wiki offers two candidate dates). The public record of 1959 Hawkins is a family murder solved with the wrong culprit. Brenner uses Henry's blood to try to make further psychic children over the next twenty years.",
+     "binWhy": "The truth about the killings is buried and a laboratory takes the child who did them.",
+     "bin": "secret-kept",
+     "facets": {
+      "change": "a psychic child at home → a secret laboratory subject and a convicted father",
+      "mechanism": "death",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "cold-war",
+       "secrecy"
+      ],
+      "outcomes": [
+       "cover-up",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "st-eleven-1971",
+     "year": 1971,
+     "date": "1971",
+     "title": "Eleven is born and taken",
+     "description": "Terry Ives, a student volunteer dosed with LSD in Hawkins Lab's MKUltra sessions while pregnant, gives birth to a daughter. Brenner takes the baby, records the birth as a miscarriage, and raises her in the lab as Eleven.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "birth",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Stranger Things Wiki: Timeline (Jane Ives born 1971, recorded as a miscarriage)",
+       "url": "https://strangerthings.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "The series establishes that Terry Ives was pregnant during the experiments and that her daughter was taken at birth. The fan timeline dates the birth to 1971; a licensed tie-in novel's chronology implies late 1970, so the year is given at medium confidence.",
+     "binWhy": "A child is born and taken on whom the whole story later turns.",
+     "bin": "chosen-one",
+     "facets": {
+      "change": "a volunteer's pregnancy → a stolen child raised as a weapon",
+      "mechanism": "birth",
+      "actor": "state",
+      "position": "inside",
+      "scope": "local",
+      "domain": "biological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "cold-war"
+      ],
+      "outcomes": [
+       "cover-up",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "st-rainbow-room-1979",
+     "year": 1979,
+     "date": "1979-09-08",
+     "title": "The Hawkins Lab massacre",
+     "description": "Henry Creel, freed from the implant that suppressed his powers, kills the staff and the other child subjects in the lab's Rainbow Room. Eleven overpowers him and throws him through a gate into another dimension, where he takes control of the hive mind he finds there.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Stranger Things season 4 (flashback to 1979)",
+       "url": "https://en.wikipedia.org/wiki/Stranger_Things_season_4"
+      },
+      {
+       "title": "Stranger Things Wiki: Timeline (Saturday, 8 September 1979)",
+       "url": "https://strangerthings.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Season 4 sets the flashback in 1979; the fan timeline dates it to 8 September from on-screen material. Nothing of this reaches the public: the lab remains a Department of Energy facility.",
+     "binWhy": "A massacre inside the laboratory creates the enemy the rest of the story fights.",
+     "bin": "terror-attack",
+     "sub": "on-civilians",
+     "facets": {
+      "change": "a lab full of test children → a massacre and a banished killer",
+      "mechanism": "attack",
+      "actor": "individual",
+      "position": "below",
+      "scope": "local",
+      "domain": "biological",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "secrecy",
+       "slavery-or-servitude"
+      ],
+      "outcomes": [
+       "mass-death",
+       "cover-up",
+       "exile"
+      ]
+     }
+    },
+    {
+     "id": "st-gate-1983",
+     "year": 1983,
+     "date": "1983-11-06",
+     "title": "The gate opens under Hawkins Lab",
+     "description": "Sent to make contact with a creature in the void, Eleven opens a passage under the laboratory, creating the Upside Down, a frozen copy of Hawkins that connects to the Abyss. That night Will Byers is taken, a scientist is killed and East Hawkins loses power; within a week a teenage girl, Barbara Holland, is dead.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Stranger Things (first season begins on 6 November 1983)",
+       "url": "https://en.wikipedia.org/wiki/Stranger_Things"
+      },
+      {
+       "title": "Wikipedia: Stranger Things season 5 (the Upside Down is a wormhole created when Brenner forced Eleven to contact Henry)",
+       "url": "https://en.wikipedia.org/wiki/Stranger_Things_season_5"
+      }
+     ],
+     "note": "The date is stated. Season 5 reframes the event: the Upside Down is not a parallel dimension but a wormhole to the Abyss, made at this moment. The public record is a missing boy who comes back and a missing girl who does not.",
+     "binWhy": "A passage to another realm is made under a government laboratory.",
+     "bin": "gateway-opens",
+     "facets": {
+      "change": "a sealed laboratory → an open passage to a hostile realm",
+      "mechanism": "accident",
+      "actor": "state",
+      "position": "inside",
+      "scope": "local",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": -1
+      },
+      "preconditions": [
+       "secrecy",
+       "cold-war",
+       "cover-up"
+      ],
+      "outcomes": [
+       "contact",
+       "cover-up",
+       "hunt-begins"
+      ]
+     }
+    },
+    {
+     "id": "st-lab-closed-1984",
+     "year": 1984,
+     "date": "1984-11",
+     "title": "The lab is exposed and shut down",
+     "description": "The spreading gate overruns Hawkins Lab and Eleven closes it. A recording of the lab's director, passed to a conspiracy journalist, gets the laboratory closed and Barbara Holland a funeral; the public learns the lab killed a girl, not what killed her.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Stranger Things (second season, October-November 1984)",
+       "url": "https://en.wikipedia.org/wiki/Stranger_Things"
+      },
+      {
+       "title": "Stranger Things Wiki: Timeline (Murray Bauman's report closes Hawkins Lab)",
+       "url": "https://strangerthings.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Season 2 is set in October and November 1984. The disclosure is partial by design: the story that reaches the newspapers is a laboratory accident, and the Upside Down stays secret.",
+     "binWhy": "A hidden laboratory's responsibility for a death is exposed to the town it was hidden from, if only in part.",
+     "bin": "truth-revealed",
+     "sub": "state-secret",
+     "facets": {
+      "change": "a secret laboratory → a closed one with a half-told story",
+      "mechanism": "disclosure",
+      "actor": "individual",
+      "position": "below",
+      "scope": "local",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "cover-up",
+       "secrecy"
+      ],
+      "outcomes": [
+       "revelation",
+       "programme-winds-down"
+      ]
+     }
+    },
+    {
+     "id": "st-starcourt-1985",
+     "year": 1985,
+     "date": "1985-07-04",
+     "title": "The Battle of Starcourt, reported as a mall fire",
+     "description": "A Soviet laboratory built beneath Hawkins's new shopping mall tries to reopen the gate with a machine; the Mind Flayer rises through the town's possessed residents before the machine is destroyed. The US military takes over the Soviet base, the mayor is arrested, and the public is told the mall burned.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Stranger Things (third season, Fourth of July 1985)",
+       "url": "https://en.wikipedia.org/wiki/Stranger_Things"
+      },
+      {
+       "title": "Stranger Things Wiki: Timeline (4 July 1985; the Starcourt fire in the news)",
+       "url": "https://strangerthings.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "The date is stated. In our 1985 there was no Soviet facility on American soil; the fiction's Cold War reaches under a mall in Indiana and is buried under a fire story, while Hopper, presumed dead, is taken to a Soviet prison in Kamchatka.",
+     "binWhy": "A foreign power's secret base and the battle that ends it are hidden from the public behind a fire.",
+     "bin": "secret-kept",
+     "facets": {
+      "change": "a Soviet base under a mall → a fire story in the local news",
+      "mechanism": "attack",
+      "actor": "state",
+      "position": "outside",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "cold-war",
+       "rivalry",
+       "secrecy"
+      ],
+      "outcomes": [
+       "cover-up",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "st-rifts-1986",
+     "year": 1986,
+     "date": "1986-03-27",
+     "title": "Four gates split Hawkins open",
+     "description": "Vecna, the banished Henry Creel, murders teenagers to open four gates into the town while a local boy, Eddie Munson, is hunted as a Satanist for the killings. The rifts tear Hawkins apart; the media call it a magnitude 7.4 earthquake, Hawkins is declared a federal disaster area, thousands leave, and the army seals the town.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "disaster",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Stranger Things (fourth season, March 1986)",
+       "url": "https://en.wikipedia.org/wiki/Stranger_Things"
+      },
+      {
+       "title": "Stranger Things Wiki: Timeline (27-28 March 1986; 7.4 earthquake; quarantine April 1986 to November 1987)",
+       "url": "https://strangerthings.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Season 4 is set in March 1986 and the final battle falls on 27 March; the earthquake cover story, federal disaster declaration and the quarantine that follows (April 1986 to November 1987) are from the season finale and season 5. In our 1986 Indiana had no earthquake of any size.",
+     "binWhy": "Passages to the other realm open across a whole town, and the town is sealed.",
+     "bin": "gateway-opens",
+     "facets": {
+      "change": "one closed gate → four open rifts and a quarantined town",
+      "mechanism": "attack",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "local",
+      "domain": "cosmic",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "cover-up",
+       "secrecy",
+       "manufactured-emergency"
+      ],
+      "outcomes": [
+       "lockdown",
+       "exodus",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "st-rightside-up-1987",
+     "year": 1987,
+     "date": "1987-11-06",
+     "title": "The Upside Down is destroyed",
+     "description": "Under military quarantine, Vecna takes twelve children to merge the Abyss with Hawkins. The friends rescue the children, kill Vecna and the Mind Flayer, and blow up the matter holding the Upside Down together; Eleven stays behind as it collapses so the army cannot breed more subjects from her blood.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "war",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Stranger Things season 5",
+       "url": "https://en.wikipedia.org/wiki/Stranger_Things_season_5"
+      },
+      {
+       "title": "Stranger Things Wiki: Timeline (6 November 1987)",
+       "url": "https://strangerthings.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Season 5 is set in November 1987 and the finale falls on the anniversary of Will's disappearance, 6 November. The military's own programme, led by Dr Kay, was using Eleven's sister Kali's blood to make new psychic children; the ending closes that too.",
+     "binWhy": "The battle that settles the conflict: the enemy is killed and the passage is destroyed.",
+     "bin": "decisive-victory",
+     "facets": {
+      "change": "a town under siege from the Abyss → the passage destroyed and the enemy dead",
+      "mechanism": "war",
+      "actor": "movement",
+      "position": "below",
+      "scope": "local",
+      "domain": "cosmic",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "existential-threat",
+       "occupation",
+       "secrecy"
+      ],
+      "outcomes": [
+       "turning-point",
+       "rebuilding",
+       "programme-winds-down"
+      ]
+     }
+    },
+    {
+     "id": "st-graduation-1989",
+     "year": 1989,
+     "date": "1989-05",
+     "title": "Hawkins eighteen months later",
+     "description": "The military has left and the town is being rebuilt. The friends graduate from high school and scatter to colleges and jobs; the public story of the earthquake years stands, and Eleven is officially missing.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": "Eighteen months after the finale",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: Stranger Things (18 months later, in May 1989)",
+       "url": "https://en.wikipedia.org/wiki/Stranger_Things"
+      }
+     ],
+     "note": "The epilogue is stated as eighteen months later, in May 1989; the fan wiki narrows it to 27 May from background details. The series never shows the truth becoming public, so the hidden history stays hidden.",
+     "binWhy": "A jump forward shows the town after the war with the Upside Down.",
+     "bin": "long-after",
+     "facets": {
+      "change": "a quarantined disaster zone → an ordinary town rebuilding",
+      "mechanism": "consolidation",
+      "actor": "movement",
+      "position": "inside",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "war-just-ended",
+       "cover-up"
+      ],
+      "outcomes": [
+       "recovery",
+       "rebuilding",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "st-pub-2016",
+     "year": 2016,
+     "date": "2016-07-15",
+     "title": "Stranger Things premieres on Netflix",
+     "description": "The first season is released in full on Netflix: eight episodes set in November 1983, built from Spielberg, Carpenter and Stephen King and from the real history of government mind experiments.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Stranger Things",
+       "url": "https://en.wikipedia.org/wiki/Stranger_Things"
+      }
+     ],
+     "note": "Released 15 July 2016.",
+     "binWhy": "The original release; not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "st-pub-2025",
+     "year": 2025,
+     "date": "2025-12-31",
+     "title": "The final episode is released",
+     "description": "The fifth season is released in three parts from November 2025, ending with the finale on New Year's Eve, which closes the story.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Stranger Things season 5 (episodes released 26 November, 25 December and 31 December 2025)",
+       "url": "https://en.wikipedia.org/wiki/Stranger_Things_season_5"
+      }
+     ],
+     "note": "Released 26 November, 25 December and 31 December 2025.",
+     "binWhy": "The concluding release; not a moment in the story.",
+     "bin": null,
+     "facets": null
+    }
+   ],
+   "groupingNote": "A hidden history in the X-Files mould: the public record of 1980s Indiana is a murder, a missing boy, a laboratory closure, a mall fire and an earthquake, and underneath each is a government laboratory, a psychic child and a passage to another realm. The fork is the 1959 Creel murders, the first year the Netflix series itself dates; the stage play's 1943 and 1950s backstory is noted but not charted, and the events follow the series continuity only; the main series is finished, but spin-offs and the play keep the franchise going. Everything in the story falls in T3 (1953-1989); the two publication entries are T2. T4 and T1 are empty because the fiction reaches back no further than the Cold War and ends in 1989.",
+   "sources": [
+    {
+     "title": "Wikipedia: Stranger Things",
+     "url": "https://en.wikipedia.org/wiki/Stranger_Things"
+    },
+    {
+     "title": "Wikipedia: Stranger Things season 5",
+     "url": "https://en.wikipedia.org/wiki/Stranger_Things_season_5"
+    },
+    {
+     "title": "Stranger Things Wiki: Timeline",
+     "url": "https://strangerthings.fandom.com/wiki/Timeline"
+    }
+   ]
+  },
+  {
+   "id": "fringe",
+   "title": "Fringe",
+   "medium": "tv",
+   "creator": "J. J. Abrams, Alex Kurtzman and Roberto Orci",
+   "originYear": 2008,
+   "group": "hidden-history",
+   "epoch": "present",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 1981,
+    "label": "Bell and Bishop begin the Cortexiphan trials",
+    "delta": "Real: 1981 is the year of the IBM PC and the first space shuttle; nobody is dosing three-year-olds in a Florida day-care centre to unlock powers of the mind. Fiction: William Bell and Walter Bishop create the nootropic Cortexiphan and trial it on children in Jacksonville and Ohio, and one of those children, Olivia Dunham, will be able to cross between universes.",
+    "inUniverse": "Cortexiphan created by Bell and Bishop in 1981; trials in Jacksonville, Florida, and Ohio",
+    "confidence": "medium",
+    "note": "Wikipedia dates Cortexiphan to the early 1980s; the Fringe wiki gives 1981. The series also shows photographs of Observers at the Boston Massacre and Franz Ferdinand's assassination, but by design they change nothing there, so they are not taken as the fork. The first dated act that makes this world stop being ours is the drug trial; the load-bearing act, Walter's 1985 crossing into the parallel universe, follows four years later.",
+    "sources": [
+     {
+      "title": "Wikipedia: Mythology of Fringe (Cortexiphan developed in the early 1980s, testing through 1986)",
+      "url": "https://en.wikipedia.org/wiki/Mythology_of_Fringe"
+     },
+     {
+      "title": "Fringe Wiki: Cortexiphan (created 1981; trials 1981-1983 in Ohio and Jacksonville)",
+      "url": "https://fringe.fandom.com/wiki/Cortexiphan"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "Walter takes the child Michael to 2167 so the Observers are never made; the timeline resets to the day of the 2015 invasion, the invasion does not happen, and Peter, Olivia and their daughter Etta are alive in the park.",
+    "asOf": 2015
+   },
+   "events": [
+    {
+     "id": "fr-cortexiphan-1981",
+     "year": 1981,
+     "date": "1981",
+     "title": "The Cortexiphan trials",
+     "description": "Two scientists give an experimental drug to young children in Jacksonville and Ohio to stop the natural narrowing of the mind. Most of the children forget; a few, including Olivia Dunham, are left with abilities that no one outside the trial knows about.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 2,
+     "kind": "technology",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Fringe Wiki: Cortexiphan",
+       "url": "https://fringe.fandom.com/wiki/Cortexiphan"
+      },
+      {
+       "title": "Wikipedia: Mythology of Fringe",
+       "url": "https://en.wikipedia.org/wiki/Mythology_of_Fringe"
+      }
+     ],
+     "note": "The year comes from the fan wiki; Wikipedia says only 'early 1980s'. In the timeline this lineage follows (seasons 4 and 5), Olivia runs away from the trials after six months, but her abilities remain and matter in 2012 and 2036.",
+     "binWhy": "Children are dosed and one of them is chosen, without her knowledge, as the person the future turns on.",
+     "bin": "chosen-one",
+     "facets": {
+      "change": "ordinary children → secret trial subjects with latent powers",
+      "mechanism": "invention",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "local",
+      "domain": "scientific",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "technological-race"
+      ],
+      "outcomes": [
+       "new-actors",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "fr-crossing-1985",
+     "year": 1985,
+     "date": "1985",
+     "title": "Walter crosses into the other universe",
+     "description": "Walter Bishop, whose son has died of a genetic illness, breaks through to a parallel universe to cure that world's Peter, and on the way back father and son fall through the ice of Reiden Lake. The crossing damages the fabric between the universes, and the other side begins to tear open.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "In the seasons 4-5 timeline Peter drowns in Reiden Lake; in the seasons 1-3 timeline an Observer saves him and Walter raises him",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Mythology of Fringe (the 1985 episode 'Peter'; the weak spot created by Walter in 1985)",
+       "url": "https://en.wikipedia.org/wiki/Mythology_of_Fringe"
+      },
+      {
+       "title": "Fringe Wiki: Alternate Timeline (1985: Peter drowns in Reiden Lake)",
+       "url": "https://fringe.fandom.com/wiki/Alternate_Timeline"
+      }
+     ],
+     "note": "The episode 'Peter' is set in 1985. Both timelines share the crossing and the damage it does; they differ only in whether the boy survives the lake. The other universe, where the Twin Towers stand and airships are common, is from here on in the story's own politics.",
+     "binWhy": "A passage between universes is made for the first time.",
+     "bin": "gateway-opens",
+     "facets": {
+      "change": "two sealed universes → a breach between them",
+      "mechanism": "invention",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "disaster-just-struck"
+      ],
+      "outcomes": [
+       "contact",
+       "rivalry",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "fr-flight-627-2008",
+     "year": 2008,
+     "date": "2008",
+     "title": "Flight 627 lands with everyone dead",
+     "description": "An international flight from Hamburg lands at Boston's Logan Airport with every passenger and crew member killed by a flesh-dissolving toxin. The FBI's Fringe Division, working with Walter Bishop, finds the attack was an experiment in a wider series of events it names the Pattern.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "disaster",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Fringe season 1 ('Pilot', aired 9 September 2008)",
+       "url": "https://en.wikipedia.org/wiki/Fringe_season_1"
+      },
+      {
+       "title": "Fringe Wiki: Alternate Timeline (2008-2010: John Scott dies from his injuries in the Flight 627 investigation)",
+       "url": "https://fringe.fandom.com/wiki/Alternate_Timeline"
+      }
+     ],
+     "note": "The pilot is set in its own present, 2008. The event happens in both timelines. In our 2008 no aircraft landed with everyone aboard dead; the fiction's public record is a string of unexplained disasters the FBI files as terrorism.",
+     "binWhy": "A targeted chemical attack on an airliner, short of war, begins the story.",
+     "bin": "terror-attack",
+     "sub": "on-civilians",
+     "facets": {
+      "change": "an ordinary flight → an aircraft full of the dead",
+      "mechanism": "attack",
+      "actor": "faction",
+      "position": "below",
+      "scope": "national",
+      "domain": "biological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "secrecy",
+       "hidden-society",
+       "global-travel"
+      ],
+      "outcomes": [
+       "hunt-begins",
+       "revelation",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "fr-over-there-2010",
+     "year": 2010,
+     "date": "2010",
+     "title": "The other side sends its agents across",
+     "description": "The parallel universe, which blames ours for the vortices and quarantine zones tearing it apart, sends Olivia's double across to take her place while the real Olivia is held on the other side. The two worlds are now at war in secret, each with its own Fringe Division.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "war",
+     "inUniverse": "Seasons 4-5 timeline: Olivia is held for two weeks, not months as in seasons 2-3",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Fringe Wiki: Alternate Timeline (Fauxlivia kidnaps Olivia; locked away for two weeks)",
+       "url": "https://fringe.fandom.com/wiki/Alternate_Timeline"
+      },
+      {
+       "title": "Wikipedia: Mythology of Fringe",
+       "url": "https://en.wikipedia.org/wiki/Mythology_of_Fringe"
+      }
+     ],
+     "note": "The year is derived: the swap is shown at the end of season 2 (May 2010) and through season 3, set in the show's present. The seasons 4-5 timeline keeps the swap but shortens it. None of this is public in our universe; in the other one the damage is public and the amber quarantines are policy.",
+     "binWhy": "Two worlds settle into a covert war of infiltration and sabotage.",
+     "bin": "long-war",
+     "sub": "cold-war",
+     "facets": {
+      "change": "two universes unaware of each other → a covert war of doubles",
+      "mechanism": "invasion",
+      "actor": "state",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "rivalry",
+       "disaster-just-struck",
+       "cold-war"
+      ],
+      "outcomes": [
+       "cold-war",
+       "attrition",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "fr-bridge-2011",
+     "year": 2011,
+     "date": "2011",
+     "title": "The Bridge between the universes",
+     "description": "A machine left in both universes links them through a room where the two sides can meet, and the war stops. The two Fringe Divisions begin working together to heal the damage, and the two Walters, one of whom stole the other's son, sit at the same table.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "politics",
+     "inUniverse": "The seasons 4-5 timeline begins here: Peter enters the machine, makes the Bridge and is erased; he returns later that year",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Fringe Wiki: Alternate Timeline (2011: the Bridge is formed, cooperation begins)",
+       "url": "https://fringe.fandom.com/wiki/Alternate_Timeline"
+      },
+      {
+       "title": "Wikipedia: Fringe season 4 ('Neither Here Nor There': the two Fringe Divisions working together)",
+       "url": "https://en.wikipedia.org/wiki/Fringe_season_4"
+      }
+     ],
+     "note": "The Bridge is made at the end of season 3 (May 2011) and season 4 opens with the two divisions a week into cooperating (September 2011). This is the point where the lineage chooses its timeline: from here the chart follows the timeline without Peter, which is the one the series ends in.",
+     "binWhy": "Two enemies at war agree to work together through a shared crossing.",
+     "bin": "peace-made",
+     "facets": {
+      "change": "a war between universes → a joint task force",
+      "mechanism": "negotiation",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "long-war",
+       "existential-threat"
+      ],
+      "outcomes": [
+       "diplomacy",
+       "collaboration",
+       "opening"
+      ]
+     }
+    },
+    {
+     "id": "fr-bridge-closed-2012",
+     "year": 2012,
+     "date": "2012-05",
+     "title": "The Bridge is shut and Bell's plan is stopped",
+     "description": "David Robert Jones, working for William Bell, synchronises earthquakes in both universes to collapse them; the two sides switch the Bridge off and separate for good. Bell then tries to destroy this universe to build a new one, and Walter stops him by shooting Olivia, who survives.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "war",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Fringe season 4 ('Worlds Apart', 'Brave New World')",
+       "url": "https://en.wikipedia.org/wiki/Fringe_season_4"
+      },
+      {
+       "title": "Fringe Wiki: Alternate Timeline (2012)",
+       "url": "https://fringe.fandom.com/wiki/Alternate_Timeline"
+      }
+     ],
+     "note": "The finale aired in May 2012 in the show's present. Olivia is pregnant with Etta by the end; the daughter is the reason September let this timeline stand.",
+     "binWhy": "The fight with Bell and Jones is won, and the borders between the universes close.",
+     "bin": "decisive-victory",
+     "facets": {
+      "change": "two linked universes under attack → two sealed ones, both intact",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "existential-threat",
+       "rivalry"
+      ],
+      "outcomes": [
+       "closing-borders",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "fr-pub-2013",
+     "year": 2013,
+     "date": "2013-01-18",
+     "title": "The final episode airs",
+     "description": "Fox broadcasts 'Liberty' and 'An Enemy of Fate', the last two episodes, ending the series after five seasons and a hundred episodes.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Fringe season 5 ('An Enemy of Fate', aired 18 January 2013)",
+       "url": "https://en.wikipedia.org/wiki/Fringe_season_5"
+      }
+     ],
+     "note": "The series premiered on 9 September 2008, but 2008 is taken by the Flight 627 event and the lineage allows one entry per year, so the finale stands in as the publication entry.",
+     "binWhy": "The concluding broadcast; not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "fr-purge-2015",
+     "year": 2015,
+     "date": "2015",
+     "title": "The Observers invade",
+     "description": "Men from the year 2609, who have wrecked their own Earth, come back and take this one. Uprisings are crushed in what survivors call the Purge; collaborators are branded as Loyalists; the Fringe Division is kept on to police the natives; Walter seals himself, Peter and Astrid in amber, and Peter and Olivia's daughter Etta is taken.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "war",
+     "inUniverse": "The invasion begins on the day of a family picnic in a park; the final timeline branches from that same moment",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Letters of Transit (on-screen text: in 2015 the Observers took over human society)",
+       "url": "https://en.wikipedia.org/wiki/Letters_of_Transit"
+      },
+      {
+       "title": "Wikipedia: Mythology of Fringe (in 2015 the Observers invaded and instituted the Purge)",
+       "url": "https://en.wikipedia.org/wiki/Mythology_of_Fringe"
+      },
+      {
+       "title": "Wikipedia: Fringe season 4 ('Letters of Transit': Walter has spent the past 21 years in amber)",
+       "url": "https://en.wikipedia.org/wiki/Fringe_season_4"
+      }
+     ],
+     "note": "The year is stated in 'Letters of Transit' and season 5. Wikipedia places the final timeline's fixed point in November 2015; the month of the invasion itself is not stated on screen. This is the entry a reader could match against today's news: an occupation of Earth by its own descendants.",
+     "binWhy": "The world is conquered and occupied by a power from its own future.",
+     "bin": "defeat-and-occupation",
+     "facets": {
+      "change": "free humanity → natives under occupation",
+      "mechanism": "invasion",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "time-loop",
+       "resource-exhaustion"
+      ],
+      "outcomes": [
+       "occupation",
+       "collaboration",
+       "purge"
+      ]
+     }
+    },
+    {
+     "id": "fr-resistance-2036",
+     "year": 2036,
+     "date": "2036",
+     "title": "The Fringe team is freed from amber",
+     "description": "After twenty-one years of occupation, the Observers are changing the atmosphere to suit themselves and Loyalists run the checkpoints. The resistance, with the grown-up Etta inside the Fringe Division, frees Walter, Peter and Astrid from amber, and they start collecting the pieces of a plan to undo the invasion.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "war",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Letters of Transit (set in 2036)",
+       "url": "https://en.wikipedia.org/wiki/Letters_of_Transit"
+      },
+      {
+       "title": "Wikipedia: Fringe season 5",
+       "url": "https://en.wikipedia.org/wiki/Fringe_season_5"
+      }
+     ],
+     "note": "Season 5 is set entirely in 2036, stated on screen. Etta is killed by the Observer commander Windmark partway through the year.",
+     "binWhy": "An occupied people rises against the power from the future that holds them.",
+     "bin": "uprising",
+     "sub": "armed-rebellion",
+     "facets": {
+      "change": "a crushed occupation → an organised resistance with a plan",
+      "mechanism": "uprising",
+      "actor": "movement",
+      "position": "below",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "occupation",
+       "repression",
+       "crisis-ecological"
+      ],
+      "outcomes": [
+       "resistance-forms",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "fr-2167",
+     "year": 2167,
+     "date": "2167",
+     "title": "Walter takes Michael to 2167",
+     "description": "Walter carries Michael, an Observer child who has both their intelligence and human feeling, through a wormhole to the Oslo laboratory where the Observers were first engineered. The scientists see that feeling need not be sacrificed; the programme that made the Observers is abandoned, and the invasion of 2015 never happens.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Mythology of Fringe (Observers born out of an experiment by a Norwegian scientist in 2167; the finale sends Michael there)",
+       "url": "https://en.wikipedia.org/wiki/Mythology_of_Fringe"
+      },
+      {
+       "title": "Fringe Wiki: Final Timeline",
+       "url": "https://fringe.fandom.com/wiki/Final_Timeline"
+      }
+     ],
+     "note": "The year is stated in 'The Boy Must Live' and the finale. The effect lands in 2015: the reset returns the timeline to the day of the invasion and Walter and Michael are erased from it. This entry is placed at 2167 because that is the date at which the record is changed.",
+     "binWhy": "A traveller arrives from the past and changes the future, cancelling the invasion.",
+     "bin": "time-traveller-arrives",
+     "facets": {
+      "change": "a programme that breeds the Observers → a programme abandoned",
+      "mechanism": "arrival",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "biological",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 1
+      },
+      "preconditions": [
+       "occupation",
+       "time-loop"
+      ],
+      "outcomes": [
+       "turning-point",
+       "reform"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "A hidden history run by an FBI unit, in the X-Files line: in our universe the public record from 2008 is a set of unexplained disasters, and underneath them are a 1981 drug trial on children, a 1985 breach into a parallel universe and a secret war between the two. It becomes open alternate history only in 2015, when the Observers invade. Fringe has several timelines; this lineage follows the timeline of seasons 4 and 5, in which Peter drowned in 1985 and returned in 2011, because it is the one the series ends in. Events of seasons 1-3 are kept only where both timelines share them (the 1985 crossing, Flight 627, the war between the universes). The 2167 entry is where Walter changes the record, and its effect lands back in 2015. Tiers: T3 holds 1981 and 1985; T2 runs from 2008 to 2167; T4 and T1 are empty, since the Observers' own era (2609) is a future the ending cancels and is not charted.",
+   "sources": [
+    {
+     "title": "Wikipedia: Fringe (TV series)",
+     "url": "https://en.wikipedia.org/wiki/Fringe_(TV_series)"
+    },
+    {
+     "title": "Wikipedia: Mythology of Fringe",
+     "url": "https://en.wikipedia.org/wiki/Mythology_of_Fringe"
+    },
+    {
+     "title": "Fringe Wiki: Timelines",
+     "url": "https://fringe.fandom.com/wiki/Timelines"
+    }
+   ]
+  },
+  {
+   "id": "dark",
+   "title": "Dark",
+   "medium": "tv",
+   "creator": "Baran bo Odar and Jantje Friese",
+   "originYear": 2017,
+   "group": "hidden-history",
+   "epoch": "present",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 1888,
+    "label": "Travellers from 2020 are stranded in 1888 Winden",
+    "delta": "Real: in 1888 Germany has three emperors in one year and small towns like the fictional Winden have a watchmaker, a church and a forest. Fiction: four people thrown back from the apocalypse of 2020 are living in Winden, working with the watchmaker Gustav Tannhaus's secret society to build a device that will open time, and one of them marries into the town and founds the families whose descendants will do it all again.",
+    "inUniverse": "Martha arrives on 21 September 1888 to find adult Jonas, Bartosz, Magnus and Franziska already there (season 3)",
+    "confidence": "high",
+    "note": "1888 is the earliest year Dark shows. The fan wiki says the secret society Sic Mundus was founded earlier in the nineteenth century by Heinrich Tannhaus, but gives no year and the series does not show it. The whole knot of 1888-2053 exists only because of an event in a third, 'origin' world, where H. G. Tannhaus switched on a time machine on 21 June 1986; that world is charted where its events fall on the calendar (1971) rather than used as the fork, because the knot is what the series is about.",
+    "sources": [
+     {
+      "title": "Wikipedia: Dark (TV series) - season 3 adds an 1888 storyline; Martha travels to 21 September 1888",
+      "url": "https://en.wikipedia.org/wiki/Dark_(TV_series)"
+     },
+     {
+      "title": "Dark Wiki: Sic Mundus (by 1888 Gustav is the only member until the travellers appear)",
+      "url": "https://dark-netflix.fandom.com/wiki/Sic_Mundus"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "Jonas and Martha stop the Tannhaus family's fatal car journey in the origin world, so the time machine is never built, both looped worlds and their apocalypses cease to exist, and in the origin world's 2019 Winden has no nuclear plant and no apocalypse.",
+    "asOf": 2019
+   },
+   "events": [
+    {
+     "id": "dk-1888",
+     "year": 1888,
+     "date": "1888-09-21",
+     "title": "Stranded travellers in 1888",
+     "description": "Four people escaped from the 2020 apocalypse live in Winden and join the watchmaker Gustav Tannhaus's society, which wants to use time to undo death. One of them, Bartosz, stays and has children whose descendants are the families of the later story; the watchmaker is murdered by a traveller from further up the knot.",
+     "tier": "T4",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Adam's world (the first world shown); Bartosz meets Silja in 1890 and their children Hanno (Noah) and Agnes follow",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Dark (TV series), season 3 episodes",
+       "url": "https://en.wikipedia.org/wiki/Dark_(TV_series)"
+      },
+      {
+       "title": "Dark Wiki: Sic Mundus",
+       "url": "https://dark-netflix.fandom.com/wiki/Sic_Mundus"
+      }
+     ],
+     "note": "The date is stated. The 1888 and 1890 scenes are where the family trees fold back on themselves: Noah and Agnes, born here, are ancestors of people who travel back to be their parents.",
+     "binWhy": "People from the future arrive and found the lines that will produce them.",
+     "bin": "time-traveller-arrives",
+     "facets": {
+      "change": "a Black Forest watchmaker's town → a town seeded by its own future",
+      "mechanism": "arrival",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "time-loop",
+       "exile",
+       "hidden-society"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "new-actors",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "dk-passage-1921",
+     "year": 1921,
+     "date": "1921",
+     "title": "Sic Mundus digs the passage",
+     "description": "Under a leader called Adam, the society works from a hall beneath St Christopher's church and excavates a tunnel in the Winden caves that lets people walk thirty-three years forward or back. A young Noah, recruited the year before, is one of the diggers.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "technology",
+     "inUniverse": "Adam's world",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Dark (TV series) - in 1921 a young Noah and another man are building the passage",
+       "url": "https://en.wikipedia.org/wiki/Dark_(TV_series)"
+      },
+      {
+       "title": "Dark Wiki: Sic Mundus (by 1921 Adam leads; the lair under St Christopher's church)",
+       "url": "https://dark-netflix.fandom.com/wiki/Sic_Mundus"
+      }
+     ],
+     "note": "Season 2 dates the storyline to 1921 and Noah's initiation to 1920. Adam is Jonas, aged; the passage he has built is the one his younger self finds in 2019.",
+     "binWhy": "A passage through time is dug and opened.",
+     "bin": "gateway-opens",
+     "facets": {
+      "change": "a cave system → a tunnel through time",
+      "mechanism": "invention",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "local",
+      "domain": "scientific",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "hidden-society",
+       "time-loop",
+       "religious-fervour"
+      ],
+      "outcomes": [
+       "secrecy-state",
+       "foreknowledge"
+      ]
+     }
+    },
+    {
+     "id": "dk-bodies-1953",
+     "year": 1953,
+     "date": "1953-11",
+     "title": "Two boys' bodies at the power-plant site",
+     "description": "Bernd Doppler begins the effort to build Winden's nuclear power station, and the bodies of two boys who went missing in 2019 are found on the site. A man from 2019, Ulrich Nielsen, beats a local boy, Helge Doppler, and is locked in an asylum for life; the police chief never solves the case.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Adam's world; Helge vanishes in November 1953 and returns in 1954",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Dark (TV series) - in 1953 the bodies of Erik and Yasin are found at the construction site",
+       "url": "https://en.wikipedia.org/wiki/Dark_(TV_series)"
+      },
+      {
+       "title": "Dark Wiki: Winden Nuclear Power Plant (1953: Bernd inaugurates the effort; bodies found)",
+       "url": "https://dark-netflix.fandom.com/wiki/Winden_Nuclear_Power_Plant"
+      }
+     ],
+     "note": "Season 1 dates this storyline to November 1953. In our 1953 West Germany had no nuclear power programme at all; its first power reactor ran in 1961, the year after the fan wiki says Winden's plant was begun. Bernd blames the bodies on the coal lobby.",
+     "binWhy": "People and bodies from 2019 turn up in 1953 and change what the town becomes.",
+     "bin": "time-traveller-arrives",
+     "facets": {
+      "change": "a plan for a power station → a murder case with victims from the future",
+      "mechanism": "arrival",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "time-loop",
+       "secrecy"
+      ],
+      "outcomes": [
+       "cover-up",
+       "hunt-begins"
+      ]
+     }
+    },
+    {
+     "id": "dk-origin-1971",
+     "year": 1971,
+     "date": "1971-11-08",
+     "title": "The Tannhaus car journey, and the two who stop it",
+     "description": "In a third, origin world that has no time travel, H. G. Tannhaus's son, daughter-in-law and granddaughter die in a car crash, and from 1974 he builds a machine to undo it. At the end of the story Jonas and Martha arrive on the road that night and turn the car back; the family lives, the machine is never built, and the two looped worlds never come into being.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Origin world; the machine, switched on there on 21 June 1986, is what split that world into Adam's and Eva's",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Dark Wiki: Origin World (accident on 8 November 1971; machine begun 1974 and switched on 21 June 1986)",
+       "url": "https://dark-netflix.fandom.com/wiki/Origin_World"
+      },
+      {
+       "title": "Wikipedia: Dark (TV series), 'Paradise' - Jonas and Martha save Tannhaus' family",
+       "url": "https://en.wikipedia.org/wiki/Dark_(TV_series)"
+      }
+     ],
+     "note": "This is where the knot is undone, and it sits in the middle of the list because the list is in calendar order. The fan wiki gives 8 November 1971; Wikipedia confirms the rescue but not the date. Everything charted after this entry belongs to the looped world and is erased by it; the origin world continues without incident.",
+     "binWhy": "Two travellers arrive from outside a world and change its present so that the knot is never made.",
+     "bin": "time-traveller-arrives",
+     "facets": {
+      "change": "a family killed on a bridge → a family that turns back",
+      "mechanism": "arrival",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": -1,
+       "population": 1
+      },
+      "preconditions": [
+       "time-loop",
+       "disaster-just-struck"
+      ],
+      "outcomes": [
+       "turning-point",
+       "time-lost"
+      ]
+     }
+    },
+    {
+     "id": "dk-plant-1986",
+     "year": 1986,
+     "date": "1986-06-21",
+     "title": "The plant accident is buried in the caves",
+     "description": "Two months after Chernobyl's fallout reaches Winden, an explosion at the plant leaks radioactive waste; the management keeps it secret and hides the barrels in the caves above the passage. In October a twelve-year-old, Mads Nielsen, disappears and is never found in his own time.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "disaster",
+     "inUniverse": "Adam's world; the same day, in the origin world, Tannhaus switches on his machine",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Dark Wiki: Winden Nuclear Power Plant (1986: explosion, leak kept secret, barrels stored in the caves)",
+       "url": "https://dark-netflix.fandom.com/wiki/Winden_Nuclear_Power_Plant"
+      },
+      {
+       "title": "Dark Wiki: Origin World (21 June 1986, the day of the initial incident at the plant)",
+       "url": "https://dark-netflix.fandom.com/wiki/Origin_World"
+      }
+     ],
+     "note": "The series shows the 1986 incident and the hidden barrels; 21 June is the fan wiki's date and the plant page says only 'summer', hence medium. Mads disappears about four weeks before 5 November 1986 (season 1); the fan wiki dates his death, when he is sent through to 2019, to 4 November. Chernobyl, on 26 April 1986, is real; the fiction adds a German accident nobody reports.",
+     "binWhy": "A nuclear accident is hidden from the public by the people who run the plant.",
+     "bin": "secret-kept",
+     "facets": {
+      "change": "a working reactor → a hidden leak and buried waste",
+      "mechanism": "accident",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "local",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "cover-up",
+       "disaster-just-struck"
+      ],
+      "outcomes": [
+       "cover-up",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "dk-unknown-1987",
+     "year": 1987,
+     "date": "1987",
+     "title": "The Sic Mundus lodge burns and Bernd Doppler is killed",
+     "description": "A time traveller known only as the Unknown breaks into the society's lodge, steals the time machine's blueprints and sets the building on fire, then kills the plant's founder, Bernd Doppler, in his house and takes the plant's keys. The plant's new director, Claudia Tiedemann, disappears the same year.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": "Adam's world",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Dark (TV series) - in 1987 the Unknown burns down the Sic Mundus church and assassinates Bernd Doppler",
+       "url": "https://en.wikipedia.org/wiki/Dark_(TV_series)"
+      },
+      {
+       "title": "Dark Wiki: Winden Nuclear Power Plant (1987)",
+       "url": "https://dark-netflix.fandom.com/wiki/Winden_Nuclear_Power_Plant"
+      }
+     ],
+     "note": "Seasons 2 and 3 date these events to 1987. The Unknown is one person at three ages, the child of Jonas and Martha; the murders are how the knot keeps itself on course.",
+     "binWhy": "A targeted arson and murder by a traveller that decide who controls the plant and the machine.",
+     "bin": "terror-attack",
+     "sub": "targeted",
+     "facets": {
+      "change": "a society and a plant under known control → burned papers and a dead founder",
+      "mechanism": "attack",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "local",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "time-loop",
+       "hidden-society"
+      ],
+      "outcomes": [
+       "cover-up",
+       "succession-struggle"
+      ]
+     }
+    },
+    {
+     "id": "dk-pub-2017",
+     "year": 2017,
+     "date": "2017-12-01",
+     "title": "Dark premieres on Netflix",
+     "description": "The first season, ten episodes in German set in 2019, 1986 and 1953, is released worldwide; it is Netflix's first German-language original series.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Dark (TV series)",
+       "url": "https://en.wikipedia.org/wiki/Dark_(TV_series)"
+      }
+     ],
+     "note": "Released 1 December 2017. The third and final season followed on 27 June 2020, the date of the in-story apocalypse, which already occupies that year here.",
+     "binWhy": "The original release; not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "dk-mikkel-2019",
+     "year": 2019,
+     "date": "2019-11-04",
+     "title": "Children disappear from Winden",
+     "description": "A teenage drug dealer has been missing for two weeks when a small boy, Mikkel Nielsen, vanishes in the caves near the power plant, due to be shut down in the national phase-out, and the body of a boy nobody can identify is found. Jonas Kahnwald, whose father killed himself that June, finds the passage and the rest of the knot.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Adam's world; in Eva's world the apocalypse falls on 8 November 2019",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Dark (TV series), 'Secrets' (21 June and 4 November 2019)",
+       "url": "https://en.wikipedia.org/wiki/Dark_(TV_series)"
+      }
+     ],
+     "note": "The dates are stated. Germany's real nuclear phase-out ended with the last three reactors closing in April 2023; the fiction's Winden plant is scheduled for 2020. The unidentified body is Mads Nielsen from 1986.",
+     "binWhy": "An ordinary teenager is drawn into the hidden story through a missing child.",
+     "bin": "the-call",
+     "facets": {
+      "change": "a quiet town → missing children and a door in the caves",
+      "mechanism": "disclosure",
+      "actor": "individual",
+      "position": "below",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "time-loop",
+       "cover-up",
+       "secrecy"
+      ],
+      "outcomes": [
+       "revelation",
+       "hunt-begins"
+      ]
+     }
+    },
+    {
+     "id": "dk-apocalypse-2020",
+     "year": 2020,
+     "date": "2020-06-27",
+     "title": "The apocalypse",
+     "description": "An opened barrel of waste at the plant and time machines running in 1921 and 2053 release a blast that razes Winden. A radio bulletin says every aircraft in the air crashed, nuclear plants melted down and tides were disrupted worldwide; survivors are buried under crude markers and the army seals the plant.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "disaster",
+     "inUniverse": "Adam's world",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Dark (TV series) - the apocalypse on 27 June 2020",
+       "url": "https://en.wikipedia.org/wiki/Dark_(TV_series)"
+      },
+      {
+       "title": "Dark Wiki: Apocalypse (causes; global consequences described in 'The Survivors')",
+       "url": "https://dark-netflix.fandom.com/wiki/Apocalypse"
+      }
+     ],
+     "note": "The date is stated; the third season was released on the same day, 27 June 2020. The global effects come from a news bulletin in season 3; the series never shows the wider world directly.",
+     "binWhy": "A disaster kills on a scale that ends the world the story knew.",
+     "bin": "mass-death",
+     "sub": "disaster",
+     "facets": {
+      "change": "a town in a working country → a crater and a wrecked world",
+      "mechanism": "disaster",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "time-loop",
+       "cover-up",
+       "hidden-society"
+      ],
+      "outcomes": [
+       "mass-death",
+       "collapse",
+       "lockdown"
+      ]
+     }
+    },
+    {
+     "id": "dk-2053",
+     "year": 2053,
+     "date": "2053",
+     "title": "Winden in 2053",
+     "description": "Winden is a ruin patrolled by military drones and armed bands; a survivor, Elisabeth Doppler, runs a hard settlement of survivors, and Sic Mundus has moved into the dead power plant. Adam's attempt to destroy the knot fails, and an aged Claudia tells him it began in a third world, where a man tried to undo his family's death.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Adam's world; Eva's world has its own ruined 2052, turned to desert",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Dark (TV series) - 2053 storylines; Claudia explains the origin",
+       "url": "https://en.wikipedia.org/wiki/Dark_(TV_series)"
+      },
+      {
+       "title": "Dark Wiki: Apocalypse (Winden an abandoned ruin by 2052 and 2053)",
+       "url": "https://dark-netflix.fandom.com/wiki/Apocalypse"
+      }
+     ],
+     "note": "Seasons 2 and 3 are dated 2053 on screen. It is the last point the looped world reaches; the origin world is the only thing that outlasts it.",
+     "binWhy": "A jump forward shows the ruin the apocalypse left, and where the knot began.",
+     "bin": "long-after",
+     "facets": {
+      "change": "a razed town → a militarised wasteland ruled by survivors",
+      "mechanism": "disclosure",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "post-collapse",
+       "time-loop"
+      ],
+      "outcomes": [
+       "revelation",
+       "despair"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Dark belongs among the hidden histories because its public record is small-town German news, missing children, a nuclear plant and an unsolved 1953 case, while underneath each is a secret society walking through a tunnel in time. It is hard to put on one calendar because the knot has no first cause. The rule used here is plain: every event sits on the real calendar at the date it happens, in the order a Winden archive would record it, whichever character's lifetime it belongs to. The first world the series shows (Adam's world) supplies almost every entry; Eva's world is mentioned only in inUniverse notes; the origin world appears once, in 1971, because that is when Jonas and Martha change its record. That means the knot's undoing sits mid-list and everything after 1971 is what it erases, which is also why the ending is taken from the origin world's 2019. Tiers: T4 holds 1888, T3 runs from 1921 to 1987 and T2 from 2017 to 2053; T1 is empty because the looped world ends in 2053.",
+   "sources": [
+    {
+     "title": "Wikipedia: Dark (TV series)",
+     "url": "https://en.wikipedia.org/wiki/Dark_(TV_series)"
+    },
+    {
+     "title": "Dark Wiki: Origin World",
+     "url": "https://dark-netflix.fandom.com/wiki/Origin_World"
+    },
+    {
+     "title": "Dark Wiki: Apocalypse",
+     "url": "https://dark-netflix.fandom.com/wiki/Apocalypse"
+    }
+   ]
+  },
+  {
+   "id": "umbrella-academy",
+   "title": "The Umbrella Academy",
+   "medium": "tv",
+   "creator": "Gerard Way and Gabriel Bá (comics); Steve Blackman (Netflix series)",
+   "originYear": 2007,
+   "group": "hidden-history",
+   "epoch": "present",
+   "franchiseStatus": "ongoing",
+   "divergence": {
+    "year": 1918,
+    "label": "Reginald Hargreeves builds the Hotel Obsidian over the universe's reset button",
+    "delta": "Real: 1918 is the last year of the First World War and the first of the influenza pandemic; the hotels that open are hotels. Fiction: an alien billionaire, Sir Reginald Hargreeves, opens the Hotel Obsidian over a tunnel to a mirror hotel that holds a device able to reset the universe, and sends soldiers down it who are all killed.",
+    "inUniverse": "Season 3 flashback: 'In 1918, Reginald Hargreeves begins construction of the Hotel Obsidian'",
+    "confidence": "medium",
+    "note": "1918 is the earliest year the Netflix series itself dates. The fan wiki has Reginald leaving his home planet in 1902 and buying a company on Earth in 1909, but flags both as uncited, so they are not used. His presence on Earth is taken as background that surfaces in the record in 1918. This lineage follows the Netflix series, not the comics, whose continuity differs throughout.",
+    "sources": [
+     {
+      "title": "Wikipedia: The Umbrella Academy season 3 ('Wedding at the End of the World': 1918, Hotel Obsidian)",
+      "url": "https://en.wikipedia.org/wiki/The_Umbrella_Academy_season_3"
+     },
+     {
+      "title": "Umbrella Academy Wiki: Netflix Timeline",
+      "url": "https://umbrellaacademy.fandom.com/wiki/Netflix_Timeline"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "The siblings let the Cleanse absorb them and their marigold, which collapses every branch into a single ordinary timeline with no apocalypses and no trace of the Umbrella Academy.",
+    "asOf": 2025
+   },
+   "events": [
+    {
+     "id": "ua-obsidian-1918",
+     "year": 1918,
+     "date": "1918",
+     "title": "The Hotel Obsidian opens over a tunnel",
+     "description": "Reginald Hargreeves builds a grand hotel whose secret passage leads to Hotel Oblivion, a mirror building that holds a button able to reset the universe. At the opening he sends soldiers down the passage; its guardians kill them all.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: The Umbrella Academy season 3 (episodes 8-10)",
+       "url": "https://en.wikipedia.org/wiki/The_Umbrella_Academy_season_3"
+      }
+     ],
+     "note": "The year is stated in a season 3 flashback; the function of the hotel is explained in 'Seven Bells'. The public sees a hotel. Confidence is medium because the flashback is brief and the wider history of Reginald's arrival is not dated on screen.",
+     "binWhy": "A passage to a place that can remake the universe is built and hidden under a hotel.",
+     "bin": "gateway-opens",
+     "facets": {
+      "change": "a hotel site → a hidden route to the universe's reset button",
+      "mechanism": "founding",
+      "actor": "outsider",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "war-just-ended"
+      ],
+      "outcomes": [
+       "secrecy-state",
+       "foreknowledge"
+      ]
+     }
+    },
+    {
+     "id": "ua-dallas-1960",
+     "year": 1960,
+     "date": "1960-02-11",
+     "title": "The siblings begin arriving in Dallas",
+     "description": "Fleeing the end of the world in 2019, Five's jump scatters his brothers and sisters across Dallas between February 1960 and October 1963. Klaus lands first and gathers a cult; the others build lives in the civil-rights movement, the boxing underworld and a psychiatric ward.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": "Klaus and Ben arrive on 11 February 1960; Allison 1961, Luther 1962, Diego and Vanya 1963",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: The Umbrella Academy season 2 (scattered between February 1960 and October 1963)",
+       "url": "https://en.wikipedia.org/wiki/The_Umbrella_Academy_season_2"
+      },
+      {
+       "title": "Umbrella Academy Wiki: Netflix Timeline (arrival dates from season 2, episode 1)",
+       "url": "https://umbrellaacademy.fandom.com/wiki/Netflix_Timeline"
+      }
+     ],
+     "note": "Wikipedia gives the range; the fan wiki gives each arrival date from the opening episode of season 2. Their presence changes little in public until November 1963.",
+     "binWhy": "People from the future arrive in the past and begin changing it.",
+     "bin": "time-traveller-arrives",
+     "facets": {
+      "change": "2019 refugees → residents of 1960s Dallas",
+      "mechanism": "arrival",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "disaster-just-struck",
+       "exile",
+       "time-lost"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "ua-jfk-1963",
+     "year": 1963,
+     "date": "1963-11-22",
+     "title": "Kennedy is killed, and the doomsday is cancelled",
+     "description": "A secret committee, Majestic 12, with Reginald among its members, is behind President Kennedy's assassination in Dallas. In one branch Vanya's power stops the shooting and the Soviet Union and United States are at nuclear war by 25 November; Five goes back ten days, the assassination happens as it did in our history, and the siblings are named as suspects before they leave.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "The 25 November 1963 nuclear war belongs to a branch Five undoes; the kept branch matches the real record except for Reginald's hand in it",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: The Umbrella Academy season 2 (doomsday on 25 November 1963; wanted as terrorists for aiding Kennedy's assassination)",
+       "url": "https://en.wikipedia.org/wiki/The_Umbrella_Academy_season_2"
+      },
+      {
+       "title": "Umbrella Academy Wiki: Netflix Timeline (22 November 1963, Majestic 12)",
+       "url": "https://umbrellaacademy.fandom.com/wiki/Netflix_Timeline"
+      }
+     ],
+     "note": "The dates are stated. The public record in the series is the real one: Kennedy is shot on 22 November; the fiction adds who arranged it. The fan wiki says Reginald afterwards turns on the committee and kills its members. The siblings' encounter with him that week is what makes him adopt a different team in 1989.",
+     "binWhy": "A targeted killing of the president by a secret committee decides what follows, including a war that is undone.",
+     "bin": "terror-attack",
+     "sub": "targeted",
+     "facets": {
+      "change": "a president under threat → a president killed by a secret committee",
+      "mechanism": "attack",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "cold-war",
+       "hidden-society",
+       "time-loop"
+      ],
+      "outcomes": [
+       "cover-up",
+       "turning-point",
+       "hunt-begins"
+      ]
+     }
+    },
+    {
+     "id": "ua-births-1989",
+     "year": 1989,
+     "date": "1989-10-01",
+     "title": "Forty-three children born at once",
+     "description": "At noon, forty-three women around the world who showed no sign of pregnancy give birth. Reginald Hargreeves adopts seven and trains them as a public superhero team, the Umbrella Academy; the births were caused by marigold, a substance he released.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "birth",
+     "inUniverse": "In the Sparrow timeline only sixteen are born, because a psychic blast in 1989 kills 27 of the mothers before the births",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: The Umbrella Academy (TV series) - 43 women gave birth simultaneously at noon on 1 October 1989",
+       "url": "https://en.wikipedia.org/wiki/The_Umbrella_Academy_(TV_series)"
+      },
+      {
+       "title": "Wikipedia: The Umbrella Academy season 4 ('End of the Beginning': the marigold released in 1989)",
+       "url": "https://en.wikipedia.org/wiki/The_Umbrella_Academy_season_4"
+      }
+     ],
+     "note": "The date is stated. The births are public, worldwide news, and so is the team: this is the point at which the world of the series is visibly no longer ours. Season 4 adds that the marigold also split time into many branches.",
+     "binWhy": "Children are born on whom the future of every timeline turns.",
+     "bin": "chosen-one",
+     "facets": {
+      "change": "no one pregnant → forty-three children with powers",
+      "mechanism": "birth",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "biological",
+      "direction": {
+       "power": 1,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "secrecy",
+       "hidden-society"
+      ],
+      "outcomes": [
+       "new-actors",
+       "fervour",
+       "prestige"
+      ]
+     }
+    },
+    {
+     "id": "ua-five-2002",
+     "year": 2002,
+     "date": "2002",
+     "title": "Number Five jumps into the future",
+     "description": "Against his father's orders, the thirteen-year-old Number Five jumps forward in time and cannot get back. He lands in a ruined world after the 2019 apocalypse and lives there for decades, until a time-policing agency, the Commission, hires him as an assassin.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Five spends 45 years in the post-apocalyptic future before joining the Commission",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: The Umbrella Academy (TV series) - Five disappeared seventeen years earlier",
+       "url": "https://en.wikipedia.org/wiki/The_Umbrella_Academy_(TV_series)"
+      },
+      {
+       "title": "Umbrella Academy Wiki: Netflix Timeline (Five time-jumped from 2002)",
+       "url": "https://umbrellaacademy.fandom.com/wiki/Netflix_Timeline"
+      }
+     ],
+     "note": "Derived: season 1, set in 2019, says Five disappeared seventeen years earlier, and the fan wiki gives 2002. To the public it is a child superhero who vanished.",
+     "binWhy": "A first journey into a time nobody has reached, from which the traveller cannot return.",
+     "bin": "voyage-into-unknown",
+     "facets": {
+      "change": "a boy who can jump in space → a boy stranded at the end of the world",
+      "mechanism": "expedition",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "local",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "prosperity"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "exile"
+      ]
+     }
+    },
+    {
+     "id": "ua-jennifer-2006",
+     "year": 2006,
+     "date": "2006-10-14",
+     "title": "The Jennifer Incident",
+     "description": "On a mission to destroy a container in Moldova, Ben lets out Jennifer, a girl carrying a second substance, durango, which would end the world if it met the marigold in the siblings. Reginald shoots both of them and erases the others' memory of how their brother died.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Original timeline; Jennifer was found inside a giant squid in January 1995",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: The Umbrella Academy season 4 ('The Cleanse': 14 October 2006; 'The Squid and the Girl': January 1995)",
+       "url": "https://en.wikipedia.org/wiki/The_Umbrella_Academy_season_4"
+      }
+     ],
+     "note": "The date is stated in season 4. The public knows only that Number Six died; the Academy breaks up in the years after.",
+     "binWhy": "A death and the danger behind it are hidden, even from the people who saw it.",
+     "bin": "secret-kept",
+     "facets": {
+      "change": "a team member's death → a wiped memory and a hidden threat",
+      "mechanism": "death",
+      "actor": "individual",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "biological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "existential-threat"
+      ],
+      "outcomes": [
+       "cover-up",
+       "taboo"
+      ]
+     }
+    },
+    {
+     "id": "ua-pub-2007",
+     "year": 2007,
+     "date": "2007-09-14",
+     "title": "Apocalypse Suite #1 is published",
+     "description": "Dark Horse publishes the first issue of Gerard Way and Gabriel Bá's six-issue comic about seven adopted children with powers and an apocalypse; it wins the Eisner Award for best limited series.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: The Umbrella Academy (comics) - Apocalypse Suite released from 14 September 2007",
+       "url": "https://en.wikipedia.org/wiki/The_Umbrella_Academy"
+      }
+     ],
+     "note": "The Netflix series premiered on 15 February 2019, a year taken here by the 2019 apocalypse, so the comic is the publication entry.",
+     "binWhy": "The original release; not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "ua-moon-2019",
+     "year": 2019,
+     "date": "2019-04-01",
+     "title": "The moon breaks, and the universe is reset",
+     "description": "After Reginald's death, Vanya's unleashed power shatters the moon and its fragments wipe out humanity; the siblings escape into the past. Back in April 2019 they find a different world run by Reginald's Sparrow Academy, and a paradox they caused, the Kugelblitz, begins swallowing everything until Allison presses the reset button in Hotel Oblivion.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "disaster",
+     "inUniverse": "Original timeline (1 April) and Sparrow timeline (from 2 April); the reset leaves a world without powers, ruled from behind by Reginald and his revived wife Abigail",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: The Umbrella Academy season 1",
+       "url": "https://en.wikipedia.org/wiki/The_Umbrella_Academy_season_1"
+      },
+      {
+       "title": "Wikipedia: The Umbrella Academy season 3 ('Oblivion': the reset)",
+       "url": "https://en.wikipedia.org/wiki/The_Umbrella_Academy_season_3"
+      },
+      {
+       "title": "Umbrella Academy Wiki: Netflix Timeline (departures from 1 April 2019; Sparrow arrival 2 April 2019)",
+       "url": "https://umbrellaacademy.fandom.com/wiki/Netflix_Timeline"
+      }
+     ],
+     "note": "Season 1 counts down eight days from the funeral to the apocalypse; the siblings leave from 1 April 2019. Two worlds end in the same month here, one by the moon and one by the Kugelblitz, and they are merged into one entry because they share a year.",
+     "binWhy": "A disaster kills humanity, and its replacement world is consumed in turn.",
+     "bin": "mass-death",
+     "sub": "disaster",
+     "facets": {
+      "change": "a living world → a shattered moon, then a reset universe",
+      "mechanism": "disaster",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "cosmic",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "existential-threat",
+       "secrecy",
+       "time-loop"
+      ],
+      "outcomes": [
+       "mass-death",
+       "extinction-risk",
+       "new-order"
+      ]
+     }
+    },
+    {
+     "id": "ua-pub-2024",
+     "year": 2024,
+     "date": "2024-08-08",
+     "title": "The final season is released",
+     "description": "Netflix releases the six-episode fourth season, which ends the television adaptation.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: The Umbrella Academy season 4",
+       "url": "https://en.wikipedia.org/wiki/The_Umbrella_Academy_season_4"
+      }
+     ],
+     "note": "Released 8 August 2024.",
+     "binWhy": "The concluding release of the adaptation charted here; not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "ua-cleanse-2025",
+     "year": 2025,
+     "date": "2025",
+     "title": "The Cleanse, and a single timeline",
+     "description": "Six years into the reset world, Ben and Jennifer's marigold and durango meet and become the Cleanse. The siblings learn that their existence is what keeps splitting time and bringing apocalypses, and let the Cleanse absorb them; every branch but one is destroyed, and the one left is an ordinary world without them.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Six years after the 2019 reset",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: The Umbrella Academy season 4 (six years after resetting the universe; 'End of the Beginning')",
+       "url": "https://en.wikipedia.org/wiki/The_Umbrella_Academy_season_4"
+      },
+      {
+       "title": "TV Guide: season 4 begins six years after the siblings came out of Oblivion into a reset 2019",
+       "url": "https://www.tvguide.com/news/the-umbrella-academy-season-4-timeline-subway-wasted-potential/"
+      }
+     ],
+     "note": "Derived: the series states six years after the 2019 reset, so 2025, but never shows the year on screen. A mid-credits scene shows real marigold flowers blooming, leaving a door open.",
+     "binWhy": "The last fight is settled by the heroes sacrificing themselves, ending the apocalypses for good.",
+     "bin": "decisive-victory",
+     "facets": {
+      "change": "many timelines and recurring apocalypses → one ordinary timeline",
+      "mechanism": "death",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "existential-threat",
+       "time-loop"
+      ],
+      "outcomes": [
+       "turning-point",
+       "new-order",
+       "time-lost"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "The Umbrella Academy is a hidden history with a superhero surface: the public record includes the 1989 births and a celebrity team of child heroes, but not what caused them, and the series' secret history reaches from a 1918 hotel to the Kennedy assassination. This lineage follows the Netflix series, not the comics. The series moves through at least five timelines; the rule used is to place each event on the real calendar at the date it happens, in the order the public record would change, taking whichever branch the siblings leave behind them. So 1918 to 2019 is the original timeline, 1960-63 is the siblings' Dallas, the second half of 2019 is the Sparrow timeline and its reset, and 2025 is the reset world. Branches that are undone (the 25 November 1963 nuclear war) are mentioned in notes, not charted. Tiers: T3 holds 1918 to 1989 and T2 2002 to 2025; T4 and T1 are empty, since Reginald's pre-1918 past is not dated on screen and the story ends in 2025.",
+   "sources": [
+    {
+     "title": "Wikipedia: The Umbrella Academy (TV series)",
+     "url": "https://en.wikipedia.org/wiki/The_Umbrella_Academy_(TV_series)"
+    },
+    {
+     "title": "Wikipedia: The Umbrella Academy season 4",
+     "url": "https://en.wikipedia.org/wiki/The_Umbrella_Academy_season_4"
+    },
+    {
+     "title": "Umbrella Academy Wiki: Netflix Timeline",
+     "url": "https://umbrellaacademy.fandom.com/wiki/Netflix_Timeline"
     }
    ]
   }

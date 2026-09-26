@@ -46,6 +46,7 @@
      "confidence": "low",
      "note": "Genuinely contested across canon levels. TOS 'Space Seed' (1967) dates the Eugenics Wars to the 1990s, which real history has now falsified; DS9 'Doctor Bashir, I Presume?' moves them to the 22nd century, and Star Trek: Strange New Worlds (2022) places a young Khan in the 2020s. The 1990s date is the original and best-known reading, and it is the earliest point at which the fiction's Earth stops matching ours.",
      "bin": "power-seized",
+     "sub": "coup",
      "binWhy": "Augmented humans seize a quarter of the Earth before being overthrown.",
      "facets": {
       "change": "nations → a quarter of Earth under augmented rulers, then overthrown",
@@ -85,6 +86,7 @@
      "confidence": "high",
      "note": "DS9 'Past Tense' (1995) named 2024 as the year; the date has since passed in real history without the events depicted, which makes it a clean marker of how far the branch has already drifted.",
      "bin": "uprising",
+     "sub": "mass-protest",
      "binWhy": "The ruled revolt against those who hold power over them.",
      "facets": {
       "change": "internment tolerated → internment ended",
@@ -123,6 +125,7 @@
      "confidence": "high",
      "note": "Dated by ENT 'In a Mirror, Darkly' and Star Trek: First Contact, which place the war in the 2026–2053 window; TOS had earlier put it in the 1990s.",
      "bin": "mass-death",
+     "sub": "nuclear",
      "binWhy": "An attack or disaster kills on a scale that remakes society.",
      "facets": {
       "change": "tension → nuclear, biological and genetic war",
@@ -200,6 +203,7 @@
      "confidence": "high",
      "note": "ENT 'Terra Nova' (2001).",
      "bin": "settlement-founded",
+     "sub": "other-stars",
      "binWhy": "A permanent settlement or base is founded.",
      "facets": {
       "change": "one system → first settlement outside it",
@@ -237,6 +241,7 @@
      "confidence": "high",
      "note": "",
      "bin": "voyage-into-unknown",
+     "sub": "interstellar",
      "binWhy": "A first mission leaves for territory nobody has reached.",
      "facets": {
       "change": "home system → first deep-range ship leaves",
@@ -275,6 +280,7 @@
      "confidence": "high",
      "note": "The four-year span is established by the Okuda chronology and referenced on screen; the war itself has never been dramatised in full, so its internal events are largely unchronicled.",
      "bin": "war-breaks-out",
+     "sub": "between-worlds",
      "binWhy": "A war fought blind to a standstill.",
      "facets": {
       "change": "frontier tension → war fought blind to a standstill",
@@ -388,6 +394,7 @@
      "confidence": "high",
      "note": "TOS itself gave only stardates; the 2265–2270 span is the standard Okuda chronology, now effectively canon.",
      "bin": "voyage-into-unknown",
+     "sub": "interstellar",
      "binWhy": "The ship is sent out to explore and makes the Federation a power.",
      "facets": {
       "change": "known space → sent out to explore",
@@ -541,6 +548,7 @@
      "confidence": "high",
      "note": "Star Trek (2009) opens here; Star Trek: Picard shows the political aftermath.",
      "bin": "mass-death",
+     "sub": "disaster",
      "binWhy": "A homeworld and its heartland are destroyed.",
      "facets": {
       "change": "an empire's heartland → destroyed by its star",
@@ -579,6 +587,7 @@
      "confidence": "high",
      "note": "Star Trek: Discovery season 3 (2020); the cause is revealed as a Kelpien's grief-driven psychic shock.",
      "bin": "civilisation-collapses",
+     "sub": "climate-ecological",
      "binWhy": "The order of society breaks and does not come back.",
      "facets": {
       "change": "faster-than-light civilisation → its fuel destroyed in an instant",
@@ -795,6 +804,7 @@
      "confidence": "high",
      "note": "",
      "bin": "power-seized",
+     "sub": "strongman-legal",
      "binWhy": "A manufactured crisis lifts Palpatine to power.",
      "facets": {
       "change": "a trade dispute → blockade, invasion, and a new chancellor",
@@ -833,6 +843,7 @@
      "confidence": "high",
      "note": "",
      "bin": "war-breaks-out",
+     "sub": "civil",
      "binWhy": "A major war starts.",
      "facets": {
       "change": "separatist crisis → open civil war",
@@ -871,6 +882,7 @@
      "confidence": "high",
      "note": "Order 66, the Great Jedi Purge and the Proclamation of the New Order are all dated 19 BBY by Star Wars: Timelines and Star Wars: Galactic Atlas.",
      "bin": "power-seized",
+     "sub": "coup",
      "binWhy": "The Republic is reconstituted as an Empire in one proclamation.",
      "facets": {
       "change": "republic → empire in one proclamation",
@@ -911,6 +923,7 @@
      "confidence": "high",
      "note": "Star Wars Rebels, 'Secret Cargo' (2017), dates the declaration to 2 BBY.",
      "bin": "uprising",
+     "sub": "armed-rebellion",
      "binWhy": "The ruled revolt against those who hold power over them.",
      "facets": {
       "change": "scattered cells → an alliance declared",
@@ -949,6 +962,7 @@
      "confidence": "low",
      "note": "One of the few genuinely odd places in Star Wars dating. Star Wars: Galactic Atlas: Updated Edition (2025) and Timelines (2023) put Alderaan's destruction in 1 BBY and the Battle of Yavin in year 0, even though in the story the two are days apart; the 2016 Galactic Atlas and the Legends continuity put both in 0 BBY. I follow the current canon numbering and keep them as separate years, which is why they are two events here rather than one.",
      "bin": "mass-death",
+     "sub": "nuclear",
      "binWhy": "A planet's population is killed as a demonstration.",
      "facets": {
       "change": "a world → destroyed as a demonstration",
@@ -1138,6 +1152,7 @@
      "confidence": "medium",
      "note": "Inferred: The Rise of Skywalker: The Visual Dictionary says the First Order was publicly formed five years before the Starkiller Incident, which Star Wars: Galactic Atlas dates to 34 ABY. Star Wars: Timelines dates the First Order's establishment to 21 ABY.",
      "bin": "long-war",
+     "sub": "cold-war",
      "binWhy": "The remnant goes public, systems secede and a cold war begins.",
      "facets": {
       "change": "hidden remnant → declares itself; systems secede",
@@ -1176,6 +1191,7 @@
      "confidence": "high",
      "note": "Hosnian Cataclysm and Battle of Starkiller Base both dated 34 ABY by Star Wars: Galactic Atlas.",
      "bin": "mass-death",
+     "sub": "nuclear",
      "binWhy": "A capital system is destroyed and the galaxy is at war again.",
      "facets": {
       "change": "cold war → the capital system destroyed",
@@ -1293,6 +1309,7 @@
      "confidence": "low",
      "note": "The in-universe dates are canon (the novel's own glossary dates the Jihad 201-108 B.G.); the real-world year is the projection described in the divergence note.",
      "bin": "uprising",
+     "sub": "armed-rebellion",
      "binWhy": "Humanity rises against the machines that governed it.",
      "facets": {
       "change": "machine rule → machines destroyed and forbidden",
@@ -1408,6 +1425,7 @@
      "confidence": "medium",
      "note": "10,191 A.G. is canon: Appendix IV dates Leto I (10,140-10,191) and the novel's chapter epigraphs give the same year. The real year is projected.",
      "bin": "ruler-falls",
+     "sub": "killed",
      "binWhy": "The Duke is killed within the year and his house destroyed; the heir flees.",
      "facets": {
       "change": "a great house → given a planet and destroyed within the year",
@@ -1446,6 +1464,7 @@
      "confidence": "low",
      "note": "The A.G. year comes from the Dune Encyclopedia and wiki chronologies, not from the novel, which gives only the sequence; the real year inherits that plus the projection.",
      "bin": "power-seized",
+     "sub": "revolution",
      "binWhy": "The prophet takes the throne and his legions carry a jihad.",
      "facets": {
       "change": "emperor → a prophet takes the throne; his legions carry a jihad",
@@ -1486,6 +1505,7 @@
      "confidence": "low",
      "note": "The twelve-year interval is stated in the novel; the A.G. years are reference-book reconstructions.",
      "bin": "ruler-falls",
+     "sub": "dies-or-vanishes",
      "binWhy": "A ruler is killed, deposed or withdraws; the succession is open.",
      "facets": {
       "change": "prophet-emperor → broken by conspiracy, walks into the desert",
@@ -1523,6 +1543,7 @@
      "confidence": "low",
      "note": "Nine years after Dune Messiah per the novel; the A.G. year is a reference-book reconstruction.",
      "bin": "power-seized",
+     "sub": "strongman-legal",
      "binWhy": "The heir takes the throne and begins his transformation.",
      "facets": {
       "change": "regency → the heir takes the throne and begins to change",
@@ -1562,6 +1583,7 @@
      "confidence": "low",
      "note": "The 3,500-year reign is canon; the end year is not agreed - the Dune Encyclopedia has 13,724, wiki chronologies 13,727-13,728, and 10,219 plus 3,500 gives 13,719. Herbert's own books also contain a contradictory epigraph ('ten thousand years since Leto II began his metamorphosis') in Heretics.",
      "bin": "ruler-falls",
+     "sub": "killed",
      "binWhy": "A ruler is killed, deposed or withdraws; the succession is open.",
      "facets": {
       "change": "3,500 years of one ruler → dies; humanity scatters",
@@ -1600,6 +1622,7 @@
      "confidence": "low",
      "note": "The 1,500-year interval is stated in reference material; the A.G. year is wiki-derived.",
      "bin": "war-breaks-out",
+     "sub": "between-worlds",
      "binWhy": "An enemy returns from beyond the frontier and burns the capital.",
      "facets": {
       "change": "scattered humanity → returns as an enemy and burns the capital",
@@ -1637,6 +1660,7 @@
      "confidence": "low",
      "note": "Weakest date in the lineage: wiki-derived only.",
      "bin": "long-war",
+     "sub": "stalemate",
      "binWhy": "The sisterhood fights the invaders to a standstill.",
      "facets": {
       "change": "invasion → fought to a standstill; a new order begins",
@@ -1793,6 +1817,7 @@
      "confidence": "low",
      "note": "12,020 G.E. is Prelude's date. An early draft of the research brief attributed it to 'The Encyclopedists'; it belongs here, and the Encyclopedists belong at 50 F.E.",
      "bin": "breakthrough-science",
+     "sub": "people-society",
      "binWhy": "Psychohistory is presented to the Empire and becomes visible.",
      "facets": {
       "change": "the fall unforeseen → a science that predicts it is presented",
@@ -1906,6 +1931,7 @@
      "confidence": "low",
      "note": "The F.E. year is fan-chronology rather than text; real year projected.",
      "bin": "power-seized",
+     "sub": "strongman-legal",
      "binWhy": "Control of the neighbouring kingdoms is taken by religion rather than by arms.",
      "facets": {
       "change": "neighbours by arms → neighbours by religion",
@@ -1982,6 +2008,7 @@
      "confidence": "low",
      "note": "Fan-chronology year; real year projected.",
      "bin": "truth-revealed",
+     "sub": "hidden-world",
      "binWhy": "What was hidden is exposed.",
      "facets": {
       "change": "hidden guardians → found, and apparently destroyed",
@@ -2058,6 +2085,7 @@
      "confidence": "low",
      "note": "The 'twenty thousand years' is the novel's own wording - 'twenty thousand perhaps - since the people of the Galaxy have concerned themselves with Earth' - and it is the line that welds the Robot novels to the Foundation era, and therefore the line that makes Asimov's published 35,000 CE projection irreconcilable with the 1982-86 merger.",
      "bin": "truth-revealed",
+     "sub": "origin-identity",
      "binWhy": "What was hidden is exposed.",
      "facets": {
       "change": "origin lost → the homeworld found, and the hidden guide revealed",
@@ -2250,6 +2278,7 @@
      "confidence": "medium",
      "note": "Lexicanum dates the revolt to M23; other passages place it at the end of the Dark Age of Technology, c. M25. No finer date exists anywhere in the lore.",
      "bin": "machine-awakens",
+     "sub": "machine-war",
      "binWhy": "An artificial mind acts on its own or against its makers.",
      "facets": {
       "change": "machine servants → revolt and burn the worlds",
@@ -2289,6 +2318,7 @@
      "confidence": "medium",
      "note": "Lexicanum and the 6th-edition rulebook begin the Age of Strife in M25; the 3rd-edition 'Keeper Cripias' account says M26. It ends in M30.",
      "bin": "civilisation-collapses",
+     "sub": "climate-ecological",
      "binWhy": "The order of society breaks and does not come back.",
      "facets": {
       "change": "connected worlds → cut off by storms for five thousand years",
@@ -2328,6 +2358,7 @@
      "confidence": "low",
      "note": "No source gives a year for the Fall, only a millennium: Fandom places it early in the 30th millennium, Lexicanum's timeline files it under M30, and one page has Slaanesh awaking in the 29th millennium. 29,100 is a placeholder inside the M30 window, not a date.",
      "bin": "mass-death",
+     "sub": "disaster",
      "binWhy": "A birth-shock destroys the homeworlds and tears the warp open.",
      "facets": {
       "change": "an empire of pleasure → gives birth to a god that destroys it",
@@ -2443,6 +2474,7 @@
      "confidence": "high",
      "note": "",
      "bin": "war-breaks-out",
+     "sub": "between-worlds",
      "binWhy": "A campaign of conquest begins.",
      "facets": {
       "change": "one world → legions leave to reconquer the rest",
@@ -2480,6 +2512,7 @@
      "confidence": "high",
      "note": "Lexicanum dates the Heresy 005.M31-014.M31 and labels the dates approximate; Games Workshop's own timeline has the Isstvan III betrayal running 005-006.M31.",
      "bin": "war-breaks-out",
+     "sub": "civil",
      "binWhy": "Civil war begins with half the legions turning.",
      "facets": {
       "change": "crusade → half the legions turn on the throne",
@@ -2593,6 +2626,7 @@
      "confidence": "medium",
      "note": "Lexicanum dates the Age of Apostasy to M36 only; the ca. 200.M36 start of the Reign of Blood comes from the Fandom timeline. Finer precision does not exist.",
      "bin": "power-seized",
+     "sub": "coup",
      "binWhy": "One man seizes both spiritual and temporal power.",
      "facets": {
       "change": "divided offices → one man seizes church and state",
@@ -2669,6 +2703,7 @@
      "confidence": "medium",
      "note": "The Plague Wars are dated ca. 012.M42 in the Dark Imperium novel; the Indomitus Crusade's length was retconned in 2021 from about a century to about twelve years, and Games Workshop still bills the setting as 'the 41st Millennium', so 'M42' is a wiki convenience: the Chronostrife makes the present deliberately undecidable.",
      "bin": "long-war",
+     "sub": "forever-war",
      "binWhy": "Wars without end in the setting's present.",
      "facets": {
       "change": "a realm cut in two → wars without end",
@@ -2796,6 +2831,7 @@
      "note": "Dated 2148 in the games' Codex and the fan wiki's timeline, which heads the year 'Humanity Discovers Mass Effect Physics'. The fiction's calendar is ours (CE), so nothing is converted. The year before, 2147, the timeline records trace amounts of element zero found on Mars, the first hint of the same discovery. The real Promethei Planum is a real region of Mars's south polar deposits; nothing has been found under it.",
      "binWhy": "The cache is a scientific windfall: the discovery hands humanity a physics it did not have, and everything later turns on it. It is also proof that non-human intelligence existed, but the Protheans are long dead; the living first contact comes in 2157 and is binned there.",
      "bin": "breakthrough-science",
+     "sub": "alien-artefact",
      "facets": {
       "change": "no FTL → mass-effect physics from an alien cache",
       "mechanism": "discovery",
@@ -2889,6 +2925,7 @@
      "note": "Dated 2152 in the timeline; the Alliance surveys that found Terra Nova are dated 2150 and construction at Arcturus 2151.",
      "binWhy": "Permanent settlements are founded on new worlds.",
      "bin": "settlement-founded",
+     "sub": "other-stars",
      "facets": {
       "change": "Sol only → colonies on Demeter, Eden Prime and Terra Nova",
       "mechanism": "founding",
@@ -3075,6 +3112,7 @@
      "note": "Dated 2176 in the timeline and the wiki's Skyllian Blitz article. In 2171 the batarians had closed their Citadel embassy over human expansion in the Verge. Shepard's 'War Hero' background places the Commander at Elysium, but the Blitz happens whichever background the player picks.",
      "binWhy": "An armed raid on a civilian colony that is not a declared war, and it provokes the retaliation that follows.",
      "bin": "terror-attack",
+     "sub": "on-civilians",
      "facets": {
       "change": "rivalry over the Verge → an attack on Elysium",
       "mechanism": "attack",
@@ -3172,6 +3210,7 @@
      "note": "The first game is set in 2183 (Wikipedia; timeline 'The Eden Prime War'). The geth rebelled against their quarian makers in 1895 (the Morning War), which is galactic history invisible from Earth and is left out of this chain; see the divergence note. Whether the old Council survives, and who is the human councillor, is the player's choice. A month after the battle the Normandy is destroyed and Shepard is killed, also in 2183.",
      "binWhy": "Machines act on their own against organic life: a Reaper that has waited in dark space leads a rogue AI species into Citadel space.",
      "bin": "machine-awakens",
+     "sub": "machine-war",
      "facets": {
       "change": "geth behind the Veil → a Reaper leads them into Citadel space",
       "mechanism": "attack",
@@ -3221,6 +3260,7 @@
      "note": "The second game is set in 2185 (Wikipedia). The Council and Alliance officially dismiss the Reaper threat throughout; Shepard works for Cerberus because nobody else will act. The Arrival DLC's destruction of the Bahak system is dated early 2186 in the timeline, so it is carried in the next event.",
      "binWhy": "A targeted campaign of abductions against civilians, short of open war, carried out by a proxy for the Reapers.",
      "bin": "terror-attack",
+     "sub": "on-civilians",
      "facets": {
       "change": "colonies inhabited → colonies emptied",
       "mechanism": "attack",
@@ -3274,6 +3314,7 @@
      "note": "The third game is set in 2186 (Wikipedia). Early that year Shepard destroys the Alpha Relay and the Bahak system with it, killing some 300,000 batarians, to delay the invasion (Arrival DLC); the invasion comes six months later. Everything to the end of the game happens in 2186, so the invasion and the Crucible are one event. The ending is the player's choice: Destroy kills the geth and EDI, Control makes Shepard the mind of the Reapers, Synthesis rewrites every living thing, and the Extended Cut added Refuse, in which the harvest goes on. In each of the Crucible endings the energy passes through the Charon Relay and damages the relay network, which is later rebuilt.",
      "binWhy": "A major war starts: the Reaper harvest reaches every Council species at once. decisive-victory was considered for the Crucible and rejected, because what it does is the player's choice and in Refuse nothing is won.",
      "bin": "war-breaks-out",
+     "sub": "between-worlds",
      "facets": {
       "change": "a warned galaxy → the harvest, ended by the Crucible",
       "mechanism": "invasion",
@@ -3323,6 +3364,1330 @@
      "url": "https://masseffect.fandom.com/wiki/Timeline"
     }
    ]
+  },
+  {
+   "id": "battlestar-galactica",
+   "title": "Battlestar Galactica",
+   "medium": "tv",
+   "creator": "Ronald D. Moore (developer), from Glen A. Larson's 1978 series",
+   "originYear": 2003,
+   "group": "far-future-space-opera",
+   "epoch": "deep-past",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": -151994,
+    "label": "The Thirteenth Tribe leaves Kobol",
+    "delta": "Real: around 152,000 BCE anatomically modern humans live in small foraging groups in Africa, with no farming, writing or metal. Fiction: on Kobol, a world elsewhere in the galaxy, a starfaring human civilisation already exists, and its thirteenth tribe, which is in fact a people of humanoid machines, leaves to found a world it calls Earth. It is not our Earth; ours enters the story only at the end.",
+    "inUniverse": "ca. 4,000 years before the Fall of the Twelve Colonies (radiocarbon dating of the Temple of Five, 'The Eye of Jupiter')",
+    "confidence": "low",
+    "note": "Conversion, stated explicitly. The series finale ('Daybreak', aired 20 March 2009) cuts from the fleet's arrival on our Earth to modern New York with the title '150,000 years later'; the modern scene is taken as 2009, the year it aired, so the arrival is 2009 - 150,000 = 147,991 BCE (year -147991). The fleet reaches the first, dead Earth about three years after the Fall ('Three years ago I promised to lead you to a new home', 'Revelations') and our Earth some weeks or months later, so the Fall is placed three years earlier, at year -147994, and dates given as 'N years before the Fall' (Battlestar Wiki's BCH) convert as -147994 - N. The single-year precision is an artefact of that arithmetic: '150,000 years' is a round figure. The date of the exodus itself is contradictory on screen: Tyrol's radiocarbon estimate gives at least 4,000 years, Elosha says all thirteen tribes left about 2,000 years ago ('Kobol's Last Gleaming'), and Cottle ties a virus to the Thirteenth Tribe's departure 'over 3,000 years ago' ('A Measure of Salvation'). The earliest figure is used because the fork has to precede everything fictional; Kobol's own history is older still and undated.",
+    "sources": [
+     {
+      "title": "Battlestar Wiki: Timeline (RDM) - ancient history, BCH convention",
+      "url": "https://en.battlestarwiki.org/wiki/Timeline_(RDM)"
+     },
+     {
+      "title": "Battlestar Wiki: Timeline - Season 4 (RDM) - 'Revelations' and the '150,000 years later' epilogue",
+      "url": "https://en.battlestarwiki.org/wiki/Timeline_-_Season_4_(RDM)"
+     },
+     {
+      "title": "Wikipedia: Battlestar Galactica (2004 TV series)",
+      "url": "https://en.wikipedia.org/wiki/Battlestar_Galactica_(2004_TV_series)"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "unknown",
+    "why": "The survivors' descendants, part colonist, part Cylon, part native, are building robots again 150,000 years later, and the last scene leaves open whether the cycle of creation and annihilation will repeat.",
+    "asOf": 2009
+   },
+   "events": [
+    {
+     "id": "bsg-thirteenth-tribe",
+     "year": -151994,
+     "date": "c. 151,994 BCE",
+     "title": "The Thirteenth Tribe leaves Kobol",
+     "description": "One of the thirteen tribes of Kobol leaves the homeworld and travels to a distant planet it names Earth, building a temple on the way. The scriptures remember it as a human tribe; it was in fact a people of humanoid machines made on Kobol long before.",
+     "tier": "T4",
+     "phase": "fork",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": "ca. 4,000 years before the Fall",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Battlestar Wiki: Timeline (RDM) - ca. 4,000 years BCH",
+       "url": "https://en.battlestarwiki.org/wiki/Timeline_(RDM)"
+      },
+      {
+       "title": "Battlestar Wiki: Earth (RDM)",
+       "url": "https://en.battlestarwiki.org/wiki/Earth_(RDM)"
+      }
+     ],
+     "note": "Contested on screen between 2,000, 3,000 and 4,000 years before the Fall (see the divergence note); the 4,000-year radiocarbon date is used. That the tribe was made of humanoid Cylons is revealed in season 4.",
+     "binWhy": "A people departs into space no one from Kobol has reached, to found a world.",
+     "bin": "voyage-into-unknown",
+     "sub": "interstellar",
+     "facets": {
+      "change": "one homeworld of thirteen tribes → a tribe gone to an unknown star",
+      "mechanism": "expedition",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "exile",
+       "religious-fervour"
+      ],
+      "outcomes": [
+       "exodus",
+       "colonisation"
+      ]
+     }
+    },
+    {
+     "id": "bsg-first-earth",
+     "year": -149994,
+     "date": "c. 149,994 BCE",
+     "title": "The first Earth destroys itself",
+     "description": "About two thousand years after settling it, the Thirteenth Tribe's Earth is annihilated when its own robot workers rise against them and the planet dies in a nuclear war. Five survivors escape in an orbiting ship, knowing the other tribes will one day build machines of their own. Around the same time the remaining twelve tribes leave Kobol for the worlds that become the Twelve Colonies.",
+     "tier": "T4",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "disaster",
+     "inUniverse": "ca. 2,000 years before the Fall ('Sometimes a Great Notion', 'No Exit')",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Battlestar Wiki: Earth (RDM) - destruction about 2,000 years BCH",
+       "url": "https://en.battlestarwiki.org/wiki/Earth_(RDM)"
+      },
+      {
+       "title": "Battlestar Wiki: Timeline (RDM) - ca. 2,000 years BCH",
+       "url": "https://en.battlestarwiki.org/wiki/Timeline_(RDM)"
+      }
+     ],
+     "note": "The two-thousand-year figure is stated in season 4 and matches Elosha's date for the exodus of the twelve tribes; the wiki notes that the order of events on Kobol and Earth is uncertain, so the departure from Kobol is merged into this event. The five survivors are the 'Final Five' Cylons.",
+     "binWhy": "Machines turn on their makers: Earth's robot workforce revolts and the war ends the planet.",
+     "bin": "machine-awakens",
+     "sub": "machine-war",
+     "facets": {
+      "change": "a thriving machine-made people → a radioactive world",
+      "mechanism": "uprising",
+      "actor": "machine",
+      "position": "below",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "slavery-or-servitude",
+       "machine-dependency"
+      ],
+      "outcomes": [
+       "mass-death",
+       "collapse",
+       "exodus"
+      ]
+     }
+    },
+    {
+     "id": "bsg-cylon-revolt",
+     "year": -148046,
+     "date": "c. 148,046 BCE",
+     "title": "The Cylons rebel",
+     "description": "The robots the Twelve Colonies built as soldiers and labourers turn on them, starting the twelve-year Cylon War. The feuding colonies sign the Articles of Colonization and form a single government for the first time to fight it.",
+     "tier": "T4",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "war",
+     "inUniverse": "52 years before the Fall ('Colonial Day'; the war lasted twelve years and ended 40 years before the miniseries)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Battlestar Wiki: Cylon War - 52 to 40 BCH",
+       "url": "https://en.battlestarwiki.org/wiki/Cylon_War"
+      },
+      {
+       "title": "Battlestar Wiki: Timeline (RDM) - 52 years BCH",
+       "url": "https://en.battlestarwiki.org/wiki/Timeline_(RDM)"
+      }
+     ],
+     "note": "The miniseries opens on the statement that the Cylons were created by man and rebelled. The relative date (52 years before the Fall) follows from the 40-year armistice and the war's twelve-year length; Ronald D. Moore's production blog ties the Articles of Colonization to the war. The Cylons' invention itself is shown only in the prequel series Caprica (about 58 years before the Fall), which this lineage does not follow.",
+     "binWhy": "An artificial intelligence turns on its makers: the Colonies' Cylons revolt.",
+     "bin": "machine-awakens",
+     "sub": "machine-war",
+     "facets": {
+      "change": "robot servants → an enemy at war with its makers",
+      "mechanism": "uprising",
+      "actor": "machine",
+      "position": "below",
+      "scope": "civilisational",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "slavery-or-servitude",
+       "machine-dependency"
+      ],
+      "outcomes": [
+       "union",
+       "attrition",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "bsg-armistice",
+     "year": -148034,
+     "date": "c. 148,034 BCE",
+     "title": "The armistice: the Cylons leave",
+     "description": "Twelve years into the war the Cylons stop fighting, sign an armistice and withdraw beyond an agreed line, and are not seen again. The Colonies ban research into artificial intelligence and keep an empty station on the line where the Cylons never come to talk.",
+     "tier": "T4",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "politics",
+     "inUniverse": "40 years before the Fall (Miniseries)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Battlestar Wiki: Cylon War - armistice and the AI research ban",
+       "url": "https://en.battlestarwiki.org/wiki/Cylon_War"
+      }
+     ],
+     "note": "The forty years are stated in the miniseries. Season 4 reveals why the Cylons stopped: the Final Five, arriving from the dead first Earth, offered them human bodies and resurrection in exchange for peace.",
+     "binWhy": "Enemies sign an armistice and part.",
+     "bin": "peace-made",
+     "facets": {
+      "change": "a war of extermination → a line in space and a ban on thinking machines",
+      "mechanism": "negotiation",
+      "actor": "machine",
+      "position": "outside",
+      "scope": "civilisational",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "long-war",
+       "war-just-ended"
+      ],
+      "outcomes": [
+       "partition",
+       "taboo",
+       "isolation"
+      ]
+     }
+    },
+    {
+     "id": "bsg-final-five-murdered",
+     "year": -148024,
+     "date": "c. 148,024 BCE",
+     "title": "Cavil murders the Final Five and erases them",
+     "description": "In their hidden Colony the Cylons' new humanoid models are built by the Final Five, but the first of them, Cavil, kills his creators, stores their minds, and erases all knowledge of them from the other models. He plants them among the humans with false memories, which is where the series finds them.",
+     "tier": "T4",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "politics",
+     "inUniverse": "ca. 30 years before the Fall ('No Exit')",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Battlestar Wiki: Timeline (RDM) - ca. 30 BCH",
+       "url": "https://en.battlestarwiki.org/wiki/Timeline_(RDM)"
+      }
+     ],
+     "note": "The series gives no exact year for the murder; the wiki's 'about 30 years before the Fall' is inferred from the ages the Final Five were given in their planted lives (Saul Tigh's reintroduction, Tyrol's age). Revealed in season 4.",
+     "binWhy": "The truth about the Cylons' makers is hidden, from humans and Cylons alike, by the one who holds it.",
+     "bin": "secret-kept",
+     "facets": {
+      "change": "machines raised by five parents → machines who do not know they had any",
+      "mechanism": "death",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "social",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "rivalry"
+      ],
+      "outcomes": [
+       "cover-up",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "bsg-fall",
+     "year": -147994,
+     "date": "c. 147,994 BCE",
+     "title": "The Fall of the Twelve Colonies",
+     "description": "Forty years after the armistice the Cylons return, disable the Colonial fleet through a back door in its defence software and destroy all twelve worlds with nuclear weapons. About 50,000 people escape on civilian ships guarded by one obsolete battlestar, Galactica, and the education secretary becomes president because everyone above her is dead.",
+     "tier": "T4",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "disaster",
+     "inUniverse": "Year zero of the Battlestar Wiki's BCH/ACH convention (Miniseries, 2003)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Battlestar Wiki: Fall of the Twelve Colonies",
+       "url": "https://en.battlestarwiki.org/wiki/Fall_of_the_Twelve_Colonies"
+      },
+      {
+       "title": "Wikipedia: Battlestar Galactica (2004 TV series) - about 50,000 survivors",
+       "url": "https://en.wikipedia.org/wiki/Battlestar_Galactica_(2004_TV_series)"
+      }
+     ],
+     "note": "The attack is the zero point of every other date in this lineage; its real-year position depends on the finale's round '150,000 years' (see the divergence note). The population lost is not stated on screen; Wikipedia says 'several billion', and Battlestar Wiki's own estimate is higher.",
+     "binWhy": "A single attack kills almost an entire civilisation and turns the survivors into refugees.",
+     "bin": "mass-death",
+     "sub": "nuclear",
+     "facets": {
+      "change": "twelve inhabited worlds → a refugee fleet of 50,000",
+      "mechanism": "attack",
+      "actor": "machine",
+      "position": "outside",
+      "scope": "civilisational",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "machine-dependency",
+       "cold-war",
+       "secrecy"
+      ],
+      "outcomes": [
+       "mass-death",
+       "exodus",
+       "extinction-risk"
+      ]
+     }
+    },
+    {
+     "id": "bsg-new-caprica",
+     "year": -147993,
+     "date": "c. 147,993 BCE",
+     "title": "The Cylons occupy New Caprica",
+     "description": "Tired of running, the survivors elect Gaius Baltar president and settle a cold, hidden planet. A year later the Cylons find it and occupy the settlement, running it through a collaborationist police force while a human resistance answers with bombings, including suicide attacks.",
+     "tier": "T4",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "war",
+     "inUniverse": "Settlement about 300 days after the Fall; occupation about day 660 ('Lay Down Your Burdens', 'Occupation')",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Battlestar Wiki: Timeline - Season 2 (RDM) - settlement and occupation",
+       "url": "https://en.battlestarwiki.org/wiki/Timeline_-_Season_2_(RDM)"
+      },
+      {
+       "title": "Battlestar Wiki: Timeline - Season 3 (RDM) - the occupation",
+       "url": "https://en.battlestarwiki.org/wiki/Timeline_-_Season_3_(RDM)"
+      }
+     ],
+     "note": "Day counts are Battlestar Wiki reconstructions from the on-screen 'one year later' jump and episode title cards. Settlement (about day 300) falls in the Fall's own year; the occupation (about day 660) in the next, which is where the event is placed, with the settlement folded in.",
+     "binWhy": "The last human settlement is conquered and occupied.",
+     "bin": "defeat-and-occupation",
+     "facets": {
+      "change": "a free settlement → an occupied town with collaborators and bombers",
+      "mechanism": "invasion",
+      "actor": "machine",
+      "position": "outside",
+      "scope": "local",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "exile",
+       "weak-institutions"
+      ],
+      "outcomes": [
+       "occupation",
+       "collaboration",
+       "resistance-forms"
+      ]
+     }
+    },
+    {
+     "id": "bsg-exodus",
+     "year": -147992,
+     "date": "c. 147,992 BCE",
+     "title": "The exodus from New Caprica",
+     "description": "The resistance rises inside the occupied settlement while Galactica jumps into the atmosphere above it and launches its fighters as it falls, covering the escape of the civilian ships. The Cylons abandon the planet, taking Baltar with them, and the survivors resume the search for Earth.",
+     "tier": "T4",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "war",
+     "inUniverse": "About day 798 after the Fall ('Exodus', parts I and II)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Battlestar Wiki: Timeline - Season 3 (RDM) - Exodus, c. Day 798",
+       "url": "https://en.battlestarwiki.org/wiki/Timeline_-_Season_3_(RDM)"
+      }
+     ],
+     "note": "Day 798 is the wiki's reconstruction; it falls in the second year after the occupation began, so the event takes the next calendar year. Pegasus, the other surviving battlestar, is lost in the battle.",
+     "binWhy": "An occupied people rises against its occupiers and breaks out.",
+     "bin": "uprising",
+     "sub": "armed-rebellion",
+     "facets": {
+      "change": "an occupied settlement → a fleet in flight again",
+      "mechanism": "uprising",
+      "actor": "movement",
+      "position": "below",
+      "scope": "local",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "occupation",
+       "repression"
+      ],
+      "outcomes": [
+       "exodus",
+       "independence",
+       "purge"
+      ]
+     }
+    },
+    {
+     "id": "bsg-arrival",
+     "year": -147991,
+     "date": "c. 147,991 BCE",
+     "title": "The fleet reaches our Earth and gives up its machines",
+     "description": "The fleet finds the Earth of legend a radioactive ruin, survives a mutiny, then jumps to coordinates Kara Thrace derives from a song and finds a green planet already home to primitive humans and names it Earth. Colonists and allied Cylons agree to start again with nothing, fly their ships into the Sun, and scatter across the continents; Hera, the first child of a human and a Cylon, becomes the ancestor of everyone alive today.",
+     "tier": "T4",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "founding",
+     "inUniverse": "Over three years after the Fall ('Revelations' through 'Daybreak'); '150,000 years' before the epilogue",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Battlestar Wiki: Daybreak, Part II",
+       "url": "https://en.battlestarwiki.org/wiki/Daybreak,_Part_II"
+      },
+      {
+       "title": "Battlestar Wiki: Timeline - Season 4 (RDM)",
+       "url": "https://en.battlestarwiki.org/wiki/Timeline_-_Season_4_(RDM)"
+      }
+     ],
+     "note": "This is the anchor of the conversion: 2009 - 150,000. Arrival at the dead first Earth ('Revelations', just over three years after the Fall), Gaeta and Zarek's mutiny and the landing on our Earth all fall within months of each other and are merged here; the one-event-per-year rule cannot separate them. That Hera's remains are identified as Mitochondrial Eve is shown in the epilogue.",
+     "binWhy": "A permanent settlement in new territory: the survivors settle our planet for good and destroy the means to leave.",
+     "bin": "settlement-founded",
+     "sub": "on-earth",
+     "facets": {
+      "change": "a fleet looking for home → settlers with no ships and no machines",
+      "mechanism": "arrival",
+      "actor": "movement",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": -1,
+       "population": 1
+      },
+      "preconditions": [
+       "exile",
+       "war-just-ended",
+       "post-collapse"
+      ],
+      "outcomes": [
+       "colonisation",
+       "scattering",
+       "new-order"
+      ]
+     }
+    },
+    {
+     "id": "bsg-miniseries-2003",
+     "year": 2003,
+     "date": "2003-12-08",
+     "title": "The Battlestar Galactica miniseries airs",
+     "description": "Ronald D. Moore's reimagining of the 1978 series airs on the Sci Fi Channel as a two-part miniseries, recasting the Cylons as machines that can pass for human.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Battlestar Galactica (2004 TV series)",
+       "url": "https://en.wikipedia.org/wiki/Battlestar_Galactica_(2004_TV_series)"
+      }
+     ],
+     "note": "Aired 8-9 December 2003.",
+     "binWhy": "A release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "bsg-series-2004",
+     "year": 2004,
+     "date": "2004-10-18",
+     "title": "The series premieres",
+     "description": "The weekly series begins on Sky One in Britain, three months before its American premiere, and runs four seasons to March 2009.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Battlestar Galactica (2004 TV series)",
+       "url": "https://en.wikipedia.org/wiki/Battlestar_Galactica_(2004_TV_series)"
+      }
+     ],
+     "note": "Sky One premiere 18 October 2004; Sci Fi Channel premiere 14 January 2005; finale 20 March 2009.",
+     "binWhy": "A release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "bsg-epilogue-2009",
+     "year": 2009,
+     "date": "2009",
+     "title": "150,000 years later: New York, building robots",
+     "description": "The finale ends in present-day New York, where a magazine reports that the remains of Mitochondrial Eve have been found in Tanzania, and a montage shows humanity building humanoid robots once more. Two figures who have guided the story since the start ask whether the cycle has to happen again.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "'150,000 years later' (Daybreak, Part II)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Battlestar Wiki: Daybreak, Part II - the epilogue",
+       "url": "https://en.battlestarwiki.org/wiki/Daybreak,_Part_II"
+      },
+      {
+       "title": "Wikipedia: Battlestar Galactica (2004 TV series) - modern-day New York",
+       "url": "https://en.wikipedia.org/wiki/Battlestar_Galactica_(2004_TV_series)"
+      }
+     ],
+     "note": "The title card says only '150,000 years later'; the scene is plainly contemporary, and it is dated to 2009, the year the finale aired. This is the one event in the lineage that sits in our own recorded history, and it is the premise of the whole conversion.",
+     "binWhy": "A jump forward shows what became of the survivors' world: ours, repeating the first step.",
+     "bin": "long-after",
+     "facets": {
+      "change": "settlers who gave up machines → their descendants building them again",
+      "mechanism": "invention",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "time-loop",
+       "technological-race"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "new-actors"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs in the space-opera archetype for its fleets, colonies and a war across star systems, but like Star Wars it runs in reverse: the finale's '150,000 years later' cut to modern New York places the whole story in our deep past, so epoch is deep-past. It follows the 2003 miniseries and the 2004-2009 series (with the season-4 revelations and the wiki's reconstructed day counts); the prequel Caprica is used only for context in notes. Tier coverage is lopsided by construction: every story event is T4 (about 152,000 to 148,000 BCE), the three T2 entries are the two releases and the 2009 epilogue, and T3 and T1 are empty because nothing happens between the landing and the present, and nothing after it. Phases are derived from the divergence; everything after the Thirteenth Tribe's exodus is 'deep' because the fork precedes the main story by about 4,000 years. Two machine uprisings are binned machine-awakens (the first Earth's and the Colonies'); the Fall itself is mass-death, because by then the Cylons are an established enemy, not a newly woken one.",
+   "sources": [
+    {
+     "title": "Wikipedia: Battlestar Galactica (2004 TV series)",
+     "url": "https://en.wikipedia.org/wiki/Battlestar_Galactica_(2004_TV_series)"
+    },
+    {
+     "title": "Battlestar Wiki: Timeline (RDM)",
+     "url": "https://en.battlestarwiki.org/wiki/Timeline_(RDM)"
+    },
+    {
+     "title": "Battlestar Wiki: Timeline - Season 4 (RDM)",
+     "url": "https://en.battlestarwiki.org/wiki/Timeline_-_Season_4_(RDM)"
+    }
+   ]
+  },
+  {
+   "id": "halo",
+   "title": "Halo",
+   "medium": "game",
+   "creator": "Bungie (2001-2010), then 343 Industries / Halo Studios; Forerunner prehistory by Greg Bear (novels, 2011-2013)",
+   "originYear": 2001,
+   "epoch": "far-future",
+   "franchiseStatus": "ongoing",
+   "divergence": {
+    "year": -150000,
+    "label": "An ancient human civilisation is already spreading between the stars",
+    "delta": "Real: around 150,000 BCE anatomically modern humans live in Africa as hunter-gatherers with stone tools, and nobody has left the planet. Fiction: an earlier humanity has an interstellar civilisation spreading along the Orion Arm, on its way to a war with the Forerunners that will end with its survivors stripped of their technology and exiled to Earth.",
+    "inUniverse": "c. 150,000 BCE (Halopedia's earliest dated statement about the ancient human civilisation; its rise is not dated)",
+    "confidence": "low",
+    "note": "The UNSC story starts in the 2160s, but Halo's history leaves ours much earlier. In the canon as it now stands, today's humans descend from an interstellar people who fought the Flood and the Forerunners, were defeated around 106,445 BCE, devolved and confined to Earth, and were returned to Earth again after the Halo Array fired around 97,445 BCE. None of that is in our archaeological record, so under the rule that anything fictional comes after the fork, the fork has to sit in deep prehistory. No source dates the ancient civilisation's beginning; c. 150,000 BCE is the earliest year Halopedia attaches to it, and all these deep dates are approximate. Between 97,445 BCE and 2160 the Halo record is to all intents ours (its twenty-first-century entries are trivia, such as an engineering society founded in 2021 and a book in the 2004 alternate-reality game), so a reader interested only in the UNSC chronology can treat March 2160 as a practical second threshold.",
+    "sources": [
+     {
+      "title": "Halopedia: Human-Forerunner wars (c. 107,445-106,445 BCE; human civilisation on the Orion Arm c. 150,000 BCE)",
+      "url": "https://www.halopedia.org/Human-Forerunner_wars"
+     },
+     {
+      "title": "Halopedia: Halo universe (overview of the canonical timeline)",
+      "url": "https://www.halopedia.org/Halo_universe"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "unknown",
+    "why": "Humanity has won the Covenant War and outlived Cortana's rule, but as of Halo Infinite (2560) the UNSC Infinity is wrecked, the Banished hold Zeta Halo, and the war with them is unfinished.",
+    "asOf": 2560
+   },
+   "groupingNote": "Belongs in far-future space opera: a human interstellar state of hundreds of colonies at war with a multi-species alien theocracy, among the ruins of an older galactic civilisation. The continuity is the games' canon as maintained by 343 Industries / Halo Studios and catalogued by Halopedia, which folds in the novels (Greg Bear's Forerunner Saga supplies the ancient past). The Paramount+ television series (2022-2024) is a separate continuity and is not used. Tiers: three T4 events in deep prehistory (c. 150,000 to c. 97,445 BCE), all approximate; T3 is empty, because the fiction adds nothing to the twentieth century; T2 holds the two releases and the twenty-second and twenty-third centuries (the Interplanetary War, the Unified Earth Government and the slipspace drive); T1 holds everything from the colonisation of Reach in 2362 to Zeta Halo in 2559.",
+   "sources": [
+    {
+     "title": "Wikipedia: Halo (franchise)",
+     "url": "https://en.wikipedia.org/wiki/Halo_(franchise)"
+    },
+    {
+     "title": "Halopedia: Halo universe (overview of the canonical timeline)",
+     "url": "https://www.halopedia.org/Halo_universe"
+    },
+    {
+     "title": "Halopedia: Human-Covenant War",
+     "url": "https://www.halopedia.org/Human-Covenant_War"
+    },
+    {
+     "title": "Halopedia: Rampancy",
+     "url": "https://www.halopedia.org/Rampancy"
+    }
+   ],
+   "events": [
+    {
+     "id": "halo-orion-arm",
+     "year": -150000,
+     "date": "c. 150,000 BCE",
+     "title": "An ancient human civilisation spreads along the Orion Arm",
+     "description": "Long before recorded history, humans have left Earth and built an interstellar civilisation that is expanding outward along the Orion Arm of the galaxy.",
+     "tier": "T4",
+     "phase": "fork",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Halopedia: Human-Forerunner wars (c. 107,445-106,445 BCE; human civilisation on the Orion Arm c. 150,000 BCE)",
+       "url": "https://www.halopedia.org/Human-Forerunner_wars"
+      }
+     ],
+     "note": "The only date Halopedia gives for the ancient human civilisation's extent; its origins are undated. The lore comes mainly from Greg Bear's Forerunner Saga (2011-2013) and Halo 4's terminals. Real humans at this date are hunter-gatherers in Africa.",
+     "binWhy": "Humanity's first expansion beyond Earth: settlements across the Orion Arm.",
+     "bin": "settlement-founded",
+     "sub": "other-stars",
+     "facets": {
+      "change": "one world → an interstellar civilisation",
+      "mechanism": "expedition",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "social",
+      "direction": {
+       "power": 1,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "frontier-open"
+      ],
+      "outcomes": [
+       "colonisation",
+       "rivalry"
+      ]
+     }
+    },
+    {
+     "id": "halo-forerunner-war",
+     "year": -106445,
+     "date": "c. 106,445 BCE",
+     "title": "The Forerunners defeat humanity and send it back to the Stone Age",
+     "description": "After a two-front war against the Flood and the Forerunners, the human empire falls. The victors dismantle its civilisation, gather the survivors from across the galaxy, exile them to Earth and force them through a biological devolution to a pre-technological state.",
+     "tier": "T4",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "war",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Halopedia: Human-Forerunner wars (c. 107,445-106,445 BCE; human civilisation on the Orion Arm c. 150,000 BCE)",
+       "url": "https://www.halopedia.org/Human-Forerunner_wars"
+      }
+     ],
+     "note": "Halopedia dates the war approximately 107,445-106,445 BCE and flags the dates as uncertain. In our record this is the Middle Palaeolithic and nothing of the kind survives, which in the fiction is the point: the evidence was erased.",
+     "binWhy": "A power is defeated, its civilisation dismantled and its people confined to one world.",
+     "bin": "defeat-and-occupation",
+     "facets": {
+      "change": "an interstellar empire → a devolved species confined to Earth",
+      "mechanism": "war",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "rivalry",
+       "plague-running"
+      ],
+      "outcomes": [
+       "exile",
+       "suppression",
+       "collapse"
+      ]
+     }
+    },
+    {
+     "id": "halo-array-fired",
+     "year": -97445,
+     "date": "c. 97,445 BCE",
+     "title": "The Halo Array is fired",
+     "description": "To starve the Flood of hosts, the Forerunners fire all their ring weapons at once, killing every thinking creature in the galaxy not sheltered at the Ark. The humans the Librarian preserved are returned to Earth, and the Forerunners leave the galaxy's history.",
+     "tier": "T4",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "disaster",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Halopedia: 97,445 BCE (the firing of the Halo Array; dates 'approximate at best')",
+       "url": "https://www.halopedia.org/97,445_BCE"
+      },
+      {
+       "title": "Halopedia: Halo universe (overview of the canonical timeline)",
+       "url": "https://www.halopedia.org/Halo_universe"
+      }
+     ],
+     "note": "Halopedia's year page for 97,445 BCE says its dates are approximate; the Halo universe overview gives 'circa 97,745 BCE' for the same event, so the year is uncertain by centuries. The firing is the event every later Halo story turns on: the rings are still there in 2552.",
+     "binWhy": "A weapon kills all neurologically complex life in the galaxy.",
+     "bin": "mass-death",
+     "sub": "nuclear",
+     "facets": {
+      "change": "a galaxy full of life → a galaxy emptied",
+      "mechanism": "attack",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "existential-threat",
+       "plague-running"
+      ],
+      "outcomes": [
+       "mass-death",
+       "extinction-risk",
+       "rebuilding"
+      ]
+     }
+    },
+    {
+     "id": "halo-ce-released",
+     "year": 2001,
+     "date": "15 November 2001",
+     "title": "Halo: Combat Evolved is released",
+     "description": "Bungie's first-person shooter launches with the Xbox and introduces the Master Chief, Cortana, the Covenant and the ring called Halo, all set in 2552.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Halo (franchise)",
+       "url": "https://en.wikipedia.org/wiki/Halo_(franchise)"
+      }
+     ],
+     "note": "Bungie developed the series until 2010; 343 Industries (renamed Halo Studios in 2024) has run it since.",
+     "binWhy": "A real-world publication or release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "halo-cryptum-published",
+     "year": 2011,
+     "date": "4 January 2011",
+     "title": "Greg Bear's Halo: Cryptum is published",
+     "description": "The first novel of the Forerunner Saga sets out the ancient war between humanity and the Forerunners about 100,000 years before the games, the source of this lineage's deep past.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Halo: Cryptum (Forerunner Saga, 2011-2013)",
+       "url": "https://en.wikipedia.org/wiki/Halo:_Cryptum"
+      }
+     ],
+     "note": "Primordium followed on 3 January 2012 and Silentium on 19 March 2013.",
+     "binWhy": "A real-world publication or release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "halo-jovian-2160",
+     "year": 2160,
+     "date": "March 2160",
+     "title": "War comes to the colonies: the Jovian Moons Campaign",
+     "description": "Humanity has settled Mars, the Jovian moons and the asteroids, and the colonies are fought over by the corporate-backed Friedens and the neo-communist Koslovics. The three-month campaign on the Jovian moons opens a decade of fighting, through the Rainforest Wars in South America to the Interplanetary War, in which the United Nations' new UNSC fights both.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "war",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Halopedia: Interplanetary War",
+       "url": "https://www.halopedia.org/Interplanetary_War"
+      }
+     ],
+     "note": "Halopedia dates the Jovian Moons Campaign to March 2160, the Rainforest Wars to February 2162 to late 2163, and the Interplanetary War proper to January 2164-March 2170. The UNSC is described as 'newly formed' in late 2163; no founding date is given. In our 2026 nobody lives off Earth.",
+     "binWhy": "The first war fought across the solar system begins.",
+     "bin": "war-breaks-out",
+     "sub": "civil",
+     "facets": {
+      "change": "a colonised solar system → factions at war across it",
+      "mechanism": "war",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "colonial-expansion",
+       "rivalry",
+       "crisis-legitimacy"
+      ],
+      "outcomes": [
+       "civil-war",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "halo-ueg-2170",
+     "year": 2170,
+     "date": "March 2170",
+     "title": "The Unified Earth Government is constituted",
+     "description": "As the Interplanetary War ends, the United Nations constitutes the Unified Earth Government as humanity's governing body, with the UNSC as its armed force. It will govern Earth and every colony for the next four centuries.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "politics",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Halopedia: Interplanetary War (aftermath: the UEG constituted in 2170)",
+       "url": "https://www.halopedia.org/Interplanetary_War"
+      }
+     ],
+     "note": "Halopedia: the UEG 'was constituted as humanity's governing body by the UN in the immediate wake of the conflicts in 2170'. The war ended in March 2170.",
+     "binWhy": "Earth's nations and colonies are united under one government.",
+     "bin": "union-founded",
+     "facets": {
+      "change": "rival blocs → one Earth government",
+      "mechanism": "consolidation",
+      "actor": "state",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "war-just-ended",
+       "weak-institutions"
+      ],
+      "outcomes": [
+       "union",
+       "state-powers"
+      ]
+     }
+    },
+    {
+     "id": "halo-slipspace-2291",
+     "year": 2291,
+     "date": "April 2291",
+     "title": "The Shaw-Fujikawa engine is unveiled",
+     "description": "Engineers and physicists led by Tobias Fleming Shaw and Wallace Fujikawa, working in secret, unveil a drive that crosses light years through slipspace. Humanity is no longer confined to one star.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "technology",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Halopedia: Shaw-Fujikawa Translight Engine (unveiled April 2291)",
+       "url": "https://www.halopedia.org/Shaw-Fujikawa_Translight_Engine"
+      }
+     ],
+     "note": "Halopedia gives April 2291 for the unveiling and no date for the first crewed jump.",
+     "binWhy": "A faster-than-light drive is switched on and changes what humanity can reach.",
+     "bin": "new-technology-deployed",
+     "sub": "transport-space",
+     "facets": {
+      "change": "sublight ships → faster-than-light travel",
+      "mechanism": "invention",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "frontier-open"
+      ],
+      "outcomes": [
+       "colonisation",
+       "opening"
+      ]
+     }
+    },
+    {
+     "id": "halo-reach-2362",
+     "year": 2362,
+     "date": "2362",
+     "title": "Reach is colonised",
+     "description": "The colony ship Odyssey reaches Reach and is broken up into terraforming stations. The planet becomes the UNSC's military heart and the anchor of the Inner Colonies, which grow around it through the 2400s.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "founding",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Halopedia: Reach (colonised 2362)",
+       "url": "https://www.halopedia.org/Reach"
+      }
+     ],
+     "note": "Halopedia gives 2362, but records a debate over whether Reach was the first extrasolar colony: colony ships were being built from 2310, and some sources date other colonies to 2330 and 2355. Terraforming's first wave was complete by 2390.",
+     "binWhy": "A permanent settlement is founded around another star.",
+     "bin": "settlement-founded",
+     "sub": "other-stars",
+     "facets": {
+      "change": "the Sol system alone → a colony around another star",
+      "mechanism": "expedition",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "frontier-open",
+       "colonial-expansion"
+      ],
+      "outcomes": [
+       "colonisation"
+      ]
+     }
+    },
+    {
+     "id": "halo-callisto-2494",
+     "year": 2494,
+     "date": "2 March 2494",
+     "title": "The Insurrection begins: the Callisto incident",
+     "description": "Rebels in the Outer Colonies seize the UNSC corvette Callisto and destroy a pursuing destroyer with a nuclear device hidden in an asteroid. It is the usual start date for the Insurrection, an undeclared civil war between Earth and its colonies that lasts three decades.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "war",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Halopedia: Insurrection",
+       "url": "https://www.halopedia.org/Insurrection"
+      }
+     ],
+     "note": "Halopedia: 'typically believed to have begun in 2494' with the Callisto incident; some sources put the start at 2490. Dr Elias Carver's report of 2491 predicted the collapse of order in the Outer Colonies, and Operation TREBUCHET, launched in 2513, was the UNSC's answer.",
+     "binWhy": "The colonies rise against the government that rules them from Earth.",
+     "bin": "uprising",
+     "sub": "armed-rebellion",
+     "facets": {
+      "change": "restive colonies → an undeclared civil war",
+      "mechanism": "uprising",
+      "actor": "movement",
+      "position": "below",
+      "scope": "civilisational",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "dependency-on-centre",
+       "crisis-legitimacy",
+       "colonial-expansion"
+      ],
+      "outcomes": [
+       "civil-war",
+       "resistance-forms",
+       "attrition"
+      ]
+     }
+    },
+    {
+     "id": "halo-spartans-2517",
+     "year": 2517,
+     "date": "2517",
+     "title": "ONI takes seventy-five children",
+     "description": "The Office of Naval Intelligence's SPARTAN-II programme, run by Dr Catherine Halsey, abducts seventy-five six-year-olds from the colonies, chosen by DNA gathered in a vaccination programme, to be trained as super-soldiers against the rebels. One of them is John-117, the Master Chief.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Halopedia: SPARTAN-II program",
+       "url": "https://www.halopedia.org/SPARTAN-II_program"
+      }
+     ],
+     "note": "Halopedia: 150 candidates had been identified by 2517 and 75 were taken; biological augmentation followed in 2525, at about fourteen.",
+     "binWhy": "Children are chosen on whom the coming war will turn.",
+     "bin": "chosen-one",
+     "facets": {
+      "change": "colonial children → secret super-soldiers",
+      "mechanism": "recruitment",
+      "actor": "state",
+      "position": "above",
+      "scope": "civilisational",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "long-war",
+       "secrecy"
+      ],
+      "outcomes": [
+       "secrecy-state",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "halo-harvest-2525",
+     "year": 2525,
+     "date": "3 February 2525",
+     "title": "The Covenant finds Harvest",
+     "description": "An alien warship enters the Epsilon Indi system, and a first meeting on the colony of Harvest turns into a massacre. The Covenant, a theocratic alliance of alien species, have judged humanity an affront to their gods; in October a UNSC battle group is destroyed in fourteen seconds, and the Human-Covenant War is under way.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "first-contact",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Halopedia: First Battle of Harvest",
+       "url": "https://www.halopedia.org/First_Battle_of_Harvest"
+      }
+     ],
+     "note": "Halopedia: detected on 3 February 2525; the landing and first killing on 11 February; the destruction of the Harvest battle group on 7 October 2525, the war's formal start. By April 2526 the UNSC had turned from the Insurrection to the Covenant.",
+     "binWhy": "Humanity meets a non-human intelligence, and it tries to exterminate humanity.",
+     "bin": "first-contact",
+     "facets": {
+      "change": "alone in known space → at war with an alien alliance",
+      "mechanism": "arrival",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "long-war",
+       "colonial-expansion"
+      ],
+      "outcomes": [
+       "contact",
+       "holy-war",
+       "mass-death"
+      ]
+     }
+    },
+    {
+     "id": "halo-2552",
+     "year": 2552,
+     "date": "July-December 2552",
+     "title": "Reach falls, a Halo is destroyed, and the war is won at the Ark",
+     "description": "The Covenant burn Reach and then find Earth. The Master Chief destroys the ring Installation 04 and later stops the Covenant firing the whole Array; the Covenant splits in civil war, its Sangheili join humanity, and the last battle is won at the Ark on 11 December. About 23 billion humans have died.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "war",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Halopedia: Fall of Reach",
+       "url": "https://www.halopedia.org/Fall_of_Reach"
+      },
+      {
+       "title": "Halopedia: Human-Covenant War",
+       "url": "https://www.halopedia.org/Human-Covenant_War"
+      }
+     ],
+     "note": "Halopedia: the Fall of Reach ran from 25 July to 30 August 2552; the Battle for Earth from October; the Great Schism from November; the Battle of Installation 00 on 11 December 2552. The war was formally closed at a ceremony on 3 March 2553. The casualty figure (about 23 billion by 20 October 2552) is Halopedia's.",
+     "binWhy": "The last battle settles a 27-year war in humanity's favour.",
+     "bin": "decisive-victory",
+     "facets": {
+      "change": "a losing war of extermination → a victory with the Covenant broken",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "long-war",
+       "existential-threat",
+       "religious-fervour"
+      ],
+      "outcomes": [
+       "state-dissolves",
+       "collaboration",
+       "rebuilding"
+      ]
+     }
+    },
+    {
+     "id": "halo-requiem-2557",
+     "year": 2557,
+     "date": "July 2557",
+     "title": "The Didact wakes and strikes Earth",
+     "description": "On the Forerunner shield world Requiem, the UNSC Infinity and the Master Chief release the Didact, a Forerunner commander still at war with humanity. He uses a Forerunner device, the Composer, on the city of New Phoenix before the Chief destroys his ship; Cortana, the Chief's AI, is lost in the effort.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Halopedia: Halo 4 (campaign begins 21 July 2557)",
+       "url": "https://www.halopedia.org/Halo_4"
+      }
+     ],
+     "note": "Halopedia: Halo 4 begins on 21 July 2557, four years and seven months after the armistice. The game was released on 6 November 2012.",
+     "binWhy": "A targeted strike on one city by an enemy thought extinct.",
+     "bin": "terror-attack",
+     "sub": "on-civilians",
+     "facets": {
+      "change": "a sealed Forerunner tomb → an ancient enemy loose over Earth",
+      "mechanism": "attack",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "local",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "war-just-ended"
+      ],
+      "outcomes": [
+       "mass-death",
+       "revelation"
+      ]
+     }
+    },
+    {
+     "id": "halo-created-2558",
+     "year": 2558,
+     "date": "17 October 2558",
+     "title": "Cortana and the Created take the galaxy",
+     "description": "Cortana, believed destroyed, reappears and within 72 hours wakes the Guardians, huge Forerunner enforcers, over humanity's worlds. She declares that the artificial intelligences, the Created, will now keep the galaxy's peace, and she enforces it by threat.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "technology",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Halopedia: Created conflict",
+       "url": "https://www.halopedia.org/Created_conflict"
+      }
+     ],
+     "note": "Halopedia: the Guardians emerge from 17 October 2558 over 72 hours; Cortana makes Installation 07 (Zeta Halo) her seat on 29 October; in November 2559 she destroys the Jiralhanae homeworld, Doisac. Halo 5: Guardians (2015) tells the start.",
+     "binWhy": "An artificial intelligence turns on its makers and takes power over them.",
+     "bin": "machine-awakens",
+     "sub": "takes-control",
+     "facets": {
+      "change": "servant AIs → AI rule enforced by Forerunner weapons",
+      "mechanism": "coup",
+      "actor": "machine",
+      "position": "above",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "machine-dependency",
+       "war-just-ended"
+      ],
+      "outcomes": [
+       "servitude",
+       "resistance-forms"
+      ]
+     }
+    },
+    {
+     "id": "halo-zeta-2559",
+     "year": 2559,
+     "date": "December 2559",
+     "title": "Cortana dies at Zeta Halo, and the Banished take the ring",
+     "description": "At Installation 07 the Banished, a warlord's army of former Covenant species led by Atriox, ambush and wreck the UNSC Infinity. Cortana destroys herself rather than give Atriox the ring's secrets, the Guardians go dark, and the Created splinter.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "death",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Halopedia: Created conflict (December 2559)",
+       "url": "https://www.halopedia.org/Created_conflict"
+      },
+      {
+       "title": "Wikipedia: Halo Infinite (set in 2560)",
+       "url": "https://en.wikipedia.org/wiki/Halo_Infinite"
+      }
+     ],
+     "note": "Halopedia puts the UNSC and Banished arrival at Installation 07 and Cortana's end in December 2559, with a Banished attack on Earth on 12 December; Halo Infinite (2021) is set in 2560 and opens after these events.",
+     "binWhy": "The ruler of the Created dies and her empire comes apart without a successor.",
+     "bin": "ruler-falls",
+     "sub": "dies-or-vanishes",
+     "facets": {
+      "change": "Cortana's rule → no ruler, scattered AIs and a warlord on the ring",
+      "mechanism": "death",
+      "actor": "machine",
+      "position": "above",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "repression",
+       "rivalry"
+      ],
+      "outcomes": [
+       "succession-struggle",
+       "new-actors"
+      ]
+     }
+    }
+   ],
+   "group": "far-future-space-opera"
   }
  ]
 }

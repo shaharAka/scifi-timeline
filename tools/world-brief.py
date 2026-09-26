@@ -49,7 +49,11 @@ Hard rules (the build rejects violations):
 Do the research on the web. When done, run `python3 /Users/shahar/Documents/scifi-timeline/tools/check-world.py <your file>` and fix every PROBLEM it prints. Report back: the divergence, the ordered chain of bins, the ending, and any date you were unsure of.
 """,
         "## Existing lineage ids (for dossier connections)\n" + ", ".join(ids),
-        "## Bins (kind of moment): id - definition\n" + "\n".join("- %s - %s" % (b["id"], b["definition"]) for b in bins),
+        "## Bins (kind of moment): id - definition, then its sub-kinds\n"
+        "Where a bin lists sub-kinds, every event in that bin also needs `sub`: the one sub-kind id that says what the event IS "
+        "(a crewed Moon flight and a robotic lander are both voyage-into-unknown, with different subs). The ranking matches on sub-kind.\n"
+        + "\n".join("- %s - %s%s" % (b["id"], b["definition"],
+            "".join("\n    - sub `%s`: %s" % (x["id"], x["definition"]) for x in b.get("subs") or [])) for b in bins),
         "## Facet vocabularies (closed)\n" + "\n".join("- %s: %s" % (k, ", ".join(v) if isinstance(v, list) else json.dumps(v)) for k, v in fac.items() if not k.startswith("_")),
         "## Example lineage (Blade Runner, already in the atlas)\n```json\n" + json.dumps(lin, indent=1, ensure_ascii=False) + "\n```",
         "## Example dossier\n```json\n" + json.dumps(dos, indent=1, ensure_ascii=False) + "\n```"]

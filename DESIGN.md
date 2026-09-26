@@ -414,6 +414,12 @@ Four rules follow from that, and they are the owner's:
   "if the next headline is…" for next steps the leaders take that have
   happened to us before. Today features the leader and the next six; a story
   shows its rank. The constants at the top of the file are the argument.
+  Steps are matched as kind **and sub-kind** (`data/bins.json` `subs`): the
+  same kind done differently (a regional war against a world war, a crewed
+  Moon flight against a lander) is a near miss, which is what lets ninety-odd
+  stories spread out instead of tying. With that many stories a leader holds
+  a few per cent, so the leader is also read as a multiple of an average
+  story's share.
 - **The race is the picture.** A bump chart (`rkRaceSvg`) of the top five
   after each of our last ten moments, one colour per story, a big dot on the
   leader, a solid column where the lead changed; a story that drops out simply

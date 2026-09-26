@@ -13,7 +13,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WORLDS_FILE = os.path.join(ROOT, "data", "parts", "worlds", "present-day.json")
 
 def main():
-    bins = {b["id"] for b in json.load(open(os.path.join(ROOT, "data", "bins.json")))["bins"]}
+    _bins = json.load(open(os.path.join(ROOT, "data", "bins.json")))["bins"]
+    bins = {b["id"] for b in _bins}
+    subs = {b["id"]: [x["id"] for x in b.get("subs") or []] for b in _bins}
     fac = json.load(open(os.path.join(ROOT, "data", "facets.json")))
     existing = {}
     for f in glob.glob(os.path.join(ROOT, "data", "parts", "*.json")):
@@ -53,6 +55,9 @@ def main():
         if e["year"] < dv and b in ("machine-awakens", "first-contact", "time-traveller-arrives", "gateway-opens"):
             notes.append("%s: a fictional %s is filed before the fork - is the divergence too late?" % (tag, b))
         if b not in bins: P("%s bin %r unknown" % (tag, b)); continue
+        if subs.get(b) and e.get("sub") not in subs[b]:
+            P("%s bin %s needs a sub, one of %s (got %r)" % (tag, b, ", ".join(subs[b]), e.get("sub")))
+        elif not subs.get(b) and e.get("sub"): P("%s bin %s has no sub-kinds, drop sub %r" % (tag, b, e.get("sub")))
         f = e.get("facets")
         if not f: P("%s has no facets" % tag); continue
         for k in ("mechanism","actor","position","scope","domain"):

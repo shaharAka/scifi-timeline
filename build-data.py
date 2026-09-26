@@ -418,6 +418,7 @@ def load_real_history():
                 err("%s: %s is required" % (tag, key))
         if e.get("bin") is not None and e.get("bin") not in VOCAB:
             err("%s: bin %r is not defined in data/bins.json" % (tag, e.get("bin")))
+        check_sub(tag, e)
         if "facets" not in e:
             warn("%s: no facets" % tag)
         else:
@@ -495,8 +496,25 @@ def load_bins():
         for key in ("label", "definition"):
             if not b.get(key):
                 err("%s (%s) is missing %r" % (tag, bid, key))
+        for j, sb in enumerate(b.get("subs") or []):
+            if not isinstance(sb, dict) or not sb.get("id") or not sb.get("label") or not sb.get("definition"):
+                err("%s (%s) sub[%d] needs id, label and definition" % (tag, bid, j))
         out[bid] = b
     return out
+
+
+def check_sub(tag, e):
+    """A sub-kind refines a kind (data/bins.json `subs`). The map groups by
+    kind and the ranking matches on sub-kind, so a sub-kind must belong to the
+    event's own kind. A kind that has sub-kinds but an event without one still
+    works (it scores as an unknown sub-kind), so that is a warning."""
+    b = VOCAB.get(e.get("bin")) if e.get("bin") else None
+    subs = [x.get("id") for x in (b.get("subs") or [])] if b else []
+    sub = e.get("sub")
+    if sub is not None and sub not in subs:
+        err("%s: sub %r is not a sub-kind of %r (one of %s)" % (tag, sub, e.get("bin"), subs))
+    elif sub is None and subs:
+        warn("%s: kind %r has sub-kinds but the event names none" % (tag, e.get("bin")))
 
 
 def load_worlds(lineage_ids):
@@ -664,6 +682,7 @@ def check_lineage(name, lin, group_id, seen_ids):
         if "bin" in e and e.get("bin") is not None:
             if e["bin"] not in VOCAB:
                 err("%s: bin %r is not defined in data/bins.json" % (tag, e["bin"]))
+            check_sub(tag, e)
         if "facets" in e:
             check_facets(tag, e["facets"])
         elif e.get("kind") != "publication":
@@ -877,7 +896,7 @@ def main():
             head = re.split(r"[-_]", eid.lower())[0]
             owners = prefix_owners.get(head)
             if owners and lin["id"] not in owners:
-                err("%s/%s: event id %r uses the prefix of %s"
+                err("%s: event id %r uses the prefix of %s"
                     % (lin["id"], eid, sorted(owners)))
 
     atlas = load_atlas()
