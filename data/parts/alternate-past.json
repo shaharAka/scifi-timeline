@@ -1950,6 +1950,476 @@
      "url": "https://gizmodo.com/for-all-mankind-season-5-finale-this-land-is-our-land-ending-recap-2000764688"
     }
    ]
+  },
+  {
+   "id": "threads",
+   "title": "Threads",
+   "medium": "tv",
+   "creator": "Barry Hines (writer); Mick Jackson (director and producer), BBC",
+   "originYear": 1984,
+   "group": "alternate-past",
+   "epoch": "present",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 1983,
+    "label": "A US-backed coup in Iran brings Soviet troops across the border",
+    "delta": "Real: in 1983 Iran is the Islamic Republic at war with Iraq, the Soviet army is bogged down in Afghanistan, and the nearest the superpowers come to firing is the Able Archer scare in November. Fiction: a coup in Iran blamed on Washington draws Soviet convoys through the northern mountain passes in the first days of May, and three weeks later Sheffield is gone.",
+    "inUniverse": "'Last week's coup in Iran' (news bulletin, Thursday 5 May); Soviet convoys first seen by US satellites on the Monday; the crisis year is never printed",
+    "confidence": "medium",
+    "note": "The film prints days and dates but no year. Every one of its eleven captions, from Saturday 5 March to Thursday 26 May, fits the 1983 calendar and none fits 1984, and the film was made in 1983; so the fork is placed in 1983 and the aftermath captions (one year, ten years, thirteen years after) are counted from May 1983. Audiences in September 1984 took it as happening now; a reader who prefers that reading should add one year to everything after the fork. Iran's fighting is already under way on 5 March, but the first thing that did not happen in our history is the coup late in April and the Soviet move that answers it.",
+    "sources": [
+     {
+      "title": "Wikiquote: Threads (1984 film) - dated news bulletins, 5 March to 26 May",
+      "url": "https://en.wikiquote.org/wiki/Threads_(1984_film)"
+     },
+     {
+      "title": "Wikipedia: Threads (1984 film)",
+      "url": "https://en.wikipedia.org/wiki/Threads_(1984_film)"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "Thirteen years on Britain has a medieval population, a generation that can barely speak, and the film's last birth is a dead, damaged child; nothing in it points to recovery.",
+    "asOf": 1997
+   },
+   "events": [
+    {
+     "id": "th-hiroshima-1945",
+     "year": 1945,
+     "date": "1945-08-06",
+     "title": "Hiroshima and Nagasaki",
+     "description": "The United States destroys two Japanese cities with single bombs. Every figure in the film is measured against them: the 25 May bulletin describes the Mashhad blasts as several times larger than the Hiroshima and Nagasaki bombs, and the survivors' numbness is modelled on the hibakusha.",
+     "importance": 2,
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Atomic bombings of Hiroshima and Nagasaki",
+       "url": "https://en.wikipedia.org/wiki/Atomic_bombings_of_Hiroshima_and_Nagasaki"
+      }
+     ],
+     "note": "Real history, before the fork. The film names both cities in its 25 May news bulletin; Wikipedia's production section records that Mick Jackson based the survivors' behaviour on the hibakusha.",
+     "binWhy": "The weapon that can end a civilisation is used for the first time, and the balance of power the film's crisis breaks is built around it.",
+     "bin": "doomsday-weapon",
+     "facets": {
+      "change": "conventional war → the atomic bomb",
+      "mechanism": "attack",
+      "actor": "state",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": -1
+      },
+      "preconditions": [
+       "long-war",
+       "technological-race",
+       "secrecy"
+      ],
+      "outcomes": [
+       "arms-race",
+       "mass-death",
+       "cold-war"
+      ]
+     },
+     "tier": "T3",
+     "phase": "prehistory",
+     "kind": "event"
+    },
+    {
+     "id": "th-iran-coup-1953",
+     "year": 1953,
+     "date": "1953-08-19",
+     "title": "A US- and British-backed coup restores the Shah",
+     "description": "Iran's prime minister Mohammad Mosaddegh, who had nationalised the country's oil, is overthrown in a coup organised with American and British intelligence, and the Shah rules as a Western ally for the next quarter-century. It is the precedent the film's crisis replays: a coup in Iran blamed on Washington, and a Soviet warning against 'an easy return to the reign of the Shah'.",
+     "importance": 2,
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: 1953 Iranian coup d'etat",
+       "url": "https://en.wikipedia.org/wiki/1953_Iranian_coup_d%27%C3%A9tat"
+      }
+     ],
+     "note": "Real history, before the fork. The film does not name 1953; its 5 May bulletin has Gromyko accuse the United States of prompting 'last week's coup' and warn against a return to the Shah's reign, which is the pattern of 1953. Included as the real template for the fiction's trigger.",
+     "binWhy": "A foreign-backed faction takes control of the Iranian state by force.",
+     "bin": "power-seized",
+     "facets": {
+      "change": "elected premier → the Shah's personal rule",
+      "mechanism": "coup",
+      "actor": "state",
+      "position": "outside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "cold-war",
+       "resource-dependency",
+       "rivalry"
+      ],
+      "outcomes": [
+       "consolidation",
+       "dependency"
+      ]
+     },
+     "tier": "T3",
+     "phase": "prehistory",
+     "kind": "event"
+    },
+    {
+     "id": "th-shah-falls-1979",
+     "year": 1979,
+     "date": "1979-01-16",
+     "title": "The Shah leaves Iran",
+     "description": "Mass protests drive the Shah into exile and the Islamic Republic replaces the monarchy within weeks. In December the Red Army enters Afghanistan, the invasion the film's newspaper map shows in red beside Iran and its headline 'Afghanistan again!' recalls.",
+     "importance": 2,
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Iranian revolution",
+       "url": "https://en.wikipedia.org/wiki/Iranian_revolution"
+      },
+      {
+       "title": "Wikipedia: Soviet-Afghan War",
+       "url": "https://en.wikipedia.org/wiki/Soviet%E2%80%93Afghan_War"
+      }
+     ],
+     "note": "Real history, before the fork. Both 1979 events are merged under one year: the film's Iran is the post-revolutionary state, fighting a civil war by March of the crisis year, and its Observer clipping shows occupied Afghanistan in red next to the Soviet arrows into Iran.",
+     "binWhy": "The Western-backed monarch is driven out and the succession is fought over; the film's Iran is the unstable state that follows.",
+     "bin": "ruler-falls",
+     "facets": {
+      "change": "the Shah → the Islamic Republic",
+      "mechanism": "uprising",
+      "actor": "movement",
+      "position": "below",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "foreign-backed-ruler",
+       "repression",
+       "crisis-legitimacy"
+      ],
+      "outcomes": [
+       "theocracy",
+       "rivalry",
+       "new-order"
+      ]
+     },
+     "tier": "T3",
+     "phase": "prehistory",
+     "kind": "event"
+    },
+    {
+     "id": "th-protect-and-survive-1980",
+     "year": 1980,
+     "date": "1980-05",
+     "title": "Protect and Survive is published",
+     "description": "The government's nuclear-attack advice, prepared in the 1970s to be released only if war looked imminent, is put on sale after intense public interest. Its fallout rooms, lean-to refuges and fourteen days of food are exactly what the Kemps and Becketts build in the film, and the film plays its broadcasts over the attack.",
+     "importance": 1,
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Protect and Survive",
+       "url": "https://en.wikipedia.org/wiki/Protect_and_Survive"
+      }
+     ],
+     "note": "Real history, before the fork. The film uses Protect and Survive broadcasts and the Protect and Survive newspaper insert of Thursday 26 May; its post-war planning is drawn from Duncan Campbell's War Plan UK (1982), which exposed how thin those plans were.",
+     "binWhy": "Civil-defence advice that was to be kept back until a crisis is released to the public it was written for, and becomes a byword for how little it could do.",
+     "bin": "truth-revealed",
+     "facets": {
+      "change": "secret crisis leaflet → public booklet",
+      "mechanism": "disclosure",
+      "actor": "state",
+      "position": "above",
+      "scope": "national",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "cold-war",
+       "arms-race",
+       "secrecy"
+      ],
+      "outcomes": [
+       "revelation",
+       "resistance-forms"
+      ]
+     },
+     "tier": "T3",
+     "phase": "prehistory",
+     "kind": "event"
+    },
+    {
+     "id": "th-war-1983",
+     "year": 1983,
+     "date": "1983-05-26",
+     "title": "The Iran crisis becomes a nuclear war, and Sheffield is destroyed",
+     "description": "A US-backed coup in Iran brings Soviet convoys into the north of the country; a US submarine is lost, American paratroops land near Isfahan, an ultimatum expires, and two nuclear weapons are used around the Soviet base at Mashhad. At 8.30 a.m. on Thursday 26 May the attack warning sounds in Britain: 210 of the 3,000 megatons exchanged fall on the UK, a one-megaton weapon bursts over Sheffield, and within nine days local government has failed and martial law replaces it.",
+     "importance": 3,
+     "inUniverse": "Saturday 5 March: civil war in Iran; Thursday 5 May: Soviet convoys after 'last week's coup'; Thursday 12 May: USS Los Angeles lost; Tuesday 17 May: US paratroops into western Iran; Thursday 19 May: Soviet warheads at Mashhad; Saturday 21 May: US ultimatum, expiring noon Sunday 22 May; Wednesday 25 May: two nuclear explosions in northern Iran; Thursday 26 May, 8.30 a.m.: Attack Warning Red",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikiquote: Threads (1984 film) - dated news bulletins, 5 March to 26 May",
+       "url": "https://en.wikiquote.org/wiki/Threads_(1984_film)"
+      },
+      {
+       "title": "BFI Screenonline: Threads (1984) full synopsis with the aftermath captions",
+       "url": "http://www.screenonline.org.uk/tv/id/730560/synopsis.html"
+      },
+      {
+       "title": "Wikipedia: Threads (1984 film)",
+       "url": "https://en.wikipedia.org/wiki/Threads_(1984_film)"
+      }
+     ],
+     "note": "The film never prints a year, but all eleven of its weekday-and-date captions (Saturday 5 March, Thursday 5 May, Sunday 8 May ... Thursday 26 May) fall on those weekdays in 1983 and on none of them in 1984; the film was written and shot in 1983 and broadcast in September 1984, and Wikipedia files it as set in 1983. The whole escalation, attack and nine-day collapse is merged into this one year. In our 1983 there was no coup in Iran and no Soviet move south; the nearest real moment is the Able Archer war scare of November 1983.",
+     "binWhy": "A superpower confrontation over Iran turns into general war; the mass death and the collapse are its consequences in the same fortnight, carried in the outcomes.",
+     "bin": "war-breaks-out",
+     "facets": {
+      "change": "a crisis over Iran → general nuclear war",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "cold-war",
+       "foreign-backed-ruler",
+       "arms-race"
+      ],
+      "outcomes": [
+       "mass-death",
+       "collapse",
+       "extinction-risk"
+      ]
+     },
+     "tier": "T3",
+     "phase": "fork",
+     "kind": "event"
+    },
+    {
+     "id": "th-broadcast-1984",
+     "year": 1984,
+     "date": "1984-09-23",
+     "title": "Threads is broadcast on BBC2",
+     "description": "The BBC shows Barry Hines and Mick Jackson's film on BBC2 on a Sunday evening, a year after The Day After in the United States. It wins the BAFTA for best single drama.",
+     "importance": 2,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Threads (1984 film)",
+       "url": "https://en.wikipedia.org/wiki/Threads_(1984_film)"
+      },
+      {
+       "title": "BFI: The night the country didn't sleep - 40 years of Threads",
+       "url": "https://www.bfi.org.uk/features/threads-bbc-nuclear-war-drama"
+      }
+     ],
+     "note": "Original broadcast 23 September 1984. In the film's own calendar this is the autumn after Ruth's baby is born and after the second harvest; nothing in the story is dated between the first spring and the ten-year caption.",
+     "binWhy": "Publication event: the original release, not a moment in the story.",
+     "bin": null,
+     "facets": null,
+     "tier": "T3",
+     "phase": "fork"
+    },
+    {
+     "id": "th-ten-years-1993",
+     "year": 1993,
+     "date": "1993",
+     "title": "Ten years on: Britain at a medieval population",
+     "description": "The caption puts Britain's surviving population at 4 to 11 million, the size it was in the Middle Ages. Survivors farm by hand, children born after the attack speak a broken English because nobody taught them, and Ruth, blinded by cataracts from the thinned ozone, dies prematurely aged while her daughter watches without grief.",
+     "importance": 3,
+     "inUniverse": "Ten years after the attack (on-screen caption)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "BFI Screenonline: Threads (1984) full synopsis with the aftermath captions",
+       "url": "http://www.screenonline.org.uk/tv/id/730560/synopsis.html"
+      },
+      {
+       "title": "Wikipedia: Threads (1984 film)",
+       "url": "https://en.wikipedia.org/wiki/Threads_(1984_film)"
+      }
+     ],
+     "note": "Dated from the caption 'ten years after' counted from May 1983, so late spring 1993; if the attack year is read as 1984 this becomes 1994. A glimpse of rudimentary electricity (Jane watching a tape of the children's programme Words and Pictures) is the only sign of anything being rebuilt.",
+     "binWhy": "Ten years on, the order that broke in the first nine days has not come back: no state, no schools, a population a fifth of what it was, a language coming apart.",
+     "bin": "civilisation-collapses",
+     "facets": {
+      "change": "an industrial nation → subsistence farming",
+      "mechanism": "disaster",
+      "actor": "nature",
+      "position": "above",
+      "scope": "national",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "post-collapse",
+       "disaster-just-struck",
+       "resource-exhaustion"
+      ],
+      "outcomes": [
+       "collapse",
+       "despair",
+       "mass-death"
+      ]
+     },
+     "tier": "T3",
+     "phase": "aftermath",
+     "kind": "event"
+    },
+    {
+     "id": "th-thirteen-years-1996",
+     "year": 1996,
+     "date": "1996",
+     "title": "Thirteen years on: steam power, and a generation without speech",
+     "description": "Some industry has come back on limited steam power, but people still live in squalor under an authority that shoots food thieves. Jane, thirteen, runs with two boys who can barely talk; when they are caught stealing bread one is shot, and the other forces himself on her.",
+     "importance": 2,
+     "inUniverse": "Thirteen years after the attack (on-screen caption)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "BFI Screenonline: Threads (1984) full synopsis with the aftermath captions",
+       "url": "http://www.screenonline.org.uk/tv/id/730560/synopsis.html"
+      },
+      {
+       "title": "Wikipedia: Threads (1984 film)",
+       "url": "https://en.wikipedia.org/wiki/Threads_(1984_film)"
+      }
+     ],
+     "note": "Dated from the caption counted from May 1983; 1997 if the attack year is read as 1984. The steam engines are the film's only concession to recovery, and it is shown as grim labour rather than rebuilding.",
+     "binWhy": "A second jump forward shows what the world has become: a thin, armed order over people who have lost language and family.",
+     "bin": "long-after",
+     "facets": {
+      "change": "ruin → steam-powered squalor",
+      "mechanism": "consolidation",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "social",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "repression",
+       "resource-exhaustion"
+      ],
+      "outcomes": [
+       "servitude",
+       "despair",
+       "rebuilding"
+      ]
+     },
+     "tier": "T3",
+     "phase": "aftermath",
+     "kind": "event"
+    },
+    {
+     "id": "th-last-birth-1997",
+     "year": 1997,
+     "date": "1997",
+     "title": "Jane's baby is born in a makeshift hospital",
+     "description": "Jane gives birth in a bare hospital ward; the nurse wraps a silent, bloodied, apparently stillborn and deformed infant and hands it to her. The film freezes on her face as she is about to scream, and ends.",
+     "importance": 3,
+     "inUniverse": "Some months after the thirteen-years caption",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "BFI Screenonline: Threads (1984) full synopsis with the aftermath captions",
+       "url": "http://www.screenonline.org.uk/tv/id/730560/synopsis.html"
+      },
+      {
+       "title": "Sheffield Tribune: The evening Sheffield was blown up on television",
+       "url": "https://www.sheffieldtribune.co.uk/the-evening-sheffield-was-blown-up/"
+      }
+     ],
+     "note": "The film gives no caption for the birth; it follows the thirteen-years scenes after an interval, so it is derived as roughly nine months later, early 1997 (1998 on a 1984 reading). BFI Screenonline calls the baby 'dead and mutated'; the film itself shows only a still, silent bundle and Jane's horror.",
+     "binWhy": "The last image is the next generation failing to live: the reproductive damage Ruth feared in the shelter, shown in one birth the film offers as the rule, not the exception.",
+     "bin": "plague",
+     "facets": {
+      "change": "a child is expected → a dead, damaged child",
+      "mechanism": "disaster",
+      "actor": "nature",
+      "position": "above",
+      "scope": "national",
+      "domain": "biological",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "post-collapse",
+       "resource-exhaustion",
+       "disaster-just-struck"
+      ],
+      "outcomes": [
+       "despair",
+       "extinction-risk"
+      ]
+     },
+     "tier": "T3",
+     "phase": "aftermath",
+     "kind": "event"
+    }
+   ],
+   "groupingNote": "Belongs in alternate-past because it leaves a recognisable Britain of 1983 - Protect and Survive, the post-revolution Iran, the Soviet war in Afghanistan, RAF Finningley - at one invented coup, and walks the consequences on our calendar. Follows the single continuity of the 1984 BBC film (Hines's published screenplay agrees). The one-event-per-year rule collapses the whole day-by-day crisis, the attack and the nine-day collapse into 1983; the four earlier events are real history the film is built on, not fiction. Everything sits in T3 (1945-1997): there is no T4 because nothing the film leans on is older than the bomb, and no T2 or T1 because it ends thirteen years after the attack, before 2000.",
+   "sources": [
+    {
+     "title": "Wikipedia: Threads (1984 film)",
+     "url": "https://en.wikipedia.org/wiki/Threads_(1984_film)"
+    },
+    {
+     "title": "Wikiquote: Threads (1984 film) - dated news bulletins, 5 March to 26 May",
+     "url": "https://en.wikiquote.org/wiki/Threads_(1984_film)"
+    },
+    {
+     "title": "BFI Screenonline: Threads (1984) full synopsis with the aftermath captions",
+     "url": "http://www.screenonline.org.uk/tv/id/730560/synopsis.html"
+    },
+    {
+     "title": "BFI: The night the country didn't sleep - 40 years of Threads",
+     "url": "https://www.bfi.org.uk/features/threads-bbc-nuclear-war-drama"
+    }
+   ]
   }
  ]
 }

@@ -2,7 +2,7 @@
 
 An animated dashboard that puts fictional histories on the **real-world calendar**,
 shows where each one stops agreeing with us, and lets you step inside any of the
-thirty-three worlds.
+forty-three worlds, and ask which one we are living in.
 
 Open **`timeline.html`** directly in a browser. No server, no dependencies — the
 page carries its own copy of the data so it works from `file://`.
@@ -77,15 +77,15 @@ The chart is a tree on a shared real-time axis:
   there rather than silently missing.
 
 Franchises are grouped by **how they break with our history**, not by genre.
-33 lineages, 327 events:
+43 lineages, 443 events:
 
 | Archetype | The break | Members | Divergence |
 |---|---|---|---|
 | **Hidden History** | A secret runs underneath the present day | The X-Files, Men in Black, Harry Potter, Buffy, His Dark Materials, The Three-Body Problem | 1558–1997 |
-| **Alternate Past** | An explicit counterfactual in the 20th century | The Man in the High Castle, Watchmen, Fatherland, The Terminator, For All Mankind | 1933–1984 |
-| **Post-Industrial Collapse** | Civilisation ends in one generation | A Canticle for Leibowitz, Planet of the Apes, Mad Max, Fallout, The Matrix, Twelve Monkeys, Parable of the Sower, Station Eleven | 1962–2139 |
-| **Near-Future Branch** | A discovery inside our own century | Blade Runner, Contact, Neuromancer, 2001, Children of Men, Interstellar, The Expanse, The Handmaid's Tale, The Ministry for the Future | 1980–2050 |
-| **Far-Future Space Opera** | A galactic civilisation millennia downstream | Star Trek, Star Wars, Dune, Foundation, Warhammer 40,000 | 23,023 BCE–35,000 CE |
+| **Alternate Past** | An explicit counterfactual in the 20th century | The Man in the High Castle, Watchmen, Fatherland, The Terminator, For All Mankind, Threads | 1933–1984 |
+| **Post-Industrial Collapse** | Civilisation ends in one generation | A Canticle for Leibowitz, Planet of the Apes, Mad Max, Fallout, The Matrix, Twelve Monkeys, Parable of the Sower, Station Eleven, Horizon Zero Dawn, Snowpiercer | 1962–2090 |
+| **Near-Future Branch** | A discovery inside our own century | Blade Runner, Contact, Neuromancer, 2001, Children of Men, Interstellar, The Expanse, The Handmaid's Tale, The Ministry for the Future, Cyberpunk 2077, Half-Life, Deus Ex, Westworld, Detroit: Become Human, Ready Player One | 1947–2050 |
+| **Far-Future Space Opera** | A galactic civilisation millennia downstream | Star Trek, Star Wars, Dune, Foundation, Warhammer 40,000, Mass Effect | 23,023 BCE–35,000 CE |
 
 The grouping is the answer to "can they be grouped": yes, and the real-time axis
 makes the groups separate cleanly. Hidden-history branches cluster over the last
@@ -123,7 +123,7 @@ fiction's future and our present occupy the same instant.
 ## Reading the axis
 
 The dataset spans roughly 2 billion BCE (The Expanse's ring builders) to 48,000
-CE (Foundation's Second Empire) — 327 events across 33 lineages. A linear axis
+CE (Foundation's Second Empire) — 443 events across 43 lineages. A linear axis
 would erase the present day, so the axis is **warped** (a symmetric-log scale,
 `WARP = 110` in `timeline.html`): it stretches the years around now and
 compresses the deep past and deep future. It stays continuous and monotonic — no

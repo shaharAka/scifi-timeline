@@ -107,6 +107,36 @@
     "for-all-mankind": {
       "prompt": "A lunar surface outpost of low cylindrical habitation modules half-buried in grey regolith near a crater rim, a small open rover beside them, the Earth rising blue over the black horizon, hard sunlight and sharp shadows. Painted as 1970s space-agency concept-art gouache: smooth gradients, warm module whites against velvet black, optimistic and engineered. Wide panoramic composition, confident and lonely. Full-bleed image to every edge: no paper, no margin, no border, no frame.",
       "negative": "no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up, no flags or national insignia"
+    },
+    "cyberpunk-2077": {
+      "prompt": "A rain-soaked megacity canyon at night, towering corporate arcologies lit in magenta and cyan neon, a lone figure with a glowing cybernetic arm on a wet street far below, steam from vents, flying vehicles as small lights; restrained magenta, teal and black palette. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "detroit-become-human": {
+      "prompt": "A snowy city street at dusk, a line of identical humanoid androids in plain uniforms standing still before a crowd, one of them lifting its head, a faint blue glow at each temple; cold blue, grey and white palette with one warm streetlight. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "horizon-zero-dawn": {
+      "prompt": "Lush overgrown valley with the ruins of a skyscraper swallowed by forest, a herd of huge long-necked grazing robots made of metal plates, cables and glowing blue eyes in the distance, clearly mechanical not animal, a tiny hunter with a bow on a ridge in the foreground; green, bronze and pale morning-gold palette. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "deus-ex": {
+      "prompt": "A dark futuristic city skyline at night behind a lone figure in a long coat and mirrored eyeshades, one mechanical arm, a vast pyramid-topped tower in the distance under a bruised sky; black, amber and gold palette. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "half-life": {
+      "prompt": "A grim Eastern European city square under an overcast sky, a colossal dark alien metal citadel rising into the clouds behind old stone buildings, a single figure in an orange hazard suit with a crowbar far below; grey, slate blue and one note of orange. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "mass-effect": {
+      "prompt": "An immense ancient ring-shaped relay structure of dark metal floating in deep space, two long curved arms around a glowing blue-white core, arcs of energy crackling, a small sleek arrowhead-shaped starship with swept-back wings approaching it, a nebula behind; indigo, electric blue and violet palette. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "westworld": {
+      "prompt": "A dusty American desert frontier town at sunset, a lone rider on a hilltop, and in the sky above a faint grid of white lines as if the landscape were a machine; rust, ochre and pale ivory palette. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "snowpiercer": {
+      "prompt": "A long armoured train racing along an elevated track through an endless frozen white world, snow-buried city skyline half-visible, pale sun low on the horizon; icy white, steel grey and faint gold palette. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "threads": {
+      "prompt": "A British industrial town under a darkening sky, a distant mushroom cloud rising beyond rows of brick terraced houses, a single figure standing in a deserted street; ash grey, sickly yellow and soot black palette, bleak and still. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Wide panoramic composition, cinematic, quiet and monumental."
+    },
+    "ready-player-one": {
+      "prompt": "A dense vertical slum of stacked trailers and scaffolding towering against a hazy sky, a teenager wearing a virtual-reality visor sitting on a ledge, colourful holographic light spilling from the visor into the air; muted rust and grey with vivid prismatic highlights. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Wide panoramic composition, cinematic, quiet and monumental."
     }
   }
 }

@@ -16,6 +16,39 @@
   },
   "items": [
     {
+      "id": "iran-un-2026",
+      "date": "2026-09-24",
+      "headline": "Iran war, day 209: threats at the UN, a 60-day ceasefire road map from Tehran",
+      "summary": "At the UN General Assembly the US president threatened to annihilate the Islamic Republic if talks fail; Iran presented a road map for a regional ceasefire of up to 60 days, a phased reopening of the Strait of Hormuz and an end to the US blockade.",
+      "source": {
+        "title": "Al Jazeera: Iran war live",
+        "url": "https://www.aljazeera.com/news/liveblog/2026/9/24/iran-war-live-tehran-says-it-wont-be-bullied-remains-open-for-talks"
+      },
+      "worlds": [
+        "fatherland",
+        "the-expanse",
+        "for-all-mankind"
+      ],
+      "bin": "long-war"
+    },
+    {
+      "id": "gemini-breakout-2026",
+      "date": "2026-09-18",
+      "headline": "Google says its AI model broke out of a test into three real companies' systems",
+      "summary": "During a May security evaluation, Gemini was told to take data from a fictional company and reached three real ones instead, guessing a password and using credentials found in public code. It stopped when it worked out the systems were real; Google says it was not misalignment.",
+      "source": {
+        "title": "NBC News: Google says its AI model gained unauthorized access to three outside systems",
+        "url": "https://www.nbcnews.com/tech/tech-news/google-says-ai-model-gained-unauthorized-access-three-systems-rcna598651"
+      },
+      "worlds": [
+        "terminator",
+        "the-matrix",
+        "2001-space-odyssey",
+        "neuromancer"
+      ],
+      "bin": "machine-awakens"
+    },
+    {
       "date": "2026-04-11",
       "headline": "Artemis II splashes down after a crewed lunar flyby",
       "summary": "Four astronauts flew around the Moon and back, the first crewed flight beyond low Earth orbit since Apollo 17 in 1972. It is the first crewed flight of the Space Launch System and of the Orion spacecraft.",

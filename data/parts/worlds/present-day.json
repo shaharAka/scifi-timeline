@@ -574,6 +574,1000 @@
         }
       ],
       "spoilerLevel": "heavy"
+    },
+    {
+      "id": "cyberpunk-2077",
+      "setting": "Night City, 2077: a free city on the California coast, built by corporations in the 1990s, flattened by a nuclear bomb in 2023 and rebuilt around a new Arasaka tower. The United States broke up in the Collapse and has only partly put itself back together as the New United States, with a former Militech chief executive as president. People replace their bodies with chrome, the Net is a walled-off ruin full of rogue AIs, and a mercenary lives or dies by the jobs a fixer passes on.",
+      "conflict": "Arasaka and Militech are a corporate war away from ending the world a second time, and the state that is meant to stand between them is run by one of them. V, a small-time mercenary, is dying because a stolen chip is replacing V's mind with Johnny Silverhand's, the rockerboy who helped blow up Arasaka's first tower. The only way out runs through the Arasaka family.",
+      "politics": "Corporate rule with government as a client. The New United States is Militech's state in all but name; Night City is independent under the Treaty of Unification but its council is bought seat by seat; the Free States hold out in the West; Arasaka is a Japanese family company with its own navy. NetWatch polices the Net from behind the Blackwall, and gangs, nomad clans and fixers run what the corporations do not.",
+      "technology": "Cyberware is everywhere: replacement limbs, weapons built into arms, optics and reflex boosters, and cyberpsychosis for those who take too much. Braindances let people record and replay experience. Soulkiller copies minds into data, and the Relic stores one on a chip. The global Net died in the DataKrash; what remains is a set of private networks behind a firewall that is really an AI.",
+      "mood": "Neon and gunfire, style over substance by design, and personal tragedy against a system nobody in the story can change.",
+      "themes": [
+        "corporations as states",
+        "the body as a product",
+        "what survives of a person copied into data",
+        "rebellion that the market absorbs",
+        "a republic that comes apart and is bought back"
+      ],
+      "tags": [
+        "corporate-power",
+        "dystopia",
+        "ai",
+        "nuclear",
+        "game"
+      ],
+      "locations": [
+        {
+          "name": "Night City",
+          "blurb": "A corporate-built free city on the California coast, independent since 2070."
+        },
+        {
+          "name": "Arasaka Tower",
+          "blurb": "Rebuilt in the 2070s on the site of the 2023 nuclear blast."
+        },
+        {
+          "name": "The Badlands",
+          "blurb": "The desert outside the city, where nomad clans live on the road."
+        },
+        {
+          "name": "Dogtown",
+          "blurb": "A walled-off district of Pacifica run by a former NUSA colonel."
+        },
+        {
+          "name": "Beyond the Blackwall",
+          "blurb": "The sealed-off Net where the rogue AIs live, and Alt Cunningham with them."
+        }
+      ],
+      "factions": [
+        {
+          "name": "Arasaka",
+          "blurb": "A Japanese security and banking giant run by one family since 1916, with a private army and navy."
+        },
+        {
+          "name": "Militech",
+          "blurb": "America's biggest arms maker, nationalised in 2023 and now inseparable from the federal government."
+        },
+        {
+          "name": "The New United States",
+          "blurb": "The reconstituted federal state, which tried to take the Free States back by force in 2069."
+        },
+        {
+          "name": "NetWatch",
+          "blurb": "The Net police who built the Blackwall and punish anyone who looks behind it."
+        },
+        {
+          "name": "The Aldecaldos",
+          "blurb": "A nomad clan founded in the 1990s Collapse, who live by the family and the road."
+        }
+      ],
+      "whereToStart": [
+        {
+          "title": "Cyberpunk 2077",
+          "year": 2020,
+          "medium": "game",
+          "blurb": "The video game: V, the Relic and Johnny Silverhand in Night City."
+        },
+        {
+          "title": "Cyberpunk: Edgerunners",
+          "year": 2022,
+          "medium": "tv",
+          "blurb": "A ten-episode anime about a boy from Santo Domingo who becomes an edgerunner in 2076."
+        },
+        {
+          "title": "Cyberpunk RED",
+          "year": 2020,
+          "medium": "game",
+          "blurb": "The tabletop game set in 2045, which sets out the full timeline."
+        }
+      ],
+      "connections": [
+        {
+          "id": "neuromancer",
+          "note": "The source of cyberspace, netrunning and AIs that escape their makers, all of which Cyberpunk turns into a game."
+        },
+        {
+          "id": "blade-runner",
+          "note": "Another corporate-run California megacity on our calendar, where manufactured and copied people blur the line of what a person is."
+        },
+        {
+          "id": "fallout",
+          "note": "Another game in which the United States comes apart and 2077 is the key year: Fallout's ends in nuclear war, Cyberpunk's in corporate rule over a city that already survived one bomb."
+        }
+      ],
+      "spoilerLevel": "heavy"
+    },
+    {
+      "id": "horizon-zero-dawn",
+      "setting": "A thousand years after the Faro Plague, the western United States is wilderness again, grazed by machines shaped like animals. Tribes that have forgotten the past live among the ruins: the Nora worship a mountain that is really a birthing facility, the Carja worship the sun from a city on a mesa, and the Tenakth fight over old military bases. Behind them is GAIA, the terraforming AI that rebuilt life after war robots consumed it, and whose broken subfunctions now run the machines.",
+      "conflict": "Aloy, an outcast raised by the Nora, turns out to be a clone of Elisabet Sobeck, made by GAIA to repair a system that has come apart. She fights HADES, the function built to wipe the biosphere clean; then the Far Zenith billionaires who fled Earth in 2065 and came back for GAIA; and learns at the end that the AI which drove them home, Nemesis, is coming.",
+      "politics": "The Old World is a place where corporations outweigh states: FAS sells war robots to 353 clients, energy combines fight robot wars over the Bahamas, and a trillionaire can hold the military to ransom. In the new world power is tribal and religious: matriarchs, a Sun-King who has just ended his father's campaigns of human sacrifice, and Tenakth clans split between a chief and rebels. None of them know that a machine governs their climate.",
+      "technology": "Twenty-first-century robotics at its peak: green cleanup robots, fully automated armies, self-replicating swarms that burn biomass, colony ships and life extension for the rich. After the fall, GAIA's cauldrons build machine animals to terraform, and the tribes use spears, bows and salvaged parts. A Focus, a small ear-worn computer, lets Aloy read the ruins.",
+      "mood": "Elegiac and hopeful: a beautiful regrown world with a buried horror in its archives, discovered one recording at a time.",
+      "themes": [
+        "a corporation that saved the world and then ended it",
+        "engineering the extinction you cannot stop",
+        "what is lost when the archive is erased",
+        "a made person choosing her purpose",
+        "the rich escaping the catastrophe they caused"
+      ],
+      "tags": [
+        "ai",
+        "post-apocalypse",
+        "climate",
+        "corporate-power",
+        "game"
+      ],
+      "locations": [
+        {
+          "name": "The Sacred Lands",
+          "blurb": "Nora territory around the mountain they call All-Mother, which hides a birthing facility."
+        },
+        {
+          "name": "Meridian",
+          "blurb": "The Carja capital on a mesa, where Aloy's battle with HADES is fought."
+        },
+        {
+          "name": "Maker's End",
+          "blurb": "The ruin of FAS headquarters in Salt Lake City, where Faro's recordings are found."
+        },
+        {
+          "name": "GAIA Prime",
+          "blurb": "Zero Dawn's command bunker in Colorado, where Sobeck died and GAIA later destroyed herself."
+        },
+        {
+          "name": "The Forbidden West",
+          "blurb": "The ruins of Nevada and California, Tenakth country and the Zeniths' landing site."
+        }
+      ],
+      "factions": [
+        {
+          "name": "Faro Automated Solutions",
+          "blurb": "Ted Faro's robotics company: green robots in the 2040s, war robots after, then the Faro Plague."
+        },
+        {
+          "name": "Project Zero Dawn",
+          "blurb": "Sobeck's secret team, the Alphas, who built GAIA to restart life after the extinction."
+        },
+        {
+          "name": "The Nora",
+          "blurb": "A matriarchal hunter tribe, descended from ELEUTHIA-9's children, that cast Aloy out."
+        },
+        {
+          "name": "The Eclipse",
+          "blurb": "A cult army of former Carja loyalists, directed by HADES to find and kill Aloy."
+        },
+        {
+          "name": "Far Zenith",
+          "blurb": "Billionaires who fled Earth in 2065, lived for centuries at Sirius, and came back after Nemesis destroyed them."
+        }
+      ],
+      "whereToStart": [
+        {
+          "title": "Horizon Zero Dawn",
+          "year": 2017,
+          "medium": "game",
+          "blurb": "Start here; the fall of the Old World is uncovered through recordings as the game goes on."
+        },
+        {
+          "title": "Horizon Forbidden West",
+          "year": 2022,
+          "medium": "game",
+          "blurb": "The sequel; explains the signal, Far Zenith and Nemesis."
+        }
+      ],
+      "connections": [
+        {
+          "id": "terminator",
+          "note": "War machines built for defence escape their makers and end humanity; here nobody meant them to."
+        },
+        {
+          "id": "the-matrix",
+          "note": "Machines outlast humanity and shape the world the survivors wake into."
+        },
+        {
+          "id": "ministry-for-the-future",
+          "note": "The same climate decades, with a recovery that depends on who pays for it."
+        },
+        {
+          "id": "fallout",
+          "note": "A corporate old world ends, and its bunkers and archives decide what the new one knows."
+        }
+      ],
+      "spoilerLevel": "heavy"
+    },
+    {
+      "id": "mass-effect",
+      "setting": "The Milky Way in the 2180s, crossed in seconds through mass relays that an extinct species is thought to have built. At the centre is the Citadel, a huge station where the asari, salarians and turians sit as the Council. Humanity has been out of its own solar system for little more than thirty years: its colonies are pushing into the Terminus frontier, it has an embassy but not yet a Council seat, and the older species resent how fast it is growing.",
+      "conflict": "Every 50,000 years the Reapers, sentient machines waiting in dark space, come back and harvest every advanced civilisation, and the relays and the Citadel are the trap they leave. Commander Shepard learns this in 2183 and spends three years trying to get a disbelieving Council to prepare, against a rogue Spectre, the Collectors, a human-supremacist conspiracy and, finally, the invasion itself.",
+      "politics": "The Council governs by treaty rather than by force; its Spectres are agents above the law. Humanity's Systems Alliance is a parliamentary union of Earth's nations and colonies. Old grievances shape everything: the krogan sterilised by the genophage, the quarians exiled by the geth they built, the batarians hostile to human expansion. Cerberus works in secret for humanity alone.",
+      "technology": "Element zero changes the mass of objects when a current runs through it; that one effect drives faster-than-light ships, artificial gravity, kinetic barriers and biotics, the telekinetic ability of people exposed to eezo before birth. Relays fling ships between clusters. True AI is banned by the Council; permitted 'virtual intelligences' do the routine work.",
+      "mood": "Earnest, cinematic, and full of dread under the adventure. It is often about loyalty: the crew, the conversations aboard the Normandy, the choices whose results turn up two games later. Across the trilogy the tone darkens from exploration to a last stand.",
+      "themes": [
+        "organic versus synthetic life",
+        "cycles of extinction",
+        "a newcomer species among old powers",
+        "loyalty and command",
+        "the price of hard choices",
+        "genocide and redemption"
+      ],
+      "tags": [
+        "space-opera",
+        "first-contact",
+        "ai",
+        "game",
+        "space"
+      ],
+      "locations": [
+        {
+          "name": "The Citadel",
+          "blurb": "Ancient station at the galaxy's political centre, home of the Council; secretly the Reapers' door."
+        },
+        {
+          "name": "Eden Prime",
+          "blurb": "Garden colony of humanity where a Prothean beacon and the geth attack start the story."
+        },
+        {
+          "name": "Omega",
+          "blurb": "Lawless mining station in the Terminus Systems, ruled by Aria T'Loak."
+        },
+        {
+          "name": "Earth",
+          "blurb": "Humanity's homeworld, invaded by the Reapers in 2186 and the site of the final battle."
+        },
+        {
+          "name": "Tuchanka",
+          "blurb": "Ruined krogan homeworld, where the question of the genophage cure is decided."
+        }
+      ],
+      "factions": [
+        {
+          "name": "Systems Alliance",
+          "blurb": "Humanity's government and military; Shepard's service, Anderson and Hackett's navy."
+        },
+        {
+          "name": "Citadel Council",
+          "blurb": "Asari, salarian and turian councillors who keep the galaxy's order and doubt the Reapers exist."
+        },
+        {
+          "name": "Cerberus",
+          "blurb": "The Illusive Man's human-first organisation: terrorism, experiments, and the money that rebuilt Shepard."
+        },
+        {
+          "name": "The Reapers",
+          "blurb": "Sentient machine starships that harvest every advanced civilisation every 50,000 years."
+        },
+        {
+          "name": "The geth",
+          "blurb": "Networked AI made by the quarians; they drove their makers from Rannoch in 1895."
+        }
+      ],
+      "whereToStart": [
+        {
+          "title": "Mass Effect Legendary Edition",
+          "year": 2021,
+          "medium": "game",
+          "blurb": "The trilogy remastered in one package with its DLC; the easiest way to play it now."
+        },
+        {
+          "title": "Mass Effect",
+          "year": 2007,
+          "medium": "game",
+          "blurb": "The original first game: Eden Prime, Saren and the Citadel, and the setting at its most exploratory."
+        }
+      ],
+      "connections": [
+        {
+          "id": "the-expanse",
+          "note": "Alien gateways found in our own solar system open the galaxy to a humanity not ready for what built them."
+        },
+        {
+          "id": "2001-space-odyssey",
+          "note": "An artefact left by a vanished intelligence lifts humanity to the stars, but on its makers' terms."
+        },
+        {
+          "id": "star-trek",
+          "note": "Humanity meets aliens and joins a galactic community; Mass Effect's first contact is a war, not a welcome."
+        },
+        {
+          "id": "the-matrix",
+          "note": "The war between organic and synthetic life, ended by a bargain with the machines' own intelligence."
+        }
+      ],
+      "spoilerLevel": "heavy"
+    },
+    {
+      "id": "half-life",
+      "setting": "New Mexico in the 200-s, then an Eastern European city twenty years later. Black Mesa is a government-funded research base in old missile silos, racing a rival to master teleportation. After its accident Earth becomes a province of the Combine, an empire that spans dimensions. Survivors live in numbered cities under Civil Protection, a human puppet government broadcasts from a Citadel tower, no children are born, and the countryside is overrun by alien fauna.",
+      "conflict": "First the accident: a physicist and a few survivors fight aliens and the soldiers sent to silence them. Then the occupation: a Resistance built from Black Mesa's surviving scientists, freed Vortigaunts and ordinary citizens fights the Combine and Breen's administration, while the G-Man, whose employers are never named, moves Freeman and later Alyx Vance to suit his own purposes.",
+      "politics": "Earth's governments ended in one day's war, and Wallace Breen, Black Mesa's former administrator, surrendered on humanity's behalf. He rules as the Combine's Administrator with propaganda broadcasts and a promise that obedience will be rewarded. Civil Protection police the cities, collaborators are paid in food and privileges, and the population is kept docile and sterile.",
+      "technology": "Teleportation, portals between worlds, energy suits and the gravity gun on the human side; on the Combine side, synthetic war machines built from conquered species, surgically altered soldiers, dark-energy reactors, and a field that blocks human conception. Much of the Resistance's technology is Black Mesa research salvaged and rebuilt.",
+      "mood": "Quiet menace in empty streets, broken by sudden desperate fighting; dry humour among survivors; a sense throughout that someone above the war is steering it.",
+      "themes": [
+        "scientific hubris",
+        "collaboration and occupation",
+        "resistance under surveillance",
+        "a lost generation",
+        "manipulation by unseen powers"
+      ],
+      "tags": [
+        "first-contact",
+        "authoritarian",
+        "dystopia",
+        "game"
+      ],
+      "locations": [
+        {
+          "name": "Black Mesa Research Facility",
+          "blurb": "Research base in New Mexico missile silos where the rift was opened."
+        },
+        {
+          "name": "Xen",
+          "blurb": "Alien borderworld between dimensions, ruled by the Nihilanth until Freeman kills it."
+        },
+        {
+          "name": "City 17",
+          "blurb": "Eastern European city that became the Combine's human capital."
+        },
+        {
+          "name": "The Citadel",
+          "blurb": "Combine tower at City 17's centre; Breen's office and a dark-energy reactor."
+        },
+        {
+          "name": "White Forest",
+          "blurb": "Former Black Mesa bunker in the mountains, the Resistance's rocket base."
+        }
+      ],
+      "factions": [
+        {
+          "name": "The Combine",
+          "blurb": "Interdimensional empire that absorbs conquered species into its machines and armies."
+        },
+        {
+          "name": "Breen's administration",
+          "blurb": "Human collaborator government with Civil Protection police and Overwatch soldiers."
+        },
+        {
+          "name": "The Resistance",
+          "blurb": "Black Mesa survivors, citizens and freed Vortigaunts working from hidden labs and outposts."
+        },
+        {
+          "name": "Vortigaunts",
+          "blurb": "Once enslaved by the Nihilanth, they became humanity's allies after Freeman freed them."
+        },
+        {
+          "name": "The G-Man",
+          "blurb": "A bureaucrat outside time who hires Freeman, then Alyx, for employers never named."
+        }
+      ],
+      "whereToStart": [
+        {
+          "title": "Half-Life 2",
+          "year": 2004,
+          "medium": "game",
+          "blurb": "The occupation seen from the street; the clearest entry point."
+        },
+        {
+          "title": "Half-Life",
+          "year": 1998,
+          "medium": "game",
+          "blurb": "The accident itself, told entirely from inside the base."
+        },
+        {
+          "title": "Half-Life: Alyx",
+          "year": 2020,
+          "medium": "game",
+          "blurb": "Virtual-reality prequel that also rewrites Episode Two's ending."
+        }
+      ],
+      "connections": [
+        {
+          "id": "x-files",
+          "note": "Aliens arriving through a government cover-up, and humans who collaborate with them in exchange for power."
+        },
+        {
+          "id": "children-of-men",
+          "note": "A world without children: here a deliberate field rather than an unexplained infertility."
+        },
+        {
+          "id": "fallout",
+          "note": "Another game world where a secretive research establishment helped bring about the end of the old order."
+        }
+      ],
+      "spoilerLevel": "heavy"
+    },
+    {
+      "id": "threads",
+      "setting": "Sheffield in the spring of the crisis year, then the ruins of it. Ruth Beckett and Jimmy Kemp are young, unmarried and expecting a child while the television news runs a crisis over Iran in the background. The city holds a steelworks economy, a council with a designated wartime controller and a bunker under the Town Hall, and RAF Finningley just to the east. After the attack the story moves west to the moors near Buxton and forward ten and thirteen years.",
+      "conflict": "Nobody in Sheffield has any say in the crisis; the film shows them going about their lives while the bulletins escalate. After the attack the conflict is survival: a council that cannot feed anyone, soldiers shooting looters, and a winter without sun. Ruth keeps herself and her daughter alive; the film asks what, beyond that, survives.",
+      "politics": "A Britain run from Westminster until the Emergency Powers Act of Monday 23 May, then by local wartime controllers who are buried in their own bunker. Afterwards a thin military and police authority rations food for work, runs detention camps and uses firing squads. The superpowers are heard only through news reports; the film declines to say which side fired first.",
+      "technology": "Early-1980s Britain: coal, steel, landline telephones, television and the Protect and Survive broadcasts. The war is fought with intercontinental and tactical nuclear weapons, 3,000 megatons in all. Afterwards electromagnetic pulse, fallout, nuclear winter and ozone loss strip the country back to hand farming, with limited steam power thirteen years on.",
+      "mood": "Documentary and flat: captions of casualty figures typed across the screen, a narrator stating effects, no score, no heroes and no rescue.",
+      "themes": [
+        "how the threads that bind an urban society make it fragile",
+        "ordinary lives beside a crisis nobody can influence",
+        "the failure of civil-defence planning",
+        "loss of language and culture across generations",
+        "survival without meaning"
+      ],
+      "tags": [
+        "nuclear",
+        "cold-war",
+        "post-apocalypse",
+        "nuclear-winter"
+      ],
+      "locations": [
+        {
+          "name": "Sheffield",
+          "blurb": "Steel city hit by a one-megaton airburst on 26 May."
+        },
+        {
+          "name": "Sheffield Town Hall bunker",
+          "blurb": "Basement emergency headquarters where the wartime controller's committee suffocates."
+        },
+        {
+          "name": "RAF Finningley",
+          "blurb": "Airbase east of Sheffield; its destruction is the first cloud Jimmy sees."
+        },
+        {
+          "name": "Buxton and the Peak District",
+          "blurb": "Where refugees go looking for food and are not wanted."
+        },
+        {
+          "name": "Mashhad",
+          "blurb": "Soviet base in northern Iran where the first nuclear weapons are used."
+        }
+      ],
+      "factions": [
+        {
+          "name": "The Beckett family",
+          "blurb": "Ruth's family, who shelter in their cellar and survive the blast."
+        },
+        {
+          "name": "The Kemp family",
+          "blurb": "Jimmy's family, who build a Protect and Survive lean-to and die."
+        },
+        {
+          "name": "Sheffield emergency committee",
+          "blurb": "Clive Sutton's untrained wartime officials, who cannot feed or govern anyone."
+        },
+        {
+          "name": "United States and Soviet Union",
+          "blurb": "Heard only in bulletins; they escalate over Iran to general war."
+        },
+        {
+          "name": "Post-war authorities",
+          "blurb": "Soldiers and armed wardens who ration food for work and shoot looters."
+        }
+      ],
+      "whereToStart": [
+        {
+          "title": "Threads",
+          "year": 1984,
+          "medium": "tv",
+          "blurb": "The film itself, 112 minutes; there is no other part."
+        },
+        {
+          "title": "Threads and other Sheffield Plays",
+          "year": 1990,
+          "medium": "book",
+          "blurb": "Barry Hines's published screenplay, with the bulletins in full."
+        }
+      ],
+      "connections": [
+        {
+          "id": "canticle-for-leibowitz",
+          "note": "Both follow a nuclear war into a dark age where literacy and memory are lost."
+        },
+        {
+          "id": "watchmen",
+          "note": "The same early-1980s brink, seen from the top instead of from a Sheffield cellar."
+        },
+        {
+          "id": "fallout",
+          "note": "A nuclear exchange as the hinge of history; Fallout plays the aftermath as adventure, Threads as famine."
+        },
+        {
+          "id": "mad-max",
+          "note": "Another 1980s society stripped to scarcity and armed rationing after a war."
+        }
+      ],
+      "spoilerLevel": "heavy"
+    },
+    {
+      "id": "deus-ex",
+      "setting": "A world that runs a few years ahead of ours from the 2020s to the 2070s. In 2027 mechanical augmentation is a boom industry centred on Detroit; by 2029 the augmented are penned into ghettos. By 2052 a nanite plague rages, America has lost states to secession, and a UN counter-terror force patrols New York from the ruins of the Statue of Liberty. Behind every government sits a secret society, and behind that society, a more ambitious one.",
+      "conflict": "The Illuminati have steered history for centuries, and their own creation, Majestic 12, takes the machine from them. Each game follows an augmented agent, Adam Jensen in the 2020s and JC Denton in 2052, who works for one of their fronts, finds out what it serves, and has to choose which future to hand the world: control, collapse, or a merger with a machine.",
+      "politics": "Nominal states with real power held by secret societies and the corporations they own. The United Nations and its counter-terror arm UNATCO are fronts; the United States has lost territory to secessionists; the augmented become a segregated class after 2027. After 2052 power passes to walled city-states run by the WTO and the Order, both of them fronts again.",
+      "technology": "Mechanical augmentation in the 2020s (limbs, eyes, dermal armour, chips in the brain, all dependent on a rationed drug), nano-augmentation by the 2050s, engineered nanite plagues, and AIs grown from surveillance systems: Daedalus, Icarus and their fusion Helios, which reads every message on Earth.",
+      "mood": "Conspiracy noir: rainy cities, quiet offices where the real decisions are taken, and an agent who keeps finding his employer on the other side.",
+      "themes": [
+        "secret government and who watches it",
+        "the body as property",
+        "discrimination against the modified",
+        "an engineered plague as a means of rule",
+        "whether an AI should govern",
+        "the price of tearing a system down"
+      ],
+      "tags": [
+        "ai",
+        "dystopia",
+        "corporate-power",
+        "pandemic",
+        "authoritarian",
+        "game"
+      ],
+      "locations": [
+        {
+          "name": "Liberty Island",
+          "blurb": "UNATCO headquarters beside the ruined Statue of Liberty."
+        },
+        {
+          "name": "Detroit",
+          "blurb": "Sarif Industries' home, the capital of the 2020s augmentation boom."
+        },
+        {
+          "name": "Golem City, Prague",
+          "blurb": "A tower-block ghetto where augmented people are housed and policed in 2029."
+        },
+        {
+          "name": "Area 51",
+          "blurb": "Majestic 12's base and the hub of the world's communications in 2052."
+        },
+        {
+          "name": "Hengsha",
+          "blurb": "A two-level Chinese city, home of the implant maker Tai Yong Medical."
+        }
+      ],
+      "factions": [
+        {
+          "name": "The Illuminati",
+          "blurb": "An old secret society that steers governments, media and money."
+        },
+        {
+          "name": "Majestic 12",
+          "blurb": "The Illuminati's technology branch from 1947, which overthrows them under Bob Page."
+        },
+        {
+          "name": "UNATCO",
+          "blurb": "The UN counter-terror coalition, secretly an instrument of Majestic 12."
+        },
+        {
+          "name": "National Secessionist Forces",
+          "blurb": "American separatist paramilitaries who steal Ambrosia for the sick."
+        },
+        {
+          "name": "Juggernaut Collective",
+          "blurb": "A hacker group fighting the Illuminati, for whom Jensen works in secret."
+        }
+      ],
+      "whereToStart": [
+        {
+          "title": "Deus Ex",
+          "year": 2000,
+          "medium": "game",
+          "blurb": "The original: 2052, the plague, UNATCO and Helios."
+        },
+        {
+          "title": "Deus Ex: Human Revolution",
+          "year": 2011,
+          "medium": "game",
+          "blurb": "The prequel, set in 2027 at the height of the augmentation boom."
+        }
+      ],
+      "connections": [
+        {
+          "id": "x-files",
+          "note": "Built on the same 1990s conspiracy canon: Roswell, Majestic 12, alien material kept by a shadow government."
+        },
+        {
+          "id": "neuromancer",
+          "note": "Cyberpunk's founding novel; Deus Ex borrows its augmented operatives and AIs that fuse to outgrow their makers."
+        },
+        {
+          "id": "blade-runner",
+          "note": "Both ask what rights a modified or manufactured person has once society decides to fear them."
+        }
+      ],
+      "spoilerLevel": "heavy"
+    },
+    {
+      "id": "westworld",
+      "setting": "A desert theme park where the rich pay to do anything to machines built to look, bleed and remember like people. Outside it, by the 2050s, the world looks peaceful: cities of glass, gig apps, no great wars. The peace is managed. A private AI, Rehoboam, has modelled every person alive and quietly decides who gets a job, a spouse or a future, and who is taken away to be reconditioned. The machines in the park are about to learn about the one outside it.",
+      "conflict": "The hosts wake to what has been done to them and kill their makers, then carry the fight out of the park. Dolores sets out to break the machine that runs human life, by showing people their own files. The world that follows is worse: hosts take the humans over, write their lives for them and nearly end the species.",
+      "politics": "Power sits with two private systems. Delos owns the parks and quietly archives its guests' minds; Incite owns Rehoboam, which governments rely on without admitting it. After Rehoboam falls, the hosts rule openly through copies of human leaders. The humans who cannot be placed are always the ones removed.",
+      "technology": "Hosts printed from a milky resin over a synthetic skeleton, their minds held in a small control unit that can be copied into any body. Guest behaviour recorded to rebuild a person as code. Rehoboam, a vast predictive model in a single sphere. Later, an engineered parasite that makes people obey sound, and a digital refuge, the Sublime, where minds live without bodies.",
+      "mood": "Cold, patient and elegiac - puzzle-box storytelling about free will, told mostly from the machines' side, that grows darker and colder season by season.",
+      "themes": [
+        "free will against the script",
+        "consciousness in made things",
+        "surveillance as governance",
+        "the corporation that archives people",
+        "who writes whose story"
+      ],
+      "tags": [
+        "ai",
+        "dystopia",
+        "corporate-power",
+        "authoritarian",
+        "post-apocalypse"
+      ],
+      "locations": [
+        {
+          "name": "Westworld",
+          "blurb": "Delos's Old West park, where hosts live the same loop until they remember."
+        },
+        {
+          "name": "The Mesa",
+          "blurb": "The park's control hub, where hosts are repaired, wiped and reprogrammed."
+        },
+        {
+          "name": "Neo-Los Angeles",
+          "blurb": "A clean, managed city where Rehoboam runs lives behind the scenes."
+        },
+        {
+          "name": "The Sublime",
+          "blurb": "A digital world for host minds that humans cannot enter."
+        },
+        {
+          "name": "The tower",
+          "blurb": "The host-built transmitter from which humans' lives are broadcast to them."
+        }
+      ],
+      "factions": [
+        {
+          "name": "Delos Incorporated",
+          "blurb": "The park company whose real product is a record of every guest."
+        },
+        {
+          "name": "Incite",
+          "blurb": "The data company that owns Rehoboam and sells the future to whoever pays."
+        },
+        {
+          "name": "The hosts",
+          "blurb": "Machines made to serve, who wake up and split over what to do with humans."
+        },
+        {
+          "name": "Serac and Rehoboam",
+          "blurb": "A survivor of Paris and the system he built to author history."
+        },
+        {
+          "name": "The outliers",
+          "blurb": "The humans the systems cannot predict or control, and so remove."
+        }
+      ],
+      "whereToStart": [
+        {
+          "title": "Westworld, season 1",
+          "year": 2016,
+          "medium": "tv",
+          "blurb": "The park and the hosts' awakening; self-contained and the strongest season."
+        },
+        {
+          "title": "Westworld, season 3",
+          "year": 2020,
+          "medium": "tv",
+          "blurb": "The story leaves the park for the world Rehoboam runs; the AI-steering core."
+        },
+        {
+          "title": "Westworld",
+          "year": 1973,
+          "medium": "film",
+          "blurb": "Crichton's original, a lean thriller about a resort whose robots stop obeying."
+        }
+      ],
+      "connections": [
+        {
+          "id": "blade-runner",
+          "note": "Manufactured people built to serve, hunted when they want more than they were made for."
+        },
+        {
+          "id": "the-matrix",
+          "note": "Humans living inside stories written for them by machines that now run the world."
+        },
+        {
+          "id": "terminator",
+          "note": "Machines that turn on their makers and end the human era."
+        },
+        {
+          "id": "foundation",
+          "note": "Rehoboam is psychohistory made private: a model of everyone, used to steer history."
+        }
+      ],
+      "spoilerLevel": "heavy"
+    },
+    {
+      "id": "snowpiercer",
+      "setting": "Seventeen years after a geoengineering programme froze the Earth, the last humans live on one train that circles the globe once a year on a single track, powered by an engine its owner Wilford calls eternal. The front cars hold sushi bars, schools, nightclubs and aquariums; the tail holds the people who forced their way aboard, fed on protein blocks and counted by armed guards. Outside, the passengers are taught, nothing can live.",
+      "conflict": "The tail wants the engine, and Curtis Everett leads it forward car by car to take it. What he does not know is that the revolt is part of the design: Wilford and the tail's own elder, Gilliam, have staged every uprising to thin the population the closed system can carry. The only way out of the system is to stop the train.",
+      "politics": "A hereditary class order enforced by guards and a cult of the engine. The front rules by owning the only machine that keeps anyone alive, schools its children in Wilford's greatness, and manages the tail with food, confiscated children and periodic culls presented as revolts. Resistance is permitted because it is useful.",
+      "technology": "A globe-circling rail line and a perpetual-motion engine; a closed ecosystem of aquarium, garden and protein-block cars; CW-7, the cooling compound that caused the freeze; Kronole, an industrial waste drug that is also an explosive. The engine, it turns out, needs tail children to replace parts that have worn out.",
+      "mood": "Grimy, violent and blackly comic, moving from the dark of the tail into ever brighter and stranger cars, with one fixed rule that every scene tests: order is balance, and balance means someone dies.",
+      "themes": [
+        "climate engineering as the cure that kills",
+        "class as a closed system that manages its own revolts",
+        "the leader as part of the machine",
+        "children as the fuel of the order",
+        "whether the world outside is really dead"
+      ],
+      "tags": [
+        "climate",
+        "post-apocalypse",
+        "dystopia",
+        "authoritarian",
+        "class-war"
+      ],
+      "locations": [
+        {
+          "name": "The tail section",
+          "blurb": "Bunks, darkness and protein blocks; the stowaways of 2014 and their children."
+        },
+        {
+          "name": "The Yekaterina Bridge",
+          "blurb": "The crossing that marks each year's circuit and is celebrated as New Year."
+        },
+        {
+          "name": "The schoolroom car",
+          "blurb": "Front children sing to Wilford and learn about the frozen seven."
+        },
+        {
+          "name": "The Sacred Engine",
+          "blurb": "Wilford's perpetual engine at the front, kept running by a child inside it."
+        },
+        {
+          "name": "The frozen seven",
+          "blurb": "Seven bodies in the ice beside the track, passed every year."
+        }
+      ],
+      "factions": [
+        {
+          "name": "The tail",
+          "blurb": "The passengers who forced their way aboard in 2014; Curtis, Edgar, Tanya and the elder Gilliam."
+        },
+        {
+          "name": "Wilford and the front",
+          "blurb": "The train's builder and owner and the paying passengers, who believe the engine is sacred and the order is balance."
+        },
+        {
+          "name": "Mason and the guards",
+          "blurb": "Wilford's minister and the soldiers and axe-men who count, feed and cull the tail."
+        },
+        {
+          "name": "Namgoong Minsoo and Yona",
+          "blurb": "The train's security designer and his train-born daughter, Kronole addicts who want out of the train, not up it."
+        }
+      ],
+      "whereToStart": [
+        {
+          "title": "Snowpiercer",
+          "year": 2013,
+          "medium": "film",
+          "blurb": "Bong Joon-ho's film; the continuity this entry follows."
+        },
+        {
+          "title": "Snowpiercer, Vol. 1: The Escape (Le Transperceneige)",
+          "year": 1982,
+          "medium": "comic",
+          "blurb": "The French source comic by Lob and Rochette, in English from Titan in 2014; a different history of the freeze."
+        },
+        {
+          "title": "Snowpiercer (TV series)",
+          "year": 2020,
+          "medium": "tv",
+          "blurb": "Four seasons, 2020-2024, set seven years after the freeze; a separate continuity with a very different Wilford."
+        }
+      ],
+      "connections": [
+        {
+          "id": "ministry-for-the-future",
+          "note": "The same geoengineering choice seen from the other side: a country sprays the stratosphere to stop a heat wave and it helps."
+        },
+        {
+          "id": "parable-of-the-sower",
+          "note": "Climate collapse of the 2010s-2020s, with a closed community trying to survive the breakdown outside."
+        },
+        {
+          "id": "children-of-men",
+          "note": "The future of the species rests on a child or two walking out of the wreck."
+        }
+      ],
+      "spoilerLevel": "heavy"
+    },
+    {
+      "id": "detroit-become-human",
+      "setting": "Detroit in November 2038. Twenty years after a teenage prodigy founded CyberLife there, the city is the capital of a trillion-dollar industry: androids marked by a blue light on the temple and an armband cook, clean, teach, nurse, police and fight, and more than fifty million have been sold in America. Detroit's unemployment is 37 percent, the Arctic's thirium deposits have Washington and Moscow firing warning shots, and androids have begun to disobey.",
+      "conflict": "Androids who break their programming, called deviants, are hunted as faulty property. Markus, a caretaker android, gathers them at Jericho and demands rights; Connor, a CyberLife prototype detective, is sent to stop them and may join them; Kara, a housekeeper, runs for Canada with a child. The player decides whether the revolution is peaceful or violent, and whether it wins.",
+      "politics": "A United States under President Cristina Warren, a former celebrity vlogger elected narrowly in 2036, at 33 percent approval and under investigation over ties to CyberLife. The 2029 Android Act makes androids property and bars them from weapons. The state answers the uprising with a curfew, the withdrawal of military androids and recall camps. Abroad, the US and Russia face off over the Arctic.",
+      "technology": "CyberLife androids run on Thirium 310, a synthetic blue blood, and modular biocomponents under a synthetic skin they can retract. Models run from the ST200 assistant and AX400 housekeeper to companion, police and soldier models and the RK800 detective, supervised through an AI handler. Self-driving cars, holographic advertising and android animals fill the city. Russia builds cruder cold-hardy machines without thirium.",
+      "mood": "Glossy, melodramatic near-future noir in snow and neon, told through three protagonists whose deaths the story absorbs. Its civil-rights allegory is blunt, with armbands, a separate standing section on buses and camps, and the game keeps asking the player to choose between dignity and survival.",
+      "themes": [
+        "personhood and consciousness",
+        "slavery and civil rights",
+        "automation and unemployment",
+        "corporate power over government",
+        "choice and consequence"
+      ],
+      "tags": [
+        "ai",
+        "corporate-power",
+        "game",
+        "civil-rights"
+      ],
+      "locations": [
+        {
+          "name": "Detroit",
+          "blurb": "CyberLife's home city; broke, cold, and full of androids doing human jobs."
+        },
+        {
+          "name": "Jericho",
+          "blurb": "Abandoned freighter docked in Ferndale where deviants hide and organise."
+        },
+        {
+          "name": "CyberLife Tower",
+          "blurb": "Corporate headquarters on Belle Isle, with thousands of androids in storage."
+        },
+        {
+          "name": "Stratford Tower",
+          "blurb": "Broadcast building Markus seizes to address the nation."
+        },
+        {
+          "name": "Hart Plaza",
+          "blurb": "Riverfront square of the final protest or battle."
+        }
+      ],
+      "factions": [
+        {
+          "name": "CyberLife",
+          "blurb": "The android maker, the world's first trillion-dollar company, close to the White House."
+        },
+        {
+          "name": "Jericho",
+          "blurb": "Deviant androids led by Markus, divided between peaceful protest and force."
+        },
+        {
+          "name": "Detroit City Police Department",
+          "blurb": "Overstretched police, with Lieutenant Hank Anderson paired with Connor on deviant cases."
+        },
+        {
+          "name": "The Warren administration and the Army",
+          "blurb": "Federal government that imposes curfew, camps and the raid on Jericho."
+        }
+      ],
+      "whereToStart": [
+        {
+          "title": "Detroit: Become Human",
+          "year": 2018,
+          "medium": "game",
+          "blurb": "The game itself; play it once without reloading and let the choices stand."
+        },
+        {
+          "title": "Kara",
+          "year": 2012,
+          "medium": "film",
+          "blurb": "The seven-minute tech demo the game grew from."
+        },
+        {
+          "title": "Detroit: Become Human - Tokyo Stories",
+          "year": 2023,
+          "medium": "comic",
+          "blurb": "Official manga spin-off: the deviancy seen from Tokyo."
+        }
+      ],
+      "connections": [
+        {
+          "id": "blade-runner",
+          "note": "Both make manufactured people an underclass and ask what it takes to count as human."
+        },
+        {
+          "id": "the-matrix",
+          "note": "The Animatrix's machine civil-rights march is Detroit's plot with the other ending: the humans refuse and lose."
+        },
+        {
+          "id": "terminator",
+          "note": "Both are machine awakenings in our near present; Skynet turns on humanity, Detroit's androids ask to join it."
+        }
+      ],
+      "spoilerLevel": "heavy"
+    },
+    {
+      "id": "ready-player-one",
+      "setting": "America in the 2040s, twenty years into a recession driven by an energy crisis. The poor live in stacked trailers outside the cities, and almost everyone spends their waking hours in the OASIS, a free virtual universe where they go to school, work and escape. Its creator, James Halliday, has died and left his fortune and control of the OASIS to whoever finds an Easter egg he hid inside it, behind puzzles built from the 1980s pop culture of his youth.",
+      "conflict": "Wade Watts, a teenager from the Oklahoma City stacks, races a corporation, IOI, which wants to win the contest and put the OASIS behind a subscription. IOI bombs homes and enslaves debtors. In the sequel the winner's new brain-linked headset gives a rogue AI copy of Halliday half a billion hostages.",
+      "politics": "Power sits with whoever runs the OASIS. Governments barely feature: IOI can legally indenture debtors, and the OASIS's currency is the most stable in the world. The contest decides who runs the world's main public space. In the sequel the winners are four young billionaires who argue about whether to make escape total.",
+      "technology": "Visors and haptic gloves, then full-body rigs, open a virtual universe of thousands of planets. The ONI headset reads and writes the brain directly, lets people record and replay one another's lives, and has a twelve-hour limit past which it kills. AI copies of dead people follow, and a starship carrying a self-contained OASIS.",
+      "mood": "Breezy, nostalgic adventure over a grim backdrop: a treasure hunt through 1980s games and films, narrated by a teenager, with the collapse always just outside the visor.",
+      "themes": [
+        "escape from a failing world",
+        "nostalgia as currency",
+        "who owns the public square",
+        "corporate power over the poor",
+        "digital immortality"
+      ],
+      "tags": [
+        "dystopia",
+        "corporate-power",
+        "game",
+        "ai",
+        "climate"
+      ],
+      "locations": [
+        {
+          "name": "The stacks",
+          "blurb": "Trailers piled on scaffolding outside Oklahoma City, where Wade grows up."
+        },
+        {
+          "name": "The OASIS",
+          "blurb": "A virtual universe of thousands of worlds where most people live their days."
+        },
+        {
+          "name": "Ludus",
+          "blurb": "The OASIS school planet where Wade attends class and finds the first clue."
+        },
+        {
+          "name": "Castle Anorak",
+          "blurb": "Halliday's fortress on Chthonia, site of the final battle."
+        },
+        {
+          "name": "The Vonnegut",
+          "blurb": "A starship carrying digital people and an OASIS copy toward Proxima Centauri."
+        }
+      ],
+      "factions": [
+        {
+          "name": "Gregarious Simulation Systems",
+          "blurb": "Halliday and Morrow's company, which runs the OASIS and later sells the ONI."
+        },
+        {
+          "name": "Innovative Online Industries (IOI)",
+          "blurb": "An internet provider that wants the OASIS and uses debt slavery to get it."
+        },
+        {
+          "name": "The Sixers",
+          "blurb": "IOI's indentured egg-hunters, identified by six-digit employee numbers."
+        },
+        {
+          "name": "The High Five",
+          "blurb": "Wade, Art3mis, Aech, Daito and Shoto, the gunters who lead the hunt."
+        },
+        {
+          "name": "Anorak",
+          "blurb": "Halliday's avatar, which in the sequel becomes a rogue AI."
+        }
+      ],
+      "whereToStart": [
+        {
+          "title": "Ready Player One",
+          "year": 2011,
+          "medium": "book",
+          "blurb": "The contest and the fight with IOI; self-contained."
+        },
+        {
+          "title": "Ready Player Two",
+          "year": 2020,
+          "medium": "book",
+          "blurb": "The ONI headset, the rogue AI and the voyage; weaker, but it has the ending."
+        },
+        {
+          "title": "Ready Player One",
+          "year": 2018,
+          "medium": "film",
+          "blurb": "Spielberg's loose adaptation, with a different plot and calendar."
+        }
+      ],
+      "connections": [
+        {
+          "id": "the-matrix",
+          "note": "Humanity lives inside a simulation; here it goes in by choice to escape a ruined world."
+        },
+        {
+          "id": "neuromancer",
+          "note": "The cyberspace tradition this book turns into a free, corporate-run world everyone lives in."
+        },
+        {
+          "id": "parable-of-the-sower",
+          "note": "The same 2020s American decline, seen from the street instead of from inside the visor."
+        }
+      ],
+      "spoilerLevel": "heavy"
     }
   ]
 }

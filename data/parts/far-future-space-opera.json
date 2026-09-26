@@ -2695,6 +2695,634 @@
     }
    ],
    "groupingNote": "The archetype's terminal case: forty thousand years of human history whose founding rupture is not merely forgotten but suppressed - the Imperium does not know what the Dark Age of Technology was - and whose calendar is nevertheless our own. Warhammer 40,000 is the one branch here that needs no projection: Imperial dates are Anno Domini on the Gregorian calendar (year N of millennium MN is (N-1)x1000+N AD, so 999.M41 = 40,999 CE and 2025 = 025.M3), and the lore's Age of Terra explicitly includes real human history, which is why this lineage has both a T4 event (the Emperor's birth in 8,000 BC, hidden inside our prehistory) and a T3 one (the game's own publication in 1987) before its fork. Where it forks is arguable and no source names a date: some material settles the Sol System in the late 2nd/early 3rd millennium and launches sublight colony ships in the mid-to-late M3, the Dark Age of Technology's start is M15 in the 6th-edition rulebook but M21 in the 3rd-edition 'Keeper Cripias' account, and the rupture the setting remembers is Old Night in M25. I take M15, the first era boundary in the current timeline that is not our history, and record the alternatives in the divergence note. Because the fiction's beats are spaced by millennia, T2 is empty - between the game's publication and the 15th millennium the branch has no near-future events to chart - and T1 carries thirteen of the fifteen events, which is exactly what a setting whose present is the 41st millennium should look like."
+  },
+  {
+   "id": "mass-effect",
+   "title": "Mass Effect",
+   "medium": "game",
+   "creator": "BioWare (Casey Hudson, director; Drew Karpyshyn, lead writer of the first two games)",
+   "originYear": 2007,
+   "group": "far-future-space-opera",
+   "epoch": "far-future",
+   "franchiseStatus": "ongoing",
+   "divergence": {
+    "year": 2148,
+    "label": "Prothean ruins are found on Mars",
+    "delta": "Real: 2148 is 122 years away, and the real exploration of Mars's south polar deposits has found layered ice and nothing built. Fiction: a cache left by a species extinct for 50,000 years lies under Promethei Planum, and it teaches humanity faster-than-light travel within months.",
+    "inUniverse": "2148 CE (Codex; the games use the Common Era calendar)",
+    "confidence": "high",
+    "note": "The games date everything in CE, so the fiction's years are ours. Up to 2147 its Earth follows a plausible projection of ours: a Moon settlement in 2069, the first permanent Mars settlement in 2103, helium-3 from Saturn in 2137. The first thing that cannot happen in our universe is the Mars find. The timeline notes traces of element zero on Mars in 2147, a year earlier; that is the first sign of the same discovery and is folded into it. The lore also has a long fictional galactic past that no human could see: the Protheans' fall around 48,000 BCE, the Citadel Council founded in 500 BCE, the geth uprising in 1895. None of it touches Earth's record before 2148, so it is left out of the chain rather than filed as prehistory.",
+    "sources": [
+     {
+      "title": "Mass Effect Wiki: Timeline",
+      "url": "https://masseffect.fandom.com/wiki/Timeline"
+     },
+     {
+      "title": "Wikipedia: Mass Effect (video game) - set in 2183",
+      "url": "https://en.wikipedia.org/wiki/Mass_Effect_(video_game)"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "Whichever of Destroy, Control or Synthesis the player chooses, the Crucible stops the Reapers, and the Extended Cut shows the relays repaired and the species rebuilding; only the Refuse option added later lets the harvest run on, with the next cycle winning.",
+    "asOf": 2186
+   },
+   "events": [
+    {
+     "id": "me-release-2007",
+     "year": 2007,
+     "date": "2007-11-20",
+     "title": "Mass Effect is released",
+     "description": "BioWare's Mass Effect comes out on the Xbox 360, published by Microsoft Game Studios and planned from the start as the first part of a trilogy. It is the real-world origin of the branch.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Mass Effect (video game) - set in 2183",
+       "url": "https://en.wikipedia.org/wiki/Mass_Effect_(video_game)"
+      }
+     ],
+     "note": "Released 20 November 2007 (Xbox 360); Windows followed on 28 May 2008. Directed by Casey Hudson with Drew Karpyshyn as lead writer. A publication event, not an in-universe one; it sits in prehistory because the fiction's Earth is still ours in 2007.",
+     "binWhy": "A real-world release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "me-release-2012",
+     "year": 2012,
+     "date": "2012-03-06",
+     "title": "Mass Effect 3 is released",
+     "description": "The third game closes Commander Shepard's trilogy. Its ending, a choice between three uses of the Crucible, was badly received, and BioWare answered with a free Extended Cut that June.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Mass Effect 3 - set in 2186; endings and Extended Cut",
+       "url": "https://en.wikipedia.org/wiki/Mass_Effect_3"
+      }
+     ],
+     "note": "Released 6 March 2012; the Extended Cut, which expanded the ending slides and added the Refuse option, came out on 26 June 2012. A real-world publication event.",
+     "binWhy": "A real-world release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "me-mars-cache-2148",
+     "year": 2148,
+     "date": "2148",
+     "title": "A Prothean cache is found under the Martian south pole",
+     "description": "Explorers find a small cache of technology left by the Protheans, a species extinct for some fifty thousand years, deep beneath Promethei Planum on Mars. Working from it, human scientists learn mass-effect physics within months and build the first faster-than-light drives.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "2148 CE",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Mass Effect Wiki: Timeline",
+       "url": "https://masseffect.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Dated 2148 in the games' Codex and the fan wiki's timeline, which heads the year 'Humanity Discovers Mass Effect Physics'. The fiction's calendar is ours (CE), so nothing is converted. The year before, 2147, the timeline records trace amounts of element zero found on Mars, the first hint of the same discovery. The real Promethei Planum is a real region of Mars's south polar deposits; nothing has been found under it.",
+     "binWhy": "The cache is a scientific windfall: the discovery hands humanity a physics it did not have, and everything later turns on it. It is also proof that non-human intelligence existed, but the Protheans are long dead; the living first contact comes in 2157 and is binned there.",
+     "bin": "breakthrough-science",
+     "facets": {
+      "change": "no FTL → mass-effect physics from an alien cache",
+      "mechanism": "discovery",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "civilisational",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "frontier-open",
+       "isolation"
+      ],
+      "outcomes": [
+       "revelation",
+       "opening"
+      ]
+     }
+    },
+    {
+     "id": "me-charon-relay-2149",
+     "year": 2149,
+     "date": "2149",
+     "title": "Charon turns out to be a mass relay",
+     "description": "Following the Mars data, a team near Pluto finds that its moon Charon is a dormant Prothean mass relay under kilometres of ice. Once it is switched on, Jon Grissom's crew goes through it to Arcturus, 36 light-years away, and finds a network that reaches across the galaxy. The same year, the eighteen largest nations on Earth sign the Systems Alliance charter.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "2149 CE",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Mass Effect Wiki: Charon Relay",
+       "url": "https://masseffect.fandom.com/wiki/Charon_Relay"
+      },
+      {
+       "title": "Mass Effect Wiki: Timeline",
+       "url": "https://masseffect.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Both the relay and the Alliance charter are dated 2149 in the timeline. They are merged here because the atlas allows one event per year, and the relay is the moment the Alliance was formed to exploit. Real Charon is a moon of Pluto, 1,212 km across, discovered in 1978.",
+     "binWhy": "A passage to places unreachable is found and opened: one jump crosses 36 light-years.",
+     "bin": "gateway-opens",
+     "facets": {
+      "change": "one star system → a galaxy-wide relay network",
+      "mechanism": "expedition",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "frontier-open",
+       "isolation"
+      ],
+      "outcomes": [
+       "opening",
+       "colonisation",
+       "union"
+      ]
+     }
+    },
+    {
+     "id": "me-first-colonies-2152",
+     "year": 2152,
+     "date": "2152",
+     "title": "The first colonies beyond Sol are founded",
+     "description": "The Delta Pavonis Foundation, an Earth consortium, starts settling Demeter, humanity's first colony outside the Solar System. Colonies on Eden Prime and Terra Nova follow the same year, with Alliance fleets and the station at Arcturus being built to defend them.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "2152 CE",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Mass Effect Wiki: Timeline",
+       "url": "https://masseffect.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Dated 2152 in the timeline; the Alliance surveys that found Terra Nova are dated 2150 and construction at Arcturus 2151.",
+     "binWhy": "Permanent settlements are founded on new worlds.",
+     "bin": "settlement-founded",
+     "facets": {
+      "change": "Sol only → colonies on Demeter, Eden Prime and Terra Nova",
+      "mechanism": "founding",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "frontier-open",
+       "colonial-expansion"
+      ],
+      "outcomes": [
+       "colonisation",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "me-biotics-2156",
+     "year": 2156,
+     "date": "2156",
+     "title": "Children exposed to element zero show telekinetic powers",
+     "description": "Some of the children born after the 2151 element-zero accident at Singapore International Spaceport, where hundreds of people were exposed to the dust, begin to show minor telekinetic abilities. By 2158 the Alliance is tracking exposures and roughly one child in ten exposed shows biotic potential.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": "2156 CE",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Mass Effect Wiki: Timeline",
+       "url": "https://masseffect.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "The timeline gives 2151 for the Singapore accident, 2156 for the first abilities and 2158 for humans learning 'the potential of biotics'. The atlas takes 2156, when the change appears. About 30% of the exposed children in Singapore developed cancers instead.",
+     "binWhy": "Some humans are born with an ability no human had before, from exposure to an alien element.",
+     "bin": "beyond-human",
+     "facets": {
+      "change": "ordinary children → the first human biotics",
+      "mechanism": "accident",
+      "actor": "nature",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "biological",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "resource-dependency",
+       "frontier-open"
+      ],
+      "outcomes": [
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "me-first-contact-war-2157",
+     "year": 2157,
+     "date": "2157",
+     "title": "The First Contact War with the turians",
+     "description": "Turian ships catch human explorers switching on Relay 314, which Citadel law has forbidden since the Rachni Wars, and open fire. In a three-month war the turians take the colony of Shanxi and the Alliance Second Fleet takes it back; the Citadel Council then steps in, brokers peace and tells humanity that a galactic community exists.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "2157 CE; the Relay 314 Incident to the turians",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Mass Effect Wiki: First Contact War",
+       "url": "https://masseffect.fandom.com/wiki/First_Contact_War"
+      },
+      {
+       "title": "Mass Effect Wiki: Timeline",
+       "url": "https://masseffect.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Dated 2157 in the timeline; the war lasted about three months and killed 623 humans and slightly more turians. The turians call it the Relay 314 Incident and were ordered to pay reparations. An anonymous manifesto after the war calls for a 'Cerberus' to defend humanity, the origin of the Illusive Man's organisation.",
+     "binWhy": "Humanity meets a living non-human intelligence for the first time. It is also a short war, but the war lasts three months and matters because it is the meeting; the major war in this branch comes in 2186.",
+     "bin": "first-contact",
+     "facets": {
+      "change": "alone in the galaxy → one species among many, met by gunfire",
+      "mechanism": "attack",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "frontier-open",
+       "isolation",
+       "taboo"
+      ],
+      "outcomes": [
+       "contact",
+       "diplomacy",
+       "radicalisation"
+      ]
+     }
+    },
+    {
+     "id": "me-citadel-embassy-2165",
+     "year": 2165,
+     "date": "2165",
+     "title": "Humanity is given an embassy on the Citadel",
+     "description": "The Citadel Council formally recognises humanity's growing power and gives it an embassy on the Citadel, the station at the political and economic centre of the galaxy. Humans are now inside the Council's order, without a seat on the Council, and they are competing with the batarians for the Skyllian Verge.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "2165 CE",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Mass Effect Wiki: Timeline",
+       "url": "https://masseffect.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Dated 2165 in the timeline. A 2164 assassination attempt on the volus ambassador had put the bid at risk. Humanity gets a Council seat only in 2183, after the Battle of the Citadel.",
+     "binWhy": "Humanity joins the species that live under the Council's laws. It is an accession, not a founding, but it is the moment a single power enters a larger charter.",
+     "bin": "union-founded",
+     "facets": {
+      "change": "outsider species → associate of the Citadel",
+      "mechanism": "negotiation",
+      "actor": "state",
+      "position": "below",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "contact-made",
+       "frontier-open"
+      ],
+      "outcomes": [
+       "union",
+       "diplomacy",
+       "rivalry"
+      ]
+     }
+    },
+    {
+     "id": "me-skyllian-blitz-2176",
+     "year": 2176,
+     "date": "2176",
+     "title": "The Skyllian Blitz on Elysium",
+     "description": "Pirates, slavers and batarian warlords, partly paid for by batarian financiers, attack the human colony of Elysium in the Skyllian Verge. Alliance marines on leave and colonists hold the ground while the navy destroys the raiders in orbit.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": "2176 CE",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Mass Effect Wiki: Skyllian Blitz",
+       "url": "https://masseffect.fandom.com/wiki/Skyllian_Blitz"
+      },
+      {
+       "title": "Mass Effect Wiki: Timeline",
+       "url": "https://masseffect.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Dated 2176 in the timeline and the wiki's Skyllian Blitz article. In 2171 the batarians had closed their Citadel embassy over human expansion in the Verge. Shepard's 'War Hero' background places the Commander at Elysium, but the Blitz happens whichever background the player picks.",
+     "binWhy": "An armed raid on a civilian colony that is not a declared war, and it provokes the retaliation that follows.",
+     "bin": "terror-attack",
+     "facets": {
+      "change": "rivalry over the Verge → an attack on Elysium",
+      "mechanism": "attack",
+      "actor": "faction",
+      "position": "outside",
+      "scope": "local",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "rivalry",
+       "colonial-expansion",
+       "frontier-open"
+      ],
+      "outcomes": [
+       "hunt-begins",
+       "rivalry"
+      ]
+     }
+    },
+    {
+     "id": "me-torfan-2178",
+     "year": 2178,
+     "date": "2178",
+     "title": "The Alliance destroys the pirate bases on Torfan",
+     "description": "In retaliation for the Blitz, the Alliance attacks the moon of Torfan and destroys the criminal bases there, which are mostly batarian. Raids on human colonies from batarian extremists fall off afterwards.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": "2178 CE",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Mass Effect Wiki: Skyllian Blitz",
+       "url": "https://masseffect.fandom.com/wiki/Skyllian_Blitz"
+      },
+      {
+       "title": "Mass Effect Wiki: Timeline",
+       "url": "https://masseffect.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Dated 2178 in the timeline. The 'Ruthless' background puts Shepard at Torfan, where the Commander's unit took heavy losses.",
+     "binWhy": "A state attacks an armed group in its bases and breaks it.",
+     "bin": "crackdown",
+     "facets": {
+      "change": "pirate havens → destroyed bases",
+      "mechanism": "attack",
+      "actor": "state",
+      "position": "above",
+      "scope": "local",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "rivalry",
+       "street-violence"
+      ],
+      "outcomes": [
+       "suppression",
+       "rivalry"
+      ]
+     }
+    },
+    {
+     "id": "me-eden-prime-2183",
+     "year": 2183,
+     "date": "2183",
+     "title": "The geth return, and a Reaper attacks the Citadel",
+     "description": "The geth, unseen outside the Perseus Veil for almost three centuries, attack Eden Prime alongside the rogue Spectre Saren. They are following Sovereign, a living machine the size of a dreadnought and one of the Reapers, which cull advanced civilisations every 50,000 years. Sovereign and a geth fleet assault the Citadel to open the way for the other Reapers; Shepard kills Saren, the fleets destroy Sovereign, and humanity gains a seat on the Council.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "2183 CE; the Eden Prime War",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Mass Effect (video game) - set in 2183",
+       "url": "https://en.wikipedia.org/wiki/Mass_Effect_(video_game)"
+      },
+      {
+       "title": "Mass Effect Wiki: Timeline",
+       "url": "https://masseffect.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "The first game is set in 2183 (Wikipedia; timeline 'The Eden Prime War'). The geth rebelled against their quarian makers in 1895 (the Morning War), which is galactic history invisible from Earth and is left out of this chain; see the divergence note. Whether the old Council survives, and who is the human councillor, is the player's choice. A month after the battle the Normandy is destroyed and Shepard is killed, also in 2183.",
+     "binWhy": "Machines act on their own against organic life: a Reaper that has waited in dark space leads a rogue AI species into Citadel space.",
+     "bin": "machine-awakens",
+     "facets": {
+      "change": "geth behind the Veil → a Reaper leads them into Citadel space",
+      "mechanism": "attack",
+      "actor": "machine",
+      "position": "outside",
+      "scope": "civilisational",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "secrecy",
+       "existential-threat"
+      ],
+      "outcomes": [
+       "cover-up",
+       "revelation",
+       "new-order"
+      ]
+     }
+    },
+    {
+     "id": "me-collectors-2185",
+     "year": 2185,
+     "date": "2185",
+     "title": "The Collectors take whole human colonies",
+     "description": "Whole human colonies in the Terminus Systems, Freedom's Progress among them, go silent and their people vanish; Horizon is hit while Shepard is on the ground. Shepard, rebuilt by Cerberus after two years dead, finds that the Collectors are Protheans remade by the Reapers and are harvesting humans to build a human-Reaper. The team goes through the Omega 4 Relay and destroys the Collector base.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "2185 CE",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Mass Effect 2 - set in 2185",
+       "url": "https://en.wikipedia.org/wiki/Mass_Effect_2"
+      },
+      {
+       "title": "Mass Effect Wiki: Timeline",
+       "url": "https://masseffect.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "The second game is set in 2185 (Wikipedia). The Council and Alliance officially dismiss the Reaper threat throughout; Shepard works for Cerberus because nobody else will act. The Arrival DLC's destruction of the Bahak system is dated early 2186 in the timeline, so it is carried in the next event.",
+     "binWhy": "A targeted campaign of abductions against civilians, short of open war, carried out by a proxy for the Reapers.",
+     "bin": "terror-attack",
+     "facets": {
+      "change": "colonies inhabited → colonies emptied",
+      "mechanism": "attack",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "cover-up",
+       "existential-threat",
+       "frontier-open"
+      ],
+      "outcomes": [
+       "revelation",
+       "collaboration"
+      ]
+     }
+    },
+    {
+     "id": "me-reaper-invasion-2186",
+     "year": 2186,
+     "date": "2186",
+     "title": "The Reapers invade, and the Crucible is fired",
+     "description": "The Reapers invade through batarian space and attack Earth. From Prothean plans found on Mars, the galaxy's species build the Crucible, a superweapon, and dock it with the Citadel over Earth. There the Catalyst, the intelligence that made the Reapers, offers Shepard three uses of it: destroy all synthetic life with the Reapers, control the Reapers, or merge organic and synthetic life.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "2186 CE",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Mass Effect 3 - set in 2186; endings and Extended Cut",
+       "url": "https://en.wikipedia.org/wiki/Mass_Effect_3"
+      },
+      {
+       "title": "Mass Effect Wiki: Crucible",
+       "url": "https://masseffect.fandom.com/wiki/Crucible"
+      },
+      {
+       "title": "Mass Effect Wiki: Timeline",
+       "url": "https://masseffect.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "The third game is set in 2186 (Wikipedia). Early that year Shepard destroys the Alpha Relay and the Bahak system with it, killing some 300,000 batarians, to delay the invasion (Arrival DLC); the invasion comes six months later. Everything to the end of the game happens in 2186, so the invasion and the Crucible are one event. The ending is the player's choice: Destroy kills the geth and EDI, Control makes Shepard the mind of the Reapers, Synthesis rewrites every living thing, and the Extended Cut added Refuse, in which the harvest goes on. In each of the Crucible endings the energy passes through the Charon Relay and damages the relay network, which is later rebuilt.",
+     "binWhy": "A major war starts: the Reaper harvest reaches every Council species at once. decisive-victory was considered for the Crucible and rejected, because what it does is the player's choice and in Refuse nothing is won.",
+     "bin": "war-breaks-out",
+     "facets": {
+      "change": "a warned galaxy → the harvest, ended by the Crucible",
+      "mechanism": "invasion",
+      "actor": "machine",
+      "position": "outside",
+      "scope": "civilisational",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "existential-threat",
+       "cover-up",
+       "disaster-just-struck"
+      ],
+      "outcomes": [
+       "mass-death",
+       "union",
+       "turning-point"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs in far-future space opera because it is a galactic society of many species, reached through alien gateways and centred on a capital, the Citadel. Unusually for the group, its calendar is ours and its dates are close: the fork is 2148 and the trilogy ends in 2186. The chain follows the original trilogy's canon as dated by the games' Codex and the Mass Effect Wiki timeline, with the player's choices noted where they change a detail and not treated as separate branches. Andromeda (2017), whose arks leave in 2185 and arrive about six centuries later in another galaxy, is left out. Every event, including the two release dates, is T2 (2000-2299). T4, T3 and T1 are empty: the fiction's Earth matches ours until 2148, and the trilogy never goes past 2186.",
+   "sources": [
+    {
+     "title": "Wikipedia: Mass Effect (franchise)",
+     "url": "https://en.wikipedia.org/wiki/Mass_Effect"
+    },
+    {
+     "title": "Wikipedia: Mass Effect (video game) - set in 2183",
+     "url": "https://en.wikipedia.org/wiki/Mass_Effect_(video_game)"
+    },
+    {
+     "title": "Wikipedia: Mass Effect 2 - set in 2185",
+     "url": "https://en.wikipedia.org/wiki/Mass_Effect_2"
+    },
+    {
+     "title": "Wikipedia: Mass Effect 3 - set in 2186; endings and Extended Cut",
+     "url": "https://en.wikipedia.org/wiki/Mass_Effect_3"
+    },
+    {
+     "title": "Mass Effect Wiki: Timeline",
+     "url": "https://masseffect.fandom.com/wiki/Timeline"
+    }
+   ]
   }
  ]
 }

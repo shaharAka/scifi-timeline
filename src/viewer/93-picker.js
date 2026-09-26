@@ -3,11 +3,13 @@
 
    A reader arrives from a shared link, has a minute, reads a story or two, and
    maybe passes it on. So the phone is a small app with a tab bar at the bottom
-   (Today, Stories, Map, About), a slim header with a share button, and screens
+   (Today, Ranking, Stories, Map, About), a slim header with a share button, and screens
    that read top to bottom:
 
-     Today     the latest news, the stories closest to our own road, our road
-               lately as a short timeline, how the stories end, more news
+     Today     the latest news, the top candidate for which story we are in and
+               the stories close behind it, our road lately, how the stories
+               end, more news
+     Ranking   every story ranked against our road (94-ranking.js)
      Stories   every world as a card; search, filter by ending, sort
      a story   its chain of moments as a vertical timeline down to its ending,
                then the stories that walked part of the same road
@@ -18,7 +20,7 @@
      Map       the Moments map, full screen, for whoever wants the whole picture
 
    Every screen is a history entry (#stories, #world=, #kind=, #news=,
-   #beat=, #about, #map), so the phone's back button walks back through them
+   #beat=, #about, #map, #rank), so the phone's back button walks back through them
    and any screen can be linked. The canvas is not the front door here.
 
    The same screens serve the desktop (body.shell without body.phone): the
@@ -44,12 +46,6 @@ function pkThumb(id, cls){
   return '<span class="' + (cls || "pk-thumb") + ' none" aria-hidden="true" style="--tc:' + col + '"><b>' + esc(ini) + '</b></span>';
 }
 function pkBadge(st){ return '<span class="mp-badge ' + st.ending.valence + '">' + esc(st.ending.label.toLowerCase()) + '</span>'; }
-function pkOurRoad(M, n){ return mpOurQuery(M, null, n || 6); }
-function pkScores(M, q){
-  var sc = {};
-  M.strands.forEach(function(st){ sc[st.id] = q.length ? chainAlign(q, st.kinds) : { score:0, pairs:[] }; });
-  return sc;
-}
 /* the shared stretch of an alignment, in words */
 function pkShared(q, st, r){
   return r.pairs.map(function(p){ return mpLabel(st.kinds[p[1]]); }).join(" → ");
@@ -83,19 +79,27 @@ function pkEndingsBar(M, title){
 
 /* --- Today --------------------------------------------------------------------- */
 function pickerTodayHtml(M){
-  var news = mpNewsList(), q = pkOurRoad(M, 6), sc = pkScores(M, q);
+  var news = mpNewsList(), R = rkRank(M), prev = R.upto > 1 ? rkRank(M, R.upto - 1) : null;
   var html = '<header class="pk-hello"><h1>Which stories are on our road?</h1>'
     + '<p>' + M.list.length + ' science-fiction worlds, each pinned to our calendar, each walking its own chain of events to an ending. Read today’s news against them.</p></header>'
     + '<div class="pk-cols"><div class="pk-main">';
   if(news.length) html += pkNewsCard(news[0], true);
-  var near = M.strands.slice().sort(function(a, b){ return sc[b.id].score - sc[a.id].score; })
-    .filter(function(st){ return sc[st.id].pairs.length; }).slice(0, 6);
+  var top = R.rows[0];
+  if(top){
+    var nx = top.at >= 0 ? top.st.seq[top.at + 1] : null, was = prev && prev.rows[0].st !== top.st ? prev.rows[0].st : null;
+    html += '<button class="rk-card ' + top.st.ending.valence + '" data-go="rank">' + pkThumb(top.st.id, "rk-cthumb")
+      + '<span class="rk-cbody"><span class="rk-top-k">Which story are we in? · top candidate' + (was ? ', taking over from ' + esc(was.l.title) : '') + '</span>'
+      + '<span class="rk-ctitle">' + esc(top.st.l.title) + ' <b>' + rkPct(top.share) + '</b></span>'
+      + '<span class="pk-rline">' + esc(rkLine(R, top)) + (nx ? '; there, next: ' + esc(nx.e.title) : '') + '</span>'
+      + '<span class="pk-news-go">See all ' + R.rows.length + ' stories ranked →</span></span></button>';
+  }
+  var near = R.rows.slice(1, 7).filter(function(r){ return rkPairs(R, r).length; });
   if(near.length){
-    html += '<section class="pk-sec"><h3 class="pk-sh">Closest to our road</h3><div class="pk-rail">'
-      + near.map(function(st){
-        return '<button class="pk-tile" data-world="' + esc(st.id) + '">' + pkThumb(st.id, "pk-tthumb")
-          + '<span class="pk-ttitle">' + esc(st.l.title) + '</span>' + pkBadge(st)
-          + '<span class="pk-tline">shares ' + esc(pkShared(q, st, sc[st.id])) + '</span></button>';
+    html += '<section class="pk-sec"><h3 class="pk-sh">Close behind</h3><div class="pk-rail">'
+      + near.map(function(r){
+        return '<button class="pk-tile" data-world="' + esc(r.st.id) + '">' + pkThumb(r.st.id, "pk-tthumb")
+          + '<span class="pk-ttitle">' + r.rank + '. ' + esc(r.st.l.title) + ' ' + rkMove(r, prev) + '</span>' + pkBadge(r.st)
+          + '<span class="pk-tline">' + rkPct(r.share) + ' of the fit</span></button>';
       }).join("") + '</div></section>';
   }
   html += pkEndingsBar(M, "How the stories end");
@@ -120,7 +124,8 @@ function pickerTodayHtml(M){
 
 /* --- Stories ------------------------------------------------------------------- */
 function pickerListHtml(M){
-  var q = pkOurRoad(M, 6), sc = pkScores(M, q), t = M.tally;
+  var RR = rkRank(M), sc = {}, t = M.tally;
+  RR.rows.forEach(function(r){ sc[r.st.id] = { score:r.fit }; });
   var list = M.strands.slice();
   if(PK.end !== "all") list = list.filter(function(st){ return st.ending.valence === PK.end; });
   if(PK.q){
@@ -179,6 +184,9 @@ function pickerStoryHtml(st, M){
   html += '<li class="pk-endstep ' + st.ending.valence + '"><span class="pk-yr"></span><div class="pk-step"><div class="pk-step-t">'
     + esc(st.ending.label) + '</div><div class="pk-step-d">' + esc((l.ending && l.ending.why) || "") + '</div></div></li></ol>';
   html += '</div><aside class="pk-aside">';
+  var RR = rkRank(M), me = rkRankOf(RR, st.id);
+  if(me) html += '<button class="rk-mine" data-go="rank"><span class="pk-sh">Which story are we in?</span><b>#' + me.rank + ' of ' + RR.rows.length + '</b> today, with ' + rkPct(me.share) + ' of the fit'
+    + (rkPairs(RR, me).length ? '<span class="pk-small">' + esc(rkLine(RR, me)) + '</span>' : '<span class="pk-small">its road runs apart from ours lately</span>') + '</button>';
   html += '<div class="pk-endcard ' + st.ending.valence + '"><span class="pk-sh">How it ends</span><b>' + esc(st.ending.label) + '</b><p>' + esc((l.ending && l.ending.why) || "") + '</p></div>';
   html += '<div class="pk-actions"><button class="pk-btn primary" data-share="world=' + esc(l.id) + '" data-share-title="' + esc(l.title + " — Where We Are Now") + '">Share this story</button>'
     + '<button class="pk-btn" data-open-world="' + esc(l.id) + '">The world</button>'
@@ -322,7 +330,7 @@ function pickerRoute(){
   var h = (typeof location !== "undefined" && location.hash) ? decodeURIComponent(location.hash.slice(1)) : "";
   var m = /^(world|kind|news|ending|beat)=(.+)$/.exec(h);
   if(m) return { view:m[1], id:m[2] };
-  if(h === "stories" || h === "about" || h === "map" || h === "newslist") return { view:h };
+  if(h === "stories" || h === "about" || h === "map" || h === "newslist" || h === "rank") return { view:h };
   return { view:"today" };
 }
 function pickerGo(hash){
@@ -334,7 +342,7 @@ function pickerGo(hash){
 }
 function pickerTab(view){
   return view === "stories" || view === "world" ? "stories"
-       : view === "about" ? "about" : view === "map" ? "map" : "today";
+       : view === "about" ? "about" : view === "map" ? "map" : view === "rank" ? "rank" : "today";
 }
 function pickerRender(){
   var r = pickerRoute();
@@ -353,6 +361,7 @@ function pickerRender(){
   else if(r.view === "news"){ var n = mpNewsByKey(r.id); if(n){ body = pickerNewsHtml(n, M); title = "In the news"; } }
   else if(r.view === "beat"){ var e = null; (M.realEv || []).forEach(function(x){ if(x.id === r.id) e = x; }); if(e){ body = pickerBeatHtml(e, M); title = String(e.year); } }
   else if(r.view === "newslist"){ body = pickerNewsListHtml(); title = "News"; }
+  else if(r.view === "rank"){ body = pickerRankHtml(M); sub = false; title = "Ranking"; }
   else if(r.view === "stories"){ body = pickerListHtml(M); sub = false; title = "Stories"; }
   else if(r.view === "about"){ body = pickerAboutHtml(M); sub = false; title = "About"; }
   if(!body){ body = pickerTodayHtml(M); sub = false; }

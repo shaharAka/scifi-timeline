@@ -390,6 +390,13 @@ as the coarse label for headings.
 not match on. `tools/facet-match.py` does this and reports similarity, not just
 rank; anything under about 0.5 means "nothing close".
 
+On real-history events, `domain` (with the kind) also decides which THREAD of
+our road the moment sits on in the ranking (`src/viewer/94-ranking.js`):
+`military`/`political`/`social` are war and power, `technological`/`scientific`
+are machines and science, `economic`/`biological` are markets and plagues, and
+an expedition, a `cosmic` domain or a voyage, settlement, first contact or
+gateway is space.
+
 `facets` is `null` for publication and release dates. The lists in
 `data/facets.json` are closed on purpose: extend them deliberately and the
 build will reject anything else.

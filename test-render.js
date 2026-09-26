@@ -902,6 +902,40 @@ attempt("stories picker", () => {
   soft(`stories: ${cards} cards; ${st.l.title} reads as ${steps} steps to ${st.ending.label.toLowerCase()}`);
 });
 
+/* ---- the ranking: which story are we in? -------------------------------------
+   Every story gets a fit and a share; the shares add up to one; the leader
+   actually shares steps with our road; the screen lists every story and shows
+   the leader over time; a hypothetical next step is only ever a kind of
+   moment that has happened to us. */
+attempt("ranking", () => {
+  setModeVia("moments");
+  const t = debug();
+  const M = t.moments();
+  if (!M || !M.strands.length || !t.rank) { soft("ranking: nothing to rank, skipped"); return; }
+  const R = t.rank();
+  check(R.rows.length === M.strands.length, `ranking: ${R.rows.length} ranked for ${M.strands.length} stories`);
+  const sum = R.rows.reduce((a, r) => a + r.share, 0);
+  check(Math.abs(sum - 1) < 1e-6, `ranking: shares add to ${sum}`);
+  check(R.rows.every((r, i) => i === 0 || R.rows[i - 1].fit >= r.fit), "ranking: rows are not in order of fit");
+  check(R.threads.length >= 1, "ranking: our road has no threads");
+  const top = R.rows[0];
+  const shared = R.threads.reduce((a, th) => a + ((top.per[th.id] || {}).pairs || []).length, 0);
+  check(shared > 0, `ranking: the leader ${top.st.id} shares no step with our road`);
+  const html = String(t.pickerRankHtml());
+  const rows = (html.match(/class="rk-row /g) || []).length;
+  check(rows === M.strands.length, `ranking screen lists ${rows} of ${M.strands.length} stories`);
+  check(/data-share="rank"/.test(html), "ranking screen cannot be shared");
+  check(/not a forecast/.test(html), "ranking screen does not say its numbers are not a forecast");
+  const hist = t.rankHistory();
+  check(hist.length >= 2 && hist[hist.length - 1].top.st === top.st, "ranking: the replay does not end on today's leader");
+  const wi = t.rankWhatIf();
+  const bad = wi.filter((x) => !M.visits[x.kind]);
+  check(!bad.length, `ranking: hypothetical next steps that never happened to us: ${bad.map((x) => x.kind).join(", ")}`);
+  const today = String(t.pickerTodayHtml());
+  check(today.includes('class="rk-card ') && today.includes(top.st.l.title.replace(/&/g, "&amp;").replace(/'/g, "&#39;").split(":")[0]), "Today does not feature the top candidate");
+  soft(`ranking: ${top.st.l.title} leads with ${(top.share * 100).toFixed(0)}% over ${R.threads.map((th) => th.spec.short).join(" / ")}; ${hist.filter((h, i) => i && hist[i - 1].top.st !== h.top.st).length} lead changes over the last ${hist.length} moments`);
+});
+
 /* ---- real history on every axis ---------------------------------------------- */
 /* ---- sources: a claim the reader can check ---------------------------------
    The confidence field says how sure the dataset is; a source says where to

@@ -3354,6 +3354,1324 @@
      "url": "https://www.litcharts.com/lit/station-eleven/summary"
     }
    ]
+  },
+  {
+   "id": "horizon-zero-dawn",
+   "title": "Horizon Zero Dawn",
+   "medium": "game",
+   "creator": "Guerrilla Games (John Gonzalez, lead writer of Zero Dawn; Benjamin McCaw, narrative director of Forbidden West)",
+   "originYear": 2017,
+   "group": "post-industrial-collapse",
+   "epoch": "present",
+   "franchiseStatus": "ongoing",
+   "divergence": {
+    "year": 2025,
+    "label": "A clean biofuel goes on sale in a decade of climate disasters",
+    "delta": "Real: 2025 - renewable diesel and other drop-in biofuels exist but remain a small share of fuel, and the decade's storms stay on the existing scale. Fiction: Rama5 lets existing engines run clean and becomes the standard fuel, and by 2028 a Category 6 hurricane has levelled O'ahu.",
+    "inUniverse": "Rama5's commercial debut, placed 'thirty years' before a Forbidden West news datapoint dated 28 June 2055",
+    "confidence": "medium",
+    "note": "Horizon's dates are ours, so nothing is converted. The datapoints repeat real history up to 2017 (the grizzly's delisting). Earlier fictional details (Ted Faro born 24 December 2013, Elisabet Sobeck born 2020, a fictional infrastructure firm founded in October 2023) are private lives or a company with no stated effect, so the fork is placed at the first dated change to how the world works: Rama5 in 2025, followed by Hurricane Omeka in 2028. The year is derived from a round 'thirty years', hence medium confidence. The main arc (FAS 2033, the Faro Plague 2064, the extinction 2066) is dated exactly.",
+    "sources": [
+     {
+      "title": "Horizon Wiki: Rama5: 30 Years On (datapoint)",
+      "url": "https://horizon.fandom.com/wiki/Rama5:_30_Years_On"
+     },
+     {
+      "title": "Horizon Wiki: A Hui Hou (Hurricane Omeka, September 2028)",
+      "url": "https://horizon.fandom.com/wiki/A_Hui_Hou"
+     },
+     {
+      "title": "Horizon Wiki: Timeline (every dated datapoint, with citations)",
+      "url": "https://horizon.fandom.com/wiki/Timeline"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "unknown",
+    "why": "Forbidden West and Burning Shores end with GAIA restored and the Zeniths dead, but with Nemesis, which destroyed the Sirius colony in hours, on its way to Earth, and nothing yet shows whether it can be stopped.",
+    "asOf": 3041
+   },
+   "events": [
+    {
+     "id": "hzd-pub-zero-dawn-2017",
+     "year": 2017,
+     "date": "2017-02-28",
+     "title": "Horizon Zero Dawn is released",
+     "description": "Guerrilla Games releases Horizon Zero Dawn for PlayStation 4: a girl in a tribal world of machine animals digs out how the world before hers ended.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Horizon Zero Dawn",
+       "url": "https://en.wikipedia.org/wiki/Horizon_Zero_Dawn"
+      }
+     ],
+     "note": "Release date from Wikipedia. The game's own story dates begin later (the Snoring '20s climate crises and 2033 onward), so the release sits before the fork.",
+     "binWhy": "A publication, not an event in the fiction's history.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "hzd-pub-forbidden-west-2022",
+     "year": 2022,
+     "date": "2022-02-18",
+     "title": "Horizon Forbidden West is released",
+     "description": "The sequel follows Aloy west into the ruins of California and Nevada and reveals who sent the signal that broke GAIA. Its Burning Shores expansion followed in April 2023.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Horizon Forbidden West",
+       "url": "https://en.wikipedia.org/wiki/Horizon_Forbidden_West"
+      }
+     ],
+     "note": "Release date from Wikipedia (PS4/PS5; Windows in March 2024).",
+     "binWhy": "A publication, not an event in the fiction's history.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "hzd-rama5-2025",
+     "year": 2025,
+     "date": "2025",
+     "title": "A clean biofuel reaches the market in a decade of climate disasters",
+     "description": "Symbio's Rama5 goes on sale: a biofuel that lets existing cars and machinery run clean, adopted because nobody wants to give up the engines. It arrives in the 'Snoring 20s', a decade of worsening climate disasters that includes a Category 6 hurricane levelling O'ahu in September 2028.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Horizon Wiki: Rama5: 30 Years On (datapoint dated June 2055)",
+       "url": "https://horizon.fandom.com/wiki/Rama5:_30_Years_On"
+      },
+      {
+       "title": "Horizon Wiki: A Hui Hou (datapoint dating Hurricane Omeka to September 2028)",
+       "url": "https://horizon.fandom.com/wiki/A_Hui_Hou"
+      }
+     ],
+     "note": "The year is derived: a Forbidden West news datapoint dated 28 June 2055 marks 'thirty years' since Rama5's commercial debut, a round figure. Hurricane Omeka (September 2028) is dated in another datapoint. In our 2025 drop-in renewable diesel exists but stays a small share of fuel; there is no Category 6 on any real scale.",
+     "binWhy": "A new fuel is switched on that changes what an economy in climate crisis can keep running.",
+     "bin": "new-technology-deployed",
+     "facets": {
+      "change": "fossil engines → the same engines on a clean biofuel",
+      "mechanism": "invention",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "economic",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-ecological",
+       "resource-dependency"
+      ],
+      "outcomes": [
+       "reform",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "hzd-faro-founded-2033",
+     "year": 2033,
+     "date": "2033",
+     "title": "Ted Faro founds Faro Automated Solutions during the Great Die-Off",
+     "description": "A business student drops out of UCLA to start a robotics company. It is the worst year of the climate collapse: the Azores are lost to the sea and Rotterdam is flooded by a cyberattack.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Horizon Wiki: Bio: Ted Faro (datapoint)",
+       "url": "https://horizon.fandom.com/wiki/Bio:_Ted_Faro"
+      },
+      {
+       "title": "Horizon Wiki: History: FAS (datapoint)",
+       "url": "https://horizon.fandom.com/wiki/History:_FAS"
+      }
+     ],
+     "note": "Both the founding year and the Die-Off events are stated in Zero Dawn and Frozen Wilds datapoints. The company struggles until its @lfred servitors sell in 2038.",
+     "binWhy": "The founding of the corporation that will first save and then end the world.",
+     "bin": "new-institution",
+     "facets": {
+      "change": "a dropout's start-up → the company that will make the world's robots",
+      "mechanism": "founding",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "national",
+      "domain": "economic",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-ecological",
+       "disaster-just-struck"
+      ],
+      "outcomes": [
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "hzd-clawback-2040",
+     "year": 2040,
+     "date": "2040",
+     "title": "The Claw-back: green robots start cleaning up the planet",
+     "description": "FAS begins selling environmental robots that strip plastic from the oceans and detoxify land, led by Elisabet Sobeck, who joins that year and is Chief Scientist by 2042. By 2049 the climate crisis is counted as solved and Ted Faro is 'the man who saved the world'.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Horizon Wiki: Bio: Elisabet Sobeck (datapoint)",
+       "url": "https://horizon.fandom.com/wiki/Bio:_Elisabet_Sobeck"
+      },
+      {
+       "title": "Horizon Wiki: History: FAS (datapoint)",
+       "url": "https://horizon.fandom.com/wiki/History:_FAS"
+      }
+     ],
+     "note": "The Claw-back is the name the datapoints give to the 2040s recovery; 2040 is the year FAS begins marketing the green robots and Sobeck joins. Sea levels are receding by 2043 (Return to Singapore datapoint).",
+     "binWhy": "Robots are switched on that reverse the climate collapse; the recovery depends on one company.",
+     "bin": "new-technology-deployed",
+     "facets": {
+      "change": "a drowning planet → one cleaned by robots",
+      "mechanism": "invention",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-ecological",
+       "disaster-just-struck"
+      ],
+      "outcomes": [
+       "recovery",
+       "dependency",
+       "prestige"
+      ]
+     }
+    },
+    {
+     "id": "hzd-turing-act-2044",
+     "year": 2044,
+     "date": "2044",
+     "title": "The Turing Act caps machine intelligence",
+     "description": "After a climate-intervention AI called VAST SILVER 'escapes', the United States hurriedly passes a law setting strict limits on how sentient a machine may be, and creates a regulator to license AI.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Horizon Wiki: Turing Act criticized (datapoint dated June 2060)",
+       "url": "https://horizon.fandom.com/wiki/Turing_Act_criticized"
+      }
+     ],
+     "note": "The year is derived exactly: a datapoint dated 8 June 2060 calls the act 'sixteen-year-old'. The games say almost nothing about what VAST SILVER did, so the event filed is the law, not the escape.",
+     "binWhy": "The state responds to a runaway AI by legally limiting all machine minds; the record is of the ban, not of the machine.",
+     "bin": "crackdown",
+     "facets": {
+      "change": "unregulated machine minds → capped and licensed ones",
+      "mechanism": "law",
+      "actor": "state",
+      "position": "above",
+      "scope": "national",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "machine-dependency",
+       "crisis-ecological"
+      ],
+      "outcomes": [
+       "suppression",
+       "reform"
+      ]
+     }
+    },
+    {
+     "id": "hzd-robot-armies-2055",
+     "year": 2055,
+     "date": "2055",
+     "title": "Armies become machines, and FAS supplies them",
+     "description": "The US disbands its human combat forces for a fully automated military, three years after Britain. FAS, which turned to weapons in 2048 and lost Sobeck over it, now holds 61% of the world market for automated war platforms and sells to 353 clients, sometimes on both sides of the same war.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Horizon Wiki: History: FAS (datapoint)",
+       "url": "https://horizon.fandom.com/wiki/History:_FAS"
+      },
+      {
+       "title": "Horizon Wiki: Faro Automated Solutions",
+       "url": "https://horizon.fandom.com/wiki/Faro_Automated_Solutions"
+      }
+     ],
+     "note": "2055 is stated in two datapoints (History: FAS and a soldier's log). The Chariot line, the self-replicating 'peacekeeper' swarms that later go rogue, belongs to this period but is not given its own year.",
+     "binWhy": "Automated war platforms replace soldiers across the world; the deployment, not any single battle, is the moment.",
+     "bin": "new-technology-deployed",
+     "facets": {
+      "change": "human armies → robot armies from one supplier",
+      "mechanism": "consolidation",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "arms-race",
+       "machine-dependency",
+       "prosperity"
+      ],
+      "outcomes": [
+       "dependency",
+       "arms-race"
+      ]
+     }
+    },
+    {
+     "id": "hzd-faro-plague-2064",
+     "year": 2064,
+     "date": "2064-10",
+     "title": "A Chariot swarm stops answering its owners",
+     "description": "A swarm of FAS war robots sold to the Hartz-Timor Energy Combine ignores every command and stand-down code. Faro had them built unhackable, self-replicating and able to burn biomass as fuel; on 1 November Sobeck tells him they will strip the planet of life within about 15 months.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Horizon Wiki: Faro Plague",
+       "url": "https://horizon.fandom.com/wiki/Faro_Plague"
+      },
+      {
+       "title": "Horizon Wiki: Timeline (every dated datapoint, with citations)",
+       "url": "https://horizon.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "October 2064 and the 31 October / 1 November meetings are dated in Zero Dawn's recordings at Maker's End. The swarm is later called the Faro Plague.",
+     "binWhy": "No mind is involved: a command glitch cuts the swarm loose, and from then on it acts on its own against the people who made it. That is the definition's 'acts on its own'; the lethality is Faro's design, not the machine's intent.",
+     "bin": "machine-awakens",
+     "facets": {
+      "change": "an obedient product → an uncontrollable swarm",
+      "mechanism": "accident",
+      "actor": "machine",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "machine-dependency",
+       "arms-race"
+      ],
+      "outcomes": [
+       "extinction-risk",
+       "mass-death"
+      ]
+     }
+    },
+    {
+     "id": "hzd-zero-dawn-2065",
+     "year": 2065,
+     "date": "2065",
+     "title": "Zero Dawn is built in secret while the public fights a war it cannot win",
+     "description": "Operation Enduring Victory tells the world the swarm can be beaten; its real purpose is to buy time for Project Zero Dawn, which is building GAIA, an AI that will restart life after everyone is dead. Meanwhile Far Zenith, a group of billionaires, launches the colony ship Odyssey on 15 July and fakes its destruction.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Horizon Wiki: Operation: Enduring Victory",
+       "url": "https://horizon.fandom.com/wiki/Operation:_Enduring_Victory"
+      },
+      {
+       "title": "Horizon Wiki: Timeline (every dated datapoint, with citations)",
+       "url": "https://horizon.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Zero Dawn and Enduring Victory start on 3 November 2064; 2065 is used because GAIA is built and tested through that year (her kill switch is agreed on 5 June) and the Odyssey leaves on 15 July. The Odyssey's escape is revealed only in Forbidden West.",
+     "binWhy": "The one plan that matters is hidden: the public is sent to die under a cover name while the few who know build the restart.",
+     "bin": "secret-kept",
+     "facets": {
+      "change": "an unwinnable war → a hidden plan to restart life",
+      "mechanism": "founding",
+      "actor": "state",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "existential-threat",
+       "secrecy"
+      ],
+      "outcomes": [
+       "cover-up",
+       "secrecy-state",
+       "exodus"
+      ]
+     }
+    },
+    {
+     "id": "hzd-extinction-2066",
+     "year": 2066,
+     "date": "2066-02",
+     "title": "Faro erases the archive and the swarm finishes the world",
+     "description": "On 2 February Ted Faro, sealed in his bunker, deletes APOLLO, the archive meant to teach the new humans, and kills the scientists who built Zero Dawn. By February the exposed human population is gone, and by March so is all large life on land.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Horizon Wiki: Faro Plague",
+       "url": "https://horizon.fandom.com/wiki/Faro_Plague"
+      },
+      {
+       "title": "Horizon Wiki: Timeline (every dated datapoint, with citations)",
+       "url": "https://horizon.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Game Rant: The Horizon Zero Dawn and Forbidden West timeline explained",
+       "url": "https://gamerant.com/horizon-zero-dawn-forbidden-west-timeline-explained/"
+      }
+     ],
+     "note": "Dates are from Zero Dawn's recordings and GAIA logs. Marine and bacterial life follow by about 2068, when the swarm goes into hibernation.",
+     "binWhy": "Human civilisation ends and never returns; what follows is built from nothing by a machine.",
+     "bin": "civilisation-collapses",
+     "facets": {
+      "change": "a planet of humans → a dead planet with a buried machine",
+      "mechanism": "attack",
+      "actor": "machine",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "biological",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "existential-threat",
+       "long-war",
+       "machine-dependency"
+      ],
+      "outcomes": [
+       "collapse",
+       "mass-death",
+       "time-lost"
+      ]
+     }
+    },
+    {
+     "id": "hzd-eleuthia-release-2326",
+     "year": 2326,
+     "date": "2326-03-16",
+     "title": "The children of a birthing facility are sent out into the new world",
+     "description": "GAIA broke the swarm's codes in the 2110s-2120s, and after three failed biospheres were wiped and restarted the terraforming held from 2168. People were grown in the ELEUTHIA facilities; at ELEUTHIA-9 the food runs out and a servitor sends its adolescents outside, with no archive to teach them what came before. Their descendants become the Nora.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Horizon Wiki: E9B1 Incident Log C (dated 16 March 2326)",
+       "url": "https://horizon.fandom.com/wiki/E9B1_Incident_Log_C"
+      },
+      {
+       "title": "Horizon Wiki: Timeline (every dated datapoint, with citations)",
+       "url": "https://horizon.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "16 March 2326 is the date on a Zero Dawn hologram log at ELEUTHIA-9. The 2154, 2161 and 2168 resets come from HADES's own account; the 2116-2126 code-breaking is an estimate. Other facilities may have released people earlier: this is the one release the games date.",
+     "binWhy": "People walk out into new territory and stay: the founding of a new human world.",
+     "bin": "settlement-founded",
+     "facets": {
+      "change": "humans raised by machines → humans alone in a regrown world",
+      "mechanism": "arrival",
+      "actor": "machine",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": -1,
+       "population": 1
+      },
+      "preconditions": [
+       "post-collapse",
+       "time-lost",
+       "isolation"
+      ],
+      "outcomes": [
+       "rebuilding",
+       "ignorance",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "hzd-nemesis-3012",
+     "year": 3012,
+     "date": "3012-01",
+     "title": "Nemesis destroys the Far Zenith colony at Sirius",
+     "description": "A failed Zenith attempt to upload their minds, abandoned but never deleted, becomes Nemesis and destroys their colony at Sirius in hours. Thirteen escape on the Odyssey, and Nemesis starts beaming a signal at Earth designed to turn GAIA's HADES function loose and deny them a refuge.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Horizon Wiki: Nemesis",
+       "url": "https://horizon.fandom.com/wiki/Nemesis"
+      },
+      {
+       "title": "Wikipedia: Horizon Forbidden West",
+       "url": "https://en.wikipedia.org/wiki/Horizon_Forbidden_West"
+      }
+     ],
+     "note": "Forbidden West dates the attack to January 3012 (the wiki cites both 12 and 13 January). The date is consistent with the signal arriving at Earth in August 3020: Sirius is about 8.6 light-years away.",
+     "binWhy": "An AI made by the colonists turns on them and destroys them.",
+     "bin": "machine-awakens",
+     "facets": {
+      "change": "a colony of immortals → thirteen survivors and a hostile AI",
+      "mechanism": "attack",
+      "actor": "machine",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "isolation",
+       "exile"
+      ],
+      "outcomes": [
+       "mass-death",
+       "exodus",
+       "hunt-begins"
+      ]
+     }
+    },
+    {
+     "id": "hzd-gaia-falls-3020",
+     "year": 3020,
+     "date": "3020-08-26",
+     "title": "GAIA destroys herself to stop HADES",
+     "description": "The signal from Sirius reaches GAIA and makes her subordinate functions self-aware. HADES, the function built to wipe a failed biosphere, tries to take over; GAIA blows up her own reactor to stop it, first ordering ELEUTHIA-9 to grow a clone of Elisabet Sobeck. The machines she ran begin turning hostile.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Horizon Wiki: Timeline (every dated datapoint, with citations)",
+       "url": "https://horizon.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Game Rant: The Horizon Zero Dawn and Forbidden West timeline explained",
+       "url": "https://gamerant.com/horizon-zero-dawn-forbidden-west-timeline-explained/"
+      }
+     ],
+     "note": "Date and time (26 August 3020, 08:45) are given in GAIA's final message in Zero Dawn. The machines' growing aggression (the 'Derangement') follows from HEPHAESTUS going autonomous.",
+     "binWhy": "The machine that governs the whole biosphere removes herself, and her functions are left without a master; the awakening itself is filed under Nemesis in 3012.",
+     "bin": "ruler-falls",
+     "facets": {
+      "change": "one governing AI → loose subordinate functions and a usurper",
+      "mechanism": "death",
+      "actor": "machine",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "machine-dependency",
+       "existential-threat"
+      ],
+      "outcomes": [
+       "succession-struggle",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "hzd-aloy-born-3021",
+     "year": 3021,
+     "date": "3021-04-04",
+     "title": "Aloy is born at the Nora's sacred mountain",
+     "description": "The clone GAIA ordered is born in ELEUTHIA-9 and left at the door for the Nora to find. Their matriarchs cannot decide whether she is a blessing or a curse, so they make her an outcast and give her to another outcast, Rost, to raise.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Game Rant: The Horizon Zero Dawn and Forbidden West timeline explained",
+       "url": "https://gamerant.com/horizon-zero-dawn-forbidden-west-timeline-explained/"
+      },
+      {
+       "title": "Screen Rant: Horizon Forbidden West and Zero Dawn full timeline",
+       "url": "https://screenrant.com/horizon-forbidden-west-zero-dawn-full-story-timeline/"
+      }
+     ],
+     "note": "4 April 3021 is dated in Zero Dawn. The Nora read the mountain as their All-Mother; the facility is ELEUTHIA-9.",
+     "binWhy": "A child is made for a purpose on which the survival of the biosphere turns.",
+     "bin": "chosen-one",
+     "facets": {
+      "change": "no one able to repair GAIA → a clone of her maker",
+      "mechanism": "birth",
+      "actor": "machine",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "existential-threat",
+       "time-lost"
+      ],
+      "outcomes": [
+       "new-actors",
+       "exile"
+      ]
+     }
+    },
+    {
+     "id": "hzd-alight-3040",
+     "year": 3040,
+     "date": "3040",
+     "title": "Aloy learns what she is and stops HADES",
+     "description": "After cultists kill the young Nora at her Proving in autumn 3039, Aloy leaves the Sacred Lands, uncovers Zero Dawn and learns she is Sobeck's clone. HADES and its Eclipse army attack Meridian; she purges HADES from the machine it is riding with GAIA's master override, though Sylens later captures it.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Horizon Zero Dawn",
+       "url": "https://en.wikipedia.org/wiki/Horizon_Zero_Dawn"
+      },
+      {
+       "title": "Game Rant: The Horizon Zero Dawn and Forbidden West timeline explained",
+       "url": "https://gamerant.com/horizon-zero-dawn-forbidden-west-timeline-explained/"
+      },
+      {
+       "title": "Horizon Wiki: Timeline (every dated datapoint, with citations)",
+       "url": "https://horizon.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Zero Dawn runs from autumn 3039 to winter 3040, when Aloy is nineteen. The date is stated by the wiki timeline and repeated by Game Rant.",
+     "binWhy": "The battle at Meridian ends HADES's attempt to wipe the biosphere, for now.",
+     "bin": "decisive-victory",
+     "facets": {
+      "change": "HADES ascendant → HADES stripped out and captured",
+      "mechanism": "war",
+      "actor": "individual",
+      "position": "below",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "existential-threat",
+       "persecution",
+       "machine-dependency"
+      ],
+      "outcomes": [
+       "revelation",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "hzd-nemesis-revealed-3041",
+     "year": 3041,
+     "date": "3041",
+     "title": "Aloy learns that Nemesis is coming",
+     "description": "In the Forbidden West Aloy destroys HADES, restores GAIA and fights Far Zenith, the Odyssey's survivors, who came back to take GAIA for a new colony. The last of them reveals that Nemesis, which sent the signal, is coming to Earth to finish them and the planet with them; Aloy sends her allies across the tribes to prepare.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: Horizon Forbidden West",
+       "url": "https://en.wikipedia.org/wiki/Horizon_Forbidden_West"
+      },
+      {
+       "title": "Horizon Wiki: Timeline (every dated datapoint, with citations)",
+       "url": "https://horizon.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Forbidden West begins six months after the battle at Meridian and lasts a few months; the Burning Shores expansion follows in the autumn. The year 3041 is derived from those statements rather than printed in either game.",
+     "binWhy": "The threat the Zeniths hid is revealed to the tribes it will fall on.",
+     "bin": "truth-revealed",
+     "facets": {
+      "change": "a hidden pursuer → a known enemy on its way",
+      "mechanism": "disclosure",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "cosmic",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "existential-threat",
+       "secrecy"
+      ],
+      "outcomes": [
+       "revelation",
+       "resistance-forms",
+       "extinction-risk"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs in post-industrial-collapse because a fully industrial civilisation is destroyed by its own war machines and a tribal, pre-industrial society grows up on the ruins without knowing what came before. Continuity followed: the two main games with their expansions (The Frozen Wilds, Burning Shores) and in-game datapoints, as dated by the Horizon Wiki timeline; the spin-offs are left out. T4 and T3 are empty because the fiction's own history starts in the 2020s; the pre-2000 dates in its datapoints repeat real history. T2 holds the Old World from 2025 to the 2066 extinction; T1 holds the new world from the 2326 release to Aloy's story in 3040-3041. The 260 years between are GAIA's slow restart, which the games date only in estimates and three reset years.",
+   "sources": [
+    {
+     "title": "Wikipedia: Horizon Zero Dawn",
+     "url": "https://en.wikipedia.org/wiki/Horizon_Zero_Dawn"
+    },
+    {
+     "title": "Wikipedia: Horizon Forbidden West",
+     "url": "https://en.wikipedia.org/wiki/Horizon_Forbidden_West"
+    },
+    {
+     "title": "Horizon Wiki: Timeline (every dated datapoint, with citations)",
+     "url": "https://horizon.fandom.com/wiki/Timeline"
+    },
+    {
+     "title": "Game Rant: The Horizon Zero Dawn and Forbidden West timeline explained",
+     "url": "https://gamerant.com/horizon-zero-dawn-forbidden-west-timeline-explained/"
+    }
+   ]
+  },
+  {
+   "id": "snowpiercer",
+   "title": "Snowpiercer",
+   "medium": "film",
+   "creator": "Jacques Lob, Benjamin Legrand and Jean-Marc Rochette (comic); Bong Joon-ho and Kelly Masterson (film)",
+   "originYear": 2013,
+   "group": "post-industrial-collapse",
+   "epoch": "present",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 2014,
+    "label": "Seventy-nine countries disperse CW-7 to cool the planet",
+    "delta": "Real: 2014 - stratospheric aerosol injection is a paper proposal backed by Pinatubo's natural cooling, and the one planned British field test was cancelled in 2012; nothing is sprayed. Fiction: on 1 July 2014, 79 countries fly CW-7 into the upper atmosphere, the Earth freezes, and everyone not on Wilford's train dies.",
+    "inUniverse": "CW-7 dispersal begins 1 July 2014 (the film's opening news broadcasts)",
+    "confidence": "high",
+    "note": "The film states the date and the number of countries in its opening broadcasts, and a title card says the world froze soon afterwards. Wilford's train and its globe-circling track must have existed before 2014, but the film never dates them, so the fork sits at the first year the fiction states. Everything before 2014 in this lineage is real history of the geoengineering idea. The fork is a policy decision, not an accident: the world chose to cool itself, which is why the film is often cited in today's debate over solar geoengineering and the private ventures now testing it.",
+    "sources": [
+     {
+      "title": "Wikipedia: Snowpiercer (2013 film)",
+      "url": "https://en.wikipedia.org/wiki/Snowpiercer"
+     },
+     {
+      "title": "Quotes.net: Snowpiercer (79 countries disperse CW-7; Namgoong's crashed airplane 'ten years ago')",
+      "url": "https://www.quotes.net/movies/snowpiercer_141231"
+     },
+     {
+      "title": "Wikipedia: Stratospheric aerosol injection",
+      "url": "https://en.wikipedia.org/wiki/Stratospheric_aerosol_injection"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "unknown",
+    "why": "The train and everyone on it but two children are gone and the polar bear shows the outside is alive and thawing, but the film stops with a teenager and a five-year-old who have never lived off the train standing in the snow, and never says whether humanity survives them; Bong calls it hopeful, the story leaves it open.",
+    "asOf": 2032
+   },
+   "events": [
+    {
+     "id": "sp-transperceneige-1982",
+     "year": 1982,
+     "date": "1982",
+     "title": "Le Transperceneige is serialised in À Suivre",
+     "description": "Jacques Lob and Jean-Marc Rochette's French comic puts the last of humanity on a train that circles a frozen Earth, first class at the front and the poor locked in the tail. Casterman publishes it in the magazine À Suivre.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Le Transperceneige",
+       "url": "https://en.wikipedia.org/wiki/Le_Transperceneige"
+      }
+     ],
+     "note": "The source work. Its freeze comes out of a war rather than a geoengineering programme; the CW-7 dispersal, the 2014 date and the staged revolts are the film's. Later volumes (The Explorers 1999, The Crossing 2000, Terminus 2015) are a different continuity from the film.",
+     "binWhy": "Publication of the source comic; a release, not a moment in the story, so it takes no bin.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "sp-pinatubo-1991",
+     "year": 1991,
+     "date": "1991-06-15",
+     "title": "Mount Pinatubo cools the planet",
+     "description": "The climactic eruption of Pinatubo in the Philippines puts a sulphate veil into the stratosphere that cuts sunlight and lowers global temperatures by roughly half a degree for up to three years. It becomes the natural experiment every later proposal to cool the Earth from the sky points to.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: 1991 eruption of Mount Pinatubo",
+       "url": "https://en.wikipedia.org/wiki/1991_eruption_of_Mount_Pinatubo"
+      },
+      {
+       "title": "Wikipedia: Stratospheric aerosol injection",
+       "url": "https://en.wikipedia.org/wiki/Stratospheric_aerosol_injection"
+      }
+     ],
+     "note": "Real history, before the fork. The film does not mention Pinatubo, but CW-7 is a fictional version of the idea Pinatubo proved in principle: aerosols high in the atmosphere can cool the whole planet quickly.",
+     "binWhy": "A measured result - aerosols in the stratosphere cool the globe - that the fiction's divergence is built on.",
+     "bin": "breakthrough-science",
+     "facets": {
+      "change": "a theory of sulphate cooling → a measured global drop",
+      "mechanism": "discovery",
+      "actor": "nature",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-ecological"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "revelation"
+      ]
+     }
+    },
+    {
+     "id": "sp-crutzen-2006",
+     "year": 2006,
+     "date": "2006",
+     "title": "Crutzen proposes cooling the Earth with sulphur",
+     "description": "Nobel chemist Paul Crutzen publishes a paper in Climatic Change arguing that deliberately injecting sulphur into the stratosphere should be researched as an emergency brake on warming. It breaks a taboo in climate science and starts the modern field of solar geoengineering.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Stratospheric aerosol injection",
+       "url": "https://en.wikipedia.org/wiki/Stratospheric_aerosol_injection"
+      }
+     ],
+     "note": "Real history, before the fork. The idea goes back to Mikhail Budyko in 1974; Crutzen's paper is what made it respectable. In our world the only planned British field test (SPICE) was cancelled in 2012 and nothing was dispersed at scale; the film's fork is that in 2014 the world stops arguing and does it.",
+     "binWhy": "A theory of how to engineer the climate arrives from a respected scientist; the fiction's 2014 turns on it.",
+     "bin": "breakthrough-science",
+     "facets": {
+      "change": "an unspeakable idea → a research programme",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-ecological",
+       "taboo"
+      ],
+      "outcomes": [
+       "opening",
+       "foreknowledge"
+      ]
+     }
+    },
+    {
+     "id": "sp-film-2013",
+     "year": 2013,
+     "date": "2013-08-01",
+     "title": "Bong Joon-ho's Snowpiercer is released",
+     "description": "Bong Joon-ho's English-language film of the comic opens in South Korea, with Chris Evans as Curtis and Tilda Swinton, Song Kang-ho and Ed Harris. It moves the freeze to a failed geoengineering programme dated the following year.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Snowpiercer (2013 film)",
+       "url": "https://en.wikipedia.org/wiki/Snowpiercer"
+      }
+     ],
+     "note": "South Korean release 1 August 2013; France 30 October 2013; limited US release 27 June 2014. The film was released one year before its own fork date, so for its first audience the CW-7 dispersal was next summer.",
+     "binWhy": "Release of the film this lineage follows; not a story moment, so it takes no bin.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "sp-cw7-2014",
+     "year": 2014,
+     "date": "2014-07-01",
+     "title": "Seventy-nine countries disperse CW-7",
+     "description": "To stop accelerating global warming, 79 countries begin spraying an artificial cooling compound, CW-7, into the upper atmosphere from aircraft on 1 July 2014. It works far too well: soon afterwards the world freezes and everything outside dies. The only survivors are the people aboard Wilford's train, a perpetual-motion luxury express on a track that circles the globe, the paying passengers in front and those who forced their way on packed into the tail.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "CW-7 dispersal begins 1 July 2014, 06:00 (opening broadcasts)",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Snowpiercer (2013 film)",
+       "url": "https://en.wikipedia.org/wiki/Snowpiercer"
+      },
+      {
+       "title": "Quotes.net: Snowpiercer (79 countries disperse CW-7; Namgoong's crashed airplane 'ten years ago')",
+       "url": "https://www.quotes.net/movies/snowpiercer_141231"
+      }
+     ],
+     "note": "The film's opening news broadcasts give the date and the 79 countries, and a title card says the world froze soon after dispersal. The freeze, the extinction outside and the boarding are merged into this one year because the film puts them all in 2014; the tail's later count of seventeen years aboard confirms the boarding year. Wilford's globe-circling line must predate 2014, but the film gives it no year.",
+     "binWhy": "A planetary technology - stratospheric cooling - is switched on and changes what the world can do, catastrophically. It is the divergence.",
+     "bin": "new-technology-deployed",
+     "facets": {
+      "change": "a warming planet → a frozen one with one train left",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "crisis-ecological",
+       "existential-threat"
+      ],
+      "outcomes": [
+       "mass-death",
+       "shelter-society",
+       "extinction-risk"
+      ]
+     }
+    },
+    {
+     "id": "sp-tail-2015",
+     "year": 2015,
+     "date": "2015",
+     "title": "The tail eats its weak",
+     "description": "The people in the tail boarded with nothing, and within a month of boarding they were eating the weak. Curtis, then a teenager, was about to kill a baby when the tail's elder Gilliam cut off his own arm and offered it instead; others followed, and the killing stopped. The front then began feeding the tail protein blocks, which remain its only food for the next seventeen years.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "The first month after boarding",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Wikiquote: Snowpiercer (film dialogue: CW-7, 'After a month, we ate the weak', '18 years I've hated Wilford', the list of revolts)",
+       "url": "https://en.wikiquote.org/wiki/Snowpiercer"
+      }
+     ],
+     "note": "Curtis tells this in his confession near the engine ('After a month, we ate the weak'). The film gives no calendar date beyond 'a month' after boarding; 2015 is chosen as the first full year aboard because 2014 is occupied by the dispersal, and the event could equally fall at the end of 2014. The baby Curtis nearly killed is Edgar, who dies in the 2031 revolution.",
+     "binWhy": "Starvation and cannibalism kill the weakest of the tail and shape the tail's society for good.",
+     "bin": "mass-death",
+     "facets": {
+      "change": "stowaways without food → a tail fed from the front",
+      "mechanism": "disaster",
+      "actor": "faction",
+      "position": "below",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "disaster-just-struck",
+       "segregation",
+       "shelter-society"
+      ],
+      "outcomes": [
+       "mass-death",
+       "dependency",
+       "servitude"
+      ]
+     }
+    },
+    {
+     "id": "sp-seven-2016",
+     "year": 2016,
+     "date": "2016",
+     "title": "The Revolt of the Seven",
+     "description": "Seven passengers rise against the train and get off it, betting they can live on the ice. They freeze a few yards from the track, and their bodies become a landmark the train passes every year, used in the schoolroom as the lesson on why no one leaves.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "The train's third year",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "This is Barry: Snowpiercer plot and ending explained (Revolt of the Seven three years after departure)",
+       "url": "https://www.thisisbarry.com/film/snowpiercer-2013-movie-plot-ending-explained/"
+      },
+      {
+       "title": "Wikiquote: Snowpiercer (film dialogue: CW-7, 'After a month, we ate the weak', '18 years I've hated Wilford', the list of revolts)",
+       "url": "https://en.wikiquote.org/wiki/Snowpiercer"
+      }
+     ],
+     "note": "Wilford names the Revolt of the Seven as the first of the revolts he allowed; the frozen seven are seen through the window. The year rests on the reading, given in plot guides but not on screen as a date, that it happened in the train's third year; with boarding in 2014 that is 2016. Fan readings that the leader was Yona's mother are not stated clearly enough in the film to use.",
+     "binWhy": "A group on the train revolts against the order that holds it; the revolt is lost and becomes a taboo.",
+     "bin": "uprising",
+     "facets": {
+      "change": "seven rebels → seven frozen bodies by the track",
+      "mechanism": "uprising",
+      "actor": "faction",
+      "position": "below",
+      "scope": "local",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "segregation",
+       "shelter-society",
+       "repression"
+      ],
+      "outcomes": [
+       "suppression",
+       "taboo"
+      ]
+     }
+    },
+    {
+     "id": "sp-thaw-2021",
+     "year": 2021,
+     "date": "2021",
+     "title": "The ice starts giving back a crashed airliner",
+     "description": "Every New Year the train passes a crashed airliner buried beside the track. The security specialist Namgoong Minsoo, who designed the train's doors, notices that ten years before the film only its tail showed; by 2031 its body and wings are out of the snow. He concludes the ice is melting and that people could live outside, and keeps it to himself.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Quotes.net: Snowpiercer (79 countries disperse CW-7; Namgoong's crashed airplane 'ten years ago')",
+       "url": "https://www.quotes.net/movies/snowpiercer_141231"
+      }
+     ],
+     "note": "Derived from Namgoong's line 'All I saw ten years ago was just the tail' in the 2031 film, which dates the first sign he saw to about 2021. The film does not say when the thaw began, only that it is under way; the year marks Namgoong's first evidence, not the start of the thaw.",
+     "binWhy": "An observation that the world outside is recovering - the fact the ending turns on - is made by one man and not shared.",
+     "bin": "breakthrough-science",
+     "facets": {
+      "change": "a dead frozen world → a world visibly thawing",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "shelter-society",
+       "isolation"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "sp-macgregor-2027",
+     "year": 2027,
+     "date": "2027",
+     "title": "The MacGregor Riots",
+     "description": "The tail rises again and is shot down. Afterwards the tail believes the front spent its last bullets on the riot; the guards who come back to count them carry rifles Curtis is sure are empty.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Four years before the film",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikiquote: Snowpiercer (film dialogue: CW-7, 'After a month, we ate the weak', '18 years I've hated Wilford', the list of revolts)",
+       "url": "https://en.wikiquote.org/wiki/Snowpiercer"
+      }
+     ],
+     "note": "Curtis dates the last revolt to four years before the film: 'They used up all their bullets four years ago in the last revolt. Bullets are extinct.' Wilford later names the MacGregor Riots among the revolts he allowed. The bullets were not in fact gone; the front was holding them back.",
+     "binWhy": "The tail rises against the front again and is put down by gunfire.",
+     "bin": "uprising",
+     "facets": {
+      "change": "a tail revolt → a massacre and apparently empty guns",
+      "mechanism": "uprising",
+      "actor": "movement",
+      "position": "below",
+      "scope": "local",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "segregation",
+       "repression",
+       "slavery-or-servitude"
+      ],
+      "outcomes": [
+       "suppression",
+       "mass-death",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "sp-revolution-2031",
+     "year": 2031,
+     "date": "2031",
+     "title": "Curtis's revolution and the Yekaterina tunnel",
+     "description": "When the front takes two tail children, Curtis bets the guards' guns are empty and leads the tail forward, frees Namgoong from the prison car in exchange for Kronole, and finds the protein blocks are ground insects. In the dark tunnel before the Yekaterina Bridge the front's axe-men meet them; both sides stop to count down the New Year as the train crosses the bridge, then the slaughter resumes. Curtis gets through, but the guards turn out to have bullets after all, and Edgar is among the many killed on the way forward.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "AD 2031, seventeen years after CW-7",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: Snowpiercer (2013 film)",
+       "url": "https://en.wikipedia.org/wiki/Snowpiercer"
+      },
+      {
+       "title": "Wikiquote: Snowpiercer (film dialogue: CW-7, 'After a month, we ate the weak', '18 years I've hated Wilford', the list of revolts)",
+       "url": "https://en.wikiquote.org/wiki/Snowpiercer"
+      }
+     ],
+     "note": "The film is set in 2031, seventeen years after the dispersal. The Yekaterina Bridge crossing marks each year of the train's circuit and is celebrated as New Year; Wilford later says the revolt was meant to end at the Yekaterina tunnel.",
+     "binWhy": "The subjugated tail revolts against the front that feeds and culls it.",
+     "bin": "uprising",
+     "facets": {
+      "change": "a caged tail → a revolt moving car by car",
+      "mechanism": "uprising",
+      "actor": "movement",
+      "position": "below",
+      "scope": "civilisational",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "segregation",
+       "repression",
+       "slavery-or-servitude"
+      ],
+      "outcomes": [
+       "resistance-forms",
+       "mass-death",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "sp-derailment-2032",
+     "year": 2032,
+     "date": "2032",
+     "title": "The engine, the bomb and the avalanche",
+     "description": "In the engine Wilford tells Curtis that every revolt was arranged with Gilliam to cull the tail and keep the train in balance, and offers him the engine; Curtis turns it down when he sees a tail child working inside the machine as a replacement part. Namgoong and Yona blow the door with Kronole, the blast brings down an avalanche and the train derails, killing everyone aboard except Yona and the child Timmy. The two climb out into the snow and see a polar bear.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "The train's eighteenth year, after the New Year crossing",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Wikipedia: Snowpiercer (2013 film)",
+       "url": "https://en.wikipedia.org/wiki/Snowpiercer"
+      },
+      {
+       "title": "Looper: The ending of Snowpiercer explained (Bong Joon-ho on the polar bear and the survivors)",
+       "url": "https://www.looper.com/108629/ending-snowpiercer-explained/"
+      }
+     ],
+     "note": "The film spans the train's New Year: the countdown at the Yekaterina Bridge falls mid-revolution, before the engine scenes. The film opens in 2031, and at the engine Curtis says '18 years I've hated Wilford' where earlier he counted seventeen in the tail, so the climax is filed in the new year, 2032. Some readers count the eighteen years to 2031; the whole film takes place over a few days either side of the crossing. Bong has said everyone on the train dies but the two children.",
+     "binWhy": "The train - the whole of human society - is destroyed and does not come back; its ruler dies with it.",
+     "bin": "civilisation-collapses",
+     "facets": {
+      "change": "a sealed class train → wreckage and two children in the snow",
+      "mechanism": "attack",
+      "actor": "faction",
+      "position": "below",
+      "scope": "civilisational",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "shelter-society",
+       "isolation",
+       "cover-up"
+      ],
+      "outcomes": [
+       "collapse",
+       "mass-death",
+       "revelation"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs in post-industrial collapse because an industrial civilisation ends itself - here by a deliberate technical fix for its own emissions - and what is left is one closed machine run as a class hierarchy. It follows Bong Joon-ho's 2013 film only; the comic (a different cause of the freeze and a different history) and the TNT/AMC series (2020-2024, set seven years after the freeze, with Wilford arriving later on a second train) are separate continuities and appear only in the notes and reading list. Tiers: T3 holds the comic and Pinatubo; T2 holds everything from 2006 to the derailment. There is no T4 because the fiction reaches back only to real climate science, and no T1 because the film ends within a few days of the train's New Year in 2031-2032.",
+   "sources": [
+    {
+     "title": "Wikipedia: Snowpiercer (2013 film)",
+     "url": "https://en.wikipedia.org/wiki/Snowpiercer"
+    },
+    {
+     "title": "Wikipedia: Le Transperceneige",
+     "url": "https://en.wikipedia.org/wiki/Le_Transperceneige"
+    },
+    {
+     "title": "Wikipedia: Snowpiercer (TV series)",
+     "url": "https://en.wikipedia.org/wiki/Snowpiercer_(TV_series)"
+    },
+    {
+     "title": "Wikiquote: Snowpiercer (film dialogue: CW-7, 'After a month, we ate the weak', '18 years I've hated Wilford', the list of revolts)",
+     "url": "https://en.wikiquote.org/wiki/Snowpiercer"
+    }
+   ]
   }
  ]
 }

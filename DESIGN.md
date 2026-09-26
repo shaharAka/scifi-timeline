@@ -375,7 +375,7 @@ Four rules follow from that, and they are the owner's:
   720px, everything hangs off `body.phone`). A reader arrives from a link,
   has a minute, reads a story or two and maybe shares it, so the phone is a
   small app: a slim header with a share button, a tab bar at the bottom
-  (Today, Stories, Map, About), and screens that read top to bottom. *Today*
+  (Today, Ranking, Stories, Map, About), and screens that read top to bottom. *Today*
   leads with the news, then the stories closest to our road as a swipeable
   rail, our road lately as a tappable timeline, how the stories end, and more
   news. A story is a hero image, its fork, its chain as a vertical timeline to
@@ -397,6 +397,23 @@ Four rules follow from that, and they are the owner's:
   full Moments canvas with its tools and reading panel, which is where the
   canvas earns its space. The test harness has no `location`, so it keeps the
   bare canvas and its tests unchanged.
+- **Which story are we in?** (`94-ranking.js`, the Ranking tab, `#rank`).
+  Our own road is split into threads by what each moment is about (war and
+  power, machines and science, space, markets and plagues), because in four
+  years we lived a war, the machines and the Moon at once while a story walks
+  one road. Each thread's last five kinds are aligned in order against every
+  story's chain, anchored at our end (the match must end on a real match, and
+  each of our steps after it costs), with a quarter of the fit from how alike
+  the situations were by facets. A story's fit is its thread fits averaged,
+  each thread weighted by how recently it moved (half after `RK_HALF` years).
+  Fits become shares by softmax and are always labelled *a share of the fit,
+  not a forecast*. The screen: the top candidate explained (our moments beside
+  its moments, thread by thread, then what comes next there and its ending),
+  each thread's own top three, every story ranked with its move since our
+  last moment, the leader replayed after each of our last ten moments, and
+  "if the next headline is…" for next steps the leaders take that have
+  happened to us before. Today features the leader and the next six; a story
+  shows its rank. The constants at the top of the file are the argument.
 - **A shared link has a preview.** The build writes Open Graph and Twitter
   tags from `share` in `data/atlas.json`, and writes the full page to
   `index.html` too, so the site root is the atlas itself: link previews are
@@ -412,7 +429,10 @@ Four rules follow from that, and they are the owner's:
 ### Add a world
 Edit the relevant `data/parts/<archetype>.json`, following `data/SCHEMA.md`.
 Optionally add a dossier under `data/parts/worlds/`. Run
-`python3 build-data.py`. Nothing in `src/` changes: the layout, colour, side
+`python3 build-data.py`. For a world researched elsewhere (an agent, a
+contributor), `python3 tools/world-brief.py` prints the brief — the rules,
+the bins, the facet vocabularies, the ids a dossier may connect to — and
+`python3 tools/check-world.py <file>` vets the result (`--merge` adds it). Nothing in `src/` changes: the layout, colour, side
 and ordering all derive from the data.
 
 ### Add an archetype

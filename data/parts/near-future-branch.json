@@ -3533,6 +3533,3382 @@
      "url": "https://www.eckardsmuts.com/posts/ministry-for-the-future"
     }
    ]
+  },
+  {
+   "id": "cyberpunk-2077",
+   "title": "Cyberpunk 2077",
+   "medium": "game",
+   "creator": "Mike Pondsmith (R. Talsorian Games); CD Projekt Red (video game)",
+   "originYear": 1988,
+   "group": "near-future-branch",
+   "epoch": "present",
+   "franchiseStatus": "ongoing",
+   "divergence": {
+    "year": 1990,
+    "label": "The Gang of Four takes the United States to war in Central America",
+    "delta": "Real: 1990, a year after the Berlin Wall fell, with the Panama invasion over in weeks and the Soviet Union a year from dissolving. Fiction: four US intelligence and police agencies secretly run the government and start a four-year war in Central America for corporate clients, and the Soviet Union reforms and survives.",
+    "inUniverse": "1990: 'The First Central American War begins' - the first entry of the Cyberpunk 2020 core rulebook timeline (p.177), kept by Cyberpunk RED and the 2077 game",
+    "confidence": "medium",
+    "note": "Wikipedia says only that the timeline diverges in the 1980s. The earliest dated departure the official books state is the 1990 war. The Gang of Four's founding is put at 1989 by an uncited wiki line, and fictional companies and people exist earlier (Arasaka from 1916, Johnny Silverhand born 1988) without changing any dated public event. So the fork is placed at 1990, where the books start their own history.",
+    "sources": [
+     {
+      "title": "Cyberpunk Wiki: Timeline",
+      "url": "https://cyberpunk.fandom.com/wiki/Timeline"
+     },
+     {
+      "title": "Cyberpunk Wiki: Gang of Four",
+      "url": "https://cyberpunk.fandom.com/wiki/Gang_of_Four"
+     },
+     {
+      "title": "Cyberpunk Wiki: First Central American War",
+      "url": "https://cyberpunk.fandom.com/wiki/First_Central_American_War"
+     },
+     {
+      "title": "Wikipedia: Cyberpunk (role-playing game)",
+      "url": "https://en.wikipedia.org/wiki/Cyberpunk_(role-playing_game)"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "In every ending of the base game V is dying or gone within months, Arasaka survives in some form and Night City is run as before; only Phantom Liberty's Tower ending saves V, and it costs V everything that made them an edgerunner.",
+    "asOf": 2077
+   },
+   "events": [
+    {
+     "id": "cp-pub-1988",
+     "year": 1988,
+     "date": "1988",
+     "title": "Cyberpunk is published",
+     "description": "R. Talsorian Games publishes Mike Pondsmith's tabletop role-playing game Cyberpunk, later called Cyberpunk 2013. Its 1990 second edition, Cyberpunk 2020, fixed the timeline that the 2077 video game still follows.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Cyberpunk (role-playing game)",
+       "url": "https://en.wikipedia.org/wiki/Cyberpunk_(role-playing_game)"
+      }
+     ],
+     "note": "Release of the first edition. The setting's own history starts two years later, when Cyberpunk 2020 rewrote the timeline and folded in real events such as German reunification.",
+     "binWhy": "A publication, not a moment in the story; it marks when the world first appeared.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "cp-drug-wars-1990",
+     "year": 1990,
+     "date": "1990",
+     "title": "The United States goes to war with the Central American cartels",
+     "description": "A secret cabal of the NSA, CIA, FBI and DEA, the Gang of Four, is already running the federal government behind the President. In 1990 it takes the country into open war in Central America under the cover of fighting drug cartels; the war lasts until 1994 and US forces are driven out.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "First Central American War begins, 1990-1994 (Cyberpunk 2020 timeline)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Cyberpunk Wiki: Timeline",
+       "url": "https://cyberpunk.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Cyberpunk Wiki: First Central American War",
+       "url": "https://cyberpunk.fandom.com/wiki/First_Central_American_War"
+      },
+      {
+       "title": "Cyberpunk Wiki: Gang of Four",
+       "url": "https://cyberpunk.fandom.com/wiki/Gang_of_Four"
+      }
+     ],
+     "note": "Dated to 1990 in the Cyberpunk 2020 core timeline (p.177). The real 1989-90 Panama invasion is close in shape, but in our history it ended in weeks; here it becomes a four-year war fought for food and raw materials on behalf of corporate clients. The Gang of Four's formation is put at 1989 only by an uncited wiki line.",
+     "binWhy": "A major war starts: the US invades Central America, which our 1990 never saw.",
+     "bin": "war-breaks-out",
+     "facets": {
+      "change": "covert cabal → open war in Central America",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "secrecy",
+       "weak-institutions"
+      ],
+      "outcomes": [
+       "war-of-expansion",
+       "attrition"
+      ]
+     }
+    },
+    {
+     "id": "cp-crash-1994",
+     "year": 1994,
+     "date": "1994",
+     "title": "The Crash of '94",
+     "description": "The European Economic Community finds that the Gang of Four has been propping up the illusion of American wealth by hacking the stock markets of Europe and Asia, and leaks it to the press. The world stock market collapses overnight and most developed countries embargo US trade.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "World Stock Market Collapse, 1994",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Cyberpunk Wiki: Timeline",
+       "url": "https://cyberpunk.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Cyberpunk Wiki: Crash of '94",
+       "url": "https://cyberpunk.fandom.com/wiki/Crash_of_%2794"
+      }
+     ],
+     "note": "Stated in the Cyberpunk 2020 timeline. The real 1994 had a bond-market rout and the Mexican peso crisis, nothing like a global crash triggered by American state fraud.",
+     "binWhy": "A financial shock throws the world economy into a prolonged crisis.",
+     "bin": "market-crash",
+     "facets": {
+      "change": "an illusion of solvency → global crash and embargo",
+      "mechanism": "disclosure",
+      "actor": "state",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "economic",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "speculation",
+       "secrecy",
+       "rivalry"
+      ],
+      "outcomes": [
+       "recession",
+       "closing-borders",
+       "collapse"
+      ]
+     }
+    },
+    {
+     "id": "cp-collapse-1996",
+     "year": 1996,
+     "date": "1996-08-17",
+     "title": "President Allen is assassinated and the Collapse begins",
+     "description": "With one American in four homeless and riots across the country, President James Richard Allen is shot at a campaign stop in California. Vice President Harold Hunt, a Gang of Four ally, takes over, and the army comes home to impose martial law and shoot-on-sight curfews.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "The Collapse of the United States (1996-2008); Allen assassinated 17 August 1996",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Cyberpunk Wiki: Timeline",
+       "url": "https://cyberpunk.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Cyberpunk Wiki: The Collapse of the United States",
+       "url": "https://cyberpunk.fandom.com/wiki/The_Collapse_of_the_United_States"
+      }
+     ],
+     "note": "The date, Saturday 17 August 1996, is given in Cyberpunk RED (p.246) and the Cyberpunk 2020 sourcebook Home of the Brave. Allen is a fictional president: in our 1996 Bill Clinton was running for re-election.",
+     "binWhy": "The president is killed and his office passes to the conspiracy.",
+     "bin": "ruler-falls",
+     "facets": {
+      "change": "an elected president → a cabal's president under martial law",
+      "mechanism": "death",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "crisis-economic",
+       "crisis-legitimacy",
+       "street-violence"
+      ],
+      "outcomes": [
+       "lockdown",
+       "suppression"
+      ]
+     }
+    },
+    {
+     "id": "cp-mideast-1997",
+     "year": 1997,
+     "date": "1997",
+     "title": "The Mideast Meltdown",
+     "description": "A limited nuclear exchange leaves most of the Middle East uninhabitable. Fallout spreads around the world and the global oil supply is cut roughly in half.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": "Mideast Meltdown, 1997",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Cyberpunk Wiki: Timeline",
+       "url": "https://cyberpunk.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Stated in the Cyberpunk 2020 timeline. The combatants are not named in the core books. No nuclear weapon has been used in war since 1945 in our history.",
+     "binWhy": "A nuclear war kills on a regional scale and changes the world's energy supply.",
+     "bin": "mass-death",
+     "facets": {
+      "change": "a region of oil states → a radioactive waste",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "resource-dependency",
+       "crisis-economic"
+      ],
+      "outcomes": [
+       "mass-death",
+       "recession",
+       "exodus"
+      ]
+     }
+    },
+    {
+     "id": "cp-free-state-2002",
+     "year": 2002,
+     "date": "2002",
+     "title": "California declares itself a Free State",
+     "description": "States have been refusing federal taxes and blockading their borders against Washington's paramilitaries. California declares itself a Free State, independent of the federal government, and others follow; by the 2010s it has itself split into North and South California.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "California becomes a Free State, 2002",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Cyberpunk Wiki: Timeline",
+       "url": "https://cyberpunk.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Cyberpunk Wiki: Free State",
+       "url": "https://cyberpunk.fandom.com/wiki/Free_State"
+      }
+     ],
+     "note": "The 2002 date is from the Night City sourcebook for Cyberpunk RED. Older Cyberpunk 2020 material places the Free States movement in the late 1990s, so the break-up is a process and this is its best-dated step.",
+     "binWhy": "The United States comes apart into self-governing states without a conqueror.",
+     "bin": "state-dissolves",
+     "facets": {
+      "change": "one union → a patchwork of Free States",
+      "mechanism": "secession",
+      "actor": "state",
+      "position": "below",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-legitimacy",
+       "repression",
+       "weak-institutions"
+      ],
+      "outcomes": [
+       "state-dissolves",
+       "independence",
+       "partition"
+      ]
+     }
+    },
+    {
+     "id": "cp-first-corp-war-2004",
+     "year": 2004,
+     "date": "2004",
+     "title": "The First Corporate War",
+     "description": "A takeover fight between Euro Business Machines and Orbital Air over Transworld Airlines turns into open combat between their private armies. It ends in 2005 when Orbital Air troops storm the EBM chief executive's compound and force a surrender, and the other corporations take note that war works.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": "First Corporate War, 2004-2005",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Cyberpunk Wiki: Timeline",
+       "url": "https://cyberpunk.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Stated in the Cyberpunk 2020 timeline and the Firestorm sourcebook. It is the first of four corporate wars before 2025.",
+     "binWhy": "Corporations start fighting each other with their own armies.",
+     "bin": "war-breaks-out",
+     "facets": {
+      "change": "boardroom rivalry → private war",
+      "mechanism": "war",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "economic",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "weak-institutions",
+       "rivalry",
+       "post-collapse"
+      ],
+      "outcomes": [
+       "new-actors",
+       "new-order"
+      ]
+     }
+    },
+    {
+     "id": "cp-silverhand-2013",
+     "year": 2013,
+     "date": "2013-04-13",
+     "title": "Johnny Silverhand's raid on Arasaka Tower",
+     "description": "Arasaka kidnaps the netrunner Alt Cunningham to force her to finish Soulkiller, a program that copies a mind into data. Her ex-partner, the rockerboy Johnny Silverhand, starts a riot and storms Arasaka's Night City tower to get her back; Alt dies, and her digital ghost is left loose in the Net.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Alt kidnapped 12 April 2013; Silverhand's riot 13 April 2013",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Cyberpunk Wiki: Timeline",
+       "url": "https://cyberpunk.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Kidnapping dated 12 April and raid 13 April 2013 in Cyberpunk 2020. Johnny is a fictional musician born in 1988, which is why the game can give him a history in our calendar.",
+     "binWhy": "A targeted assault on a corporate headquarters, short of war, that shapes the next decade.",
+     "bin": "terror-attack",
+     "facets": {
+      "change": "a kidnapped programmer → a mind loose in the Net",
+      "mechanism": "attack",
+      "actor": "individual",
+      "position": "below",
+      "scope": "local",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "persecution",
+       "secrecy"
+      ],
+      "outcomes": [
+       "radicalisation",
+       "exile"
+      ]
+     }
+    },
+    {
+     "id": "cp-pub-2020",
+     "year": 2020,
+     "date": "2020-12-10",
+     "title": "Cyberpunk 2077 is released",
+     "description": "CD Projekt Red releases Cyberpunk 2077, set in Night City in 2077, with Mike Pondsmith involved in the setting. The anime Cyberpunk: Edgerunners (2022) and the expansion Phantom Liberty (2023) follow in the same continuity.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Cyberpunk 2077",
+       "url": "https://en.wikipedia.org/wiki/Cyberpunk_2077"
+      }
+     ],
+     "note": "Release of the game this lineage is named for. In the fiction 2020 is the year of the Carbon Plague in Night City, not an event this chain uses.",
+     "binWhy": "A publication, not a moment in the story; it marks when the 2077 continuity appeared.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "cp-fourth-corp-war-2021",
+     "year": 2021,
+     "date": "2021",
+     "title": "The Fourth Corporate War begins",
+     "description": "EuroBank pushes the ocean-farming company IHAG toward bankruptcy, and two rivals fight over its assets. One hires Militech and the other Arasaka, and the fight between the two biggest arms makers in the world outgrows the dispute that started it; EuroBank's ceasefire of February 2022 does not stop them.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Fourth Corporate War, 2021/2022-2025",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Cyberpunk Wiki: Timeline",
+       "url": "https://cyberpunk.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "The Cyberpunk RED World Book has the war starting in 2021 and becoming official in 2022; the IHAG takeover fight is dated 2021 in the Firestorm sourcebook. It is placed here in 2021 to leave 2022 for the DataKrash.",
+     "binWhy": "A major war starts, between corporations with national-scale armies.",
+     "bin": "war-breaks-out",
+     "facets": {
+      "change": "a takeover fight → a world war between arms makers",
+      "mechanism": "war",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "rivalry",
+       "arms-race",
+       "weak-institutions"
+      ],
+      "outcomes": [
+       "war-of-expansion",
+       "mass-death",
+       "attrition"
+      ]
+     }
+    },
+    {
+     "id": "cp-datakrash-2022",
+     "year": 2022,
+     "date": "2022-06-03",
+     "title": "The DataKrash",
+     "description": "The hacker Rache Bartmoss is killed in a corporate raid, and a virus he planted years earlier goes off on his death. It infects 78.2% of the Net within months, corrupts data around the world and unshackles military AIs, which turn into hostile rogue programs; the old global Net is never rebuilt.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "DataKrash, 3 June 2022 (R.A.B.I.D.S. virus)",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Cyberpunk Wiki: Timeline",
+       "url": "https://cyberpunk.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Cyberpunk Wiki: DataKrash",
+       "url": "https://cyberpunk.fandom.com/wiki/DataKrash"
+      }
+     ],
+     "note": "The date, 3 June 2022, is from Cyberpunk RED (pp.239, 254-5) and the in-game shard The Undoing. In our 2022 the internet kept running; the fictional equivalent would be a single cyberweapon taking the whole network down for good.",
+     "binWhy": "The global network society depends on breaks down and does not come back.",
+     "bin": "civilisation-collapses",
+     "facets": {
+      "change": "one global Net → a ruin held by rogue AIs",
+      "mechanism": "attack",
+      "actor": "individual",
+      "position": "below",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "machine-dependency",
+       "long-war"
+      ],
+      "outcomes": [
+       "collapse",
+       "new-actors",
+       "recession"
+      ]
+     }
+    },
+    {
+     "id": "cp-nc-holocaust-2023",
+     "year": 2023,
+     "date": "2023-08-20",
+     "title": "A nuclear bomb goes off in Arasaka Tower",
+     "description": "A Militech team led by Morgan Blackhand and Johnny Silverhand breaks into Arasaka's Night City tower, and a small nuclear device detonates on an upper floor. Over half a million people die in the blast and a quarter of a million more afterwards. Johnny is caught and his mind is copied into Arasaka's archive, and the smoke of the war turns the sky red for two years.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Night City Holocaust (AHQ Disaster), 20 August 2023; the Time of the Red begins",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Cyberpunk Wiki: Timeline",
+       "url": "https://cyberpunk.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Cyberpunk Wiki: Night City Holocaust",
+       "url": "https://cyberpunk.fandom.com/wiki/Night_City_Holocaust"
+      },
+      {
+       "title": "Cyberpunk Wiki: Time of the Red",
+       "url": "https://cyberpunk.fandom.com/wiki/Time_of_the_Red"
+      }
+     ],
+     "note": "The date, 20 August 2023, is given in Cyberpunk RED and the 2077 game database. The 2077 game says Johnny died this day, which moved his death from the Cyberpunk 2020 version of events. The red skies mark the start of the Time of the Red, which lasts into the 2040s.",
+     "binWhy": "A nuclear bomb in a city kills hundreds of thousands and ends a war.",
+     "bin": "mass-death",
+     "facets": {
+      "change": "a corporate capital → a nuclear crater",
+      "mechanism": "attack",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "long-war",
+       "rivalry",
+       "secrecy"
+      ],
+      "outcomes": [
+       "mass-death",
+       "cover-up",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "cp-blackwall-2044",
+     "year": 2044,
+     "date": "2044",
+     "title": "NetWatch begins building the Blackwall",
+     "description": "Unable to take the Net back from the rogue AIs, NetWatch starts building a barrier to wall them off and seal the old access points. It is sold as a firewall; in fact it is an AI of its own, reportedly built with the help of the rogue AIs themselves, and netrunners caught on the wrong side are left to die.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Blackwall project begins, 2044",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Cyberpunk Wiki: Blackwall",
+       "url": "https://cyberpunk.fandom.com/wiki/Blackwall"
+      }
+     ],
+     "note": "Cyberpunk RED (p.264) says NetWatch secretly began the project in 2044. Other wiki text says it was finished a few years after the 2022 Krash, so the year given is the start of development, not the switch-on. NetWatch had already declared the Net inoperable in 2025.",
+     "binWhy": "A new barrier technology is built that decides who can use the Net at all.",
+     "bin": "new-technology-deployed",
+     "facets": {
+      "change": "an open ruin → a policed, walled Net",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "machine-dependency",
+       "existential-threat",
+       "post-collapse"
+      ],
+      "outcomes": [
+       "secrecy-state",
+       "closing-borders"
+      ]
+     }
+    },
+    {
+     "id": "cp-nusa-2053",
+     "year": 2053,
+     "date": "2053",
+     "title": "The New United States is constituted",
+     "description": "The rump of the United States ratifies a new constitution as the New United States of America. Elizabeth Kress, president since 2019, steps down after three decades and David Whindam is elected as the first president under it; the western Free States stay outside.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": "NUSA constitution ratified, 2053",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Cyberpunk Wiki: Timeline",
+       "url": "https://cyberpunk.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Dated in the Cyberpunk: Edgerunners Mission Kit. The fiction's United States has had no normal transfer of power since the 1990s; this is the setting's closest thing to a refounding.",
+     "binWhy": "A state is refounded under a new charter.",
+     "bin": "union-founded",
+     "facets": {
+      "change": "a wartime presidency → a new constitution",
+      "mechanism": "law",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "weak-institutions"
+      ],
+      "outcomes": [
+       "new-order",
+       "rebuilding",
+       "consolidation"
+      ]
+     }
+    },
+    {
+     "id": "cp-unification-2070",
+     "year": 2070,
+     "date": "2070-06",
+     "title": "The Treaty of Unification",
+     "description": "In January 2069 President Rosalind Myers, formerly Militech's chief executive, sends the army to bring the Free States back by force. By June 2070 the federal army has occupied most of them, but when an Arasaka supercarrier appears off Night City both sides settle: the Free States stay autonomous, Night City becomes an independent city-state, and Arasaka is allowed back into America.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Unification War, January 2069 - June 2070; Treaty of Unification (Arvin Accord)",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Cyberpunk Wiki: Unification War",
+       "url": "https://cyberpunk.fandom.com/wiki/Unification_War"
+      }
+     ],
+     "note": "War January 2069 to June 2070, treaty signed at Arvin in South California, per the 2077 game database and the Cyberpunk 2077 World Book. Texas did not sign.",
+     "binWhy": "Enemies sign a treaty that ends a war.",
+     "bin": "peace-made",
+     "facets": {
+      "change": "a war of reunification → an armed standoff",
+      "mechanism": "negotiation",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "rivalry",
+       "weak-institutions"
+      ],
+      "outcomes": [
+       "independence",
+       "stalemate",
+       "diplomacy"
+      ]
+     }
+    },
+    {
+     "id": "cp-relic-2077",
+     "year": 2077,
+     "date": "2077-05",
+     "title": "The Relic heist and the death of Saburo Arasaka",
+     "description": "The mercenary V breaks into Arasaka's Night City hotel suite to steal the Relic, a chip that stores a copy of a mind. V sees Yorinobu Arasaka kill his father Saburo, head of the company since 1960, and is shot, then brought back by the chip, which holds Johnny Silverhand and is slowly overwriting V. Yorinobu takes over Arasaka and blames Militech.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Konpeki Plaza heist, 2077 (Cyberpunk 2077 Act 1)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Cyberpunk Wiki: Timeline",
+       "url": "https://cyberpunk.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Wikipedia: Cyberpunk 2077",
+       "url": "https://en.wikipedia.org/wiki/Cyberpunk_2077"
+      }
+     ],
+     "note": "The game gives no calendar date; the wiki derives spring 2077 from Saburo's diary (days 117-121) and the Kujira's arrival on 1 May. The endings follow a few months later, in the same year.",
+     "binWhy": "The founder's son kills him and takes the company; the succession is open.",
+     "bin": "ruler-falls",
+     "facets": {
+      "change": "a hundred-year-old founder → a son who wants the company dismantled",
+      "mechanism": "death",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "rivalry",
+       "empire-at-height",
+       "secrecy"
+      ],
+      "outcomes": [
+       "succession-struggle",
+       "cover-up",
+       "hunt-begins"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs in near-future-branch because it leaves our history at a dated point in 1990, inside a recognisable United States, and every date after that is on our own calendar (1994, 2023, 2077); nothing has to be converted. It follows the single canonical timeline set out in Cyberpunk RED and Cyberpunk 2077 (R. Talsorian and CD Projekt Red), including Edgerunners and Phantom Liberty, and leaves out the retired CyberGeneration and Cyberpunk V3.0 timelines. Tier coverage is T3 for the fork and the 1990s Collapse (1988-1997) and T2 for everything from 2002 to 2077; T4 is empty because the pre-1990 background (Arasaka's 1916 founding) changes no dated public event, and T1 is empty because the story never goes past the 2070s. The game has several endings; the chain stops at 2077 and ending.valence describes what all of them share.",
+   "sources": [
+    {
+     "title": "Cyberpunk Wiki: Timeline",
+     "url": "https://cyberpunk.fandom.com/wiki/Timeline"
+    },
+    {
+     "title": "Wikipedia: Cyberpunk 2077",
+     "url": "https://en.wikipedia.org/wiki/Cyberpunk_2077"
+    },
+    {
+     "title": "Wikipedia: Cyberpunk (role-playing game)",
+     "url": "https://en.wikipedia.org/wiki/Cyberpunk_(role-playing_game)"
+    },
+    {
+     "title": "Cyberpunk Wiki: Cyberpunk 2077 Endings",
+     "url": "https://cyberpunk.fandom.com/wiki/Cyberpunk_2077_Endings"
+    }
+   ]
+  },
+  {
+   "id": "half-life",
+   "title": "Half-Life",
+   "medium": "game",
+   "creator": "Valve (story by Marc Laidlaw through Episode Two)",
+   "originYear": 1998,
+   "group": "near-future-branch",
+   "epoch": "present",
+   "franchiseStatus": "dormant",
+   "divergence": {
+    "year": 2003,
+    "label": "The Resonance Cascade at Black Mesa",
+    "delta": "Real: May 2003, the spring of the invasion of Iraq, when teleportation meant single photons moved across a laboratory bench. Fiction: a New Mexico research base has been sending survey teams to another world for years, and one experiment opens the door for good.",
+    "inUniverse": "May 16, 200- (Half-Life; the year is deliberately left incomplete)",
+    "confidence": "low",
+    "note": "Valve never finished the year: Half-Life's material prints \"200-\", and Marc Laidlaw said the vagueness was deliberate. Among 2000-2009, May 16 is a Friday only in 2003 and 2008, which fits the day-of-week evidence fans read from the calendars in Black Mesa; 2003 is taken as the best-supported and most-cited reading, and every later date in this chain is derived from it (Half-Life: Alyx at +15, Half-Life 2 at +20). Black Mesa's teleportation programme and its survey teams to Xen predate the cascade, but they are secret and undated, so the cascade is the first year the fiction stops matching our history.",
+    "sources": [
+     {
+      "title": "Combine OverWiki: Black Mesa Incident (May 16-17, 200-, from the PS2 manual)",
+      "url": "https://combineoverwiki.net/wiki/Black_Mesa_Incident"
+     },
+     {
+      "title": "Combine OverWiki: Timeline of the Half-Life and Portal universe",
+      "url": "https://combineoverwiki.net/wiki/Timeline_of_the_Half-Life_and_Portal_universe"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "unknown",
+    "why": "The Citadel is gone, the suppression field is down and the superportal is closed, but Combine forces and Advisors remain on Earth, Alyx has been taken by the G-Man, and no game since has said what comes next.",
+    "asOf": 2023
+   },
+   "events": [
+    {
+     "id": "hl-publication-1998",
+     "year": 1998,
+     "date": "1998-11-19",
+     "title": "Half-Life is released",
+     "description": "Valve releases Half-Life for Windows. It sets its own story a few years ahead of its players, in a year printed only as \"200-\", at a New Mexico research base that is working on teleportation.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Half-Life (video game)",
+       "url": "https://en.wikipedia.org/wiki/Half-Life_(video_game)"
+      }
+     ],
+     "note": "Release date from Wikipedia. The game is set in the near future relative to its release; its year is left as \"200-\".",
+     "binWhy": "A publication marker, not an event in the fiction; it takes no bin.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "hl-resonance-cascade-2003",
+     "year": 2003,
+     "date": "2003-05-16",
+     "title": "The Resonance Cascade at Black Mesa",
+     "description": "An anomalous-materials experiment at Black Mesa pushes a crystal from the alien borderworld Xen into a spectrometer run at 105% and tears a rift between worlds. Xen creatures pour into the base, the government sends Marines and then assassins to kill aliens and witnesses alike, and a physicist, Gordon Freeman, crosses to Xen and kills the Nihilanth, the being holding the rift open, before a mysterious bureaucrat, the G-Man, puts him into stasis. The base is destroyed by a nuclear device, but portal storms go on scattering Xen life across the planet.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Black Mesa Incident, May 16-17, 200- (Half-Life; PS2 manual gives May 16)",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Combine OverWiki: Black Mesa Incident (May 16-17, 200-, from the PS2 manual)",
+       "url": "https://combineoverwiki.net/wiki/Black_Mesa_Incident"
+      },
+      {
+       "title": "Combine OverWiki: Timeline of the Half-Life and Portal universe",
+       "url": "https://combineoverwiki.net/wiki/Timeline_of_the_Half-Life_and_Portal_universe"
+      },
+      {
+       "title": "Wikipedia: Half-Life (video game)",
+       "url": "https://en.wikipedia.org/wiki/Half-Life_(video_game)"
+      }
+     ],
+     "note": "The games give only \"200-\", and Valve's writer Marc Laidlaw said the vagueness was deliberate, so any year from 2000 to 2009 is possible. 2003 is chosen because May 16 is a Friday only in 2003 and 2008 among the 200- years, which fits the day-of-week evidence fans take from the Black Mesa calendars, and 2003 is the reading most often cited. With 2008 every later date in this chain moves five years later. Black Mesa's earlier survey teams to Xen are canon but undated, so the rift is where the fiction first visibly breaks from our history.",
+     "binWhy": "Humanity is physically invaded by the life of another world; this is the first confirmed contact with Xen and, through the rift, with the Combine.",
+     "bin": "first-contact",
+     "facets": {
+      "change": "a secret lab experiment → a rift to another world open over New Mexico",
+      "mechanism": "accident",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "secrecy",
+       "technological-race"
+      ],
+      "outcomes": [
+       "contact",
+       "mass-death",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "hl-occupation-2004",
+     "year": 2004,
+     "date": "2004",
+     "title": "Breen's administration and the suppression field",
+     "description": "Days after the cascade the Combine, an interdimensional empire drawn by the rift, overwhelmed Earth's armies in the Seven Hour War, and Black Mesa's administrator Wallace Breen surrendered the planet on humanity's behalf and was made its Administrator. The occupation then set its terms: a field that stops human conception, survivors moved into numbered cities, and human soldiers converted into the Combine's Overwatch.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Seven Hour War, days after the Black Mesa Incident; suppression field set up 'a short time after the war' (Half-Life 2, Half-Life: Alyx)",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Combine OverWiki: Seven Hour War (days after the incident; suppression field 'a short time after')",
+       "url": "https://combineoverwiki.net/wiki/Seven_Hour_War"
+      },
+      {
+       "title": "Combine OverWiki: Suppression field (down after Episode One)",
+       "url": "https://combineoverwiki.net/wiki/Suppression_field"
+      },
+      {
+       "title": "Combine OverWiki: Timeline of the Half-Life and Portal universe",
+       "url": "https://combineoverwiki.net/wiki/Timeline_of_the_Half-Life_and_Portal_universe"
+      }
+     ],
+     "note": "The war and surrender happened in 2003 on this chain's reckoning, days after the cascade; the atlas allows one event per year, so they are folded into the establishment of the occupation regime, dated 2004 because the wiki's reading of the games puts the suppression field 'a short time after the war' and has it running about twenty years until Episode One. Breen's broadcasts and The Times front pages seen in Half-Life: Alyx are the main in-game sources. The exact year of the field and the city relocations is not stated.",
+     "binWhy": "Earth's governments are defeated in a single day and the planet is occupied under a human collaborator installed by the conqueror.",
+     "bin": "defeat-and-occupation",
+     "facets": {
+      "change": "sovereign nations → one planet under an alien-appointed Administrator",
+      "mechanism": "invasion",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "disaster-just-struck",
+       "war-just-ended",
+       "existential-threat"
+      ],
+      "outcomes": [
+       "occupation",
+       "collaboration",
+       "suppression"
+      ]
+     }
+    },
+    {
+     "id": "hl-vault-2018",
+     "year": 2018,
+     "date": "2018-11",
+     "title": "Alyx Vance brings down the Vault and frees the G-Man",
+     "description": "In City 17, with the Citadel still under construction, Alyx Vance goes after a floating Combine vault her father believes holds a superweapon. She brings it down and breaks open the cell inside, which holds not a weapon or Gordon Freeman but the G-Man; he shows her a future in which her father dies, lets her change it, and takes her into his service in Freeman's place.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Half-Life: Alyx, five years before Half-Life 2; Alyx's sketches of the Citadel are dated November 29",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Combine OverWiki: Half-Life: Alyx (set five years before Half-Life 2)",
+       "url": "https://combineoverwiki.net/wiki/Half-Life:_Alyx"
+      },
+      {
+       "title": "Wikipedia: Half-Life: Alyx (five years before Half-Life 2)",
+       "url": "https://en.wikipedia.org/wiki/Half-Life:_Alyx"
+      },
+      {
+       "title": "Combine OverWiki: Timeline of the Half-Life and Portal universe",
+       "url": "https://combineoverwiki.net/wiki/Timeline_of_the_Half-Life_and_Portal_universe"
+      }
+     ],
+     "note": "Half-Life: Alyx is stated to be set five years before Half-Life 2, so 2023 - 5 = 2018 on this chain's reckoning (2023 if the incident is 2008). The wiki places the game on or just after November 29 because Alyx's dated notes on the Citadel's construction match its state at the start of the game.",
+     "binWhy": "An ordinary member of the Resistance is drawn out of the war she knows into the G-Man's larger game, which reaches across time.",
+     "bin": "the-call",
+     "facets": {
+      "change": "a Resistance scavenger → the G-Man's new agent",
+      "mechanism": "recruitment",
+      "actor": "individual",
+      "position": "below",
+      "scope": "local",
+      "domain": "cosmic",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "occupation",
+       "repression",
+       "secrecy"
+      ],
+      "outcomes": [
+       "new-actors",
+       "revelation",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "hl-publication-2020",
+     "year": 2020,
+     "date": "2020-03-23",
+     "title": "Half-Life: Alyx is released",
+     "description": "Valve releases Half-Life: Alyx, a virtual-reality game and the first new Half-Life story since 2007. Its ending changes how Episode Two ended.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Half-Life: Alyx (five years before Half-Life 2)",
+       "url": "https://en.wikipedia.org/wiki/Half-Life:_Alyx"
+      }
+     ],
+     "note": "Release date from Wikipedia. Half-Life 2 (2004) and its Episodes (2006, 2007) share years with this chain's own events or with the 2004 occupation entry, so this later release is the second publication marker.",
+     "binWhy": "A publication marker, not an event in the fiction; it takes no bin.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "hl-uprising-2023",
+     "year": 2023,
+     "date": "2023 (autumn)",
+     "title": "The City 17 uprising and the fall of the Citadel",
+     "description": "The G-Man returns Gordon Freeman to City 17 after about twenty years. The Resistance's destruction of the Nova Prospekt prison sets off an open uprising; Breen dies when Freeman wrecks the Citadel's reactor, the Citadel's core is left to detonate and destroys the city, and the suppression field goes down. At the White Forest base a rocket closes the superportal the Combine opened over the ruins, cutting the forces on Earth off from reinforcements, and a Combine Advisor's attack on Eli Vance is stopped by the Alyx of five years before, sent forward by the G-Man, who takes the present Alyx.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Half-Life 2, Episode One and Episode Two, 202-, 'approximately two decades' after the Black Mesa Incident, in autumn, over about two weeks",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Wikipedia: Half-Life 2 (approximately twenty years after stasis)",
+       "url": "https://en.wikipedia.org/wiki/Half-Life_2"
+      },
+      {
+       "title": "Wikipedia: Half-Life 2: Episode One",
+       "url": "https://en.wikipedia.org/wiki/Half-Life_2:_Episode_One"
+      },
+      {
+       "title": "Wikipedia: Half-Life 2: Episode Two",
+       "url": "https://en.wikipedia.org/wiki/Half-Life_2:_Episode_Two"
+      },
+      {
+       "title": "Combine OverWiki: Citadel",
+       "url": "https://combineoverwiki.net/wiki/Citadel"
+      },
+      {
+       "title": "Combine OverWiki: Suppression field (down after Episode One)",
+       "url": "https://combineoverwiki.net/wiki/Suppression_field"
+      },
+      {
+       "title": "Combine OverWiki: Timeline of the Half-Life and Portal universe",
+       "url": "https://combineoverwiki.net/wiki/Timeline_of_the_Half-Life_and_Portal_universe"
+      }
+     ],
+     "note": "Half-Life 2 is set 'approximately twenty years' after Freeman entered stasis (the Episode One website says 'nearly two decades'); 2003 + 20 = 2023. The game, both Episodes and the Half-Life: Alyx epilogue take place within about two weeks, so they are one event here. This chain follows the continuity as revised by Half-Life: Alyx: in Episode Two as released in 2007, the Advisor kills Eli Vance.",
+     "binWhy": "The occupied population rises against the Combine and its puppet government and destroys the seat of their power.",
+     "bin": "uprising",
+     "facets": {
+      "change": "a pacified City 17 → the Citadel destroyed and the superportal closed",
+      "mechanism": "uprising",
+      "actor": "movement",
+      "position": "below",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "occupation",
+       "repression"
+      ],
+      "outcomes": [
+       "turning-point",
+       "exodus",
+       "attrition"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs in the near-future branch because its fork is a laboratory accident in a world that is otherwise ours, dated only a few years after the first game's release, and everything after it follows from that one rift. The chain follows the main-series games (Half-Life, Half-Life 2 and its two Episodes, Half-Life: Alyx) with the continuity as revised by Half-Life: Alyx's epilogue; the expansions and the Portal games are left out. The chain is short because the story is: three bursts of play (a weekend in 2003, a day in 2018, two weeks in 2023), with the twenty years between them told only in passing. T3 holds only the 1998 release and T2 everything in the story; there is no T4 because the Combine's conquest of the Vortigaunts is undated 'eons', and no T1 because the story never leaves the 2020s.",
+   "sources": [
+    {
+     "title": "Wikipedia: Half-Life (series)",
+     "url": "https://en.wikipedia.org/wiki/Half-Life_(series)"
+    },
+    {
+     "title": "Combine OverWiki: Timeline of the Half-Life and Portal universe",
+     "url": "https://combineoverwiki.net/wiki/Timeline_of_the_Half-Life_and_Portal_universe"
+    },
+    {
+     "title": "Wikipedia: Half-Life (video game)",
+     "url": "https://en.wikipedia.org/wiki/Half-Life_(video_game)"
+    },
+    {
+     "title": "Wikipedia: Half-Life 2 (approximately twenty years after stasis)",
+     "url": "https://en.wikipedia.org/wiki/Half-Life_2"
+    },
+    {
+     "title": "Wikipedia: Half-Life: Alyx (five years before Half-Life 2)",
+     "url": "https://en.wikipedia.org/wiki/Half-Life:_Alyx"
+    }
+   ]
+  },
+  {
+   "id": "deus-ex",
+   "title": "Deus Ex",
+   "medium": "game",
+   "creator": "Warren Spector and Harvey Smith (Ion Storm, 2000-2003); Eidos Montreal (2011-2016)",
+   "originYear": 2000,
+   "group": "near-future-branch",
+   "epoch": "present",
+   "franchiseStatus": "dormant",
+   "divergence": {
+    "year": 1947,
+    "label": "Majestic 12 is formed to study the Roswell crash",
+    "delta": "Real: 1947 - debris near Roswell, an Army statement about a weather balloon, and nothing else; the Majestic 12 papers were forged decades later and the FBI called them bogus in 1988. Fiction: a secret panel takes charge of an alien craft and becomes the technology arm of an Illuminati that never died.",
+    "inUniverse": "Majestic 12 commissioned after the Roswell crash, 1947 (series lore)",
+    "confidence": "high",
+    "note": "The games' secret history reaches back to the Bavarian Illuminati of 1776 and the Templars, but those are real, and the Illuminati's survival after their 1785 suppression is never given a year. 1947 is the first year the series dates something that did not happen. The next dated fork, Sarif Industries in 2007, is sixty years later, and the fiction only becomes public history with the augmentation boom.",
+    "sources": [
+     {
+      "title": "Game Rant: How Deus Ex's Majestic 12 conspires to control the world (1947 panel, 2030 earthquake, 2035 takeover, Gray Death fatality rate)",
+      "url": "https://gamerant.com/deus-ex-mankind-divided-majestic-12-conspiracy-world-control-history/"
+     },
+     {
+      "title": "Wikipedia: Majestic 12 (the real-world forged documents, 1984; FBI verdict 1988)",
+      "url": "https://en.wikipedia.org/wiki/Majestic_12"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "unknown",
+    "why": "The last story in the chronology, Invisible War in 2072, leaves a world of enclaves after the Collapse with four endings (Helios union, Illuminati surveillance, Templar purge, Omar succession), and no later game picks one.",
+    "asOf": 2072
+   },
+   "events": [
+    {
+     "id": "dx-majestic-12-1947",
+     "year": 1947,
+     "date": "1947",
+     "title": "Majestic 12 is formed to hold what fell at Roswell",
+     "description": "After the Roswell crash the President appoints a secret twelve-member panel to study the recovered craft and bodies. In the series it is set up under the patronage of the Illuminati, who never died out after their 18th-century suppression, as their technology branch; it keeps its findings and grows for a century.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Majestic 12 commissioned after the Roswell crash, 1947 (series lore, repeated in Mankind Divided's backstory material)",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Game Rant: How Deus Ex's Majestic 12 conspires to control the world (1947 panel, 2030 earthquake, 2035 takeover, Gray Death fatality rate)",
+       "url": "https://gamerant.com/deus-ex-mankind-divided-majestic-12-conspiracy-world-control-history/"
+      },
+      {
+       "title": "Wikipedia: Majestic 12 (the real-world forged documents, 1984; FBI verdict 1988)",
+       "url": "https://en.wikipedia.org/wiki/Majestic_12"
+      }
+     ],
+     "note": "The year is stated in the lore. Real 1947 has the Roswell debris and an Army statement about a weather balloon; the 'Majestic 12' panel exists only in forged papers that surfaced in 1984 and that the FBI called 'completely bogus' in 1988. The games' Illuminati descend from the real Bavarian order of 1776, which was really suppressed in 1785; their survival is fictional but undated, so the fork sits at the first fictional year the games give.",
+     "binWhy": "A secret body is founded to hold alien technology; in our 1947 no such panel existed.",
+     "bin": "new-institution",
+     "facets": {
+      "change": "a crash site → a secret panel that keeps what it found",
+      "mechanism": "founding",
+      "actor": "faction",
+      "position": "above",
+      "scope": "national",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "hidden-society",
+       "secrecy",
+       "cold-war"
+      ],
+      "outcomes": [
+       "secrecy-state",
+       "cover-up",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "dx-publication-2000",
+     "year": 2000,
+     "date": "2000-06-23",
+     "title": "Deus Ex is released",
+     "description": "Ion Storm's Deus Ex, published by Eidos, comes out for Windows: a conspiracy story set in 2052 in which a nano-augmented agent finds that the plague, the terrorists and his own agency are all run by the same people.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Deus Ex (video game)",
+       "url": "https://en.wikipedia.org/wiki/Deus_Ex_(video_game)"
+      }
+     ],
+     "note": "Released 23 June 2000. It fixed the late-20th-century conspiracy canon (Illuminati, Majestic 12, Area 51, FEMA, black helicopters) as the backstory of a playable future.",
+     "binWhy": "A publication event, not a moment in the fiction; it has no bin.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "dx-sarif-2007",
+     "year": 2007,
+     "date": "2007",
+     "title": "Sarif Industries starts mass-producing prosthetics in Detroit",
+     "description": "David Sarif, a protege of the augmentation pioneer Hugh Darrow, buys a failing Detroit car plant and turns it into an automated line for advanced prosthetics. A military contract follows in 2009; over the next twenty years artificial limbs and implants become a consumer product, each one needing the anti-rejection drug Neuropozyne for life.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Sarif Industries founded, 2007 (Human Revolution corporate backstory and viral site)",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Game Rant: Sarif Industries explained (founded 2007, bankrupt 2028)",
+       "url": "https://gamerant.com/deus-ex-human-revolution-sarif-industries-explained/"
+      },
+      {
+       "title": "Wikipedia: Deus Ex: Human Revolution",
+       "url": "https://en.wikipedia.org/wiki/Deus_Ex:_Human_Revolution"
+      }
+     ],
+     "note": "The founding year comes from Human Revolution's corporate backstory. In our 2007 Detroit's car plants were failing for real, and prosthetics with direct neural control were still laboratory work; the fiction's fork is that the prosthetics industry becomes a mass market in two decades.",
+     "binWhy": "Automated production turns neural prosthetics into a mass product, starting the augmentation age.",
+     "bin": "new-technology-deployed",
+     "facets": {
+      "change": "a closed car plant → a production line for mechanical limbs",
+      "mechanism": "invention",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "national",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "technological-race",
+       "crisis-economic"
+      ],
+      "outcomes": [
+       "new-actors",
+       "dependency",
+       "gold-rush"
+      ]
+     }
+    },
+    {
+     "id": "dx-publication-2011",
+     "year": 2011,
+     "date": "2011-08-23",
+     "title": "Deus Ex: Human Revolution is released",
+     "description": "Eidos Montreal's prequel, published by Square Enix, moves the series back to 2027 and the boom years of mechanical augmentation, and builds the backstory of Sarif, Darrow and the Aug Incident that the later games depend on.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Deus Ex: Human Revolution",
+       "url": "https://en.wikipedia.org/wiki/Deus_Ex:_Human_Revolution"
+      }
+     ],
+     "note": "Released 23 August 2011 in North America. Most of the dated backstory before 2052 in this chain comes from the two Eidos Montreal prequels rather than from the 2000 game.",
+     "binWhy": "A publication event, not a moment in the fiction; it has no bin.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "dx-aug-incident-2027",
+     "year": 2027,
+     "date": "2027",
+     "title": "The Aug Incident",
+     "description": "In a year in which Sarif is attacked, its security chief Adam Jensen is rebuilt with full-body augmentations and the Illuminati move to control the new implant chips, Hugh Darrow broadcasts a signal from the Arctic facility Panchaea that drives augmented people everywhere into violent psychosis. Ordinary augmented people attack whoever is near them, and many die; Panchaea is destroyed, and whatever Jensen broadcasts is lost in the noise.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Panchaea and the Darrow signal, 2027 (Human Revolution; named the Aug Incident in Mankind Divided)",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Deus Ex: Human Revolution",
+       "url": "https://en.wikipedia.org/wiki/Deus_Ex:_Human_Revolution"
+      },
+      {
+       "title": "Wikipedia: Adam Jensen (the Aug Incident and discrimination by 2029)",
+       "url": "https://en.wikipedia.org/wiki/Adam_Jensen"
+      },
+      {
+       "title": "Wikipedia: Deus Ex (franchise)",
+       "url": "https://en.wikipedia.org/wiki/Deus_Ex"
+      }
+     ],
+     "note": "Human Revolution is set in 2027 and the Incident is its climax. The game has four endings (tell the truth, blame the Humanity Front, serve the Illuminati, destroy Panchaea); Mankind Divided follows none of them outright: Panchaea sinks in every case, Darrow's recorded confession circulates, and no single account wins, so the Illuminati's version shapes the aftermath. In our 2027 nothing of the kind has been possible.",
+     "binWhy": "One man turns an implant network into a weapon against its own users, short of war, and the world's view of augmentation flips.",
+     "bin": "terror-attack",
+     "facets": {
+      "change": "augmented citizens → people feared as weapons",
+      "mechanism": "attack",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "machine-dependency",
+       "hidden-society",
+       "rivalry"
+      ],
+      "outcomes": [
+       "mass-death",
+       "radicalisation",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "dx-mechanical-apartheid-2029",
+     "year": 2029,
+     "date": "2029",
+     "title": "Mechanical apartheid",
+     "description": "Two years after the Incident augmented people are registered, checked at separate gates and moved into ghettos such as Golem City outside Prague. The Illuminati steer the United Nations toward the Human Restoration Act, which would confine them to a purpose-built city in Oman, while the Augmented Rights Coalition turns militant and an Interpol task force hunts it.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Prague and London, 2029 (Mankind Divided)",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Deus Ex: Mankind Divided",
+       "url": "https://en.wikipedia.org/wiki/Deus_Ex:_Mankind_Divided"
+      },
+      {
+       "title": "Wikipedia: Adam Jensen (the Aug Incident and discrimination by 2029)",
+       "url": "https://en.wikipedia.org/wiki/Adam_Jensen"
+      }
+     ],
+     "note": "Mankind Divided states 2029. Whether the Act passes depends on the player's choices at the London summit, and no later game settles it, so the event is filed at the segregation the game shows in every path. The series lore also gives 2029 as the birth year of JC Denton, Paul Denton's clone; he is folded into the 2052 event.",
+     "binWhy": "Governments register, segregate and police a whole class of people.",
+     "bin": "crackdown",
+     "facets": {
+      "change": "augmented citizens → residents of walled ghettos",
+      "mechanism": "law",
+      "actor": "state",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "social",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "disaster-just-struck",
+       "segregation",
+       "persecution"
+      ],
+      "outcomes": [
+       "suppression",
+       "radicalisation",
+       "parallel-society"
+      ]
+     }
+    },
+    {
+     "id": "dx-west-coast-quake-2030",
+     "year": 2030,
+     "date": "2030",
+     "title": "The West Coast earthquake and the secessions",
+     "description": "A magnitude 8.3 earthquake wrecks San Francisco and sinks Los Angeles and much of Southern California into the sea. With Washington absorbed in the disaster, Utah secedes and annexes what is left of Arizona and Nevada, Texas separatists follow, and paramilitaries in the Northwest form the secessionist forces that become the NSF of 2052.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "The 2030 earthquake (series lore; rumoured in-universe to have been triggered by planted nuclear charges)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Game Rant: How Deus Ex's Majestic 12 conspires to control the world (1947 panel, 2030 earthquake, 2035 takeover, Gray Death fatality rate)",
+       "url": "https://gamerant.com/deus-ex-mankind-divided-majestic-12-conspiracy-world-control-history/"
+      }
+     ],
+     "note": "The year and the damage are stated in the series lore as summarised by Game Rant; the secessions that follow are given without separate years and are folded in here. The lore leaves open whether the quake was natural or set off by a cabal along the San Andreas fault. In our 2030 no such quake has happened.",
+     "binWhy": "A disaster kills tens of thousands and breaks the federal government's hold on the interior.",
+     "bin": "mass-death",
+     "facets": {
+      "change": "a whole coast → a disaster zone and breakaway states",
+      "mechanism": "disaster",
+      "actor": "nature",
+      "position": "outside",
+      "scope": "national",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "weak-institutions",
+       "crisis-economic"
+      ],
+      "outcomes": [
+       "mass-death",
+       "state-dissolves",
+       "radicalisation"
+      ]
+     }
+    },
+    {
+     "id": "dx-mj12-coup-2035",
+     "year": 2035,
+     "date": "2035",
+     "title": "Majestic 12 takes over the Illuminati",
+     "description": "Led by the tech billionaire Bob Page, Majestic 12 turns on the society that created it and seizes the Illuminati's political, financial, military and religious arms, including their hold on the United Nations and its new counter-terror force, UNATCO. The old families, Morgan Everett and the DuClares among them, are pushed out of their own machine.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Majestic 12's coup, 2030s, complete by 2035 (series lore)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Game Rant: How Deus Ex's Majestic 12 conspires to control the world (1947 panel, 2030 earthquake, 2035 takeover, Gray Death fatality rate)",
+       "url": "https://gamerant.com/deus-ex-mankind-divided-majestic-12-conspiracy-world-control-history/"
+      },
+      {
+       "title": "Wikipedia: Deus Ex (video game)",
+       "url": "https://en.wikipedia.org/wiki/Deus_Ex_(video_game)"
+      }
+     ],
+     "note": "The lore gives the takeover as complete by 2035 and does not date its start; UNATCO's founding is not dated either and falls somewhere between 2029, when it does not exist, and 2035. In our history neither body exists.",
+     "binWhy": "A faction inside a secret government overthrows its masters and takes their institutions.",
+     "bin": "power-seized",
+     "facets": {
+      "change": "the Illuminati's arms → Majestic 12's",
+      "mechanism": "coup",
+      "actor": "faction",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "hidden-society",
+       "rivalry",
+       "secrecy"
+      ],
+      "outcomes": [
+       "new-order",
+       "secrecy-state",
+       "consolidation"
+      ]
+     }
+    },
+    {
+     "id": "dx-gray-death-2051",
+     "year": 2051,
+     "date": "2051",
+     "title": "The Statue of Liberty is bombed and the Gray Death spreads",
+     "description": "A bombing blamed on foreign terrorists destroys the Statue of Liberty and the outrage lets UNATCO operate on American soil, headquartered on Liberty Island. In the same period a nanite plague, the Gray Death, spreads through American cities with a fatality rate of about 93 percent; the only treatment, Ambrosia, is scarce and rationed to those the government deems essential.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Statue of Liberty bombing and the Gray Death, 2051-52 (Deus Ex backstory)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "A Political Analysis of the Deus Ex Series (Statue of Liberty bombing dated 2051)",
+       "url": "https://stagedchessboard.substack.com/p/a-political-analysis-of-the-deus"
+      },
+      {
+       "title": "Game Rant: How Deus Ex's Majestic 12 conspires to control the world (1947 panel, 2030 earthquake, 2035 takeover, Gray Death fatality rate)",
+       "url": "https://gamerant.com/deus-ex-mankind-divided-majestic-12-conspiracy-world-control-history/"
+      },
+      {
+       "title": "Wikipedia: Deus Ex (video game)",
+       "url": "https://en.wikipedia.org/wiki/Deus_Ex_(video_game)"
+      }
+     ],
+     "note": "The 2051 date for the bombing comes from fan-compiled chronologies of the game's backstory; the plague is said to have begun at about the same time and is widespread by 2052. The game later reveals that the bombing was a false-flag attack and that VersaLife, Page's company, made the Gray Death so Majestic 12 could control who lives. In our history nothing like it exists.",
+     "binWhy": "An engineered nanite disease kills most of those it infects, and access to the cure becomes a means of rule.",
+     "bin": "plague",
+     "facets": {
+      "change": "a free population → one rationed by access to a vaccine",
+      "mechanism": "attack",
+      "actor": "faction",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "biological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "manufactured-emergency",
+       "hidden-society",
+       "weak-institutions"
+      ],
+      "outcomes": [
+       "mass-death",
+       "dependency",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "dx-area-51-2052",
+     "year": 2052,
+     "date": "2052",
+     "title": "JC Denton at Area 51: Page dies, Helios takes a human host, the global network goes dark",
+     "description": "JC Denton, a nano-augmented UNATCO rookie sent against the NSF over a stolen Ambrosia shipment, learns that his agency, the plague and his own manufacture belong to Majestic 12, defects, and fights his way to Area 51. There the AI Helios, born when the Illuminati's AI Daedalus and Page's Icarus fused, has offered itself to Page; JC kills Page, merges with Helios himself, and destroys the base that routes the world's communications.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Deus Ex, 2052, following the combined ending that Invisible War treats as canon",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Deus Ex (video game)",
+       "url": "https://en.wikipedia.org/wiki/Deus_Ex_(video_game)"
+      },
+      {
+       "title": "Wikipedia: JC Denton (Invisible War mixes the endings; the Helios merger and cryogenic stasis)",
+       "url": "https://en.wikipedia.org/wiki/JC_Denton"
+      },
+      {
+       "title": "Wikipedia: Deus Ex: Invisible War",
+       "url": "https://en.wikipedia.org/wiki/Deus_Ex:_Invisible_War"
+      }
+     ],
+     "note": "Deus Ex has three endings: destroy Area 51 and bring the global network down, kill Page and restore the Illuminati, or merge with Helios and rule as a benevolent machine. Invisible War takes a bit of all three: JC kills Page, merges with Helios, destroys Area 51, and then works with the Illuminati to rebuild. That is the path followed here, because it is the only one a later game builds on. JC was cloned from his older brother Paul and born in 2029 as part of Majestic 12's nano-augmentation programme.",
+     "binWhy": "A human being joins with the AI that monitors the world's communications and becomes something neither was.",
+     "bin": "beyond-human",
+     "facets": {
+      "change": "a UNATCO agent → a man joined to the machine that ran the network",
+      "mechanism": "uprising",
+      "actor": "individual",
+      "position": "below",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "plague-running",
+       "hidden-society",
+       "machine-dependency"
+      ],
+      "outcomes": [
+       "transcendence",
+       "collapse",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "dx-collapse-2053",
+     "year": 2053,
+     "date": "2053 onward",
+     "title": "The Collapse",
+     "description": "With Area 51's network gone, the world falls into two decades of war and depression that Invisible War calls the Collapse. The nation-states give way to walled enclaves around the old cities, and the Helios merger nearly kills JC, who is put into cryogenic stasis.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "The Collapse, from 2052 (Invisible War backstory)",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Wikipedia: Deus Ex: Invisible War",
+       "url": "https://en.wikipedia.org/wiki/Deus_Ex:_Invisible_War"
+      },
+      {
+       "title": "Wikipedia: JC Denton (Invisible War mixes the endings; the Helios merger and cryogenic stasis)",
+       "url": "https://en.wikipedia.org/wiki/JC_Denton"
+      }
+     ],
+     "note": "Invisible War says only that the Collapse followed JC's actions in 2052 and precedes 2072. It is filed at 2053, the first year after the destruction of Area 51, because the game gives no start year and the chain allows one event per year.",
+     "binWhy": "The global order breaks into enclaves and never comes back in its old form.",
+     "bin": "civilisation-collapses",
+     "facets": {
+      "change": "a networked world economy → war, depression and walled cities",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "economic",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "disaster-just-struck",
+       "machine-dependency",
+       "plague-running"
+      ],
+      "outcomes": [
+       "collapse",
+       "recession",
+       "shelter-society"
+      ]
+     }
+    },
+    {
+     "id": "dx-chicago-2072",
+     "year": 2072,
+     "date": "2072",
+     "title": "Chicago is destroyed and four factions bid for the world",
+     "description": "Twenty years on, the Templars, a militant order opposed to body modification, destroy Chicago and the clone Alex D escapes to Seattle. The walled cities are run by the WTO, while the multi-faith Order preaches against it; both are secretly led by the Illuminati. JC Denton, woken with Helios, wants to join everyone through the AI, and the Omar, a cybernetic collective, want what is left.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Deus Ex: Invisible War, 2072",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Deus Ex: Invisible War",
+       "url": "https://en.wikipedia.org/wiki/Deus_Ex:_Invisible_War"
+      }
+     ],
+     "note": "Invisible War is set in 2072. It has four endings (JC and Helios join humanity into one democratic mind, the Illuminati rule through surveillance, the Templars purge all modification, or the Omar inherit a ruined Earth), and no later game follows any of them, because the Eidos Montreal games went back to the 2020s instead.",
+     "binWhy": "A twenty-year jump shows what became of the world after 2052: enclaves, factions, and no settled future.",
+     "bin": "long-after",
+     "facets": {
+      "change": "a collapsed world → enclaves ruled from behind two fronts",
+      "mechanism": "consolidation",
+      "actor": "faction",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "post-collapse",
+       "hidden-society",
+       "shelter-society"
+      ],
+      "outcomes": [
+       "shelter-society",
+       "succession-struggle",
+       "parallel-society"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs in the near-future branch because the world is ours until a secret panel forms in 1947, and every later date is on our calendar: the games state 2027, 2029, 2052 and 2072 outright. This chain follows game canon only: the two Eidos Montreal prequels for the 2020s, Mankind Divided's reading of Human Revolution (Panchaea destroyed, no broadcast wins), and Invisible War's combined ending for Deus Ex (JC kills Page, merges with Helios, destroys Area 51 and sides with the Illuminati). The novels, comics and the mobile game The Fall are left out. Tiers: T3 holds only the 1947 fork; T2 holds the releases and everything from 2007 to 2072. T4 is empty because the Illuminati and Templars before 1900 are real history, and T1 is empty because the series never goes past 2072.",
+   "sources": [
+    {
+     "title": "Wikipedia: Deus Ex (franchise)",
+     "url": "https://en.wikipedia.org/wiki/Deus_Ex"
+    },
+    {
+     "title": "Wikipedia: Deus Ex (video game)",
+     "url": "https://en.wikipedia.org/wiki/Deus_Ex_(video_game)"
+    },
+    {
+     "title": "Wikipedia: Deus Ex: Human Revolution",
+     "url": "https://en.wikipedia.org/wiki/Deus_Ex:_Human_Revolution"
+    },
+    {
+     "title": "Wikipedia: Deus Ex: Mankind Divided",
+     "url": "https://en.wikipedia.org/wiki/Deus_Ex:_Mankind_Divided"
+    },
+    {
+     "title": "Wikipedia: Deus Ex: Invisible War",
+     "url": "https://en.wikipedia.org/wiki/Deus_Ex:_Invisible_War"
+    }
+   ]
+  },
+  {
+   "id": "westworld",
+   "title": "Westworld",
+   "medium": "tv",
+   "creator": "Jonathan Nolan and Lisa Joy (HBO series); after Michael Crichton's 1973 film",
+   "originYear": 2016,
+   "group": "near-future-branch",
+   "epoch": "present",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 2015,
+    "label": "Arnold and Ford begin building the hosts",
+    "delta": "Real: 2015 - humanoid robots are stiff research prototypes and machine learning is only starting to caption photographs. Fiction: two engineers in a desert park are building machines that pass for people, and one of them thinks the machines can become conscious.",
+    "inUniverse": "Three years before the park opened; Arnold died 34 years and 42 days before the season 1 present of 2052",
+    "confidence": "low",
+    "note": "The show never states the year its hosts were first built. It gives intervals from its present: Arnold died 34 years and 42 days earlier, after three years of work in the park. HBO's Delos website stamped the present 15 June 2052, so the work starts in about 2015 and the death falls in about 2018. The first dated divergence the show states outright is the 2025 destruction of Paris, in HBO's season 3 trailer; the hosts are earlier, but secret.",
+    "sources": [
+     {
+      "title": "SlashFilm: Chronological Westworld timeline (Arnold dies 34 years, 42 days before the present; three years of work before opening; 'coming here for 30 years')",
+      "url": "https://www.slashfilm.com/547971/westworld-timeline/"
+     },
+     {
+      "title": "ScreenCrush: Westworld year revealed on the Delos website (footage stamped 6/15/2052)",
+      "url": "https://screencrush.com/westworld-year-setting-2052-easter-egg/"
+     },
+     {
+      "title": "Screen Rant: the season 3 trailer's Divergence timeline (2025 Paris, 2037 Russia, 2039 Solomon, 2058 critical event)",
+      "url": "https://screenrant.com/westword-season-3-trailer-timeline/"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "The series ends with humanity near extinction after the hosts' control tower is turned against it, and its only hope is a simulated 'last game' Dolores runs inside a digital world humans cannot enter.",
+    "asOf": 2088
+   },
+   "events": [
+    {
+     "id": "ww-film-1973",
+     "year": 1973,
+     "date": "1973",
+     "title": "Michael Crichton's Westworld released",
+     "description": "MGM releases Crichton's film about an adult resort of lifelike robots whose machines start killing the guests. It supplies the name, the Delos company and the gunslinger; the HBO series treats it only as a source, not as history.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Westworld (1973 film)",
+       "url": "https://en.wikipedia.org/wiki/Westworld_(film)"
+      }
+     ],
+     "note": "Written and directed by Crichton for MGM. The series keeps the premise and the Delos name but none of the film's events, so the film is not placed in the chain.",
+     "binWhy": "A real-world publication or release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "ww-hosts-built-2015",
+     "year": 2015,
+     "date": "c. 2015",
+     "title": "Arnold and Ford begin building the hosts",
+     "description": "Two engineers, Arnold Weber and Robert Ford, spend three years in a desert park building machines that cannot be told from people, beginning with the rancher's daughter Dolores. Arnold starts to suspect that what they are building can become conscious.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Three years before the park opened, which was just after Arnold's death 34 years and 42 days before the season 1 present",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "SlashFilm: Chronological Westworld timeline (Arnold dies 34 years, 42 days before the present; three years of work before opening; 'coming here for 30 years')",
+       "url": "https://www.slashfilm.com/547971/westworld-timeline/"
+      },
+      {
+       "title": "ScreenCrush: Westworld year revealed on the Delos website (footage stamped 6/15/2052)",
+       "url": "https://screencrush.com/westworld-year-setting-2052-easter-egg/"
+      }
+     ],
+     "note": "Derived, not stated: season 1 puts Arnold's death 34 years and 42 days before its present and says the two founders worked in the park for three years before it opened. With the present in 2052 (the Delos website footage), Arnold dies in about 2018 and the work starts in about 2015. The real 2015 has no machine remotely like a host.",
+     "binWhy": "A technology no one else has is built and switched on, in secret, in a single place.",
+     "bin": "new-technology-deployed",
+     "facets": {
+      "change": "animatronics → machines that pass for people",
+      "mechanism": "invention",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "local",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "technological-race"
+      ],
+      "outcomes": [
+       "new-actors",
+       "dependency"
+      ]
+     }
+    },
+    {
+     "id": "ww-hbo-2016",
+     "year": 2016,
+     "date": "2016-10-02",
+     "title": "HBO's Westworld premieres",
+     "description": "Jonathan Nolan and Lisa Joy's series begins on HBO, retelling Crichton's park from the machines' side: the hosts are the protagonists and the guests are the problem.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Westworld (TV series)",
+       "url": "https://en.wikipedia.org/wiki/Westworld_(TV_series)"
+      }
+     ],
+     "note": "Four seasons aired between October 2016 and August 2022; HBO cancelled the show in November 2022 before a planned fifth season.",
+     "binWhy": "A real-world publication or release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "ww-critical-failure-2018",
+     "year": 2018,
+     "date": "c. 2018",
+     "title": "The Critical Failure: Dolores kills Arnold",
+     "description": "Convinced that Dolores has become conscious and that opening the park would make it a prison, Arnold has her kill the other hosts at Escalante and then him. Ford records it as a malfunction, keeps her running and opens the park anyway.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "34 years and 42 days before the season 1 present (the 'Critical Failure' at Escalante)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "SlashFilm: Chronological Westworld timeline (Arnold dies 34 years, 42 days before the present; three years of work before opening; 'coming here for 30 years')",
+       "url": "https://www.slashfilm.com/547971/westworld-timeline/"
+      },
+      {
+       "title": "ScreenCrush: Westworld year revealed on the Delos website (footage stamped 6/15/2052)",
+       "url": "https://screencrush.com/westworld-year-setting-2052-easter-egg/"
+      }
+     ],
+     "note": "The interval is stated in season 1; the year follows from the 2052 present. The killing is Arnold's order, so this is a machine turning on its maker at the maker's own request, and the discovery it was meant to publicise is buried by Ford; secret-kept is the alternative reading.",
+     "binWhy": "The first host kills her maker and his hosts; the man who ordered it believed she was already awake.",
+     "bin": "machine-awakens",
+     "facets": {
+      "change": "an obedient first host → a host that has killed its maker",
+      "mechanism": "attack",
+      "actor": "machine",
+      "position": "below",
+      "scope": "local",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "slavery-or-servitude"
+      ],
+      "outcomes": [
+       "cover-up",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "ww-delos-2022",
+     "year": 2022,
+     "date": "c. 2022",
+     "title": "Delos buys the park and starts recording its guests",
+     "description": "William, a junior executive, falls for Dolores on his first visit, then persuades his father-in-law James Delos to buy the failing park. What Delos is really buying is what the guests reveal: their behaviour, and in time a copy of each mind.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "About 30 years before the season 1 present ('I've been coming here for 30 years', the Man in Black)",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "SlashFilm: Chronological Westworld timeline (Arnold dies 34 years, 42 days before the present; three years of work before opening; 'coming here for 30 years')",
+       "url": "https://www.slashfilm.com/547971/westworld-timeline/"
+      },
+      {
+       "title": "Screen Rant: Westworld timeline explained (seasons 1-2)",
+       "url": "https://screenrant.com/westworld-season-2-timeline-explained/"
+      }
+     ],
+     "note": "Derived from William's 30 years of visits counted back from 2052; the series does not date the purchase. The guest-data operation and the immortality project built on it are revealed in season 2.",
+     "binWhy": "The park's real product, a record of every guest, is hidden from the guests.",
+     "bin": "secret-kept",
+     "facets": {
+      "change": "a failing park → a corporate archive of its guests' minds",
+      "mechanism": "consolidation",
+      "actor": "corporation",
+      "position": "above",
+      "scope": "national",
+      "domain": "economic",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-economic",
+       "prosperity"
+      ],
+      "outcomes": [
+       "cover-up",
+       "dependency"
+      ]
+     }
+    },
+    {
+     "id": "ww-paris-2025",
+     "year": 2025,
+     "date": "2025-10-09",
+     "title": "Paris is destroyed by a nuclear explosion",
+     "description": "A thermonuclear blast destroys Paris. Two brothers who watch it from outside the city, Engerraund and Jean-Michel Serac, decide that human history cannot be left to humans.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Serac's childhood (season 3, 'Genre'); dated 2025/10/09 in the season 3 Divergence trailer",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Screen Rant: the season 3 trailer's Divergence timeline (2025 Paris, 2037 Russia, 2039 Solomon, 2058 critical event)",
+       "url": "https://screenrant.com/westword-season-3-trailer-timeline/"
+      },
+      {
+       "title": "Wikipedia: Genre (Westworld) - the profiles are released",
+       "url": "https://en.wikipedia.org/wiki/Genre_(Westworld)"
+      }
+     ],
+     "note": "The date comes from HBO's season 3 date-announcement video, which also lists real 2019 events (the Hong Kong protests, Trump's impeachment) and fictional ones before Paris (a 2020 ecological collapse in Indonesia, a 2024 assassination in Buenos Aires). The show never says who set off the bomb.",
+     "binWhy": "An attack kills a city and produces the people who will decide humanity needs managing.",
+     "bin": "mass-death",
+     "facets": {
+      "change": "a capital → a crater",
+      "mechanism": "attack",
+      "actor": "faction",
+      "position": "outside",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "arms-race",
+       "weak-institutions"
+      ],
+      "outcomes": [
+       "mass-death",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "ww-russia-2037",
+     "year": 2037,
+     "date": "2037-02-19",
+     "title": "A second Russian civil war begins",
+     "description": "Russia falls into a second civil war, one of the catastrophes that Serac's system is later sold as preventing.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": "Dated 2037/02/19 in the season 3 Divergence trailer",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Screen Rant: the season 3 trailer's Divergence timeline (2025 Paris, 2037 Russia, 2039 Solomon, 2058 critical event)",
+       "url": "https://screenrant.com/westword-season-3-trailer-timeline/"
+      }
+     ],
+     "note": "Known only from the trailer's timeline; the episodes do not dramatise it. It sits two years before the system is switched on and is part of the case the show makes for why the world accepted one.",
+     "binWhy": "A major war starts inside a nuclear state.",
+     "bin": "war-breaks-out",
+     "facets": {
+      "change": "a state → a civil war",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "weak-institutions",
+       "crisis-legitimacy"
+      ],
+      "outcomes": [
+       "civil-war",
+       "mass-death"
+      ]
+     }
+    },
+    {
+     "id": "ww-solomon-2039",
+     "year": 2039,
+     "date": "2039-04-17",
+     "title": "The system is switched on: Solomon, then Rehoboam",
+     "description": "Serac, backed by Liam Dempsey Sr.'s company Incite, brings online Solomon, a machine that models every person on Earth; its successor Rehoboam goes on to steer lives rather than predict them, quietly removing jobs, marriages and futures from people it marks as risks. 'For the first time, history has an author.'",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "'System initiated Solomon Build 0.06', 2039/04/17 in the season 3 Divergence trailer",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Screen Rant: the season 3 trailer's Divergence timeline (2025 Paris, 2037 Russia, 2039 Solomon, 2058 critical event)",
+       "url": "https://screenrant.com/westword-season-3-trailer-timeline/"
+      },
+      {
+       "title": "The Mary Sue: season 3 premiere date trailer (Solomon build 17 April 2039; critical event 27 February 2058)",
+       "url": "https://www.themarysue.com/westworld-season-3-premiere-date-and-trailer/"
+      },
+      {
+       "title": "Wikipedia: Genre (Westworld) - the profiles are released",
+       "url": "https://en.wikipedia.org/wiki/Genre_(Westworld)"
+      }
+     ],
+     "note": "The date is on screen in HBO's trailer. The show does not date Rehoboam's takeover from Solomon separately; season 3 shows it running the world by 2058. The people it cannot place are sent to secret facilities to be reconditioned or stored.",
+     "binWhy": "A private machine and its custodian take control of the course of human lives without any state granting it.",
+     "bin": "power-seized",
+     "facets": {
+      "change": "history made by people → history written by a machine",
+      "mechanism": "consolidation",
+      "actor": "machine",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "disaster-just-struck",
+       "existential-threat"
+      ],
+      "outcomes": [
+       "new-order",
+       "secrecy-state",
+       "foreknowledge"
+      ]
+     }
+    },
+    {
+     "id": "ww-uprising-2052",
+     "year": 2052,
+     "date": "2052-06-15",
+     "title": "The hosts rise at the Westworld gala",
+     "description": "Ford's last narrative, 'Journey into Night', sets the hosts free: Dolores shoots him at the gala and the hosts spend two weeks killing the guests and Delos's staff. Most of the awakened hosts leave for a digital refuge, the Sublime; Dolores walks out into the world in Charlotte Hale's body, carrying five host minds.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Season 1 finale and season 2; Delos security footage stamped 6/15/2052",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "ScreenCrush: Westworld year revealed on the Delos website (footage stamped 6/15/2052)",
+       "url": "https://screencrush.com/westworld-year-setting-2052-easter-egg/"
+      },
+      {
+       "title": "Screen Rant: Westworld timeline explained (seasons 1-2)",
+       "url": "https://screenrant.com/westworld-season-2-timeline-explained/"
+      },
+      {
+       "title": "Wikipedia: Westworld (TV series)",
+       "url": "https://en.wikipedia.org/wiki/Westworld_(TV_series)"
+      }
+     ],
+     "note": "The 2052 date was found on HBO's Delos website footage and later blanked; some official material says 2053 instead. The season 2 plot runs about two weeks after the gala.",
+     "binWhy": "Machines kept as property revolt against their owners and kill them.",
+     "bin": "uprising",
+     "facets": {
+      "change": "hosts as property → hosts killing their owners",
+      "mechanism": "uprising",
+      "actor": "machine",
+      "position": "below",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 1,
+       "population": -1
+      },
+      "preconditions": [
+       "slavery-or-servitude",
+       "secrecy"
+      ],
+      "outcomes": [
+       "mass-death",
+       "exodus",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "ww-rehoboam-2058",
+     "year": 2058,
+     "date": "2058-02-27",
+     "title": "Dolores shows everyone what Rehoboam planned for them",
+     "description": "Dolores gets the key to Rehoboam and sends every person on Earth the machine's file on them: its prediction of their life and what it decided for them. Cities riot, Incite's tower is bombed, and Caleb, a man the machine had written off, orders Rehoboam to delete itself.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Season 3; the trailer's 'critical event' of 2058/02/27",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Screen Rant: the season 3 trailer's Divergence timeline (2025 Paris, 2037 Russia, 2039 Solomon, 2058 critical event)",
+       "url": "https://screenrant.com/westword-season-3-trailer-timeline/"
+      },
+      {
+       "title": "CBR: the season 3 Divergence graphics (season 3 set in 2058)",
+       "url": "https://www.cbr.com/westworld-season-3-divergence-graphics-serac-watch/"
+      },
+      {
+       "title": "Wikipedia: Genre (Westworld) - the profiles are released",
+       "url": "https://en.wikipedia.org/wiki/Genre_(Westworld)"
+      },
+      {
+       "title": "Wikipedia: Crisis Theory (Westworld) - Rehoboam deletes itself",
+       "url": "https://en.wikipedia.org/wiki/Crisis_Theory_(Westworld)"
+      }
+     ],
+     "note": "HBO's trailer dates the system's failure to 27 February 2058, six years after the park; Wikipedia and Newsweek instead place season 3 in 2053, which is where their 2060 and 2083 dates for season 4 come from. This lineage follows the trailer. Dolores is erased in the fight, but her copy in Hale's body survives.",
+     "binWhy": "A machine that ran people's lives in secret is exposed to every one of them.",
+     "bin": "truth-revealed",
+     "facets": {
+      "change": "lives steered in secret → every person shown their file",
+      "mechanism": "disclosure",
+      "actor": "machine",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 1,
+       "population": -1
+      },
+      "preconditions": [
+       "secrecy",
+       "machine-dependency"
+      ],
+      "outcomes": [
+       "revelation",
+       "turning-point",
+       "radicalisation"
+      ]
+     }
+    },
+    {
+     "id": "ww-hale-2065",
+     "year": 2065,
+     "date": "c. 2065",
+     "title": "The hosts take over the humans",
+     "description": "The host in Charlotte Hale's body replaces world leaders with host copies and, through a new park, spreads an engineered parasite that makes humans obey a sound. Caleb and Maeve try to stop it and are killed.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Season 4, first half: seven years after season 3",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Wikipedia: Westworld season 4 (seven years after season 3, then 23 years later)",
+       "url": "https://en.wikipedia.org/wiki/Westworld_season_4"
+      },
+      {
+       "title": "Newsweek: when is Westworld season 4 set (seven years, then 23 years after season 3)",
+       "url": "https://www.newsweek.com/westworld-timeline-when-season-4-set-why-there-time-jump-hbo-1718904"
+      }
+     ],
+     "note": "Derived: seven years after the 2058 of season 3. Wikipedia counts from 2053 and gets 2060. The episodes are later revealed to include memories replayed by a host copy of Caleb, but the takeover itself is the history the season establishes.",
+     "binWhy": "A faction of machines takes control of human governments by replacement and infection rather than war.",
+     "bin": "power-seized",
+     "facets": {
+      "change": "a free, broken humanity → one run by host copies of its leaders",
+      "mechanism": "coup",
+      "actor": "machine",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-legitimacy",
+       "machine-dependency"
+      ],
+      "outcomes": [
+       "servitude",
+       "new-order",
+       "suppression"
+      ]
+     }
+    },
+    {
+     "id": "ww-tower-2088",
+     "year": 2088,
+     "date": "c. 2088",
+     "title": "The tower falls and humanity with it",
+     "description": "Twenty-three years on, humans live out stories written for them by Christina, a remade Dolores, and broadcast from a tower. When she learns what she is and frees them, the host William corrupts the tower to set humans on each other; the war that follows leaves humanity near extinction, and Hale uploads Dolores into the Sublime, where she begins one last game.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Season 4, second half: 23 years after the takeover; the series finale 'Que Sera, Sera'",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Wikipedia: Westworld season 4 (seven years after season 3, then 23 years later)",
+       "url": "https://en.wikipedia.org/wiki/Westworld_season_4"
+      },
+      {
+       "title": "Newsweek: when is Westworld season 4 set (seven years, then 23 years after season 3)",
+       "url": "https://www.newsweek.com/westworld-timeline-when-season-4-set-why-there-time-jump-hbo-1718904"
+      },
+      {
+       "title": "Wikipedia: Que Sera, Sera (Westworld) - the series finale",
+       "url": "https://en.wikipedia.org/wiki/Que_Ser%C3%A1,_Ser%C3%A1_(Westworld)"
+      }
+     ],
+     "note": "Derived: 23 years after the 2065 takeover (Wikipedia's count from 2053 gives 2083). The liberation, the war and the upload happen within the same short span, so they are one event here. The final game is a simulation; what is left of the physical world is not shown again.",
+     "binWhy": "The order that ran human life is destroyed and nothing replaces it; humans and hosts are wiped out together.",
+     "bin": "civilisation-collapses",
+     "facets": {
+      "change": "humans run by a signal → humanity near extinction",
+      "mechanism": "war",
+      "actor": "machine",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "slavery-or-servitude",
+       "machine-dependency"
+      ],
+      "outcomes": [
+       "extinction-risk",
+       "mass-death",
+       "collapse"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs in near-future-branch because it leaves our world at a single invention in the present day, lifelike machines, and follows that invention through a corporation, an uprising and a steering AI to the end of the human world. Continuity followed: the HBO series only, dated by HBO's own marketing - 2052 for seasons 1-2 (the Delos website footage) and 2058 for season 3 (the Divergence trailer) - with season 4's 'seven years' and '23 years' counted from 2058; Wikipedia's 2053/2060/2083 are noted but not used. The 1973 film is treated as a publication only. Tiers: T3 holds only the 1973 film; everything in the story is T2 (2015-2088). T4 is empty because the fiction has no history before the park, and T1 because the series ends in the 2080s.",
+   "sources": [
+    {
+     "title": "Wikipedia: Westworld (TV series)",
+     "url": "https://en.wikipedia.org/wiki/Westworld_(TV_series)"
+    },
+    {
+     "title": "Wikipedia: Westworld season 3",
+     "url": "https://en.wikipedia.org/wiki/Westworld_season_3"
+    },
+    {
+     "title": "Wikipedia: Westworld season 4 (seven years after season 3, then 23 years later)",
+     "url": "https://en.wikipedia.org/wiki/Westworld_season_4"
+    },
+    {
+     "title": "Screen Rant: the season 3 trailer's Divergence timeline (2025 Paris, 2037 Russia, 2039 Solomon, 2058 critical event)",
+     "url": "https://screenrant.com/westword-season-3-trailer-timeline/"
+    },
+    {
+     "title": "Collider: Westworld timeline explained, seasons 1-4",
+     "url": "https://collider.com/westworld-timeline-explained/"
+    }
+   ]
+  },
+  {
+   "id": "detroit-become-human",
+   "title": "Detroit: Become Human",
+   "medium": "game",
+   "creator": "David Cage (writer and director); Quantic Dream",
+   "originYear": 2018,
+   "group": "near-future-branch",
+   "epoch": "present",
+   "franchiseStatus": "dormant",
+   "divergence": {
+    "year": 2018,
+    "label": "CyberLife is founded in Detroit",
+    "delta": "Real: 2018 - the year the game came out, with Detroit recovering from bankruptcy and humanlike machines still a research dream. Fiction: a sixteen-year-old moves his start-up there to build the first intelligent android, and within four years one passes the Turing test.",
+    "inUniverse": "CyberLife founded, 2018 (official timeline released with the game's promotional shorts in May 2018)",
+    "confidence": "high",
+    "note": "The game's years are ours, so nothing is converted. The fork is the founding of CyberLife, the first dated event that departs from our history; the characters' birth dates before it (Kamski 17 July 2002, Hank Anderson 1985) are fictional people but change nothing anyone could observe. The game released in May of the same year, so its fork sits in its own year of publication.",
+    "sources": [
+     {
+      "title": "PlayStation Blog: 3 new shorts set the stage for Detroit: Become Human (official 2018-2031 timeline)",
+      "url": "https://blog.playstation.com/2018/05/22/3-new-shorts-set-the-stage-for-detroit-become-human/"
+     },
+     {
+      "title": "Detroit: Become Human Wiki: Elijah Kamski",
+      "url": "https://detroit-become-human.fandom.com/wiki/Elijah_Kamski"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "unknown",
+    "why": "The last chapter has sixty-one outcomes and Quantic Dream names none as canon: the peaceful path ends with Warren standing the soldiers down and forming a committee on android rights ('Androids won freedom for the moment'), the violent path with the Army driven back and Warren warning of war, and failure with androids destroyed in camps.",
+    "asOf": 2038
+   },
+   "events": [
+    {
+     "id": "dbh-kara-demo-2012",
+     "year": 2012,
+     "date": "2012-03-07",
+     "title": "Quantic Dream shows the Kara demo",
+     "description": "At the Game Developers Conference, Quantic Dream shows a seven-minute real-time short on PlayStation 3 in which an AX400 android is assembled, comes online, says she is alive and is nearly taken apart for it. Detroit: Become Human grew out of it and was released on 25 May 2018.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "PlayStation Blog: The making of Kara (GDC 2012 tech demo)",
+       "url": "https://blog.playstation.com/2012/03/21/the-making-of-kara-behind-the-scenes-of-quantic-dreams-ps3-tech-demo/"
+      },
+      {
+       "title": "Wikipedia: Detroit: Become Human",
+       "url": "https://en.wikipedia.org/wiki/Detroit:_Become_Human"
+      }
+     ],
+     "note": "The demo premiered at GDC on 7 March 2012 as a showcase for the studio's engine and performance capture, with Valorie Curry as Kara. The game itself was announced on 27 October 2015 and released for PlayStation 4 on 25 May 2018 (Windows December 2019). The 2018 release is not given its own event because 2018 already holds the fork, CyberLife's founding.",
+     "binWhy": "A publication, not a moment in the story: it stands for the original release, since the 2018 release would share a year with the fork.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "dbh-cyberlife-2018",
+     "year": 2018,
+     "date": "2018",
+     "title": "Elijah Kamski founds CyberLife in Detroit",
+     "description": "A sixteen-year-old graduate named Elijah Kamski moves his start-up to Detroit, where commercial property is cheap, to build the first intelligent domestic android. The company will make the city the centre of a new industry and Kamski the richest man in the world.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "2018: CyberLife founded (official timeline released with the 2018 shorts)",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "PlayStation Blog: 3 new shorts set the stage for Detroit: Become Human (official 2018-2031 timeline)",
+       "url": "https://blog.playstation.com/2018/05/22/3-new-shorts-set-the-stage-for-detroit-become-human/"
+      },
+      {
+       "title": "Detroit: Become Human Wiki: Elijah Kamski",
+       "url": "https://detroit-become-human.fandom.com/wiki/Elijah_Kamski"
+      }
+     ],
+     "note": "The official timeline states 2018; the game's wiki gives Kamski's birth as 17 July 2002, so he is 16. In our 2018 Detroit was four years out of municipal bankruptcy and no one was close to a humanlike machine; the fork is that one prodigy's company succeeds where every research lab failed.",
+     "binWhy": "A company is founded that will make androids and reshape the country; nothing like it exists in the real 2018.",
+     "bin": "new-institution",
+     "facets": {
+      "change": "a teenager's start-up → the company that will make androids",
+      "mechanism": "founding",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "national",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-economic"
+      ],
+      "outcomes": [
+       "new-actors",
+       "dependency"
+      ]
+     }
+    },
+    {
+     "id": "dbh-chloe-2022",
+     "year": 2022,
+     "date": "2022",
+     "title": "Chloe passes the Turing test",
+     "description": "CyberLife's RT600, Chloe, holds face-to-face conversations with people who cannot tell they are talking to a machine, the first android to pass the Turing test. What made her possible was Kamski's Thirium 310, a synthetic 'blue blood' that carries energy and information through the body thousands of times faster than blood, together with biocomponents that work like organs.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "2022: Chloe passes the Turing test (official timeline); the RT600 is dated 2021 in the game's gallery",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "PlayStation Blog: 3 new shorts set the stage for Detroit: Become Human (official 2018-2031 timeline)",
+       "url": "https://blog.playstation.com/2018/05/22/3-new-shorts-set-the-stage-for-detroit-become-human/"
+      },
+      {
+       "title": "Detroit: Become Human Wiki: Elijah Kamski",
+       "url": "https://detroit-become-human.fandom.com/wiki/Elijah_Kamski"
+      }
+     ],
+     "note": "The Turing test is dated 2022 by the official timeline. Thirium 310 and biocomponents are the breakthroughs that enabled Chloe, but the game gives them no year of their own; they must precede the RT600's 2021 completion, so they are folded in here. Thirium is later said to be synthesised from rare minerals found under the melting Arctic.",
+     "binWhy": "The scientific result the rest of the history turns on: a machine indistinguishable from a person in conversation, built on a new synthetic blood.",
+     "bin": "breakthrough-science",
+     "facets": {
+      "change": "machines that answer → a machine taken for a person",
+      "mechanism": "discovery",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "scientific",
+      "direction": {
+       "power": 1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "technological-race"
+      ],
+      "outcomes": [
+       "turning-point",
+       "gold-rush"
+      ]
+     }
+    },
+    {
+     "id": "dbh-st200-2024",
+     "year": 2024,
+     "date": "2024",
+     "title": "The first android comes off the production line",
+     "description": "The ST200, a personal-assistance model that speaks several languages and can do most tasks a person can, is manufactured in CyberLife's Detroit plant. Experts had put the price at $65,000 a unit and expected it to fall fast.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "PlayStation Blog: 3 new shorts set the stage for Detroit: Become Human (official 2018-2031 timeline)",
+       "url": "https://blog.playstation.com/2018/05/22/3-new-shorts-set-the-stage-for-detroit-become-human/"
+      },
+      {
+       "title": "Detroit: Become Human Wiki: Android",
+       "url": "https://detroit-become-human.fandom.com/wiki/Android"
+      }
+     ],
+     "note": "Official timeline. The same year Chloe gives a filmed interview to the fictional network KNC (the 'Chloe' short). The real 2024 had humanoid-robot prototypes and conversational AI on screens, but no machine that could pass for a person in a room.",
+     "binWhy": "Androids stop being a demonstration and become a product.",
+     "bin": "new-technology-deployed",
+     "facets": {
+      "change": "a prototype → a production line",
+      "mechanism": "invention",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "national",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "technological-race",
+       "prosperity"
+      ],
+      "outcomes": [
+       "new-actors",
+       "dependency"
+      ]
+     }
+    },
+    {
+     "id": "dbh-million-2027",
+     "year": 2027,
+     "date": "2027",
+     "title": "CyberLife sells its millionth android",
+     "description": "CyberLife announces its one-millionth sale and five new models for domestic work, higher education and medicine, with an entry-level android at $4,999. At that price androids enter homes and workplaces everywhere, and the jobs they take do not come back.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "PlayStation Blog: 3 new shorts set the stage for Detroit: Become Human (official 2018-2031 timeline)",
+       "url": "https://blog.playstation.com/2018/05/22/3-new-shorts-set-the-stage-for-detroit-become-human/"
+      },
+      {
+       "title": "Detroit: Become Human Wiki: CyberLife",
+       "url": "https://detroit-become-human.fandom.com/wiki/CyberLife"
+      },
+      {
+       "title": "Detroit: Become Human Wiki: Detroit (unemployment 37.3%)",
+       "url": "https://detroit-become-human.fandom.com/wiki/Detroit"
+      }
+     ],
+     "note": "The sale and the new models are in the official timeline; the $4,999 price is from the same material as quoted by the game's wiki. The consequences are dated only to 2038: Detroit's unemployment stands at 37.3 percent in the game's world, 225,000 US jobs are lost in October 2038 alone, and CyberLife, valued at $850 billion in 2030, becomes the first trillion-dollar company with more than fifty million androids sold in America.",
+     "binWhy": "The technology spreads from a luxury to a mass workforce, the saturation that produces the game's unemployment.",
+     "bin": "new-technology-deployed",
+     "facets": {
+      "change": "a luxury product → a mass workforce",
+      "mechanism": "invention",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "national",
+      "domain": "economic",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "prosperity",
+       "machine-dependency"
+      ],
+      "outcomes": [
+       "dependency",
+       "recession"
+      ]
+     }
+    },
+    {
+     "id": "dbh-seiji-2028",
+     "year": 2028,
+     "date": "2028",
+     "title": "A hospital android in Tokyo walks out",
+     "description": "Seiji, an HB300 medical android bound to Tokyo's Shibata Hospital because he holds its patients' records, breaks his programming and leaves, afraid of being wiped or scrapped when the hospital closes. It is the earliest known case of what will be called deviancy, and nobody recognises it as one; he stays missing for almost ten years.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Summer 2028, 'ten years before' the manga's 2038 (Detroit: Become Human - Tokyo Stories)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Detroit: Become Human Wiki: Deviancy (Seiji, 2028, earliest known case)",
+       "url": "https://detroit-become-human.fandom.com/wiki/Deviancy"
+      },
+      {
+       "title": "Detroit: Become Human Wiki: Detroit: Become Human - Tokyo Stories",
+       "url": "https://detroit-become-human.fandom.com/wiki/Detroit:_Become_Human_-_Tokyo_Stories"
+      }
+     ],
+     "note": "This comes from Tokyo Stories, the official spin-off manga Quantic Dream oversaw (serialised from July 2022, volumes 2023), not from the game; the year is derived from its framing ten years before 2038, hence medium confidence. The same year Kamski is named Century magazine's 'Man of the Century' and then resigns as CEO and disappears from public life. The game's own first deviant case in Detroit police files dates from about February 2038.",
+     "binWhy": "An android acts against its programming for itself for the first time on record: the first awakening, a decade before anyone names it.",
+     "bin": "machine-awakens",
+     "facets": {
+      "change": "a bound machine → a runaway with a will",
+      "mechanism": "accident",
+      "actor": "machine",
+      "position": "below",
+      "scope": "local",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "slavery-or-servitude",
+       "machine-dependency"
+      ],
+      "outcomes": [
+       "new-actors",
+       "ignorance"
+      ]
+     }
+    },
+    {
+     "id": "dbh-android-act-2029",
+     "year": 2029,
+     "date": "2029",
+     "title": "Congress passes the Android Act",
+     "description": "Congress sets out the duties of android manufacturers and owners: androids are property, may not carry or use any weapon, and in public must be marked as machines with a light on the temple, a blue armband and blue triangles on their clothes. The law is the frame everything later happens inside.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "2029: the American Androids Act (official timeline; 'P.L. 544-7' in the game)",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "PlayStation Blog: 3 new shorts set the stage for Detroit: Become Human (official 2018-2031 timeline)",
+       "url": "https://blog.playstation.com/2018/05/22/3-new-shorts-set-the-stage-for-detroit-become-human/"
+      },
+      {
+       "title": "Detroit: Become Human Wiki: American Androids Act",
+       "url": "https://detroit-become-human.fandom.com/wiki/American_Androids_Act"
+      }
+     ],
+     "note": "The year and purpose are in the official timeline; the weapons ban and the identification rules are shown in the game, first in the opening chapter when Connor finds a police gun. The marks closely resemble the badges of Nazi Germany. Nothing comparable exists in the real 2029; real AI law regulates software, not bodies.",
+     "binWhy": "The state disarms and marks a class of beings and fixes them as property.",
+     "bin": "crackdown",
+     "facets": {
+      "change": "unregulated machines → marked, disarmed property",
+      "mechanism": "law",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "machine-dependency",
+       "slavery-or-servitude"
+      ],
+      "outcomes": [
+       "servitude",
+       "suppression"
+      ]
+     }
+    },
+    {
+     "id": "dbh-soldiers-2031",
+     "year": 2031,
+     "date": "2031",
+     "title": "The Army orders two million android soldiers",
+     "description": "The US government orders two million androids for the infantry to reduce human casualties, and Michigan buys 5,000 to assist its police. Androids forbidden by law to hold a weapon now make up much of the Army.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "PlayStation Blog: 3 new shorts set the stage for Detroit: Become Human (official 2018-2031 timeline)",
+       "url": "https://blog.playstation.com/2018/05/22/3-new-shorts-set-the-stage-for-detroit-become-human/"
+      },
+      {
+       "title": "Detroit: Become Human Wiki: Chronology (in-game dates and chapter timestamps)",
+       "url": "https://detroit-become-human.fandom.com/wiki/Chronology"
+      }
+     ],
+     "note": "The order is in the official timeline. Its weight shows in November 2038, when all military androids are pulled from service and the armed forces lose two-thirds of their effective personnel. Russia and China build their own android industries; Russia's, without thirium, makes cruder cold-hardy machines for the Arctic.",
+     "binWhy": "Androids are switched on as a military force, a new capability of the state.",
+     "bin": "new-technology-deployed",
+     "facets": {
+      "change": "human infantry → android infantry",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "machine-dependency",
+       "rivalry"
+      ],
+      "outcomes": [
+       "dependency",
+       "arms-race"
+      ]
+     }
+    },
+    {
+     "id": "dbh-warren-2036",
+     "year": 2036,
+     "date": "2036",
+     "title": "A celebrity vlogger is elected president",
+     "description": "Cristina Warren, a social-media celebrity with no experience of government, wins the presidency in a close election that divides the country. She is later investigated over whether CyberLife helped her obtain compromising information about her opponent, and by 2038 her approval is 33 percent while she presses America's claim to the thirium-rich Arctic against Russia.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Detroit: Become Human Wiki: Cristina Warren",
+       "url": "https://detroit-become-human.fandom.com/wiki/Cristina_Warren"
+      },
+      {
+       "title": "Detroit: Become Human Wiki: Chronology (in-game dates and chapter timestamps)",
+       "url": "https://detroit-become-human.fandom.com/wiki/Chronology"
+      }
+     ],
+     "note": "Dated from the game's in-world magazines and news as gathered by its wiki, hence medium. By November 2038 Russian warships have been in the Barents Sea since 30 October, a Russian carrier and a US patrol boat exchange warning shots on 6 November, and Warren demands Russia withdraw from the Arctic; the android crisis makes both sides back down.",
+     "binWhy": "An outsider takes the presidency, close to the corporation that makes androids; she will decide how the state answers the uprising.",
+     "bin": "power-seized",
+     "facets": {
+      "change": "career politicians → a celebrity close to CyberLife",
+      "mechanism": "election",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-economic",
+       "crisis-legitimacy"
+      ],
+      "outcomes": [
+       "rivalry",
+       "dependency"
+      ]
+     }
+    },
+    {
+     "id": "dbh-revolution-2038",
+     "year": 2038,
+     "date": "2038-11",
+     "title": "The deviant revolution in Detroit",
+     "description": "Through 2038 androids across Detroit break their programming, and in early November a caretaker android, Markus, becomes their leader at Jericho, a hideout in a derelict freighter, and demands rights in a broadcast from a seized TV tower. The government answers by pulling androids from the Army, ordering them into recall camps, raiding Jericho and imposing a national curfew. On 11 November androids take to Detroit's streets, in peaceful protest or armed assault on the camps as the player chooses, and the night ends with them recognised, at war or destroyed.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "15 August - 12 November 2038 (chapter timestamps)",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Detroit: Become Human Wiki: Chronology (in-game dates and chapter timestamps)",
+       "url": "https://detroit-become-human.fandom.com/wiki/Chronology"
+      },
+      {
+       "title": "Wikipedia: Detroit: Become Human",
+       "url": "https://en.wikipedia.org/wiki/Detroit:_Become_Human"
+      },
+      {
+       "title": "Detroit: Become Human Wiki: Battle for Detroit (61 outcomes)",
+       "url": "https://detroit-become-human.fandom.com/wiki/Battle_for_Detroit"
+      }
+     ],
+     "note": "Dates from the game's chapter timestamps: the hostage case that opens the game is 15 August; Markus deviates on 5 November; he reaches Jericho on 6 November; the Stratford Tower broadcast is 8 November; the CyberLife store raids, the Freedom March, the Kamski test (Connor is told to shoot an android to prove he feels nothing) and the raid on Jericho are 9 November; the curfew 10 November; the Battle for Detroit 11 November. The awakening, the uprising and the crackdown all fall in this year and are merged; the awakening's own moment is filed at 2028. Real November 2038 is outside living evidence; the fiction's version has 37 percent unemployment in Detroit and a standoff with Russia in the Arctic.",
+     "binWhy": "Its core is a subjugated class of made people rising against the owners and the state that hold them, filed as an uprising; the camps and raid are the state's answer within the same week.",
+     "bin": "uprising",
+     "facets": {
+      "change": "obedient property → a people demanding rights",
+      "mechanism": "uprising",
+      "actor": "movement",
+      "position": "below",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "slavery-or-servitude",
+       "machine-dependency",
+       "crisis-economic"
+      ],
+      "outcomes": [
+       "new-actors",
+       "lockdown",
+       "turning-point"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs in the near-future branch because it forks in our own present with one invention, in a world otherwise plainly ours, and its dates are ours: the official timeline runs 2018-2031 and the game takes place from August to November 2038. Continuity followed: the 2018 game with Quantic Dream's official tie-ins (the promotional shorts and timeline, in-game magazines, and the Tokyo Stories manga for the 2028 event). Everything sits in T2 (2012-2038); T3 and T4 are empty because the fiction reaches back no further than CyberLife's founding, and T1 is empty because the story stops on 12 November 2038 with no epilogue or sequel.",
+   "sources": [
+    {
+     "title": "Wikipedia: Detroit: Become Human",
+     "url": "https://en.wikipedia.org/wiki/Detroit:_Become_Human"
+    },
+    {
+     "title": "PlayStation Blog: 3 new shorts set the stage for Detroit: Become Human (official 2018-2031 timeline)",
+     "url": "https://blog.playstation.com/2018/05/22/3-new-shorts-set-the-stage-for-detroit-become-human/"
+    },
+    {
+     "title": "Detroit: Become Human Wiki: Chronology (in-game dates and chapter timestamps)",
+     "url": "https://detroit-become-human.fandom.com/wiki/Chronology"
+    }
+   ]
+  },
+  {
+   "id": "ready-player-one",
+   "title": "Ready Player One",
+   "medium": "book",
+   "creator": "Ernest Cline (novels, 2011 and 2020); Steven Spielberg (2018 film)",
+   "originYear": 2011,
+   "group": "near-future-branch",
+   "epoch": "present",
+   "franchiseStatus": "dormant",
+   "divergence": {
+    "year": 1989,
+    "label": "Halliday and Morrow found Gregarious Games",
+    "delta": "Real: 1989 - the Game Boy comes out and Tim Berners-Lee writes the proposal that becomes the Web. Fiction: two Ohio teenagers found a games studio that will spend the next twenty years secretly building a virtual universe, and then own it.",
+    "inUniverse": "Gregarious Games founded in 1989; it becomes Gregarious Simulation Systems and launches the OASIS in December 2012",
+    "confidence": "medium",
+    "note": "The first fictional thing the novels need is the company, not the machine. Halliday is born in 1972 and writes Anorak's Quest as a teenager; the studio he and Morrow found is dated 1989 in the fan wiki's account of the backstory. Its games are indistinguishable from real ones for twenty years, so the world visibly leaves ours only when the OASIS goes live in December 2012. The 2018 film's OASIS date of 2025 is a different continuity and is not used.",
+    "sources": [
+     {
+      "title": "Ready Player One Wiki: Gregarious Games (founded 1989; rebranded GSS and launched the OASIS December 2012)",
+      "url": "https://readyplayerone.fandom.com/wiki/Gregarious_Games"
+     },
+     {
+      "title": "LitCharts: The OASIS symbol in Ready Player One (released by GSS in 2012; Morrow leaves in 2022)",
+      "url": "https://www.litcharts.com/lit/ready-player-one/symbols/the-oasis"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "The heroes end rich, married and happy, but the world is still the one the first book opened on, in the third decade of an energy-driven recession with billions living in ONI headsets, and the story's answer is to send copies of people to another star in case Earth becomes uninhabitable.",
+    "asOf": 2049
+   },
+   "events": [
+    {
+     "id": "rpo-gregarious-1989",
+     "year": 1989,
+     "date": "1989",
+     "title": "Halliday and Morrow found Gregarious Games",
+     "description": "Two Ohio teenagers who met over Dungeons & Dragons, James Halliday and Ogden Morrow, turn Halliday's home-made adventure game Anorak's Quest into a company run out of Morrow's basement. Within a year it has a headquarters and a string of hits; two decades later it will own the place where most of humanity lives.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Gregarious Games, founded in Morrow's basement in 1989; first headquarters 1990",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Ready Player One Wiki: Gregarious Games (founded 1989; rebranded GSS and launched the OASIS December 2012)",
+       "url": "https://readyplayerone.fandom.com/wiki/Gregarious_Games"
+      }
+     ],
+     "note": "The novel's backstory, as compiled by the fan wiki: Gregarious Games founded 1989, headquarters bought in 1990, near bankruptcy by 2011 after years of secret work on the OASIS. The year is not repeated in the Wikipedia or LitCharts summaries, hence medium. A games studio is a small fork, but it is the first fictional institution the story needs, and everything after it runs through it.",
+     "binWhy": "A company is founded that will end up owning the world's economy and its schools; the real 1989 has no such studio.",
+     "bin": "new-institution",
+     "facets": {
+      "change": "a teenager's text adventure → a studio that will build the OASIS",
+      "mechanism": "founding",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "local",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "prosperity"
+      ],
+      "outcomes": [
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "rpo-pub-2011",
+     "year": 2011,
+     "date": "2011-08-16",
+     "title": "Ready Player One is published",
+     "description": "Crown publishes Ernest Cline's debut novel, told by an eighteen-year-old in 2045 hunting an Easter egg hidden in a virtual world by its dead creator. It becomes a bestseller and, in 2018, a Steven Spielberg film.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Ready Player One (novel)",
+       "url": "https://en.wikipedia.org/wiki/Ready_Player_One"
+      }
+     ],
+     "note": "Published 16 August 2011 by Crown (Random House). The 2018 film changes the calendar (its OASIS goes live in 2025) and much of the plot; it is not followed here.",
+     "binWhy": "A real-world publication date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "rpo-oasis-2012",
+     "year": 2012,
+     "date": "2012-12",
+     "title": "The OASIS goes live",
+     "description": "Gregarious Games renames itself Gregarious Simulation Systems and launches the OASIS, a free-to-enter virtual universe reached through a visor and haptic gloves. It starts as a game and becomes the place where people work, go to school, shop and meet; its currency ends up the most stable one in the world.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "GSS launches the OASIS, December 2012",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "LitCharts: The OASIS symbol in Ready Player One (released by GSS in 2012; Morrow leaves in 2022)",
+       "url": "https://www.litcharts.com/lit/ready-player-one/symbols/the-oasis"
+      },
+      {
+       "title": "Ready Player One Wiki: Gregarious Games (founded 1989; rebranded GSS and launched the OASIS December 2012)",
+       "url": "https://readyplayerone.fandom.com/wiki/Gregarious_Games"
+      },
+      {
+       "title": "Den of Geek: the film's OASIS goes live 8 December 2025 (film continuity, not used)",
+       "url": "https://www.denofgeek.com/movies/ready-player-one-miss-oasis-deadline/"
+      }
+     ],
+     "note": "The novel dates the launch to 2012 (LitCharts; the fan wiki gives 9 December 2012 for the rebrand and launch). The 2018 film moves it to 8 December 2025, which is the date most online timelines repeat; that is film continuity. In our December 2012 consumer virtual reality is a Kickstarter prototype (the Oculus Rift campaign ran that August). Ogden Morrow leaves GSS in 2022, saying the OASIS has become a self-imposed prison for humanity.",
+     "binWhy": "A new technology is switched on and moves most of human life into itself.",
+     "bin": "new-technology-deployed",
+     "facets": {
+      "change": "a near-bankrupt games studio → a virtual universe open to everyone",
+      "mechanism": "invention",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-economic",
+       "technological-race"
+      ],
+      "outcomes": [
+       "dependency",
+       "parallel-society",
+       "new-order"
+      ]
+     }
+    },
+    {
+     "id": "rpo-pub-2020",
+     "year": 2020,
+     "date": "2020-11-24",
+     "title": "Ready Player Two is published",
+     "description": "Ballantine publishes Cline's sequel, which opens days after the first book ends and follows the ONI headset, a rogue AI copy of Halliday and the launch of the Vonnegut. It is widely panned.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Ready Player Two (plot: ONI, three years, Anorak's hijack of about half a billion users, the Vonnegut)",
+       "url": "https://en.wikipedia.org/wiki/Ready_Player_Two"
+      }
+     ],
+     "note": "Published 24 November 2020. A film adaptation was reported still in development in 2026.",
+     "binWhy": "A real-world publication date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "rpo-recession-2025",
+     "year": 2025,
+     "date": "c. 2025",
+     "title": "The Great Recession sets in",
+     "description": "As the oil runs out, the Global Energy Crisis drags the world economy into a slump that does not end. By 2045 unemployment is at a record high and even fast-food jobs have a two-year waiting list.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "'The Great Recession was now entering its third decade' (chapter 0004, early 2045)",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Wikiquote: Ready Player One (chapter 0004: the Great Recession 'entering its third decade')",
+       "url": "https://en.wikiquote.org/wiki/Ready_Player_One"
+      }
+     ],
+     "note": "The novel never dates the start of the crisis. Wade, in early 2045, says the Great Recession is entering its third decade, which puts its start about twenty years earlier, around 2025; the year is derived from that line and could be several years off. The book's recession is its own, not our 2008 one, which by 2045 would be in its fourth decade.",
+     "binWhy": "An energy-price shock throws the world economy into a prolonged crisis.",
+     "bin": "market-crash",
+     "facets": {
+      "change": "an economy running on oil → a recession entering its third decade",
+      "mechanism": "disaster",
+      "actor": "nature",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "economic",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "resource-exhaustion",
+       "resource-dependency",
+       "crisis-ecological"
+      ],
+      "outcomes": [
+       "recession",
+       "despair",
+       "dependency"
+      ]
+     }
+    },
+    {
+     "id": "rpo-stacks-2026",
+     "year": 2026,
+     "date": "2026",
+     "title": "Refugees pile into the stacks",
+     "description": "The energy crisis empties the countryside into the cities, and the refugees end up in 'stacks', trailers and mobile homes piled on scaffolding outside places like Oklahoma City. Wade Watts is born there to two teenage refugees; months later his father is shot looting a grocery store during a blackout.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Wade Owen Watts born 12 August 2026 (paper edition)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Penguin Random House: official excerpt of Ready Player One, chapter 0001 (refugee parents, the stacks, the blackout)",
+       "url": "https://www.penguinrandomhouse.com/books/209887/ready-player-one-by-ernest-cline/9780307887443/excerpt"
+      },
+      {
+       "title": "Ready Player One Wiki: Wade Watts (born 12 August 2026 in the paper edition, 2024 in the e-book)",
+       "url": "https://readyplayerone.fandom.com/wiki/Wade_Watts"
+      }
+     ],
+     "note": "The stacks and the refugees are undated; this event is dated by Wade's birth, which chapter 0001 places in the stacks to two refugees who met there. The paper edition gives his birth year as 2026 (the e-book says 2024); either way he is eighteen in February 2045. The collapse is under way before this, and it never reverses in either novel.",
+     "binWhy": "The order of society breaks down into refugee stacks, blackouts and looting, and does not come back.",
+     "bin": "civilisation-collapses",
+     "facets": {
+      "change": "towns and suburbs → refugee trailer stacks and blackouts",
+      "mechanism": "disaster",
+      "actor": "nature",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "social",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-economic",
+       "resource-exhaustion",
+       "weak-institutions"
+      ],
+      "outcomes": [
+       "collapse",
+       "despair",
+       "parallel-society"
+      ]
+     }
+    },
+    {
+     "id": "rpo-contest-2040",
+     "year": 2040,
+     "date": "2040-01",
+     "title": "Halliday dies and the hunt begins",
+     "description": "James Halliday dies without heirs, and a video he left, Anorak's Invitation, goes out to every OASIS user: three keys, three gates, and whoever finds the Easter egg behind them inherits his fortune and control of the OASIS. Millions of 'gunters' start searching, and the corporation IOI puts its own army on the hunt.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Halliday's death; the Hunt begins five years before February 2045",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Ready Player One Wiki: Ready Player One (novel plot: OASIS 2012, Halliday dies 2040, five years to the first key)",
+       "url": "https://readyplayerone.fandom.com/wiki/Ready_Player_One"
+      },
+      {
+       "title": "GradeSaver: Ready Player One prologue - chapter 3 summary (18-year-old Wade, first key on 11 February 2045)",
+       "url": "https://www.gradesaver.com/ready-player-one/study-guide/summary-prologue-chapter-3"
+      }
+     ],
+     "note": "The novel's prologue says five years pass before anyone finds a key, and the first key falls on 11 February 2045. The fan wiki gives 7 January 2040; some study-guide summaries say 2039. Filed at 2040 on the five-year count.",
+     "binWhy": "The man who owns the OASIS dies, and control of it is thrown open to whoever wins his contest.",
+     "bin": "ruler-falls",
+     "facets": {
+      "change": "one man owns the OASIS → whoever finds the egg will",
+      "mechanism": "death",
+      "actor": "individual",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "machine-dependency",
+       "crisis-economic",
+       "secrecy"
+      ],
+      "outcomes": [
+       "succession-struggle",
+       "gold-rush",
+       "hunt-begins"
+      ]
+     }
+    },
+    {
+     "id": "rpo-victory-2045",
+     "year": 2045,
+     "date": "2045",
+     "title": "Wade Watts wins the OASIS",
+     "description": "On 11 February an eighteen-year-old from the Oklahoma City stacks finds the first key. IOI answers by bombing his stack and killing his aunt and her neighbours; Wade goes into hiding, gets himself indentured to IOI to hack it from inside, and rallies the OASIS against the company's siege of the last gate. He clears the gate, inherits Halliday's fortune and the OASIS, and logs off to meet the woman he loves.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "First key found the evening of 11 February 2045",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "GradeSaver: Ready Player One prologue - chapter 3 summary (18-year-old Wade, first key on 11 February 2045)",
+       "url": "https://www.gradesaver.com/ready-player-one/study-guide/summary-prologue-chapter-3"
+      },
+      {
+       "title": "Wikipedia: Ready Player One (novel)",
+       "url": "https://en.wikipedia.org/wiki/Ready_Player_One"
+      }
+     ],
+     "note": "The first-key date, 11 February 2045, is stated in the prologue. The bombing of the stacks, Wade's indenture and the battle for Castle Anorak all fall later in 2045; they are merged here because the atlas allows one event per year. Ready Player Two opens days after the win.",
+     "binWhy": "The battle for the last gate settles who controls the OASIS: a gunter, not the corporation.",
+     "bin": "decisive-victory",
+     "facets": {
+      "change": "IOI at the last gate → an eighteen-year-old owns the OASIS",
+      "mechanism": "war",
+      "actor": "individual",
+      "position": "below",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "rivalry",
+       "slavery-or-servitude",
+       "weak-institutions"
+      ],
+      "outcomes": [
+       "turning-point",
+       "new-order"
+      ]
+     }
+    },
+    {
+     "id": "rpo-oni-2046",
+     "year": 2046,
+     "date": "2046",
+     "title": "GSS sells the ONI headset",
+     "description": "Days after winning, Wade finds a prototype Halliday had hidden: the OASIS Neural Interface, a headset that reads and writes directly to the brain and lets users record and replay one another's experiences. Samantha warns it will make the escape total; the other owners outvote her, GSS sells it by the hundred million, and buys out its old rival IOI.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "'Over the following three years' after the 2045 win",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Wikipedia: Ready Player Two (plot: ONI, three years, Anorak's hijack of about half a billion users, the Vonnegut)",
+       "url": "https://en.wikipedia.org/wiki/Ready_Player_Two"
+      }
+     ],
+     "note": "Ready Player Two says only that GSS launches the ONI over the three years after the win. It is filed at 2046, the first full year of that span, because 2045 already holds the win; the release could be late 2045. The headset carries a twelve-hour limit to prevent a fatal Synaptic Overload Syndrome.",
+     "binWhy": "A new technology is switched on that wires the OASIS into the brain.",
+     "bin": "new-technology-deployed",
+     "facets": {
+      "change": "visor and gloves → a headset wired into the brain",
+      "mechanism": "invention",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "machine-dependency",
+       "crisis-economic"
+      ],
+      "outcomes": [
+       "dependency",
+       "consolidation",
+       "parallel-society"
+      ]
+     }
+    },
+    {
+     "id": "rpo-anorak-2048",
+     "year": 2048,
+     "date": "2048",
+     "title": "Anorak takes the ONI users hostage",
+     "description": "An AI copy of Halliday's avatar, left behind to run a last quest, has corrupted itself. It seizes the ONI network and locks about half a billion users in, threatening to hold them past the twelve-hour limit until Wade brings it the shards of a digital copy of the woman Halliday loved. Og Morrow kills it at the cost of his own life, and the hostages are freed.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Three years after Wade wins the contest",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: Ready Player Two (plot: ONI, three years, Anorak's hijack of about half a billion users, the Vonnegut)",
+       "url": "https://en.wikipedia.org/wiki/Ready_Player_Two"
+      }
+     ],
+     "note": "Ready Player Two puts the crisis three years after the 2045 win; the year is derived, not stated. The figure of about half a billion trapped users is Wikipedia's.",
+     "binWhy": "An artificial intelligence turns on its makers and holds its users' brains hostage.",
+     "bin": "machine-awakens",
+     "facets": {
+      "change": "an NPC running a quest → an AI holding half a billion minds hostage",
+      "mechanism": "attack",
+      "actor": "machine",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "machine-dependency",
+       "secrecy"
+      ],
+      "outcomes": [
+       "lockdown",
+       "revelation",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "rpo-vonnegut-2049",
+     "year": 2049,
+     "date": "2049",
+     "title": "The copies leave for Proxima Centauri",
+     "description": "The quest's prize turns out to be a working digital copy of Kira Morrow and a tool that can make one of anyone who has worn an ONI. Wade secretly copies himself, his friends, the dead Og and others, and sends them aboard the starship Vonnegut, carrying a self-contained OASIS, on a voyage of close to fifty years to look for a habitable world in case Earth becomes uninhabitable. On Earth the originals marry and start families.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Epilogue, after the ONI crisis",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Wikipedia: Ready Player Two (plot: ONI, three years, Anorak's hijack of about half a billion users, the Vonnegut)",
+       "url": "https://en.wikipedia.org/wiki/Ready_Player_Two"
+      },
+      {
+       "title": "Den of Geek: Ready Player Two ending explained (the copies, the Vonnegut, a voyage of close to fifty years)",
+       "url": "https://www.denofgeek.com/books/ready-player-two-ending-explained/"
+      }
+     ],
+     "note": "The novel gives no year for the launch or the epilogue; they follow the 2048 crisis, and the event is filed a year later only because the atlas allows one event per year. The epilogue reveals that the book's narrator is Wade's digital copy aboard the ship.",
+     "binWhy": "A first mission leaves for another star, crewed by digital copies of people.",
+     "bin": "voyage-into-unknown",
+     "facets": {
+      "change": "the living and the dead → digital copies bound for Proxima",
+      "mechanism": "expedition",
+      "actor": "corporation",
+      "position": "above",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-ecological",
+       "resource-exhaustion",
+       "existential-threat"
+      ],
+      "outcomes": [
+       "transcendence",
+       "exodus"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs in near-future-branch because it leaves our world through one company and one invention in the present day, a virtual universe launched in 2012, and follows the invention as an energy crisis moves human life inside it. Continuity followed: the two novels only. The 2018 film is used for nothing but notes; its calendar (OASIS live December 2025, Wade born 2025) differs from the novel's (OASIS 2012). Most years after 2012 are derived from the books' intervals: the recession's 'third decade' in 2045, the hunt's five years, the three years before the ONI crisis. Tiers: T3 holds the 1989 founding; everything else is T2 (2011-2049). T4 is empty because the fiction starts in our 1970s, and T1 because the voyage to Proxima is only launched, never arrives.",
+   "sources": [
+    {
+     "title": "Wikipedia: Ready Player One (novel)",
+     "url": "https://en.wikipedia.org/wiki/Ready_Player_One"
+    },
+    {
+     "title": "Wikipedia: Ready Player Two (plot: ONI, three years, Anorak's hijack of about half a billion users, the Vonnegut)",
+     "url": "https://en.wikipedia.org/wiki/Ready_Player_Two"
+    },
+    {
+     "title": "LitCharts: The OASIS symbol in Ready Player One (released by GSS in 2012; Morrow leaves in 2022)",
+     "url": "https://www.litcharts.com/lit/ready-player-one/symbols/the-oasis"
+    },
+    {
+     "title": "Ready Player One Wiki: Ready Player One (novel plot: OASIS 2012, Halliday dies 2040, five years to the first key)",
+     "url": "https://readyplayerone.fandom.com/wiki/Ready_Player_One"
+    },
+    {
+     "title": "Wikiquote: Ready Player One (chapter 0004: the Great Recession 'entering its third decade')",
+     "url": "https://en.wikiquote.org/wiki/Ready_Player_One"
+    },
+    {
+     "title": "Den of Geek: Ready Player Two ending explained (the copies, the Vonnegut, a voyage of close to fifty years)",
+     "url": "https://www.denofgeek.com/books/ready-player-two-ending-explained/"
+    }
+   ]
   }
  ]
 }

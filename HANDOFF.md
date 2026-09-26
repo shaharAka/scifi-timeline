@@ -16,7 +16,11 @@ the entry point and it tells you what to trust and what will bite you.
   present, compared for what followed, in what order, what differed and what
   repeated. The tree chart, the Order view and the bins all serve that use.
   More worlds will keep being added, so everything is built to take them.
-- **State:** all three test suites green. 5 archetypes, 24 lineages, 237 events,
+- **State (2026-09-26):** all three test suites green. 5 archetypes, 43
+  lineages, 443 events. The Ranking tab (`94-ranking.js`) ranks every story
+  against our road thread by thread and replays the leader; ten worlds were
+  added through `tools/world-brief.py` and `tools/check-world.py`.
+- **Earlier state:** 24 lineages, 237 events,
   24 world dossiers. The viewer was rebuilt on 2026-09-16: tree chart, `src/`
   modules assembled by the build, design tokens, atlas config, single-canvas
   camera and explorer panel. Visually verified in Chrome at 1500px; not yet

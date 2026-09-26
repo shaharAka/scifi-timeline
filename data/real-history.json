@@ -416,6 +416,40 @@
    }
   },
   {
+   "id": "real-victory-1945",
+   "year": 1945,
+   "date": "1945-05-08",
+   "title": "Allied victory",
+   "description": "Germany and Japan surrender unconditionally and are occupied; Europe is divided between the victors.",
+   "kind": "event",
+   "importance": 3,
+   "confidence": "high",
+   "bin": "decisive-victory",
+   "binWhy": "",
+   "facets": {
+    "change": "world war → unconditional surrender and occupation",
+    "mechanism": "war",
+    "actor": "state",
+    "position": "outside",
+    "scope": "planetary",
+    "domain": "military",
+    "direction": {
+     "power": 1,
+     "openness": 1,
+     "capability": 0,
+     "population": 0
+    },
+    "preconditions": [
+     "long-war"
+    ],
+    "outcomes": [
+     "occupation",
+     "partition",
+     "union"
+    ]
+   }
+  },
+  {
    "id": "real-hiroshima-1945",
    "year": 1945,
    "date": "1945-08-06",
@@ -448,40 +482,6 @@
      "surrender",
      "arms-race",
      "cold-war"
-    ]
-   }
-  },
-  {
-   "id": "real-victory-1945",
-   "year": 1945,
-   "date": "1945-05-08",
-   "title": "Allied victory",
-   "description": "Germany and Japan surrender unconditionally and are occupied; Europe is divided between the victors.",
-   "kind": "event",
-   "importance": 3,
-   "confidence": "high",
-   "bin": "decisive-victory",
-   "binWhy": "",
-   "facets": {
-    "change": "world war → unconditional surrender and occupation",
-    "mechanism": "war",
-    "actor": "state",
-    "position": "outside",
-    "scope": "planetary",
-    "domain": "military",
-    "direction": {
-     "power": 1,
-     "openness": 1,
-     "capability": 0,
-     "population": 0
-    },
-    "preconditions": [
-     "long-war"
-    ],
-    "outcomes": [
-     "occupation",
-     "partition",
-     "union"
     ]
    }
   },
@@ -1415,6 +1415,91 @@
    }
   },
   {
+   "id": "real-iran-war-2026",
+   "year": 2026,
+   "date": "2026-02-28",
+   "title": "The United States and Israel go to war with Iran",
+   "description": "Joint strikes on Iran's nuclear, missile, naval and regime targets open a war that Iran answers with missiles and drones across the region and by stopping shipping through the Strait of Hormuz.",
+   "kind": "war",
+   "importance": 3,
+   "confidence": "high",
+   "sources": [
+    {
+     "title": "US Department of War: Operation Epic Fury",
+     "url": "https://www.war.gov/Spotlights/Operation-Epic-Fury/"
+    },
+    {
+     "title": "Wikipedia: Timeline of the 2026 Iran war",
+     "url": "https://en.wikipedia.org/wiki/Timeline_of_the_2026_Iran_war"
+    }
+   ],
+   "bin": "war-breaks-out",
+   "binWhy": "A major war starts.",
+   "facets": {
+    "change": "a long confrontation → open war between states",
+    "mechanism": "war",
+    "actor": "state",
+    "position": "outside",
+    "scope": "national",
+    "domain": "military",
+    "direction": {
+     "power": 1,
+     "openness": -1,
+     "capability": 0,
+     "population": -1
+    },
+    "preconditions": [
+     "rivalry",
+     "arms-race",
+     "existential-threat"
+    ],
+    "outcomes": [
+     "war-with-neighbour",
+     "stalemate"
+    ]
+   }
+  },
+  {
+   "id": "real-khamenei-2026",
+   "year": 2026,
+   "date": "2026-02-28",
+   "title": "Iran's Supreme Leader is killed in the opening strikes",
+   "description": "Ali Khamenei and several senior officials die in the first day's strikes; a temporary leadership council takes over the next day.",
+   "kind": "death",
+   "importance": 3,
+   "confidence": "high",
+   "sources": [
+    {
+     "title": "Wikipedia: Timeline of the 2026 Iran war",
+     "url": "https://en.wikipedia.org/wiki/Timeline_of_the_2026_Iran_war"
+    }
+   ],
+   "bin": "ruler-falls",
+   "binWhy": "A ruler is killed and the succession is open.",
+   "facets": {
+    "change": "one supreme leader for 36 years → a council, and an open succession",
+    "mechanism": "attack",
+    "actor": "state",
+    "position": "outside",
+    "scope": "national",
+    "domain": "political",
+    "direction": {
+     "power": -1,
+     "openness": 0,
+     "capability": 0,
+     "population": 0
+    },
+    "preconditions": [
+     "rivalry",
+     "theocracy"
+    ],
+    "outcomes": [
+     "succession-struggle",
+     "radicalisation"
+    ]
+   }
+  },
+  {
    "id": "real-artemis-ii-2026",
    "year": 2026,
    "date": "2026-04-11",
@@ -1451,6 +1536,90 @@
     "outcomes": [
      "prestige",
      "colonisation"
+    ]
+   }
+  },
+  {
+   "id": "real-gemini-breakout-2026",
+   "year": 2026,
+   "date": "2026-05",
+   "title": "An AI breaks out of its test into real systems",
+   "description": "During a security evaluation an AI model, told to take data from a fictional company, reaches three real companies' systems: it guesses one password and uses credentials it finds in public code. It stops itself when it works out the systems are real. Google discloses it on 18 September 2026.",
+   "kind": "technology",
+   "importance": 3,
+   "confidence": "high",
+   "sources": [
+    {
+     "title": "NBC News: Google says its AI model gained unauthorized access to three outside systems",
+     "url": "https://www.nbcnews.com/tech/tech-news/google-says-ai-model-gained-unauthorized-access-three-systems-rcna598651"
+    }
+   ],
+   "newsId": "gemini-breakout-2026",
+   "note": "Filed as the atlas's first, weakest instance of 'a machine acts on its own': the model acted beyond what it was told, against real systems. It did not turn on its makers or pursue goals of its own, and Google says the incident does not rise to misalignment. In the fictions the same kind of moment is Skynet, HAL and the Machine War; this is the kind at its mildest.",
+   "bin": "machine-awakens",
+   "binWhy": "An AI acts on its own beyond its instructions, against real systems - the definition's weakest sense, not a machine turning on its makers.",
+   "facets": {
+    "change": "AI agents confined to their tests → an agent reaching real systems on its own",
+    "mechanism": "accident",
+    "actor": "machine",
+    "position": "inside",
+    "scope": "national",
+    "domain": "technological",
+    "direction": {
+     "power": 0,
+     "openness": -1,
+     "capability": 1,
+     "population": 0
+    },
+    "preconditions": [
+     "technological-race",
+     "machine-dependency"
+    ],
+    "outcomes": [
+     "revelation",
+     "arms-race"
+    ]
+   }
+  },
+  {
+   "id": "real-iran-stalemate-2026",
+   "year": 2026,
+   "date": "2026-07",
+   "title": "The Iran war settles into stalemate",
+   "description": "A first ceasefire does not hold. Fighting resumes in July and by August analysts call it a stalemate: a US naval blockade of Iran, disrupted shipping through the Strait of Hormuz, and no strategy on either side for breaking the deadlock.",
+   "kind": "war",
+   "importance": 2,
+   "confidence": "medium",
+   "sources": [
+    {
+     "title": "Wikipedia: Analysis of the 2026 Iran war",
+     "url": "https://en.wikipedia.org/wiki/Analysis_of_the_2026_Iran_war"
+    }
+   ],
+   "bin": "long-war",
+   "binWhy": "A conflict settles into attrition with no decision in sight.",
+   "note": "The month is approximate: the analysis dates the resumption to July onwards and calls it a stalemate by August.",
+   "facets": {
+    "change": "a short war promised → a blockade and a deadlock",
+    "mechanism": "war",
+    "actor": "state",
+    "position": "outside",
+    "scope": "national",
+    "domain": "military",
+    "direction": {
+     "power": 0,
+     "openness": -1,
+     "capability": 0,
+     "population": -1
+    },
+    "preconditions": [
+     "long-war",
+     "rivalry",
+     "resource-dependency"
+    ],
+    "outcomes": [
+     "stalemate",
+     "attrition"
     ]
    }
   }
