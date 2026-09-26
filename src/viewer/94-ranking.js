@@ -581,7 +581,13 @@ var RK_PLAIN = {
   "settlement-founded|in-orbit":"people live in orbit", "settlement-founded|moon-or-planet":"a base on another world",
   "plague|natural":"a pandemic", "plague|engineered":"a man-made plague", "uprising|mass-protest":"people take to the streets", "uprising|armed-rebellion":"an armed revolt",
   "truth-revealed|state-secret":"a state secret leaks", "power-seized|coup":"a coup", "power-seized|revolution":"a revolution", "power-seized|strongman-legal":"a strongman takes power",
-  "terror-attack|on-civilians":"a terror attack", "mass-death|nuclear":"a nuclear strike", "market-crash":"the markets crash", "peace-made":"peace is signed", "union-founded":"nations unite"
+  "terror-attack|on-civilians":"a terror attack", "terror-attack|targeted":"a targeted strike", "terror-attack|cyber":"a cyber attack",
+  "the-call":"an ordinary person is drawn in", "chosen-one":"a destined child", "uprising|revolt-of-the-owned":"the enslaved rise up",
+  "defeat-and-occupation":"defeat and occupation", "decisive-victory":"a decisive victory", "secret-kept":"a secret is kept",
+  "truth-revealed|hidden-world":"the hidden world comes out", "truth-revealed|corporate-crime":"a company's crime comes out", "first-contact":"first contact",
+  "long-after":"a jump far ahead", "beyond-human":"people go beyond human", "civilisation-collapses":"civilisation collapses", "gateway-opens":"a gateway opens",
+  "state-dissolves":"a state breaks apart", "new-institution":"a new institution", "doomsday-weapon":"a doomsday weapon", "golden-age":"a golden age",
+  "time-traveller-arrives":"someone arrives from another time", "mass-death|disaster":"a disaster kills millions", "mass-death|massacre":"a massacre", "mass-death|nuclear":"a nuclear strike", "market-crash":"the markets crash", "peace-made":"peace is signed", "union-founded":"nations unite"
 };
 function rkPlain(tok){ var w = RK_PLAIN[tok] || RK_PLAIN[rkBin(tok)] || rkLabel(tok).replace(/^[^:]*:\s*/, "").toLowerCase(); return w.charAt(0).toUpperCase() + w.slice(1); }
 /* the leader's clearest shared steps, in words. The order claim ("in the same
@@ -698,6 +704,10 @@ function rkAnswerHtml(M){
 }
 
 function rkCardHtml(M, kind){
+  var site0 = "shaharaka.github.io/scifi-timeline";
+  if(kind === "post") return rkAfterPosterHtml(M, site0);
+  if(kind === "og") return rkAfterOgHtml(M, site0);
+  if(kind === "rank") kind = "post-light";
   var A = rkAnswer(M), st = A.st, l = st.l, art = typeof artFor === "function" ? artFor(l.id) : null, p = A.pushed;
   var site = "shaharaka.github.io/scifi-timeline";
   var img = art && art.lg ? '<img class="rkc-art" src="' + esc(art.lg) + '" alt="">' : '';
@@ -710,7 +720,7 @@ function rkCardHtml(M, kind){
       + rkEvidenceHtml(A, "rkc") + ends
       + '<div class="rkc-foot">Where We Are Now · ' + site + '</div></div></div>';
   }
-  if(kind === "post") return rkLightPoster(A, site, img, push, ends);
+  if(kind === "post-light") return rkLightPoster(A, site, img, push, ends);
   var runners = A.runners.map(function(r){
     var a = typeof artFor === "function" ? artFor(r.st.id) : null;
     return '<div class="rkc-run">' + (a && a.sm ? '<img src="' + esc(a.sm) + '" alt="">' : '<span class="rkc-noimg"></span>') + '<b>' + esc(r.st.l.title) + '</b><em>' + rkPct(r.share) + '</em></div>';
@@ -748,7 +758,7 @@ function rkLightPoster(A, site, img, push, ends){
 function rkShowCard(kind){
   var M = pickerModel(), id = "rk-card-host", host = document.getElementById(id);
   if(!host){ host = document.createElement("div"); host.id = id; document.body.appendChild(host); }
-  host.className = "rkc-host " + (kind === "og" ? "og" : kind === "post" ? "post light" : "post");
+  host.className = "rkc-host " + (kind === "og" ? "og light" : kind === "post" || kind === "rank" ? "post light" : "post");
   host.innerHTML = rkCardHtml(M, kind);
   var cw = kind === "og" ? 1200 : 1080, chh = kind === "og" ? 630 : 1350;
   if(kind === "post-dark") kind = "post-dark";
@@ -762,4 +772,102 @@ function rkHideCard(){
   var host = document.getElementById("rk-card-host");
   if(host && host.parentNode) host.parentNode.removeChild(host);
   if(document.body) document.body.classList.remove("card-mode");
+}
+
+/* --- what came next: the lead reading -------------------------------------------------
+   Tested against chance, no story follows our whole road; what the atlas can
+   say honestly is narrower and more useful: this headline's kind of moment
+   has happened in N stories, here is what came next in each, and how they end.
+   Matched at the sub-kind (a crewed Moon flight, not any voyage); where fewer
+   than RK_AFTER_MIN stories share the sub-kind, at the broad kind, and it says so. */
+var RK_AFTER_MIN = 5;
+function rkAfter(M, bin, sub){
+  function collect(match){
+    var out = [];
+    M.strands.forEach(function(st){
+      var toks = rkToks(st), j = -1;
+      for(var k = 0; k < toks.length; k++){ if(match(toks[k], st.kinds[k])){ j = k; break; } }
+      if(j >= 0) out.push({ st:st, x:st.seq[j], next:st.seq[j + 1] || null });
+    });
+    return out;
+  }
+  var tok = rkTok(bin, sub), rows = collect(function(t){ return t === tok; }), level = sub ? "sub" : "kind";
+  if(sub && rows.length < RK_AFTER_MIN){ rows = collect(function(t, k){ return k === bin; }); level = "kind"; }
+  var ends = { optimistic:0, pessimistic:0, unknown:0 };
+  rows.forEach(function(r){ ends[r.st.ending.valence]++; });
+  /* stories that went on first, then the ones that end there; each group by title */
+  rows.sort(function(a, b){ return (!a.next - !b.next) || a.st.l.title.localeCompare(b.st.l.title); });
+  return { bin:bin, sub:sub, tok:tok, level:level, rows:rows, n:rows.length, N:M.strands.length, ends:ends,
+           word:rkPlain(level === "sub" ? tok : bin) };
+}
+/* the headline the front page and the poster read: the newest news item */
+function rkAfterNews(M){
+  var items = (typeof mpNewsList === "function" ? mpNewsList() : []).filter(function(n){ return n.bin; });
+  return items[0] || null;
+}
+function rkEndsLine(E){
+  var bits = [];
+  if(E.ends.optimistic) bits.push(E.ends.optimistic + " end well");
+  if(E.ends.pessimistic) bits.push(E.ends.pessimistic + " end badly");
+  if(E.ends.unknown) bits.push(E.ends.unknown + " still open");
+  return bits.join(" · ");
+}
+function rkEndsBar(E, cls){
+  return '<div class="' + cls + '-bar">' + ["optimistic", "unknown", "pessimistic"].map(function(v){
+    return E.ends[v] ? '<i class="' + v + '" style="flex:' + E.ends[v] + '"></i>' : '';
+  }).join("") + '</div>';
+}
+function rkAfterRow(r, cls, full){
+  var nx = r.next, nw = nx ? rkPlain(rkTok(nx.bin, nx.e.sub)) : null;
+  return '<li' + (full ? ' data-world="' + esc(r.st.id) + '"' : '') + '><b>' + esc(r.st.l.title) + '</b>'
+    + '<span>' + (nx ? 'then: ' + esc(full ? nx.e.title : rkShortTitle(nx.e.title, 60)) : 'and there the story ends') + '</span>'
+    + (nx ? '<em>' + esc(nw.charAt(0).toUpperCase() + nw.slice(1)) + '</em>' : '<em class="end ' + r.st.ending.valence + '">' + esc(r.st.ending.label) + '</em>') + '</li>';
+}
+function rkShortTitle(t, n){ t = String(t || ""); return t.length > n ? t.slice(0, n - 1).replace(/[\s,;:]+\S*$/, "") + "…" : t; }
+function rkAfterHead(E, n){
+  var w = E.word.charAt(0).toUpperCase() + E.word.slice(1);
+  return { w:w, line:(E.n === 1 ? "It has happened in 1 of " : "It has happened in " + E.n + " of ") + E.N + " sci-fi stories"
+    + (E.level === "kind" && E.sub ? " (as " + mpLabel(E.bin).toLowerCase() + ", of any kind)" : "") + "." };
+}
+
+/* the landing page: the newest headline, read forward through the stories */
+function rkAfterHtml(M){
+  var n = rkAfterNews(M); if(!n) return "";
+  var E = rkAfter(M, n.bin, n.sub), H = rkAfterHead(E, n);
+  var R = rkRank(M), top = R.rows[0];
+  return '<section class="aft">'
+    + '<div class="aft-k">In the news · ' + esc(fmtNewsDate(n.date)) + '</div>'
+    + '<button class="aft-h" data-news="' + esc(mpNewsKey(n)) + '">' + esc(n.headline) + '</button>'
+    + '<div class="aft-card"><div class="aft-w">' + esc(H.w) + '</div><p class="aft-n">' + esc(H.line) + '</p>'
+    + (E.n ? rkEndsBar(E, "aft") + '<p class="aft-e">' + esc(rkEndsLine(E)) + '</p>' : '')
+    + (E.n ? '<h3 class="aft-rh">What came next in each</h3><ol class="aft-list">' + E.rows.map(function(r){ return rkAfterRow(r, "aft", true); }).join("") + '</ol>' : '')
+    + '<div class="aft-acts"><button class="pk-btn primary" data-kind="' + esc(E.bin) + '">All the stories with ' + esc(mpLabel(E.bin).toLowerCase()) + '</button>'
+    + '<button class="pk-btn" data-news="' + esc(mpNewsKey(n)) + '">Read the headline</button></div></div>'
+    + (top ? '<button class="aft-rank" data-go="rank"><span>Which story are we living in?</span><b>No story clearly follows our road yet.</b><em>The closest partial match is ' + esc(top.st.l.title) + ' →</em></button>' : '')
+    + '<p class="aft-about">' + esc(E.N + " sci-fi timelines, each a chain of dated moments, read against the real news.") + '</p>'
+    + '</section>';
+}
+
+/* the poster: the same reading, for a feed */
+function rkAfterPosterHtml(M, site){
+  var n = rkAfterNews(M); if(!n) return "";
+  var E = rkAfter(M, n.bin, n.sub), H = rkAfterHead(E, n);
+  var rows = E.rows.slice(0, 7).map(function(r){ return rkAfterRow(r, "pa", false); }).join("");
+  return '<div class="rkc pa">'
+    + '<div class="pa-k">In the news · ' + esc(fmtNewsDate(n.date)) + '</div>'
+    + '<div class="pa-h">' + esc(rkShortTitle(n.headline, 110)) + '</div>'
+    + '<div class="pa-card"><div class="pa-w">' + esc(H.w) + '</div><div class="pa-n">' + esc(H.line) + '</div>'
+    + (E.n ? rkEndsBar(E, "pa") + '<div class="pa-e">' + esc(rkEndsLine(E)) + '</div>' : '')
+    + (E.n ? '<div class="pa-rh">What came next in them</div><ol class="pa-list">' + rows + '</ol>' + (E.n > 7 ? '<div class="pa-more">and ' + (E.n - 7) + ' more on the site</div>' : '') : '')
+    + '</div>'
+    + '<div class="pa-foot"><span>' + esc(E.N + " sci-fi timelines, read against the real news") + '</span><b>' + esc(site) + '</b></div></div>';
+}
+function rkAfterOgHtml(M, site){
+  var n = rkAfterNews(M); if(!n) return "";
+  var E = rkAfter(M, n.bin, n.sub), H = rkAfterHead(E, n);
+  return '<div class="rkc pao"><div class="pa-k">In the news · ' + esc(fmtNewsDate(n.date)) + '</div>'
+    + '<div class="pao-h">' + esc(rkShortTitle(n.headline, 90)) + '</div>'
+    + '<div class="pao-w">' + esc(H.w) + ': ' + esc(H.line.replace(/^It has /, "it has ")) + '</div>'
+    + (E.n ? rkEndsBar(E, "pa") + '<div class="pa-e">' + esc(rkEndsLine(E)) + '</div>' : '')
+    + '<div class="pa-foot"><span>What came next in each story</span><b>' + esc(site) + '</b></div></div>';
 }

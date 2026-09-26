@@ -420,6 +420,16 @@ Four rules follow from that, and they are the owner's:
   stories spread out instead of tying. With that many stories a leader holds
   a few per cent, so the leader is also read as a multiple of an average
   story's share.
+- **What came next leads; the ranking follows** (`rkAfter`). Tested against
+  chance (each story's in-order match against the same story shuffled), no
+  story follows our real history beyond chance once that history is sampled
+  by rules (1,081 moments since 1900; see `data/real-history.json`). So the
+  front page and the posts lead with a claim the data supports: the newest
+  headline's kind of moment (at sub-kind, or the broad kind where fewer than
+  five stories share the sub-kind) has happened in N of the stories; what came
+  next in each; how they end. The ranking stays, as "which story are we
+  living in? no story clearly follows our road yet; the closest partial
+  match is …", with its own card (`#card=rank`).
 - **The ranking matches one chain, in order.** Our last `RK_LEN` (20) moments,
   every thread together, are aligned against each story's chain as a
   subsequence: a step counts only where it comes in the same order for us and

@@ -81,11 +81,13 @@ function pkEndingsBar(M, title){
 function pickerTodayHtml(M){
   var news = mpNewsList(), R = rkRank(M), prev = R.upto > 1 ? rkRank(M, R.upto - 1) : null;
   /* a reader from a post lands here: the same answer the post gave, first */
-  var html = rkAnswerHtml(M) + '<div class="pk-cols"><div class="pk-main">';
-  if(news.length) html += pkNewsCard(news[0], true);
-  var near = R.rows.slice(5, 11).filter(function(r){ return rkPairs(R, r).length; });
+  /* a reader from a post lands on the post's reading: the newest headline,
+     read forward through the stories that saw it */
+  var html = rkAfterHtml(M) + '<div class="pk-cols"><div class="pk-main">';
+  if(news.length > 1) html += pkNewsCard(news[1], true);
+  var near = R.rows.slice(0, 6).filter(function(r){ return rkPairs(R, r).length; });
   if(near.length){
-    html += '<section class="pk-sec"><h3 class="pk-sh">Further down the ranking</h3><div class="pk-rail">'
+    html += '<section class="pk-sec"><h3 class="pk-sh">Closest partial chains</h3><div class="pk-rail">'
       + near.map(function(r){
         return '<button class="pk-tile" data-world="' + esc(r.st.id) + '">' + pkThumb(r.st.id, "pk-tthumb")
           + '<span class="pk-ttitle">' + r.rank + '. ' + esc(r.st.l.title) + ' ' + rkMove(r, prev) + '</span>' + pkBadge(r.st)

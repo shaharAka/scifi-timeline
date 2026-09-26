@@ -799,6 +799,69 @@ body.card-mode{overflow:hidden}
 
 .rkl-ev b i,.rkc-ev b i,.ans-ev b i{font-style:normal;display:inline-block;min-width:1.35em;opacity:.45;font-variant-numeric:tabular-nums}
 
+/* what came next: the landing block */
+.aft{margin:0 0 10px}
+.aft button{font:inherit;color:inherit;background:none;border:0;padding:0;text-align:inherit;cursor:pointer}
+.aft-k{font-size:13px;font-weight:650;color:var(--accent)}
+.aft .aft-h{display:block;font-size:24px;line-height:1.2;font-weight:780;letter-spacing:-.015em;color:var(--ink-0);margin:4px 0 12px}
+.aft-card{background:var(--surface);border:1px solid var(--line-1);border-radius:16px;padding:16px 16px 14px}
+.aft-w{font-size:26px;font-weight:800;letter-spacing:-.02em;color:var(--ink-0);line-height:1.1}
+.aft-n{font-size:15.5px;color:var(--ink-1);margin:6px 0 12px;line-height:1.45}
+.aft-bar,.pa-bar{display:flex;height:10px;border-radius:5px;overflow:hidden;background:var(--bg-2);gap:2px}
+.aft-bar i,.pa-bar i{display:block;height:100%}
+.aft-bar .optimistic,.pa-bar .optimistic{background:var(--ok)}.aft-bar .pessimistic,.pa-bar .pessimistic{background:var(--bad)}.aft-bar .unknown,.pa-bar .unknown{background:var(--ink-4)}
+.aft-e{font-size:14px;color:var(--ink-2);margin:6px 0 0;font-weight:600}
+.aft-rh{font-size:14px;font-weight:700;color:var(--ink-2);margin:18px 0 6px}
+.aft-list{list-style:none;margin:0;padding:0}
+.aft-list li{display:grid;grid-template-columns:1fr auto;column-gap:12px;align-items:baseline;padding:9px 0;border-top:1px solid var(--line-1);cursor:pointer}
+.aft-list b{font-size:15.5px;color:var(--ink-0)}
+.aft-list span{grid-column:1;font-size:13.5px;color:var(--ink-2);line-height:1.4}
+.aft-list em{grid-column:2;grid-row:1 / span 2;align-self:center;font-style:normal;font-size:12px;font-weight:700;background:#ffe19a;color:#10161f;border-radius:12px;padding:3px 9px;max-width:140px;text-align:center;line-height:1.3}
+.aft-list em.end{background:var(--bg-2);color:var(--ink-2)}
+.aft-list em.end.pessimistic{color:var(--bad)}.aft-list em.end.optimistic{color:var(--ok)}
+.aft-acts{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.aft .pk-btn{border:1px solid var(--line-2);border-radius:10px;padding:12px 14px;text-align:center;background:var(--surface)}
+.aft .pk-btn.primary{background:var(--ink-0);border-color:var(--ink-0);color:var(--surface)}
+.aft .aft-rank{display:flex;flex-direction:column;gap:2px;width:100%;margin-top:12px;padding:12px 14px;border:1px solid var(--line-1);border-radius:12px;background:var(--bg-2)}
+.aft-rank span{font-size:12.5px;color:var(--ink-3);font-weight:650}
+.aft-rank b{font-size:15px;color:var(--ink-0)}
+.aft-rank em{font-style:normal;font-size:13.5px;color:var(--accent);font-weight:600}
+.aft-about{font-size:13px;color:var(--ink-3);margin:10px 2px 0}
+@media (min-width:720px){
+  body.shell .aft{max-width:860px;margin:0 auto 30px}
+  body.shell .aft .aft-h{font-size:36px}
+  body.shell .aft-card{padding:24px 26px 20px}
+  body.shell .aft-w{font-size:34px}
+  body.shell .aft-acts{flex-direction:row}
+  body.shell .aft-acts .pk-btn{flex:1 1 0}
+}
+
+/* what came next: the posters (light, the app's colours) */
+.rkc.pa{width:1080px;height:1350px;box-sizing:border-box;padding:56px 60px 44px;background:#eef2f6;color:#101c28;display:flex;flex-direction:column;font-family:var(--font-sans)}
+.pa-k{font-size:24px;font-weight:700;color:#1d5c9e}
+.pa-h{font-size:46px;line-height:1.14;font-weight:800;letter-spacing:-.02em;margin-top:10px}
+.pa-card{margin-top:26px;background:#f8fbfd;border:1px solid #d2dbe4;border-radius:28px;padding:30px 34px 26px;box-shadow:0 18px 40px rgba(16,28,40,.08)}
+.pa-w{font-size:52px;font-weight:800;letter-spacing:-.03em;line-height:1.05}
+.pa-n{font-size:28px;color:#22323f;margin:10px 0 18px;line-height:1.35}
+.pa-bar{height:16px;border-radius:8px;background:#e4eaf1}
+.pa .pa-bar .optimistic{background:#1f7a55}.pa .pa-bar .pessimistic{background:#a03a34}.pa .pa-bar .unknown{background:#9fafbd}
+.pa-e{font-size:24px;font-weight:650;color:#4a5c6b;margin-top:10px}
+.pa-rh{font-size:24px;font-weight:700;color:#4a5c6b;margin:24px 0 6px}
+.pa-list{list-style:none;margin:0;padding:0}
+.pa-list li{display:grid;grid-template-columns:1fr auto;column-gap:16px;align-items:baseline;padding:10px 0;border-top:1px solid #d2dbe4}
+.pa-list b{font-size:27px}
+.pa-list span{grid-column:1;font-size:20px;color:#4a5c6b;line-height:1.35}
+.pa-list em{grid-column:2;grid-row:1 / span 2;align-self:center;font-style:normal;font-size:18px;font-weight:700;background:#ffe19a;border-radius:999px;padding:6px 14px;white-space:nowrap;max-width:300px;overflow:hidden;text-overflow:ellipsis}
+.pa-list em.end{background:#e4eaf1;color:#4a5c6b}
+.pa-list em.end.pessimistic{color:#a03a34}.pa-list em.end.optimistic{color:#1f7a55}
+.pa-more{font-size:20px;color:#74879a;margin-top:8px}
+.pa-foot{margin-top:auto;display:flex;justify-content:space-between;align-items:baseline;font-size:21px;color:#4a5c6b}
+.pa-foot b{color:#101c28}
+.rkc.pao{width:1200px;height:630px;box-sizing:border-box;padding:48px 60px 40px;background:#eef2f6;color:#101c28;display:flex;flex-direction:column;font-family:var(--font-sans)}
+.pao-h{font-size:46px;line-height:1.15;font-weight:800;letter-spacing:-.02em;margin:10px 0 18px}
+.pao-w{font-size:30px;font-weight:650;color:#22323f;margin-bottom:16px}
+.pao .pa-e{font-size:24px}
+
 /* the answer: what a reader lands on, the poster made tappable */
 .ans{margin:0 0 8px}
 .ans-head h1{font-size:28px;line-height:1.12;margin:2px 0 6px;letter-spacing:-.02em;color:var(--ink-0)}

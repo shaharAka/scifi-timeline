@@ -30,8 +30,8 @@ shot(){
 }
 mkdir -p share assets/share
 shot --window-size=1080,1350 --screenshot="share/rank-post-$D.png" "file://$PWD/index.html#card=post"
-shot --window-size=1080,1350 --screenshot="share/rank-post-dark-$D.png" "file://$PWD/index.html#card=post-dark"
+shot --window-size=1080,1350 --screenshot="share/rank-ranking-$D.png" "file://$PWD/index.html#card=rank"
 shot --window-size=1200,630 --screenshot="assets/share/og-rank.png" "file://$PWD/index.html#card=og"
 echo "share/rank-post-$D.png"
-echo "share/rank-post-dark-$D.png"
+echo "share/rank-ranking-$D.png"
 echo "assets/share/og-rank.png"

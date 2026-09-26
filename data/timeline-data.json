@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-09-26T23:48:27Z",
+  "generated": "2026-09-26T23:53:16Z",
   "source": "data/parts/*.json",
   "lineages": 143,
   "events": 1344,
@@ -79495,6 +79495,7 @@
     "for-all-mankind"
    ],
    "bin": "long-war",
+   "sub": "stalemate",
    "id": "iran-un-2026"
   },
   {
@@ -79513,6 +79514,7 @@
     "neuromancer"
    ],
    "bin": "machine-awakens",
+   "sub": "escapes-control",
    "id": "gemini-breakout-2026"
   },
   {
@@ -79530,7 +79532,8 @@
     "2001-space-odyssey",
     "the-expanse"
    ],
-   "bin": "voyage-into-unknown"
+   "bin": "voyage-into-unknown",
+   "sub": "crewed-orbit-moon"
   },
   {
    "date": "2025-11-13",
@@ -79546,6 +79549,7 @@
     "terminator"
    ],
    "bin": "new-technology-deployed",
+   "sub": "ai-computing",
    "id": "ai-espionage-2025"
   },
   {
@@ -79562,7 +79566,8 @@
     "2001-space-odyssey",
     "interstellar"
    ],
-   "bin": "voyage-into-unknown"
+   "bin": "voyage-into-unknown",
+   "sub": "uncrewed-probe"
   },
   {
    "date": "2022-12-05",
@@ -79578,7 +79583,8 @@
     "interstellar",
     "foundation"
    ],
-   "bin": "breakthrough-science"
+   "bin": "breakthrough-science",
+   "sub": "physics-energy"
   }
  ],
  "bins": [

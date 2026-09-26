@@ -939,19 +939,23 @@ attempt("ranking", () => {
   /* the poster cards and the race: the leader named, a line per story drawn */
   const post = String(t.rankCard("post")), og = String(t.rankCard("og"));
   const title = top.st.l.title.replace(/&/g, "&amp;").replace(/'/g, "&#39;");
-  check(post.includes(title) && (post.includes("rkl-runs") || post.includes("rkc-runs")) && post.includes("Spoiler:"), "the post card does not show the leader, its ending and the runners-up");
-  check(!/of the fit/.test(post), "the post card uses the ranking's jargon; it is for people scrolling past");
-  check(og.includes(title) && og.includes("rkc-og"), "the link-preview card does not show the leader");
+  /* the post leads with what came next after the newest headline; the ranking
+     has a poster of its own */
+  const rankCard = String(t.rankCard("rank"));
+  check(/has happened in \d+ of \d+ sci-fi stories/.test(post) && post.includes("pa-list"), "the post card does not say how many stories saw this and what came next");
+  check(rankCard.includes(title) && (rankCard.includes("rkl-runs") || rankCard.includes("rkc-runs")) && rankCard.includes("Spoiler:"), "the ranking card does not show the leader, its ending and the runners-up");
+  check(!/of the fit/.test(post) && !/of the fit/.test(rankCard), "the post card uses the ranking's jargon; it is for people scrolling past");
+  check(/has happened in/.test(og), "the link-preview card does not say how many stories saw the headline");
   /* a reader from a post lands on the same answer the post gave */
   const answer = String(t.answerHtml());
-  check(today.indexOf('<section class="ans">') === 0, "Today does not open on the answer");
-  check(answer.includes(title) && post.includes(title), "the landing answer and the poster name different stories");
-  check(/The headline that moved it most/.test(post) && /The headline that moved it most/.test(answer), "the news that pushed us is missing from the poster or the landing page");
-  check(/checked against the real news/.test(post) && /checked against the real news/.test(answer), "the one-line explanation of the atlas is missing");
-  check(/% match/.test(post) && /% match/.test(answer), "the match percentage is missing");
+  check(today.indexOf('<section class="aft">') === 0, "Today does not open on the newest headline read forward");
+  check(answer.includes(title) && rankCard.includes(title), "the ranking answer and the ranking card name different stories");
+
+  check(/read against the real news/.test(post) && /read against the real news/.test(today), "the one-line explanation of the atlas is missing");
+
   /* the evidence is every step shared exactly, with how many stories have it,
      and a line on whether any rival matches as many */
-  check(/of our moments? happen/.test(post) && /(No other story has more than|other stor(y|ies) match|what chance alone would give)/.test(post), "the poster does not say how strong the match is");
+  check(/of our moments? happen/.test(rankCard) && /(No other story has more than|other stor(y|ies) match|what chance alone would give)/.test(rankCard), "the ranking card does not say how strong the match is");
   /* a chain, not a bag of steps: every pair the ranking matched comes in the
      same order for us and in the story */
   R.rows.slice(0, 20).forEach((r) => {
@@ -960,7 +964,7 @@ attempt("ranking", () => {
       check(b[0] > a[0] && b[1] > a[1], `${r.st.id}: matched steps are not in the same order for us and in the story`);
     }
   });
-  check(/in \d+ of \d+ stories|the only story with it/.test(post), "the poster does not say how rare each shared step is");
+  check(/in \d+ of \d+ stories|the only story with it/.test(rankCard), "the poster does not say how rare each shared step is");
   const race = String(t.rankRace({ w:600, h:260 }));
   check((race.match(/<path /g) || []).length >= 3, "the race draws fewer than three lines");
   soft(`ranking: ${top.st.l.title} leads with ${(top.share * 100).toFixed(0)}% over ${R.threads.map((th) => th.spec.short).join(" / ")}; ${hist.filter((h, i) => i && hist[i - 1].top.st !== h.top.st).length} lead changes over the last ${hist.length} moments`);

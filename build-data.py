@@ -326,6 +326,9 @@ def load_news(lineage_ids):
         }
         if bin_id:
             item["bin"] = bin_id
+            if it.get("sub") is not None:
+                check_sub(tag, {"bin": bin_id, "sub": it.get("sub")})
+                item["sub"] = it["sub"]
         if it.get("id"):
             item["id"] = str(it["id"])
         out.append(item)
