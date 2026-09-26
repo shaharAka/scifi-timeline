@@ -49,6 +49,16 @@ def main():
         head = re.split(r"[-_]", str(e.get("id", "")).lower())[0]
         if head in owners and l["id"] not in owners[head]:
             P("event id %s starts with %r, which the build reads as %s; use another prefix" % (e.get("id"), head, sorted(owners[head])))
+    # and the other way: this world's own id, flattened or without vowels,
+    # must not be the prefix other worlds' events already use
+    flat = re.sub(r"[^a-z0-9]", "", l["id"].lower())
+    mine = {c for c in {l["id"], flat, re.sub(r"[aeiou]", "", flat)} if len(c) >= 2}
+    for f in glob.glob(os.path.join(ROOT, "data", "parts", "*.json")):
+        for ol in json.load(open(f)).get("lineages", []):
+            if ol["id"] == l["id"]: continue
+            heads = {re.split(r"[-_]", str(oe.get("id", "")).lower())[0] for oe in ol.get("events", [])}
+            clash = heads & mine
+            if clash: P("this world's id reads as the prefix %s, which %s's events already use; the build would reject them" % (sorted(clash), ol["id"]))
     if l.get("group") != g: P("lineage.group != group")
     dv = l["divergence"]["year"]
     ev = l["events"]; ys = [e["year"] for e in ev]

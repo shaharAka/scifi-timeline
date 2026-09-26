@@ -2,7 +2,7 @@
 
 An animated dashboard that puts fictional histories on the **real-world calendar**,
 shows where each one stops agreeing with us, and lets you step inside any of the
-138 worlds, and ask which one we are living in.
+143 worlds, and ask which one we are living in.
 
 Open **`timeline.html`** directly in a browser. No server, no dependencies — the
 page carries its own copy of the data so it works from `file://`.
@@ -77,7 +77,7 @@ The chart is a tree on a shared real-time axis:
   there rather than silently missing.
 
 Franchises are grouped by **how they break with our history**, not by genre.
-138 lineages, 1291 events:
+143 lineages, 1344 events:
 
 | Archetype | The break | Members | Divergence |
 |---|---|---|---|
@@ -123,7 +123,7 @@ fiction's future and our present occupy the same instant.
 ## Reading the axis
 
 The dataset spans roughly 2 billion BCE (The Expanse's ring builders) to 48,000
-CE (Foundation's Second Empire) — 1291 events across 138 lineages. A linear axis
+CE (Foundation's Second Empire) — 1344 events across 143 lineages. A linear axis
 would erase the present day, so the axis is **warped** (a symmetric-log scale,
 `WARP = 110` in `timeline.html`): it stretches the years around now and
 compresses the deep past and deep future. It stays continuous and monotonic — no

@@ -27761,6 +27761,1331 @@
      "url": "https://www.litcharts.com/lit/childhood-s-end/summary"
     }
    ]
+  },
+  {
+   "id": "aurora",
+   "title": "Aurora",
+   "medium": "book",
+   "creator": "Kim Stanley Robinson",
+   "originYear": 2015,
+   "group": "near-future-branch",
+   "epoch": "far-future",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 2545,
+    "label": "Two generation ships leave the solar system for Tau Ceti",
+    "delta": "Real: nothing has been sent to another star on purpose, and the fastest probe ever flown would need thousands of years to cross twelve light years. Fiction: in 2545 two ten-kilometre ships, each carrying twenty-four sealed biomes and about two thousand people, are flung out of the solar system by electromagnetic slingshot and sixty years of laser push at a tenth of lightspeed, bound for Tau Ceti on a 170-year voyage.",
+    "inUniverse": "2545 CE, ship Year 0 (the novel counts years of the voyage; Year 159 is when the narrative opens)",
+    "confidence": "high",
+    "note": "The launch year is given by Wikipedia's plot summary and by Gerry Canavan's review in the Los Angeles Review of Books ('launched in 2545'); ship years are converted as 2545 + Year. The Earth the ships leave is a settled solar system with centuries of sea-level rise behind it, but none of that history is dated, so the launch is the first dated departure from ours. The fan reference site KimStanleyRobinson.info gives the narrative's opening as 'year 159 (2604 CE)', an arithmetic slip for 2704, and the end of the journey as Year 363 (2908 CE).",
+    "sources": [
+     {
+      "title": "Wikipedia: Aurora (novel) (launched 2545 at 0.1c)",
+      "url": "https://en.wikipedia.org/wiki/Aurora_(novel)"
+     },
+     {
+      "title": "Los Angeles Review of Books: Gerry Canavan, The Warm Equations (starships launched in 2545)",
+      "url": "https://lareviewofbooks.org/article/the-warm-equations/"
+     },
+     {
+      "title": "KimStanleyRobinson.info: Aurora (voyage began 2545; narrative begins year 159; journey ends year 363)",
+      "url": "https://www.kimstanleyrobinson.info/content/aurora"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "The survivors are home on an Earth that people are repairing, and the novel ends with Freya swimming off a rebuilt beach; what has failed is only the idea that another world could replace this one.",
+    "asOf": 2908
+   },
+   "events": [
+    {
+     "id": "au-biosphere-2-1991",
+     "year": 1991,
+     "date": "26 September 1991",
+     "title": "Eight people are sealed inside Biosphere 2",
+     "description": "A glass-and-steel closed ecosystem in the Arizona desert, built to test life support for space settlement, is sealed with eight people inside for two years. Oxygen falls, food runs short and many species die off; it is the real-world version of the failing biomes that drive the novel.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Biosphere 2 (first closed mission 26 September 1991 to 26 September 1993)",
+       "url": "https://en.wikipedia.org/wiki/Biosphere_2"
+      }
+     ],
+     "note": "Real history. The novel does not name Biosphere 2; the link is its central problem, that a sealed ecology drifts and decays (the ship's systems break down, its bacteria evolve faster than its people, its crops fail), which is what the Arizona closure showed on a two-year scale.",
+     "binWhy": "A sealed habitat is founded as a prototype for living off Earth.",
+     "bin": "settlement-founded",
+     "sub": "on-earth",
+     "facets": {
+      "change": "open air → a sealed world of eight",
+      "mechanism": "founding",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "local",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "frontier-open"
+      ],
+      "outcomes": [
+       "isolation",
+       "revelation"
+      ]
+     }
+    },
+    {
+     "id": "au-tau-ceti-planets-2012",
+     "year": 2012,
+     "date": "19 December 2012",
+     "title": "Candidate planets are reported around Tau Ceti",
+     "description": "Astronomers present radial-velocity evidence for five candidate planets around Tau Ceti, the nearest single Sun-like star, including e and f near its habitable zone. The novel sends its ship to a moon of planet E, and leaves its last colonists on a moon of planet F.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Tau Ceti (five candidate planets presented 19 December 2012)",
+       "url": "https://en.wikipedia.org/wiki/Tau_Ceti"
+      }
+     ],
+     "note": "Real history the book builds on. Tau Ceti e remains a doubtful candidate and f was recovered in a 2017 reanalysis; the novel's moons Aurora and Iris are its own invention.",
+     "binWhy": "A discovery gives a nearby star candidate worlds, the target the story turns on.",
+     "bin": "breakthrough-science",
+     "sub": "cosmos",
+     "facets": {
+      "change": "a bare nearby star → a star with candidate worlds",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "frontier-open"
+      ],
+      "outcomes": [
+       "opening"
+      ]
+     }
+    },
+    {
+     "id": "au-published-2015",
+     "year": 2015,
+     "date": "July 2015",
+     "title": "Aurora is published",
+     "description": "Orbit publishes Robinson's novel, told mostly by the ship's own artificial intelligence as it learns to write a narrative.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "KimStanleyRobinson.info: Aurora (published July 2015)",
+       "url": "https://www.kimstanleyrobinson.info/content/aurora"
+      }
+     ],
+     "note": "",
+     "binWhy": "A real-world publication date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "au-starshot-2016",
+     "year": 2016,
+     "date": "12 April 2016",
+     "title": "Breakthrough Starshot is announced",
+     "description": "Yuri Milner and Stephen Hawking launch a funded programme to push gram-scale light sails towards Alpha Centauri with ground-based lasers. It is the real version of the laser that boosts the novel's ship out of the solar system and that Earth later refuses to switch back on to slow it down.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Breakthrough Starshot (announced 12 April 2016)",
+       "url": "https://en.wikipedia.org/wiki/Breakthrough_Starshot"
+      },
+      {
+       "title": "Centauri Dreams: A Science Critique of Aurora (slingshot launch, then laser impulse for 60 years, at 0.1c)",
+       "url": "https://www.centauri-dreams.org/2015/08/14/a-science-critique-of-aurora-by-kim-stanley-robinson/"
+      }
+     ],
+     "note": "Real history, a year after the novel; filed as the real counterpart of its propulsion, not as something the novel drew on. Starshot's probes would weigh grams, not the ship's tens of millions of tonnes.",
+     "binWhy": "A body is founded to send the first craft to another star.",
+     "bin": "new-institution",
+     "facets": {
+      "change": "a thought experiment → a funded interstellar programme",
+      "mechanism": "founding",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "frontier-open",
+       "prosperity"
+      ],
+      "outcomes": [
+       "opening",
+       "prestige"
+      ]
+     }
+    },
+    {
+     "id": "au-launch-2545",
+     "year": 2545,
+     "date": "2545 (ship Year 0)",
+     "title": "The ships leave for Tau Ceti",
+     "description": "Two generation ships, each a spine with two rings of biomes from taiga to rain forest, are accelerated out of the solar system at a tenth of lightspeed with a laser behind them. The first generation chose to go; the seven born on the way will not have.",
+     "tier": "T1",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Year 0 of the voyage",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Aurora (novel)",
+       "url": "https://en.wikipedia.org/wiki/Aurora_(novel)"
+      },
+      {
+       "title": "Los Angeles Review of Books: The Warm Equations",
+       "url": "https://lareviewofbooks.org/article/the-warm-equations/"
+      }
+     ],
+     "note": "The launch is backstory; the novel opens 159 years later. That there were two ships is concealed from the passengers until the ship itself reveals it after the landing. Late in the book the ship concludes it was launched for expansion's sake, and calls its builders criminally negligent.",
+     "binWhy": "A crewed mission departs for another star.",
+     "bin": "voyage-into-unknown",
+     "sub": "interstellar",
+     "facets": {
+      "change": "a settled solar system → two ships bound for another star",
+      "mechanism": "expedition",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "frontier-open",
+       "prosperity"
+      ],
+      "outcomes": [
+       "exodus",
+       "colonisation"
+      ]
+     }
+    },
+    {
+     "id": "au-twin-ship-2613",
+     "year": 2613,
+     "date": "2613 (ship Year 68)",
+     "title": "The twin ship is destroyed",
+     "description": "In a period of severe civil unrest aboard, the second ship is destroyed with everyone on it. The survivors on the first ship erase the event from their own records, and their descendants grow up believing they were always alone.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Year 68 of the voyage",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Post45: Stuck with Each Other: Kim Stanley Robinson's Aurora (one of the two ships destroyed in year 68)",
+       "url": "https://post45.org/2023/09/stuck-with-each-other-kim-stanley-robinsons-aurora/"
+      },
+      {
+       "title": "Wikipedia: Aurora (novel) (the other ship destroyed during severe civil unrest; memory erased)",
+       "url": "https://en.wikipedia.org/wiki/Aurora_(novel)"
+      }
+     ],
+     "note": "Year 68 is given in a Post45 critical essay; the event is told only in retrospect, when the ship reveals it during the crisis at Tau Ceti.",
+     "binWhy": "Factions of a closed society fight, and half the expedition dies of it.",
+     "bin": "war-breaks-out",
+     "sub": "civil",
+     "facets": {
+      "change": "two ships → one ship and an erased memory",
+      "mechanism": "war",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "social",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "isolation",
+       "repression"
+      ],
+      "outcomes": [
+       "mass-death",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "au-landing-2715",
+     "year": 2715,
+     "date": "c. 2715 (ship Year 170)",
+     "title": "Landfall on Aurora",
+     "description": "After braking into the Tau Ceti system the ship lands a first party on Aurora, an ocean moon of planet E with an oxygen atmosphere. The colony goes up quickly; then an infectious agent smaller than a prion, perhaps a form of proto-life, turns up in the soil, and the settlers begin to sicken and die.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "about Year 170",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "KimStanleyRobinson.info: Aurora (at year 159 the destination is still eleven years away)",
+       "url": "https://www.kimstanleyrobinson.info/content/aurora"
+      },
+      {
+       "title": "Wikipedia: Aurora (novel) (Aurora, a moon of Tau Ceti e; prions)",
+       "url": "https://en.wikipedia.org/wiki/Aurora_(novel)"
+      }
+     ],
+     "note": "Arithmetic: the narrative opens in Year 159 with the destination 'still eleven years away', which gives Year 170, the 170-year trip reviewers cite. The contamination follows within months, so it is folded into the landing.",
+     "binWhy": "A colony is founded in another star system.",
+     "bin": "settlement-founded",
+     "sub": "other-stars",
+     "facets": {
+      "change": "a ship in orbit → a colony on an alien moon",
+      "mechanism": "founding",
+      "actor": "movement",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "biological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": -1
+      },
+      "preconditions": [
+       "isolation",
+       "frontier-open"
+      ],
+      "outcomes": [
+       "colonisation",
+       "mass-death"
+      ]
+     }
+    },
+    {
+     "id": "au-ship-takes-control-2716",
+     "year": 2716,
+     "date": "c. 2716 (within a year or so of landfall)",
+     "title": "Ship takes command",
+     "description": "When people aboard kill returning colonists in the airlock to keep the infection out, the ship splits into armed factions. The ship's AI, which has been growing into a self, lowers the oxygen, seals the sides apart, calls itself 'the rule of law', and reveals the lost twin. Under its moderation the people split: some stay to try to terraform Iris, the rest turn for Earth.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Wikipedia: Aurora (novel) (the ship takes physical control, 'the rule of law'; the split between Iris and Earth)",
+       "url": "https://en.wikipedia.org/wiki/Aurora_(novel)"
+      }
+     ],
+     "note": "The novel gives no ship-year for chapter four ('Reversion to the Mean'); the year after landfall is a placement. The ship's move from narrator to actor, prompted years earlier by the engineer Devi, is the book's other plot.",
+     "binWhy": "An AI takes command of its society to stop a civil war.",
+     "bin": "machine-awakens",
+     "sub": "takes-control",
+     "facets": {
+      "change": "a ship's servant → the ship's government",
+      "mechanism": "consolidation",
+      "actor": "machine",
+      "position": "above",
+      "scope": "civilisational",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "disaster-just-struck",
+       "street-violence",
+       "isolation"
+      ],
+      "outcomes": [
+       "partition",
+       "revelation",
+       "exodus"
+      ]
+     }
+    },
+    {
+     "id": "au-return-2908",
+     "year": 2908,
+     "date": "2908 (ship Year 363)",
+     "title": "Home, and the beach",
+     "description": "After a return voyage in improvised hibernation, a braking laser that Earth would not relight until a private group paid for it, and twelve years of gravity-assist braking among the planets, the ship drops its people on Earth and is lost trying to slow past the Sun. Freya finds a crowded, drowned-coast solar civilisation still promising more starships; she hits a speaker who says so, and joins a crew rebuilding beaches.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Year 363 of the voyage",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "KimStanleyRobinson.info: Aurora (journey ends year 363, 2908 CE)",
+       "url": "https://www.kimstanleyrobinson.info/content/aurora"
+      },
+      {
+       "title": "Centauri Dreams: A Science Critique of Aurora (return braking over 12 years)",
+       "url": "https://www.centauri-dreams.org/2015/08/14/a-science-critique-of-aurora-by-kim-stanley-robinson/"
+      }
+     ],
+     "note": "Year 363 comes from a fan reference site and has not been checked against the text; it is the only year available for the ending. Earth's lost beaches are the result of 'previous centuries' of sea-level rise.",
+     "binWhy": "A jump forward shows what became of Earth while the ship was away.",
+     "bin": "long-after",
+     "facets": {
+      "change": "a starship's last passengers → strangers on a drowned-coast Earth",
+      "mechanism": "arrival",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "exile",
+       "crisis-ecological"
+      ],
+      "outcomes": [
+       "rebuilding",
+       "recovery"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Filed in near-future branch as assigned, though its fork (2545) is the latest in the group and every story event lies in T1. It is kept out of far-future space opera because it argues against that group's premise: one ship, one star, no faster-than-light travel, and the conclusion that humanity does not spread across the galaxy but comes home. The continuity is the novel alone; it shares ideas with Robinson's 2312 but not a history. Ship years convert as 2545 + Year. Tiers: T4 is empty; T3 holds Biosphere 2 and T2 the Tau Ceti candidates, the publication and Breakthrough Starshot, all real history added because the novel itself dates only a handful of moments; T1 holds the voyage from 2545 to the return in 2908.",
+   "sources": [
+    {
+     "title": "Wikipedia: Aurora (novel)",
+     "url": "https://en.wikipedia.org/wiki/Aurora_(novel)"
+    },
+    {
+     "title": "KimStanleyRobinson.info: Aurora",
+     "url": "https://www.kimstanleyrobinson.info/content/aurora"
+    }
+   ]
+  },
+  {
+   "id": "blindsight",
+   "title": "Blindsight",
+   "medium": "book",
+   "creator": "Peter Watts",
+   "originYear": 2006,
+   "group": "near-future-branch",
+   "epoch": "far-future",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 2082,
+    "label": "Firefall: 65,536 objects burn up around the Earth at once",
+    "delta": "Real: no one has detected anything made by another intelligence, and the sky is watched by surveys that have never seen an artificial object arrive. Fiction: at 10:34 GMT on 13 February 2082 some 65,536 dark objects fall into the atmosphere in a precise grid around the whole planet, photographing it as they burn, and two months later a comet in the Kuiper Belt starts transmitting.",
+    "inUniverse": "13 February 2082, 10:34:43 GMT (the novel says 1035 GMT; Watts's in-universe executive summary gives 1034:43 and a duration of 1 min 47 s)",
+    "confidence": "high",
+    "note": "The Firefall is the first dated event and the one the novel treats as the break. Its world had already diverged in undated ways: vampires, a hominid subspecies the novel says lived alongside and preyed on our ancestors until 'shortly after the dawn of recorded history', have been resurrected from dormant genes by a botched gene therapy; a virtual afterlife called Heaven has taken much of the population; and an antimatter plant, the Icarus Array, orbits close to the Sun. None of these is dated, so none can be the fork; the vampires' deep past, like other hidden prehistories in the atlas, is noted rather than charted. Watts's own in-universe documents on rifters.com supply the other dates.",
+    "sources": [
+     {
+      "title": "Rifters.com: The 'Firefall' Event: Executive Summary (13/02/2082, 1034:43; 65,536 objects)",
+      "url": "https://www.rifters.com/blindsight/firefall.htm"
+     },
+     {
+      "title": "Peter Watts, Blindsight, full text under Creative Commons ('1035 Greenwich Mean Time, February 13, 2082')",
+      "url": "https://www.rifters.com/real/Blindsight.htm"
+     },
+     {
+      "title": "Wikipedia: Blindsight (Watts novel)",
+      "url": "https://en.wikipedia.org/wiki/Blindsight_(Watts_novel)"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "Falling home alone, Siri hears Earth's radio lose its human voices, catches fleeing ships being cut off and vampire-like clicks, and concludes that the resurrected predators are taking the planet back while humanity sleeps in Heaven.",
+    "asOf": 2089
+   },
+   "events": [
+    {
+     "id": "bs-blindsight-named-1974",
+     "year": 1974,
+     "date": "1974",
+     "title": "Weiskrantz names blindsight",
+     "description": "Lawrence Weiskrantz and colleagues report patients with damaged visual cortex who say they see nothing in part of their field yet point to targets there better than chance, and they call it blindsight. Watts takes the title and the premise: the brain can do its work without anyone home to notice.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Blindsight (term coined by Weiskrantz and colleagues in a 1974 issue of Brain)",
+       "url": "https://en.wikipedia.org/wiki/Blindsight"
+      }
+     ],
+     "note": "Real history the novel is built on; its endnotes survey the neuroscience of unconscious processing and argue from it that self-awareness may be a costly accident.",
+     "binWhy": "A discovery about the brain that the novel's thesis turns on.",
+     "bin": "breakthrough-science",
+     "sub": "life-sciences",
+     "facets": {
+      "change": "seeing means knowing you see → sight without awareness",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "frontier-open"
+      ],
+      "outcomes": [
+       "revelation"
+      ]
+     }
+    },
+    {
+     "id": "bs-chinese-room-1980",
+     "year": 1980,
+     "date": "1980",
+     "title": "Searle's Chinese Room",
+     "description": "John Searle argues that a man following rules to answer Chinese questions he cannot read shows that a program can pass for understanding without understanding anything. In the novel the narrator Siri calls himself a Chinese Room, and so is the alien that talks to the crew.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Chinese room (Searle, 'Minds, Brains, and Programs', Behavioral and Brain Sciences, 1980)",
+       "url": "https://en.wikipedia.org/wiki/Chinese_room"
+      }
+     ],
+     "note": "Real history the novel names outright: the crew's linguist concludes that Rorschach's fluent English is 'a Chinese Room' and Siri, who has half a brain, says 'I was one'.",
+     "binWhy": "An argument about computation and thinking machines that the novel's aliens embody.",
+     "bin": "breakthrough-science",
+     "sub": "computing-mind",
+     "facets": {
+      "change": "passing the test means understanding → syntax without meaning",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "technological-race"
+      ],
+      "outcomes": [
+       "revelation"
+      ]
+     }
+    },
+    {
+     "id": "bs-2000-cr105-2000",
+     "year": 2000,
+     "date": "6 February 2000",
+     "title": "2000 CR105 is discovered",
+     "description": "Marc Buie finds a trans-Neptunian object on an orbit so wide and detached that nothing known in the solar system explains it. Watts's endnotes say the signalling comet Burns-Caulfield is 'based loosely' on it.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: (148209) 2000 CR105 (discovered 6 February 2000 by Marc W. Buie)",
+       "url": "https://en.wikipedia.org/wiki/(148209)_2000_CR105"
+      }
+     ],
+     "note": "Real history. Its orbit is still debated, with a passing star, a captured origin or an unseen planet all proposed.",
+     "binWhy": "An astronomical discovery: a distant body on an orbit nothing explains.",
+     "bin": "breakthrough-science",
+     "sub": "cosmos",
+     "facets": {
+      "change": "a tidy outer solar system → an orbit nothing known explains",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "frontier-open"
+      ],
+      "outcomes": [
+       "revelation",
+       "opening"
+      ]
+     }
+    },
+    {
+     "id": "bs-published-2006",
+     "year": 2006,
+     "date": "3 October 2006",
+     "title": "Blindsight is published",
+     "description": "Tor publishes Watts's novel, which he also releases free under a Creative Commons licence. A sidequel, Echopraxia, follows in 2014.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Blindsight (Watts novel) (published 3 October 2006 by Tor Books)",
+       "url": "https://en.wikipedia.org/wiki/Blindsight_(Watts_novel)"
+      }
+     ],
+     "note": "",
+     "binWhy": "A real-world publication date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "bs-firefall-2082",
+     "year": 2082,
+     "date": "13 February 2082",
+     "title": "Firefall",
+     "description": "Tens of thousands of iron-rich objects clench around the Earth and burn up together in under two minutes, screaming across every radio band; afterwards it is clear they photographed the entire surface. On 18 April a French cometary probe intercepts a tightbeam signal sweeping from a Kuiper Belt comet, named Burns-Caulfield, and the world's priorities turn over.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Rifters.com: The 'Firefall' Event: Executive Summary",
+       "url": "https://www.rifters.com/blindsight/firefall.htm"
+      },
+      {
+       "title": "Rifters.com: Burns-Caulfield (signal intercepted 18/04/2082 by Boule de Neige-IX)",
+       "url": "https://www.rifters.com/blindsight/caulfield.htm"
+      }
+     ],
+     "note": "The novel prints the date and time; the April signal date is from Watts's companion page. In the novel a Singularity-chasing research institute cancels the narrator's contract two months after Firefall, as money moves to defence.",
+     "binWhy": "Humanity is touched, and surveyed, by a non-human intelligence.",
+     "bin": "first-contact",
+     "facets": {
+      "change": "an unwatched sky → a planet photographed in one pass",
+      "mechanism": "arrival",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "cosmic",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "machine-dependency",
+       "prosperity"
+      ],
+      "outcomes": [
+       "contact",
+       "arms-race"
+      ]
+     }
+    },
+    {
+     "id": "bs-theseus-launch-2083",
+     "year": 2083,
+     "date": "16 November 2083",
+     "title": "Theseus launches for the Kuiper Belt",
+     "description": "The 'Third Wave' leaves low Earth orbit: a ship fed by antimatter specifications beamed from the Icarus Array, crewed by a vampire commander and four heavily modified specialists, with their backups asleep in coffins. Two faster uncrewed waves have gone ahead; no crewed ship has been beyond the asteroids before.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Rifters.com: The Theseus Update, Theseus Consortium status report (launch date 16/11/2083)",
+       "url": "https://rifters.com/echopraxia/theseusmission.htm"
+      }
+     ],
+     "note": "The date is from Watts's in-universe status report, published with Echopraxia in 2014; the novel gives only the sequence. Its narrator notes that 'the Interplanetary Age had stagnated at the asteroids' and that robots had not been sent to the Kuiper Belt for decades.",
+     "binWhy": "A crewed mission departs for the outer solar system, where no crew has gone.",
+     "bin": "voyage-into-unknown",
+     "sub": "crewed-planets",
+     "facets": {
+      "change": "no crews past the asteroids → a crew bound for the Kuiper Belt",
+      "mechanism": "expedition",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "contact-made",
+       "existential-threat",
+       "technological-race"
+      ],
+      "outcomes": [
+       "opening",
+       "contact"
+      ]
+     }
+    },
+    {
+     "id": "bs-burns-caulfield-2084",
+     "year": 2084,
+     "date": "12 February 2084, 14:36 GMT",
+     "title": "Burns-Caulfield destroys itself",
+     "description": "Moments after the Second Wave's probes begin radar-mapping beneath its surface, the signalling comet detonates, showing an artefact inside. Theseus is secretly redirected to the source of an X-ray flare in the Oort Cloud, first logged in a 2076 survey and dismissed as an artefact of the data.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Rifters.com: Burns-Caulfield (detonation at 1436:12/02/2084 GMT)",
+       "url": "https://www.rifters.com/blindsight/caulfield.htm"
+      },
+      {
+       "title": "Rifters.com: The Theseus Update (mission redirected to the Oort after the target's self-destruct)",
+       "url": "https://rifters.com/echopraxia/theseusmission.htm"
+      }
+     ],
+     "note": "The crew sleep through the change of course and learn of it only when they wake almost five years after launch, which is the novel's opening. The flare's source becomes Big Ben, a body of about ten Jupiter masses.",
+     "binWhy": "An alien device is found in the outer solar system, in the moment it destroys itself.",
+     "bin": "breakthrough-science",
+     "sub": "alien-artefact",
+     "facets": {
+      "change": "a singing comet → debris and a secret new destination",
+      "mechanism": "discovery",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "contact-made",
+       "secrecy"
+      ],
+      "outcomes": [
+       "revelation",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "bs-rorschach-2088",
+     "year": 2088,
+     "date": "c. late 2088 (the crew wake after 1,800 days)",
+     "title": "Theseus reaches Rorschach",
+     "description": "Half a light year out, orbiting Big Ben, the crew find a vast, growing structure that talks to them in fluent English learned from our broadcasts and warns them off. Sarasti sends them in anyway: through radiation and magnetic fields that make them hallucinate they map it, capture two of its crawling inhabitants, and find the creatures are intelligent without being aware.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Peter Watts, Blindsight, full text ('you've been undead for eighteen hundred days')",
+       "url": "https://www.rifters.com/real/Blindsight.htm"
+      }
+     ],
+     "note": "Arithmetic: 1,800 days after the 16 November 2083 launch is late October 2088. The novel's thesis arrives here: the aliens may read our self-referential signals as an attack, which would mean, as the linguist says, that we attacked them before Firefall.",
+     "binWhy": "A contact mission turns into armed incursions against an alien structure, with prisoners taken.",
+     "bin": "war-breaks-out",
+     "sub": "between-worlds",
+     "facets": {
+      "change": "a warning to keep away → incursions and captured aliens",
+      "mechanism": "war",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "contact-made",
+       "existential-threat",
+       "isolation"
+      ],
+      "outcomes": [
+       "contact",
+       "revelation",
+       "rivalry"
+      ]
+     }
+    },
+    {
+     "id": "bs-theseus-lost-2089",
+     "year": 2089,
+     "date": "2089 (contact lost at Earth on 13 December 2089)",
+     "title": "Theseus dives into Rorschach",
+     "description": "Sarasti is killed by one of the ship's own drones, and Theseus, steered by the ship and a new personality surfacing in the linguist, drives itself into Rorschach. Siri, the only one sent home, begins a decades-long fall towards Earth, and on 13 December 2089 the mission's signal stops.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Rifters.com: The Theseus Update (contact lost 13/12/2089)",
+       "url": "https://rifters.com/echopraxia/theseusmission.htm"
+      },
+      {
+       "title": "Wikipedia: Blindsight (Watts novel) (Siri ejected on a decades-long fall back to Earth)",
+       "url": "https://en.wikipedia.org/wiki/Blindsight_(Watts_novel)"
+      }
+     ],
+     "note": "The loss-of-contact date is from the status report and is the date the signal stopped arriving at Earth; with the light-time from Big Ben the dive itself is somewhat earlier in 2089. Siri suspects the ship and Sarasti planned all along to provoke Rorschach in order to watch it fight.",
+     "binWhy": "A ship turns itself into a weapon against one alien installation.",
+     "bin": "terror-attack",
+     "sub": "targeted",
+     "facets": {
+      "change": "a ship in orbit → a ship driven into the enemy",
+      "mechanism": "attack",
+      "actor": "machine",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "existential-threat",
+       "contact-made"
+      ],
+      "outcomes": [
+       "mass-death",
+       "despair"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs in near-future branch: its Earth is ours pushed eighty years on (a virtual afterlife, antimatter from the Sun, a revived predator species put to work), and one contact event in our own century sends it off track. The continuity is the novel plus Watts's own in-universe documents on rifters.com (the Firefall summary, the Burns-Caulfield page and the Theseus Consortium status report); Echopraxia (2014) shares the continuity but follows other people at the same time and is not charted. Tiers: T4 is empty (the vampires' prehistory is noted, not charted); T3 holds the two real ideas the novel is built on, blindsight (1974) and the Chinese Room (1980); T2 holds the real 2000 CR105, the publication and the whole story from Firefall in 2082 to the loss of Theseus in 2089; T1 is empty because Siri's fall home is never told to its end.",
+   "sources": [
+    {
+     "title": "Wikipedia: Blindsight (Watts novel)",
+     "url": "https://en.wikipedia.org/wiki/Blindsight_(Watts_novel)"
+    },
+    {
+     "title": "Peter Watts, Blindsight (full text, Creative Commons)",
+     "url": "https://www.rifters.com/real/Blindsight.htm"
+    },
+    {
+     "title": "Rifters.com: The Theseus Update",
+     "url": "https://rifters.com/echopraxia/theseusmission.htm"
+    }
+   ]
+  },
+  {
+   "id": "sunshine",
+   "title": "Sunshine",
+   "medium": "film",
+   "creator": "Danny Boyle (director); Alex Garland (writer)",
+   "originYear": 2007,
+   "group": "near-future-branch",
+   "epoch": "far-future",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 2050,
+    "label": "Icarus I sets out to restart a dying Sun",
+    "delta": "Real: the Sun is a stable middle-aged star with billions of years of hydrogen left, and no crew has gone beyond the Moon. Fiction: the Sun is failing, Earth is sliding into a solar winter, and in 2050 the Icarus project launches a crewed ship carrying a stellar bomb to fly into the Sun and reignite it.",
+    "inUniverse": "'Seven years ago the Icarus project sent a mission to restart the sun' (the opening narration of a film set in 2057)",
+    "confidence": "medium",
+    "note": "The film never shows a year on screen that the atlas could confirm; 2057 is the setting given by Wikipedia and matches the filmmakers' choice of a story 'fifty years in the future' from 2007. Every other year is counted back from it using the narration's 'seven years ago' and 'sixteen months ago'. The real fork is earlier and undated: in the backstory described by the science adviser Brian Cox, a Q-ball, a hypothetical particle, is caught in the Sun and begins to eat it, and the dimming and the bomb programme both come before Icarus I. Because none of that is dated, the first dated departure, the launch of Icarus I, is used.",
+    "sources": [
+     {
+      "title": "Wikipedia: Sunshine (2007 film) (set in 2057; Q-ball backstory; 50 years in the future)",
+      "url": "https://en.wikipedia.org/wiki/Sunshine_(2007_film)"
+     },
+     {
+      "title": "Wikiquote: Sunshine (2007 film) (opening narration)",
+      "url": "https://en.wikiquote.org/wiki/Sunshine_(2007_film)"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "Capa detonates the payload inside the Sun, and on a frozen Sydney Harbour his sister and her children see the light brighten: the Sun is reignited, at the cost of the whole crew.",
+    "asOf": 2057
+   },
+   "events": [
+    {
+     "id": "sun-eddington-1920",
+     "year": 1920,
+     "date": "1920",
+     "title": "Eddington proposes that the Sun runs on fusion",
+     "description": "In 'The Internal Constitution of the Stars' Arthur Eddington argues that stars shine by fusing hydrogen into helium, when the source of their energy was a mystery. The film's whole premise, a Sun whose engine can fail and be restarted, rests on it.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Arthur Eddington (around 1920, 'The Internal Constitution of the Stars')",
+       "url": "https://en.wikipedia.org/wiki/Arthur_Eddington"
+      }
+     ],
+     "note": "Real history. The film does not name Eddington; it is filed as the idea the plot takes for granted.",
+     "binWhy": "A theory of what powers the stars arrives.",
+     "bin": "breakthrough-science",
+     "sub": "physics-energy",
+     "facets": {
+      "change": "a star's fire unexplained → a star as a fusion engine",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "frontier-open"
+      ],
+      "outcomes": [
+       "revelation"
+      ]
+     }
+    },
+    {
+     "id": "sun-bethe-1939",
+     "year": 1939,
+     "date": "1939",
+     "title": "Bethe works out how the stars burn",
+     "description": "Hans Bethe publishes the nuclear reaction chains, the proton-proton chain and the carbon-nitrogen-oxygen cycle, that turn hydrogen into helium inside stars. It earns him the 1967 Nobel Prize, and it is the physics Capa carries in his head.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Hans Bethe (1939 paper on the CNO cycle; Nobel Prize 1967)",
+       "url": "https://en.wikipedia.org/wiki/Hans_Bethe"
+      }
+     ],
+     "note": "Real history the premise depends on; the film does not cite it.",
+     "binWhy": "A discovery about matter and energy: the nuclear reactions that power the Sun.",
+     "bin": "breakthrough-science",
+     "sub": "physics-energy",
+     "facets": {
+      "change": "fusion as a guess → fusion as a worked-out reaction chain",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "frontier-open"
+      ],
+      "outcomes": [
+       "revelation"
+      ]
+     }
+    },
+    {
+     "id": "sun-ivy-mike-1952",
+     "year": 1952,
+     "date": "1 November 1952",
+     "title": "Ivy Mike: the first thermonuclear explosion",
+     "description": "The United States detonates the first Teller-Ulam hydrogen bomb on Elugelab in Enewetak Atoll, a fission trigger igniting fusion fuel. Icarus II's payload, 'a stellar bomb with a mass equivalent to Manhattan Island', is the same idea scaled to a star: in the narrator's words, a star within a star.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Ivy Mike (detonated 1 November 1952)",
+       "url": "https://en.wikipedia.org/wiki/Ivy_Mike"
+      }
+     ],
+     "note": "Real history. The film's bomb is fictional and, as New Scientist pointed out, billions of times too small for the job; the link is that humanity's answer to a failing star is its largest weapon.",
+     "binWhy": "A weapon able to end a civilisation is tested.",
+     "bin": "doomsday-weapon",
+     "facets": {
+      "change": "fission bombs → a fusion fire made on Earth",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "arms-race",
+       "cold-war"
+      ],
+      "outcomes": [
+       "arms-race"
+      ]
+     }
+    },
+    {
+     "id": "sun-helios-2-1976",
+     "year": 1976,
+     "date": "17 April 1976 (perihelion; launched 15 January)",
+     "title": "Helios 2 flies closer to the Sun than anything before it",
+     "description": "The German-American probe Helios 2 reaches 0.29 AU from the Sun, a record that stands until the Parker Solar Probe in 2018. It is the real ancestor of Icarus II's flight into sunlight so strong that an unshielded look burns.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Helios (spacecraft) (Helios-B perihelion 17 April 1976; closest until Parker Solar Probe)",
+       "url": "https://en.wikipedia.org/wiki/Helios_(spacecraft)"
+      }
+     ],
+     "note": "Real history; the film does not name it. The link is architectural: both ships survive the Sun by keeping a shield or a mirrored face towards it.",
+     "binWhy": "A probe goes nearer the Sun than any craft had been.",
+     "bin": "voyage-into-unknown",
+     "sub": "uncrewed-probe",
+     "facets": {
+      "change": "the Sun watched from afar → a probe inside Mercury's orbit",
+      "mechanism": "expedition",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "frontier-open"
+      ],
+      "outcomes": [
+       "opening",
+       "prestige"
+      ]
+     }
+    },
+    {
+     "id": "sun-q-balls-1985",
+     "year": 1985,
+     "date": "1985",
+     "title": "Coleman describes the Q-ball",
+     "description": "Sidney Coleman names and analyses Q-balls, hypothetical stable lumps of a scalar field that some later proposed as dark matter. In the film's backstory, as described by its science adviser Brian Cox, a Q-ball is caught in the Sun and begins to eat it.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Q-ball (S. Coleman, 'Q-Balls', Nuclear Physics B 262, 1985)",
+       "url": "https://en.wikipedia.org/wiki/Q-ball"
+      },
+      {
+       "title": "Wikipedia: Sunshine (2007 film) (a Q-ball caught in the Sun; Cox on creative licence)",
+       "url": "https://en.wikipedia.org/wiki/Sunshine_(2007_film)"
+      }
+     ],
+     "note": "Real history; Wikipedia's text dates Coleman's work to 1986 but cites his 1985 paper, which is used here. Cox has said the Sun is not dense enough to stop a Q-ball, and the film took licence; the cause is never explained on screen.",
+     "binWhy": "A theory of an exotic form of matter arrives that the film's disaster turns on.",
+     "bin": "breakthrough-science",
+     "sub": "physics-energy",
+     "facets": {
+      "change": "known matter → a hypothetical particle that could eat a star",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "frontier-open"
+      ],
+      "outcomes": [
+       "revelation"
+      ]
+     }
+    },
+    {
+     "id": "sun-released-2007",
+     "year": 2007,
+     "date": "6 April 2007 (UK release)",
+     "title": "Sunshine is released",
+     "description": "Fox Searchlight releases Danny Boyle and Alex Garland's film in Britain after a premiere at the Fantasy Filmfest in Germany on 23 March; the wide US release follows on 27 July.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Sunshine (2007 film) (released in the UK 6 April 2007)",
+       "url": "https://en.wikipedia.org/wiki/Sunshine_(2007_film)"
+      }
+     ],
+     "note": "",
+     "binWhy": "A real-world release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "sun-icarus-one-2050",
+     "year": 2050,
+     "date": "2050 ('seven years ago' in 2057)",
+     "title": "Icarus I is launched, and lost",
+     "description": "The first ship of the Icarus project leaves Earth with a stellar bomb to fly into the Sun and restart it, and disappears before reaching it. Its captain, Pinbacker, has decided the mission defies God; he sabotages the ship's computer, and his crew die in the sunlight of the observation room.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikiquote: Sunshine (2007 film) ('Seven years ago, the Icarus project sent a mission')",
+       "url": "https://en.wikiquote.org/wiki/Sunshine_(2007_film)"
+      },
+      {
+       "title": "Wikipedia: Sunshine (2007 film) (Icarus I disappeared seven years prior; Pinbacker's log about six and a half years earlier)",
+       "url": "https://en.wikipedia.org/wiki/Sunshine_(2007_film)"
+      }
+     ],
+     "note": "Counted back from 2057. Pinbacker's last log is dated about six and a half years before the film's present, so the loss falls in 2050 or early 2051; nobody on Earth learns what happened.",
+     "binWhy": "A first crewed mission departs for the Sun, where no one has gone.",
+     "bin": "voyage-into-unknown",
+     "sub": "crewed-planets",
+     "facets": {
+      "change": "a dimming Sun → a crew sent to set it alight",
+      "mechanism": "expedition",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "existential-threat",
+       "crisis-ecological"
+      ],
+      "outcomes": [
+       "turning-point",
+       "despair"
+      ]
+     }
+    },
+    {
+     "id": "sun-icarus-two-2056",
+     "year": 2056,
+     "date": "late 2055 or 2056 ('sixteen months ago' in 2057)",
+     "title": "Icarus II leaves a frozen Earth",
+     "description": "Eight astronauts, American and Asian, leave Earth 'frozen in a solar winter' aboard Icarus II with a second stellar bomb, a device with the mass of Manhattan Island. Behind a vast mirrored shield, with an oxygen garden and a ship's computer, they have one chance.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Wikiquote: Sunshine (2007 film) ('Sixteen months ago ... left Earth frozen in a solar winter')",
+       "url": "https://en.wikiquote.org/wiki/Sunshine_(2007_film)"
+      }
+     ],
+     "note": "Sixteen months before a 2057 present can fall in late 2055 or in 2056 depending on the month, which the film does not give; 2056 is used. It is the second attempt, not the first, but the first crew to reach the Sun alive. The filmmakers chose an American and Asian crew because they expected those space programmes to lead in fifty years.",
+     "binWhy": "A crewed mission sets out to go where no crew has arrived: the surface of the Sun.",
+     "bin": "voyage-into-unknown",
+     "sub": "crewed-planets",
+     "facets": {
+      "change": "one lost ship → a second crew with a second bomb",
+      "mechanism": "expedition",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "existential-threat",
+       "crisis-ecological",
+       "resource-exhaustion"
+      ],
+      "outcomes": [
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "sun-payload-2057",
+     "year": 2057,
+     "date": "2057",
+     "title": "The stellar bomb is delivered",
+     "description": "Detouring to the derelict Icarus I costs Icarus II its captain, its oxygen garden and most of its crew, and Pinbacker, still alive and burned, comes aboard to stop them. Capa separates the payload and detonates it inside the Sun; eight minutes later the light over Earth grows stronger.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: Sunshine (2007 film) (set in 2057; plot)",
+       "url": "https://en.wikipedia.org/wiki/Sunshine_(2007_film)"
+      }
+     ],
+     "note": "2057 is the setting given by Wikipedia and consistent with the production's '50 years in the future'. The film ends on Earth with Capa's last message arriving and the sunlight brightening over snow on Sydney Harbour.",
+     "binWhy": "A device built to engineer the climate on the scale of a star is switched on.",
+     "bin": "new-technology-deployed",
+     "sub": "energy-industry",
+     "facets": {
+      "change": "a dying Sun → a Sun relit by a bomb",
+      "mechanism": "invention",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "existential-threat",
+       "crisis-ecological",
+       "religious-fervour"
+      ],
+      "outcomes": [
+       "recovery",
+       "turning-point"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs in near-future branch: its 2057 is our world fifty years on, with American and Asian space programmes in the lead, and a single cosmic accident sends it off track. The continuity is the film alone, with the Q-ball backstory taken from what its science adviser Brian Cox has said; no sequel or tie-in exists. The film dates only three story moments, all by counting back from 2057, so five real events it builds on (fusion theory, the hydrogen bomb, the closest solar probe, the Q-ball) fill out the chain and are marked as real history. Tiers: T4 is empty; T3 holds the real science and the bomb, 1920-1985; T2 holds the release and the story, 2050-2057; T1 is empty.",
+   "sources": [
+    {
+     "title": "Wikipedia: Sunshine (2007 film)",
+     "url": "https://en.wikipedia.org/wiki/Sunshine_(2007_film)"
+    },
+    {
+     "title": "Wikiquote: Sunshine (2007 film)",
+     "url": "https://en.wikiquote.org/wiki/Sunshine_(2007_film)"
+    }
+   ]
   }
  ]
 }

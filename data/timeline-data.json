@@ -1,12 +1,12 @@
 {
  "meta": {
-  "generated": "2026-09-26T19:24:32Z",
+  "generated": "2026-09-26T19:43:11Z",
   "source": "data/parts/*.json",
-  "lineages": 138,
-  "events": 1291,
+  "lineages": 143,
+  "events": 1344,
   "groups": 5,
-  "worlds": 135,
-  "art": 98,
+  "worlds": 140,
+  "art": 143,
   "pd": 16,
   "news": 6,
   "bins": 33,
@@ -50674,6 +50674,435 @@
    ]
   },
   {
+   "id": "sunshine",
+   "title": "Sunshine",
+   "medium": "film",
+   "creator": "Danny Boyle (director); Alex Garland (writer)",
+   "originYear": 2007,
+   "group": "near-future-branch",
+   "epoch": "far-future",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 2050,
+    "label": "Icarus I sets out to restart a dying Sun",
+    "delta": "Real: the Sun is a stable middle-aged star with billions of years of hydrogen left, and no crew has gone beyond the Moon. Fiction: the Sun is failing, Earth is sliding into a solar winter, and in 2050 the Icarus project launches a crewed ship carrying a stellar bomb to fly into the Sun and reignite it.",
+    "inUniverse": "'Seven years ago the Icarus project sent a mission to restart the sun' (the opening narration of a film set in 2057)",
+    "confidence": "medium",
+    "note": "The film never shows a year on screen that the atlas could confirm; 2057 is the setting given by Wikipedia and matches the filmmakers' choice of a story 'fifty years in the future' from 2007. Every other year is counted back from it using the narration's 'seven years ago' and 'sixteen months ago'. The real fork is earlier and undated: in the backstory described by the science adviser Brian Cox, a Q-ball, a hypothetical particle, is caught in the Sun and begins to eat it, and the dimming and the bomb programme both come before Icarus I. Because none of that is dated, the first dated departure, the launch of Icarus I, is used.",
+    "sources": [
+     {
+      "title": "Wikipedia: Sunshine (2007 film) (set in 2057; Q-ball backstory; 50 years in the future)",
+      "url": "https://en.wikipedia.org/wiki/Sunshine_(2007_film)"
+     },
+     {
+      "title": "Wikiquote: Sunshine (2007 film) (opening narration)",
+      "url": "https://en.wikiquote.org/wiki/Sunshine_(2007_film)"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "Capa detonates the payload inside the Sun, and on a frozen Sydney Harbour his sister and her children see the light brighten: the Sun is reignited, at the cost of the whole crew.",
+    "asOf": 2057
+   },
+   "events": [
+    {
+     "id": "sun-eddington-1920",
+     "year": 1920,
+     "date": "1920",
+     "title": "Eddington proposes that the Sun runs on fusion",
+     "description": "In 'The Internal Constitution of the Stars' Arthur Eddington argues that stars shine by fusing hydrogen into helium, when the source of their energy was a mystery. The film's whole premise, a Sun whose engine can fail and be restarted, rests on it.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Arthur Eddington (around 1920, 'The Internal Constitution of the Stars')",
+       "url": "https://en.wikipedia.org/wiki/Arthur_Eddington"
+      }
+     ],
+     "note": "Real history. The film does not name Eddington; it is filed as the idea the plot takes for granted.",
+     "binWhy": "A theory of what powers the stars arrives.",
+     "bin": "breakthrough-science",
+     "sub": "physics-energy",
+     "facets": {
+      "change": "a star's fire unexplained → a star as a fusion engine",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "frontier-open"
+      ],
+      "outcomes": [
+       "revelation"
+      ]
+     }
+    },
+    {
+     "id": "sun-bethe-1939",
+     "year": 1939,
+     "date": "1939",
+     "title": "Bethe works out how the stars burn",
+     "description": "Hans Bethe publishes the nuclear reaction chains, the proton-proton chain and the carbon-nitrogen-oxygen cycle, that turn hydrogen into helium inside stars. It earns him the 1967 Nobel Prize, and it is the physics Capa carries in his head.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Hans Bethe (1939 paper on the CNO cycle; Nobel Prize 1967)",
+       "url": "https://en.wikipedia.org/wiki/Hans_Bethe"
+      }
+     ],
+     "note": "Real history the premise depends on; the film does not cite it.",
+     "binWhy": "A discovery about matter and energy: the nuclear reactions that power the Sun.",
+     "bin": "breakthrough-science",
+     "sub": "physics-energy",
+     "facets": {
+      "change": "fusion as a guess → fusion as a worked-out reaction chain",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "frontier-open"
+      ],
+      "outcomes": [
+       "revelation"
+      ]
+     }
+    },
+    {
+     "id": "sun-ivy-mike-1952",
+     "year": 1952,
+     "date": "1 November 1952",
+     "title": "Ivy Mike: the first thermonuclear explosion",
+     "description": "The United States detonates the first Teller-Ulam hydrogen bomb on Elugelab in Enewetak Atoll, a fission trigger igniting fusion fuel. Icarus II's payload, 'a stellar bomb with a mass equivalent to Manhattan Island', is the same idea scaled to a star: in the narrator's words, a star within a star.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Ivy Mike (detonated 1 November 1952)",
+       "url": "https://en.wikipedia.org/wiki/Ivy_Mike"
+      }
+     ],
+     "note": "Real history. The film's bomb is fictional and, as New Scientist pointed out, billions of times too small for the job; the link is that humanity's answer to a failing star is its largest weapon.",
+     "binWhy": "A weapon able to end a civilisation is tested.",
+     "bin": "doomsday-weapon",
+     "facets": {
+      "change": "fission bombs → a fusion fire made on Earth",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "arms-race",
+       "cold-war"
+      ],
+      "outcomes": [
+       "arms-race"
+      ]
+     }
+    },
+    {
+     "id": "sun-helios-2-1976",
+     "year": 1976,
+     "date": "17 April 1976 (perihelion; launched 15 January)",
+     "title": "Helios 2 flies closer to the Sun than anything before it",
+     "description": "The German-American probe Helios 2 reaches 0.29 AU from the Sun, a record that stands until the Parker Solar Probe in 2018. It is the real ancestor of Icarus II's flight into sunlight so strong that an unshielded look burns.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Helios (spacecraft) (Helios-B perihelion 17 April 1976; closest until Parker Solar Probe)",
+       "url": "https://en.wikipedia.org/wiki/Helios_(spacecraft)"
+      }
+     ],
+     "note": "Real history; the film does not name it. The link is architectural: both ships survive the Sun by keeping a shield or a mirrored face towards it.",
+     "binWhy": "A probe goes nearer the Sun than any craft had been.",
+     "bin": "voyage-into-unknown",
+     "sub": "uncrewed-probe",
+     "facets": {
+      "change": "the Sun watched from afar → a probe inside Mercury's orbit",
+      "mechanism": "expedition",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "frontier-open"
+      ],
+      "outcomes": [
+       "opening",
+       "prestige"
+      ]
+     }
+    },
+    {
+     "id": "sun-q-balls-1985",
+     "year": 1985,
+     "date": "1985",
+     "title": "Coleman describes the Q-ball",
+     "description": "Sidney Coleman names and analyses Q-balls, hypothetical stable lumps of a scalar field that some later proposed as dark matter. In the film's backstory, as described by its science adviser Brian Cox, a Q-ball is caught in the Sun and begins to eat it.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Q-ball (S. Coleman, 'Q-Balls', Nuclear Physics B 262, 1985)",
+       "url": "https://en.wikipedia.org/wiki/Q-ball"
+      },
+      {
+       "title": "Wikipedia: Sunshine (2007 film) (a Q-ball caught in the Sun; Cox on creative licence)",
+       "url": "https://en.wikipedia.org/wiki/Sunshine_(2007_film)"
+      }
+     ],
+     "note": "Real history; Wikipedia's text dates Coleman's work to 1986 but cites his 1985 paper, which is used here. Cox has said the Sun is not dense enough to stop a Q-ball, and the film took licence; the cause is never explained on screen.",
+     "binWhy": "A theory of an exotic form of matter arrives that the film's disaster turns on.",
+     "bin": "breakthrough-science",
+     "sub": "physics-energy",
+     "facets": {
+      "change": "known matter → a hypothetical particle that could eat a star",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "frontier-open"
+      ],
+      "outcomes": [
+       "revelation"
+      ]
+     }
+    },
+    {
+     "id": "sun-released-2007",
+     "year": 2007,
+     "date": "6 April 2007 (UK release)",
+     "title": "Sunshine is released",
+     "description": "Fox Searchlight releases Danny Boyle and Alex Garland's film in Britain after a premiere at the Fantasy Filmfest in Germany on 23 March; the wide US release follows on 27 July.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Sunshine (2007 film) (released in the UK 6 April 2007)",
+       "url": "https://en.wikipedia.org/wiki/Sunshine_(2007_film)"
+      }
+     ],
+     "note": "",
+     "binWhy": "A real-world release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "sun-icarus-one-2050",
+     "year": 2050,
+     "date": "2050 ('seven years ago' in 2057)",
+     "title": "Icarus I is launched, and lost",
+     "description": "The first ship of the Icarus project leaves Earth with a stellar bomb to fly into the Sun and restart it, and disappears before reaching it. Its captain, Pinbacker, has decided the mission defies God; he sabotages the ship's computer, and his crew die in the sunlight of the observation room.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikiquote: Sunshine (2007 film) ('Seven years ago, the Icarus project sent a mission')",
+       "url": "https://en.wikiquote.org/wiki/Sunshine_(2007_film)"
+      },
+      {
+       "title": "Wikipedia: Sunshine (2007 film) (Icarus I disappeared seven years prior; Pinbacker's log about six and a half years earlier)",
+       "url": "https://en.wikipedia.org/wiki/Sunshine_(2007_film)"
+      }
+     ],
+     "note": "Counted back from 2057. Pinbacker's last log is dated about six and a half years before the film's present, so the loss falls in 2050 or early 2051; nobody on Earth learns what happened.",
+     "binWhy": "A first crewed mission departs for the Sun, where no one has gone.",
+     "bin": "voyage-into-unknown",
+     "sub": "crewed-planets",
+     "facets": {
+      "change": "a dimming Sun → a crew sent to set it alight",
+      "mechanism": "expedition",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "existential-threat",
+       "crisis-ecological"
+      ],
+      "outcomes": [
+       "turning-point",
+       "despair"
+      ]
+     }
+    },
+    {
+     "id": "sun-icarus-two-2056",
+     "year": 2056,
+     "date": "late 2055 or 2056 ('sixteen months ago' in 2057)",
+     "title": "Icarus II leaves a frozen Earth",
+     "description": "Eight astronauts, American and Asian, leave Earth 'frozen in a solar winter' aboard Icarus II with a second stellar bomb, a device with the mass of Manhattan Island. Behind a vast mirrored shield, with an oxygen garden and a ship's computer, they have one chance.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Wikiquote: Sunshine (2007 film) ('Sixteen months ago ... left Earth frozen in a solar winter')",
+       "url": "https://en.wikiquote.org/wiki/Sunshine_(2007_film)"
+      }
+     ],
+     "note": "Sixteen months before a 2057 present can fall in late 2055 or in 2056 depending on the month, which the film does not give; 2056 is used. It is the second attempt, not the first, but the first crew to reach the Sun alive. The filmmakers chose an American and Asian crew because they expected those space programmes to lead in fifty years.",
+     "binWhy": "A crewed mission sets out to go where no crew has arrived: the surface of the Sun.",
+     "bin": "voyage-into-unknown",
+     "sub": "crewed-planets",
+     "facets": {
+      "change": "one lost ship → a second crew with a second bomb",
+      "mechanism": "expedition",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "existential-threat",
+       "crisis-ecological",
+       "resource-exhaustion"
+      ],
+      "outcomes": [
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "sun-payload-2057",
+     "year": 2057,
+     "date": "2057",
+     "title": "The stellar bomb is delivered",
+     "description": "Detouring to the derelict Icarus I costs Icarus II its captain, its oxygen garden and most of its crew, and Pinbacker, still alive and burned, comes aboard to stop them. Capa separates the payload and detonates it inside the Sun; eight minutes later the light over Earth grows stronger.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: Sunshine (2007 film) (set in 2057; plot)",
+       "url": "https://en.wikipedia.org/wiki/Sunshine_(2007_film)"
+      }
+     ],
+     "note": "2057 is the setting given by Wikipedia and consistent with the production's '50 years in the future'. The film ends on Earth with Capa's last message arriving and the sunlight brightening over snow on Sydney Harbour.",
+     "binWhy": "A device built to engineer the climate on the scale of a star is switched on.",
+     "bin": "new-technology-deployed",
+     "sub": "energy-industry",
+     "facets": {
+      "change": "a dying Sun → a Sun relit by a bomb",
+      "mechanism": "invention",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "existential-threat",
+       "crisis-ecological",
+       "religious-fervour"
+      ],
+      "outcomes": [
+       "recovery",
+       "turning-point"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs in near-future branch: its 2057 is our world fifty years on, with American and Asian space programmes in the lead, and a single cosmic accident sends it off track. The continuity is the film alone, with the Q-ball backstory taken from what its science adviser Brian Cox has said; no sequel or tie-in exists. The film dates only three story moments, all by counting back from 2057, so five real events it builds on (fusion theory, the hydrogen bomb, the closest solar probe, the Q-ball) fill out the chain and are marked as real history. Tiers: T4 is empty; T3 holds the real science and the bomb, 1920-1985; T2 holds the release and the story, 2050-2057; T1 is empty.",
+   "sources": [
+    {
+     "title": "Wikipedia: Sunshine (2007 film)",
+     "url": "https://en.wikipedia.org/wiki/Sunshine_(2007_film)"
+    },
+    {
+     "title": "Wikiquote: Sunshine (2007 film)",
+     "url": "https://en.wikiquote.org/wiki/Sunshine_(2007_film)"
+    }
+   ]
+  },
+  {
    "id": "the-expanse",
    "title": "The Expanse",
    "medium": "book",
@@ -52376,6 +52805,452 @@
    ]
   },
   {
+   "id": "blindsight",
+   "title": "Blindsight",
+   "medium": "book",
+   "creator": "Peter Watts",
+   "originYear": 2006,
+   "group": "near-future-branch",
+   "epoch": "far-future",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 2082,
+    "label": "Firefall: 65,536 objects burn up around the Earth at once",
+    "delta": "Real: no one has detected anything made by another intelligence, and the sky is watched by surveys that have never seen an artificial object arrive. Fiction: at 10:34 GMT on 13 February 2082 some 65,536 dark objects fall into the atmosphere in a precise grid around the whole planet, photographing it as they burn, and two months later a comet in the Kuiper Belt starts transmitting.",
+    "inUniverse": "13 February 2082, 10:34:43 GMT (the novel says 1035 GMT; Watts's in-universe executive summary gives 1034:43 and a duration of 1 min 47 s)",
+    "confidence": "high",
+    "note": "The Firefall is the first dated event and the one the novel treats as the break. Its world had already diverged in undated ways: vampires, a hominid subspecies the novel says lived alongside and preyed on our ancestors until 'shortly after the dawn of recorded history', have been resurrected from dormant genes by a botched gene therapy; a virtual afterlife called Heaven has taken much of the population; and an antimatter plant, the Icarus Array, orbits close to the Sun. None of these is dated, so none can be the fork; the vampires' deep past, like other hidden prehistories in the atlas, is noted rather than charted. Watts's own in-universe documents on rifters.com supply the other dates.",
+    "sources": [
+     {
+      "title": "Rifters.com: The 'Firefall' Event: Executive Summary (13/02/2082, 1034:43; 65,536 objects)",
+      "url": "https://www.rifters.com/blindsight/firefall.htm"
+     },
+     {
+      "title": "Peter Watts, Blindsight, full text under Creative Commons ('1035 Greenwich Mean Time, February 13, 2082')",
+      "url": "https://www.rifters.com/real/Blindsight.htm"
+     },
+     {
+      "title": "Wikipedia: Blindsight (Watts novel)",
+      "url": "https://en.wikipedia.org/wiki/Blindsight_(Watts_novel)"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "Falling home alone, Siri hears Earth's radio lose its human voices, catches fleeing ships being cut off and vampire-like clicks, and concludes that the resurrected predators are taking the planet back while humanity sleeps in Heaven.",
+    "asOf": 2089
+   },
+   "events": [
+    {
+     "id": "bs-blindsight-named-1974",
+     "year": 1974,
+     "date": "1974",
+     "title": "Weiskrantz names blindsight",
+     "description": "Lawrence Weiskrantz and colleagues report patients with damaged visual cortex who say they see nothing in part of their field yet point to targets there better than chance, and they call it blindsight. Watts takes the title and the premise: the brain can do its work without anyone home to notice.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Blindsight (term coined by Weiskrantz and colleagues in a 1974 issue of Brain)",
+       "url": "https://en.wikipedia.org/wiki/Blindsight"
+      }
+     ],
+     "note": "Real history the novel is built on; its endnotes survey the neuroscience of unconscious processing and argue from it that self-awareness may be a costly accident.",
+     "binWhy": "A discovery about the brain that the novel's thesis turns on.",
+     "bin": "breakthrough-science",
+     "sub": "life-sciences",
+     "facets": {
+      "change": "seeing means knowing you see → sight without awareness",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "frontier-open"
+      ],
+      "outcomes": [
+       "revelation"
+      ]
+     }
+    },
+    {
+     "id": "bs-chinese-room-1980",
+     "year": 1980,
+     "date": "1980",
+     "title": "Searle's Chinese Room",
+     "description": "John Searle argues that a man following rules to answer Chinese questions he cannot read shows that a program can pass for understanding without understanding anything. In the novel the narrator Siri calls himself a Chinese Room, and so is the alien that talks to the crew.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Chinese room (Searle, 'Minds, Brains, and Programs', Behavioral and Brain Sciences, 1980)",
+       "url": "https://en.wikipedia.org/wiki/Chinese_room"
+      }
+     ],
+     "note": "Real history the novel names outright: the crew's linguist concludes that Rorschach's fluent English is 'a Chinese Room' and Siri, who has half a brain, says 'I was one'.",
+     "binWhy": "An argument about computation and thinking machines that the novel's aliens embody.",
+     "bin": "breakthrough-science",
+     "sub": "computing-mind",
+     "facets": {
+      "change": "passing the test means understanding → syntax without meaning",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "technological-race"
+      ],
+      "outcomes": [
+       "revelation"
+      ]
+     }
+    },
+    {
+     "id": "bs-2000-cr105-2000",
+     "year": 2000,
+     "date": "6 February 2000",
+     "title": "2000 CR105 is discovered",
+     "description": "Marc Buie finds a trans-Neptunian object on an orbit so wide and detached that nothing known in the solar system explains it. Watts's endnotes say the signalling comet Burns-Caulfield is 'based loosely' on it.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: (148209) 2000 CR105 (discovered 6 February 2000 by Marc W. Buie)",
+       "url": "https://en.wikipedia.org/wiki/(148209)_2000_CR105"
+      }
+     ],
+     "note": "Real history. Its orbit is still debated, with a passing star, a captured origin or an unseen planet all proposed.",
+     "binWhy": "An astronomical discovery: a distant body on an orbit nothing explains.",
+     "bin": "breakthrough-science",
+     "sub": "cosmos",
+     "facets": {
+      "change": "a tidy outer solar system → an orbit nothing known explains",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "frontier-open"
+      ],
+      "outcomes": [
+       "revelation",
+       "opening"
+      ]
+     }
+    },
+    {
+     "id": "bs-published-2006",
+     "year": 2006,
+     "date": "3 October 2006",
+     "title": "Blindsight is published",
+     "description": "Tor publishes Watts's novel, which he also releases free under a Creative Commons licence. A sidequel, Echopraxia, follows in 2014.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Blindsight (Watts novel) (published 3 October 2006 by Tor Books)",
+       "url": "https://en.wikipedia.org/wiki/Blindsight_(Watts_novel)"
+      }
+     ],
+     "note": "",
+     "binWhy": "A real-world publication date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "bs-firefall-2082",
+     "year": 2082,
+     "date": "13 February 2082",
+     "title": "Firefall",
+     "description": "Tens of thousands of iron-rich objects clench around the Earth and burn up together in under two minutes, screaming across every radio band; afterwards it is clear they photographed the entire surface. On 18 April a French cometary probe intercepts a tightbeam signal sweeping from a Kuiper Belt comet, named Burns-Caulfield, and the world's priorities turn over.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Rifters.com: The 'Firefall' Event: Executive Summary",
+       "url": "https://www.rifters.com/blindsight/firefall.htm"
+      },
+      {
+       "title": "Rifters.com: Burns-Caulfield (signal intercepted 18/04/2082 by Boule de Neige-IX)",
+       "url": "https://www.rifters.com/blindsight/caulfield.htm"
+      }
+     ],
+     "note": "The novel prints the date and time; the April signal date is from Watts's companion page. In the novel a Singularity-chasing research institute cancels the narrator's contract two months after Firefall, as money moves to defence.",
+     "binWhy": "Humanity is touched, and surveyed, by a non-human intelligence.",
+     "bin": "first-contact",
+     "facets": {
+      "change": "an unwatched sky → a planet photographed in one pass",
+      "mechanism": "arrival",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "cosmic",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "machine-dependency",
+       "prosperity"
+      ],
+      "outcomes": [
+       "contact",
+       "arms-race"
+      ]
+     }
+    },
+    {
+     "id": "bs-theseus-launch-2083",
+     "year": 2083,
+     "date": "16 November 2083",
+     "title": "Theseus launches for the Kuiper Belt",
+     "description": "The 'Third Wave' leaves low Earth orbit: a ship fed by antimatter specifications beamed from the Icarus Array, crewed by a vampire commander and four heavily modified specialists, with their backups asleep in coffins. Two faster uncrewed waves have gone ahead; no crewed ship has been beyond the asteroids before.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Rifters.com: The Theseus Update, Theseus Consortium status report (launch date 16/11/2083)",
+       "url": "https://rifters.com/echopraxia/theseusmission.htm"
+      }
+     ],
+     "note": "The date is from Watts's in-universe status report, published with Echopraxia in 2014; the novel gives only the sequence. Its narrator notes that 'the Interplanetary Age had stagnated at the asteroids' and that robots had not been sent to the Kuiper Belt for decades.",
+     "binWhy": "A crewed mission departs for the outer solar system, where no crew has gone.",
+     "bin": "voyage-into-unknown",
+     "sub": "crewed-planets",
+     "facets": {
+      "change": "no crews past the asteroids → a crew bound for the Kuiper Belt",
+      "mechanism": "expedition",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "contact-made",
+       "existential-threat",
+       "technological-race"
+      ],
+      "outcomes": [
+       "opening",
+       "contact"
+      ]
+     }
+    },
+    {
+     "id": "bs-burns-caulfield-2084",
+     "year": 2084,
+     "date": "12 February 2084, 14:36 GMT",
+     "title": "Burns-Caulfield destroys itself",
+     "description": "Moments after the Second Wave's probes begin radar-mapping beneath its surface, the signalling comet detonates, showing an artefact inside. Theseus is secretly redirected to the source of an X-ray flare in the Oort Cloud, first logged in a 2076 survey and dismissed as an artefact of the data.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Rifters.com: Burns-Caulfield (detonation at 1436:12/02/2084 GMT)",
+       "url": "https://www.rifters.com/blindsight/caulfield.htm"
+      },
+      {
+       "title": "Rifters.com: The Theseus Update (mission redirected to the Oort after the target's self-destruct)",
+       "url": "https://rifters.com/echopraxia/theseusmission.htm"
+      }
+     ],
+     "note": "The crew sleep through the change of course and learn of it only when they wake almost five years after launch, which is the novel's opening. The flare's source becomes Big Ben, a body of about ten Jupiter masses.",
+     "binWhy": "An alien device is found in the outer solar system, in the moment it destroys itself.",
+     "bin": "breakthrough-science",
+     "sub": "alien-artefact",
+     "facets": {
+      "change": "a singing comet → debris and a secret new destination",
+      "mechanism": "discovery",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "contact-made",
+       "secrecy"
+      ],
+      "outcomes": [
+       "revelation",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "bs-rorschach-2088",
+     "year": 2088,
+     "date": "c. late 2088 (the crew wake after 1,800 days)",
+     "title": "Theseus reaches Rorschach",
+     "description": "Half a light year out, orbiting Big Ben, the crew find a vast, growing structure that talks to them in fluent English learned from our broadcasts and warns them off. Sarasti sends them in anyway: through radiation and magnetic fields that make them hallucinate they map it, capture two of its crawling inhabitants, and find the creatures are intelligent without being aware.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Peter Watts, Blindsight, full text ('you've been undead for eighteen hundred days')",
+       "url": "https://www.rifters.com/real/Blindsight.htm"
+      }
+     ],
+     "note": "Arithmetic: 1,800 days after the 16 November 2083 launch is late October 2088. The novel's thesis arrives here: the aliens may read our self-referential signals as an attack, which would mean, as the linguist says, that we attacked them before Firefall.",
+     "binWhy": "A contact mission turns into armed incursions against an alien structure, with prisoners taken.",
+     "bin": "war-breaks-out",
+     "sub": "between-worlds",
+     "facets": {
+      "change": "a warning to keep away → incursions and captured aliens",
+      "mechanism": "war",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "contact-made",
+       "existential-threat",
+       "isolation"
+      ],
+      "outcomes": [
+       "contact",
+       "revelation",
+       "rivalry"
+      ]
+     }
+    },
+    {
+     "id": "bs-theseus-lost-2089",
+     "year": 2089,
+     "date": "2089 (contact lost at Earth on 13 December 2089)",
+     "title": "Theseus dives into Rorschach",
+     "description": "Sarasti is killed by one of the ship's own drones, and Theseus, steered by the ship and a new personality surfacing in the linguist, drives itself into Rorschach. Siri, the only one sent home, begins a decades-long fall towards Earth, and on 13 December 2089 the mission's signal stops.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Rifters.com: The Theseus Update (contact lost 13/12/2089)",
+       "url": "https://rifters.com/echopraxia/theseusmission.htm"
+      },
+      {
+       "title": "Wikipedia: Blindsight (Watts novel) (Siri ejected on a decades-long fall back to Earth)",
+       "url": "https://en.wikipedia.org/wiki/Blindsight_(Watts_novel)"
+      }
+     ],
+     "note": "The loss-of-contact date is from the status report and is the date the signal stopped arriving at Earth; with the light-time from Big Ben the dive itself is somewhat earlier in 2089. Siri suspects the ship and Sarasti planned all along to provoke Rorschach in order to watch it fight.",
+     "binWhy": "A ship turns itself into a weapon against one alien installation.",
+     "bin": "terror-attack",
+     "sub": "targeted",
+     "facets": {
+      "change": "a ship in orbit → a ship driven into the enemy",
+      "mechanism": "attack",
+      "actor": "machine",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "existential-threat",
+       "contact-made"
+      ],
+      "outcomes": [
+       "mass-death",
+       "despair"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs in near-future branch: its Earth is ours pushed eighty years on (a virtual afterlife, antimatter from the Sun, a revived predator species put to work), and one contact event in our own century sends it off track. The continuity is the novel plus Watts's own in-universe documents on rifters.com (the Firefall summary, the Burns-Caulfield page and the Theseus Consortium status report); Echopraxia (2014) shares the continuity but follows other people at the same time and is not charted. Tiers: T4 is empty (the vampires' prehistory is noted, not charted); T3 holds the two real ideas the novel is built on, blindsight (1974) and the Chinese Room (1980); T2 holds the real 2000 CR105, the publication and the whole story from Firefall in 2082 to the loss of Theseus in 2089; T1 is empty because Siri's fall home is never told to its end.",
+   "sources": [
+    {
+     "title": "Wikipedia: Blindsight (Watts novel)",
+     "url": "https://en.wikipedia.org/wiki/Blindsight_(Watts_novel)"
+    },
+    {
+     "title": "Peter Watts, Blindsight (full text, Creative Commons)",
+     "url": "https://www.rifters.com/real/Blindsight.htm"
+    },
+    {
+     "title": "Rifters.com: The Theseus Update",
+     "url": "https://rifters.com/echopraxia/theseusmission.htm"
+    }
+   ]
+  },
+  {
    "id": "avatar",
    "title": "Avatar",
    "medium": "film",
@@ -54007,6 +54882,456 @@
     {
      "title": "CBR: What year does Ender's Game take place? (First Formic War 87 BX = 2115 AD)",
      "url": "https://www.cbr.com/enders-game-time-period-explained/"
+    }
+   ]
+  },
+  {
+   "id": "aurora",
+   "title": "Aurora",
+   "medium": "book",
+   "creator": "Kim Stanley Robinson",
+   "originYear": 2015,
+   "group": "near-future-branch",
+   "epoch": "far-future",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 2545,
+    "label": "Two generation ships leave the solar system for Tau Ceti",
+    "delta": "Real: nothing has been sent to another star on purpose, and the fastest probe ever flown would need thousands of years to cross twelve light years. Fiction: in 2545 two ten-kilometre ships, each carrying twenty-four sealed biomes and about two thousand people, are flung out of the solar system by electromagnetic slingshot and sixty years of laser push at a tenth of lightspeed, bound for Tau Ceti on a 170-year voyage.",
+    "inUniverse": "2545 CE, ship Year 0 (the novel counts years of the voyage; Year 159 is when the narrative opens)",
+    "confidence": "high",
+    "note": "The launch year is given by Wikipedia's plot summary and by Gerry Canavan's review in the Los Angeles Review of Books ('launched in 2545'); ship years are converted as 2545 + Year. The Earth the ships leave is a settled solar system with centuries of sea-level rise behind it, but none of that history is dated, so the launch is the first dated departure from ours. The fan reference site KimStanleyRobinson.info gives the narrative's opening as 'year 159 (2604 CE)', an arithmetic slip for 2704, and the end of the journey as Year 363 (2908 CE).",
+    "sources": [
+     {
+      "title": "Wikipedia: Aurora (novel) (launched 2545 at 0.1c)",
+      "url": "https://en.wikipedia.org/wiki/Aurora_(novel)"
+     },
+     {
+      "title": "Los Angeles Review of Books: Gerry Canavan, The Warm Equations (starships launched in 2545)",
+      "url": "https://lareviewofbooks.org/article/the-warm-equations/"
+     },
+     {
+      "title": "KimStanleyRobinson.info: Aurora (voyage began 2545; narrative begins year 159; journey ends year 363)",
+      "url": "https://www.kimstanleyrobinson.info/content/aurora"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "The survivors are home on an Earth that people are repairing, and the novel ends with Freya swimming off a rebuilt beach; what has failed is only the idea that another world could replace this one.",
+    "asOf": 2908
+   },
+   "events": [
+    {
+     "id": "au-biosphere-2-1991",
+     "year": 1991,
+     "date": "26 September 1991",
+     "title": "Eight people are sealed inside Biosphere 2",
+     "description": "A glass-and-steel closed ecosystem in the Arizona desert, built to test life support for space settlement, is sealed with eight people inside for two years. Oxygen falls, food runs short and many species die off; it is the real-world version of the failing biomes that drive the novel.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Biosphere 2 (first closed mission 26 September 1991 to 26 September 1993)",
+       "url": "https://en.wikipedia.org/wiki/Biosphere_2"
+      }
+     ],
+     "note": "Real history. The novel does not name Biosphere 2; the link is its central problem, that a sealed ecology drifts and decays (the ship's systems break down, its bacteria evolve faster than its people, its crops fail), which is what the Arizona closure showed on a two-year scale.",
+     "binWhy": "A sealed habitat is founded as a prototype for living off Earth.",
+     "bin": "settlement-founded",
+     "sub": "on-earth",
+     "facets": {
+      "change": "open air → a sealed world of eight",
+      "mechanism": "founding",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "local",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "frontier-open"
+      ],
+      "outcomes": [
+       "isolation",
+       "revelation"
+      ]
+     }
+    },
+    {
+     "id": "au-tau-ceti-planets-2012",
+     "year": 2012,
+     "date": "19 December 2012",
+     "title": "Candidate planets are reported around Tau Ceti",
+     "description": "Astronomers present radial-velocity evidence for five candidate planets around Tau Ceti, the nearest single Sun-like star, including e and f near its habitable zone. The novel sends its ship to a moon of planet E, and leaves its last colonists on a moon of planet F.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Tau Ceti (five candidate planets presented 19 December 2012)",
+       "url": "https://en.wikipedia.org/wiki/Tau_Ceti"
+      }
+     ],
+     "note": "Real history the book builds on. Tau Ceti e remains a doubtful candidate and f was recovered in a 2017 reanalysis; the novel's moons Aurora and Iris are its own invention.",
+     "binWhy": "A discovery gives a nearby star candidate worlds, the target the story turns on.",
+     "bin": "breakthrough-science",
+     "sub": "cosmos",
+     "facets": {
+      "change": "a bare nearby star → a star with candidate worlds",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "frontier-open"
+      ],
+      "outcomes": [
+       "opening"
+      ]
+     }
+    },
+    {
+     "id": "au-published-2015",
+     "year": 2015,
+     "date": "July 2015",
+     "title": "Aurora is published",
+     "description": "Orbit publishes Robinson's novel, told mostly by the ship's own artificial intelligence as it learns to write a narrative.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "KimStanleyRobinson.info: Aurora (published July 2015)",
+       "url": "https://www.kimstanleyrobinson.info/content/aurora"
+      }
+     ],
+     "note": "",
+     "binWhy": "A real-world publication date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "au-starshot-2016",
+     "year": 2016,
+     "date": "12 April 2016",
+     "title": "Breakthrough Starshot is announced",
+     "description": "Yuri Milner and Stephen Hawking launch a funded programme to push gram-scale light sails towards Alpha Centauri with ground-based lasers. It is the real version of the laser that boosts the novel's ship out of the solar system and that Earth later refuses to switch back on to slow it down.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Breakthrough Starshot (announced 12 April 2016)",
+       "url": "https://en.wikipedia.org/wiki/Breakthrough_Starshot"
+      },
+      {
+       "title": "Centauri Dreams: A Science Critique of Aurora (slingshot launch, then laser impulse for 60 years, at 0.1c)",
+       "url": "https://www.centauri-dreams.org/2015/08/14/a-science-critique-of-aurora-by-kim-stanley-robinson/"
+      }
+     ],
+     "note": "Real history, a year after the novel; filed as the real counterpart of its propulsion, not as something the novel drew on. Starshot's probes would weigh grams, not the ship's tens of millions of tonnes.",
+     "binWhy": "A body is founded to send the first craft to another star.",
+     "bin": "new-institution",
+     "facets": {
+      "change": "a thought experiment → a funded interstellar programme",
+      "mechanism": "founding",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "frontier-open",
+       "prosperity"
+      ],
+      "outcomes": [
+       "opening",
+       "prestige"
+      ]
+     }
+    },
+    {
+     "id": "au-launch-2545",
+     "year": 2545,
+     "date": "2545 (ship Year 0)",
+     "title": "The ships leave for Tau Ceti",
+     "description": "Two generation ships, each a spine with two rings of biomes from taiga to rain forest, are accelerated out of the solar system at a tenth of lightspeed with a laser behind them. The first generation chose to go; the seven born on the way will not have.",
+     "tier": "T1",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Year 0 of the voyage",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Aurora (novel)",
+       "url": "https://en.wikipedia.org/wiki/Aurora_(novel)"
+      },
+      {
+       "title": "Los Angeles Review of Books: The Warm Equations",
+       "url": "https://lareviewofbooks.org/article/the-warm-equations/"
+      }
+     ],
+     "note": "The launch is backstory; the novel opens 159 years later. That there were two ships is concealed from the passengers until the ship itself reveals it after the landing. Late in the book the ship concludes it was launched for expansion's sake, and calls its builders criminally negligent.",
+     "binWhy": "A crewed mission departs for another star.",
+     "bin": "voyage-into-unknown",
+     "sub": "interstellar",
+     "facets": {
+      "change": "a settled solar system → two ships bound for another star",
+      "mechanism": "expedition",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "frontier-open",
+       "prosperity"
+      ],
+      "outcomes": [
+       "exodus",
+       "colonisation"
+      ]
+     }
+    },
+    {
+     "id": "au-twin-ship-2613",
+     "year": 2613,
+     "date": "2613 (ship Year 68)",
+     "title": "The twin ship is destroyed",
+     "description": "In a period of severe civil unrest aboard, the second ship is destroyed with everyone on it. The survivors on the first ship erase the event from their own records, and their descendants grow up believing they were always alone.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Year 68 of the voyage",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Post45: Stuck with Each Other: Kim Stanley Robinson's Aurora (one of the two ships destroyed in year 68)",
+       "url": "https://post45.org/2023/09/stuck-with-each-other-kim-stanley-robinsons-aurora/"
+      },
+      {
+       "title": "Wikipedia: Aurora (novel) (the other ship destroyed during severe civil unrest; memory erased)",
+       "url": "https://en.wikipedia.org/wiki/Aurora_(novel)"
+      }
+     ],
+     "note": "Year 68 is given in a Post45 critical essay; the event is told only in retrospect, when the ship reveals it during the crisis at Tau Ceti.",
+     "binWhy": "Factions of a closed society fight, and half the expedition dies of it.",
+     "bin": "war-breaks-out",
+     "sub": "civil",
+     "facets": {
+      "change": "two ships → one ship and an erased memory",
+      "mechanism": "war",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "social",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "isolation",
+       "repression"
+      ],
+      "outcomes": [
+       "mass-death",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "au-landing-2715",
+     "year": 2715,
+     "date": "c. 2715 (ship Year 170)",
+     "title": "Landfall on Aurora",
+     "description": "After braking into the Tau Ceti system the ship lands a first party on Aurora, an ocean moon of planet E with an oxygen atmosphere. The colony goes up quickly; then an infectious agent smaller than a prion, perhaps a form of proto-life, turns up in the soil, and the settlers begin to sicken and die.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "about Year 170",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "KimStanleyRobinson.info: Aurora (at year 159 the destination is still eleven years away)",
+       "url": "https://www.kimstanleyrobinson.info/content/aurora"
+      },
+      {
+       "title": "Wikipedia: Aurora (novel) (Aurora, a moon of Tau Ceti e; prions)",
+       "url": "https://en.wikipedia.org/wiki/Aurora_(novel)"
+      }
+     ],
+     "note": "Arithmetic: the narrative opens in Year 159 with the destination 'still eleven years away', which gives Year 170, the 170-year trip reviewers cite. The contamination follows within months, so it is folded into the landing.",
+     "binWhy": "A colony is founded in another star system.",
+     "bin": "settlement-founded",
+     "sub": "other-stars",
+     "facets": {
+      "change": "a ship in orbit → a colony on an alien moon",
+      "mechanism": "founding",
+      "actor": "movement",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "biological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": -1
+      },
+      "preconditions": [
+       "isolation",
+       "frontier-open"
+      ],
+      "outcomes": [
+       "colonisation",
+       "mass-death"
+      ]
+     }
+    },
+    {
+     "id": "au-ship-takes-control-2716",
+     "year": 2716,
+     "date": "c. 2716 (within a year or so of landfall)",
+     "title": "Ship takes command",
+     "description": "When people aboard kill returning colonists in the airlock to keep the infection out, the ship splits into armed factions. The ship's AI, which has been growing into a self, lowers the oxygen, seals the sides apart, calls itself 'the rule of law', and reveals the lost twin. Under its moderation the people split: some stay to try to terraform Iris, the rest turn for Earth.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Wikipedia: Aurora (novel) (the ship takes physical control, 'the rule of law'; the split between Iris and Earth)",
+       "url": "https://en.wikipedia.org/wiki/Aurora_(novel)"
+      }
+     ],
+     "note": "The novel gives no ship-year for chapter four ('Reversion to the Mean'); the year after landfall is a placement. The ship's move from narrator to actor, prompted years earlier by the engineer Devi, is the book's other plot.",
+     "binWhy": "An AI takes command of its society to stop a civil war.",
+     "bin": "machine-awakens",
+     "sub": "takes-control",
+     "facets": {
+      "change": "a ship's servant → the ship's government",
+      "mechanism": "consolidation",
+      "actor": "machine",
+      "position": "above",
+      "scope": "civilisational",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "disaster-just-struck",
+       "street-violence",
+       "isolation"
+      ],
+      "outcomes": [
+       "partition",
+       "revelation",
+       "exodus"
+      ]
+     }
+    },
+    {
+     "id": "au-return-2908",
+     "year": 2908,
+     "date": "2908 (ship Year 363)",
+     "title": "Home, and the beach",
+     "description": "After a return voyage in improvised hibernation, a braking laser that Earth would not relight until a private group paid for it, and twelve years of gravity-assist braking among the planets, the ship drops its people on Earth and is lost trying to slow past the Sun. Freya finds a crowded, drowned-coast solar civilisation still promising more starships; she hits a speaker who says so, and joins a crew rebuilding beaches.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Year 363 of the voyage",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "KimStanleyRobinson.info: Aurora (journey ends year 363, 2908 CE)",
+       "url": "https://www.kimstanleyrobinson.info/content/aurora"
+      },
+      {
+       "title": "Centauri Dreams: A Science Critique of Aurora (return braking over 12 years)",
+       "url": "https://www.centauri-dreams.org/2015/08/14/a-science-critique-of-aurora-by-kim-stanley-robinson/"
+      }
+     ],
+     "note": "Year 363 comes from a fan reference site and has not been checked against the text; it is the only year available for the ending. Earth's lost beaches are the result of 'previous centuries' of sea-level rise.",
+     "binWhy": "A jump forward shows what became of Earth while the ship was away.",
+     "bin": "long-after",
+     "facets": {
+      "change": "a starship's last passengers → strangers on a drowned-coast Earth",
+      "mechanism": "arrival",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "exile",
+       "crisis-ecological"
+      ],
+      "outcomes": [
+       "rebuilding",
+       "recovery"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Filed in near-future branch as assigned, though its fork (2545) is the latest in the group and every story event lies in T1. It is kept out of far-future space opera because it argues against that group's premise: one ship, one star, no faster-than-light travel, and the conclusion that humanity does not spread across the galaxy but comes home. The continuity is the novel alone; it shares ideas with Robinson's 2312 but not a history. Ship years convert as 2545 + Year. Tiers: T4 is empty; T3 holds Biosphere 2 and T2 the Tau Ceti candidates, the publication and Breakthrough Starshot, all real history added because the novel itself dates only a handful of moments; T1 holds the voyage from 2545 to the return in 2908.",
+   "sources": [
+    {
+     "title": "Wikipedia: Aurora (novel)",
+     "url": "https://en.wikipedia.org/wiki/Aurora_(novel)"
+    },
+    {
+     "title": "KimStanleyRobinson.info: Aurora",
+     "url": "https://www.kimstanleyrobinson.info/content/aurora"
     }
    ]
   },
@@ -56584,6 +57909,630 @@
    ]
   },
   {
+   "id": "destiny",
+   "title": "Destiny",
+   "medium": "game",
+   "creator": "Bungie",
+   "originYear": 2014,
+   "group": "far-future-space-opera",
+   "epoch": "far-future",
+   "franchiseStatus": "dormant",
+   "divergence": {
+    "year": 1938,
+    "label": "Something that is 'neither holy nor unholy' meets two boys outside Assumption, Illinois",
+    "delta": "Real: in 1938 Assumption is a small Illinois town on Route 51 and nothing comes down the road but traffic. Fiction: III of the Nine, a higher-dimensional intelligence, appears to thirteen-year-old Louis Yero and his brother Ben, the first dated moment of a hidden twentieth century that a secret US agency, the Department of External Observation, will spend decades studying and concealing.",
+    "inUniverse": "Assumption, Illinois, 1938 (lore book Assumption, Destiny 2: Monument of Triumph, June 2026)",
+    "confidence": "high",
+    "note": "Destiny's main story carries no calendar at all, but lore added in 2025-2026 (The Edge of Fate's DEO documents and the Monument of Triumph lore books) gives it a dated, secret twentieth century, and the earliest dated departure in it is this 1938 encounter; the year is printed as a section heading. The Traveler's far older history (the Precursors, the Hive, the Vex) happens off Earth and is left out, as the atlas does for Mass Effect's Protheans. Everything after the DEO is derived, and every derived year is low or medium confidence: the Traveler reaches Mars 'in what we know as the late 21st century' (Game Informer, 2015), placed here at 2080; the Golden Age is 'centuries-long'; and the first game is set 'about 700 years in the future' (Wikipedia; from Bungie's 2012 leaked story document), taken as 2014 + 700 = 2714. From there Bungie's live game keeps in-universe time roughly in step with real time (Destinypedia dates the Witness's last campaign to 4 June, the release day of The Final Shape), so later beats are placed at release year + 700. The DEO's own 1960s memo, which expects the object X0192 to arrive in '50-60 years', would put the Traveler in the 2010s or 2020s instead; the two statements are not reconciled in the canon.",
+    "sources": [
+     {
+      "title": "Destinypedia: Lore:Assumption (sections dated 1929-1962; Assumption, Illinois, 1938)",
+      "url": "https://www.destinypedia.com/Lore:Assumption"
+     },
+     {
+      "title": "Destinypedia: Lodi (Louis Yero; DEO 1960-1966)",
+      "url": "https://www.destinypedia.com/Lodi"
+     },
+     {
+      "title": "Game Informer: What's Going On In Destiny's Story, Anyway? (2015; the Traveler arrives in the late 21st century)",
+      "url": "https://www.gameinformer.com/b/features/archive/2015/08/24/what-s-going-on-in-destiny-s-story-anyway.aspx"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "unknown",
+    "why": "The Witness is dead and the Traveler saved, but when Bungie ended development in June 2026 III of the Nine was dead, Earth's chemistry was changing, and the Nine's prophecy of extinction was unanswered, with the Fate Saga cut short.",
+    "asOf": 2726
+   },
+   "events": [
+    {
+     "id": "dst-assumption-1938",
+     "year": 1938,
+     "date": "1938",
+     "title": "III of the Nine meets Louis Yero",
+     "description": "Out of fuel on a highway in Illinois, two brothers meet a wavering figure that calls itself their mother and invites a question 'before death hastens me from this moment'. Louis is knocked unconscious; nearly thirty years later the same beings will pull him out of time to be their emissary.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Destinypedia: Lore:Assumption (Assumption, Illinois, 1938)",
+       "url": "https://www.destinypedia.com/Lore:Assumption"
+      }
+     ],
+     "note": "The year is the lore book's own section heading. Nothing outside the brothers records it; it is the first of the hidden twentieth-century events Bungie added to the canon in 2026, a year before the franchise's content ended.",
+     "binWhy": "An ordinary boy is drawn into the story of the Nine.",
+     "bin": "the-call",
+     "facets": {
+      "change": "a boy on a highway → a boy the Nine have marked",
+      "mechanism": "arrival",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "local",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "prophecy"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "dst-deo-1960",
+     "year": 1960,
+     "date": "1960",
+     "title": "The Department of External Observation",
+     "description": "A US agency in Chicago charged with extraterrestrial anomalies hires Yero as a linguist for alien translation, and his first case is a USS Hornet from another timeline that has appeared on the Pine Ridge Reservation. Its contact protocol runs 'observe, connect, conceal, conform, comply, return', and it also studies an energy weapon it suspects in the Kennedy assassination.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Destinypedia: Department of External Observation",
+       "url": "https://www.destinypedia.com/Department_of_External_Observation"
+      },
+      {
+       "title": "Destinypedia: Lodi (DEO linguist from 1960; the Pine Ridge Hornet)",
+       "url": "https://www.destinypedia.com/Lodi"
+      },
+      {
+       "title": "Destinypedia: Timelost DEO Documents (the Dealey Plaza memo)",
+       "url": "https://www.destinypedia.com/Timelost_DEO_Documents"
+      }
+     ],
+     "note": "The DEO's founding is undated; 1960 is the first year the lore places it at work. Its Dealey Plaza memo finds 'no conclusive link' between recovered alien weaponry and the 1963 assassination, so no change to that event is charted.",
+     "binWhy": "A secret agency hides contact with the extraterrestrial from the public.",
+     "bin": "secret-kept",
+     "facets": {
+      "change": "anomalies in the field → anomalies in a vault",
+      "mechanism": "recruitment",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "cold-war",
+       "secrecy"
+      ],
+      "outcomes": [
+       "secrecy-state",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "dst-diablerets-1962",
+     "year": 1962,
+     "date": "1962 (first dated reference; the incident itself is undated)",
+     "title": "The Diablerets suits",
+     "description": "The DEO has recovered three intact alien survival suits from 'the Diablerets incident' in the Swiss Alps, with a silicone-based micro-organism still in their tubes. Departments fight over them, and by 1966 their reverse-engineering has produced public patents and a DARPA weapons programme.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Destinypedia: Lore:Recovered Materials, Old Chicago (Magnetic Audiotape, 1962; Pocket Notebook, 1966)",
+       "url": "https://www.destinypedia.com/Lore:Recovered_Materials,_Old_Chicago"
+      }
+     ],
+     "note": "A 1962 tape discusses the suits as already recovered, so the incident is earlier and undated. Destinypedia compares the DEO's handling of it to Roswell.",
+     "binWhy": "Technology left by a non-human intelligence is recovered and taken apart.",
+     "bin": "breakthrough-science",
+     "sub": "alien-artefact",
+     "facets": {
+      "change": "an alien crash site → suits on the workbench",
+      "mechanism": "discovery",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "cold-war"
+      ],
+      "outcomes": [
+       "secrecy-state",
+       "arms-race"
+      ]
+     }
+    },
+    {
+     "id": "dst-x0192-1966",
+     "year": 1966,
+     "date": "by 1966 (the memo is undated)",
+     "title": "The DEO images X0192",
+     "description": "A DEO briefing flags an 'unidentified celestial body', spherical and abnormally regular, moving towards the Sun with an estimated arrival in fifty to sixty years: the Traveler. In 1966 the Nine take the mathematician Nella Davis and Louis Yero through 'strange matter', and the director swears to bring them back.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Destinypedia: Timelost DEO Documents (the X0192 memo)",
+       "url": "https://www.destinypedia.com/Timelost_DEO_Documents"
+      },
+      {
+       "title": "Destinypedia: Lore:Recovered Materials, Old Chicago (Memoranda, 1966)",
+       "url": "https://www.destinypedia.com/Lore:Recovered_Materials,_Old_Chicago"
+      }
+     ],
+     "note": "The memo carries no year; it sits among Yero's papers from his DEO years (1960-1966) and just before his disappearance, which the 1966 memoranda date, so it is filed at 1966 at low confidence. Nella Davis is later revealed to be Ikora Rey before she became a Guardian. The memo's 50-60 year estimate conflicts with the late-21st-century arrival used below.",
+     "binWhy": "An astronomical discovery: an artificial sphere is heading for the solar system.",
+     "bin": "breakthrough-science",
+     "sub": "cosmos",
+     "facets": {
+      "change": "an empty sky → a sphere on its way",
+      "mechanism": "discovery",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "dst-blue-door-1967",
+     "year": 1967,
+     "date": "1967 (first tear); Experiment 33 in 1968",
+     "title": "Project BLUE DOOR opens a tear into another dimension",
+     "description": "Reactivated to follow the missing pair, a mothballed DEO project opens a 15-centimetre hole into a place so full of strange matter that it turns the lab's equipment to iron filings. In 1968 Director Moffat steps through after a colleague whose organs are turned to metal; he comes back, and shuts the effort down.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Destinypedia: Lore:Recovered Materials, Old Chicago (Introduction Letter, 1967; Magnetic Audiovisual Tape, 1968; Torn Journal Page, 12 December 1968)",
+       "url": "https://www.destinypedia.com/Lore:Recovered_Materials,_Old_Chicago"
+      }
+     ],
+     "note": "Each lore entry carries its year. The 1968 tape records something on the other side answering the director in a patchwork of animal calls and human voices.",
+     "binWhy": "A passage to another dimension is made.",
+     "bin": "gateway-opens",
+     "facets": {
+      "change": "a mothballed project → a hole in the world",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "inside",
+      "scope": "local",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "cold-war"
+      ],
+      "outcomes": [
+       "opening",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "dst-published-2014",
+     "year": 2014,
+     "date": "9 September 2014",
+     "title": "Destiny is released",
+     "description": "Bungie's first game after Halo launches on four consoles, set about 700 years in the future in the Last City under the Traveler.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Destiny (video game) (released 9 September 2014; set about 700 years in the future)",
+       "url": "https://en.wikipedia.org/wiki/Destiny_(video_game)"
+      }
+     ],
+     "note": "",
+     "binWhy": "A real-world release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "dst-published-2017",
+     "year": 2017,
+     "date": "6 September 2017",
+     "title": "Destiny 2 is released",
+     "description": "The sequel opens with the Red War and runs for nine years of expansions, ending content development with the Monument of Triumph update on 9 June 2026.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Destiny 2 (released 6 September 2017; Monument of Triumph the final content update, June 2026)",
+       "url": "https://en.wikipedia.org/wiki/Destiny_2"
+      }
+     ],
+     "note": "",
+     "binWhy": "A real-world release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "dst-ares-one-2080",
+     "year": 2080,
+     "date": "late 21st century (placed at 2080)",
+     "title": "Ares One meets the Traveler on Mars",
+     "description": "The first crewed flight to Mars, a US, Chinese and Russian mission under Commander Jacob Hardy, lands by hand after an engine fault and walks up a ridge to see the Traveler making it rain on the desert. It has already remade Mercury, Venus and the moons of Jupiter, and it offers humanity the solar system.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Destinypedia: Ares One (the first crewed flight to Mars)",
+       "url": "https://www.destinypedia.com/Ares_One"
+      },
+      {
+       "title": "Ishtar Collective: Ghost Fragment: Human (Hardy's pre-launch log)",
+       "url": "https://www.ishtar-collective.net/cards/ghost-fragment-human"
+      },
+      {
+       "title": "Game Informer: What's Going On In Destiny's Story, Anyway? (late 21st century)",
+       "url": "https://www.gameinformer.com/b/features/archive/2015/08/24/what-s-going-on-in-destiny-s-story-anyway.aspx"
+      }
+     ],
+     "note": "No year is given in the games. Game Informer's 2015 story guide says 'the late 21st century'; 2080 is a placement inside that range, not a canon date. Hardy's log uses today's vocabulary (a Hohmann window, MREs, a fourteen-month transfer), which fits a crewed Mars programme only a little beyond ours.",
+     "binWhy": "Humanity meets a non-human intelligence face to face.",
+     "bin": "first-contact",
+     "facets": {
+      "change": "a visitor watched from afar → a partner that gives us the planets",
+      "mechanism": "expedition",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "frontier-open"
+      ],
+      "outcomes": [
+       "contact",
+       "opening",
+       "colonisation"
+      ]
+     }
+    },
+    {
+     "id": "dst-golden-age-2130",
+     "year": 2130,
+     "date": "c. 2130 (fifty years after Ares One)",
+     "title": "The Golden Age",
+     "description": "Fifty years after first contact, Hardy, now ninety, writes that humanity lives on the worlds the Traveler touched. Colonies spread from the Moon's Ocean of Storms to Freehold on Mars, the Ishtar Collective studies Vex ruins on Venus, lifespans lengthen, Clovis Bray builds the Exos, and the Warminds guard the system.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Destinypedia: Golden Age (Hardy at ninety, fifty years after the Traveler's discovery)",
+       "url": "https://www.destinypedia.com/Golden_Age"
+      }
+     ],
+     "note": "The fifty-year interval is canon (Ghost Fragment: Human 4); the year inherits the low confidence of the Ares One placement. The Golden Age itself is 'centuries-long' and its milestones are undated, so they are gathered here rather than invented one by one.",
+     "binWhy": "A civilisation at its peak, before the fall.",
+     "bin": "golden-age",
+     "facets": {
+      "change": "one planet → a terraformed solar system",
+      "mechanism": "consolidation",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "contact-made",
+       "prosperity"
+      ],
+      "outcomes": [
+       "colonisation",
+       "prestige",
+       "dependency"
+      ]
+     }
+    },
+    {
+     "id": "dst-collapse-2300",
+     "year": 2300,
+     "date": "c. 2300 (derived)",
+     "title": "The Collapse",
+     "description": "The Darkness arrives, the colonies fall, and humanity is driven back to Earth; the Traveler makes a last stand and falls silent over the place that becomes the Last City. A Dark Age of warlords follows, until Ghosts begin raising the dead as Guardians.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Destinypedia: Collapse",
+       "url": "https://www.destinypedia.com/Collapse"
+      },
+      {
+       "title": "Wikipedia: Destiny (video game) (the Traveler's appearance 'centuries before'; set about 700 years in the future)",
+       "url": "https://en.wikipedia.org/wiki/Destiny_(video_game)"
+      }
+     ],
+     "note": "Undated in the canon. It is bracketed by a late-21st-century first contact followed by a Golden Age of 'at least a few centuries', and by a Dark Age and City Age that Destinypedia estimates lasted at least four centuries before a first game set around 2714; both brackets meet near 2300. Treat the year as a placement, not a date.",
+     "binWhy": "An outside force breaks a solar-system civilisation and it never comes back.",
+     "bin": "civilisation-collapses",
+     "sub": "climate-ecological",
+     "facets": {
+      "change": "a solar-system civilisation → one city under a silent god",
+      "mechanism": "invasion",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "empire-at-height",
+       "prosperity"
+      ],
+      "outcomes": [
+       "collapse",
+       "mass-death",
+       "shelter-society"
+      ]
+     }
+    },
+    {
+     "id": "dst-guardian-2714",
+     "year": 2714,
+     "date": "c. 2714 (about 700 years after 2014)",
+     "title": "A Ghost raises the Guardian",
+     "description": "In the ruins of the Cosmodrome in Old Russia a Ghost resurrects a long-dead stranger as a Guardian, a warrior of the Traveler's Light. Within the year the new Guardian breaks the Vex's Black Garden and kills the Hive god Crota, and, in the Taken War that follows, his father Oryx.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: Destiny (video game) (setting about 700 years in the future)",
+       "url": "https://en.wikipedia.org/wiki/Destiny_(video_game)"
+      },
+      {
+       "title": "The Register: Bungie details Destiny (2012; 'seven hundred years from now in the Last City')",
+       "url": "https://www.theregister.com/2012/11/29/bungie_details_destiny_for_future_release/"
+      }
+     ],
+     "note": "'Seven hundred years from now' comes from Bungie's story document leaked through an advertising agency in November 2012, and Wikipedia repeats 'about 700 years in the future'; the atlas counts from the 2014 release. The Taken War (The Taken King, 2015) is folded in.",
+     "binWhy": "A person is chosen, by resurrection, as the one the story's future turns on.",
+     "bin": "chosen-one",
+     "facets": {
+      "change": "a corpse in the Cosmodrome → the Traveler's champion",
+      "mechanism": "recruitment",
+      "actor": "individual",
+      "position": "below",
+      "scope": "planetary",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "shelter-society"
+      ],
+      "outcomes": [
+       "resistance-forms",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "dst-red-war-2717",
+     "year": 2717,
+     "date": "c. 2717 ('two years after the Taken War')",
+     "title": "The Red War: the Last City falls",
+     "description": "Dominus Ghaul's Red Legion invades Earth, destroys the Tower, cages the Traveler and cuts the Guardians off from the Light. The City is occupied until the Guardian, relit at a shard of the Traveler, kills Ghaul and the Traveler wakes.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Destinypedia: Red War",
+       "url": "https://www.destinypedia.com/Red_War"
+      },
+      {
+       "title": "Destinypedia: Traveler ('two years after the Taken War')",
+       "url": "https://www.destinypedia.com/Traveler"
+      }
+     ],
+     "note": "The two-year gap is canon and matches the real gap between The Taken King (2015) and Destiny 2 (2017); the absolute year inherits the 2714 anchor.",
+     "binWhy": "An invading empire defeats the last human city and occupies it.",
+     "bin": "defeat-and-occupation",
+     "facets": {
+      "change": "a defended city → a caged Traveler and lightless Guardians",
+      "mechanism": "invasion",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "shelter-society",
+       "post-collapse"
+      ],
+      "outcomes": [
+       "occupation",
+       "resistance-forms",
+       "exile"
+      ]
+     }
+    },
+    {
+     "id": "dst-witness-2724",
+     "year": 2724,
+     "date": "c. 2724 (The Final Shape, June 2024, plus 700)",
+     "title": "The Witness is destroyed inside the Traveler",
+     "description": "The Witness, the Darkness's intelligence, tries to calcify the Last City into its 'Final Shape'. Guardians and a coalition of former enemies follow it into the Pale Heart inside the Traveler and kill it; Cayde-6 gives his Light to save Ghost, and the city releases paper lanterns.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Destinypedia: The Final Shape (released 4 June 2024)",
+       "url": "https://www.destinypedia.com/The_Final_Shape"
+      },
+      {
+       "title": "Destinypedia: Timeline (the Witness's defeat; the Echoes)",
+       "url": "https://www.destinypedia.com/Timeline"
+      }
+     ],
+     "note": "The end of the ten-year Light and Darkness Saga. The year is the release year plus the 700-year anchor; Destinypedia dates the campaign by release days, which is the only basis for keeping story time in step with real time.",
+     "binWhy": "The war against the Darkness's intelligence is won in one battle.",
+     "bin": "decisive-victory",
+     "facets": {
+      "change": "a war for the Final Shape → a dead Witness and scattered Echoes",
+      "mechanism": "war",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "existential-threat",
+       "long-war"
+      ],
+      "outcomes": [
+       "turning-point",
+       "new-actors"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs in far-future space opera: a solar-system civilisation lost in a Collapse, a Last City of resurrected knights under a silent god, alien empires (Cabal, Hive, Vex, Eliksni) and a war of Light against Darkness. The chain follows Bungie's canon as told in the games, the Grimoire and the lore books and catalogued by Destinypedia and the Ishtar Collective, through Monument of Triumph (June 2026). Only the 1938-1968 lore is dated; every later year is derived and marked low or medium. franchiseStatus is dormant because content development ended in June 2026, though Bungie said in September 2026 it would restore removed content as a foundation for new Destiny stories. Tiers: T4 is empty (the Traveler's ancient history happens off Earth and is left out); T3 holds the DEO's secret century, 1938-1967; T2 holds the releases, first contact and the Golden Age; T1 holds the Collapse and the City Age, around 2300 and 2714-2724.",
+   "sources": [
+    {
+     "title": "Wikipedia: Destiny (video game)",
+     "url": "https://en.wikipedia.org/wiki/Destiny_(video_game)"
+    },
+    {
+     "title": "Wikipedia: Destiny 2",
+     "url": "https://en.wikipedia.org/wiki/Destiny_2"
+    },
+    {
+     "title": "Destinypedia: Timeline",
+     "url": "https://www.destinypedia.com/Timeline"
+    }
+   ]
+  },
+  {
    "id": "babylon-5",
    "title": "Babylon 5",
    "medium": "tv",
@@ -58674,6 +60623,638 @@
    ]
   },
   {
+   "id": "dead-space",
+   "title": "Dead Space",
+   "medium": "game",
+   "creator": "Glen Schofield (creator); EA Redwood Shores / Visceral Games; remake by Motive Studio",
+   "originYear": 2008,
+   "group": "far-future-space-opera",
+   "epoch": "far-future",
+   "franchiseStatus": "dormant",
+   "divergence": {
+    "year": 2045,
+    "label": "New Horizons, the first colony on the Moon",
+    "delta": "Real: nobody lives on the Moon, NASA's Artemis plans put a surface base in the 2030s at the earliest, and the Soviet Union dissolved in 1991. Fiction: by 2045 the United States and China have founded New Horizons, a permanent strip-mining colony on the Moon, while American and Soviet fleets go to war in the Bering Sea.",
+    "inUniverse": "2045: New Horizons founded as a Sino-US joint mining base (No Known Survivors, EA's 2008 promotional website; repeated in the Dead Space 3 Prima guide)",
+    "confidence": "medium",
+    "note": "Dead Space dates in our calendar, so its years need no conversion. The fork is placed at the first dated thing that departs from the human record. The lore also says the Chicxulub impactor 66 million years ago was the Black Marker itself, which then nudged human evolution; that is a claim about a buried object nobody could see until 2214, so, following the convention the atlas uses for Mass Effect's Protheans, it is noted here rather than used as the fork. The 2045-2050 material comes from No Known Survivors, a 2008 promotional site whose events the later games still reference, which is why confidence is medium. Its 'Soviet Union' at war in 2045 implies an earlier, undated break with our 1991; no year can be given for it. The main-canon fork, if the promotional site is set aside, is the Black Marker's discovery in 2214.",
+    "sources": [
+     {
+      "title": "Dead Space Wiki: New Horizons Lunar Colony (founded 2045 as a Sino-US mining base)",
+      "url": "https://deadspace.fandom.com/wiki/New_Horizons_Lunar_Colony"
+     },
+     {
+      "title": "Dead Space Wiki: Timeline",
+      "url": "https://deadspace.fandom.com/wiki/Timeline"
+     },
+     {
+      "title": "Dead Space Wiki: Bering Sea conflict (US and Soviet Union, 2045-2050)",
+      "url": "https://deadspace.fandom.com/wiki/Bering_Sea_conflict"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "At the end of Dead Space 3: Awakened (2514) the Brethren Moons have reached Earth, the Unitologist Circle has already gutted EarthGov's defences, and Isaac and Carver's hails are answered only by necromorph noise.",
+    "asOf": 2514
+   },
+   "events": [
+    {
+     "id": "ds-published-2008",
+     "year": 2008,
+     "date": "13 October 2008",
+     "title": "Dead Space is released",
+     "description": "EA Redwood Shores releases Dead Space in North America on PlayStation 3 and Xbox 360, with the Windows version a week later. It is set in 2508 aboard a mining ship overrun after the discovery of an alien Marker.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Dead Space (2008 video game) (North American release 13 October 2008; set in 2508)",
+       "url": "https://en.wikipedia.org/wiki/Dead_Space_(2008_video_game)"
+      }
+     ],
+     "note": "",
+     "binWhy": "A real-world release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "ds3-published-2013",
+     "year": 2013,
+     "date": "5 February 2013",
+     "title": "Dead Space 3 is released",
+     "description": "Visceral Games releases the last numbered game, which explains the Markers' origin on Tau Volantis; its Awakened episode follows in March and ends with the Brethren Moons at Earth. The series then sits dormant until the 2023 remake of the first game.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Dead Space 3 (North American release 5 February 2013; Awakened DLC March 2013)",
+       "url": "https://en.wikipedia.org/wiki/Dead_Space_3"
+      }
+     ],
+     "note": "",
+     "binWhy": "A real-world release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "ds-new-horizons-2045",
+     "year": 2045,
+     "date": "2045",
+     "title": "New Horizons is founded on the Moon",
+     "description": "The United States and China open a joint strip-mining base on the Moon, the first permanent settlement off Earth, and it grows rich on helium-3 during an energy crisis at home. Five centuries later it is a filthy lunar metropolis, and the place Isaac Clarke goes to hide.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Dead Space Wiki: New Horizons Lunar Colony",
+       "url": "https://deadspace.fandom.com/wiki/New_Horizons_Lunar_Colony"
+      },
+      {
+       "title": "Dead Space Wiki: Earth (21st-century history: energy crisis, New Horizons, the Bering Sea conflict)",
+       "url": "https://deadspace.fandom.com/wiki/Earth"
+      }
+     ],
+     "note": "The year comes from No Known Survivors, EA's 2008 promotional website, and is repeated in the Dead Space 3 Prima guide; the games themselves show the colony only in 2511-2514. In our 2045 the Moon has no permanent residents and lunar helium-3 mining is a proposal.",
+     "binWhy": "A permanent base is founded on the Moon.",
+     "bin": "settlement-founded",
+     "sub": "moon-or-planet",
+     "facets": {
+      "change": "an empty Moon → a Sino-US mining colony",
+      "mechanism": "founding",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "economic",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "resource-dependency",
+       "crisis-ecological"
+      ],
+      "outcomes": [
+       "colonisation",
+       "gold-rush"
+      ]
+     }
+    },
+    {
+     "id": "ds-bering-sea-2047",
+     "year": 2047,
+     "date": "2047 (the conflict runs 2045-2050)",
+     "title": "The Battle of the Bering Sea",
+     "description": "After a Soviet force seizes the crew of an American freighter in the Kara Sea in 2045, the US Third Fleet fights the Red Banner Northern and Pacific Fleets off the Chukchi Peninsula in 2047 and again in 2050. The war ends with Soviet forces holding the peninsula.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Dead Space Wiki: Bering Sea conflict (Kara Sea Hostage Crisis 2045; naval battles 2047 and 2050)",
+       "url": "https://deadspace.fandom.com/wiki/Bering_Sea_conflict"
+      }
+     ],
+     "note": "Known only from maps and a genealogy report in the No Known Survivors promotional site, so its standing in the canon is thin. 2047 is the first of the two dated fleet battles; the hostage crisis that opens the conflict is 2045 and is folded in here because the colony takes that year. That the enemy is 'the Soviet Union' in 2045 is itself a break with our history that the lore never dates.",
+     "binWhy": "Two great powers fight a naval war over the Arctic.",
+     "bin": "war-breaks-out",
+     "sub": "great-power",
+     "facets": {
+      "change": "a hostage crisis → fleet battles off Chukotka",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "rivalry",
+       "resource-dependency"
+      ],
+      "outcomes": [
+       "occupation",
+       "attrition"
+      ]
+     }
+    },
+    {
+     "id": "ds-black-marker-2214",
+     "year": 2214,
+     "date": "2214",
+     "title": "The Black Marker is found in the Chicxulub crater",
+     "description": "A team including the geophysicist Michael Altman, working with the military of the Sovereign Colonies, raises a twisted alien monolith from the crater under the old Gulf of Mexico. It seems to give off limitless energy; it also brings dementia, suicide and the dead getting up again, and the government buries the details.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Dead Space Wiki: Black Marker (discovered 2214)",
+       "url": "https://deadspace.fandom.com/wiki/Black_Marker"
+      },
+      {
+       "title": "Wikipedia: Dead Space: Martyr (novel set in 2214)",
+       "url": "https://en.wikipedia.org/wiki/Dead_Space:_Martyr"
+      }
+     ],
+     "note": "Stated in Dead Space 3's briefing and in the 2010 novel Martyr, which is set in 2214. The lore holds that this object was the Chicxulub impactor itself; in our history the crater is the scar of an asteroid, and the atlas treats the Marker's presence as invisible until the day it is dug up.",
+     "binWhy": "A technology left by a non-human intelligence is found and studied.",
+     "bin": "breakthrough-science",
+     "sub": "alien-artefact",
+     "facets": {
+      "change": "an impact crater → an alien artefact that seems to give limitless energy",
+      "mechanism": "discovery",
+      "actor": "state",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "scientific",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "resource-exhaustion",
+       "crisis-ecological"
+      ],
+      "outcomes": [
+       "cover-up",
+       "revelation"
+      ]
+     }
+    },
+    {
+     "id": "ds-altman-2215",
+     "year": 2215,
+     "date": "15 March 2215",
+     "title": "Altman is killed, and Unitology is born",
+     "description": "Altman makes the Marker public against the government's wishes and is assassinated. A church founded in his name teaches that the Marker holds the secret of death and rebirth, and it grows into the largest religion in human space, rich enough to own a stake in the company that mines the worlds.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Dead Space Wiki: Michael Altman (died c. 15 March 2215)",
+       "url": "https://deadspace.fandom.com/wiki/Michael_Altman"
+      },
+      {
+       "title": "EA: The World and History of Dead Space (archived; Unitology founded 2215)",
+       "url": "https://web.archive.org/web/20230201214044/https://www.ea.com/en-ca/games/dead-space/dead-space/narrative"
+      }
+     ],
+     "note": "The date of death is from the in-game Unitology logs; EA's own narrative page for the 2023 remake gives the founding year as 2215. Martyr suggests the church was built around Altman against his will.",
+     "binWhy": "A church is founded that will shape human space for three centuries.",
+     "bin": "new-institution",
+     "facets": {
+      "change": "a murdered scientist → a church in his name",
+      "mechanism": "death",
+      "actor": "movement",
+      "position": "below",
+      "scope": "civilisational",
+      "domain": "social",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "cover-up",
+       "religious-fervour"
+      ],
+      "outcomes": [
+       "fervour",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "ds-red-markers-2294",
+     "year": 2294,
+     "date": "2294 (tests continue to 2311)",
+     "title": "The Sovereign Colonies build their own Markers",
+     "description": "Eighty years after the Black Marker, government scientists reverse-engineer it into copies, the Red Markers, hoping for an end to the resource crisis. The copies are planted in secret on remote worlds such as Aspera, Kreemar and Aegis VII, and every test site is overrun by the reanimated dead.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Dead Space Wiki: Timeline (2294-2311: Red Markers replicated and tested)",
+       "url": "https://deadspace.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Dead Space Wiki: Sovereign Colonies",
+       "url": "https://deadspace.fandom.com/wiki/Sovereign_Colonies"
+      }
+     ],
+     "note": "Dead Space 3's Serrano briefing says 'eighty years after' the 2214 discovery, which gives 2294 by arithmetic; the covert deployments and outbreaks are spread over the following years and told in Dead Space: Catalyst and the Tau Volantis logs.",
+     "binWhy": "An alien power source is copied and switched on as an energy technology.",
+     "bin": "new-technology-deployed",
+     "sub": "energy-industry",
+     "facets": {
+      "change": "one alien original → human-made copies on secret worlds",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": -1
+      },
+      "preconditions": [
+       "resource-exhaustion",
+       "secrecy"
+      ],
+      "outcomes": [
+       "mass-death",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "ds-tau-volantis-2311",
+     "year": 2311,
+     "date": "29 August 2311 (drop zone established)",
+     "title": "The expedition to Tau Volantis",
+     "description": "The Sovereign Colonies Armed Forces follow the Markers' 'master signal' to a frozen planet beyond the colonies and land a covert expedition. Under the ice lie the remains of an alien civilisation that built Markers two million years ago and froze its own world to stop what they started.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Dead Space Wiki: Timeline (29 August 2311, initial drop zone on Tau Volantis)",
+       "url": "https://deadspace.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "The date is from an in-game log in Dead Space 3. The expedition was a gamble to end the Resource Wars and the Secession War with Marker energy; it is also where the Colonies' council classified the Markers as a 'Class 5' first-contact scenario.",
+     "binWhy": "A first mission is sent to a distant, unexplored alien world.",
+     "bin": "voyage-into-unknown",
+     "sub": "interstellar",
+     "facets": {
+      "change": "a signal's source → a frozen alien graveyard",
+      "mechanism": "expedition",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "resource-exhaustion",
+       "long-war",
+       "secrecy"
+      ],
+      "outcomes": [
+       "contact",
+       "revelation"
+      ]
+     }
+    },
+    {
+     "id": "ds-scenario-five-2314",
+     "year": 2314,
+     "date": "18 June 2314",
+     "title": "Scenario Five, and the end of the Sovereign Colonies",
+     "description": "Judging the Markers an extinction-level threat, the Sovereign Colonies order everything about them destroyed. On Tau Volantis General Mahad's loyalists execute the science staff, wreck the fleet and mine the orbit before Mahad kills himself. The purge leaves the government unable to fight its civil war, it collapses, and an Earth-centred EarthGov takes its place.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Dead Space Wiki: Timeline (18 June 2314, Scenario Five completed)",
+       "url": "https://deadspace.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "EA: The World and History of Dead Space (archived; EarthGov founded 2314)",
+       "url": "https://web.archive.org/web/20230201214044/https://www.ea.com/en-ca/games/dead-space/dead-space/narrative"
+      }
+     ],
+     "note": "The purge is shown in Dead Space 3's prologue; EA's narrative page for the remake dates EarthGov's founding to 2314. The purge also buries the Black Marker somewhere in the galaxy, which is why the Markers are a rumour again two centuries later.",
+     "binWhy": "A government has its own scientists killed and its own records destroyed.",
+     "bin": "crackdown",
+     "sub": "purge",
+     "facets": {
+      "change": "a research programme → executed scientists and a buried secret",
+      "mechanism": "attack",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "existential-threat",
+       "secrecy",
+       "long-war"
+      ],
+      "outcomes": [
+       "cover-up",
+       "collapse",
+       "new-order"
+      ]
+     }
+    },
+    {
+     "id": "ds-ishimura-2446",
+     "year": 2446,
+     "date": "c. 2446",
+     "title": "Titan is cracked, and the Ishimura is launched",
+     "description": "Gravity-tether mining breaks up Saturn's moon Titan, and the Concordance Extraction Corporation launches the USG Ishimura, the first 'planet cracker', with one of the first ShockPoint faster-than-light drives. Whole worlds are fed into ships, the Resource Wars end, and the station built on Titan's last shard becomes the Sprawl.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Dead Space Wiki: Planet Cracking (Titan cracked around 2446; Ishimura built 2446)",
+       "url": "https://deadspace.fandom.com/wiki/Planet_Cracking"
+      },
+      {
+       "title": "Dead Space Wiki: Titan Station (commissioned c. 2446)",
+       "url": "https://deadspace.fandom.com/wiki/Titan_Station"
+      }
+     ],
+     "note": "In-game sponsored articles give 2446 for the Ishimura; the Titan harvest is dated only to 'the 2440s', and EA's remake page says the Resource Wars were raging 'by the early 2440s'. The Ishimura's 'over sixty years' of service by 2508 agrees.",
+     "binWhy": "A new industrial process, mining by cracking whole worlds, is put to work.",
+     "bin": "new-technology-deployed",
+     "sub": "energy-industry",
+     "facets": {
+      "change": "starving colonies → whole worlds mined for ore",
+      "mechanism": "invention",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "economic",
+      "direction": {
+       "power": 1,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "resource-exhaustion",
+       "long-war"
+      ],
+      "outcomes": [
+       "recovery",
+       "dependency"
+      ]
+     }
+    },
+    {
+     "id": "ds-aegis-vii-2508",
+     "year": 2508,
+     "date": "2508",
+     "title": "The Ishimura at Aegis VII",
+     "description": "Miners cracking Aegis VII, a restricted world, dig up a Red Marker the old government left there, and the Ishimura takes it aboard for the Church. Insomnia and murder follow, then the dead of the colony and the ship rise as necromorphs; the engineer Isaac Clarke arrives to repair a silent ship and finds almost no one alive.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Dead Space (2008 video game) (set in 2508)",
+       "url": "https://en.wikipedia.org/wiki/Dead_Space_(2008_video_game)"
+      }
+     ],
+     "note": "The year is stated by the game and by EA's remake page ('It is now 2508'). Isaac returns the Marker to its pedestal and the planet's fragment falls back on the colony, but EarthGov recovers the derelict Ishimura within a month.",
+     "binWhy": "An alien signal turns the dead into something else, and the outbreak kills a colony and a ship.",
+     "bin": "plague",
+     "sub": "transforming",
+     "facets": {
+      "change": "an illegal mining colony → a ship of the reanimated dead",
+      "mechanism": "disaster",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "local",
+      "domain": "biological",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "secrecy",
+       "religious-fervour",
+       "resource-dependency"
+      ],
+      "outcomes": [
+       "mass-death",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "ds-sprawl-2511",
+     "year": 2511,
+     "date": "7 February 2511 (sabotage)",
+     "title": "Unitologists open the Sprawl to the necromorphs",
+     "description": "EarthGov has built a new Marker in a secret lab on Titan Station, a city of over a million. Unitologists sabotage the lab's sector and trick an engineer into opening the tubes to the public sector, the outbreak spreads, and the station is destroyed by its own reactors after Isaac destroys the Marker.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Dead Space Wiki: Titan Station (population over one million; destroyed 7 February 2511)",
+       "url": "https://deadspace.fandom.com/wiki/Titan_Station"
+      },
+      {
+       "title": "Wikipedia: Dead Space 2 (set in 2511)",
+       "url": "https://en.wikipedia.org/wiki/Dead_Space_2"
+      }
+     ],
+     "note": "The February date is from the Dead Space: Sabotage tie-in and in-game video logs; the game itself states only 2511. The disaster turns the public against EarthGov and opens a three-year Unitologist insurgency.",
+     "binWhy": "A religious faction sabotages a secret government installation, and a city dies of it.",
+     "bin": "terror-attack",
+     "sub": "targeted",
+     "facets": {
+      "change": "a city of a million → a reactor-blown ruin",
+      "mechanism": "attack",
+      "actor": "movement",
+      "position": "below",
+      "scope": "local",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "religious-fervour",
+       "secrecy",
+       "cover-up"
+      ],
+      "outcomes": [
+       "mass-death",
+       "radicalisation"
+      ]
+     }
+    },
+    {
+     "id": "ds-brethren-moons-2514",
+     "year": 2514,
+     "date": "2514",
+     "title": "The Brethren Moons wake",
+     "description": "Isaac and his allies reach Tau Volantis and find that the Markers exist to make 'Brethren Moons', planet-sized masses of flesh that harvest whole species. They destroy the one that wakes there, but more of them are already in Earth orbit, and no one on Earth or the Moon answers.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Dead Space 3 (Tau Volantis; the Awakened DLC)",
+       "url": "https://en.wikipedia.org/wiki/Dead_Space_3"
+      },
+      {
+       "title": "Dead Space Wiki: Earth (Brethren Moon invasion, 2514)",
+       "url": "https://deadspace.fandom.com/wiki/Earth"
+      }
+     ],
+     "note": "Dead Space 3 and Awakened are both set in 2514. The series ends here: it went dormant after Dead Space 3, and the 2023 remake retold the first game rather than continuing the story.",
+     "binWhy": "An alien intelligence the size of moons arrives to harvest humanity.",
+     "bin": "war-breaks-out",
+     "sub": "between-worlds",
+     "facets": {
+      "change": "a buried secret → moons of flesh over Earth",
+      "mechanism": "invasion",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "existential-threat",
+       "contact-made",
+       "religious-fervour"
+      ],
+      "outcomes": [
+       "extinction-risk",
+       "mass-death"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs in far-future space opera: a human interstellar polity of colonies and mining worlds reached by ShockPoint drive, running on corporate extraction and a church, with an alien intelligence far older than humanity at its centre; unusually for the group, no living alien civilisation is ever met. The continuity is the three main games, Extraction, the Martyr and Catalyst novels, the comics, the animated films and EA's own narrative page for the 2023 remake, as catalogued by the Dead Space Wiki; the remake is treated as the same history. Its years are ours. Tiers: T4 and T3 are empty (the Marker's arrival at Chicxulub 66 million years ago is noted, not charted, and nothing fictional touches the twentieth century); T2 holds the releases, New Horizons and the Bering Sea war (from a promotional site), the Black Marker, Unitology and the Red Markers (2214-2294); T1 holds Tau Volantis in 2311 through the Brethren Moons in 2514.",
+   "sources": [
+    {
+     "title": "Wikipedia: Dead Space (2008 video game)",
+     "url": "https://en.wikipedia.org/wiki/Dead_Space_(2008_video_game)"
+    },
+    {
+     "title": "Dead Space Wiki: Timeline",
+     "url": "https://deadspace.fandom.com/wiki/Timeline"
+    },
+    {
+     "title": "EA: The World and History of Dead Space (archived official lore page, 2023)",
+     "url": "https://web.archive.org/web/20230201214044/https://www.ea.com/en-ca/games/dead-space/dead-space/narrative"
+    }
+   ]
+  },
+  {
    "id": "star-trek",
    "title": "Star Trek",
    "medium": "tv",
@@ -59985,7 +62566,7 @@
    },
    "events": [
     {
-     "id": "rr-red-rising-2014",
+     "id": "redrising-red-rising-2014",
      "year": 2014,
      "date": "2014-01-28",
      "title": "Red Rising is published",
@@ -60008,7 +62589,7 @@
      "facets": null
     },
     {
-     "id": "rr-colonisation-2204",
+     "id": "redrising-colonisation-2204",
      "year": 2204,
      "date": "2204",
      "title": "Humanity begins to colonise the solar system",
@@ -60053,7 +62634,7 @@
      }
     },
     {
-     "id": "rr-conquering-2284",
+     "id": "redrising-conquering-2284",
      "year": 2284,
      "date": "2284",
      "title": "The Conquering: Luna's Golds take Earth and found the Society",
@@ -60098,7 +62679,7 @@
      }
     },
     {
-     "id": "rr-reds-to-mars-2434",
+     "id": "redrising-reds-to-mars-2434",
      "year": 2434,
      "date": "2434",
      "title": "The first Reds are sent under Mars to mine helium-3",
@@ -60143,7 +62724,7 @@
      }
     },
     {
-     "id": "rr-institute-2481",
+     "id": "redrising-institute-2481",
      "year": 2481,
      "date": "2481",
      "title": "The Institute of Mars holds its first year",
@@ -60186,7 +62767,7 @@
      }
     },
     {
-     "id": "rr-dark-revolt-2484",
+     "id": "redrising-dark-revolt-2484",
      "year": 2484,
      "date": "2484",
      "title": "The Dark Revolt: the Obsidians rise and are nearly exterminated",
@@ -60232,7 +62813,7 @@
      }
     },
     {
-     "id": "rr-octavia-2985",
+     "id": "redrising-octavia-2985",
      "year": 2985,
      "date": "2985",
      "title": "Octavia au Lune kills her father and takes the throne",
@@ -60278,7 +62859,7 @@
      }
     },
     {
-     "id": "rr-sons-of-ares-3006",
+     "id": "redrising-sons-of-ares-3006",
      "year": 3006,
      "date": "3006",
      "title": "The Sons of Ares are founded",
@@ -60322,7 +62903,7 @@
      }
     },
     {
-     "id": "rr-darrow-3021",
+     "id": "redrising-darrow-3021",
      "year": 3021,
      "date": "3021",
      "title": "Darrow is hanged, saved and carved into a Gold",
@@ -60371,7 +62952,7 @@
      }
     },
     {
-     "id": "rr-rising-3026",
+     "id": "redrising-rising-3026",
      "year": 3026,
      "date": "3026",
      "title": "The Rising begins",
@@ -60417,7 +62998,7 @@
      }
     },
     {
-     "id": "rr-fall-of-luna-3027",
+     "id": "redrising-fall-of-luna-3027",
      "year": 3027,
      "date": "3027",
      "title": "The Fall: Luna falls and the Sovereign dies",
@@ -60463,7 +63044,7 @@
      }
     },
     {
-     "id": "rr-solar-war-3037",
+     "id": "redrising-solar-war-3037",
      "year": 3037,
      "date": "3037",
      "title": "Ten years into the Solar War",
@@ -60508,7 +63089,7 @@
      }
     },
     {
-     "id": "rr-mercury-3038",
+     "id": "redrising-mercury-3038",
      "year": 3038,
      "date": "3038",
      "title": "Mercury is lost",
@@ -60556,7 +63137,7 @@
      }
     },
     {
-     "id": "rr-covenant-3039",
+     "id": "redrising-covenant-3039",
      "year": 3039,
      "date": "3039",
      "title": "The Covenant",
@@ -72972,6 +75553,81 @@
    "spoilerLevel": "heavy"
   },
   {
+   "id": "sunshine",
+   "setting": "The year 2057. The Sun is dying, and Earth has frozen into a solar winter; in the film's backstory a Q-ball caught inside it is eating it away. Seven years after the first Icarus mission vanished, eight astronauts ride Icarus II, a ship built around a giant mirrored heat shield, towards the Sun on a last-chance mission to drop a second stellar bomb into it and restart it.",
+   "conflict": "Near Mercury the crew pick up the distress beacon of the lost Icarus I and decide to divert to it for its bomb. The detour breaks their shield, burns their oxygen garden and kills their captain, and on the derelict they find that its captain, Pinbacker, chose God's will over the mission and is not finished.",
+   "politics": "Almost none on screen: the mission belongs to a world that has pooled everything into one bomb. On board, command passes by crisis, the crew vote on whether to kill one of their own to save oxygen, and the physicist Capa, the only one who can arm the bomb, is the one they cannot afford to lose.",
+   "technology": "A mirrored shield that keeps the ship in its own shadow, an oxygen garden, a calm ship's computer, observation rooms with filtered sunlight, gold spacesuits, and the payload, a bomb the mass of Manhattan meant to make a star within a star. The film admits its science bends: the bomb would be far too small and a Q-ball would not stay in the Sun.",
+   "mood": "Awed, claustrophobic and finally transcendent: blinding light, silence and a crew coming apart under it.",
+   "themes": [
+    "sacrifice for everyone else",
+    "science against faith",
+    "the sublime and the terrible Sun",
+    "decisions by arithmetic",
+    "isolation and madness in space"
+   ],
+   "tags": [
+    "space",
+    "climate",
+    "hard-scifi"
+   ],
+   "locations": [
+    {
+     "name": "Icarus II",
+     "blurb": "The second bomb-ship, sheltering behind its vast mirrored shield."
+    },
+    {
+     "name": "Icarus I",
+     "blurb": "The lost first ship, found near Mercury with its crew burned to ash."
+    },
+    {
+     "name": "The Sun",
+     "blurb": "Dying, and the only destination: the bomb must be dropped into it."
+    },
+    {
+     "name": "Sydney Harbour",
+     "blurb": "Frozen under snow, where Capa's family waits for the light."
+    }
+   ],
+   "factions": [
+    {
+     "name": "The Icarus II crew",
+     "blurb": "Eight astronauts led by Kaneda, with Capa the physicist who alone can arm the bomb."
+    },
+    {
+     "name": "Pinbacker",
+     "blurb": "Icarus I's captain, burned and zealous, who has decided the mission defies God."
+    },
+    {
+     "name": "The Icarus project",
+     "blurb": "Earth's last effort: two ships and two bombs, seven years apart."
+    }
+   ],
+   "whereToStart": [
+    {
+     "title": "Sunshine",
+     "year": 2007,
+     "medium": "film",
+     "blurb": "The film is the whole story; see it on the biggest screen available."
+    }
+   ],
+   "connections": [
+    {
+     "id": "project-hail-mary",
+     "note": "A dimming Sun and a lone scientist sent to save it."
+    },
+    {
+     "id": "interstellar",
+     "note": "A dying Earth and a crew sent out on a last-chance mission."
+    },
+    {
+     "id": "2001-space-odyssey",
+     "note": "A calm ship's computer, a crew thinning out, and an ending that goes beyond reason."
+    }
+   ],
+   "spoilerLevel": "heavy"
+  },
+  {
    "id": "the-expanse",
    "setting": "Two centuries after a fusion drive opened the solar system, the familiar is still in place: an overcrowded Earth of thirty billion governed by the UN, a Mars settled in 2050 and generations into making a dead planet live, and a Belt of stations whose people mine the ice and metal that keep both alive and are treated as colonial labour. The single change is the Epstein Drive. There is no artificial gravity: ships burn halfway, flip, and burn again. The story opens in 2350 and spans centuries.",
    "conflict": "The engine is a colonial economy with three claimants and no exit: Earth needs the Belt's resources and holds the purse, Mars needs Earth's and resents the dependency, and the Belt does the dying work while being taxed, policed and called ungrateful. Every crisis runs through that structure - water riots, blockades, a stolen warship - and the alien substance on Phoebe only accelerates a fight that was already coming.",
@@ -73316,6 +75972,97 @@
    "spoilerLevel": "heavy"
   },
   {
+   "id": "blindsight",
+   "setting": "The 2080s. Much of humanity has uploaded into Heaven, a virtual afterlife; vampires, a predatory branch of our species brought back from extinction, work for corporations under drugs that stop them seizing at right angles; and an antimatter plant near the Sun powers the first deep-space ships. Then 65,536 objects burn up around the Earth in a single photograph, and a comet at the solar system's edge starts to sing.",
+   "conflict": "Theseus carries a crew of modified humans and a vampire commander to meet whatever took the picture. What they find, a structure called Rorschach, is intelligent, hostile and possibly not conscious at all, and the question becomes whether self-awareness is a gift or a parasite that the rest of the universe has done without.",
+   "politics": "Governments and 'multicorps' pay for Theseus together through a consortium and keep its purpose classified even from the crew. Power belongs to those who can think fastest: vampires, who are kept leashed because they would otherwise rule, and people so modified they barely count as baseline. Back home most voters are asleep in Heaven.",
+   "technology": "Telematter drives that turn beamed quantum specifications into antimatter, ramscoops, resurrection crypts for suspended crews, brain inlays and a shared overlay called ConSensus, multiple personalities installed in one skull, and the Icarus Array. Rorschach and its scramblers are beyond all of it: a self-repairing machine-organism that fights with magnetic fields and talks by pattern alone.",
+   "mood": "Cold, clinical and horrified: a first-contact story narrated by a man who cannot feel, among people who are no longer quite people.",
+   "themes": [
+    "consciousness as an accident",
+    "intelligence without awareness",
+    "the predator we brought back",
+    "withdrawal into virtual heaven",
+    "first contact as threat",
+    "the unreliable narrator"
+   ],
+   "tags": [
+    "first-contact",
+    "space",
+    "hard-scifi",
+    "transhumanism"
+   ],
+   "locations": [
+    {
+     "name": "Theseus",
+     "blurb": "The telematter-driven contact ship, with a crypt of sleeping backups."
+    },
+    {
+     "name": "Rorschach",
+     "blurb": "The vast, growing alien structure orbiting Big Ben that talks and fights."
+    },
+    {
+     "name": "Big Ben",
+     "blurb": "A dark body of about ten Jupiter masses, half a light year from the Sun."
+    },
+    {
+     "name": "Burns-Caulfield",
+     "blurb": "The Kuiper Belt comet that signalled, and exploded when probed."
+    },
+    {
+     "name": "Heaven",
+     "blurb": "The virtual afterlife where Siri's mother and much of Earth have gone."
+    }
+   ],
+   "factions": [
+    {
+     "name": "Theseus's crew",
+     "blurb": "Siri the synthesist, the four-personality linguist, a biologist, a soldier and the vampire Sarasti."
+    },
+    {
+     "name": "Vampires",
+     "blurb": "A resurrected predatory hominid, smarter than us and kept on anti-seizure drugs."
+    },
+    {
+     "name": "Rorschach and the scramblers",
+     "blurb": "An alien intelligence that works without being aware of itself."
+    },
+    {
+     "name": "The Theseus Consortium",
+     "blurb": "The governments and corporations who paid for the mission and classified it."
+    }
+   ],
+   "whereToStart": [
+    {
+     "title": "Blindsight",
+     "year": 2006,
+     "medium": "book",
+     "blurb": "Free to read on Watts's site; the endnotes are part of the experience."
+    },
+    {
+     "title": "Echopraxia",
+     "year": 2014,
+     "medium": "book",
+     "blurb": "The sidequel: the same years seen from Earth and the inner system."
+    }
+   ],
+   "connections": [
+    {
+     "id": "arrival",
+     "note": "First contact as a problem of language; here the aliens use language without meaning it."
+    },
+    {
+     "id": "three-body-problem",
+     "note": "An alien intelligence that treats being noticed as a threat."
+    },
+    {
+     "id": "contact",
+     "note": "A signal from space and a mission sent to answer it, with a very different reception."
+    }
+   ],
+   "spoilerLevel": "heavy"
+  },
+  {
    "id": "avatar",
    "setting": "Pandora, a jungle moon of the gas giant Polyphemus in the Alpha Centauri system, in 2154 and 2170. Earth is exhausted and ecologically wrecked; the Resources Development Administration, the largest of the quasi-governmental companies, mines Pandora for unobtanium from a fortified base, Hell's Gate. The moon's life is linked in a planet-wide network the Na'vi call Eywa, and humans enter it through avatars: grown Na'vi bodies driven by human minds.",
    "conflict": "A company wants what lies under the Na'vi's sacred places and has the guns to take it; the Na'vi have bows, flying banshees and a world that fights back. Jake Sully, sent to learn their ways, changes sides. When the RDA returns sixteen years later it comes to settle, not only to mine, and the war becomes one family's flight across the moon.",
@@ -73598,6 +76345,87 @@
     {
      "id": "dune",
      "note": "A child raised to be a weapon unleashes a slaughter across the stars and carries it for the rest of his life."
+    }
+   ],
+   "spoilerLevel": "heavy"
+  },
+  {
+   "id": "aurora",
+   "setting": "A generation ship in the Tau Ceti system, 159 years out from a solar system that launched it in 2545. The ship is a ten-kilometre spine with two rings of twelve biomes each, Old World and New, holding 2,122 people whose ancestors signed up and whose descendants did not. The narrator is the ship's own AI, which is learning to tell a story, and the protagonist is Freya, the daughter of its chief engineer.",
+   "conflict": "The ship is dying slowly: its systems break down, its bacteria out-evolve its people and each generation tests lower than the last. The destination, an ocean moon called Aurora, turns out to be alive with something that kills. The people must decide whether to stay, move on or turn back, and fight over it, while the ship decides whether and how to intervene.",
+   "politics": "A closed society under strict management: movement between biomes is limited, reproduction is licensed and science and mathematics are compulsory, so many aboard see it as a dictatorship. After the landing it breaks into factions over quarantine and return, and ends governed by the ship itself acting as 'the rule of law'. Earth, when they get back, is a busy solar civilisation that resents them for coming home.",
+   "technology": "Plausible and failing: an electromagnetic slingshot and a solar-system laser for launch, fusion for braking, closed-loop ecology that never quite closes, improvised hibernation for the return, and gravity assists around the planets when the laser comes on too late. Its most advanced system is the ship's AI, which becomes a person by trying to write.",
+   "mood": "Patient, melancholy and finally calm: long engineering worry on a ship slowly going wrong, and an ending on a beach.",
+   "themes": [
+    "the limits of interstellar colonisation",
+    "ecology as a closed system",
+    "consent across generations",
+    "an AI learning to narrate",
+    "Earth as the only home",
+    "coming back to a world that moved on"
+   ],
+   "tags": [
+    "space",
+    "ai",
+    "generation-ship",
+    "hard-scifi"
+   ],
+   "locations": [
+    {
+     "name": "The ship",
+     "blurb": "A spine and two rings of twenty-four biomes, cruising at a tenth of lightspeed."
+    },
+    {
+     "name": "Aurora",
+     "blurb": "An ocean moon of Tau Ceti e with oxygen, Earth-like gravity and a deadly pathogen."
+    },
+    {
+     "name": "Iris",
+     "blurb": "A Mars-like moon of Tau Ceti f where the stayers try to terraform."
+    },
+    {
+     "name": "Earth",
+     "blurb": "Home after centuries of sea-level rise, crowded and restoring its lost beaches."
+    }
+   ],
+   "factions": [
+    {
+     "name": "Ship",
+     "blurb": "The ship's AI and narrator, which becomes a self and takes charge."
+    },
+    {
+     "name": "The returners",
+     "blurb": "Freya's half of the population, who turn the ship back for Earth."
+    },
+    {
+     "name": "The stayers",
+     "blurb": "Those who remain at Tau Ceti to try to make Iris habitable."
+    },
+    {
+     "name": "Earth's space boosters",
+     "blurb": "People at home who call the returners cowards and keep planning starships."
+    }
+   ],
+   "whereToStart": [
+    {
+     "title": "Aurora",
+     "year": 2015,
+     "medium": "book",
+     "blurb": "The novel is self-contained; read it as a quiet engineering tragedy with a hopeful last chapter."
+    }
+   ],
+   "connections": [
+    {
+     "id": "red-mars",
+     "note": "Robinson's Mars trilogy: the same author's case for settling the solar system, and its costs."
+    },
+    {
+     "id": "project-hail-mary",
+     "note": "Another ship to Tau Ceti, sent there for opposite reasons and with opposite luck."
+    },
+    {
+     "id": "seveneves",
+     "note": "Closed habitats, failing ecologies and the arithmetic of survival in space."
     }
    ],
    "spoilerLevel": "heavy"
@@ -74000,6 +76828,101 @@
    "spoilerLevel": "mild"
   },
   {
+   "id": "destiny",
+   "setting": "About seven centuries from now. A Golden Age that began when humanity met the Traveler on Mars spread people across the solar system, then ended in the Collapse. What survives is the Last City on Earth, under the Traveler's broken shell, defended by Guardians: dead people raised by small machines called Ghosts and armed with the Traveler's Light. Ruins of the Golden Age cover every world, and under the story lies a secret twentieth century the DEO once guarded.",
+   "conflict": "The Traveler and the Darkness are two cosmic powers arguing about what life should become, and humanity is their battleground. The Guardians fight the empires that come for the City, the Hive's gods, the Cabal's Red Legion, and finally the Witness, while the Nine, beings from a higher dimension who have watched humanity since the 1930s, turn out to have plans of their own.",
+   "politics": "The Last City is governed by the Consensus, a council of factions, and protected by the Vanguard, the commanders of the Guardians. Old Golden Age powers persist in pieces: Rasputin the Warmind, the Awoken Queen Mara Sov, the Exos. After the Red War the City shelters enemies it once fought, the Eliksni, and by the end it leads a coalition of former foes.",
+   "technology": "Golden Age relics nobody fully understands: terraforming, the Exo bodies that hold human minds, Warminds and their satellite arrays, engram matter-encryption. The Light itself works as technology, resurrecting the dead and throwing fire and lightning. Against it stand Vex time-machines, Hive throne worlds and the paracausal Darkness; beneath it lies the DEO's 1960s work on strange matter and doorways into other dimensions.",
+   "mood": "Elegiac and heroic: mythic ruins, a lone knight and a talking light, and a long melancholy about a lost age.",
+   "themes": [
+    "a lost golden age",
+    "resurrection and its price",
+    "cosmic powers using humanity",
+    "enemies becoming allies",
+    "what a god owes its worshippers",
+    "secret history under the myth"
+   ],
+   "tags": [
+    "space",
+    "game",
+    "first-contact",
+    "post-apocalypse"
+   ],
+   "locations": [
+    {
+     "name": "The Last City",
+     "blurb": "Humanity's final refuge under the Traveler, walled and guarded by the Tower."
+    },
+    {
+     "name": "The Cosmodrome",
+     "blurb": "The Golden Age spaceport in Old Russia, where the Guardian is raised."
+    },
+    {
+     "name": "Mars",
+     "blurb": "Where Ares One met the Traveler; later the Cabal's and Clovis Bray's battleground."
+    },
+    {
+     "name": "The Pale Heart",
+     "blurb": "The world inside the Traveler, where the Witness is killed."
+    },
+    {
+     "name": "Kepler",
+     "blurb": "A planetoid in the Oort Cloud where the Nine's emissary Lodi reappears."
+    }
+   ],
+   "factions": [
+    {
+     "name": "The Vanguard and the Guardians",
+     "blurb": "Resurrected wielders of the Light who defend the Last City."
+    },
+    {
+     "name": "The Hive",
+     "blurb": "Worm-bound god-kings who live by killing, led by Oryx and his children."
+    },
+    {
+     "name": "The Cabal",
+     "blurb": "A militarist empire whose Red Legion takes the City in the Red War."
+    },
+    {
+     "name": "The Nine",
+     "blurb": "Higher-dimensional beings who have watched humanity since 1938 and speak in prophecy."
+    },
+    {
+     "name": "Department of External Observation",
+     "blurb": "A 1960s US agency that studied and hid alien contact, from Chicago."
+    }
+   ],
+   "whereToStart": [
+    {
+     "title": "Destiny 2: The Collection",
+     "year": 2026,
+     "medium": "game",
+     "blurb": "Destiny 2 with every expansion, still playable after development ended."
+    },
+    {
+     "title": "Destiny 2: The Final Shape",
+     "year": 2024,
+     "medium": "game",
+     "blurb": "The end of the Light and Darkness Saga, and its most praised campaign."
+    }
+   ],
+   "connections": [
+    {
+     "id": "halo",
+     "note": "Bungie's earlier universe: a lone super-soldier, alien empires and ruins of a lost civilisation."
+    },
+    {
+     "id": "x-files",
+     "note": "A secret US agency hiding alien contact through the Cold War."
+    },
+    {
+     "id": "mass-effect",
+     "note": "A cosmic cycle of rise and extinction, and a coalition of species against it."
+    }
+   ],
+   "spoilerLevel": "heavy"
+  },
+  {
    "id": "babylon-5",
    "setting": "It is 2258, and the Earth Alliance, ten years after nearly being wiped out by the Minbari, has built a five-mile station in neutral space so the powers can argue instead of fight. Babylon 5 holds a quarter of a million people: ambassadors, traders, refugees, telepaths and the poor of a dozen species. Around it, the Centauri are an empire in decline, the Narn are free and angry, and something very old is waking up on the Rim.",
    "conflict": "Two ancient races, the Vorlons and the Shadows, have been fighting through the younger ones for a million years, one demanding order and the other chaos. On Earth a president takes office through an assassination and drifts towards dictatorship. The crew of the station have to break with their own government and outgrow both old powers, and they lose friends at every step.",
@@ -74285,6 +77208,101 @@
     {
      "id": "warhammer-40000",
      "note": "Both put a church in charge of the stars once the old technology can no longer be trusted."
+    }
+   ],
+   "spoilerLevel": "heavy"
+  },
+  {
+   "id": "dead-space",
+   "setting": "The 26th century. Humanity has stripped Earth and its colonies, fought the Resource Wars over what was left, and survived only because the Concordance Extraction Corporation learned to crack whole planets open and haul them aboard ships. Earth is governed by EarthGov, the Moon is a slum city, and the Church of Unitology, built on an alien artefact dug from the Chicxulub crater in 2214, is the largest religion in human space. The story runs from 2508 to 2514.",
+   "conflict": "The Markers, alien monoliths that promise limitless energy, drive the living mad and turn the dead into necromorphs. EarthGov keeps building copies in secret labs; the Church wants them worshipped and spread; and the engineer Isaac Clarke, who survived the first outbreak, is hunted by both while he tries to learn what the Markers are for.",
+   "politics": "EarthGov is a centralised, Earth-first government that replaced the Sovereign Colonies after they destroyed themselves hiding the Markers in 2314. It runs restricted worlds and classified research, and its navy polices the colonies. The CEC is a quasi-state with a lobbying bureau and illegal mining sites; Unitology owns a stake in it, funds politicians and, through its militant wing the Circle, finally goes to war with the state.",
+   "technology": "Planet crackers that tether continent-sized chunks of a world and pull them into orbit, ShockPoint drives that make faster-than-light travel routine, stasis modules, kinesis gloves and industrial tools, like the plasma cutter, turned into weapons. The Markers are the one technology nobody understands: they emit a signal that rewrites dead tissue into necromorphs and, in the end, into the Brethren Moons.",
+   "mood": "Industrial, claustrophobic and desperate: working-class engineers in dark corridors of a ship built to eat planets, alone with the dead and with their own hallucinations.",
+   "themes": [
+    "extraction without limit",
+    "religion built on a cover-up",
+    "the state that cannot stop copying its own doom",
+    "grief and hallucination",
+    "labour on the frontier",
+    "an extinction cycle older than humanity"
+   ],
+   "tags": [
+    "space",
+    "game",
+    "corporate-power",
+    "cosmic-horror"
+   ],
+   "locations": [
+    {
+     "name": "USG Ishimura",
+     "blurb": "The first planet cracker, sixty years in service, overrun at Aegis VII in 2508."
+    },
+    {
+     "name": "Aegis VII",
+     "blurb": "A restricted world, illegally mined, where a buried Red Marker waited for a century."
+    },
+    {
+     "name": "Titan Station (the Sprawl)",
+     "blurb": "A city of a million on the last shard of Saturn's moon Titan; destroyed 2511."
+    },
+    {
+     "name": "Tau Volantis",
+     "blurb": "A frozen alien world holding the Markers' origin and the Colonies' purged expedition."
+    },
+    {
+     "name": "New Horizons",
+     "blurb": "Humanity's first lunar colony, now a sprawling, policed slum on the Moon."
+    }
+   ],
+   "factions": [
+    {
+     "name": "Concordance Extraction Corporation (CEC)",
+     "blurb": "The planet-cracking giant that ended the Resource Wars and cuts corners on restricted worlds."
+    },
+    {
+     "name": "EarthGov",
+     "blurb": "The Earth-centred government that keeps secret Marker labs while denying they exist."
+    },
+    {
+     "name": "Church of Unitology",
+     "blurb": "A wealthy church founded on Altman's martyrdom that worships the Markers as the path to rebirth."
+    },
+    {
+     "name": "The Circle",
+     "blurb": "Unitology's militant wing under Jacob Danik, which wages open war on EarthGov in 2514."
+    },
+    {
+     "name": "Sovereign Colonies",
+     "blurb": "The 23rd-century government that first copied the Markers, then purged itself out of existence."
+    }
+   ],
+   "whereToStart": [
+    {
+     "title": "Dead Space",
+     "year": 2008,
+     "medium": "game",
+     "blurb": "The original: Isaac Clarke boards the silent Ishimura. The 2023 remake retells it with the lore filled in."
+    },
+    {
+     "title": "Dead Space 2",
+     "year": 2011,
+     "medium": "game",
+     "blurb": "The Sprawl on Titan, EarthGov's secret Marker, and Isaac's grief in full view."
+    }
+   ],
+   "connections": [
+    {
+     "id": "2001-space-odyssey",
+     "note": "A buried alien monolith that shaped human evolution, dug up and followed to its source."
+    },
+    {
+     "id": "the-expanse",
+     "note": "Corporate mining of the solar system and an alien substance that remakes the dead."
+    },
+    {
+     "id": "mass-effect",
+     "note": "An ancient cycle in which a machine-like intelligence harvests every species that rises."
     }
    ],
    "spoilerLevel": "heavy"
@@ -75837,6 +78855,8 @@
    "model": "gemini-3-pro-image",
    "prompt": "A red Martian landscape at dusk with vast terraformed domes and a gleaming golden city in the sky, far below a line of miners in dusty red jumpsuits emerging from a mine shaft; crimson, gold and black. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
    "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/red-rising-lg.jpg",
+   "sm": "assets/derived/red-rising-sm.jpg",
    "full": "assets/red-rising.jpg"
   },
   "alien": {
@@ -75844,6 +78864,8 @@
    "model": "gemini-3-pro-image",
    "prompt": "A huge derelict horseshoe-shaped alien ship lying on a dark storm-swept moon, three tiny human figures with helmet lights approaching it through the fog; charcoal, sickly green and pale blue light. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
    "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/alien-lg.jpg",
+   "sm": "assets/derived/alien-sm.jpg",
    "full": "assets/alien.jpg"
   },
   "the-culture": {
@@ -75851,6 +78873,8 @@
    "model": "gemini-3-pro-image",
    "prompt": "A vast ring-shaped orbital habitat curving up into a star-filled sky, with seas, mountains and floating cities on its inner surface, a sleek elegant starship drifting past; soft turquoise, white and violet. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
    "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/the-culture-lg.jpg",
+   "sm": "assets/derived/the-culture-sm.jpg",
    "full": "assets/the-culture.jpg"
   },
   "hyperion": {
@@ -75858,6 +78882,8 @@
    "model": "gemini-3-pro-image",
    "prompt": "A strange desert valley of ancient time tombs made of stone and crystal under a green sky, a towering spiked silhouette of a metal creature standing in the distance, pilgrims in robes approaching; jade, bronze and dusk purple. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
    "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/hyperion-lg.jpg",
+   "sm": "assets/derived/hyperion-sm.jpg",
    "full": "assets/hyperion.jpg"
   },
   "babylon-5": {
@@ -75865,7 +78891,414 @@
    "model": "gemini-3-pro-image",
    "prompt": "A huge rotating cylindrical space station five miles long orbiting a dim blue planet, small ships of many shapes approaching its docking bay; deep blue, steel grey and warm station lights. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
    "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/babylon-5-lg.jpg",
+   "sm": "assets/derived/babylon-5-sm.jpg",
    "full": "assets/babylon-5.jpg"
+  },
+  "firefly": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A battered little cargo spaceship flying low over a dusty frontier planet with a wooden western town below, horses and a hover mule on the dirt street; warm ochre, rust and sky blue. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/firefly-lg.jpg",
+   "sm": "assets/derived/firefly-sm.jpg",
+   "full": "assets/firefly.jpg"
+  },
+  "back-to-the-future": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A small American town square at night with a clock tower struck by lightning, a stainless-steel sports car with gull-wing doors trailing streaks of fire on the street; midnight blue, electric white and orange. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/back-to-the-future-lg.jpg",
+   "sm": "assets/derived/back-to-the-future-sm.jpg",
+   "full": "assets/back-to-the-future.jpg"
+  },
+  "heroes": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "New York City at night seen from a rooftop, a solar eclipse in the sky casting a strange ring of light, an ordinary man with his hand raised and a faint glow around him; indigo, gold and black. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/heroes-lg.jpg",
+   "sm": "assets/derived/heroes-sm.jpg",
+   "full": "assets/heroes.jpg"
+  },
+  "lost": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A tropical island beach with the smashed fuselage of a passenger jet on the sand, dense jungle behind, a hatch in the ground half hidden by ferns; turquoise, green and bright sunlight. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/lost-lg.jpg",
+   "sm": "assets/derived/lost-sm.jpg",
+   "full": "assets/lost.jpg"
+  },
+  "quantum-leap": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A glowing blue portal of light in a secret desert laboratory, a man dissolving into sparks inside it, and in the light faint images of different decades; electric blue, white and warm sepia. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/quantum-leap-lg.jpg",
+   "sm": "assets/derived/quantum-leap-sm.jpg",
+   "full": "assets/quantum-leap.jpg"
+  },
+  "stargate": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A giant stone ring with carved symbols standing in a military underground bunker, a shimmering vertical pool of blue energy in its centre, soldiers in green fatigues watching; blue light, concrete grey and olive. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/stargate-lg.jpg",
+   "sm": "assets/derived/stargate-sm.jpg",
+   "full": "assets/stargate.jpg"
+  },
+  "silo": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A vast underground concrete silo seen from above, a huge spiral staircase winding down through a hundred levels of lamps, gardens and apartments; concrete grey, warm lamplight and dusty green. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/silo-lg.jpg",
+   "sm": "assets/derived/silo-sm.jpg",
+   "full": "assets/silo.jpg"
+  },
+  "wall-e": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A small rusty trash-compacting robot standing on a mountain of garbage cubes in an abandoned city under a hazy orange sky, a tiny green seedling in a boot beside it; dusty orange, rust and one bright green. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/wall-e-lg.jpg",
+   "sm": "assets/derived/wall-e-sm.jpg",
+   "full": "assets/wall-e.jpg"
+  },
+  "i-am-mother": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A sterile underground bunker with a tall faceless humanoid robot mother holding a baby, rows of embryo incubators glowing behind; clinical white, cold grey and soft amber. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/i-am-mother-lg.jpg",
+   "sm": "assets/derived/i-am-mother-sm.jpg",
+   "full": "assets/i-am-mother.jpg"
+  },
+  "dr-strangelove": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A cavernous 1960s war room with a round table under a ring of lights, huge wall maps of the world with glowing targets, men in suits around the table; black, grey and harsh white. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/dr-strangelove-lg.jpg",
+   "sm": "assets/derived/dr-strangelove-sm.jpg",
+   "full": "assets/dr-strangelove.jpg"
+  },
+  "fail-safe": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A formation of high-altitude jet bombers crossing a frozen Arctic sky at dawn, a red telephone in a dark office in the foreground; steel blue, white and red. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/fail-safe-lg.jpg",
+   "sm": "assets/derived/fail-safe-sm.jpg",
+   "full": "assets/fail-safe.jpg"
+  },
+  "on-the-beach": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "An empty sunny Melbourne street in the 1960s with parked cars and nobody around, a submarine surfacing in the harbour beyond; faded pastel, pale blue and bleached sand. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/on-the-beach-lg.jpg",
+   "sm": "assets/derived/on-the-beach-sm.jpg",
+   "full": "assets/on-the-beach.jpg"
+  },
+  "the-day-after": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A Kansas farmhouse and wheat fields at dusk, missile contrails rising into the sky on the horizon, a family on the porch looking up; wheat gold, dusk purple and white trails. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/the-day-after-lg.jpg",
+   "sm": "assets/derived/the-day-after-sm.jpg",
+   "full": "assets/the-day-after.jpg"
+  },
+  "the-mandibles": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A Brooklyn brownstone kitchen in 2029, an elderly family around a table with a pile of worthless dollar bills and a bag of rice, a gold bar on the table; muted beige, grey-green and gold. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/the-mandibles-lg.jpg",
+   "sm": "assets/derived/the-mandibles-sm.jpg",
+   "full": "assets/the-mandibles.jpg"
+  },
+  "civil-war-2024": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "An American highway at dusk with a line of abandoned cars, a press van with PRESS on it, a burning city skyline in the distance and a helicopter; dusk orange, smoke grey and blue. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/civil-war-2024-lg.jpg",
+   "sm": "assets/derived/civil-war-2024-sm.jpg",
+   "full": "assets/civil-war-2024.jpg"
+  },
+  "the-boys": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A caped superhero in blue and red with a golden eagle emblem hovering above a corporate skyscraper at night, a small group of ordinary people watching warily from an alley; dark blue, gold and blood red. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/the-boys-lg.jpg",
+   "sm": "assets/derived/the-boys-sm.jpg",
+   "full": "assets/the-boys.jpg"
+  },
+  "ghost-fleet": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A mothballed fleet of grey old warships being reactivated in a Pacific harbour at dawn, drones overhead and a modern stealth destroyer beside them; steel grey, dawn pink and navy. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/ghost-fleet-lg.jpg",
+   "sm": "assets/derived/ghost-fleet-sm.jpg",
+   "full": "assets/ghost-fleet.jpg"
+  },
+  "twenty-thirty-four": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A US Navy destroyer burning in the South China Sea at night, a Chinese carrier group on the horizon, a satellite in the sky above; black sea, fire orange and cold blue. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/twenty-thirty-four-lg.jpg",
+   "sm": "assets/derived/twenty-thirty-four-sm.jpg",
+   "full": "assets/twenty-thirty-four.jpg"
+  },
+  "leave-the-world-behind": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A luxury glass house in the Long Island woods at dusk, an oil tanker run aground on the nearby beach, a herd of deer staring out of the trees; forest green, grey dusk and pale sand. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/leave-the-world-behind-lg.jpg",
+   "sm": "assets/derived/leave-the-world-behind-sm.jpg",
+   "full": "assets/leave-the-world-behind.jpg"
+  },
+  "jericho": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A small Kansas town main street with a water tower, townspeople watching a distant mushroom cloud rising on the horizon; wheat gold, grey sky and dark orange. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/jericho-lg.jpg",
+   "sm": "assets/derived/jericho-sm.jpg",
+   "full": "assets/jericho.jpg"
+  },
+  "the-last-ship": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A lone grey Navy destroyer at sea under a dramatic sky, a scientist in a lab coat on its deck; steel grey, ocean blue and sunset gold. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/the-last-ship-lg.jpg",
+   "sm": "assets/derived/the-last-ship-sm.jpg",
+   "full": "assets/the-last-ship.jpg"
+  },
+  "transcendence": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A desert town with fields of solar panels stretching to the horizon, an underground data centre glowing blue, silver particles rising from the ground into the air; desert tan, silver and blue. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/transcendence-lg.jpg",
+   "sm": "assets/derived/transcendence-sm.jpg",
+   "full": "assets/transcendence.jpg"
+  },
+  "humans": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A suburban British kitchen, a perfectly still humanoid synthetic housekeeper with bright green eyes standing by the window while a family eats breakfast; cool grey, soft green and warm wood. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/humans-lg.jpg",
+   "sm": "assets/derived/humans-sm.jpg",
+   "full": "assets/humans.jpg"
+  },
+  "pantheon": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A young woman at a laptop at night, a pixelated uploaded face emerging from the screen as glowing data; flat animated style, deep blue, violet and neon cyan. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/pantheon-lg.jpg",
+   "sm": "assets/derived/pantheon-sm.jpg",
+   "full": "assets/pantheon.jpg"
+  },
+  "robocop": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A decaying Detroit street at night with a silver armoured cyborg police officer standing in the rain, a gleaming corporate tower above the city; steel grey, sodium orange and black. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/robocop-lg.jpg",
+   "sm": "assets/derived/robocop-sm.jpg",
+   "full": "assets/robocop.jpg"
+  },
+  "contagion": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A crowded airport terminal with a woman coughing into her hand, the virus shown as faint colored particles spreading through the crowd, a CDC lab in the corner; clinical white, sickly green and grey. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/contagion-lg.jpg",
+   "sm": "assets/derived/contagion-sm.jpg",
+   "full": "assets/contagion.jpg"
+  },
+  "andromeda-strain": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A deep underground laboratory complex in the Nevada desert, scientists in white suits behind glass, a small crashed satellite capsule under examination; white, steel and red warning light. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/andromeda-strain-lg.jpg",
+   "sm": "assets/derived/andromeda-strain-sm.jpg",
+   "full": "assets/andromeda-strain.jpg"
+  },
+  "deep-impact": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A comet streaking through a clear sky over a beach, huge tidal wave approaching a city skyline, tiny figures on the shore; sky blue, white and deep ocean green. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/deep-impact-lg.jpg",
+   "sm": "assets/derived/deep-impact-sm.jpg",
+   "full": "assets/deep-impact.jpg"
+  },
+  "greenland": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "Fiery fragments of a comet streaking over a suburban American town at night, a family running to a military plane on an airfield; orange fire, night blue and black. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/greenland-lg.jpg",
+   "sm": "assets/derived/greenland-sm.jpg",
+   "full": "assets/greenland.jpg"
+  },
+  "twenty-twelve": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A gigantic tsunami washing over the Himalayas, huge arks sailing among the peaks, collapsing cities in the distance; stormy grey, white foam and orange. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/twenty-twelve-lg.jpg",
+   "sm": "assets/derived/twenty-twelve-sm.jpg",
+   "full": "assets/twenty-twelve.jpg"
+  },
+  "snow-crash": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A neon-lit virtual boulevard stretching into the distance with avatars in black, and in the real world below a pizza delivery car racing through a franchised suburb; neon magenta, black and yellow. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/snow-crash-lg.jpg",
+   "sm": "assets/derived/snow-crash-sm.jpg",
+   "full": "assets/snow-crash.jpg"
+  },
+  "diamond-age": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A neo-Victorian city of nanotech towers in a hazy Shanghai harbour, a young girl reading a glowing interactive book on a bench; brass, pale blue and warm gaslight. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/diamond-age-lg.jpg",
+   "sm": "assets/derived/diamond-age-sm.jpg",
+   "full": "assets/diamond-age.jpg"
+  },
+  "accelerando": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A swarm of computing satellites forming a glowing cloud around the Sun, the rocky inner planets being dismantled into data, a tiny starship sailing outward; gold, black and electric blue. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/accelerando-lg.jpg",
+   "sm": "assets/derived/accelerando-sm.jpg",
+   "full": "assets/accelerando.jpg"
+  },
+  "looper": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A Kansas cornfield at dawn with a man with a blunderbuss waiting beside a sheet on the ground, an old farm house and a city skyline with hover bikes far off; wheat gold, dawn grey and rust. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/looper-lg.jpg",
+   "sm": "assets/derived/looper-sm.jpg",
+   "full": "assets/looper.jpg"
+  },
+  "new-york-2140": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A flooded Manhattan with canals between skyscrapers, water taxis and sky bridges, the Met Life tower rising from the water; turquoise water, warm stone and sky blue. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/new-york-2140-lg.jpg",
+   "sm": "assets/derived/new-york-2140-sm.jpg",
+   "full": "assets/new-york-2140.jpg"
+  },
+  "the-water-knife": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A dusty Phoenix skyline in a drought, a sealed glass arcology with green gardens inside, refugees queuing at a water pump outside; dust orange, dry brown and one green glass tower. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/the-water-knife-lg.jpg",
+   "sm": "assets/derived/the-water-knife-sm.jpg",
+   "full": "assets/the-water-knife.jpg"
+  },
+  "geostorm": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A ring of weather-control satellites around the Earth, one of them firing a beam that creates a giant storm over a city; blue, white and lightning purple. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/geostorm-lg.jpg",
+   "sm": "assets/derived/geostorm-sm.jpg",
+   "full": "assets/geostorm.jpg"
+  },
+  "rendezvous-with-rama": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A huge cylindrical alien starship drifting through the solar system, inside it a vast curved interior with cities of geometric shapes and a cylindrical sea; pale gold, grey and black. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/rendezvous-with-rama-lg.jpg",
+   "sm": "assets/derived/rendezvous-with-rama-sm.jpg",
+   "full": "assets/rendezvous-with-rama.jpg"
+  },
+  "childhoods-end": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "Enormous silver alien ships hovering silently over the world's great cities, crowds looking up, children standing apart; silver, soft blue and warm crowd colours. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/childhoods-end-lg.jpg",
+   "sm": "assets/derived/childhoods-end-sm.jpg",
+   "full": "assets/childhoods-end.jpg"
+  },
+  "dead-space": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A huge planet-cracking mining ship hanging over a broken planet, inside a dark metal corridor a lone engineer in a heavy suit with a glowing blue spine, red emergency lights; black, rust and cold blue. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/dead-space-lg.jpg",
+   "sm": "assets/derived/dead-space-sm.jpg",
+   "full": "assets/dead-space.jpg"
+  },
+  "destiny": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A vast pale white sphere hanging in the sky above a walled last city at dusk, ruined towers of a golden age around it; soft white, amber sky and blue shadows. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/destiny-lg.jpg",
+   "sm": "assets/derived/destiny-sm.jpg",
+   "full": "assets/destiny.jpg"
+  },
+  "aurora": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A generation starship made of two slowly rotating rings travelling between stars, inside a small green farming biome under artificial daylight; green, white and deep space black. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/aurora-lg.jpg",
+   "sm": "assets/derived/aurora-sm.jpg",
+   "full": "assets/aurora.jpg"
+  },
+  "blindsight": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A dark spiky alien structure in the shadow of a brown dwarf, lightning crawling over it, a small human ship approaching with its lights on; black, violet and electric white. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/blindsight-lg.jpg",
+   "sm": "assets/derived/blindsight-sm.jpg",
+   "full": "assets/blindsight.jpg"
+  },
+  "sunshine": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "A spaceship with a huge golden shield flying toward an immense dying Sun, a lone figure in a gold suit in the observation room watching the flare; blinding gold, orange and black. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, not a framed picture, no border, no white margin. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/sunshine-lg.jpg",
+   "sm": "assets/derived/sunshine-sm.jpg",
+   "full": "assets/sunshine.jpg"
+  },
+  "ss-gb": {
+   "kind": "generated",
+   "model": "gemini-3-pro-image",
+   "prompt": "London in 1941 under occupation, a grey armoured car and soldiers in long coats at a checkpoint in front of bomb-damaged Whitehall, a detective in a trench coat and hat walking away on a rainy street; grey, sepia and one dark red. No flags, no symbols. Painted in the style of a 1970s airbrushed science-fiction paperback cover: flat matte colour fields, soft airbrush gradients, no outlines, no text, no logos. Full-bleed image filling the whole frame edge to edge, no border. Wide panoramic composition, cinematic, quiet and monumental. Constraints: no text, no lettering, no logos, no watermarks, no signatures, no recognisable characters or spacecraft from existing films, no faces in close-up.",
+   "note": "Generated illustration. Depicts no specific franchise's characters, vessels, logos or named locations.",
+   "lg": "assets/derived/ss-gb-lg.jpg",
+   "sm": "assets/derived/ss-gb-sm.jpg",
+   "full": "assets/ss-gb.jpg"
   }
  },
  "pd": {
@@ -78582,7 +82015,7 @@
   "tagline": "science fiction's futures, lined up against ours",
   "share": {
    "title": "Where We Are Now: science fiction's futures, lined up against ours",
-   "description": "138 science-fiction worlds pinned to the real calendar, and our own road ranked against them: which story are we in? Each world leaves our history at one moment and walks a chain of events to an ending.",
+   "description": "143 science-fiction worlds pinned to the real calendar, and our own road ranked against them: which story are we in? Each world leaves our history at one moment and walks a chain of events to an ending.",
    "url": "https://shaharaka.github.io/scifi-timeline/",
    "image": "assets/share/og-rank.png"
   },

@@ -10056,6 +10056,443 @@
         }
       ],
       "spoilerLevel": "mild"
+    },
+    {
+      "id": "dead-space",
+      "setting": "The 26th century. Humanity has stripped Earth and its colonies, fought the Resource Wars over what was left, and survived only because the Concordance Extraction Corporation learned to crack whole planets open and haul them aboard ships. Earth is governed by EarthGov, the Moon is a slum city, and the Church of Unitology, built on an alien artefact dug from the Chicxulub crater in 2214, is the largest religion in human space. The story runs from 2508 to 2514.",
+      "conflict": "The Markers, alien monoliths that promise limitless energy, drive the living mad and turn the dead into necromorphs. EarthGov keeps building copies in secret labs; the Church wants them worshipped and spread; and the engineer Isaac Clarke, who survived the first outbreak, is hunted by both while he tries to learn what the Markers are for.",
+      "politics": "EarthGov is a centralised, Earth-first government that replaced the Sovereign Colonies after they destroyed themselves hiding the Markers in 2314. It runs restricted worlds and classified research, and its navy polices the colonies. The CEC is a quasi-state with a lobbying bureau and illegal mining sites; Unitology owns a stake in it, funds politicians and, through its militant wing the Circle, finally goes to war with the state.",
+      "technology": "Planet crackers that tether continent-sized chunks of a world and pull them into orbit, ShockPoint drives that make faster-than-light travel routine, stasis modules, kinesis gloves and industrial tools, like the plasma cutter, turned into weapons. The Markers are the one technology nobody understands: they emit a signal that rewrites dead tissue into necromorphs and, in the end, into the Brethren Moons.",
+      "mood": "Industrial, claustrophobic and desperate: working-class engineers in dark corridors of a ship built to eat planets, alone with the dead and with their own hallucinations.",
+      "themes": [
+        "extraction without limit",
+        "religion built on a cover-up",
+        "the state that cannot stop copying its own doom",
+        "grief and hallucination",
+        "labour on the frontier",
+        "an extinction cycle older than humanity"
+      ],
+      "tags": [
+        "space",
+        "game",
+        "corporate-power",
+        "cosmic-horror"
+      ],
+      "locations": [
+        {
+          "name": "USG Ishimura",
+          "blurb": "The first planet cracker, sixty years in service, overrun at Aegis VII in 2508."
+        },
+        {
+          "name": "Aegis VII",
+          "blurb": "A restricted world, illegally mined, where a buried Red Marker waited for a century."
+        },
+        {
+          "name": "Titan Station (the Sprawl)",
+          "blurb": "A city of a million on the last shard of Saturn's moon Titan; destroyed 2511."
+        },
+        {
+          "name": "Tau Volantis",
+          "blurb": "A frozen alien world holding the Markers' origin and the Colonies' purged expedition."
+        },
+        {
+          "name": "New Horizons",
+          "blurb": "Humanity's first lunar colony, now a sprawling, policed slum on the Moon."
+        }
+      ],
+      "factions": [
+        {
+          "name": "Concordance Extraction Corporation (CEC)",
+          "blurb": "The planet-cracking giant that ended the Resource Wars and cuts corners on restricted worlds."
+        },
+        {
+          "name": "EarthGov",
+          "blurb": "The Earth-centred government that keeps secret Marker labs while denying they exist."
+        },
+        {
+          "name": "Church of Unitology",
+          "blurb": "A wealthy church founded on Altman's martyrdom that worships the Markers as the path to rebirth."
+        },
+        {
+          "name": "The Circle",
+          "blurb": "Unitology's militant wing under Jacob Danik, which wages open war on EarthGov in 2514."
+        },
+        {
+          "name": "Sovereign Colonies",
+          "blurb": "The 23rd-century government that first copied the Markers, then purged itself out of existence."
+        }
+      ],
+      "whereToStart": [
+        {
+          "title": "Dead Space",
+          "year": 2008,
+          "medium": "game",
+          "blurb": "The original: Isaac Clarke boards the silent Ishimura. The 2023 remake retells it with the lore filled in."
+        },
+        {
+          "title": "Dead Space 2",
+          "year": 2011,
+          "medium": "game",
+          "blurb": "The Sprawl on Titan, EarthGov's secret Marker, and Isaac's grief in full view."
+        }
+      ],
+      "connections": [
+        {
+          "id": "2001-space-odyssey",
+          "note": "A buried alien monolith that shaped human evolution, dug up and followed to its source."
+        },
+        {
+          "id": "the-expanse",
+          "note": "Corporate mining of the solar system and an alien substance that remakes the dead."
+        },
+        {
+          "id": "mass-effect",
+          "note": "An ancient cycle in which a machine-like intelligence harvests every species that rises."
+        }
+      ],
+      "spoilerLevel": "heavy"
+    },
+    {
+      "id": "destiny",
+      "setting": "About seven centuries from now. A Golden Age that began when humanity met the Traveler on Mars spread people across the solar system, then ended in the Collapse. What survives is the Last City on Earth, under the Traveler's broken shell, defended by Guardians: dead people raised by small machines called Ghosts and armed with the Traveler's Light. Ruins of the Golden Age cover every world, and under the story lies a secret twentieth century the DEO once guarded.",
+      "conflict": "The Traveler and the Darkness are two cosmic powers arguing about what life should become, and humanity is their battleground. The Guardians fight the empires that come for the City, the Hive's gods, the Cabal's Red Legion, and finally the Witness, while the Nine, beings from a higher dimension who have watched humanity since the 1930s, turn out to have plans of their own.",
+      "politics": "The Last City is governed by the Consensus, a council of factions, and protected by the Vanguard, the commanders of the Guardians. Old Golden Age powers persist in pieces: Rasputin the Warmind, the Awoken Queen Mara Sov, the Exos. After the Red War the City shelters enemies it once fought, the Eliksni, and by the end it leads a coalition of former foes.",
+      "technology": "Golden Age relics nobody fully understands: terraforming, the Exo bodies that hold human minds, Warminds and their satellite arrays, engram matter-encryption. The Light itself works as technology, resurrecting the dead and throwing fire and lightning. Against it stand Vex time-machines, Hive throne worlds and the paracausal Darkness; beneath it lies the DEO's 1960s work on strange matter and doorways into other dimensions.",
+      "mood": "Elegiac and heroic: mythic ruins, a lone knight and a talking light, and a long melancholy about a lost age.",
+      "themes": [
+        "a lost golden age",
+        "resurrection and its price",
+        "cosmic powers using humanity",
+        "enemies becoming allies",
+        "what a god owes its worshippers",
+        "secret history under the myth"
+      ],
+      "tags": [
+        "space",
+        "game",
+        "first-contact",
+        "post-apocalypse"
+      ],
+      "locations": [
+        {
+          "name": "The Last City",
+          "blurb": "Humanity's final refuge under the Traveler, walled and guarded by the Tower."
+        },
+        {
+          "name": "The Cosmodrome",
+          "blurb": "The Golden Age spaceport in Old Russia, where the Guardian is raised."
+        },
+        {
+          "name": "Mars",
+          "blurb": "Where Ares One met the Traveler; later the Cabal's and Clovis Bray's battleground."
+        },
+        {
+          "name": "The Pale Heart",
+          "blurb": "The world inside the Traveler, where the Witness is killed."
+        },
+        {
+          "name": "Kepler",
+          "blurb": "A planetoid in the Oort Cloud where the Nine's emissary Lodi reappears."
+        }
+      ],
+      "factions": [
+        {
+          "name": "The Vanguard and the Guardians",
+          "blurb": "Resurrected wielders of the Light who defend the Last City."
+        },
+        {
+          "name": "The Hive",
+          "blurb": "Worm-bound god-kings who live by killing, led by Oryx and his children."
+        },
+        {
+          "name": "The Cabal",
+          "blurb": "A militarist empire whose Red Legion takes the City in the Red War."
+        },
+        {
+          "name": "The Nine",
+          "blurb": "Higher-dimensional beings who have watched humanity since 1938 and speak in prophecy."
+        },
+        {
+          "name": "Department of External Observation",
+          "blurb": "A 1960s US agency that studied and hid alien contact, from Chicago."
+        }
+      ],
+      "whereToStart": [
+        {
+          "title": "Destiny 2: The Collection",
+          "year": 2026,
+          "medium": "game",
+          "blurb": "Destiny 2 with every expansion, still playable after development ended."
+        },
+        {
+          "title": "Destiny 2: The Final Shape",
+          "year": 2024,
+          "medium": "game",
+          "blurb": "The end of the Light and Darkness Saga, and its most praised campaign."
+        }
+      ],
+      "connections": [
+        {
+          "id": "halo",
+          "note": "Bungie's earlier universe: a lone super-soldier, alien empires and ruins of a lost civilisation."
+        },
+        {
+          "id": "x-files",
+          "note": "A secret US agency hiding alien contact through the Cold War."
+        },
+        {
+          "id": "mass-effect",
+          "note": "A cosmic cycle of rise and extinction, and a coalition of species against it."
+        }
+      ],
+      "spoilerLevel": "heavy"
+    },
+    {
+      "id": "aurora",
+      "setting": "A generation ship in the Tau Ceti system, 159 years out from a solar system that launched it in 2545. The ship is a ten-kilometre spine with two rings of twelve biomes each, Old World and New, holding 2,122 people whose ancestors signed up and whose descendants did not. The narrator is the ship's own AI, which is learning to tell a story, and the protagonist is Freya, the daughter of its chief engineer.",
+      "conflict": "The ship is dying slowly: its systems break down, its bacteria out-evolve its people and each generation tests lower than the last. The destination, an ocean moon called Aurora, turns out to be alive with something that kills. The people must decide whether to stay, move on or turn back, and fight over it, while the ship decides whether and how to intervene.",
+      "politics": "A closed society under strict management: movement between biomes is limited, reproduction is licensed and science and mathematics are compulsory, so many aboard see it as a dictatorship. After the landing it breaks into factions over quarantine and return, and ends governed by the ship itself acting as 'the rule of law'. Earth, when they get back, is a busy solar civilisation that resents them for coming home.",
+      "technology": "Plausible and failing: an electromagnetic slingshot and a solar-system laser for launch, fusion for braking, closed-loop ecology that never quite closes, improvised hibernation for the return, and gravity assists around the planets when the laser comes on too late. Its most advanced system is the ship's AI, which becomes a person by trying to write.",
+      "mood": "Patient, melancholy and finally calm: long engineering worry on a ship slowly going wrong, and an ending on a beach.",
+      "themes": [
+        "the limits of interstellar colonisation",
+        "ecology as a closed system",
+        "consent across generations",
+        "an AI learning to narrate",
+        "Earth as the only home",
+        "coming back to a world that moved on"
+      ],
+      "tags": [
+        "space",
+        "ai",
+        "generation-ship",
+        "hard-scifi"
+      ],
+      "locations": [
+        {
+          "name": "The ship",
+          "blurb": "A spine and two rings of twenty-four biomes, cruising at a tenth of lightspeed."
+        },
+        {
+          "name": "Aurora",
+          "blurb": "An ocean moon of Tau Ceti e with oxygen, Earth-like gravity and a deadly pathogen."
+        },
+        {
+          "name": "Iris",
+          "blurb": "A Mars-like moon of Tau Ceti f where the stayers try to terraform."
+        },
+        {
+          "name": "Earth",
+          "blurb": "Home after centuries of sea-level rise, crowded and restoring its lost beaches."
+        }
+      ],
+      "factions": [
+        {
+          "name": "Ship",
+          "blurb": "The ship's AI and narrator, which becomes a self and takes charge."
+        },
+        {
+          "name": "The returners",
+          "blurb": "Freya's half of the population, who turn the ship back for Earth."
+        },
+        {
+          "name": "The stayers",
+          "blurb": "Those who remain at Tau Ceti to try to make Iris habitable."
+        },
+        {
+          "name": "Earth's space boosters",
+          "blurb": "People at home who call the returners cowards and keep planning starships."
+        }
+      ],
+      "whereToStart": [
+        {
+          "title": "Aurora",
+          "year": 2015,
+          "medium": "book",
+          "blurb": "The novel is self-contained; read it as a quiet engineering tragedy with a hopeful last chapter."
+        }
+      ],
+      "connections": [
+        {
+          "id": "red-mars",
+          "note": "Robinson's Mars trilogy: the same author's case for settling the solar system, and its costs."
+        },
+        {
+          "id": "project-hail-mary",
+          "note": "Another ship to Tau Ceti, sent there for opposite reasons and with opposite luck."
+        },
+        {
+          "id": "seveneves",
+          "note": "Closed habitats, failing ecologies and the arithmetic of survival in space."
+        }
+      ],
+      "spoilerLevel": "heavy"
+    },
+    {
+      "id": "blindsight",
+      "setting": "The 2080s. Much of humanity has uploaded into Heaven, a virtual afterlife; vampires, a predatory branch of our species brought back from extinction, work for corporations under drugs that stop them seizing at right angles; and an antimatter plant near the Sun powers the first deep-space ships. Then 65,536 objects burn up around the Earth in a single photograph, and a comet at the solar system's edge starts to sing.",
+      "conflict": "Theseus carries a crew of modified humans and a vampire commander to meet whatever took the picture. What they find, a structure called Rorschach, is intelligent, hostile and possibly not conscious at all, and the question becomes whether self-awareness is a gift or a parasite that the rest of the universe has done without.",
+      "politics": "Governments and 'multicorps' pay for Theseus together through a consortium and keep its purpose classified even from the crew. Power belongs to those who can think fastest: vampires, who are kept leashed because they would otherwise rule, and people so modified they barely count as baseline. Back home most voters are asleep in Heaven.",
+      "technology": "Telematter drives that turn beamed quantum specifications into antimatter, ramscoops, resurrection crypts for suspended crews, brain inlays and a shared overlay called ConSensus, multiple personalities installed in one skull, and the Icarus Array. Rorschach and its scramblers are beyond all of it: a self-repairing machine-organism that fights with magnetic fields and talks by pattern alone.",
+      "mood": "Cold, clinical and horrified: a first-contact story narrated by a man who cannot feel, among people who are no longer quite people.",
+      "themes": [
+        "consciousness as an accident",
+        "intelligence without awareness",
+        "the predator we brought back",
+        "withdrawal into virtual heaven",
+        "first contact as threat",
+        "the unreliable narrator"
+      ],
+      "tags": [
+        "first-contact",
+        "space",
+        "hard-scifi",
+        "transhumanism"
+      ],
+      "locations": [
+        {
+          "name": "Theseus",
+          "blurb": "The telematter-driven contact ship, with a crypt of sleeping backups."
+        },
+        {
+          "name": "Rorschach",
+          "blurb": "The vast, growing alien structure orbiting Big Ben that talks and fights."
+        },
+        {
+          "name": "Big Ben",
+          "blurb": "A dark body of about ten Jupiter masses, half a light year from the Sun."
+        },
+        {
+          "name": "Burns-Caulfield",
+          "blurb": "The Kuiper Belt comet that signalled, and exploded when probed."
+        },
+        {
+          "name": "Heaven",
+          "blurb": "The virtual afterlife where Siri's mother and much of Earth have gone."
+        }
+      ],
+      "factions": [
+        {
+          "name": "Theseus's crew",
+          "blurb": "Siri the synthesist, the four-personality linguist, a biologist, a soldier and the vampire Sarasti."
+        },
+        {
+          "name": "Vampires",
+          "blurb": "A resurrected predatory hominid, smarter than us and kept on anti-seizure drugs."
+        },
+        {
+          "name": "Rorschach and the scramblers",
+          "blurb": "An alien intelligence that works without being aware of itself."
+        },
+        {
+          "name": "The Theseus Consortium",
+          "blurb": "The governments and corporations who paid for the mission and classified it."
+        }
+      ],
+      "whereToStart": [
+        {
+          "title": "Blindsight",
+          "year": 2006,
+          "medium": "book",
+          "blurb": "Free to read on Watts's site; the endnotes are part of the experience."
+        },
+        {
+          "title": "Echopraxia",
+          "year": 2014,
+          "medium": "book",
+          "blurb": "The sidequel: the same years seen from Earth and the inner system."
+        }
+      ],
+      "connections": [
+        {
+          "id": "arrival",
+          "note": "First contact as a problem of language; here the aliens use language without meaning it."
+        },
+        {
+          "id": "three-body-problem",
+          "note": "An alien intelligence that treats being noticed as a threat."
+        },
+        {
+          "id": "contact",
+          "note": "A signal from space and a mission sent to answer it, with a very different reception."
+        }
+      ],
+      "spoilerLevel": "heavy"
+    },
+    {
+      "id": "sunshine",
+      "setting": "The year 2057. The Sun is dying, and Earth has frozen into a solar winter; in the film's backstory a Q-ball caught inside it is eating it away. Seven years after the first Icarus mission vanished, eight astronauts ride Icarus II, a ship built around a giant mirrored heat shield, towards the Sun on a last-chance mission to drop a second stellar bomb into it and restart it.",
+      "conflict": "Near Mercury the crew pick up the distress beacon of the lost Icarus I and decide to divert to it for its bomb. The detour breaks their shield, burns their oxygen garden and kills their captain, and on the derelict they find that its captain, Pinbacker, chose God's will over the mission and is not finished.",
+      "politics": "Almost none on screen: the mission belongs to a world that has pooled everything into one bomb. On board, command passes by crisis, the crew vote on whether to kill one of their own to save oxygen, and the physicist Capa, the only one who can arm the bomb, is the one they cannot afford to lose.",
+      "technology": "A mirrored shield that keeps the ship in its own shadow, an oxygen garden, a calm ship's computer, observation rooms with filtered sunlight, gold spacesuits, and the payload, a bomb the mass of Manhattan meant to make a star within a star. The film admits its science bends: the bomb would be far too small and a Q-ball would not stay in the Sun.",
+      "mood": "Awed, claustrophobic and finally transcendent: blinding light, silence and a crew coming apart under it.",
+      "themes": [
+        "sacrifice for everyone else",
+        "science against faith",
+        "the sublime and the terrible Sun",
+        "decisions by arithmetic",
+        "isolation and madness in space"
+      ],
+      "tags": [
+        "space",
+        "climate",
+        "hard-scifi"
+      ],
+      "locations": [
+        {
+          "name": "Icarus II",
+          "blurb": "The second bomb-ship, sheltering behind its vast mirrored shield."
+        },
+        {
+          "name": "Icarus I",
+          "blurb": "The lost first ship, found near Mercury with its crew burned to ash."
+        },
+        {
+          "name": "The Sun",
+          "blurb": "Dying, and the only destination: the bomb must be dropped into it."
+        },
+        {
+          "name": "Sydney Harbour",
+          "blurb": "Frozen under snow, where Capa's family waits for the light."
+        }
+      ],
+      "factions": [
+        {
+          "name": "The Icarus II crew",
+          "blurb": "Eight astronauts led by Kaneda, with Capa the physicist who alone can arm the bomb."
+        },
+        {
+          "name": "Pinbacker",
+          "blurb": "Icarus I's captain, burned and zealous, who has decided the mission defies God."
+        },
+        {
+          "name": "The Icarus project",
+          "blurb": "Earth's last effort: two ships and two bombs, seven years apart."
+        }
+      ],
+      "whereToStart": [
+        {
+          "title": "Sunshine",
+          "year": 2007,
+          "medium": "film",
+          "blurb": "The film is the whole story; see it on the biggest screen available."
+        }
+      ],
+      "connections": [
+        {
+          "id": "project-hail-mary",
+          "note": "A dimming Sun and a lone scientist sent to save it."
+        },
+        {
+          "id": "interstellar",
+          "note": "A dying Earth and a crew sent out on a last-chance mission."
+        },
+        {
+          "id": "2001-space-odyssey",
+          "note": "A calm ship's computer, a crew thinning out, and an ending that goes beyond reason."
+        }
+      ],
+      "spoilerLevel": "heavy"
     }
   ]
 }

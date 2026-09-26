@@ -4723,7 +4723,7 @@
    },
    "events": [
     {
-     "id": "rr-red-rising-2014",
+     "id": "redrising-red-rising-2014",
      "year": 2014,
      "date": "2014-01-28",
      "title": "Red Rising is published",
@@ -4746,7 +4746,7 @@
      "facets": null
     },
     {
-     "id": "rr-colonisation-2204",
+     "id": "redrising-colonisation-2204",
      "year": 2204,
      "date": "2204",
      "title": "Humanity begins to colonise the solar system",
@@ -4791,7 +4791,7 @@
      }
     },
     {
-     "id": "rr-conquering-2284",
+     "id": "redrising-conquering-2284",
      "year": 2284,
      "date": "2284",
      "title": "The Conquering: Luna's Golds take Earth and found the Society",
@@ -4836,7 +4836,7 @@
      }
     },
     {
-     "id": "rr-reds-to-mars-2434",
+     "id": "redrising-reds-to-mars-2434",
      "year": 2434,
      "date": "2434",
      "title": "The first Reds are sent under Mars to mine helium-3",
@@ -4881,7 +4881,7 @@
      }
     },
     {
-     "id": "rr-institute-2481",
+     "id": "redrising-institute-2481",
      "year": 2481,
      "date": "2481",
      "title": "The Institute of Mars holds its first year",
@@ -4924,7 +4924,7 @@
      }
     },
     {
-     "id": "rr-dark-revolt-2484",
+     "id": "redrising-dark-revolt-2484",
      "year": 2484,
      "date": "2484",
      "title": "The Dark Revolt: the Obsidians rise and are nearly exterminated",
@@ -4970,7 +4970,7 @@
      }
     },
     {
-     "id": "rr-octavia-2985",
+     "id": "redrising-octavia-2985",
      "year": 2985,
      "date": "2985",
      "title": "Octavia au Lune kills her father and takes the throne",
@@ -5016,7 +5016,7 @@
      }
     },
     {
-     "id": "rr-sons-of-ares-3006",
+     "id": "redrising-sons-of-ares-3006",
      "year": 3006,
      "date": "3006",
      "title": "The Sons of Ares are founded",
@@ -5060,7 +5060,7 @@
      }
     },
     {
-     "id": "rr-darrow-3021",
+     "id": "redrising-darrow-3021",
      "year": 3021,
      "date": "3021",
      "title": "Darrow is hanged, saved and carved into a Gold",
@@ -5109,7 +5109,7 @@
      }
     },
     {
-     "id": "rr-rising-3026",
+     "id": "redrising-rising-3026",
      "year": 3026,
      "date": "3026",
      "title": "The Rising begins",
@@ -5155,7 +5155,7 @@
      }
     },
     {
-     "id": "rr-fall-of-luna-3027",
+     "id": "redrising-fall-of-luna-3027",
      "year": 3027,
      "date": "3027",
      "title": "The Fall: Luna falls and the Sovereign dies",
@@ -5201,7 +5201,7 @@
      }
     },
     {
-     "id": "rr-solar-war-3037",
+     "id": "redrising-solar-war-3037",
      "year": 3037,
      "date": "3037",
      "title": "Ten years into the Solar War",
@@ -5246,7 +5246,7 @@
      }
     },
     {
-     "id": "rr-mercury-3038",
+     "id": "redrising-mercury-3038",
      "year": 3038,
      "date": "3038",
      "title": "Mercury is lost",
@@ -5294,7 +5294,7 @@
      }
     },
     {
-     "id": "rr-covenant-3039",
+     "id": "redrising-covenant-3039",
      "year": 3039,
      "date": "3039",
      "title": "The Covenant",
@@ -8626,6 +8626,1262 @@
     {
      "title": "Firefly Wiki: A Brief History of the Universe (Whedon's production memo for Serenity)",
      "url": "https://firefly.fandom.com/wiki/A_Brief_History_of_the_Universe"
+    }
+   ]
+  },
+  {
+   "id": "dead-space",
+   "title": "Dead Space",
+   "medium": "game",
+   "creator": "Glen Schofield (creator); EA Redwood Shores / Visceral Games; remake by Motive Studio",
+   "originYear": 2008,
+   "group": "far-future-space-opera",
+   "epoch": "far-future",
+   "franchiseStatus": "dormant",
+   "divergence": {
+    "year": 2045,
+    "label": "New Horizons, the first colony on the Moon",
+    "delta": "Real: nobody lives on the Moon, NASA's Artemis plans put a surface base in the 2030s at the earliest, and the Soviet Union dissolved in 1991. Fiction: by 2045 the United States and China have founded New Horizons, a permanent strip-mining colony on the Moon, while American and Soviet fleets go to war in the Bering Sea.",
+    "inUniverse": "2045: New Horizons founded as a Sino-US joint mining base (No Known Survivors, EA's 2008 promotional website; repeated in the Dead Space 3 Prima guide)",
+    "confidence": "medium",
+    "note": "Dead Space dates in our calendar, so its years need no conversion. The fork is placed at the first dated thing that departs from the human record. The lore also says the Chicxulub impactor 66 million years ago was the Black Marker itself, which then nudged human evolution; that is a claim about a buried object nobody could see until 2214, so, following the convention the atlas uses for Mass Effect's Protheans, it is noted here rather than used as the fork. The 2045-2050 material comes from No Known Survivors, a 2008 promotional site whose events the later games still reference, which is why confidence is medium. Its 'Soviet Union' at war in 2045 implies an earlier, undated break with our 1991; no year can be given for it. The main-canon fork, if the promotional site is set aside, is the Black Marker's discovery in 2214.",
+    "sources": [
+     {
+      "title": "Dead Space Wiki: New Horizons Lunar Colony (founded 2045 as a Sino-US mining base)",
+      "url": "https://deadspace.fandom.com/wiki/New_Horizons_Lunar_Colony"
+     },
+     {
+      "title": "Dead Space Wiki: Timeline",
+      "url": "https://deadspace.fandom.com/wiki/Timeline"
+     },
+     {
+      "title": "Dead Space Wiki: Bering Sea conflict (US and Soviet Union, 2045-2050)",
+      "url": "https://deadspace.fandom.com/wiki/Bering_Sea_conflict"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "At the end of Dead Space 3: Awakened (2514) the Brethren Moons have reached Earth, the Unitologist Circle has already gutted EarthGov's defences, and Isaac and Carver's hails are answered only by necromorph noise.",
+    "asOf": 2514
+   },
+   "events": [
+    {
+     "id": "ds-published-2008",
+     "year": 2008,
+     "date": "13 October 2008",
+     "title": "Dead Space is released",
+     "description": "EA Redwood Shores releases Dead Space in North America on PlayStation 3 and Xbox 360, with the Windows version a week later. It is set in 2508 aboard a mining ship overrun after the discovery of an alien Marker.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Dead Space (2008 video game) (North American release 13 October 2008; set in 2508)",
+       "url": "https://en.wikipedia.org/wiki/Dead_Space_(2008_video_game)"
+      }
+     ],
+     "note": "",
+     "binWhy": "A real-world release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "ds3-published-2013",
+     "year": 2013,
+     "date": "5 February 2013",
+     "title": "Dead Space 3 is released",
+     "description": "Visceral Games releases the last numbered game, which explains the Markers' origin on Tau Volantis; its Awakened episode follows in March and ends with the Brethren Moons at Earth. The series then sits dormant until the 2023 remake of the first game.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Dead Space 3 (North American release 5 February 2013; Awakened DLC March 2013)",
+       "url": "https://en.wikipedia.org/wiki/Dead_Space_3"
+      }
+     ],
+     "note": "",
+     "binWhy": "A real-world release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "ds-new-horizons-2045",
+     "year": 2045,
+     "date": "2045",
+     "title": "New Horizons is founded on the Moon",
+     "description": "The United States and China open a joint strip-mining base on the Moon, the first permanent settlement off Earth, and it grows rich on helium-3 during an energy crisis at home. Five centuries later it is a filthy lunar metropolis, and the place Isaac Clarke goes to hide.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Dead Space Wiki: New Horizons Lunar Colony",
+       "url": "https://deadspace.fandom.com/wiki/New_Horizons_Lunar_Colony"
+      },
+      {
+       "title": "Dead Space Wiki: Earth (21st-century history: energy crisis, New Horizons, the Bering Sea conflict)",
+       "url": "https://deadspace.fandom.com/wiki/Earth"
+      }
+     ],
+     "note": "The year comes from No Known Survivors, EA's 2008 promotional website, and is repeated in the Dead Space 3 Prima guide; the games themselves show the colony only in 2511-2514. In our 2045 the Moon has no permanent residents and lunar helium-3 mining is a proposal.",
+     "binWhy": "A permanent base is founded on the Moon.",
+     "bin": "settlement-founded",
+     "sub": "moon-or-planet",
+     "facets": {
+      "change": "an empty Moon → a Sino-US mining colony",
+      "mechanism": "founding",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "economic",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "resource-dependency",
+       "crisis-ecological"
+      ],
+      "outcomes": [
+       "colonisation",
+       "gold-rush"
+      ]
+     }
+    },
+    {
+     "id": "ds-bering-sea-2047",
+     "year": 2047,
+     "date": "2047 (the conflict runs 2045-2050)",
+     "title": "The Battle of the Bering Sea",
+     "description": "After a Soviet force seizes the crew of an American freighter in the Kara Sea in 2045, the US Third Fleet fights the Red Banner Northern and Pacific Fleets off the Chukchi Peninsula in 2047 and again in 2050. The war ends with Soviet forces holding the peninsula.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Dead Space Wiki: Bering Sea conflict (Kara Sea Hostage Crisis 2045; naval battles 2047 and 2050)",
+       "url": "https://deadspace.fandom.com/wiki/Bering_Sea_conflict"
+      }
+     ],
+     "note": "Known only from maps and a genealogy report in the No Known Survivors promotional site, so its standing in the canon is thin. 2047 is the first of the two dated fleet battles; the hostage crisis that opens the conflict is 2045 and is folded in here because the colony takes that year. That the enemy is 'the Soviet Union' in 2045 is itself a break with our history that the lore never dates.",
+     "binWhy": "Two great powers fight a naval war over the Arctic.",
+     "bin": "war-breaks-out",
+     "sub": "great-power",
+     "facets": {
+      "change": "a hostage crisis → fleet battles off Chukotka",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "rivalry",
+       "resource-dependency"
+      ],
+      "outcomes": [
+       "occupation",
+       "attrition"
+      ]
+     }
+    },
+    {
+     "id": "ds-black-marker-2214",
+     "year": 2214,
+     "date": "2214",
+     "title": "The Black Marker is found in the Chicxulub crater",
+     "description": "A team including the geophysicist Michael Altman, working with the military of the Sovereign Colonies, raises a twisted alien monolith from the crater under the old Gulf of Mexico. It seems to give off limitless energy; it also brings dementia, suicide and the dead getting up again, and the government buries the details.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Dead Space Wiki: Black Marker (discovered 2214)",
+       "url": "https://deadspace.fandom.com/wiki/Black_Marker"
+      },
+      {
+       "title": "Wikipedia: Dead Space: Martyr (novel set in 2214)",
+       "url": "https://en.wikipedia.org/wiki/Dead_Space:_Martyr"
+      }
+     ],
+     "note": "Stated in Dead Space 3's briefing and in the 2010 novel Martyr, which is set in 2214. The lore holds that this object was the Chicxulub impactor itself; in our history the crater is the scar of an asteroid, and the atlas treats the Marker's presence as invisible until the day it is dug up.",
+     "binWhy": "A technology left by a non-human intelligence is found and studied.",
+     "bin": "breakthrough-science",
+     "sub": "alien-artefact",
+     "facets": {
+      "change": "an impact crater → an alien artefact that seems to give limitless energy",
+      "mechanism": "discovery",
+      "actor": "state",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "scientific",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "resource-exhaustion",
+       "crisis-ecological"
+      ],
+      "outcomes": [
+       "cover-up",
+       "revelation"
+      ]
+     }
+    },
+    {
+     "id": "ds-altman-2215",
+     "year": 2215,
+     "date": "15 March 2215",
+     "title": "Altman is killed, and Unitology is born",
+     "description": "Altman makes the Marker public against the government's wishes and is assassinated. A church founded in his name teaches that the Marker holds the secret of death and rebirth, and it grows into the largest religion in human space, rich enough to own a stake in the company that mines the worlds.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Dead Space Wiki: Michael Altman (died c. 15 March 2215)",
+       "url": "https://deadspace.fandom.com/wiki/Michael_Altman"
+      },
+      {
+       "title": "EA: The World and History of Dead Space (archived; Unitology founded 2215)",
+       "url": "https://web.archive.org/web/20230201214044/https://www.ea.com/en-ca/games/dead-space/dead-space/narrative"
+      }
+     ],
+     "note": "The date of death is from the in-game Unitology logs; EA's own narrative page for the 2023 remake gives the founding year as 2215. Martyr suggests the church was built around Altman against his will.",
+     "binWhy": "A church is founded that will shape human space for three centuries.",
+     "bin": "new-institution",
+     "facets": {
+      "change": "a murdered scientist → a church in his name",
+      "mechanism": "death",
+      "actor": "movement",
+      "position": "below",
+      "scope": "civilisational",
+      "domain": "social",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "cover-up",
+       "religious-fervour"
+      ],
+      "outcomes": [
+       "fervour",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "ds-red-markers-2294",
+     "year": 2294,
+     "date": "2294 (tests continue to 2311)",
+     "title": "The Sovereign Colonies build their own Markers",
+     "description": "Eighty years after the Black Marker, government scientists reverse-engineer it into copies, the Red Markers, hoping for an end to the resource crisis. The copies are planted in secret on remote worlds such as Aspera, Kreemar and Aegis VII, and every test site is overrun by the reanimated dead.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Dead Space Wiki: Timeline (2294-2311: Red Markers replicated and tested)",
+       "url": "https://deadspace.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Dead Space Wiki: Sovereign Colonies",
+       "url": "https://deadspace.fandom.com/wiki/Sovereign_Colonies"
+      }
+     ],
+     "note": "Dead Space 3's Serrano briefing says 'eighty years after' the 2214 discovery, which gives 2294 by arithmetic; the covert deployments and outbreaks are spread over the following years and told in Dead Space: Catalyst and the Tau Volantis logs.",
+     "binWhy": "An alien power source is copied and switched on as an energy technology.",
+     "bin": "new-technology-deployed",
+     "sub": "energy-industry",
+     "facets": {
+      "change": "one alien original → human-made copies on secret worlds",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": -1
+      },
+      "preconditions": [
+       "resource-exhaustion",
+       "secrecy"
+      ],
+      "outcomes": [
+       "mass-death",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "ds-tau-volantis-2311",
+     "year": 2311,
+     "date": "29 August 2311 (drop zone established)",
+     "title": "The expedition to Tau Volantis",
+     "description": "The Sovereign Colonies Armed Forces follow the Markers' 'master signal' to a frozen planet beyond the colonies and land a covert expedition. Under the ice lie the remains of an alien civilisation that built Markers two million years ago and froze its own world to stop what they started.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Dead Space Wiki: Timeline (29 August 2311, initial drop zone on Tau Volantis)",
+       "url": "https://deadspace.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "The date is from an in-game log in Dead Space 3. The expedition was a gamble to end the Resource Wars and the Secession War with Marker energy; it is also where the Colonies' council classified the Markers as a 'Class 5' first-contact scenario.",
+     "binWhy": "A first mission is sent to a distant, unexplored alien world.",
+     "bin": "voyage-into-unknown",
+     "sub": "interstellar",
+     "facets": {
+      "change": "a signal's source → a frozen alien graveyard",
+      "mechanism": "expedition",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "resource-exhaustion",
+       "long-war",
+       "secrecy"
+      ],
+      "outcomes": [
+       "contact",
+       "revelation"
+      ]
+     }
+    },
+    {
+     "id": "ds-scenario-five-2314",
+     "year": 2314,
+     "date": "18 June 2314",
+     "title": "Scenario Five, and the end of the Sovereign Colonies",
+     "description": "Judging the Markers an extinction-level threat, the Sovereign Colonies order everything about them destroyed. On Tau Volantis General Mahad's loyalists execute the science staff, wreck the fleet and mine the orbit before Mahad kills himself. The purge leaves the government unable to fight its civil war, it collapses, and an Earth-centred EarthGov takes its place.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Dead Space Wiki: Timeline (18 June 2314, Scenario Five completed)",
+       "url": "https://deadspace.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "EA: The World and History of Dead Space (archived; EarthGov founded 2314)",
+       "url": "https://web.archive.org/web/20230201214044/https://www.ea.com/en-ca/games/dead-space/dead-space/narrative"
+      }
+     ],
+     "note": "The purge is shown in Dead Space 3's prologue; EA's narrative page for the remake dates EarthGov's founding to 2314. The purge also buries the Black Marker somewhere in the galaxy, which is why the Markers are a rumour again two centuries later.",
+     "binWhy": "A government has its own scientists killed and its own records destroyed.",
+     "bin": "crackdown",
+     "sub": "purge",
+     "facets": {
+      "change": "a research programme → executed scientists and a buried secret",
+      "mechanism": "attack",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "existential-threat",
+       "secrecy",
+       "long-war"
+      ],
+      "outcomes": [
+       "cover-up",
+       "collapse",
+       "new-order"
+      ]
+     }
+    },
+    {
+     "id": "ds-ishimura-2446",
+     "year": 2446,
+     "date": "c. 2446",
+     "title": "Titan is cracked, and the Ishimura is launched",
+     "description": "Gravity-tether mining breaks up Saturn's moon Titan, and the Concordance Extraction Corporation launches the USG Ishimura, the first 'planet cracker', with one of the first ShockPoint faster-than-light drives. Whole worlds are fed into ships, the Resource Wars end, and the station built on Titan's last shard becomes the Sprawl.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Dead Space Wiki: Planet Cracking (Titan cracked around 2446; Ishimura built 2446)",
+       "url": "https://deadspace.fandom.com/wiki/Planet_Cracking"
+      },
+      {
+       "title": "Dead Space Wiki: Titan Station (commissioned c. 2446)",
+       "url": "https://deadspace.fandom.com/wiki/Titan_Station"
+      }
+     ],
+     "note": "In-game sponsored articles give 2446 for the Ishimura; the Titan harvest is dated only to 'the 2440s', and EA's remake page says the Resource Wars were raging 'by the early 2440s'. The Ishimura's 'over sixty years' of service by 2508 agrees.",
+     "binWhy": "A new industrial process, mining by cracking whole worlds, is put to work.",
+     "bin": "new-technology-deployed",
+     "sub": "energy-industry",
+     "facets": {
+      "change": "starving colonies → whole worlds mined for ore",
+      "mechanism": "invention",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "economic",
+      "direction": {
+       "power": 1,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "resource-exhaustion",
+       "long-war"
+      ],
+      "outcomes": [
+       "recovery",
+       "dependency"
+      ]
+     }
+    },
+    {
+     "id": "ds-aegis-vii-2508",
+     "year": 2508,
+     "date": "2508",
+     "title": "The Ishimura at Aegis VII",
+     "description": "Miners cracking Aegis VII, a restricted world, dig up a Red Marker the old government left there, and the Ishimura takes it aboard for the Church. Insomnia and murder follow, then the dead of the colony and the ship rise as necromorphs; the engineer Isaac Clarke arrives to repair a silent ship and finds almost no one alive.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Dead Space (2008 video game) (set in 2508)",
+       "url": "https://en.wikipedia.org/wiki/Dead_Space_(2008_video_game)"
+      }
+     ],
+     "note": "The year is stated by the game and by EA's remake page ('It is now 2508'). Isaac returns the Marker to its pedestal and the planet's fragment falls back on the colony, but EarthGov recovers the derelict Ishimura within a month.",
+     "binWhy": "An alien signal turns the dead into something else, and the outbreak kills a colony and a ship.",
+     "bin": "plague",
+     "sub": "transforming",
+     "facets": {
+      "change": "an illegal mining colony → a ship of the reanimated dead",
+      "mechanism": "disaster",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "local",
+      "domain": "biological",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "secrecy",
+       "religious-fervour",
+       "resource-dependency"
+      ],
+      "outcomes": [
+       "mass-death",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "ds-sprawl-2511",
+     "year": 2511,
+     "date": "7 February 2511 (sabotage)",
+     "title": "Unitologists open the Sprawl to the necromorphs",
+     "description": "EarthGov has built a new Marker in a secret lab on Titan Station, a city of over a million. Unitologists sabotage the lab's sector and trick an engineer into opening the tubes to the public sector, the outbreak spreads, and the station is destroyed by its own reactors after Isaac destroys the Marker.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Dead Space Wiki: Titan Station (population over one million; destroyed 7 February 2511)",
+       "url": "https://deadspace.fandom.com/wiki/Titan_Station"
+      },
+      {
+       "title": "Wikipedia: Dead Space 2 (set in 2511)",
+       "url": "https://en.wikipedia.org/wiki/Dead_Space_2"
+      }
+     ],
+     "note": "The February date is from the Dead Space: Sabotage tie-in and in-game video logs; the game itself states only 2511. The disaster turns the public against EarthGov and opens a three-year Unitologist insurgency.",
+     "binWhy": "A religious faction sabotages a secret government installation, and a city dies of it.",
+     "bin": "terror-attack",
+     "sub": "targeted",
+     "facets": {
+      "change": "a city of a million → a reactor-blown ruin",
+      "mechanism": "attack",
+      "actor": "movement",
+      "position": "below",
+      "scope": "local",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "religious-fervour",
+       "secrecy",
+       "cover-up"
+      ],
+      "outcomes": [
+       "mass-death",
+       "radicalisation"
+      ]
+     }
+    },
+    {
+     "id": "ds-brethren-moons-2514",
+     "year": 2514,
+     "date": "2514",
+     "title": "The Brethren Moons wake",
+     "description": "Isaac and his allies reach Tau Volantis and find that the Markers exist to make 'Brethren Moons', planet-sized masses of flesh that harvest whole species. They destroy the one that wakes there, but more of them are already in Earth orbit, and no one on Earth or the Moon answers.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Dead Space 3 (Tau Volantis; the Awakened DLC)",
+       "url": "https://en.wikipedia.org/wiki/Dead_Space_3"
+      },
+      {
+       "title": "Dead Space Wiki: Earth (Brethren Moon invasion, 2514)",
+       "url": "https://deadspace.fandom.com/wiki/Earth"
+      }
+     ],
+     "note": "Dead Space 3 and Awakened are both set in 2514. The series ends here: it went dormant after Dead Space 3, and the 2023 remake retold the first game rather than continuing the story.",
+     "binWhy": "An alien intelligence the size of moons arrives to harvest humanity.",
+     "bin": "war-breaks-out",
+     "sub": "between-worlds",
+     "facets": {
+      "change": "a buried secret → moons of flesh over Earth",
+      "mechanism": "invasion",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "existential-threat",
+       "contact-made",
+       "religious-fervour"
+      ],
+      "outcomes": [
+       "extinction-risk",
+       "mass-death"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs in far-future space opera: a human interstellar polity of colonies and mining worlds reached by ShockPoint drive, running on corporate extraction and a church, with an alien intelligence far older than humanity at its centre; unusually for the group, no living alien civilisation is ever met. The continuity is the three main games, Extraction, the Martyr and Catalyst novels, the comics, the animated films and EA's own narrative page for the 2023 remake, as catalogued by the Dead Space Wiki; the remake is treated as the same history. Its years are ours. Tiers: T4 and T3 are empty (the Marker's arrival at Chicxulub 66 million years ago is noted, not charted, and nothing fictional touches the twentieth century); T2 holds the releases, New Horizons and the Bering Sea war (from a promotional site), the Black Marker, Unitology and the Red Markers (2214-2294); T1 holds Tau Volantis in 2311 through the Brethren Moons in 2514.",
+   "sources": [
+    {
+     "title": "Wikipedia: Dead Space (2008 video game)",
+     "url": "https://en.wikipedia.org/wiki/Dead_Space_(2008_video_game)"
+    },
+    {
+     "title": "Dead Space Wiki: Timeline",
+     "url": "https://deadspace.fandom.com/wiki/Timeline"
+    },
+    {
+     "title": "EA: The World and History of Dead Space (archived official lore page, 2023)",
+     "url": "https://web.archive.org/web/20230201214044/https://www.ea.com/en-ca/games/dead-space/dead-space/narrative"
+    }
+   ]
+  },
+  {
+   "id": "destiny",
+   "title": "Destiny",
+   "medium": "game",
+   "creator": "Bungie",
+   "originYear": 2014,
+   "group": "far-future-space-opera",
+   "epoch": "far-future",
+   "franchiseStatus": "dormant",
+   "divergence": {
+    "year": 1938,
+    "label": "Something that is 'neither holy nor unholy' meets two boys outside Assumption, Illinois",
+    "delta": "Real: in 1938 Assumption is a small Illinois town on Route 51 and nothing comes down the road but traffic. Fiction: III of the Nine, a higher-dimensional intelligence, appears to thirteen-year-old Louis Yero and his brother Ben, the first dated moment of a hidden twentieth century that a secret US agency, the Department of External Observation, will spend decades studying and concealing.",
+    "inUniverse": "Assumption, Illinois, 1938 (lore book Assumption, Destiny 2: Monument of Triumph, June 2026)",
+    "confidence": "high",
+    "note": "Destiny's main story carries no calendar at all, but lore added in 2025-2026 (The Edge of Fate's DEO documents and the Monument of Triumph lore books) gives it a dated, secret twentieth century, and the earliest dated departure in it is this 1938 encounter; the year is printed as a section heading. The Traveler's far older history (the Precursors, the Hive, the Vex) happens off Earth and is left out, as the atlas does for Mass Effect's Protheans. Everything after the DEO is derived, and every derived year is low or medium confidence: the Traveler reaches Mars 'in what we know as the late 21st century' (Game Informer, 2015), placed here at 2080; the Golden Age is 'centuries-long'; and the first game is set 'about 700 years in the future' (Wikipedia; from Bungie's 2012 leaked story document), taken as 2014 + 700 = 2714. From there Bungie's live game keeps in-universe time roughly in step with real time (Destinypedia dates the Witness's last campaign to 4 June, the release day of The Final Shape), so later beats are placed at release year + 700. The DEO's own 1960s memo, which expects the object X0192 to arrive in '50-60 years', would put the Traveler in the 2010s or 2020s instead; the two statements are not reconciled in the canon.",
+    "sources": [
+     {
+      "title": "Destinypedia: Lore:Assumption (sections dated 1929-1962; Assumption, Illinois, 1938)",
+      "url": "https://www.destinypedia.com/Lore:Assumption"
+     },
+     {
+      "title": "Destinypedia: Lodi (Louis Yero; DEO 1960-1966)",
+      "url": "https://www.destinypedia.com/Lodi"
+     },
+     {
+      "title": "Game Informer: What's Going On In Destiny's Story, Anyway? (2015; the Traveler arrives in the late 21st century)",
+      "url": "https://www.gameinformer.com/b/features/archive/2015/08/24/what-s-going-on-in-destiny-s-story-anyway.aspx"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "unknown",
+    "why": "The Witness is dead and the Traveler saved, but when Bungie ended development in June 2026 III of the Nine was dead, Earth's chemistry was changing, and the Nine's prophecy of extinction was unanswered, with the Fate Saga cut short.",
+    "asOf": 2726
+   },
+   "events": [
+    {
+     "id": "dst-assumption-1938",
+     "year": 1938,
+     "date": "1938",
+     "title": "III of the Nine meets Louis Yero",
+     "description": "Out of fuel on a highway in Illinois, two brothers meet a wavering figure that calls itself their mother and invites a question 'before death hastens me from this moment'. Louis is knocked unconscious; nearly thirty years later the same beings will pull him out of time to be their emissary.",
+     "tier": "T3",
+     "phase": "fork",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Destinypedia: Lore:Assumption (Assumption, Illinois, 1938)",
+       "url": "https://www.destinypedia.com/Lore:Assumption"
+      }
+     ],
+     "note": "The year is the lore book's own section heading. Nothing outside the brothers records it; it is the first of the hidden twentieth-century events Bungie added to the canon in 2026, a year before the franchise's content ended.",
+     "binWhy": "An ordinary boy is drawn into the story of the Nine.",
+     "bin": "the-call",
+     "facets": {
+      "change": "a boy on a highway → a boy the Nine have marked",
+      "mechanism": "arrival",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "local",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "prophecy"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "dst-deo-1960",
+     "year": 1960,
+     "date": "1960",
+     "title": "The Department of External Observation",
+     "description": "A US agency in Chicago charged with extraterrestrial anomalies hires Yero as a linguist for alien translation, and his first case is a USS Hornet from another timeline that has appeared on the Pine Ridge Reservation. Its contact protocol runs 'observe, connect, conceal, conform, comply, return', and it also studies an energy weapon it suspects in the Kennedy assassination.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Destinypedia: Department of External Observation",
+       "url": "https://www.destinypedia.com/Department_of_External_Observation"
+      },
+      {
+       "title": "Destinypedia: Lodi (DEO linguist from 1960; the Pine Ridge Hornet)",
+       "url": "https://www.destinypedia.com/Lodi"
+      },
+      {
+       "title": "Destinypedia: Timelost DEO Documents (the Dealey Plaza memo)",
+       "url": "https://www.destinypedia.com/Timelost_DEO_Documents"
+      }
+     ],
+     "note": "The DEO's founding is undated; 1960 is the first year the lore places it at work. Its Dealey Plaza memo finds 'no conclusive link' between recovered alien weaponry and the 1963 assassination, so no change to that event is charted.",
+     "binWhy": "A secret agency hides contact with the extraterrestrial from the public.",
+     "bin": "secret-kept",
+     "facets": {
+      "change": "anomalies in the field → anomalies in a vault",
+      "mechanism": "recruitment",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "cold-war",
+       "secrecy"
+      ],
+      "outcomes": [
+       "secrecy-state",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "dst-diablerets-1962",
+     "year": 1962,
+     "date": "1962 (first dated reference; the incident itself is undated)",
+     "title": "The Diablerets suits",
+     "description": "The DEO has recovered three intact alien survival suits from 'the Diablerets incident' in the Swiss Alps, with a silicone-based micro-organism still in their tubes. Departments fight over them, and by 1966 their reverse-engineering has produced public patents and a DARPA weapons programme.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Destinypedia: Lore:Recovered Materials, Old Chicago (Magnetic Audiotape, 1962; Pocket Notebook, 1966)",
+       "url": "https://www.destinypedia.com/Lore:Recovered_Materials,_Old_Chicago"
+      }
+     ],
+     "note": "A 1962 tape discusses the suits as already recovered, so the incident is earlier and undated. Destinypedia compares the DEO's handling of it to Roswell.",
+     "binWhy": "Technology left by a non-human intelligence is recovered and taken apart.",
+     "bin": "breakthrough-science",
+     "sub": "alien-artefact",
+     "facets": {
+      "change": "an alien crash site → suits on the workbench",
+      "mechanism": "discovery",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "cold-war"
+      ],
+      "outcomes": [
+       "secrecy-state",
+       "arms-race"
+      ]
+     }
+    },
+    {
+     "id": "dst-x0192-1966",
+     "year": 1966,
+     "date": "by 1966 (the memo is undated)",
+     "title": "The DEO images X0192",
+     "description": "A DEO briefing flags an 'unidentified celestial body', spherical and abnormally regular, moving towards the Sun with an estimated arrival in fifty to sixty years: the Traveler. In 1966 the Nine take the mathematician Nella Davis and Louis Yero through 'strange matter', and the director swears to bring them back.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Destinypedia: Timelost DEO Documents (the X0192 memo)",
+       "url": "https://www.destinypedia.com/Timelost_DEO_Documents"
+      },
+      {
+       "title": "Destinypedia: Lore:Recovered Materials, Old Chicago (Memoranda, 1966)",
+       "url": "https://www.destinypedia.com/Lore:Recovered_Materials,_Old_Chicago"
+      }
+     ],
+     "note": "The memo carries no year; it sits among Yero's papers from his DEO years (1960-1966) and just before his disappearance, which the 1966 memoranda date, so it is filed at 1966 at low confidence. Nella Davis is later revealed to be Ikora Rey before she became a Guardian. The memo's 50-60 year estimate conflicts with the late-21st-century arrival used below.",
+     "binWhy": "An astronomical discovery: an artificial sphere is heading for the solar system.",
+     "bin": "breakthrough-science",
+     "sub": "cosmos",
+     "facets": {
+      "change": "an empty sky → a sphere on its way",
+      "mechanism": "discovery",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "dst-blue-door-1967",
+     "year": 1967,
+     "date": "1967 (first tear); Experiment 33 in 1968",
+     "title": "Project BLUE DOOR opens a tear into another dimension",
+     "description": "Reactivated to follow the missing pair, a mothballed DEO project opens a 15-centimetre hole into a place so full of strange matter that it turns the lab's equipment to iron filings. In 1968 Director Moffat steps through after a colleague whose organs are turned to metal; he comes back, and shuts the effort down.",
+     "tier": "T3",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Destinypedia: Lore:Recovered Materials, Old Chicago (Introduction Letter, 1967; Magnetic Audiovisual Tape, 1968; Torn Journal Page, 12 December 1968)",
+       "url": "https://www.destinypedia.com/Lore:Recovered_Materials,_Old_Chicago"
+      }
+     ],
+     "note": "Each lore entry carries its year. The 1968 tape records something on the other side answering the director in a patchwork of animal calls and human voices.",
+     "binWhy": "A passage to another dimension is made.",
+     "bin": "gateway-opens",
+     "facets": {
+      "change": "a mothballed project → a hole in the world",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "inside",
+      "scope": "local",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "cold-war"
+      ],
+      "outcomes": [
+       "opening",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "dst-published-2014",
+     "year": 2014,
+     "date": "9 September 2014",
+     "title": "Destiny is released",
+     "description": "Bungie's first game after Halo launches on four consoles, set about 700 years in the future in the Last City under the Traveler.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Destiny (video game) (released 9 September 2014; set about 700 years in the future)",
+       "url": "https://en.wikipedia.org/wiki/Destiny_(video_game)"
+      }
+     ],
+     "note": "",
+     "binWhy": "A real-world release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "dst-published-2017",
+     "year": 2017,
+     "date": "6 September 2017",
+     "title": "Destiny 2 is released",
+     "description": "The sequel opens with the Red War and runs for nine years of expansions, ending content development with the Monument of Triumph update on 9 June 2026.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Destiny 2 (released 6 September 2017; Monument of Triumph the final content update, June 2026)",
+       "url": "https://en.wikipedia.org/wiki/Destiny_2"
+      }
+     ],
+     "note": "",
+     "binWhy": "A real-world release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "dst-ares-one-2080",
+     "year": 2080,
+     "date": "late 21st century (placed at 2080)",
+     "title": "Ares One meets the Traveler on Mars",
+     "description": "The first crewed flight to Mars, a US, Chinese and Russian mission under Commander Jacob Hardy, lands by hand after an engine fault and walks up a ridge to see the Traveler making it rain on the desert. It has already remade Mercury, Venus and the moons of Jupiter, and it offers humanity the solar system.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Destinypedia: Ares One (the first crewed flight to Mars)",
+       "url": "https://www.destinypedia.com/Ares_One"
+      },
+      {
+       "title": "Ishtar Collective: Ghost Fragment: Human (Hardy's pre-launch log)",
+       "url": "https://www.ishtar-collective.net/cards/ghost-fragment-human"
+      },
+      {
+       "title": "Game Informer: What's Going On In Destiny's Story, Anyway? (late 21st century)",
+       "url": "https://www.gameinformer.com/b/features/archive/2015/08/24/what-s-going-on-in-destiny-s-story-anyway.aspx"
+      }
+     ],
+     "note": "No year is given in the games. Game Informer's 2015 story guide says 'the late 21st century'; 2080 is a placement inside that range, not a canon date. Hardy's log uses today's vocabulary (a Hohmann window, MREs, a fourteen-month transfer), which fits a crewed Mars programme only a little beyond ours.",
+     "binWhy": "Humanity meets a non-human intelligence face to face.",
+     "bin": "first-contact",
+     "facets": {
+      "change": "a visitor watched from afar → a partner that gives us the planets",
+      "mechanism": "expedition",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "frontier-open"
+      ],
+      "outcomes": [
+       "contact",
+       "opening",
+       "colonisation"
+      ]
+     }
+    },
+    {
+     "id": "dst-golden-age-2130",
+     "year": 2130,
+     "date": "c. 2130 (fifty years after Ares One)",
+     "title": "The Golden Age",
+     "description": "Fifty years after first contact, Hardy, now ninety, writes that humanity lives on the worlds the Traveler touched. Colonies spread from the Moon's Ocean of Storms to Freehold on Mars, the Ishtar Collective studies Vex ruins on Venus, lifespans lengthen, Clovis Bray builds the Exos, and the Warminds guard the system.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Destinypedia: Golden Age (Hardy at ninety, fifty years after the Traveler's discovery)",
+       "url": "https://www.destinypedia.com/Golden_Age"
+      }
+     ],
+     "note": "The fifty-year interval is canon (Ghost Fragment: Human 4); the year inherits the low confidence of the Ares One placement. The Golden Age itself is 'centuries-long' and its milestones are undated, so they are gathered here rather than invented one by one.",
+     "binWhy": "A civilisation at its peak, before the fall.",
+     "bin": "golden-age",
+     "facets": {
+      "change": "one planet → a terraformed solar system",
+      "mechanism": "consolidation",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "contact-made",
+       "prosperity"
+      ],
+      "outcomes": [
+       "colonisation",
+       "prestige",
+       "dependency"
+      ]
+     }
+    },
+    {
+     "id": "dst-collapse-2300",
+     "year": 2300,
+     "date": "c. 2300 (derived)",
+     "title": "The Collapse",
+     "description": "The Darkness arrives, the colonies fall, and humanity is driven back to Earth; the Traveler makes a last stand and falls silent over the place that becomes the Last City. A Dark Age of warlords follows, until Ghosts begin raising the dead as Guardians.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Destinypedia: Collapse",
+       "url": "https://www.destinypedia.com/Collapse"
+      },
+      {
+       "title": "Wikipedia: Destiny (video game) (the Traveler's appearance 'centuries before'; set about 700 years in the future)",
+       "url": "https://en.wikipedia.org/wiki/Destiny_(video_game)"
+      }
+     ],
+     "note": "Undated in the canon. It is bracketed by a late-21st-century first contact followed by a Golden Age of 'at least a few centuries', and by a Dark Age and City Age that Destinypedia estimates lasted at least four centuries before a first game set around 2714; both brackets meet near 2300. Treat the year as a placement, not a date.",
+     "binWhy": "An outside force breaks a solar-system civilisation and it never comes back.",
+     "bin": "civilisation-collapses",
+     "sub": "climate-ecological",
+     "facets": {
+      "change": "a solar-system civilisation → one city under a silent god",
+      "mechanism": "invasion",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "empire-at-height",
+       "prosperity"
+      ],
+      "outcomes": [
+       "collapse",
+       "mass-death",
+       "shelter-society"
+      ]
+     }
+    },
+    {
+     "id": "dst-guardian-2714",
+     "year": 2714,
+     "date": "c. 2714 (about 700 years after 2014)",
+     "title": "A Ghost raises the Guardian",
+     "description": "In the ruins of the Cosmodrome in Old Russia a Ghost resurrects a long-dead stranger as a Guardian, a warrior of the Traveler's Light. Within the year the new Guardian breaks the Vex's Black Garden and kills the Hive god Crota, and, in the Taken War that follows, his father Oryx.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: Destiny (video game) (setting about 700 years in the future)",
+       "url": "https://en.wikipedia.org/wiki/Destiny_(video_game)"
+      },
+      {
+       "title": "The Register: Bungie details Destiny (2012; 'seven hundred years from now in the Last City')",
+       "url": "https://www.theregister.com/2012/11/29/bungie_details_destiny_for_future_release/"
+      }
+     ],
+     "note": "'Seven hundred years from now' comes from Bungie's story document leaked through an advertising agency in November 2012, and Wikipedia repeats 'about 700 years in the future'; the atlas counts from the 2014 release. The Taken War (The Taken King, 2015) is folded in.",
+     "binWhy": "A person is chosen, by resurrection, as the one the story's future turns on.",
+     "bin": "chosen-one",
+     "facets": {
+      "change": "a corpse in the Cosmodrome → the Traveler's champion",
+      "mechanism": "recruitment",
+      "actor": "individual",
+      "position": "below",
+      "scope": "planetary",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "shelter-society"
+      ],
+      "outcomes": [
+       "resistance-forms",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "dst-red-war-2717",
+     "year": 2717,
+     "date": "c. 2717 ('two years after the Taken War')",
+     "title": "The Red War: the Last City falls",
+     "description": "Dominus Ghaul's Red Legion invades Earth, destroys the Tower, cages the Traveler and cuts the Guardians off from the Light. The City is occupied until the Guardian, relit at a shard of the Traveler, kills Ghaul and the Traveler wakes.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Destinypedia: Red War",
+       "url": "https://www.destinypedia.com/Red_War"
+      },
+      {
+       "title": "Destinypedia: Traveler ('two years after the Taken War')",
+       "url": "https://www.destinypedia.com/Traveler"
+      }
+     ],
+     "note": "The two-year gap is canon and matches the real gap between The Taken King (2015) and Destiny 2 (2017); the absolute year inherits the 2714 anchor.",
+     "binWhy": "An invading empire defeats the last human city and occupies it.",
+     "bin": "defeat-and-occupation",
+     "facets": {
+      "change": "a defended city → a caged Traveler and lightless Guardians",
+      "mechanism": "invasion",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "shelter-society",
+       "post-collapse"
+      ],
+      "outcomes": [
+       "occupation",
+       "resistance-forms",
+       "exile"
+      ]
+     }
+    },
+    {
+     "id": "dst-witness-2724",
+     "year": 2724,
+     "date": "c. 2724 (The Final Shape, June 2024, plus 700)",
+     "title": "The Witness is destroyed inside the Traveler",
+     "description": "The Witness, the Darkness's intelligence, tries to calcify the Last City into its 'Final Shape'. Guardians and a coalition of former enemies follow it into the Pale Heart inside the Traveler and kill it; Cayde-6 gives his Light to save Ghost, and the city releases paper lanterns.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Destinypedia: The Final Shape (released 4 June 2024)",
+       "url": "https://www.destinypedia.com/The_Final_Shape"
+      },
+      {
+       "title": "Destinypedia: Timeline (the Witness's defeat; the Echoes)",
+       "url": "https://www.destinypedia.com/Timeline"
+      }
+     ],
+     "note": "The end of the ten-year Light and Darkness Saga. The year is the release year plus the 700-year anchor; Destinypedia dates the campaign by release days, which is the only basis for keeping story time in step with real time.",
+     "binWhy": "The war against the Darkness's intelligence is won in one battle.",
+     "bin": "decisive-victory",
+     "facets": {
+      "change": "a war for the Final Shape → a dead Witness and scattered Echoes",
+      "mechanism": "war",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "existential-threat",
+       "long-war"
+      ],
+      "outcomes": [
+       "turning-point",
+       "new-actors"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs in far-future space opera: a solar-system civilisation lost in a Collapse, a Last City of resurrected knights under a silent god, alien empires (Cabal, Hive, Vex, Eliksni) and a war of Light against Darkness. The chain follows Bungie's canon as told in the games, the Grimoire and the lore books and catalogued by Destinypedia and the Ishtar Collective, through Monument of Triumph (June 2026). Only the 1938-1968 lore is dated; every later year is derived and marked low or medium. franchiseStatus is dormant because content development ended in June 2026, though Bungie said in September 2026 it would restore removed content as a foundation for new Destiny stories. Tiers: T4 is empty (the Traveler's ancient history happens off Earth and is left out); T3 holds the DEO's secret century, 1938-1967; T2 holds the releases, first contact and the Golden Age; T1 holds the Collapse and the City Age, around 2300 and 2714-2724.",
+   "sources": [
+    {
+     "title": "Wikipedia: Destiny (video game)",
+     "url": "https://en.wikipedia.org/wiki/Destiny_(video_game)"
+    },
+    {
+     "title": "Wikipedia: Destiny 2",
+     "url": "https://en.wikipedia.org/wiki/Destiny_2"
+    },
+    {
+     "title": "Destinypedia: Timeline",
+     "url": "https://www.destinypedia.com/Timeline"
     }
    ]
   }
