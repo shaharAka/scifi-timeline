@@ -942,7 +942,7 @@ attempt("ranking", () => {
   /* the post leads with what came next after the newest headline; the ranking
      has a poster of its own */
   const rankCard = String(t.rankCard("rank"));
-  check(/has happened in \d+ of \d+ sci-fi stories/.test(post) && post.includes("pa-list"), "the post card does not say how many stories saw this and what came next");
+  check(/\d+ sci-fi stories went through this/.test(post) && post.includes("pf-cols") && post.includes("pf-plate"), "the post card does not show the stories that saw this, by how they ended");
   check(rankCard.includes(title) && (rankCard.includes("rkl-runs") || rankCard.includes("rkc-runs")) && rankCard.includes("Spoiler:"), "the ranking card does not show the leader, its ending and the runners-up");
   check(!/of the fit/.test(post) && !/of the fit/.test(rankCard), "the post card uses the ranking's jargon; it is for people scrolling past");
   check(/has happened in/.test(og), "the link-preview card does not say how many stories saw the headline");
@@ -951,7 +951,7 @@ attempt("ranking", () => {
   check(today.indexOf('<section class="aft">') === 0, "Today does not open on the newest headline read forward");
   check(answer.includes(title) && rankCard.includes(title), "the ranking answer and the ranking card name different stories");
 
-  check(/read against the real news/.test(post) && /read against the real news/.test(today), "the one-line explanation of the atlas is missing");
+  check(/read against the real news/.test(today), "the one-line explanation of the atlas is missing");
 
   /* the evidence is every step shared exactly, with how many stories have it,
      and a line on whether any rival matches as many */

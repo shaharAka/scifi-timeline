@@ -848,26 +848,52 @@ function rkAfterHtml(M){
     + '</section>';
 }
 
-/* the poster: the same reading, for a feed */
+/* the poster: the same reading as a picture. The headline forks into three
+   columns, how the stories that saw this moment ended, each column filled with
+   the stories' own plates. No rows of text: the site has those. */
+function rkShortHead(h){ var t = String(h || ""), i = t.indexOf(":"); return i > 8 && i < 60 ? t.slice(0, i) : rkShortTitle(t, 60); }
 function rkAfterPosterHtml(M, site){
   var n = rkAfterNews(M); if(!n) return "";
-  var E = rkAfter(M, n.bin, n.sub), H = rkAfterHead(E, n);
-  var rows = E.rows.slice(0, 7).map(function(r){ return rkAfterRow(r, "pa", false); }).join("");
-  return '<div class="rkc pa">'
-    + '<div class="pa-k">In the news · ' + esc(fmtNewsDate(n.date)) + '</div>'
-    + '<div class="pa-h">' + esc(rkShortTitle(n.headline, 110)) + '</div>'
-    + '<div class="pa-card"><div class="pa-w">' + esc(H.w) + '</div><div class="pa-n">' + esc(H.line) + '</div>'
-    + (E.n ? rkEndsBar(E, "pa") + '<div class="pa-e">' + esc(rkEndsLine(E)) + '</div>' : '')
-    + (E.n ? '<div class="pa-rh">What came next in them</div><ol class="pa-list">' + rows + '</ol>' + (E.n > 7 ? '<div class="pa-more">and ' + (E.n - 7) + ' more on the site</div>' : '') : '')
-    + '</div>'
-    + '<div class="pa-foot"><span>' + esc(E.N + " sci-fi timelines, read against the real news") + '</span><b>' + esc(site) + '</b></div></div>';
+  var E = rkAfter(M, n.bin, n.sub), w = E.word.charAt(0).toUpperCase() + E.word.slice(1);
+  /* plates grow to fill the page: the tallest column sets their height */
+  var most = 1; ["optimistic", "unknown", "pessimistic"].forEach(function(v){ most = Math.max(most, Math.min(4, E.rows.filter(function(r){ return r.st.ending.valence === v; }).length)); });
+  var ph = Math.max(120, Math.min(230, Math.floor(640 / most) - 12));
+  var cols = [["optimistic", "Ended well"], ["unknown", "Still open"], ["pessimistic", "Ended badly"]].map(function(c){
+    var rs = E.rows.filter(function(r){ return r.st.ending.valence === c[0]; });
+    var shown = rs.slice(0, 4);
+    return '<div class="pf-col ' + c[0] + '"><div class="pf-ch"><b>' + rs.length + '</b><span>' + c[1] + '</span></div>'
+      + shown.map(function(r){
+        var a = typeof artFor === "function" ? artFor(r.st.id) : null;
+        return '<div class="pf-plate" style="height:' + ph + 'px">' + (a && a.sm ? '<img src="' + esc(a.sm) + '" alt="">' : '') + '<span>' + esc(r.st.l.title) + '</span></div>';
+      }).join("")
+      + (rs.length > shown.length ? '<div class="pf-more">+' + (rs.length - shown.length) + ' more</div>' : '') + '</div>';
+  }).join("");
+  /* the fork: one line down from the headline, splitting to the three columns */
+  var fork = '<svg class="pf-fork" viewBox="0 0 960 90" width="960" height="90" aria-hidden="true">'
+    + '<path d="M480 0 V30 M480 30 C480 60,152 45,152 90 M480 30 V90 M480 30 C480 60,808 45,808 90" fill="none" stroke="#b0bdca" stroke-width="4" stroke-linecap="round"/>'
+    + '<circle cx="480" cy="8" r="8" fill="#101c28"/></svg>';
+  return '<div class="rkc pf">'
+    + '<div class="pf-k">In the news · ' + esc(fmtNewsDate(n.date)) + '</div>'
+    + '<div class="pf-h">' + esc(rkShortHead(n.headline)) + '</div>'
+    + '<div class="pf-w">' + esc(w) + '.</div>'
+    + '<div class="pf-n">' + E.n + ' sci-fi stories went through this. Here’s how they ended.</div>'
+    + fork + '<div class="pf-cols">' + cols + '</div>'
+    + '<div class="pf-foot"><span>What happened next in each story:</span><b>' + esc(site) + '</b></div></div>';
 }
 function rkAfterOgHtml(M, site){
   var n = rkAfterNews(M); if(!n) return "";
-  var E = rkAfter(M, n.bin, n.sub), H = rkAfterHead(E, n);
-  return '<div class="rkc pao"><div class="pa-k">In the news · ' + esc(fmtNewsDate(n.date)) + '</div>'
-    + '<div class="pao-h">' + esc(rkShortTitle(n.headline, 90)) + '</div>'
-    + '<div class="pao-w">' + esc(H.w) + ': ' + esc(H.line.replace(/^It has /, "it has ")) + '</div>'
-    + (E.n ? rkEndsBar(E, "pa") + '<div class="pa-e">' + esc(rkEndsLine(E)) + '</div>' : '')
-    + '<div class="pa-foot"><span>What came next in each story</span><b>' + esc(site) + '</b></div></div>';
+  var E = rkAfter(M, n.bin, n.sub), w = E.word.charAt(0).toUpperCase() + E.word.slice(1);
+  var order = { optimistic:0, unknown:1, pessimistic:2 };
+  /* two of each ending, so the strip shows the split, then fill to six */
+  var rs = [], left = [];
+  ["optimistic", "unknown", "pessimistic"].forEach(function(v){ var g = E.rows.filter(function(r){ return r.st.ending.valence === v; }); rs = rs.concat(g.slice(0, 2)); left = left.concat(g.slice(2)); });
+  rs = rs.concat(left).slice(0, 6).sort(function(a, b){ return order[a.st.ending.valence] - order[b.st.ending.valence]; });
+  return '<div class="rkc pfo"><div class="pf-k">In the news · ' + esc(fmtNewsDate(n.date)) + ' · ' + esc(rkShortHead(n.headline)) + '</div>'
+    + '<div class="pfo-w">' + esc(w) + '.</div>'
+    + '<div class="pfo-n">' + E.n + ' sci-fi stories went through this: ' + esc(rkEndsLine(E)) + '.</div>'
+    + '<div class="pfo-strip">' + rs.map(function(r){
+        var a = typeof artFor === "function" ? artFor(r.st.id) : null;
+        return '<div class="pfo-p ' + r.st.ending.valence + '">' + (a && a.sm ? '<img src="' + esc(a.sm) + '" alt="">' : '') + '<span>' + esc(r.st.l.title) + '</span></div>';
+      }).join("") + '</div>'
+    + '<div class="pf-foot"><span>What happened next in each</span><b>' + esc(site) + '</b></div></div>';
 }

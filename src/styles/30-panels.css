@@ -862,6 +862,38 @@ body.card-mode{overflow:hidden}
 .pao-w{font-size:30px;font-weight:650;color:#22323f;margin-bottom:16px}
 .pao .pa-e{font-size:24px}
 
+/* the fork poster */
+.rkc.pf{width:1080px;height:1350px;box-sizing:border-box;padding:60px 60px 44px;background:#eef2f6;color:#101c28;display:flex;flex-direction:column;font-family:var(--font-sans)}
+.pf-k{font-size:24px;font-weight:700;color:#1d5c9e}
+.pf-h{font-size:40px;font-weight:700;color:#4a5c6b;margin-top:8px;letter-spacing:-.01em}
+.pf-w{font-size:92px;line-height:1;font-weight:850;letter-spacing:-.035em;margin-top:6px}
+.pf-n{font-size:30px;color:#22323f;margin-top:18px;line-height:1.3}
+.pf-fork{display:block;margin:26px 0 0}
+.pf-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.pf-col{display:flex;flex-direction:column;gap:12px}
+.pf-ch{display:flex;align-items:baseline;gap:10px;padding:10px 16px;border-radius:16px;color:#fff}
+.pf-col.optimistic .pf-ch{background:#1f7a55}.pf-col.unknown .pf-ch{background:#74879a}.pf-col.pessimistic .pf-ch{background:#a03a34}
+.pf-ch b{font-size:46px;line-height:1;font-weight:850}
+.pf-ch span{font-size:24px;font-weight:700}
+.pf-plate{position:relative;height:150px;border-radius:14px;overflow:hidden;background:#d2dbe4}
+.pf-plate img{display:block;width:100%;height:100%;object-fit:cover}
+.pf-plate span{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 9px;font-size:20px;font-weight:750;color:#fff;line-height:1.15;background:linear-gradient(transparent,rgba(8,12,18,.85))}
+.pf-col.optimistic .pf-plate{box-shadow:inset 0 0 0 4px #1f7a55}.pf-col.pessimistic .pf-plate{box-shadow:inset 0 0 0 4px #a03a34}
+.pf-more{font-size:22px;color:#4a5c6b;font-weight:650;padding-left:4px}
+.pf-foot{margin-top:auto;display:flex;justify-content:space-between;align-items:baseline;font-size:22px;color:#4a5c6b}
+.pf-foot b{color:#101c28;font-size:24px}
+
+.rkc.pfo{width:1200px;height:630px;box-sizing:border-box;padding:44px 56px 34px;background:#eef2f6;color:#101c28;display:flex;flex-direction:column;font-family:var(--font-sans)}
+.pfo .pf-k{font-size:22px}
+.pfo-w{font-size:72px;line-height:1;font-weight:850;letter-spacing:-.035em;margin-top:12px}
+.pfo-n{font-size:26px;color:#22323f;margin-top:14px}
+.pfo-strip{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:26px}
+.pfo-p{position:relative;height:190px;border-radius:12px;overflow:hidden;background:#d2dbe4;border-bottom:8px solid #74879a}
+.pfo-p.optimistic{border-bottom-color:#1f7a55}.pfo-p.pessimistic{border-bottom-color:#a03a34}
+.pfo-p img{display:block;width:100%;height:100%;object-fit:cover}
+.pfo-p span{position:absolute;left:0;right:0;bottom:0;padding:20px 8px 7px;font-size:16px;font-weight:750;color:#fff;line-height:1.15;background:linear-gradient(transparent,rgba(8,12,18,.85))}
+.pfo .pf-foot{font-size:19px}
+
 /* the answer: what a reader lands on, the poster made tappable */
 .ans{margin:0 0 8px}
 .ans-head h1{font-size:28px;line-height:1.12;margin:2px 0 6px;letter-spacing:-.02em;color:var(--ink-0)}
