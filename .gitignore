@@ -26,4 +26,4 @@ __pycache__/
 
 # Poster cards for posting, written by tools/snap-cards.sh (the link-preview card,
 # assets/share/og-rank.png, is committed; these are for you to post by hand).
-share/
+/share/
