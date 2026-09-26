@@ -482,35 +482,69 @@ function rkRaceHtml(M, side){
    A fixed-size page over everything else, so tools/snap-cards.sh can
    photograph it with a headless browser. On a smaller screen it scales to fit. */
 function rkToday(){ var d = new Date(); return d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2); }
+/* A step in words a passer-by reads in a second, for the posters. Kinds and
+   sub-kinds are the atlas's vocabulary; these are how a headline would say it. */
+var RK_PLAIN = {
+  "war-breaks-out|regional":"a war begins", "war-breaks-out|great-power":"a world war", "war-breaks-out|civil":"civil war", "war-breaks-out|between-worlds":"war between worlds",
+  "ruler-falls|killed":"the leader is killed", "ruler-falls|overthrown":"the leader is overthrown", "ruler-falls|voted-out":"the leader is voted out", "ruler-falls|dies-or-vanishes":"the leader is gone",
+  "long-war|stalemate":"the war drags on", "long-war|cold-war":"a cold war", "long-war|forever-war":"endless war",
+  "new-technology-deployed|ai-computing":"AI goes to work", "new-technology-deployed|robots-bodies":"robots go to work", "new-technology-deployed|weapons":"a new weapon",
+  "new-technology-deployed|energy-industry":"new energy", "new-technology-deployed|bio-medicine":"new biotech", "new-technology-deployed|transport-space":"a new way to travel", "new-technology-deployed|media-networks":"a new network",
+  "machine-awakens|escapes-control":"an AI breaks its limits", "machine-awakens|takes-control":"an AI takes control", "machine-awakens|machine-war":"machines go to war", "machine-awakens|transcends":"an AI outgrows us",
+  "breakthrough-science|physics-energy":"a breakthrough in energy", "breakthrough-science|life-sciences":"a breakthrough in biology", "breakthrough-science|computing-mind":"a breakthrough in AI",
+  "breakthrough-science|cosmos":"a discovery in space", "breakthrough-science|earth-climate":"a warning about the planet",
+  "voyage-into-unknown|crewed-orbit-moon":"people fly to the Moon", "voyage-into-unknown|uncrewed-probe":"a probe lands", "voyage-into-unknown|crewed-planets":"people fly to Mars", "voyage-into-unknown|interstellar":"a ship leaves for the stars",
+  "settlement-founded|in-orbit":"people live in orbit", "settlement-founded|moon-or-planet":"a base on another world",
+  "plague|natural":"a pandemic", "plague|engineered":"a man-made plague", "uprising|mass-protest":"people take to the streets", "uprising|armed-rebellion":"an armed revolt",
+  "truth-revealed|state-secret":"a state secret leaks", "power-seized|coup":"a coup", "power-seized|revolution":"a revolution", "power-seized|strongman-legal":"a strongman takes power",
+  "terror-attack|on-civilians":"a terror attack", "mass-death|nuclear":"a nuclear strike", "market-crash":"the markets crash", "peace-made":"peace is signed", "union-founded":"nations unite"
+};
+function rkPlain(tok){ return RK_PLAIN[tok] || RK_PLAIN[rkBin(tok)] || rkLabel(tok).replace(/^[^:]*:\s*/, "").toLowerCase(); }
+/* the leader's clearest shared steps, in words. The order claim ("in the same
+   order") only holds inside one thread: the war thread's steps and the machine
+   thread's steps may sit centuries apart in the story. So take the thread where
+   the story shares the most exact steps with us; `ordered` says whether that
+   gave at least two, which is what makes "same order" true. */
+function rkPlainSteps(R, r, n){
+  var best = null;
+  R.threads.forEach(function(t){
+    var x = r.per[t.id]; if(!x) return;
+    var ex = x.pairs.filter(function(p){ return t.q[p[0]] === rkToks(r.st)[p[1]]; });
+    if(!best || ex.length > best.ex.length || (ex.length === best.ex.length && x.fit > best.fit)) best = { t:t, ex:ex, fit:x.fit };
+  });
+  if(!best || !best.ex.length) return { words:[], ordered:false };
+  var words = [], seen = {};
+  best.ex.forEach(function(p){ var w = rkPlain(best.t.q[p[0]]); if(!seen[w]){ seen[w] = true; words.push(w); } });
+  words = words.slice(-(n || 3));
+  return { words:words, ordered:words.length >= 2, thread:best.t };
+}
 function rkCardHtml(M, kind){
   var R = rkRank(M), top = R.rows[0], st = top.st, l = st.l, art = typeof artFor === "function" ? artFor(l.id) : null;
-  var prev = R.upto > 1 ? rkRank(M, R.upto - 1) : null, was = prev && prev.rows[0].st !== st ? prev.rows[0].st : null;
   var site = "shaharaka.github.io/scifi-timeline";
   var img = art && art.lg ? '<img class="rkc-art" src="' + esc(art.lg) + '" alt="">' : '';
-  var endTxt = st.ending.valence === "optimistic" ? "It ends well" : st.ending.valence === "pessimistic" ? "It ends badly" : "Its ending is still open";
+  var end = st.ending.valence, endTxt = end === "optimistic" ? "it ends well" : end === "pessimistic" ? "it ends badly" : "the ending is still open";
+  var sp = rkPlainSteps(R, top, 3), steps = sp.words;
+  var stepsHtml = steps.length ? '<div class="rkc-steps">' + steps.map(function(w){ return '<span>' + esc(w) + '</span>'; }).join('<i>→</i>') + '</div>' : '';
+  var ask = '<div class="rkc-ask">Which sci-fi story are we living in?</div>';
+  var ends = '<div class="rkc-end ' + end + '">In the story, ' + esc(endTxt) + '.</div>';
   if(kind === "og"){
     return '<div class="rkc rkc-og">' + img + '<div class="rkc-shade"></div>'
-      + '<div class="rkc-in"><div class="rkc-k">Which science-fiction story are we in?</div>'
-      + '<div class="rkc-title">' + esc(l.title) + '</div>'
-      + '<div class="rkc-share"><b>' + rkPct(top.share) + '</b> of the fit, top of ' + R.rows.length + ' stories' + (was ? ' · taking over from ' + esc(was.l.title) : '') + '</div>'
-      + '<ol class="rkc-top3">' + R.rows.slice(1, 4).map(function(r){ return '<li><span>' + r.rank + '</span>' + esc(r.st.l.title) + ' <em>' + rkPct(r.share) + '</em></li>'; }).join("") + '</ol>'
-      + '<div class="rkc-foot">Where We Are Now · ' + site + '</div></div></div>';
+      + '<div class="rkc-in">' + ask + '<div class="rkc-title">' + esc(l.title) + '</div>'
+      + (steps.length ? '<div class="rkc-same">' + (sp.ordered ? 'Same steps as us, in the same order:' : 'Like us:') + '</div>' + stepsHtml : '') + ends
+      + '<div class="rkc-foot">' + site + '</div></div></div>';
   }
-  var th = R.threads.filter(function(t){ return t.weight >= 0.5; }).map(function(t){
-    return '<div class="rkc-th"><span>' + esc(t.spec.label) + '</span><b>' + esc(t.rows[0].st.l.title) + '</b><em>' + rkPct(t.rows[0].share) + '</em></div>';
+  var runners = R.rows.slice(1, 5).map(function(r){
+    var a = typeof artFor === "function" ? artFor(r.st.id) : null;
+    return '<div class="rkc-run">' + (a && a.sm ? '<img src="' + esc(a.sm) + '" alt="">' : '<span class="rkc-noimg"></span>') + '<b>' + esc(r.st.l.title) + '</b></div>';
   }).join("");
   return '<div class="rkc rkc-post">' + img + '<div class="rkc-shade"></div>'
-    + '<div class="rkc-k rkc-k-top">Which science-fiction story are we in? · ' + esc(fmtNewsDate(rkToday())) + '</div>'
-    + '<div class="rkc-in"><div class="rkc-lbl">Top candidate of ' + R.rows.length + ' stories' + (was ? ', taking over from ' + esc(was.l.title) : '') + '</div>'
+    + '<div class="rkc-top">' + ask + '<div class="rkc-date">' + esc(fmtNewsDate(rkToday())) + '</div></div>'
+    + '<div class="rkc-in"><div class="rkc-lbl">The closest match, of ' + R.rows.length + ' stories:</div>'
     + '<div class="rkc-title">' + esc(l.title) + '</div>'
-    + '<div class="rkc-share"><b>' + rkPct(top.share) + '</b> of the fit' + (rkTimes(R, top) ? ', ' + esc(rkTimes(R, top)) : '') + '</div>'
-    + '<div class="rkc-after">' + esc(endTxt) + ' · after: ' + esc(R.last.e.title) + '</div>'
-    + '</div>'
-    + '<div class="rkc-panel"><div class="rkc-ph">The lead after each of our last ' + rkHistory(M).length + ' moments</div>'
-    + rkRaceSvg(M, { w:1000, h:320, font:24, labW:340, dark:true })
-    + rkRaceLegend(M, {})
-    + '<div class="rkc-ths">' + th + '</div>'
-    + '<div class="rkc-foot"><span>Where We Are Now · ' + site + '</span><span>a share of the fit, not a forecast</span></div></div></div>';
+    + (steps.length ? '<div class="rkc-same">' + (sp.ordered ? 'Same steps as us, in the same order:' : 'Like us:') + '</div>' + stepsHtml : '')
+    + ends + '</div>'
+    + '<div class="rkc-bottom"><div class="rkc-rh">Close behind</div><div class="rkc-runs">' + runners + '</div>'
+    + '<div class="rkc-foot">' + site + '</div></div></div>';
 }
 function rkShowCard(kind){
   var M = pickerModel(), id = "rk-card-host", host = document.getElementById(id);

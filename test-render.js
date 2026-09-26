@@ -939,7 +939,8 @@ attempt("ranking", () => {
   /* the poster cards and the race: the leader named, a line per story drawn */
   const post = String(t.rankCard("post")), og = String(t.rankCard("og"));
   const title = top.st.l.title.replace(/&/g, "&amp;").replace(/'/g, "&#39;");
-  check(post.includes(title) && post.includes('class="rk-race"'), "the post card does not show the leader and the race");
+  check(post.includes(title) && post.includes("rkc-runs") && post.includes("In the story,"), "the post card does not show the leader, its ending and the runners-up");
+  check(!/of the fit/.test(post), "the post card uses the ranking's jargon; it is for people scrolling past");
   check(og.includes(title) && og.includes("rkc-og"), "the link-preview card does not show the leader");
   const race = String(t.rankRace({ w:600, h:260 }));
   check((race.match(/<path /g) || []).length >= 3, "the race draws fewer than three lines");
