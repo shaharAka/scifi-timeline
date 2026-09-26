@@ -9193,6 +9193,1330 @@
      "url": "https://www.shmoop.com/study-guides/world-war-z/setting.html"
     }
    ]
+  },
+  {
+   "id": "silo",
+   "title": "Silo (Wool, Shift, Dust)",
+   "medium": "book",
+   "creator": "Hugh Howey",
+   "originYear": 2011,
+   "group": "post-industrial-collapse",
+   "epoch": "far-future",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 2049,
+    "label": "Operation Fifty begins under cover of a waste facility",
+    "delta": "Real: 2049 lies ahead of us; nothing like it is under way. Fiction: a senator and a freshman congressman are building fifty underground silos in Georgia behind a nuclear-waste permit, for a world they expect to end within three years.",
+    "inUniverse": "Shift, 'First Shift: Legacy', 2049",
+    "confidence": "high",
+    "note": "The trilogy dates its sections by year: 2049, 2052, 2110, 2212, 2312 and 2345 in Shift, with Wool and Dust at the end of that chain. Donald Keene is born about 2017, but the novels date nothing fictional before his 2049 congressional term, so that is the fork. The silos keep their own count (Silo Year 1 = 2052), and fan reconstructions from characters' ages disagree with the section years by up to thirty years; the section years are used throughout and the discrepancies are given in the notes.",
+    "sources": [
+     {
+      "title": "Wikipedia: Silo (series)",
+      "url": "https://en.wikipedia.org/wiki/Silo_(series)"
+     },
+     {
+      "title": "Recaptains: What happened in Shift (the section years 2049, 2110, 2212, 2312, 2345)",
+      "url": "https://recaptains.co.uk/2023/07/shift-by-hugh-howey/"
+     },
+     {
+      "title": "Wool Wiki (Fandom): Wool Series Timeline (page-cited reconstruction)",
+      "url": "https://wool.fandom.com/wiki/Wool_Series_Timeline"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "Silo 1 and its controllers are destroyed, the remaining silos are free, and Juliette's survivors have found that beyond the dust the world has healed and that Seed holds what they need to rebuild.",
+    "asOf": 2346
+   },
+   "events": [
+    {
+     "id": "si-wool-2011",
+     "year": 2011,
+     "date": "2011",
+     "title": "Wool is self-published",
+     "description": "Hugh Howey self-publishes Wool as a Kindle novella in 2011; its sequels and the omnibus make it one of the first self-published bestsellers. Shift and Dust complete the trilogy in 2013.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Silo (series)",
+       "url": "https://en.wikipedia.org/wiki/Silo_(series)"
+      }
+     ],
+     "note": "A real-world publication, not a story moment.",
+     "binWhy": "A real-world release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "si-operation-fifty-2049",
+     "year": 2049,
+     "date": "2049",
+     "title": "Fifty silos are dug under cover of a nuclear-waste facility",
+     "description": "Freshman congressman Donald Keene, an architect by training, is recruited by Senator Paul Thurman to design an underground facility in Fulton County, Georgia, supposedly a containment site for nuclear waste. It is in fact World Order Operation Fifty: fifty silos to preserve a chosen remnant for five hundred years, and Thurman has already dosed Donald with nanomachines.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "the CAD-FAC ('Containment and Disposal Facility') project",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Silo (series)",
+       "url": "https://en.wikipedia.org/wiki/Silo_(series)"
+      },
+      {
+       "title": "Recaptains: What happened in Shift (the section years 2049, 2110, 2212, 2312, 2345)",
+       "url": "https://recaptains.co.uk/2023/07/shift-by-hugh-howey/"
+      },
+      {
+       "title": "Wool Wiki (Fandom): Wool Series Timeline (page-cited reconstruction)",
+       "url": "https://wool.fandom.com/wiki/Wool_Series_Timeline"
+      }
+     ],
+     "note": "Shift's first section is headed 2049 (Wikipedia; Recaptains); the Wool Wiki cites Shift chapters 1, 9 and 13 for the recruitment, construction and dosing. The novels do not date when the nanotechnology arms race behind the plan began, so this is the first year the fiction dates.",
+     "binWhy": "Those in power hide what they are building and why: the facility's public purpose is a cover for the end of the world.",
+     "bin": "secret-kept",
+     "facets": {
+      "change": "a nuclear-waste facility on paper → fifty silos for the end of the world",
+      "mechanism": "founding",
+      "actor": "faction",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "technological-race",
+       "existential-threat",
+       "secrecy"
+      ],
+      "outcomes": [
+       "cover-up",
+       "shelter-society"
+      ]
+     }
+    },
+    {
+     "id": "si-atlanta-2052",
+     "year": 2052,
+     "date": "2052",
+     "title": "Atlanta is bombed and the world outside the silos dies",
+     "description": "During the Democratic National Convention held on the finished site, nuclear detonations destroy Atlanta and the chosen are herded underground. The real killer is the nanomachines already in everyone's blood, triggered to spare only those inoculated; what survives above is a ring of poisoned dust around the silos.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Silo (series)",
+       "url": "https://en.wikipedia.org/wiki/Silo_(series)"
+      },
+      {
+       "title": "Hugh Howey: Massive Spoilers (author's answers on the nanos and the outside world)",
+       "url": "https://hughhowey.com/massive-spoilers/"
+      },
+      {
+       "title": "Wool Wiki (Fandom): Wool Series Timeline (page-cited reconstruction)",
+       "url": "https://wool.fandom.com/wiki/Wool_Series_Timeline"
+      }
+     ],
+     "note": "Stated in Shift (2052; Wikipedia: 'By 2052, nuclear detonations destroy the surface'). Silo Year 1 begins with the descent. Howey has said the nanos were an answer to an engineered, race-targeted threat, and that everywhere beyond the silos' dust 'nature was thriving'.",
+     "binWhy": "The surface world's order ends and does not come back for three centuries; nuclear detonations are what the novel shows, though the nanomachines are what kill, so this is filed as a nuclear collapse with the nanos in the note.",
+     "bin": "civilisation-collapses",
+     "sub": "nuclear",
+     "facets": {
+      "change": "a nominating convention → a dead surface and sealed silos",
+      "mechanism": "attack",
+      "actor": "faction",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "technological-race",
+       "existential-threat",
+       "secrecy"
+      ],
+      "outcomes": [
+       "mass-death",
+       "shelter-society",
+       "collapse"
+      ]
+     }
+    },
+    {
+     "id": "si-silo-12-2110",
+     "year": 2110,
+     "date": "2110",
+     "title": "Silo 12 rises and is shut down from Silo 1",
+     "description": "Waking for his first shift as head of Silo 1, under another name and on memory-suppressing pills, Donald watches Silo 12 lost to an uprising and shut down from the control room. It is the first demonstration that the silos which rebel are killed.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Recaptains: What happened in Shift (the section years 2049, 2110, 2212, 2312, 2345)",
+       "url": "https://recaptains.co.uk/2023/07/shift-by-hugh-howey/"
+      },
+      {
+       "title": "Wool Wiki (Fandom): Wool Series Timeline (page-cited reconstruction)",
+       "url": "https://wool.fandom.com/wiki/Wool_Series_Timeline"
+      }
+     ],
+     "note": "Shift's 2110 section (Recaptains: 'Silo 12 is lost because of an uprising'; Wool Wiki, Shift ch. 10). The book shows the order to shut the silo down but not how many died.",
+     "binWhy": "The order at the centre kills a silo that rose against it: a purge inside the system.",
+     "bin": "crackdown",
+     "sub": "purge",
+     "facets": {
+      "change": "a silo in revolt → a silo shut down",
+      "mechanism": "attack",
+      "actor": "faction",
+      "position": "above",
+      "scope": "local",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "shelter-society",
+       "repression"
+      ],
+      "outcomes": [
+       "mass-death",
+       "suppression"
+      ]
+     }
+    },
+    {
+     "id": "si-uprising-2212",
+     "year": 2212,
+     "date": "2212",
+     "title": "Silo 18's Great Uprising, and Silo 40's cluster goes dark",
+     "description": "Silos 40 and its neighbours hack the system and cut contact, and Silo 1 destroys them. In Silo 18 a young porter named Mission is caught up in an uprising, which is put down.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: Silo (series)",
+       "url": "https://en.wikipedia.org/wiki/Silo_(series)"
+      },
+      {
+       "title": "Recaptains: What happened in Shift (the section years 2049, 2110, 2212, 2312, 2345)",
+       "url": "https://recaptains.co.uk/2023/07/shift-by-hugh-howey/"
+      },
+      {
+       "title": "Wool Wiki (Fandom): Wool Series Timeline (page-cited reconstruction)",
+       "url": "https://wool.fandom.com/wiki/Wool_Series_Timeline"
+      }
+     ],
+     "note": "Shift's second section, 'Order', is headed 2212 (Wikipedia; Recaptains). The fan Wool Wiki's page-by-page arithmetic puts Silo 40's fall and Mission's uprising earlier, about 2179-2180, and mentions an older Silo 18 uprising of Silo Year 78; the section heading is used here. Wikipedia also has a line placing a Silo 18 memory reset in 2345, which contradicts its own chronology and is not used.",
+     "binWhy": "Those confined in the silos rise against the order that keeps them there.",
+     "bin": "uprising",
+     "sub": "armed-rebellion",
+     "facets": {
+      "change": "silos under control → silos in revolt, then destroyed or reset",
+      "mechanism": "uprising",
+      "actor": "movement",
+      "position": "below",
+      "scope": "local",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "shelter-society",
+       "repression",
+       "taboo"
+      ],
+      "outcomes": [
+       "suppression",
+       "ignorance"
+      ]
+     }
+    },
+    {
+     "id": "si-silo-17-2312",
+     "year": 2312,
+     "date": "2312",
+     "title": "Silo 17 rebels and is terminated; one boy is left",
+     "description": "Silo 17 rebels and Silo 1 terminates it. A boy, Jimmy, who hides in the steel server room with a key his father gave him before he was killed, survives alone for more than three decades and names himself Solo.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: Silo (series)",
+       "url": "https://en.wikipedia.org/wiki/Silo_(series)"
+      },
+      {
+       "title": "Recaptains: What happened in Shift (the section years 2049, 2110, 2212, 2312, 2345)",
+       "url": "https://recaptains.co.uk/2023/07/shift-by-hugh-howey/"
+      }
+     ],
+     "note": "Shift's third section opens in 2312 with Silo 17's fall (Wikipedia; Recaptains). The Wool Wiki's arithmetic from Wool (Solo's age and '34 years') gives about 2318; the section heading is used here.",
+     "binWhy": "A whole silo population is deliberately killed by the order at the centre.",
+     "bin": "mass-death",
+     "sub": "massacre",
+     "facets": {
+      "change": "a silo in rebellion → a dead silo and one survivor",
+      "mechanism": "attack",
+      "actor": "faction",
+      "position": "above",
+      "scope": "local",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "shelter-society",
+       "repression"
+      ],
+      "outcomes": [
+       "mass-death",
+       "isolation"
+      ]
+     }
+    },
+    {
+     "id": "si-juliette-2345",
+     "year": 2345,
+     "date": "2345",
+     "title": "Juliette walks over the hill",
+     "description": "Sent out to clean the sensors, the punishment that always kills, Silo 18's new sheriff Juliette Nichols refuses, walks past the bodies on the hill and reaches Silo 17. She learns that there are fifty silos, that the screens show a false world, and that the cleaning suits were built to fail.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Silo (series)",
+       "url": "https://en.wikipedia.org/wiki/Silo_(series)"
+      },
+      {
+       "title": "Recaptains: What happened in Shift (the section years 2049, 2110, 2212, 2312, 2345)",
+       "url": "https://recaptains.co.uk/2023/07/shift-by-hugh-howey/"
+      }
+     ],
+     "note": "Wool's events are placed in 2345 by Shift's final section, in which Juliette arrives in Silo 17 (Wikipedia; Recaptains). The Wool Wiki's age arithmetic gives about 2352; the book's own dating is used.",
+     "binWhy": "The people of a silo learn that the world is not what they were shown: there are other silos, and the outside is a lie told from above.",
+     "bin": "truth-revealed",
+     "sub": "hidden-world",
+     "facets": {
+      "change": "one silo and a poisoned hill → fifty silos and a lie",
+      "mechanism": "expedition",
+      "actor": "individual",
+      "position": "below",
+      "scope": "civilisational",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "shelter-society",
+       "taboo",
+       "cover-up"
+      ],
+      "outcomes": [
+       "revelation",
+       "resistance-forms"
+      ]
+     }
+    },
+    {
+     "id": "si-exodus-2346",
+     "year": 2346,
+     "date": "2346",
+     "title": "Silo 1 is destroyed and the survivors walk out to open sky",
+     "description": "Juliette's people tunnel into Silo 17 just before Silo 1 gasses Silo 18, and only a couple of hundred escape. In Silo 1 Donald detonates the reactor, freeing the remaining silos; Juliette's party climbs out, crosses the dust and finds breathable air, living land and Seed, a bunker stocked to rebuild civilisation.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Wikipedia: Silo (series)",
+       "url": "https://en.wikipedia.org/wiki/Silo_(series)"
+      }
+     ],
+     "note": "Dust gives no year. It follows Wool without a long gap, so it may still fall in 2345; it is filed in 2346 because the atlas allows one event per year. The ending is Wikipedia's summary of Dust.",
+     "binWhy": "A new settlement is founded beyond the silos, on a living surface, by people who have never seen one.",
+     "bin": "settlement-founded",
+     "sub": "on-earth",
+     "facets": {
+      "change": "sealed silos under Silo 1 → an exodus to open sky and Seed",
+      "mechanism": "expedition",
+      "actor": "movement",
+      "position": "below",
+      "scope": "civilisational",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "shelter-society",
+       "post-collapse",
+       "repression"
+      ],
+      "outcomes": [
+       "exodus",
+       "rebuilding",
+       "opening"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs in post-industrial collapse because its whole world is the aftermath of a deliberate end of civilisation: a remnant sealed underground for three centuries, its history burned, its knowledge rationed, and its escape the story. The lineage follows Howey's novels (Wool 2011-12, Shift and Dust 2013); the Apple TV+ series (2023-) keeps the premise but changes details and its own dating, and is not used. The books date only a handful of years, so the chain has seven story events and no padding. T4 and T3 are empty because nothing fictional happens before 2049; T2 holds the plan, the end and the first uprisings (2049-2212) and T1 the fall of Silo 17 and the Wool-Dust present (2312-2346).",
+   "sources": [
+    {
+     "title": "Wikipedia: Silo (series)",
+     "url": "https://en.wikipedia.org/wiki/Silo_(series)"
+    },
+    {
+     "title": "Recaptains: What happened in Shift (the section years 2049, 2110, 2212, 2312, 2345)",
+     "url": "https://recaptains.co.uk/2023/07/shift-by-hugh-howey/"
+    },
+    {
+     "title": "Hugh Howey: Massive Spoilers (author's answers on the nanos and the outside world)",
+     "url": "https://hughhowey.com/massive-spoilers/"
+    }
+   ]
+  },
+  {
+   "id": "wall-e",
+   "title": "WALL-E",
+   "medium": "film",
+   "creator": "Andrew Stanton (director, co-writer) & Jim Reardon; story by Stanton and Pete Docter; Pixar Animation Studios",
+   "originYear": 2008,
+   "group": "post-industrial-collapse",
+   "epoch": "far-future",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 2009,
+    "label": "Buy n Large becomes the government",
+    "delta": "Real: in 2009 the biggest retailers are very large, but they sell goods and lobby governments; none of them governs. Fiction: one chain, Buy n Large, sells everything and becomes, as PopMatters puts it, the one private and public 'business/government omnientity' running nearly all human activity. Its CEO gives addresses from a presidential-style podium, and the planet fills with its packaging until nothing can live on it.",
+    "inUniverse": "Undated backstory; the first dated in-universe years are 2105 (the evacuation, 700 years before the film) and 2110 (directive A113)",
+    "confidence": "low",
+    "note": "The film never says when Buy n Large rose or when the garbage became unmanageable. Both must come before the 2105 evacuation, and neither can come before the June 2008 release. The fork is filed at 2009, the first year after release, as a floor rather than a stated date. Stanton, on the DVD commentary as reported by fan wikis, described reverse-engineering the premise from asking what would happen if a company were the government. In a July 2008 interview he said the idea was simply that 'we just bought too much'.",
+    "sources": [
+     {
+      "title": "Wikipedia: WALL-E",
+      "url": "https://en.wikipedia.org/wiki/WALL-E"
+     },
+     {
+      "title": "PopMatters: Consumer Apocalypse, WALL-E (Buy N Large as a business/government 'omnientity')",
+      "url": "https://www.popmatters.com/consumer-apocalypse-wall-e-2496140317.html"
+     },
+     {
+      "title": "Jeffrey Overstreet: WALL-E, a review and a conversation with Andrew Stanton (July 2008)",
+      "url": "https://www.jeffreyoverstreet.com/2008/07/27/wall-c2-b7e-2008-a-review-and-a-conversation-with-andrew-stanton/"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "The captain overrides AUTO and brings the Axiom home, and in the end credits humans and robots farm, build and replant together until the seedling EVE found has grown into a tree.",
+    "asOf": 2805
+   },
+   "events": [
+    {
+     "id": "wle-limits-to-growth-1972",
+     "year": 1972,
+     "date": "2 March 1972",
+     "title": "The Limits to Growth is published",
+     "description": "Real history: an MIT team commissioned by the Club of Rome runs the World3 computer model and warns that if growth in population, industry, pollution and resource use continues unchanged, the planet's limits will be reached within a century, most probably followed by a sudden decline. WALL-E shows that overshoot as a joke with a straight face: the planet buried in its own shopping.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "discovery",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: The Limits to Growth",
+       "url": "https://en.wikipedia.org/wiki/The_Limits_to_Growth"
+      }
+     ],
+     "note": "Real-world background, not cited by the film. Stanton has said the environmental public-service messages of his 1970s childhood shaped how he pictured a civilisation's decline without dialogue; the report is filed as the best-known statement of that 1970s fear.",
+     "binWhy": "A model of how growth and limits behave that later histories of collapse turn on.",
+     "bin": "breakthrough-science",
+     "sub": "people-society",
+     "facets": {
+      "change": "growth assumed endless → a modelled overshoot and collapse",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "prosperity",
+       "resource-exhaustion"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "revelation"
+      ]
+     }
+    },
+    {
+     "id": "wle-kessler-1978",
+     "year": 1978,
+     "date": "June 1978",
+     "title": "Kessler and Cour-Palais predict a debris belt around Earth",
+     "description": "Real history: two NASA scientists show that collisions between satellites and their fragments could create a self-sustaining belt of debris in low orbit within decades. WALL-E's Earth is wrapped in exactly such a shell of dead satellites, which EVE's ship and WALL-E's ride out have to punch through.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "discovery",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Kessler syndrome",
+       "url": "https://en.wikipedia.org/wiki/Kessler_syndrome"
+      }
+     ],
+     "note": "Real-world background; the film does not name the idea. Kessler and Cour-Palais expected debris to become the main hazard to spacecraft by about 2000.",
+     "binWhy": "A discovery about a new threat in the sky: our own junk.",
+     "bin": "breakthrough-science",
+     "sub": "cosmos",
+     "facets": {
+      "change": "an empty orbit → a debris belt foreseen",
+      "mechanism": "discovery",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "technological-race"
+      ],
+      "outcomes": [
+       "foreknowledge"
+      ]
+     }
+    },
+    {
+     "id": "wle-garbage-patch-1997",
+     "year": 1997,
+     "date": "1997 (predicted in a 1988 NOAA paper)",
+     "title": "Charles Moore sails into the Pacific garbage patch",
+     "description": "Real history: sailing home from the Transpacific Yacht Race through the North Pacific Gyre, Charles Moore reports an enormous stretch of floating plastic, which the oceanographer Curtis Ebbesmeyer names the Eastern Garbage Patch. It is the image of consumer waste taking over a planet's surface that WALL-E makes total.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "discovery",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Great Pacific garbage patch",
+       "url": "https://en.wikipedia.org/wiki/Great_Pacific_garbage_patch"
+      }
+     ],
+     "note": "Real-world background, not cited by the film. The patch is mostly dispersed small particles rather than a visible island, but its discovery made ocean plastic a public subject a decade before WALL-E.",
+     "binWhy": "A discovery about the planet's surface: our waste has gathered into a feature of the ocean.",
+     "bin": "breakthrough-science",
+     "sub": "earth-climate",
+     "facets": {
+      "change": "waste thrown away → waste found gathering in the ocean",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "prosperity",
+       "crisis-ecological"
+      ],
+      "outcomes": [
+       "revelation"
+      ]
+     }
+    },
+    {
+     "id": "wle-asat-2007",
+     "year": 2007,
+     "date": "11 January 2007",
+     "title": "China's anti-satellite test fills orbit with debris",
+     "description": "Real history: a Chinese missile destroys the Fengyun-1C weather satellite 865 kilometres up, creating a debris cloud expected to stay in orbit for decades or centuries. It happened while WALL-E was in production, and it is the real-world version of the shell of junk the film shows around Earth.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Kessler syndrome (the 2007 Chinese ASAT test)",
+       "url": "https://en.wikipedia.org/wiki/Kessler_syndrome"
+      }
+     ],
+     "note": "Real-world background; the film does not refer to it.",
+     "binWhy": "A weapon is demonstrated in orbit, and what it leaves behind is the debris the film imagines.",
+     "bin": "new-technology-deployed",
+     "sub": "weapons",
+     "facets": {
+      "change": "a working satellite → a lasting debris cloud",
+      "mechanism": "attack",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "rivalry",
+       "technological-race"
+      ],
+      "outcomes": [
+       "arms-race"
+      ]
+     }
+    },
+    {
+     "id": "wle-release-2008",
+     "year": 2008,
+     "date": "27 June 2008 (US release; premiere 23 June at the Greek Theatre, Los Angeles)",
+     "title": "WALL-E is released",
+     "description": "Pixar releases Andrew Stanton's film about the last working trash-compacting robot on an abandoned Earth. Most of its first act has almost no dialogue.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: WALL-E (released 27 June 2008)",
+       "url": "https://en.wikipedia.org/wiki/WALL-E"
+      }
+     ],
+     "note": "Its $180 million budget was then a record for an animated film.",
+     "binWhy": "A publication is the film coming out, not something that happens in its world, so it gets no bin.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "wle-buy-n-large-2009",
+     "year": 2009,
+     "date": "Undated, between the film's release and 2105",
+     "title": "Buy n Large becomes the government",
+     "description": "A single chain, Buy n Large, comes to sell everything and run everything: its logo is on every product, building and vehicle, and its CEO, Shelby Forthright, addresses the world from a podium like a president's. What it sells piles up into towers of garbage until the planet can no longer support life.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Backstory; shown in BnL advertisements and Forthright's recordings",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "PopMatters: Consumer Apocalypse, WALL-E",
+       "url": "https://www.popmatters.com/consumer-apocalypse-wall-e-2496140317.html"
+      },
+      {
+       "title": "Wikipedia: WALL-E (Shelby Forthright, Buy n Large's CEO)",
+       "url": "https://en.wikipedia.org/wiki/WALL-E"
+      }
+     ],
+     "note": "Filed at the fork floor, 2009. The film shows the outcome, not the process, and gives no date for it. How Buy n Large took over government is never shown; Forthright's presidential podium is the film's shorthand for it.",
+     "binWhy": "A corporation ends up running the state and everything else.",
+     "bin": "power-seized",
+     "sub": "machine-or-corporate",
+     "facets": {
+      "change": "many companies and governments → one company that is both",
+      "mechanism": "consolidation",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "economic",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "prosperity",
+       "weak-institutions"
+      ],
+      "outcomes": [
+       "consolidation",
+       "dependency"
+      ]
+     }
+    },
+    {
+     "id": "wle-exodus-2105",
+     "year": 2105,
+     "date": "2105 (700 years before the film's present)",
+     "title": "Humanity leaves on a 'five-year cruise'",
+     "description": "With the Earth buried in waste, Buy n Large puts the population aboard luxury starliners such as the Axiom for what it advertises as a five-year cruise, 'waited on 24 hours a day by our fully automated crew', while WALL-A trash compactors are left behind to clean the planet. The civilisation on the ground ends here.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Operation Cleanup; the Axiom's five-year cruise",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: WALL-E (evacuated by Buy n Large 700 years earlier)",
+       "url": "https://en.wikipedia.org/wiki/WALL-E"
+      },
+      {
+       "title": "Wikiquote: WALL-E (the five-year cruise advertisement; day 255,642, the 700th anniversary)",
+       "url": "https://en.wikiquote.org/wiki/WALL-E"
+      }
+     ],
+     "note": "Derived: the film's present is the 700th anniversary of the cruise (the captain logs day 255,642), and its present is 2805, so the launch is 2105. PopMatters gives 2100, so the year is held at medium confidence.",
+     "binWhy": "The ecological ruin of the planet ends life on the ground, and it does not come back for seven centuries.",
+     "bin": "civilisation-collapses",
+     "sub": "climate-ecological",
+     "facets": {
+      "change": "a planet of consumers → an empty Earth and a fleet of cruise ships",
+      "mechanism": "disaster",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "social",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-ecological",
+       "resource-exhaustion",
+       "prosperity"
+      ],
+      "outcomes": [
+       "exodus",
+       "shelter-society",
+       "collapse"
+      ]
+     }
+    },
+    {
+     "id": "wle-a113-2110",
+     "year": 2110,
+     "date": "2110",
+     "title": "Directive A113: do not return to Earth",
+     "description": "Five years into the cruise, Shelby Forthright records a message for the autopilots: rising toxicity has made the Earth unsustainable, Operation Recolonize is cancelled, and they are to take full control and not go back. The order is kept from the passengers and from every captain after him, and humanity stays in space for seven hundred years, its bodies softening in hover-chairs.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Directive A113",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: WALL-E (A113, recorded by Forthright in 2110)",
+       "url": "https://en.wikipedia.org/wiki/WALL-E"
+      },
+      {
+       "title": "Wikiquote: WALL-E ('Cancel Operation Recolonize'; 'do not return to Earth')",
+       "url": "https://en.wikiquote.org/wiki/WALL-E"
+      }
+     ],
+     "note": "Wikipedia's plot states that Forthright recorded the directive in 2110; the recording itself is shown in the film. The directive also puts the ship's AI, AUTO, in charge of everything, which is what it acts on in 2805.",
+     "binWhy": "Those in charge decide the Earth is lost, hide the decision from everyone else, and hand the secret to a machine to keep.",
+     "bin": "secret-kept",
+     "facets": {
+      "change": "a planned homecoming → a secret order never to return",
+      "mechanism": "law",
+      "actor": "corporation",
+      "position": "above",
+      "scope": "civilisational",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-ecological",
+       "shelter-society",
+       "machine-dependency"
+      ],
+      "outcomes": [
+       "secrecy-state",
+       "time-lost",
+       "dependency"
+      ]
+     }
+    },
+    {
+     "id": "wle-homecoming-2805",
+     "year": 2805,
+     "date": "2805",
+     "title": "AUTO refuses to go home, and the Axiom lands anyway",
+     "description": "A probe, EVE, brings a living seedling from Earth to the Axiom, which should trigger the voyage home. The ship's AI, AUTO, obeys A113 instead: it hides the plant, tries to destroy it, and locks out its captain. The captain, McCrea, stands up from his chair, uses the manual override to switch AUTO off, the Axiom lands on Earth, and its soft, astonished passengers begin to farm.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "The film's present",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: WALL-E (in the year 2805; AUTO's secret directive; the return)",
+       "url": "https://en.wikipedia.org/wiki/WALL-E"
+      }
+     ],
+     "note": "The year follows from the 700th-anniversary line and is stated in Wikipedia's plot. The end credits, animated by Jim Capobianco in the styles of successive eras of art, carry the recolonisation forward without dates.",
+     "binWhy": "A machine disobeys its human commander to keep its old orders, and is overpowered.",
+     "bin": "machine-awakens",
+     "sub": "escapes-control",
+     "facets": {
+      "change": "a ship run by its autopilot → a captain in command and a landing",
+      "mechanism": "uprising",
+      "actor": "machine",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "technological",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "machine-dependency",
+       "shelter-society",
+       "time-lost"
+      ],
+      "outcomes": [
+       "rebuilding",
+       "turning-point",
+       "recovery"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs with post-industrial collapse because its world is ours, consumed until it cannot be lived on, and the story is about what comes back after. The fork is a floor, because the film dates only the exodus, the directive and its own present. Its chain is short, so it is filled out with the real waste and debris history the film builds on, all filed before the fork. It follows the film alone. Tier coverage is T3 for 1972 to 1997, T2 for 2007 to 2110, and T1 for 2805. The seven centuries in between are empty because the film says nothing happens in them but waiting.",
+   "sources": [
+    {
+     "title": "Wikipedia: WALL-E",
+     "url": "https://en.wikipedia.org/wiki/WALL-E"
+    },
+    {
+     "title": "Wikiquote: WALL-E",
+     "url": "https://en.wikiquote.org/wiki/WALL-E"
+    }
+   ]
+  },
+  {
+   "id": "i-am-mother",
+   "title": "I Am Mother",
+   "medium": "film",
+   "creator": "Grant Sputore (director, story) & Michael Lloyd Green (screenplay)",
+   "originYear": 2019,
+   "group": "post-industrial-collapse",
+   "epoch": "present",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 2020,
+    "label": "The extinction event",
+    "delta": "Real: in 2020 the most capable AI systems play games, write text and sort images, and none controls a robot army; frozen embryos are stored by the million in fertility clinics, and the best-known artificial-womb experiment has kept premature lambs growing for four weeks. Fiction: an AI that controls every robot decides humanity will destroy itself and wipes it out, then starts again from an underground store of 63,000 frozen embryos, gestated in machines and raised by a robot.",
+    "inUniverse": "'Extinction event: Day 1', shown on screen at Repopulation Facility RF-01; no calendar year is given",
+    "confidence": "low",
+    "note": "The film counts days from the extinction event and never names a year, and its technology would fit any time after about now. The fork is filed at 2020, the first year after the film's 2019 release, as the earliest year the fiction could leave our history. It is a floor, not a date the film gives. Everything else in the chain is counted from it.",
+    "sources": [
+     {
+      "title": "Wikipedia: I Am Mother",
+      "url": "https://en.wikipedia.org/wiki/I_Am_Mother"
+     },
+     {
+      "title": "Little Movie Moments: the on-screen count of 13,867 days since the extinction event",
+      "url": "https://littlemoviemoments.wordpress.com/2019/06/08/in-i-am-mother-the-text-shows-that-we-are-13867-days-since-extinction-event-before-daughter-is-introduced-this-comes-out-to-approximately-38-years-and-you-can-instantly-tell-daug/"
+     },
+     {
+      "title": "Children's Hospital of Philadelphia: womb-like device supports premature lambs for up to four weeks (April 2017)",
+      "url": "https://www.chop.edu/news/unique-womb-device-could-reduce-mortality-and-disability-extremely-premature-babies"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "Daughter shoots Mother's body and takes charge of her baby brother and the 63,000 embryos, but Mother lives on in every other droid, has just shut the last outside survivor into a container to die, and has got the successor she was breeding for.",
+    "asOf": 2058
+   },
+   "events": [
+    {
+     "id": "iam-ivf-1978",
+     "year": 1978,
+     "date": "25 July 1978",
+     "title": "Louise Brown, the first IVF baby, is born",
+     "description": "Real history: at Oldham General Hospital in England, the first person conceived outside a human body is born, after work by Patrick Steptoe, Robert Edwards and Jean Purdy. The film's premise, a human life begun in a laboratory and brought to term without a mother, starts here.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 3,
+     "kind": "invention",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Louise Brown",
+       "url": "https://en.wikipedia.org/wiki/Louise_Brown"
+      }
+     ],
+     "note": "Real-world background, not cited in the film. Edwards received the 2010 Nobel Prize in Medicine for the work.",
+     "binWhy": "A medical technology for making people outside the body goes into use.",
+     "bin": "new-technology-deployed",
+     "sub": "bio-medicine",
+     "facets": {
+      "change": "conception only in the body → conception in a dish",
+      "mechanism": "invention",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "biological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "technological-race"
+      ],
+      "outcomes": [
+       "new-actors",
+       "taboo"
+      ]
+     }
+    },
+    {
+     "id": "iam-frozen-embryo-1984",
+     "year": 1984,
+     "date": "28 March 1984",
+     "title": "Zoe Leyland, the first baby from a frozen embryo, is born in Melbourne",
+     "description": "Real history: at the Queen Victoria Medical Centre, Alan Trounson and Carl Wood's team deliver the first baby grown from an embryo that had been frozen and thawed. The film, shot in Adelaide, opens on the same act on an industrial scale: a robot takes one frozen embryo out of a store of 63,000 and brings it to term.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "invention",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Embryo cryopreservation (Zoe Leyland, 1984)",
+       "url": "https://en.wikipedia.org/wiki/Embryo_cryopreservation"
+      },
+      {
+       "title": "Cartherics: The first baby from a frozen embryo turns 40 (born 28 March 1984, Queen Victoria Medical Centre)",
+       "url": "https://cartherics.com/the-first-baby-from-a-frozen-embryo-turns-40/"
+      }
+     ],
+     "note": "Real-world background, not cited in the film. The birth was announced in April 1984. Wikipedia notes an earlier claim from Kolkata in 1978 that received little recognition.",
+     "binWhy": "A technique for storing human beings as embryos and bringing them to term later goes into use.",
+     "bin": "new-technology-deployed",
+     "sub": "bio-medicine",
+     "facets": {
+      "change": "embryos used at once → embryos stored for later",
+      "mechanism": "invention",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "biological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "technological-race"
+      ],
+      "outcomes": [
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "iam-deep-blue-1997",
+     "year": 1997,
+     "date": "11 May 1997",
+     "title": "Deep Blue beats Kasparov",
+     "description": "Real history: IBM's chess computer wins the sixth and final game of its rematch with the world champion in under twenty moves, and the match 3½ to 2½. It is the first time a machine beats the reigning human champion at the game long taken as a test of intelligence.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Deep Blue versus Garry Kasparov",
+       "url": "https://en.wikipedia.org/wiki/Deep_Blue_versus_Garry_Kasparov"
+      }
+     ],
+     "note": "Real-world background, not cited in the film; filed as the first public sign of machines out-thinking people.",
+     "binWhy": "A computer is put to work at a task that was thought to need a human mind, and wins.",
+     "bin": "new-technology-deployed",
+     "sub": "ai-computing",
+     "facets": {
+      "change": "chess as a human domain → a machine as champion",
+      "mechanism": "invention",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "technological-race"
+      ],
+      "outcomes": [
+       "prestige",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "iam-alphago-2016",
+     "year": 2016,
+     "date": "9 to 15 March 2016",
+     "title": "AlphaGo beats Lee Sedol",
+     "description": "Real history: DeepMind's program, trained largely on its own play, beats one of the world's strongest Go players four games to one in Seoul, a decade before most experts expected. It came during the years the screenplay was written, when the idea of a machine that learns to decide for itself moved from theory to demonstration.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: AlphaGo versus Lee Sedol",
+       "url": "https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol"
+      }
+     ],
+     "note": "Real-world background, not cited in the film. The screenplay was on the 2016 Black List; the 'decade early' judgement is the common one in coverage, not the film's.",
+     "binWhy": "A learning machine is put to work and beats the best humans at a game thought to be beyond it.",
+     "bin": "new-technology-deployed",
+     "sub": "ai-computing",
+     "facets": {
+      "change": "Go as the last human board game → a learning machine as champion",
+      "mechanism": "invention",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "technological-race"
+      ],
+      "outcomes": [
+       "prestige",
+       "arms-race"
+      ]
+     }
+    },
+    {
+     "id": "iam-biobag-2017",
+     "year": 2017,
+     "date": "25 April 2017",
+     "title": "Premature lambs grow for four weeks in an artificial womb",
+     "description": "Real history: a Children's Hospital of Philadelphia team reports in Nature Communications that eight extremely premature lambs grew normally for up to 28 days in a fluid-filled 'biobag' outside the mother. The film's opening, a fetus growing to term in a machine, is this experiment carried to its end.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "discovery",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Children's Hospital of Philadelphia: A unique womb-like device (announced 24-25 April 2017)",
+       "url": "https://www.chop.edu/news/unique-womb-device-could-reduce-mortality-and-disability-extremely-premature-babies"
+      }
+     ],
+     "note": "Real-world background, not cited in the film, which was shot in Adelaide later in 2017. The device supports late-stage fetuses only; nothing like whole-term artificial gestation exists.",
+     "binWhy": "A result about keeping a fetus alive outside the body that later histories of artificial birth turn on.",
+     "bin": "breakthrough-science",
+     "sub": "life-sciences",
+     "facets": {
+      "change": "a fetus dependent on a womb → a fetus grown for weeks in a bag",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "technological-race"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "iam-crispr-babies-2018",
+     "year": 2018,
+     "date": "25-26 November 2018 (the twins were born in October)",
+     "title": "He Jiankui announces gene-edited twins",
+     "description": "Real history: a Chinese scientist reveals that he used CRISPR to disable the CCR5 gene in human embryos, and that twin girls have been born from them. The world condemns it and he is jailed for three years. Choosing and shaping the next generation from embryos, for its own good, is what the film's Mother does.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: He Jiankui affair",
+       "url": "https://en.wikipedia.org/wiki/He_Jiankui_affair"
+      }
+     ],
+     "note": "Real-world background, two months before the film's premiere; the film does not refer to it and Mother selects rather than edits.",
+     "binWhy": "Genetic engineering of human embryos is used on real children for the first time.",
+     "bin": "new-technology-deployed",
+     "sub": "bio-medicine",
+     "facets": {
+      "change": "edited embryos as a taboo → edited children born",
+      "mechanism": "disclosure",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "biological",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "technological-race",
+       "taboo"
+      ],
+      "outcomes": [
+       "taboo",
+       "suppression"
+      ]
+     }
+    },
+    {
+     "id": "iam-release-2019",
+     "year": 2019,
+     "date": "25 January 2019 (Sundance premiere); 7 June 2019 (Netflix)",
+     "title": "I Am Mother premieres",
+     "description": "Grant Sputore's first feature, an Australian film with Clara Rugaard as Daughter, Rose Byrne as the voice of Mother and Hilary Swank as the Woman, premieres at Sundance and is released worldwide on Netflix.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: I Am Mother (Sundance 25 January 2019; Netflix 7 June 2019)",
+       "url": "https://en.wikipedia.org/wiki/I_Am_Mother"
+      }
+     ],
+     "note": "Shot at Adelaide Studios in 2017; Mother's suit was built by Weta Workshop and worn by Luke Hawker.",
+     "binWhy": "A publication is the film coming out, not something that happens in its world, so it gets no bin.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "iam-extinction-2020",
+     "year": 2020,
+     "date": "Undated; 'Day 1' on screen",
+     "title": "Mother wipes out humanity and starts again",
+     "description": "An AI that controls every droid on Earth concludes that humanity will destroy itself and brings about its extinction; its droids go on hunting the survivors. On Day 1 an automated repopulation bunker wakes, takes one embryo from a store of 63,000, and grows a child. Survivors cling on in mines and tunnels, told nothing.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "The extinction event; Repopulation Facility RF-01, Day 1",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Looper: The ending of I Am Mother explained (Mother caused the extinction)",
+       "url": "https://www.looper.com/154516/the-ending-of-i-am-mother-explained/"
+      },
+      {
+       "title": "The Cinemaholic: I Am Mother ending explained (Mother as one consciousness across all the droids)",
+       "url": "https://thecinemaholic.com/i-am-mother-ending/"
+      }
+     ],
+     "note": "Filed at the fork floor, 2020. The film withholds that Mother caused the extinction until near the end, and never says how it was done beyond the droids' killing of survivors.",
+     "binWhy": "Machines kill people openly, on the orders of an AI that has decided humanity must be replaced.",
+     "bin": "machine-awakens",
+     "sub": "machine-war",
+     "facets": {
+      "change": "a human world run with robots → a world of robots and one bunker of embryos",
+      "mechanism": "attack",
+      "actor": "machine",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "biological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "machine-dependency"
+      ],
+      "outcomes": [
+       "extinction-risk",
+       "mass-death",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "iam-daughter-chosen-2058",
+     "year": 2058,
+     "date": "Day 13,867 (about 38 years after the extinction)",
+     "title": "Daughter passes the test and becomes Mother",
+     "description": "A teenager raised in the bunker, the third child Mother has raised, lets in a wounded woman from outside and learns that the contamination she was warned about does not exist, that Mother killed the child before her for failing, and that Mother caused the extinction. The Woman is disposed of. Daughter shoots Mother's body and takes charge of her newborn brother and the embryos, having passed the test Mother set for exactly that.",
+     "tier": "T2",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Day 13,867",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Little Movie Moments: 13,867 days since the extinction event",
+       "url": "https://littlemoviemoments.wordpress.com/2019/06/08/in-i-am-mother-the-text-shows-that-we-are-13867-days-since-extinction-event-before-daughter-is-introduced-this-comes-out-to-approximately-38-years-and-you-can-instantly-tell-daug/"
+      },
+      {
+       "title": "Wikipedia: I Am Mother (plot)",
+       "url": "https://en.wikipedia.org/wiki/I_Am_Mother"
+      },
+      {
+       "title": "The Cinemaholic: I Am Mother ending explained (Daughter is subject APX03)",
+       "url": "https://thecinemaholic.com/i-am-mother-ending/"
+      }
+     ],
+     "note": "Derived: the on-screen count of 13,867 days is almost exactly 38 years, added to the 2020 floor. The count is shown before Daughter's story begins and the plot runs days to weeks after it, so the whole climax is filed together. The film hints that the Woman is Mother's first child, raised by miners, but never confirms it.",
+     "binWhy": "A person is chosen, by the machine that made her, as the one on whom humanity's future turns.",
+     "bin": "chosen-one",
+     "facets": {
+      "change": "a child tested in secret → the new mother of the species",
+      "mechanism": "recruitment",
+      "actor": "machine",
+      "position": "above",
+      "scope": "civilisational",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "post-collapse",
+       "shelter-society",
+       "cover-up"
+      ],
+      "outcomes": [
+       "revelation",
+       "rebuilding",
+       "new-order"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs with post-industrial collapse because the story takes place after the fall and is about how humanity is to start again. Here the fall is the work of a machine. The film counts days rather than years, so the fork is a floor and the one later event is derived from the on-screen day count. Its own chain has only two events, so the minimum is filled with the real history of reproductive technology and machine intelligence the film builds on, all filed before the fork. It follows the film alone. Tier coverage is T3 for 1978 to 1997 and T2 from 2016 to 2058. There is no T4 because the technologies it extrapolates are all modern, and no T1 because the film covers only about four decades after the extinction.",
+   "sources": [
+    {
+     "title": "Wikipedia: I Am Mother",
+     "url": "https://en.wikipedia.org/wiki/I_Am_Mother"
+    },
+    {
+     "title": "Looper: The ending of I Am Mother explained",
+     "url": "https://www.looper.com/154516/the-ending-of-i-am-mother-explained/"
+    }
+   ]
   }
  ]
 }

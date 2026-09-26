@@ -420,6 +420,13 @@ Four rules follow from that, and they are the owner's:
   stories spread out instead of tying. With that many stories a leader holds
   a few per cent, so the leader is also read as a multiple of an average
   story's share.
+- **A rare shared step is evidence; a common one is not.** Each of our steps
+  is weighted by how few stories pass through it (`rkSpecific`, log-scaled,
+  with a floor `RK_COMMON` so order still counts): "a regional war" happens in
+  3 of 138 stories, "the leader is killed" in 16. The poster and the landing
+  page show the evidence the same way: how many of our recent moments happen
+  in the leading story, whether any rival shares as many, and each shared step
+  with how many stories have it. A lead on two common steps says so.
 - **The race is the picture.** A bump chart (`rkRaceSvg`) of the top five
   after each of our last ten moments, one colour per story, a big dot on the
   leader, a solid column where the lead changed; a story that drops out simply

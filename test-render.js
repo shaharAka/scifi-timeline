@@ -939,7 +939,7 @@ attempt("ranking", () => {
   /* the poster cards and the race: the leader named, a line per story drawn */
   const post = String(t.rankCard("post")), og = String(t.rankCard("og"));
   const title = top.st.l.title.replace(/&/g, "&amp;").replace(/'/g, "&#39;");
-  check(post.includes(title) && post.includes("rkc-runs") && post.includes("Spoiler:"), "the post card does not show the leader, its ending and the runners-up");
+  check(post.includes(title) && (post.includes("rkl-runs") || post.includes("rkc-runs")) && post.includes("Spoiler:"), "the post card does not show the leader, its ending and the runners-up");
   check(!/of the fit/.test(post), "the post card uses the ranking's jargon; it is for people scrolling past");
   check(og.includes(title) && og.includes("rkc-og"), "the link-preview card does not show the leader");
   /* a reader from a post lands on the same answer the post gave */
@@ -949,6 +949,10 @@ attempt("ranking", () => {
   check(/The headline that did it/.test(post) && /The headline that did it/.test(answer), "the news that pushed us is missing from the poster or the landing page");
   check(/checked against the real news/.test(post) && /checked against the real news/.test(answer), "the one-line explanation of the atlas is missing");
   check(/% match/.test(post) && /% match/.test(answer), "the match percentage is missing");
+  /* the evidence is every step shared exactly, with how many stories have it,
+     and a line on whether any rival matches as many */
+  check(/of our recent moment/.test(post) && /(No other story has more than|other stor(y|ies) match)/.test(post), "the poster does not say how strong the match is");
+  check(/in \d+ of \d+ stories|the only story with it/.test(post), "the poster does not say how rare each shared step is");
   const race = String(t.rankRace({ w:600, h:260 }));
   check((race.match(/<path /g) || []).length >= 3, "the race draws fewer than three lines");
   soft(`ranking: ${top.st.l.title} leads with ${(top.share * 100).toFixed(0)}% over ${R.threads.map((th) => th.spec.short).join(" / ")}; ${hist.filter((h, i) => i && hist[i - 1].top.st !== h.top.st).length} lead changes over the last ${hist.length} moments`);

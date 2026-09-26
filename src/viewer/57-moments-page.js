@@ -102,15 +102,21 @@ function momentsModelBuild(){
   var list = visibleLineages();
   var strands = [], byId = {};
   list.forEach(function(l){
-    var evs = (l.events || []).filter(function(e){ return e.bin; }), seq = [];
-    evs.forEach(function(e){
-      if(!seq.length || seq[seq.length - 1].bin !== e.bin) seq.push({ bin:e.bin, e:e, year:e.year });
-    });
+    var evs = (l.events || []).filter(function(e){ return e.bin; });
     var dv = l.divergence.year;
-    /* the strand starts at its fork: what came before was shared with us */
-    var post = seq.filter(function(s){ return s.year >= dv; });
+    /* the strand starts at its fork: what came before was shared with us.
+       Repeats of one kind are collapsed on each side of the fork separately,
+       or a fictional step right after the fork (Jericho's attacks, 2006) would
+       be swallowed by a real one of the same kind just before it (Katrina). */
+    function collapse(list){
+      var out = [];
+      list.forEach(function(e){ if(!out.length || out[out.length - 1].bin !== e.bin) out.push({ bin:e.bin, e:e, year:e.year }); });
+      return out;
+    }
+    var pre = collapse(evs.filter(function(e){ return e.year < dv; }));
+    var post = collapse(evs.filter(function(e){ return e.year >= dv; }));
     if(!post.length) return;
-    var s = { id:l.id, l:l, seq:post, pre:seq.filter(function(x){ return x.year < dv; }),
+    var s = { id:l.id, l:l, seq:post, pre:pre,
               kinds:post.map(function(x){ return x.bin; }), ending:mpEndingOf(l), fork:dv, color:l._g.color };
     strands.push(s); byId[l.id] = s;
   });

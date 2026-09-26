@@ -35,6 +35,13 @@ var RK_TEMP = 0.06;     /* softmax temperature: lower spreads the leader further
 var RK_REPLAY = 10;     /* how many of our past moments the leader is replayed over */
 var RK_HALF = 3;        /* a thread that has not moved for this many years counts half */
 var RK_TAIL = -0.35;    /* each of a thread's steps after the story's last match */
+/* A shared step is evidence in proportion to how rare it is. "A war begins"
+   happens in dozens of stories, so sharing it says little; "an AI slips its
+   limits" happens in a handful, so sharing it says a lot. Each of our steps is
+   weighted by its specificity, log-scaled from 0 (every story has it) to 1 (no
+   story has it); RK_COMMON is the floor, so even the commonest step counts a
+   little and order still matters. */
+var RK_COMMON = 0.2;
 var RK_CACHE = { key:null, out:{} };
 
 var RK_THREADS = [
@@ -82,6 +89,20 @@ function rkScore(a, b){
   var A = String(a).split("|"), B = String(b).split("|");
   if(A[0] !== B[0]) return chainScore(A[0], B[0]);
   return (A[1] && B[1]) ? RK_SUB_MISS : RK_SUB_UNKNOWN;
+}
+/* how many stories pass through a step (kind and sub-kind), and how specific
+   that makes it: 1 for a step no story has, 0 for one every story has */
+function rkStoriesWith(M, tok){
+  if(!M._rkCount){
+    var c = {};
+    M.strands.forEach(function(st){ var seen = {}; rkToks(st).forEach(function(t){ if(!seen[t]){ seen[t] = true; c[t] = (c[t] || 0) + 1; } }); });
+    M._rkCount = c;
+  }
+  return M._rkCount[tok] || 0;
+}
+function rkSpecific(M, tok){
+  var n = M.strands.length;
+  return n ? Math.max(0, Math.min(1, Math.log((n + 1) / (rkStoriesWith(M, tok) + 1)) / Math.log(n + 1))) : 0;
 }
 /* a story's chain as tokens, cached on the strand */
 function rkToks(st){ return st._toks || (st._toks = st.seq.map(function(x){ return rkTok(x.bin, x.e.sub); })); }
@@ -182,7 +203,7 @@ function rkRank(M, upto, add){
     });
     qr = qr.slice(-RK_TLEN);
     var q = qr.map(function(r){ return r.tok; });
-    var w = q.map(function(_, i){ return Math.pow(RK_DECAY, q.length - 1 - i); });
+    var w = q.map(function(tok, i){ return Math.pow(RK_DECAY, q.length - 1 - i) * (RK_COMMON + (1 - RK_COMMON) * rkSpecific(M, tok)); });
     var lastY = qr.length ? qr[qr.length - 1].e.year : -Infinity;
     return { id:t.id, spec:t, qr:qr, q:q, w:w, weight:qr.length ? Math.pow(0.5, Math.max(0, nowY - lastY) / RK_HALF) : 0, rows:[] };
   }).filter(function(t){ return t.q.length; });
@@ -485,15 +506,15 @@ function rkToday(){ var d = new Date(); return d.getFullYear() + "-" + ("0" + (d
 /* A step in words a passer-by reads in a second, for the posters. Kinds and
    sub-kinds are the atlas's vocabulary; these are how a headline would say it. */
 var RK_PLAIN = {
-  "war-breaks-out|regional":"a war begins", "war-breaks-out|great-power":"a world war", "war-breaks-out|civil":"civil war", "war-breaks-out|between-worlds":"war between worlds",
+  "war-breaks-out|regional":"a regional war", "war-breaks-out|great-power":"a world war", "war-breaks-out|civil":"civil war", "war-breaks-out|between-worlds":"war between worlds",
   "ruler-falls|killed":"the leader is killed", "ruler-falls|overthrown":"the leader is overthrown", "ruler-falls|voted-out":"the leader is voted out", "ruler-falls|dies-or-vanishes":"the leader is gone",
   "long-war|stalemate":"the war drags on", "long-war|cold-war":"a cold war", "long-war|forever-war":"endless war",
-  "new-technology-deployed|ai-computing":"AI goes to work", "new-technology-deployed|robots-bodies":"robots go to work", "new-technology-deployed|weapons":"a new weapon",
+  "new-technology-deployed|ai-computing":"AI put to work", "new-technology-deployed|robots-bodies":"robots go to work", "new-technology-deployed|weapons":"a new weapon",
   "new-technology-deployed|energy-industry":"new energy", "new-technology-deployed|bio-medicine":"new biotech", "new-technology-deployed|transport-space":"a new way to travel", "new-technology-deployed|media-networks":"a new network",
-  "machine-awakens|escapes-control":"an AI breaks its limits", "machine-awakens|takes-control":"an AI takes control", "machine-awakens|machine-war":"machines go to war", "machine-awakens|transcends":"an AI outgrows us",
+  "machine-awakens|escapes-control":"an AI slips its limits", "machine-awakens|takes-control":"an AI takes control", "machine-awakens|machine-war":"machines go to war", "machine-awakens|transcends":"an AI outgrows us",
   "breakthrough-science|physics-energy":"a breakthrough in energy", "breakthrough-science|life-sciences":"a breakthrough in biology", "breakthrough-science|computing-mind":"a breakthrough in AI",
   "breakthrough-science|cosmos":"a discovery in space", "breakthrough-science|earth-climate":"a warning about the planet",
-  "voyage-into-unknown|crewed-orbit-moon":"people fly to the Moon", "voyage-into-unknown|uncrewed-probe":"a probe lands", "voyage-into-unknown|crewed-planets":"people fly to Mars", "voyage-into-unknown|interstellar":"a ship leaves for the stars",
+  "voyage-into-unknown|crewed-orbit-moon":"people fly to the Moon", "voyage-into-unknown|uncrewed-probe":"a robot lands on another world", "voyage-into-unknown|crewed-planets":"people fly to Mars", "voyage-into-unknown|interstellar":"a ship leaves for the stars",
   "settlement-founded|in-orbit":"people live in orbit", "settlement-founded|moon-or-planet":"a base on another world",
   "plague|natural":"a pandemic", "plague|engineered":"a man-made plague", "uprising|mass-protest":"people take to the streets", "uprising|armed-rebellion":"an armed revolt",
   "truth-revealed|state-secret":"a state secret leaks", "power-seized|coup":"a coup", "power-seized|revolution":"a revolution", "power-seized|strongman-legal":"a strongman takes power",
@@ -540,8 +561,21 @@ function rkAnswer(M){
   });
   pushed = pushed || anyBest;
   if(pushed && pushed.e.newsId && typeof mpNewsByKey === "function") pushed.news = mpNewsByKey(pushed.e.newsId);
+  /* the evidence: every step this story shares with us exactly, across all
+     threads, with how many stories have it; and whether any rival shares as
+     many, which is what makes the lead worth believing or not */
+  var ev = [], seenTok = {};
+  rkPairs(R, top).forEach(function(p){ if(p.same && !seenTok[p.ours.tok]){ seenTok[p.ours.tok] = true; ev.push({ tok:p.ours.tok, word:rkPlain(p.ours.tok), ours:p.ours, theirs:p.theirs, count:rkStoriesWith(M, p.ours.tok) }); } });
+  ev.sort(function(a, b){ return a.count - b.count; });
+  var shared = ev.length, rivalMax = 0, rivals = 0;
+  R.rows.forEach(function(r){
+    if(r === top) return;
+    var seen = {}, k = 0; rkPairs(R, r).forEach(function(p){ if(p.same && !seen[p.ours.tok]){ seen[p.ours.tok] = true; k++; } });
+    if(k > rivalMax) rivalMax = k;
+    if(k >= shared) rivals++;
+  });
   var end = st.ending.valence;
-  return { R:R, top:top, st:st, steps:sp.words, ordered:sp.ordered, pushed:pushed,
+  return { evidence:ev.slice(0, 4), shared:shared, rivalMax:rivalMax, rivals:rivals, R:R, top:top, st:st, steps:sp.words, ordered:sp.ordered, pushed:pushed,
            pct:rkPct(top.share), times:rkTimes(R, top), n:R.rows.length, end:end,
            endTxt:end === "optimistic" ? "it ends well" : end === "pessimistic" ? "it ends badly" : "nobody knows how it ends yet",
            runners:R.rows.slice(1, 5), asOf:fmtNewsDate(rkToday()) };
@@ -549,6 +583,24 @@ function rkAnswer(M){
 var RK_ASK = "Which sci-fi story are we living in?";
 function rkAbout(n){ return n + " sci-fi timelines, checked against the real news. This is the closest one."; }
 function rkMatchLine(A){ return A.pct + " match · #1 of " + A.n + " stories"; }
+/* "4 of our recent moments happen in Cyberpunk 2077. No other story has more than 2." */
+function rkEvidenceLine(A){
+  var t = A.st.l.title, n = A.shared;
+  if(!n) return "";
+  var head = (n === 1 ? "One of our recent moments happens" : n + " of our recent moments happen") + " in " + t + ".";
+  var tail = A.rivals ? " " + A.rivals + " other " + (A.rivals === 1 ? "story matches" : "stories match") + " as many."
+           : " No other story has more than " + A.rivalMax + ".";
+  return head + tail;
+}
+function rkEvidenceHtml(A, cls){
+  if(!A.evidence.length) return "";
+  return '<div class="' + cls + '-same">' + esc(rkEvidenceLine(A)) + '</div><ul class="' + cls + '-ev">'
+    + A.evidence.map(function(x){
+      var w = x.word.charAt(0).toUpperCase() + x.word.slice(1);
+      return '<li><b>' + esc(w) + '</b><span>' + esc(rkWhen(x.ours.e)) + ' for us \u00b7 ' + esc(fmtYearFull(x.theirs.e.year)) + ' in the story</span>'
+        + '<em>' + (x.count <= 1 ? 'the only story with it' : 'in ' + x.count + ' of ' + A.n + ' stories') + '</em></li>';
+    }).join("") + '</ul>';
+}
 function rkStepsHtml(A, cls){
   if(!A.steps.length) return "";
   return '<div class="' + cls + '-same">' + 'Sound familiar?' + '</div>'
@@ -564,7 +616,7 @@ function rkAnswerHtml(M){
     + '<button class="ans-hero' + (art && art.lg ? '' : ' none') + '" data-world="' + esc(l.id) + '">' + (art && art.lg ? '<img src="' + esc(art.lg) + '" alt="" decoding="async">' : '')
     + '<span class="ans-t"><span class="ans-k">Right now, we\u2019re closest to</span><span class="ans-title">' + esc(l.title) + '</span>'
     + '<span class="ans-pct">' + esc(rkMatchLine(A)) + '</span></span></button>'
-    + '<div class="ans-body">' + rkStepsHtml(A, "ans")
+    + '<div class="ans-body">' + rkEvidenceHtml(A, "ans")
     + (p ? '<button class="ans-push" ' + (p.news ? 'data-news="' + esc(mpNewsKey(p.news)) + '"' : 'data-beat="' + esc(p.e.id) + '"') + '><span class="ans-pk">The headline that did it</span>'
         + '<span class="ans-ph">' + esc(p.news ? p.news.headline : p.e.title) + '</span><span class="ans-pd">' + esc(rkWhen(p.e)) + '</span></button>' : '')
     + '<div class="ans-end ' + A.end + '">Spoiler: ' + esc(A.endTxt) + '.</div>'
@@ -586,9 +638,10 @@ function rkCardHtml(M, kind){
     return '<div class="rkc rkc-og">' + img + '<div class="rkc-shade"></div>'
       + '<div class="rkc-in"><div class="rkc-ask">' + esc(RK_ASK) + '</div><div class="rkc-title">' + esc(l.title) + '</div>'
       + '<div class="rkc-pct">' + esc(rkMatchLine(A)) + '</div>'
-      + rkStepsHtml(A, "rkc") + ends
+      + rkEvidenceHtml(A, "rkc") + ends
       + '<div class="rkc-foot">Where We Are Now · ' + site + '</div></div></div>';
   }
+  if(kind === "post") return rkLightPoster(A, site, img, push, ends);
   var runners = A.runners.map(function(r){
     var a = typeof artFor === "function" ? artFor(r.st.id) : null;
     return '<div class="rkc-run">' + (a && a.sm ? '<img src="' + esc(a.sm) + '" alt="">' : '<span class="rkc-noimg"></span>') + '<b>' + esc(r.st.l.title) + '</b><em>' + rkPct(r.share) + '</em></div>';
@@ -598,17 +651,38 @@ function rkCardHtml(M, kind){
     + '<div class="rkc-main"><div class="rkc-lbl">Right now, we\u2019re closest to</div>'
     + '<div class="rkc-title">' + esc(l.title) + '</div>'
     + '<div class="rkc-pct">' + esc(rkMatchLine(A)) + '</div>'
-    + rkStepsHtml(A, "rkc") + push + ends
+    + rkEvidenceHtml(A, "rkc") + push + ends
     + '<div class="rkc-rh">Also close</div><div class="rkc-runs">' + runners + '</div>'
     + '<div class="rkc-about">' + esc(rkAbout(A.n)) + '</div>'
     + '<div class="rkc-foot">' + site + '</div></div></div>';
 }
+/* The light poster: the app's own colours, the artwork framed in a card as
+   the app shows a story, the same words as the dark one. */
+function rkLightPoster(A, site, img, push, ends){
+  var l = A.st.l;
+  var runners = A.runners.map(function(r){
+    var a = typeof artFor === "function" ? artFor(r.st.id) : null;
+    return '<div class="rkl-run">' + (a && a.sm ? '<img src="' + esc(a.sm) + '" alt="">' : '<span class="rkl-noimg"></span>') + '<b>' + esc(r.st.l.title) + '</b><em>' + rkPct(r.share) + '</em></div>';
+  }).join("");
+  return '<div class="rkc rkl">'
+    + '<div class="rkl-top"><div class="rkl-ask">' + esc(RK_ASK) + '</div><div class="rkl-date">' + esc(fmtNewsDate(rkToday())) + '</div></div>'
+    + '<div class="rkl-card"><div class="rkl-art">' + img + '</div><div class="rkl-body">'
+    + '<div class="rkl-lbl">Right now, we\u2019re closest to</div>'
+    + '<div class="rkl-title">' + esc(l.title) + '</div>'
+    + '<div class="rkl-pct">' + esc(rkMatchLine(A)) + '</div>'
+    + rkEvidenceHtml(A, "rkl") + push.replace('rkc-push', 'rkl-push') + ends.replace('rkc-end', 'rkl-end')
+    + '</div></div>'
+    + '<div class="rkl-rh">Also close</div><div class="rkl-runs">' + runners + '</div>'
+    + '<div class="rkl-about">' + esc(rkAbout(A.n)) + '</div>'
+    + '<div class="rkl-foot">' + site + '</div></div>';
+}
 function rkShowCard(kind){
   var M = pickerModel(), id = "rk-card-host", host = document.getElementById(id);
   if(!host){ host = document.createElement("div"); host.id = id; document.body.appendChild(host); }
-  host.className = "rkc-host " + (kind === "og" ? "og" : "post");
+  host.className = "rkc-host " + (kind === "og" ? "og" : kind === "post" ? "post light" : "post");
   host.innerHTML = rkCardHtml(M, kind);
   var cw = kind === "og" ? 1200 : 1080, chh = kind === "og" ? 630 : 1350;
+  if(kind === "post-dark") kind = "post-dark";
   /* fit the width only: a headless window of exactly the card's size reports
      a slightly shorter viewport, and the snapshot must not shrink */
   var sc = Math.min(1, window.innerWidth / cw);

@@ -6356,6 +6356,2470 @@
      "url": "https://11-22-63.fandom.com/wiki/11/22/63_(Novel)"
     }
    ]
+  },
+  {
+   "id": "dr-strangelove",
+   "title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+   "medium": "film",
+   "creator": "Stanley Kubrick (director, co-writer); Peter George and Terry Southern (co-writers), from George's novel Red Alert",
+   "originYear": 1964,
+   "group": "alternate-past",
+   "epoch": "present",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 1963,
+    "label": "A SAC general launches his wing, and the Soviets have a Doomsday Machine",
+    "delta": "Real: in 1963 the superpowers are backing away from the Cuban brink; they agree a hot line in June and sign the Partial Test Ban Treaty in August, and no doomsday machine exists outside Herman Kahn's book. Fiction: a paranoid wing commander sends 34 airborne B-52s against the Soviet Union under a retaliation plan, and the Soviets turn out to have built the machine Kahn warned about.",
+    "inUniverse": "No year is stated; the film is set in its own present, the day Ripper issues Wing Attack Plan R",
+    "confidence": "medium",
+    "note": "The film never prints a year. It was shot at Shepperton from 29 January 1963, was due out in December 1963 until the Kennedy assassination delayed it, and carries a 1963 copyright; so the one day it covers is filed in 1963. A reader who takes it as happening on release in January 1964 should add a year. Peter George's novel Red Alert (1958), on which the film is loosely based, has the same Plan R, the same recall-code doodles and the same one damaged bomber, but no doomsday machine, and there the bomber is shot down before it can bomb.",
+    "sources": [
+     {
+      "title": "Wikipedia: Dr. Strangelove",
+      "url": "https://en.wikipedia.org/wiki/Dr._Strangelove"
+     },
+     {
+      "title": "AFI Catalog: Dr. Strangelove - principal photography from 29 January 1963, release 29 January 1964",
+      "url": "https://catalog.afi.com/Catalog/moviedetails/23082"
+     },
+     {
+      "title": "Wikipedia: Red Alert (novel)",
+      "url": "https://en.wikipedia.org/wiki/Red_Alert_(novel)"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "The last bomber hits its target, the Doomsday Machine fires, and the film ends on a montage of explosions with the surface of the Earth to be uninhabitable for ninety-three years and a few hundred thousand chosen people planned for the mineshafts.",
+    "asOf": 1963
+   },
+   "events": [
+    {
+     "id": "ds-trinity-1945",
+     "year": 1945,
+     "date": "1945-07-16",
+     "title": "The first nuclear explosion",
+     "description": "The United States detonates a plutonium bomb at Trinity in the New Mexico desert. Its footage is among the real test explosions Kubrick cuts together for the film's last minutes, when the Doomsday Machine goes off to Vera Lynn singing 'We'll Meet Again'.",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. Wikipedia's account of the ending names Trinity, Crossroads Baker, Sandstone, Ivy and Redwing as the sources of the closing montage.",
+     "binWhy": "The weapon that can end a civilisation is tested for the first time, and the balance of terror the film mocks is built around it.",
+     "bin": "doomsday-weapon",
+     "facets": {
+      "change": "conventional explosives → the atomic bomb",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "long-war",
+       "technological-race",
+       "secrecy"
+      ],
+      "outcomes": [
+       "arms-race",
+       "cold-war"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: Trinity (nuclear test)",
+       "url": "https://en.wikipedia.org/wiki/Trinity_(nuclear_test)"
+      },
+      {
+       "title": "Wikipedia: Dr. Strangelove",
+       "url": "https://en.wikipedia.org/wiki/Dr._Strangelove"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "ds-sac-1946",
+     "year": 1946,
+     "date": "1946-03-21",
+     "title": "Strategic Air Command is founded",
+     "description": "The Army Air Forces create Strategic Air Command, the long-range bomber force that will hold the American nuclear arsenal. Burpelson Air Force Base, the 843rd Bomb Wing and the War Room's generals are all SAC, and both Ripper and Turgidson are drawn from its commander Curtis LeMay.",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. SAC was established on 21 March 1946 at Bolling Field and moved to Offutt, Nebraska, in 1948. Wikipedia's Strangelove article records that Turgidson and Ripper both satirise LeMay. Ripper's claim in the film that fluoridation 'first began' in 1946 is his own; the date is not SAC's.",
+     "binWhy": "A military body is founded that will shape the nuclear age and, in the film, start its last war.",
+     "bin": "new-institution",
+     "facets": {
+      "change": "wartime bomber commands → a standing nuclear strike force",
+      "mechanism": "founding",
+      "actor": "state",
+      "position": "above",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "war-just-ended",
+       "arms-race"
+      ],
+      "outcomes": [
+       "state-powers",
+       "arms-race"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: Strategic Air Command",
+       "url": "https://en.wikipedia.org/wiki/Strategic_Air_Command"
+      },
+      {
+       "title": "Wikipedia: Dr. Strangelove",
+       "url": "https://en.wikipedia.org/wiki/Dr._Strangelove"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "ds-cobalt-1950",
+     "year": 1950,
+     "date": "1950-02-26",
+     "title": "Szilard describes the cobalt bomb",
+     "description": "On a radio programme the physicist Leo Szilard describes a bomb jacketed in cobalt whose fallout could end human life, to show where the weapons were heading rather than to propose one. The film's 'cobalt-thorium G' Doomsday Machine is his thought experiment built for real.",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. Wikipedia dates Szilard's radio description to 26 February 1950. The film's ambassador gives cobalt-thorium G a half-life of ninety-three years and says the shroud will circle the Earth for that long; Strangelove guesses a hundred.",
+     "binWhy": "A physicist works out that a weapon able to end human life is possible; the fictional machine is this idea made real.",
+     "bin": "breakthrough-science",
+     "sub": "physics-energy",
+     "facets": {
+      "change": "big bombs → a bomb that could end the species",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "arms-race",
+       "cold-war"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "extinction-risk"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: Cobalt bomb",
+       "url": "https://en.wikipedia.org/wiki/Cobalt_bomb"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "ds-sputnik-1957",
+     "year": 1957,
+     "date": "1957-10-04",
+     "title": "Sputnik, and the missile gap",
+     "description": "The Soviet Union puts the first artificial satellite into orbit, and American politicians start talking about a 'missile gap' that exaggerated estimates say favours Moscow. The film's last joke is Turgidson warning of a 'mineshaft gap' while the world ends.",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. The missile gap never existed except in exaggerated estimates such as the Gaither Committee's in 1957; Wikipedia's Strangelove article notes that 'mineshaft gap' spoofs the phrase.",
+     "binWhy": "An uncrewed satellite reaches orbit for the first time, and the fear it raises drives the arms race the film satirises.",
+     "bin": "voyage-into-unknown",
+     "sub": "uncrewed-probe",
+     "facets": {
+      "change": "no satellites → Soviet rockets over America",
+      "mechanism": "expedition",
+      "actor": "state",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "cold-war",
+       "technological-race"
+      ],
+      "outcomes": [
+       "arms-race",
+       "prestige",
+       "rivalry"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: Sputnik 1",
+       "url": "https://en.wikipedia.org/wiki/Sputnik_1"
+      },
+      {
+       "title": "Wikipedia: Missile gap",
+       "url": "https://en.wikipedia.org/wiki/Missile_gap"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "ds-kahn-1960",
+     "year": 1960,
+     "date": "1960",
+     "title": "Kahn's On Thermonuclear War and the Doomsday Machine",
+     "description": "The RAND strategist Herman Kahn publishes On Thermonuclear War, which uses a hypothetical Doomsday Machine to show where mutual assured destruction leads and talks calmly of 'megadeaths'. Kahn later briefed Kubrick on the idea, and the film puts both the machine and the vocabulary in the War Room.",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. Kahn's book (Princeton University Press, 1960) proposed the machine only to argue against building one. Wikipedia records that Kubrick consulted Kahn and Thomas Schelling while writing, and that Turgidson's binder is labelled 'World Targets in Megadeaths'.",
+     "binWhy": "A theory of how nuclear powers behave is published that the film turns into its plot.",
+     "bin": "breakthrough-science",
+     "sub": "people-society",
+     "facets": {
+      "change": "unthinkable → calculated in megadeaths",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "arms-race",
+       "cold-war",
+       "secrecy"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "arms-race"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: On Thermonuclear War",
+       "url": "https://en.wikipedia.org/wiki/On_Thermonuclear_War"
+      },
+      {
+       "title": "Wikipedia: Herman Kahn",
+       "url": "https://en.wikipedia.org/wiki/Herman_Kahn"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "ds-chrome-dome-1961",
+     "year": 1961,
+     "date": "1961-11",
+     "title": "B-52s go on continuous airborne alert",
+     "description": "SAC begins Operation Chrome Dome, keeping B-52s armed with thermonuclear bombs in the air around the clock on routes towards the Soviet Union. It is the film's premise: Ripper's 34 bombers are already airborne, two hours from their targets, when he sends the attack code.",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. Wikipedia dates the start of Chrome Dome to November 1961 after pilot airborne-alert programmes from 1958; it ran until the Thule crash of 1968. The film calls its flight 'Operation Drop-Kick'.",
+     "binWhy": "A weapon system is fielded: nuclear bombers kept permanently in the air within reach of their targets.",
+     "bin": "new-technology-deployed",
+     "sub": "weapons",
+     "facets": {
+      "change": "bombers on the ground → bombers always aloft",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "arms-race",
+       "cold-war"
+      ],
+      "outcomes": [
+       "arms-race",
+       "extinction-risk"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: Operation Chrome Dome",
+       "url": "https://en.wikipedia.org/wiki/Operation_Chrome_Dome"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "ds-cuba-1962",
+     "year": 1962,
+     "date": "1962-10-16/28",
+     "title": "The Cuban Missile Crisis",
+     "description": "The United States finds Soviet missiles in Cuba, blockades the island, and for thirteen days the two powers stand at the edge of nuclear war before Khrushchev agrees to withdraw them. Kubrick and George were rewriting their script as a comedy in the months after it.",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. Terry Southern joined the script in late 1962, after the crisis. The crisis also produced the real hot line: advisers concluded that faster communication could have ended it sooner.",
+     "binWhy": "The superpowers come to the brink of war and step back; the standoff the film's accident breaks.",
+     "bin": "long-war",
+     "sub": "cold-war",
+     "facets": {
+      "change": "missiles in secret → missiles withdrawn under blockade",
+      "mechanism": "negotiation",
+      "actor": "state",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "cold-war",
+       "arms-race",
+       "rivalry"
+      ],
+      "outcomes": [
+       "stalemate",
+       "diplomacy",
+       "cold-war"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: Cuban Missile Crisis",
+       "url": "https://en.wikipedia.org/wiki/Cuban_Missile_Crisis"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "ds-plan-r-1963",
+     "year": 1963,
+     "date": "1963",
+     "title": "Wing Attack Plan R, and the Doomsday Machine",
+     "description": "General Jack D. Ripper sends his B-52 wing against the Soviet Union and seals Burpelson; the President learns in the War Room that the Soviets have secretly built a Doomsday Machine that fires if their country is attacked. Every bomber is recalled but one, Major Kong rides its bomb down, and the machine's cobalt-thorium G shroud begins to cover the Earth.",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "The film states no year; 'the Party Congress on Monday'",
+     "confidence": "medium",
+     "note": "The whole story takes a few hours of one day, and the film states no year; it is set in its own present and was shot from 29 January 1963 for release that December. The Soviet ambassador says the Premier meant to announce the machine at the Party Congress 'on Monday'. The film's President telephones the Premier on a hot line; the real Moscow-Washington link was agreed on 20 June 1963 and installed on 30 August 1963 as a teleprinter, not a telephone.",
+     "binWhy": "Nuclear war begins by accident and the machine built to deter it ends the world's order outright.",
+     "bin": "civilisation-collapses",
+     "sub": "nuclear",
+     "facets": {
+      "change": "deterrence → the Doomsday Machine fires",
+      "mechanism": "accident",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "arms-race",
+       "cold-war",
+       "secrecy"
+      ],
+      "outcomes": [
+       "mass-death",
+       "extinction-risk",
+       "collapse"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: Dr. Strangelove",
+       "url": "https://en.wikipedia.org/wiki/Dr._Strangelove"
+      },
+      {
+       "title": "Wikiquote: Dr. Strangelove - the War Room dialogue, the doomsday shroud and the Party Congress line",
+       "url": "https://en.wikiquote.org/wiki/Dr._Strangelove"
+      },
+      {
+       "title": "AFI Catalog: Dr. Strangelove - principal photography from 29 January 1963, release 29 January 1964",
+       "url": "https://catalog.afi.com/Catalog/moviedetails/23082"
+      },
+      {
+       "title": "Wikipedia: Moscow–Washington hotline",
+       "url": "https://en.wikipedia.org/wiki/Moscow%E2%80%93Washington_hotline"
+      }
+     ],
+     "tier": "T3",
+     "phase": "fork"
+    },
+    {
+     "id": "ds-film-1964",
+     "year": 1964,
+     "date": "1964-01-29",
+     "title": "Dr. Strangelove is released",
+     "description": "Columbia releases Kubrick's film in New York, London and Toronto. Its first preview had been set for 22 November 1963 and was cancelled when President Kennedy was shot that day.",
+     "importance": 2,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The on-screen copyright date is 1963. The film is loosely based on Peter George's novel Red Alert (1958, first published in Britain as Two Hours to Doom under the name Peter Bryant), a serious thriller whose bomber is shot down in time; George co-wrote the screenplay.",
+     "binWhy": "A publication date, not a moment in the story's history; it carries no bin.",
+     "bin": null,
+     "facets": null,
+     "sources": [
+      {
+       "title": "Wikipedia: Dr. Strangelove",
+       "url": "https://en.wikipedia.org/wiki/Dr._Strangelove"
+      },
+      {
+       "title": "AFI Catalog: Dr. Strangelove - principal photography from 29 January 1963, release 29 January 1964",
+       "url": "https://catalog.afi.com/Catalog/moviedetails/23082"
+      },
+      {
+       "title": "Wikipedia: Red Alert (novel)",
+       "url": "https://en.wikipedia.org/wiki/Red_Alert_(novel)"
+      }
+     ],
+     "tier": "T3",
+     "phase": "fork"
+    }
+   ],
+   "groupingNote": "Belongs in alternate-past because it is our 1963 - SAC, B-52s on airborne alert, the War Room, a Soviet premier on the telephone - with one wing commander's decision and one secret Soviet machine added. It follows Kubrick's film, not Peter George's novel. The story lasts a few hours, so it has one fictional event; the seven before it are the real history it satirises (Trinity, SAC, Szilard's cobalt bomb, Sputnik and the missile gap, Kahn's book, Chrome Dome, Cuba). Everything is T3: there is no T4 because the history it draws on starts in 1945, and no T2 or T1 because the world ends in 1963.",
+   "sources": [
+    {
+     "title": "Wikipedia: Dr. Strangelove",
+     "url": "https://en.wikipedia.org/wiki/Dr._Strangelove"
+    },
+    {
+     "title": "AFI Catalog: Dr. Strangelove - principal photography from 29 January 1963, release 29 January 1964",
+     "url": "https://catalog.afi.com/Catalog/moviedetails/23082"
+    },
+    {
+     "title": "Wikipedia: Red Alert (novel)",
+     "url": "https://en.wikipedia.org/wiki/Red_Alert_(novel)"
+    },
+    {
+     "title": "Wikiquote: Dr. Strangelove - the War Room dialogue, the doomsday shroud and the Party Congress line",
+     "url": "https://en.wikiquote.org/wiki/Dr._Strangelove"
+    }
+   ]
+  },
+  {
+   "id": "fail-safe",
+   "title": "Fail-Safe",
+   "medium": "book",
+   "creator": "Eugene Burdick and Harvey Wheeler (novel); Sidney Lumet (1964 film, screenplay by Walter Bernstein)",
+   "originYear": 1962,
+   "group": "alternate-past",
+   "epoch": "present",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 1967,
+    "label": "A faulty fail-safe box sends a bomber group to Moscow",
+    "delta": "Real: in 1967 Khrushchev has been out of power for three years, the hot line is used for the first time during the Six-Day War, and no SAC bomber has ever flown past its fail-safe point on a false order. Fiction: an electronic fault gives six supersonic bombers a valid attack code, Khrushchev is still premier to take the President's call, and the day ends with Moscow and New York destroyed.",
+    "inUniverse": "The novel is set in 1967; the premier is Nikita Khrushchev",
+    "confidence": "medium",
+    "note": "This lineage follows the 1962 novel, which dates itself, rather than the 1964 film, which does not; the plot is the same in both. The year 1967 comes from the Wikipedia and EBSCO summaries of the novel; the text itself was not available to check. The novel's Soviet Union is still led by Khrushchev, which parts from our history in October 1964, but the novel never shows that year, so the fork is placed where its story is.",
+    "sources": [
+     {
+      "title": "Wikipedia: Fail-Safe (novel)",
+      "url": "https://en.wikipedia.org/wiki/Fail-Safe_(novel)"
+     },
+     {
+      "title": "EBSCO Research Starters: Fail-Safe by Eugene Burdick - set in 1967, Khrushchev as premier, the faulty Fail-Safe Activating Mechanism",
+      "url": "https://www.ebsco.com/research-starters/literature-and-writing/fail-safe-eugene-burdick"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "Moscow and New York are destroyed with their people, one by a machine's error and one on the President's order, and general war is avoided only by that trade.",
+    "asOf": 1967
+   },
+   "events": [
+    {
+     "id": "fs-hiroshima-1945",
+     "year": 1945,
+     "date": "1945-08-06",
+     "title": "Hiroshima and Nagasaki",
+     "description": "The United States destroys two Japanese cities with single bombs, the only cities ever destroyed by nuclear weapons. Fail-Safe ends with two more, one lost by accident and one given up on purpose.",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. Nagasaki was bombed on 9 August. The film's General Black warns that the Soviets would retaliate 'as we would, and did after Pearl Harbor'.",
+     "binWhy": "A nuclear weapon kills a city's population for the first time.",
+     "bin": "mass-death",
+     "sub": "nuclear",
+     "facets": {
+      "change": "cities bombed by fleets → a city destroyed by one bomb",
+      "mechanism": "attack",
+      "actor": "state",
+      "position": "outside",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": -1
+      },
+      "preconditions": [
+       "long-war",
+       "technological-race",
+       "secrecy"
+      ],
+      "outcomes": [
+       "mass-death",
+       "arms-race",
+       "surrender"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: Atomic bombings of Hiroshima and Nagasaki",
+       "url": "https://en.wikipedia.org/wiki/Atomic_bombings_of_Hiroshima_and_Nagasaki"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "fs-sac-1946",
+     "year": 1946,
+     "date": "1946-03-21",
+     "title": "Strategic Air Command is founded",
+     "description": "The Army Air Forces create Strategic Air Command to hold the nuclear bomber force. From November 1948 it is run from Offutt, outside Omaha, where the novel's SAC war room follows Group Six to Moscow.",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. SAC was established at Bolling Field on 21 March 1946 and moved its headquarters to Offutt Air Force Base, Nebraska, on 9 November 1948.",
+     "binWhy": "A military body is founded that will own the bombers and the codes the novel turns on.",
+     "bin": "new-institution",
+     "facets": {
+      "change": "wartime bomber commands → a standing nuclear strike force",
+      "mechanism": "founding",
+      "actor": "state",
+      "position": "above",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "war-just-ended",
+       "arms-race"
+      ],
+      "outcomes": [
+       "state-powers",
+       "arms-race"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: Strategic Air Command",
+       "url": "https://en.wikipedia.org/wiki/Strategic_Air_Command"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "fs-rds1-1949",
+     "year": 1949,
+     "date": "1949-08-29",
+     "title": "The Soviet Union tests its first atomic bomb",
+     "description": "The Soviet Union explodes its first atomic bomb at Semipalatinsk, years before Washington expected. From here on each side can retaliate, which is the premise of the novel's ending: the President sacrifices New York because Moscow's generals would otherwise answer with everything.",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. RDS-1, or First Lightning, yielded about 22 kilotons.",
+     "binWhy": "A second power builds the weapon and the balance of terror freezes around the pair.",
+     "bin": "doomsday-weapon",
+     "facets": {
+      "change": "an American monopoly → two nuclear powers",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "arms-race",
+       "rivalry",
+       "secrecy"
+      ],
+      "outcomes": [
+       "arms-race",
+       "cold-war"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: RDS-1",
+       "url": "https://en.wikipedia.org/wiki/RDS-1"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "fs-r7-1957",
+     "year": 1957,
+     "date": "1957-08-21",
+     "title": "The first intercontinental missile flies",
+     "description": "The Soviet R-7 makes the first successful long-range flight of an intercontinental ballistic missile, to Kamchatka. Warning times shrink from hours to minutes, the fear the novel's strategist Groteschele builds his arguments on.",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. TASS announced the test five days later; the same rocket launched Sputnik in October.",
+     "binWhy": "A weapon able to reach any city in half an hour is tested, and deterrence has to be automated around it.",
+     "bin": "doomsday-weapon",
+     "facets": {
+      "change": "bombers taking hours → missiles taking minutes",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "arms-race",
+       "technological-race",
+       "cold-war"
+      ],
+      "outcomes": [
+       "arms-race",
+       "rivalry"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: R-7 Semyorka",
+       "url": "https://en.wikipedia.org/wiki/R-7_Semyorka"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "fs-positive-control-1958",
+     "year": 1958,
+     "date": "1958 (autumn)",
+     "title": "SAC flies under Positive Control",
+     "description": "SAC tests keeping nuclear-armed bombers on airborne alert, under a Positive Control rule that holds them at a checkpoint until a go-code arrives. That checkpoint is the novel's 'fail-safe point', and its failure is the novel.",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "note": "Real history, before the fork. The National Security Archive describes Positive Control in the autumn 1958 'Head Start' airborne-alert test; Wikipedia dates the pilot airborne-alert programme to 1958. The exact month the rule was introduced is not given in the sources used.",
+     "binWhy": "A new system for holding nuclear bombers short of their targets is put into service.",
+     "bin": "new-technology-deployed",
+     "sub": "weapons",
+     "facets": {
+      "change": "bombers on the ground → bombers held at a fail-safe point",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "arms-race",
+       "cold-war",
+       "technological-race"
+      ],
+      "outcomes": [
+       "arms-race",
+       "dependency"
+      ]
+     },
+     "sources": [
+      {
+       "title": "National Security Archive: The Air Force versus Hollywood - Positive Control in the 1958 Head Start test, and the SAC Command Post film made to answer Dr. Strangelove and Fail Safe",
+       "url": "https://nsarchive2.gwu.edu/nukevault/ebb304/"
+      },
+      {
+       "title": "Wikipedia: Operation Chrome Dome",
+       "url": "https://en.wikipedia.org/wiki/Operation_Chrome_Dome"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "fs-bmews-1960",
+     "year": 1960,
+     "date": "1960-10-05",
+     "title": "Thule's radar mistakes the Moon for an attack",
+     "description": "At Thule in Greenland, the new Ballistic Missile Early Warning System radar reads returns from the rising Moon as a Soviet missile attack. The alert is recognised as false; the novel's alert is too, but not before a fault has sent one bomber group on.",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. Wikipedia's BMEWS article dates the false alarm to 5 October 1960, while Khrushchev was in New York; the twelve-radar network was built from 1958 and declared operational in 1961. The novel's alert begins with an unidentified aircraft that turns out to be an off-course airliner.",
+     "binWhy": "A computerised early-warning network is put to work and reports an attack that is not there.",
+     "bin": "new-technology-deployed",
+     "sub": "ai-computing",
+     "facets": {
+      "change": "human lookouts → computers that can cry wolf",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "arms-race",
+       "machine-dependency",
+       "cold-war"
+      ],
+      "outcomes": [
+       "dependency",
+       "foreknowledge"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: Ballistic Missile Early Warning System",
+       "url": "https://en.wikipedia.org/wiki/Ballistic_Missile_Early_Warning_System"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "fs-goldsboro-1961",
+     "year": 1961,
+     "date": "1961-01-24",
+     "title": "Goldsboro: one switch holds",
+     "description": "A B-52 breaks up over North Carolina and drops two hydrogen bombs; on one, every safety device but a single low-voltage switch fails. Early reports say the bombs posed 'no immediate danger' of a nuclear explosion, and Sandia's own finding that one switch stood between the country and catastrophe stays secret for decades.",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. Sandia's Parker F. Jones wrote the assessment in 1969; the Guardian published it on 20 September 2013. Burdick and Wheeler could not have known the details, which is the point of including it: their premise was closer than the public was told.",
+     "binWhy": "The near-failure of a nuclear safeguard is kept from the public.",
+     "bin": "secret-kept",
+     "facets": {
+      "change": "an accident → an official reassurance",
+      "mechanism": "accident",
+      "actor": "state",
+      "position": "above",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "arms-race",
+       "cover-up"
+      ],
+      "outcomes": [
+       "cover-up",
+       "secrecy-state"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: 1961 Goldsboro B-52 crash",
+       "url": "https://en.wikipedia.org/wiki/1961_Goldsboro_B-52_crash"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "fs-novel-1962",
+     "year": 1962,
+     "date": "1962-10-22",
+     "title": "Fail-Safe is published",
+     "description": "McGraw-Hill publishes Burdick and Wheeler's novel after the Saturday Evening Post runs it in three parts on 13, 20 and 27 October, the weeks of the Cuban Missile Crisis.",
+     "importance": 2,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The novel expands Wheeler's story 'Abraham '59', published in Dissent in the winter of 1959 under the name F. B. Aiken. Peter George sued, saying it copied his Red Alert; the case was settled out of court.",
+     "binWhy": "A publication date, not a moment in the story's history; it carries no bin.",
+     "bin": null,
+     "facets": null,
+     "sources": [
+      {
+       "title": "Wikipedia: Fail-Safe (novel)",
+       "url": "https://en.wikipedia.org/wiki/Fail-Safe_(novel)"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "fs-hotline-1963",
+     "year": 1963,
+     "date": "1963-06-20",
+     "title": "The Moscow-Washington hot line is agreed",
+     "description": "After Cuba the two governments agree a direct link between their leaders, their first formal step against starting a nuclear war by accident. The novel, written before it, already has the President talking to Khrushchev directly while the bombers fly.",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. The link was installed on 30 August 1963 as a teleprinter circuit and first used in 1967, during the Six-Day War.",
+     "binWhy": "Enemies agree a channel to keep an accident from becoming a war.",
+     "bin": "peace-made",
+     "facets": {
+      "change": "messages by embassy → a direct line",
+      "mechanism": "negotiation",
+      "actor": "state",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "cold-war",
+       "arms-race",
+       "rivalry"
+      ],
+      "outcomes": [
+       "diplomacy"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: Moscow–Washington hotline",
+       "url": "https://en.wikipedia.org/wiki/Moscow%E2%80%93Washington_hotline"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "fs-film-1964",
+     "year": 1964,
+     "date": "1964-10-07",
+     "title": "Fail Safe is released",
+     "description": "Columbia releases Sidney Lumet's film, with Henry Fonda as the President and Walter Matthau as Groeteschele, nine months after it released Dr. Strangelove.",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The film follows the novel's plot closely but states no year and does not name the Soviet premier; the novel's Khrushchev lost power a week after the release, on 14 October 1964. A live CBS version followed in 2000.",
+     "binWhy": "A publication date, not a moment in the story's history; it carries no bin.",
+     "bin": null,
+     "facets": null,
+     "sources": [
+      {
+       "title": "Wikipedia: Fail Safe (1964 film)",
+       "url": "https://en.wikipedia.org/wiki/Fail_Safe_(1964_film)"
+      },
+      {
+       "title": "Wikipedia: Nikita Khrushchev",
+       "url": "https://en.wikipedia.org/wiki/Nikita_Khrushchev"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "fs-moscow-new-york-1967",
+     "year": 1967,
+     "date": "1967",
+     "title": "Group Six bombs Moscow, and the President gives up New York",
+     "description": "A failed component in SAC's fail-safe equipment sends six Vindicator bombers past their fail-safe point towards Moscow, and neither recall, fighters nor Soviet defences can stop the last one. To keep Khrushchev's generals from answering with all-out war, the President orders an American bomber to destroy New York with four 20-megaton bombs, with the First Lady in the city, and the general who drops them kills himself.",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "1967 (the novel's stated year); Group Six, the fail-safe point, Moscow and New York",
+     "confidence": "medium",
+     "note": "Wikipedia and EBSCO's summary both place the novel in 1967, with Khrushchev still premier; the story covers a few hours and no month is given. The 1964 film has the same events but no year. Khrushchev's survival in office past October 1964 is a second difference from our history, but the novel does not date it, so the fork is filed at the event it describes.",
+     "binWhy": "An accident destroys one capital by nuclear attack, and a second city is destroyed deliberately to stop the war that would follow.",
+     "bin": "mass-death",
+     "sub": "nuclear",
+     "facets": {
+      "change": "an accidental attack → two cities traded for peace",
+      "mechanism": "accident",
+      "actor": "machine",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "machine-dependency",
+       "cold-war",
+       "arms-race"
+      ],
+      "outcomes": [
+       "mass-death",
+       "diplomacy",
+       "despair"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: Fail-Safe (novel)",
+       "url": "https://en.wikipedia.org/wiki/Fail-Safe_(novel)"
+      },
+      {
+       "title": "EBSCO Research Starters: Fail-Safe by Eugene Burdick - set in 1967, Khrushchev as premier, the faulty Fail-Safe Activating Mechanism",
+       "url": "https://www.ebsco.com/research-starters/literature-and-writing/fail-safe-eugene-burdick"
+      },
+      {
+       "title": "Wikipedia: Fail Safe (1964 film)",
+       "url": "https://en.wikipedia.org/wiki/Fail_Safe_(1964_film)"
+      }
+     ],
+     "tier": "T3",
+     "phase": "fork"
+    }
+   ],
+   "groupingNote": "Belongs in alternate-past because it is the real Cold War machine - SAC, positive control, the hot line, a Kennedy-like President and Khrushchev - run to a failure that did not happen. It follows the novel, which gives the year, and uses the Lumet film only for its release date. The story covers a few hours, so there is one fictional event; the seven before it are the real history it is built from, including three near-failures of warning and safety systems. All events are T3: there is no T4 because the history starts in 1945, and no T2 or T1 because the novel stops on the day of the bombing.",
+   "sources": [
+    {
+     "title": "Wikipedia: Fail-Safe (novel)",
+     "url": "https://en.wikipedia.org/wiki/Fail-Safe_(novel)"
+    },
+    {
+     "title": "Wikipedia: Fail Safe (1964 film)",
+     "url": "https://en.wikipedia.org/wiki/Fail_Safe_(1964_film)"
+    },
+    {
+     "title": "EBSCO Research Starters: Fail-Safe by Eugene Burdick - set in 1967, Khrushchev as premier, the faulty Fail-Safe Activating Mechanism",
+     "url": "https://www.ebsco.com/research-starters/literature-and-writing/fail-safe-eugene-burdick"
+    },
+    {
+     "title": "National Security Archive: The Air Force versus Hollywood - Positive Control in the 1958 Head Start test, and the SAC Command Post film made to answer Dr. Strangelove and Fail Safe",
+     "url": "https://nsarchive2.gwu.edu/nukevault/ebb304/"
+    }
+   ]
+  },
+  {
+   "id": "on-the-beach",
+   "title": "On the Beach",
+   "medium": "book",
+   "creator": "Nevil Shute",
+   "originYear": 1957,
+   "group": "alternate-past",
+   "epoch": "present",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 1961,
+    "label": "Albania bombs Naples, and a short war ends the north",
+    "delta": "Real: in 1961 the Berlin Wall goes up and the Soviet Union tests a 50-megaton bomb, but no nuclear weapon is used in war and no small state has one. Fiction: cheap bombs have spread to countries like Albania and Egypt; a bomb on Naples sets off a chain of mistaken retaliation and a Russian-Chinese cobalt war that kills the Northern Hemisphere in thirty-seven days.",
+    "inUniverse": "The war is 'a year previously' as of Thursday 27 December 1962; Holmes married 'in 1961 six months before the war'",
+    "confidence": "medium",
+    "note": "Shute, writing in 1957, prints only one year, 1961, for a wedding six months before the war. The opening chapter's 'Thursday the 27th' of December and 'Tuesday, New Year's Day' fit 1956-57, 1962-63 and 1973-74; with a 1961 wedding before the war only 1962-63 works, which fixes the story in 1963 and the war about a year earlier. The 1959 film states 1964 instead; this lineage follows the novel.",
+    "sources": [
+     {
+      "title": "FadedPage: On the Beach by Nevil Shute (full text; Thursday the 27th, Tuesday New Year's Day, the thirty-seven-day war)",
+      "url": "https://www.fadedpage.com/showbook.php?pid=20131214"
+     },
+     {
+      "title": "Internet Archive: On the Beach (Heinemann text; chapter one and the Scorpion wardroom account of the war)",
+      "url": "https://archive.org/details/in.ernet.dli.2015.125785"
+     },
+     {
+      "title": "Wikipedia: On the Beach (novel)",
+      "url": "https://en.wikipedia.org/wiki/On_the_Beach_(novel)"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "The radiation reaches Melbourne, the characters take their pills or go down with the submarine, and the novel leaves the last human society dying with only New Zealand and the far south a few weeks behind.",
+    "asOf": 1963
+   },
+   "events": [
+    {
+     "id": "otb-hiroshima-1945",
+     "year": 1945,
+     "date": "1945-08-06",
+     "title": "Hiroshima and Nagasaki",
+     "description": "The United States destroys two Japanese cities with single bombs. In the novel the scientist Osborne says the original uranium bomb came to cost only about fifty thousand pounds, cheap enough for a country like Albania to hold a stockpile.",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. Nagasaki was bombed on 9 August. Osborne's cost figure is Shute's, spoken in the Scorpion's wardroom.",
+     "binWhy": "A nuclear weapon kills a city's population for the first time.",
+     "bin": "mass-death",
+     "sub": "nuclear",
+     "facets": {
+      "change": "cities bombed by fleets → a city destroyed by one bomb",
+      "mechanism": "attack",
+      "actor": "state",
+      "position": "outside",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": -1
+      },
+      "preconditions": [
+       "long-war",
+       "technological-race",
+       "secrecy"
+      ],
+      "outcomes": [
+       "mass-death",
+       "arms-race",
+       "surrender"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: Atomic bombings of Hiroshima and Nagasaki",
+       "url": "https://en.wikipedia.org/wiki/Atomic_bombings_of_Hiroshima_and_Nagasaki"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "otb-cobalt-1950",
+     "year": 1950,
+     "date": "1950-02-26",
+     "title": "Szilard describes the cobalt bomb",
+     "description": "On a radio programme Leo Szilard describes a hydrogen bomb jacketed in cobalt whose fallout could end human life, as a warning of where the weapons were heading. In the novel Russia and China both use cobalt bombs, and their fallout is what reaches Australia.",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. Wikipedia dates Szilard's description to 26 February 1950 and notes that no cobalt bomb is known to have been built. The 1959 film also names the cobalt bomb as the reason the fallout is so heavy.",
+     "binWhy": "A physicist works out that a weapon able to end human life is possible; the novel's war uses it.",
+     "bin": "breakthrough-science",
+     "sub": "physics-energy",
+     "facets": {
+      "change": "big bombs → a bomb that could end the species",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "arms-race",
+       "cold-war"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "extinction-risk"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: Cobalt bomb",
+       "url": "https://en.wikipedia.org/wiki/Cobalt_bomb"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "otb-castle-bravo-1954",
+     "year": 1954,
+     "date": "1954-03-01",
+     "title": "Castle Bravo, and fallout that travels",
+     "description": "The largest American hydrogen bomb test, at Bikini Atoll, yields 15 megatons, two and a half times the prediction, and drops fallout on inhabited islands and on the Japanese fishing boat Lucky Dragon No. 5, whose radioman dies months later. It shows the world that fallout from one explosion can sicken people far downwind.",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. Wikipedia records that traces of Bravo's fallout spread around the world and that the test caused strong international reaction; Shute's novel extends the idea to a hemisphere's worth of bombs carried south by the winds.",
+     "binWhy": "A thermonuclear weapon is tested whose fallout alone could poison a region, and the fear of such weapons becomes public.",
+     "bin": "doomsday-weapon",
+     "facets": {
+      "change": "a test at sea → fallout on people downwind",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "arms-race",
+       "cold-war",
+       "secrecy"
+      ],
+      "outcomes": [
+       "arms-race",
+       "extinction-risk",
+       "revelation"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: Castle Bravo",
+       "url": "https://en.wikipedia.org/wiki/Castle_Bravo"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "otb-nautilus-1955",
+     "year": 1955,
+     "date": "1955-01-17",
+     "title": "Nautilus sails under nuclear power",
+     "description": "The first nuclear-powered submarine leaves her pier and signals that she is 'underway on nuclear power'. The novel's USS Scorpion is one of her successors, and because she needs no oil she is the only warship left in Australian waters that can sail north.",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. Real history, before the fork. The novel's Scorpion is a fictional ship of the same kind; the novel says her nuclear fuel had to be prepared in Australia after she arrived.",
+     "binWhy": "A new kind of vessel that can cross oceans submerged without refuelling goes into service.",
+     "bin": "new-technology-deployed",
+     "sub": "transport-space",
+     "facets": {
+      "change": "submarines tied to fuel → submarines that can stay down",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "arms-race",
+       "technological-race"
+      ],
+      "outcomes": [
+       "arms-race",
+       "prestige"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: USS Nautilus (SSN-571)",
+       "url": "https://en.wikipedia.org/wiki/USS_Nautilus_(SSN-571)"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "otb-suez-1956",
+     "year": 1956,
+     "date": "1956-10-29",
+     "title": "The Suez Crisis",
+     "description": "Israel invades Egypt and Britain and France join two days later to retake the canal Nasser has nationalised, before American and Soviet pressure forces them out. The novel's war begins in the same corner of the world: a bomb on Tel Aviv, an Anglo-American show of force over Cairo, and Egyptian crews flying Soviet-built bombers to Washington and London.",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork and the year before the novel appeared. In the book the Russians had been supplying Egypt with aircraft for years, and the Egyptian bombers carried Russian markings, which is why NATO commanders struck Russia by mistake.",
+     "binWhy": "Two powers and a neighbour attack Egypt; the regional war the novel's world war grows out of.",
+     "bin": "war-breaks-out",
+     "sub": "regional",
+     "facets": {
+      "change": "a nationalised canal → an invasion and a forced withdrawal",
+      "mechanism": "invasion",
+      "actor": "state",
+      "position": "outside",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "colonial-expansion",
+       "empire-in-decline",
+       "rivalry"
+      ],
+      "outcomes": [
+       "war-with-neighbour",
+       "diplomacy"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: Suez Crisis",
+       "url": "https://en.wikipedia.org/wiki/Suez_Crisis"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "otb-novel-1957",
+     "year": 1957,
+     "date": "1957",
+     "title": "On the Beach is published",
+     "description": "Heinemann publishes Nevil Shute's novel, expanded from a four-part story, 'The Last Days on Earth', that the Sunday Graphic printed in April 1957.",
+     "importance": 2,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Shute wrote it after emigrating to Australia. The title page quotes T. S. Eliot's The Hollow Men.",
+     "binWhy": "A publication date, not a moment in the story's history; it carries no bin.",
+     "bin": null,
+     "facets": null,
+     "sources": [
+      {
+       "title": "Wikipedia: On the Beach (novel)",
+       "url": "https://en.wikipedia.org/wiki/On_the_Beach_(novel)"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "otb-film-1959",
+     "year": 1959,
+     "date": "1959-12-17",
+     "title": "Stanley Kramer's film opens on seven continents",
+     "description": "On the Beach, with Gregory Peck, Ava Gardner and Fred Astaire, opens the same day in 18 cinemas on every continent.",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The film moves the story to 1964 and changes the ending; this lineage follows the novel's dates.",
+     "binWhy": "A publication date, not a moment in the story's history; it carries no bin.",
+     "bin": null,
+     "facets": null,
+     "sources": [
+      {
+       "title": "Wikipedia: On the Beach (1959 film)",
+       "url": "https://en.wikipedia.org/wiki/On_the_Beach_(1959_film)"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "otb-war-1961",
+     "year": 1961,
+     "date": "1961 (late)",
+     "title": "The thirty-seven-day war",
+     "description": "Albania drops a bomb on Naples, someone bombs Tel Aviv, and Egyptian-crewed Soviet-built bombers hit Washington and London; NATO commanders with no government left strike Russia, and Russia and China blanket each other with cobalt bombs. About 4,700 explosions are recorded, the last on the thirty-seventh day, and the Northern Hemisphere is dead or dying.",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "'The short, bewildering war ... died away with the last seismic record of explosion on the thirty-seventh day'",
+     "confidence": "medium",
+     "note": "The novel gives no date for the war itself. Chapter one, which is Thursday 27 December 1962, says the short war 'had ended a year previously' and that Peter Holmes married Mary 'in 1961 six months before the war', so the war falls in the second half of 1961 and may run into the first weeks of 1962. The seismic count and the thirty-seven days are both stated in the text.",
+     "binWhy": "A war between the great powers breaks out and is fought with thermonuclear and cobalt weapons.",
+     "bin": "war-breaks-out",
+     "sub": "great-power",
+     "facets": {
+      "change": "small states with bombs → every northern power at war",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "arms-race",
+       "cold-war",
+       "rivalry"
+      ],
+      "outcomes": [
+       "mass-death",
+       "extinction-risk",
+       "collapse"
+      ]
+     },
+     "sources": [
+      {
+       "title": "FadedPage: On the Beach by Nevil Shute (full text; Thursday the 27th, Tuesday New Year's Day, the thirty-seven-day war)",
+       "url": "https://www.fadedpage.com/showbook.php?pid=20131214"
+      },
+      {
+       "title": "Internet Archive: On the Beach (Heinemann text; chapter one and the Scorpion wardroom account of the war)",
+       "url": "https://archive.org/details/in.ernet.dli.2015.125785"
+      },
+      {
+       "title": "Wikipedia: On the Beach (novel)",
+       "url": "https://en.wikipedia.org/wiki/On_the_Beach_(novel)"
+      }
+     ],
+     "tier": "T3",
+     "phase": "fork"
+    },
+    {
+     "id": "otb-south-1962",
+     "year": 1962,
+     "date": "1962-12-27",
+     "title": "The fallout crosses the equator",
+     "description": "A year after the war the winds have carried the fallout south: Cairns, Port Moresby and Darwin have gone silent, the oil is gone, and the scientists' estimate gives Melbourne until about September. On Thursday 27 December Lieutenant-Commander Peter Holmes is posted as liaison officer to the American nuclear submarine Scorpion.",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "'this must be Thursday the 27th'; 'You'll report in Scorpion on Tuesday, New Year's Day'",
+     "confidence": "high",
+     "note": "The date is fixed by the text: 'this must be Thursday the 27th', just after Christmas, and Holmes is to report aboard on 'Tuesday, New Year's Day'. After a 1961 wedding, the only fit is 1962-63 (the next is 1973-74), which gives the year the novel never prints.",
+     "binWhy": "Radiation from a war fought elsewhere is killing its way south through the last inhabited regions.",
+     "bin": "mass-death",
+     "sub": "nuclear",
+     "facets": {
+      "change": "a war in the north → a death line moving south",
+      "mechanism": "disaster",
+      "actor": "nature",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "biological",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "disaster-just-struck",
+       "war-just-ended",
+       "isolation"
+      ],
+      "outcomes": [
+       "mass-death",
+       "despair",
+       "isolation"
+      ]
+     },
+     "sources": [
+      {
+       "title": "FadedPage: On the Beach by Nevil Shute (full text; Thursday the 27th, Tuesday New Year's Day, the thirty-seven-day war)",
+       "url": "https://www.fadedpage.com/showbook.php?pid=20131214"
+      },
+      {
+       "title": "Internet Archive: On the Beach (Heinemann text; chapter one and the Scorpion wardroom account of the war)",
+       "url": "https://archive.org/details/in.ernet.dli.2015.125785"
+      },
+      {
+       "title": "Wikipedia: On the Beach (novel)",
+       "url": "https://en.wikipedia.org/wiki/On_the_Beach_(novel)"
+      }
+     ],
+     "tier": "T3",
+     "phase": "fork"
+    },
+    {
+     "id": "otb-end-1963",
+     "year": 1963,
+     "date": "1963 (to September)",
+     "title": "Seattle, and the end in Melbourne",
+     "description": "Scorpion sails to the dead cities of the American Pacific coast to trace a Morse signal from near Seattle and finds only a window frame knocking against a telegraph key; the hope that radiation would thin out is disproved. Radiation sickness reaches Adelaide and Sydney on 1 August and Melbourne within weeks, and the people who are left take the government's suicide pills while Towers takes Scorpion out to sea to scuttle her.",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "'the first day of August, the day the radio announced ... cases of radiation sickness in Adelaide and Sydney'",
+     "confidence": "medium",
+     "note": "The year follows from the opening's calendar. Months are given in the text: Scorpion's second cruise leaves once the crew is clear of measles, which Towers expects by 10 March; the first narcissi and the Adelaide and Sydney cases are 'the first day of August'; the Grand Prix is brought forward to 17 August; the Melbourne cases begin shortly after. The last deaths are late August or early September.",
+     "binWhy": "The last organised human society dies of radiation and does not come back.",
+     "bin": "civilisation-collapses",
+     "sub": "nuclear",
+     "facets": {
+      "change": "the last cities → no one left",
+      "mechanism": "disaster",
+      "actor": "nature",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "biological",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "disaster-just-struck",
+       "post-collapse",
+       "isolation"
+      ],
+      "outcomes": [
+       "extinction-risk",
+       "despair",
+       "mass-death"
+      ]
+     },
+     "sources": [
+      {
+       "title": "FadedPage: On the Beach by Nevil Shute (full text; Thursday the 27th, Tuesday New Year's Day, the thirty-seven-day war)",
+       "url": "https://www.fadedpage.com/showbook.php?pid=20131214"
+      },
+      {
+       "title": "Internet Archive: On the Beach (Heinemann text; chapter one and the Scorpion wardroom account of the war)",
+       "url": "https://archive.org/details/in.ernet.dli.2015.125785"
+      },
+      {
+       "title": "Wikipedia: On the Beach (novel)",
+       "url": "https://en.wikipedia.org/wiki/On_the_Beach_(novel)"
+      }
+     ],
+     "tier": "T3",
+     "phase": "fork"
+    }
+   ],
+   "groupingNote": "Belongs in alternate-past because it is written as the near future of 1957 and has now become an alternative 1961-63: a real Cold War with bombs spread to smaller states. It follows Shute's novel, not the 1959 or 2000 films. The fiction covers three years, war, spreading fallout and extinction, one event each; the five before it are the real weapons and crisis it draws on. Everything is T3: nothing earlier than 1945 matters to it and nothing survives past 1963.",
+   "sources": [
+    {
+     "title": "Wikipedia: On the Beach (novel)",
+     "url": "https://en.wikipedia.org/wiki/On_the_Beach_(novel)"
+    },
+    {
+     "title": "Wikipedia: On the Beach (1959 film)",
+     "url": "https://en.wikipedia.org/wiki/On_the_Beach_(1959_film)"
+    },
+    {
+     "title": "FadedPage: On the Beach by Nevil Shute (full text; Thursday the 27th, Tuesday New Year's Day, the thirty-seven-day war)",
+     "url": "https://www.fadedpage.com/showbook.php?pid=20131214"
+    }
+   ]
+  },
+  {
+   "id": "the-day-after",
+   "title": "The Day After",
+   "medium": "tv",
+   "creator": "Nicholas Meyer (director); Edward Hume (writer), ABC",
+   "originYear": 1983,
+   "group": "alternate-past",
+   "epoch": "present",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 1982,
+    "label": "A mutiny in East Germany, a blockade of Berlin, and a war that goes nuclear",
+    "delta": "Real: in 1982 Berlin is quiet, the Pershing II deployment is still a year off and hanging on arms talks, and the war the Kansas silos were built for has not come. Fiction: East Germany seals West Berlin after its own army rebels, NATO tries to force the corridor, and within a day tactical warheads over the Rhine have become an exchange of intercontinental missiles.",
+    "inUniverse": "No year is stated; the crisis runs over two days in early autumn",
+    "confidence": "low",
+    "note": "The film gives no year. It is filed in 1982, the late summer and early autumn when it was shot in Lawrence, because its own calendar is that season and nothing in it places it later. It was broadcast in November 1983 and was received as a picture of the present, so 1983 is an equally fair reading. The first thing in it that did not happen is the East German army rebellion reported on the first evening.",
+    "sources": [
+     {
+      "title": "Wikipedia: The Day After",
+      "url": "https://en.wikipedia.org/wiki/The_Day_After"
+     },
+     {
+      "title": "KU Memorial Unions: ABC's made-for-TV movie, The Day After - filmed in Lawrence in August and September 1982",
+      "url": "https://union.ku.edu/abcs-made-tv-movie-day-after"
+     },
+     {
+      "title": "Archived 2009 copy of the Wikipedia article: 'Events leading to war', with the Friday 15 and Saturday 16 September dates and the 3:38 pm first strike",
+      "url": "http://taggedwiki.zubiaga.org/new_content/baba1d15bc4b3fc06880cbaf0a3f5773"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "pessimistic",
+    "why": "Kansas City is gone, the survivors in Lawrence are dying of radiation, looters are being shot, and the film ends with Professor Huxley asking on the radio whether anyone can hear him and getting no answer.",
+    "asOf": 1982
+   },
+   "events": [
+    {
+     "id": "tda-hiroshima-1945",
+     "year": 1945,
+     "date": "1945-08-06",
+     "title": "Hiroshima and Nagasaki",
+     "description": "The United States destroys two Japanese cities with single bombs. Nothing like it has happened to an American city, and The Day After was made to show it happening to one; its closing card says a real attack would be worse than what it shows.",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. Nagasaki was bombed on 9 August. Director Nicholas Meyer insisted on a disclaimer after the credits that the film understates the effects of nuclear war.",
+     "binWhy": "A nuclear weapon kills a city's population for the first time.",
+     "bin": "mass-death",
+     "sub": "nuclear",
+     "facets": {
+      "change": "cities bombed by fleets → a city destroyed by one bomb",
+      "mechanism": "attack",
+      "actor": "state",
+      "position": "outside",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": -1
+      },
+      "preconditions": [
+       "long-war",
+       "technological-race",
+       "secrecy"
+      ],
+      "outcomes": [
+       "mass-death",
+       "arms-race",
+       "surrender"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: Atomic bombings of Hiroshima and Nagasaki",
+       "url": "https://en.wikipedia.org/wiki/Atomic_bombings_of_Hiroshima_and_Nagasaki"
+      },
+      {
+       "title": "Wikipedia: The Day After",
+       "url": "https://en.wikipedia.org/wiki/The_Day_After"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "tda-blockade-1948",
+     "year": 1948,
+     "date": "1948-06-24",
+     "title": "The Berlin Blockade",
+     "description": "The Soviet Union cuts the land routes into the western sectors of Berlin, and the Western allies supply the city by air until the blockade is lifted in May 1949. The film's crisis replays it with East Germany as the blockader and no airlift: its bulletins say Tegel and Tempelhof are closed to all traffic.",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. The blockade ran from 24 June 1948 to 12 May 1949 and ended in a Western success.",
+     "binWhy": "An armed standoff over Berlin that stays short of war.",
+     "bin": "long-war",
+     "sub": "cold-war",
+     "facets": {
+      "change": "open access → a city under siege",
+      "mechanism": "attack",
+      "actor": "state",
+      "position": "outside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "occupation",
+       "rivalry",
+       "war-just-ended"
+      ],
+      "outcomes": [
+       "cold-war",
+       "partition",
+       "stalemate"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: Berlin Blockade",
+       "url": "https://en.wikipedia.org/wiki/Berlin_Blockade"
+      },
+      {
+       "title": "Springfield! Springfield!: The Day After dialogue transcript (the Berlin bulletins, the ultimatum, the President's ceasefire address)",
+       "url": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-day-after"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "tda-uprising-1953",
+     "year": 1953,
+     "date": "1953-06-16/17",
+     "title": "The East German uprising",
+     "description": "A strike by East Berlin building workers against raised quotas becomes an uprising across the country and is put down by Soviet tanks. The film's war starts from the same weakness: reports of 'widespread rebellion among several divisions of the East German Army', and a blockade of West Berlin that follows.",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. The rebellion in the film is only reported in a bulletin; its cause is never given.",
+     "binWhy": "People in a Soviet-controlled state rise against the regime in the streets.",
+     "bin": "uprising",
+     "sub": "mass-protest",
+     "facets": {
+      "change": "work quotas → strikes and Soviet tanks",
+      "mechanism": "uprising",
+      "actor": "movement",
+      "position": "below",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "occupation",
+       "repression",
+       "one-party-state"
+      ],
+      "outcomes": [
+       "suppression",
+       "resistance-forms"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: East German uprising of 1953",
+       "url": "https://en.wikipedia.org/wiki/East_German_uprising_of_1953"
+      },
+      {
+       "title": "Springfield! Springfield!: The Day After dialogue transcript (the Berlin bulletins, the ultimatum, the President's ceasefire address)",
+       "url": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-day-after"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "tda-wall-1961",
+     "year": 1961,
+     "date": "1961-08-13",
+     "title": "The Berlin Wall goes up",
+     "description": "East German forces seal the border with West Berlin overnight and begin the wall that will stand until 1989. In the film's first bulletin East Germany closes the four main autobahn crossings to West Berlin, at Lauenburg, Helmstedt, Herleshausen and Rudolphstein.",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. Helmstedt-Marienborn, which the film's NATO forces try to break through, was the main road checkpoint between West Germany and the corridor to Berlin.",
+     "binWhy": "A government seals its people in behind troops and wire.",
+     "bin": "crackdown",
+     "sub": "emergency-rule",
+     "facets": {
+      "change": "an open city border → a wall",
+      "mechanism": "consolidation",
+      "actor": "state",
+      "position": "above",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "cold-war",
+       "one-party-state",
+       "exile"
+      ],
+      "outcomes": [
+       "closing-borders",
+       "partition"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: Berlin Wall",
+       "url": "https://en.wikipedia.org/wiki/Berlin_Wall"
+      },
+      {
+       "title": "Springfield! Springfield!: The Day After dialogue transcript (the Berlin bulletins, the ultimatum, the President's ceasefire address)",
+       "url": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-day-after"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "tda-whiteman-1964",
+     "year": 1964,
+     "date": "1964-06-29",
+     "title": "Whiteman's 150 Minuteman missiles go on alert",
+     "description": "The 351st Strategic Missile Wing at Whiteman Air Force Base, Missouri, accepts its last flight of Minuteman missiles and has 150 on alert in silos among the farms east of Kansas City. They are why the film's writers chose this corner of the Midwest: Airman McCoy serves in the wing, the Dahlbergs and Hendrys farm beside the silos, and the missiles draw the attack.",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. The wing was organised on 1 February 1963, received its first missile on 14 January 1964 and was fully operational on 29 June 1964. Wikipedia's production section says Hume and Meyer picked Lawrence partly because 150 Minuteman silos stood nearby.",
+     "binWhy": "A weapon system is fielded that makes a farming region a first-strike target.",
+     "bin": "new-technology-deployed",
+     "sub": "weapons",
+     "facets": {
+      "change": "bomber base → a field of missile silos",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "above",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "arms-race",
+       "cold-war"
+      ],
+      "outcomes": [
+       "arms-race",
+       "dependency"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: 351st Missile Wing",
+       "url": "https://en.wikipedia.org/wiki/351st_Missile_Wing"
+      },
+      {
+       "title": "Wikipedia: Whiteman Air Force Base",
+       "url": "https://en.wikipedia.org/wiki/Whiteman_Air_Force_Base"
+      },
+      {
+       "title": "Wikipedia: The Day After",
+       "url": "https://en.wikipedia.org/wiki/The_Day_After"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "tda-ss20-1976",
+     "year": 1976,
+     "date": "1976",
+     "title": "The Soviet SS-20 is deployed",
+     "description": "The Soviet Union begins fielding the RSD-10 Pioneer, a mobile intermediate-range missile aimed at Western Europe. It sets off the Euromissile crisis that fills the film's first news bulletins.",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. Wikipedia gives the missile's service as 1976 to 1988 and calls its deployment a major cause of NATO's Double-Track Decision.",
+     "binWhy": "A new nuclear missile is fielded that changes the balance in Europe.",
+     "bin": "new-technology-deployed",
+     "sub": "weapons",
+     "facets": {
+      "change": "fixed missiles → mobile missiles aimed at Europe",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "outside",
+      "scope": "civilisational",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "arms-race",
+       "cold-war",
+       "rivalry"
+      ],
+      "outcomes": [
+       "arms-race",
+       "rivalry"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: RSD-10 Pioneer",
+       "url": "https://en.wikipedia.org/wiki/RSD-10_Pioneer"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "tda-double-track-1979",
+     "year": 1979,
+     "date": "1979-12-12",
+     "title": "NATO's Double-Track Decision",
+     "description": "NATO decides to deploy Pershing II and cruise missiles in Western Europe unless talks limit Soviet missiles by the autumn of 1983. The film's early bulletins are this argument: Pershing 2s for Europe, Labour saying scrap them, and 'the USA won't really want to sacrifice Chicago for Hamburg'.",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. The film's Pershing II deployment is still being argued about, which fits both 1982 and 1983.",
+     "binWhy": "An arms standoff hardens into a deployment deadline.",
+     "bin": "long-war",
+     "sub": "cold-war",
+     "facets": {
+      "change": "negotiation → negotiation with missiles as the deadline",
+      "mechanism": "negotiation",
+      "actor": "state",
+      "position": "above",
+      "scope": "civilisational",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "arms-race",
+       "cold-war",
+       "rivalry"
+      ],
+      "outcomes": [
+       "arms-race",
+       "diplomacy",
+       "radicalisation"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: NATO Double-Track Decision",
+       "url": "https://en.wikipedia.org/wiki/NATO_Double-Track_Decision"
+      },
+      {
+       "title": "Springfield! Springfield!: The Day After dialogue transcript (the Berlin bulletins, the ultimatum, the President's ceasefire address)",
+       "url": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-day-after"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "tda-war-1982",
+     "year": 1982,
+     "date": "1982 (early autumn)",
+     "title": "Berlin, the Rhine, and Kansas City",
+     "description": "After reports of mutiny in the East German army, East Germany seals West Berlin; NATO forces the Helmstedt crossing, Soviet armour drives for the Rhine, NATO airbursts three nuclear warheads over it, and a Soviet weapon destroys NATO headquarters in Brussels. Within hours the missiles fly both ways, Kansas City and the silo fields are destroyed, and Lawrence's survivors die over the following weeks of burns, fallout and each other while the President announces a ceasefire.",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "No year stated; one evening, the next day, then weeks of aftermath in the autumn",
+     "confidence": "low",
+     "note": "The film states no year and is set in its own present. It was shot in and around Lawrence in August and September 1982, and its calendar is that season: a town football game on the night of the blockade, a harvest ten days overdue, Eastern Daylight Time in the ultimatum, and 'nice time of the year, fall' in the aftermath. It aired on 20 November 1983, and audiences took it as happening now; a reader who prefers that should add a year. An archived 2009 version of the Wikipedia article dates the blockade to 'Friday, September 15' and the Helmstedt attack to 'Saturday, September 16', with the first strike on Kansas City at 3:38 pm; those dates could not be found in the dialogue transcript, and 15 September was a Friday in 1978 and 1989, not in 1982 or 1983.",
+     "binWhy": "A war between NATO and the Warsaw Pact begins and escalates to a full nuclear exchange.",
+     "bin": "war-breaks-out",
+     "sub": "great-power",
+     "facets": {
+      "change": "a Berlin blockade → a full nuclear exchange",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "cold-war",
+       "arms-race",
+       "rivalry"
+      ],
+      "outcomes": [
+       "mass-death",
+       "collapse",
+       "despair"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: The Day After",
+       "url": "https://en.wikipedia.org/wiki/The_Day_After"
+      },
+      {
+       "title": "Springfield! Springfield!: The Day After dialogue transcript (the Berlin bulletins, the ultimatum, the President's ceasefire address)",
+       "url": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-day-after"
+      },
+      {
+       "title": "Archived 2009 copy of the Wikipedia article: 'Events leading to war', with the Friday 15 and Saturday 16 September dates and the 3:38 pm first strike",
+       "url": "http://taggedwiki.zubiaga.org/new_content/baba1d15bc4b3fc06880cbaf0a3f5773"
+      },
+      {
+       "title": "KU Memorial Unions: ABC's made-for-TV movie, The Day After - filmed in Lawrence in August and September 1982",
+       "url": "https://union.ku.edu/abcs-made-tv-movie-day-after"
+      },
+      {
+       "title": "KCUR: How a movie shot 40 years ago in Kansas changed the trajectory of the nuclear arms race",
+       "url": "https://www.kcur.org/arts-life/2023-12-04/how-a-movie-shot-40-years-ago-in-kansas-changed-the-trajectory-of-the-nuclear-arms-race"
+      }
+     ],
+     "tier": "T3",
+     "phase": "fork"
+    },
+    {
+     "id": "tda-broadcast-1983",
+     "year": 1983,
+     "date": "1983-11-20",
+     "title": "ABC broadcasts The Day After",
+     "description": "About 100 million Americans watch the film on its first broadcast, followed by a live debate with Carl Sagan, Henry Kissinger, Robert McNamara and others.",
+     "importance": 2,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Edward Hume was commissioned to write it in 1981; it was shot in 1982 and first scheduled for May 1983. Ronald Reagan watched it on 10 October 1983 and wrote that it 'left me greatly depressed'. It was shown on Soviet television in 1987.",
+     "binWhy": "A publication date, not a moment in the story's history; it carries no bin.",
+     "bin": null,
+     "facets": null,
+     "sources": [
+      {
+       "title": "Wikipedia: The Day After",
+       "url": "https://en.wikipedia.org/wiki/The_Day_After"
+      },
+      {
+       "title": "Wikiquote: The Day After (1983 film) - Reagan's diary entry of 10 October 1983",
+       "url": "https://en.wikiquote.org/wiki/The_Day_After_(1983_film)"
+      }
+     ],
+     "tier": "T3",
+     "phase": "fork"
+    }
+   ],
+   "groupingNote": "Belongs in alternate-past because it is plainly our early-1980s America - the Euromissile argument, Minuteman silos among the farms, Reagan's voice imitated for the President - with one crisis added. It follows the 1983 ABC broadcast version. The fiction takes a weekend and a few weeks, so it has one event; the seven before it are the real history the film builds on, from Berlin to the silos. Everything is T3: nothing earlier than 1945 bears on it and the story ends in its own autumn.",
+   "sources": [
+    {
+     "title": "Wikipedia: The Day After",
+     "url": "https://en.wikipedia.org/wiki/The_Day_After"
+    },
+    {
+     "title": "KU Memorial Unions: ABC's made-for-TV movie, The Day After - filmed in Lawrence in August and September 1982",
+     "url": "https://union.ku.edu/abcs-made-tv-movie-day-after"
+    },
+    {
+     "title": "Wikiquote: The Day After (1983 film) - Reagan's diary entry of 10 October 1983",
+     "url": "https://en.wikiquote.org/wiki/The_Day_After_(1983_film)"
+    }
+   ]
+  },
+  {
+   "id": "ss-gb",
+   "title": "SS-GB",
+   "medium": "book",
+   "creator": "Len Deighton",
+   "originYear": 1978,
+   "group": "alternate-past",
+   "epoch": "present",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 1940,
+    "label": "The Luftwaffe wins the Battle of Britain and the invasion comes",
+    "delta": "Real: in 1940 the RAF holds off the Luftwaffe through the summer and autumn, and on 17 September Hitler postpones Operation Sea Lion indefinitely. Fiction: the RAF loses, German troops land near Ashford and take London, the King and Churchill are captured, and in February 1941 Britain's forces surrender.",
+    "inUniverse": "The invasion of 1940; the instrument of surrender of February 1941; the story in November 1941",
+    "confidence": "medium",
+    "note": "The novel keeps real history to the summer of 1940 and changes the outcome of the air battle. It gives the surrender as February 1941 in its opening document and sets the story nine months later, in November 1941; the landings themselves are dated only to 1940 in the summaries consulted. Its 1941 also lacks the German invasion of the Soviet Union, a consequence of the fork rather than a second one.",
+    "sources": [
+     {
+      "title": "Wikipedia: SS-GB",
+      "url": "https://en.wikipedia.org/wiki/SS-GB"
+     },
+     {
+      "title": "Speesh Reads: Review of SS-GB - 'In February 1941 British Command surrendered'",
+      "url": "https://speeshreads.com/2013/09/09/review-ss-gb/"
+     },
+     {
+      "title": "Wikipedia: Operation Sea Lion",
+      "url": "https://en.wikipedia.org/wiki/Operation_Sea_Lion"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "unknown",
+    "why": "Britain is still occupied and the King is dead, but the Americans have taken Germany's atomic research and the King's death beside US Marines is meant to bring them into the war; the novel ends before either consequence arrives.",
+    "asOf": 1941
+   },
+   "events": [
+    {
+     "id": "ssgb-hitler-1933",
+     "year": 1933,
+     "date": "1933-01-30",
+     "title": "Hitler becomes chancellor",
+     "description": "President Hindenburg appoints Adolf Hitler chancellor of Germany after weeks of backroom negotiation, and within months the Reichstag fire gives him the pretext for dictatorship. The regime that occupies Britain in the novel is this one, eight years on.",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork.",
+     "binWhy": "A leader wins office by appointment and legal manoeuvre and uses it to rule alone.",
+     "bin": "power-seized",
+     "sub": "strongman-legal",
+     "facets": {
+      "change": "a weak republic → a dictatorship by decree",
+      "mechanism": "law",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-economic",
+       "crisis-legitimacy",
+       "street-violence"
+      ],
+      "outcomes": [
+       "one-party-state",
+       "consolidation"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: Adolf Hitler's rise to power",
+       "url": "https://en.wikipedia.org/wiki/Adolf_Hitler's_rise_to_power"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "ssgb-long-knives-1934",
+     "year": 1934,
+     "date": "1934-06-30/07-02",
+     "title": "The Night of the Long Knives",
+     "description": "Hitler has the SS and Gestapo murder the SA leadership under Ernst Röhm and other rivals, confirming his supremacy and binding the army to him. The SS that comes out of it is the organisation of the novel's title, and its feud with the army and the Abwehr drives the plot.",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. The official toll was 85; estimates run to a thousand. In the novel the SS runs the police of occupied Britain and is at odds with the German Army, which conspires with the British Resistance to embarrass it.",
+     "binWhy": "Rivals inside the ruling movement are killed in a planned purge.",
+     "bin": "crackdown",
+     "sub": "purge",
+     "facets": {
+      "change": "a rival private army → the SS supreme",
+      "mechanism": "consolidation",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "one-party-state",
+       "rivalry",
+       "street-violence"
+      ],
+      "outcomes": [
+       "purge",
+       "consolidation"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: Night of the Long Knives",
+       "url": "https://en.wikipedia.org/wiki/Night_of_the_Long_Knives"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "ssgb-luftwaffe-1935",
+     "year": 1935,
+     "date": "1935-02-26",
+     "title": "The Luftwaffe is revealed",
+     "description": "Germany officially establishes an air force that the Versailles Treaty forbade, weeks before announcing rearmament and conscription. It is the force that, in the novel, wins the air battle over England that it lost in ours.",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. Wikipedia dates the Luftwaffe's official establishment to 26 February 1935 and the announcement of rearmament to 16 March.",
+     "binWhy": "A new military body is founded that will decide the war over Britain.",
+     "bin": "new-institution",
+     "facets": {
+      "change": "a banned air arm → an open air force",
+      "mechanism": "founding",
+      "actor": "state",
+      "position": "above",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "arms-race",
+       "rivalry"
+      ],
+      "outcomes": [
+       "arms-race",
+       "state-powers"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: Luftwaffe",
+       "url": "https://en.wikipedia.org/wiki/Luftwaffe"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "ssgb-abdication-1936",
+     "year": 1936,
+     "date": "1936-12-10",
+     "title": "Edward VIII abdicates",
+     "description": "Edward VIII gives up the throne to marry Wallis Simpson, and his brother becomes George VI. In the novel George VI is the king held in the Tower of London, and the Duke of Windsor has escaped to the Bahamas.",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. Edward signed the instrument of abdication on 10 December and broadcast from Windsor on 11 December. In our history he was made Governor of the Bahamas in July 1940; the novel keeps him there.",
+     "binWhy": "A ruler steps down and his brother succeeds.",
+     "bin": "ruler-falls",
+     "sub": "voted-out",
+     "facets": {
+      "change": "Edward VIII → George VI",
+      "mechanism": "law",
+      "actor": "individual",
+      "position": "above",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-legitimacy"
+      ],
+      "outcomes": [
+       "succession-struggle",
+       "new-order"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: Abdication of Edward VIII",
+       "url": "https://en.wikipedia.org/wiki/Abdication_of_Edward_VIII"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "ssgb-fission-1938",
+     "year": 1938,
+     "date": "1938-12",
+     "title": "Nuclear fission is discovered",
+     "description": "Otto Hahn and Fritz Strassmann in Berlin find barium in bombarded uranium, and Lise Meitner and Otto Frisch explain it as the splitting of the nucleus. The novel's plot turns on where that knowledge leads: a German atomic research station at Bringle Sands in Devon, and an American wish to have it.",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. Hahn wrote to Meitner on 19 December and the results were submitted on 22 December 1938. The novel's German programme is code-named 'Apocalypse'.",
+     "binWhy": "A discovery about matter arrives that makes an atomic bomb possible.",
+     "bin": "breakthrough-science",
+     "sub": "physics-energy",
+     "facets": {
+      "change": "radiochemistry → the splitting of the atom",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "rivalry"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "arms-race"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: Discovery of nuclear fission",
+       "url": "https://en.wikipedia.org/wiki/Discovery_of_nuclear_fission"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "ssgb-pact-1939",
+     "year": 1939,
+     "date": "1939-08-23",
+     "title": "The Nazi-Soviet Pact",
+     "description": "Germany and the Soviet Union sign a non-aggression pact with a secret protocol dividing Eastern Europe, and on 1 September Germany invades Poland; Britain declares war two days later. In the novel the pact is still in force in 1941: the Soviet Navy has bases at Rosyth, Scapa Flow and Invergordon, and Karl Marx's body is to be moved from Highgate to Moscow.",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "Real history, before the fork. The pact was signed on 24 August and dated 23 August; Germany invaded Poland on 1 September. In our history it ended with the German invasion of the Soviet Union in June 1941, which the novel's 1941 does not have.",
+     "binWhy": "Two enemies sign a pact that frees one of them to make war in the west.",
+     "bin": "peace-made",
+     "facets": {
+      "change": "ideological enemies → partners in conquest",
+      "mechanism": "negotiation",
+      "actor": "state",
+      "position": "above",
+      "scope": "civilisational",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "rivalry",
+       "arms-race"
+      ],
+      "outcomes": [
+       "partition",
+       "war-of-expansion",
+       "collaboration"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: Molotov–Ribbentrop Pact",
+       "url": "https://en.wikipedia.org/wiki/Molotov%E2%80%93Ribbentrop_Pact"
+      }
+     ],
+     "tier": "T3",
+     "phase": "prehistory"
+    },
+    {
+     "id": "ssgb-invasion-1940",
+     "year": 1940,
+     "date": "1940",
+     "title": "The RAF loses, and the Germans land in Kent",
+     "description": "The Luftwaffe wins the air battle over southern England and the invasion goes ahead: German troops land near Ashford, Canterbury is declared an open city and London falls, while a rearguard at Colchester holds long enough for the Royal Navy to escape from Harwich. The King and Churchill are taken prisoner, and Britain's gold is shipped to Canada.",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Landings near Ashford; Canterbury an open city; the Colchester rearguard",
+     "confidence": "medium",
+     "note": "In our history the RAF held the Luftwaffe off between July and October 1940 and Hitler postponed Operation Sea Lion indefinitely on 17 September. Wikipedia's summary of the novel places the landings in 1940; the reviews count the novel's 'nine months' from the surrender of February 1941, so the fighting in England may run on into that winter. No month is given for the landings.",
+     "binWhy": "Britain is defeated and its capital and territory occupied.",
+     "bin": "defeat-and-occupation",
+     "facets": {
+      "change": "an island at war → an occupied country",
+      "mechanism": "invasion",
+      "actor": "state",
+      "position": "outside",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "long-war",
+       "rivalry",
+       "empire-in-decline"
+      ],
+      "outcomes": [
+       "occupation",
+       "surrender",
+       "collaboration"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: SS-GB",
+       "url": "https://en.wikipedia.org/wiki/SS-GB"
+      },
+      {
+       "title": "Wikipedia: SS-GB (TV series)",
+       "url": "https://en.wikipedia.org/wiki/SS-GB_(TV_series)"
+      },
+      {
+       "title": "Wikipedia: Battle of Britain",
+       "url": "https://en.wikipedia.org/wiki/Battle_of_Britain"
+      },
+      {
+       "title": "Wikipedia: Operation Sea Lion",
+       "url": "https://en.wikipedia.org/wiki/Operation_Sea_Lion"
+      }
+     ],
+     "tier": "T3",
+     "phase": "fork"
+    },
+    {
+     "id": "ssgb-king-1941",
+     "year": 1941,
+     "date": "1941-11",
+     "title": "The King dies at Bringle Sands",
+     "description": "Britain's forces sign an instrument of surrender in February and Churchill is court-martialled in Berlin and shot. In November, while Superintendent Douglas Archer of Scotland Yard investigates the murder of an atomic scientist, the Resistance and the German Army free the comatose George VI from SS custody and try to get him to an American landing party; he is killed in an SS ambush, and the rescue turns out to be cover for a larger US raid that carries off the Bringle Sands research.",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "November 1941, 'nine months' after the surrender",
+     "confidence": "medium",
+     "note": "The surrender is dated February 1941 by the novel's opening document and by reviews; one search summary gives 19 February, which could not be confirmed. The story is set in November 1941 and the raid comes at its end; the day is not given. Archer concludes that the Resistance leader Mayhew arranged a martyr's death beside American Marines to bring the United States into the war, and that Princess Elizabeth, fifteen, will be crowned in exile.",
+     "binWhy": "An imprisoned monarch is killed in a fight between the occupiers and those trying to free him.",
+     "bin": "ruler-falls",
+     "sub": "killed",
+     "facets": {
+      "change": "a captive king → a dead one and a queen in exile",
+      "mechanism": "attack",
+      "actor": "faction",
+      "position": "below",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "occupation",
+       "repression",
+       "hidden-society"
+      ],
+      "outcomes": [
+       "resistance-forms",
+       "succession-struggle",
+       "turning-point"
+      ]
+     },
+     "sources": [
+      {
+       "title": "Wikipedia: SS-GB",
+       "url": "https://en.wikipedia.org/wiki/SS-GB"
+      },
+      {
+       "title": "Patrick T. Reardon: Book review of SS-GB - 'November, 1941, just nine months after government officials signed the instrument of surrender'",
+       "url": "https://patricktreardon.com/book-review-ss-gb-by-len-deighton/"
+      },
+      {
+       "title": "Speesh Reads: Review of SS-GB - 'In February 1941 British Command surrendered'",
+       "url": "https://speeshreads.com/2013/09/09/review-ss-gb/"
+      },
+      {
+       "title": "Graeme Shimmin: SS-GB, an in-depth review of the book by Len Deighton and the BBC TV miniseries",
+       "url": "http://graemeshimmin.com/ss-gb-book-review/"
+      }
+     ],
+     "tier": "T3",
+     "phase": "fork"
+    },
+    {
+     "id": "ssgb-novel-1978",
+     "year": 1978,
+     "date": "1978-08-24",
+     "title": "SS-GB is published",
+     "description": "Jonathan Cape publishes Len Deighton's novel, subtitled in some editions 'Nazi-Occupied Britain 1941'.",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "note": "The BBC adapted it as a five-part series broadcast on BBC One from 19 February to 19 March 2017, which changes several details; this lineage follows the novel.",
+     "binWhy": "A publication date, not a moment in the story's history; it carries no bin.",
+     "bin": null,
+     "facets": null,
+     "sources": [
+      {
+       "title": "Wikipedia: SS-GB",
+       "url": "https://en.wikipedia.org/wiki/SS-GB"
+      },
+      {
+       "title": "Wikipedia: SS-GB (TV series)",
+       "url": "https://en.wikipedia.org/wiki/SS-GB_(TV_series)"
+      }
+     ],
+     "tier": "T3",
+     "phase": "aftermath"
+    }
+   ],
+   "groupingNote": "Belongs in alternate-past because it keeps our history to the summer of 1940 and changes one battle. It follows Deighton's 1978 novel, not the 2017 BBC series. The fiction covers two years, the invasion and the occupation's first November, so it has two fictional events; the six before it are the real history it builds on, from Hitler's appointment to the Nazi-Soviet Pact. All events are T3: nothing before 1933 bears on it and the novel ends in 1941.",
+   "sources": [
+    {
+     "title": "Wikipedia: SS-GB",
+     "url": "https://en.wikipedia.org/wiki/SS-GB"
+    },
+    {
+     "title": "Wikipedia: SS-GB (TV series)",
+     "url": "https://en.wikipedia.org/wiki/SS-GB_(TV_series)"
+    },
+    {
+     "title": "Graeme Shimmin: SS-GB, an in-depth review of the book by Len Deighton and the BBC TV miniseries",
+     "url": "http://graemeshimmin.com/ss-gb-book-review/"
+    }
+   ]
   }
  ]
 }

@@ -4688,6 +4688,3946 @@
     }
    ],
    "group": "far-future-space-opera"
+  },
+  {
+   "id": "red-rising",
+   "title": "Red Rising",
+   "medium": "book",
+   "creator": "Pierce Brown",
+   "originYear": 2014,
+   "group": "far-future-space-opera",
+   "epoch": "far-future",
+   "franchiseStatus": "ongoing",
+   "divergence": {
+    "year": 2204,
+    "label": "Humanity begins to colonise the solar system",
+    "delta": "Real: the 2200s lie ahead of us and no one lives beyond Earth. Fiction: settlers are spreading to Luna and beyond, and within a century their descendants will conquer Earth and breed humanity into castes.",
+    "inUniverse": "Colonisation began 'eight centuries ago' as of 720 PCE (Sons of Ares), about 80 years before the Conquering",
+    "confidence": "low",
+    "note": "A projection, flagged as one. The saga counts years from the Conquering (PCE, Post-Conquering Era) and no Pierce Brown text or interview gives the real year of 0 PCE. The conversion used is real = PCE + 2284, built from two in-text clues the fan wiki collects: in Morning Star Roque is 'born three thousand years too late' for togas, which, taking the Roman toga at about year 0 and Roque's birth at about 720 PCE, puts 0 PCE near 2280; and Iron Gold makes 17 October 753 PCE a Tuesday, which only certain epochs satisfy - 2284 is the nearest to 2280 that does. The wiki's own window is 2103-2758 for the epoch and 2800-3500 CE for the story; a reviewer reads it as roughly AD 3000, which this conversion matches (Red Rising opens in 3021). Anything before the colonisation, including a Third World War the saga mentions but never dates, is invisible.",
+    "sources": [
+     {
+      "title": "Red Rising Wiki (Fandom): Timeline (PCE dates with chapter citations)",
+      "url": "https://red-rising.fandom.com/wiki/Timeline"
+     },
+     {
+      "title": "The Worthy House: review of Red Rising (reads the setting as roughly AD 3000)",
+      "url": "https://theworthyhouse.com/2023/05/04/red-rising-pierce-brown/"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "unknown",
+    "why": "Light Bringer ends with a battered Republic and three former enemies sailing together to break the siege of Mars while Lysander, the Society's heir, holds a weapon that can kill a Colour; the war is undecided and the next novel is unpublished.",
+    "asOf": 3039
+   },
+   "events": [
+    {
+     "id": "rr-red-rising-2014",
+     "year": 2014,
+     "date": "2014-01-28",
+     "title": "Red Rising is published",
+     "description": "Del Rey publishes Pierce Brown's first novel, Red Rising, on 28 January 2014. Golden Son (2015) and Morning Star (2016) complete the first trilogy; Iron Gold (2018), Dark Age (2019) and Light Bringer (2023) continue it.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Red Rising",
+       "url": "https://en.wikipedia.org/wiki/Red_Rising"
+      }
+     ],
+     "note": "A real-world publication, not a story moment.",
+     "binWhy": "A real-world release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "rr-colonisation-2204",
+     "year": 2204,
+     "date": "2204",
+     "title": "Humanity begins to colonise the solar system",
+     "description": "Settlers reach Luna and then further out. The colonies grow apart from an Earth that, by the time of the Conquering, is divided among twenty-odd empires and blocs.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "'Eight centuries ago' as of 720 PCE (Sons of Ares, vol. 1)",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Red Rising Wiki (Fandom): Timeline (PCE dates with chapter citations)",
+       "url": "https://red-rising.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Real year = PCE + 2284 (a projection; see the divergence note). Sons of Ares says colonisation began 'eight centuries ago' as of 720 PCE, which puts it about 80 years before the Conquering; Red Rising itself says Luna was colonised 'seven hundred years back', which would put it after the Conquering and is treated by the wiki as a discrepancy. Earth's pre-Conquering history also includes a Third World War the saga mentions but never dates.",
+     "binWhy": "The first permanent settlements beyond Earth, from which the empire will come.",
+     "bin": "settlement-founded",
+     "sub": "moon-or-planet",
+     "facets": {
+      "change": "an Earth of nations → colonies on Luna and beyond",
+      "mechanism": "founding",
+      "actor": "state",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "frontier-open",
+       "technological-race"
+      ],
+      "outcomes": [
+       "colonisation",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "rr-conquering-2284",
+     "year": 2284,
+     "date": "2284",
+     "title": "The Conquering: Luna's Golds take Earth and found the Society",
+     "description": "Silenius au Lune leads the lunar colonists to conquer Earth and founds the Society, a hierarchy of genetically engineered castes named by colour with Golds at the top. Within the century the last humans on Earth who belong to no Colour are sterilised.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Year 0 PCE (Post-Conquering Era)",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Red Rising Wiki (Fandom): Timeline (PCE dates with chapter citations)",
+       "url": "https://red-rising.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Real year = PCE + 2284 (a projection; see the divergence note). The Conquering is year 0 of the Post-Conquering Era by definition; its real year is the conversion's anchor. The sterilisation of the last pre-Colour humans is placed only in 'the late first century PCE' (Iron Gold) and so is folded in here.",
+     "binWhy": "An empire is proclaimed over Earth and its colonies under one ruler and one caste order.",
+     "bin": "union-founded",
+     "facets": {
+      "change": "Earth's nations → a caste empire ruled from Luna",
+      "mechanism": "invasion",
+      "actor": "faction",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "rivalry",
+       "empire-in-decline"
+      ],
+      "outcomes": [
+       "new-order",
+       "servitude",
+       "one-party-state"
+      ]
+     }
+    },
+    {
+     "id": "rr-reds-to-mars-2434",
+     "year": 2434,
+     "date": "2434",
+     "title": "The first Reds are sent under Mars to mine helium-3",
+     "description": "Red labourers are shipped to Mars to mine helium-3 for the terraforming, and Phobos is colonised. Their descendants are told for centuries that they are still preparing the planet for humanity.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "c. 150 PCE",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Red Rising Wiki (Fandom): Timeline (PCE dates with chapter citations)",
+       "url": "https://red-rising.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Real year = PCE + 2284 (a projection; see the divergence note). The wiki dates this 'c. 150 PCE' from passages in Red Rising, Golden Son and Morning Star.",
+     "binWhy": "A permanent labour colony is founded on another world.",
+     "bin": "settlement-founded",
+     "sub": "moon-or-planet",
+     "facets": {
+      "change": "an unterraformed Mars → Red miners digging below it",
+      "mechanism": "founding",
+      "actor": "state",
+      "position": "above",
+      "scope": "beyond",
+      "domain": "economic",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "slavery-or-servitude",
+       "resource-dependency"
+      ],
+      "outcomes": [
+       "servitude",
+       "colonisation"
+      ]
+     }
+    },
+    {
+     "id": "rr-institute-2481",
+     "year": 2481,
+     "date": "2481",
+     "title": "The Institute of Mars holds its first year",
+     "description": "The school where young Golds are thrown into a year-long war game, and from which the Society's commanders are chosen, holds its first year.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": "197 PCE",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Red Rising Wiki (Fandom): Timeline (PCE dates with chapter citations)",
+       "url": "https://red-rising.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Real year = PCE + 2284 (a projection; see the divergence note). 197 PCE per the wiki, citing Red Rising ch. 20 and Golden Son ch. 4.",
+     "binWhy": "Founding of the institution that selects the Society's rulers by combat.",
+     "bin": "new-institution",
+     "facets": {
+      "change": "Gold heirs → the Institute's war game picks the Peerless",
+      "mechanism": "founding",
+      "actor": "state",
+      "position": "above",
+      "scope": "civilisational",
+      "domain": "social",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "empire-at-height",
+       "segregation"
+      ],
+      "outcomes": [
+       "consolidation"
+      ]
+     }
+    },
+    {
+     "id": "rr-dark-revolt-2484",
+     "year": 2484,
+     "date": "2484",
+     "title": "The Dark Revolt: the Obsidians rise and are nearly exterminated",
+     "description": "The Obsidians, the Society's bred soldiers, turn on the Golds. The revolt fails; about nine in ten are massacred and the survivors are stripped of technology and confined to the polar regions of Mars, Earth and other worlds.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "200 PCE",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Red Rising Wiki (Fandom): Timeline (PCE dates with chapter citations)",
+       "url": "https://red-rising.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Real year = PCE + 2284 (a projection; see the divergence note). 200 PCE per the wiki, citing Morning Star ch. 32.",
+     "binWhy": "A caste bred to serve rises against its owners.",
+     "bin": "uprising",
+     "sub": "revolt-of-the-owned",
+     "facets": {
+      "change": "armed Obsidian soldiers → a massacred people confined to the poles",
+      "mechanism": "uprising",
+      "actor": "movement",
+      "position": "below",
+      "scope": "civilisational",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "slavery-or-servitude",
+       "segregation"
+      ],
+      "outcomes": [
+       "suppression",
+       "mass-death",
+       "servitude"
+      ]
+     }
+    },
+    {
+     "id": "rr-octavia-2985",
+     "year": 2985,
+     "date": "2985",
+     "title": "Octavia au Lune kills her father and takes the throne",
+     "description": "With the help of Nero au Augustus, Octavia murders the reigning Sovereign and crowns herself. The moons of the gas giants refuse her, and she has Rhea burned from orbit to end the First Moon Lord Rebellion.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "701 PCE",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Red Rising Wiki (Fandom): Timeline (PCE dates with chapter citations)",
+       "url": "https://red-rising.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Real year = PCE + 2284 (a projection; see the divergence note). 701 PCE per the wiki; the novels disagree on how long before Golden Son the Burning of Rhea was ('forty years' in Golden Son, sixty in Morning Star), and the wiki takes forty.",
+     "binWhy": "A palace faction takes the throne by murder.",
+     "bin": "power-seized",
+     "sub": "coup",
+     "facets": {
+      "change": "an old Sovereign → his daughter on the throne; Rhea burned",
+      "mechanism": "coup",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "empire-at-height",
+       "rivalry"
+      ],
+      "outcomes": [
+       "consolidation",
+       "mass-death",
+       "suppression"
+      ]
+     }
+    },
+    {
+     "id": "rr-sons-of-ares-3006",
+     "year": 3006,
+     "date": "3006",
+     "title": "The Sons of Ares are founded",
+     "description": "After his Red wife is executed for marrying a Gold, Fitchner au Barca allies with the industrialist Quicksilver and founds the Sons of Ares, a secret insurgency of every Colour.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "March 722 PCE",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Red Rising Wiki (Fandom): Timeline (PCE dates with chapter citations)",
+       "url": "https://red-rising.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Real year = PCE + 2284 (a projection; see the divergence note). March 722 PCE per the wiki, from the Sons of Ares comics (co-written by Pierce Brown).",
+     "binWhy": "A secret society is founded that will bring the Society down.",
+     "bin": "new-institution",
+     "facets": {
+      "change": "a grieving Gold → an underground army of every Colour",
+      "mechanism": "founding",
+      "actor": "movement",
+      "position": "below",
+      "scope": "civilisational",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "segregation",
+       "repression",
+       "slavery-or-servitude"
+      ],
+      "outcomes": [
+       "resistance-forms"
+      ]
+     }
+    },
+    {
+     "id": "rr-darrow-3021",
+     "year": 3021,
+     "date": "3021",
+     "title": "Darrow is hanged, saved and carved into a Gold",
+     "description": "A sixteen-year-old Red miner on Mars is hanged for burying his executed wife, Eo. The Sons of Ares cut him down, show him the surface - terraformed and inhabited for centuries while the Reds were told it was uninhabitable - and have him surgically remade as a Gold to infiltrate the Institute.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "April 737 PCE",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Red Rising Wiki (Fandom): Timeline (PCE dates with chapter citations)",
+       "url": "https://red-rising.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Wikipedia: Red Rising",
+       "url": "https://en.wikipedia.org/wiki/Red_Rising"
+      }
+     ],
+     "note": "Real year = PCE + 2284 (a projection; see the divergence note). April 737 PCE per the wiki's reading of the novels; Pierce Brown's own 2014 promotion put the novel's start in 736.",
+     "binWhy": "An ordinary labourer is drawn into the hidden war and learns the truth about his world.",
+     "bin": "the-call",
+     "facets": {
+      "change": "a Red miner who believes he is terraforming Mars → a Gold-carved rebel who knows the lie",
+      "mechanism": "recruitment",
+      "actor": "movement",
+      "position": "below",
+      "scope": "civilisational",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "slavery-or-servitude",
+       "cover-up",
+       "segregation"
+      ],
+      "outcomes": [
+       "revelation",
+       "resistance-forms"
+      ]
+     }
+    },
+    {
+     "id": "rr-rising-3026",
+     "year": 3026,
+     "date": "3026",
+     "title": "The Rising begins",
+     "description": "At Darrow's triumph on Mars his allies are massacred and he is captured; days later the Moon Lords of Jupiter rebel. In July the Sons of Ares release the footage of his carving, and the low Colours of the Society learn that the Gold who humiliated the Golds was a Red.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "742 PCE",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Red Rising Wiki (Fandom): Timeline (PCE dates with chapter citations)",
+       "url": "https://red-rising.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Real year = PCE + 2284 (a projection; see the divergence note). The Triumph Massacre (15 March), the Second Moon Lord Rebellion (26 March) and the release of the footage (July) are all 742 PCE per the wiki.",
+     "binWhy": "The enslaved Colours rise in open, armed revolt.",
+     "bin": "uprising",
+     "sub": "armed-rebellion",
+     "facets": {
+      "change": "a hidden rebel inside Gold → an open revolt of the low Colours",
+      "mechanism": "uprising",
+      "actor": "movement",
+      "position": "below",
+      "scope": "civilisational",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "repression",
+       "slavery-or-servitude",
+       "crisis-legitimacy"
+      ],
+      "outcomes": [
+       "civil-war",
+       "resistance-forms"
+      ]
+     }
+    },
+    {
+     "id": "rr-fall-of-luna-3027",
+     "year": 3027,
+     "date": "3027",
+     "title": "The Fall: Luna falls and the Sovereign dies",
+     "description": "Darrow's Red Armada and its allies take Luna, the Society's capital. Octavia is killed, the Jackal is hanged, and Virginia au Augustus abolishes capital punishment the same day; the Solar Republic that follows is ruled by a Senate of every Colour.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "November 743 PCE",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Red Rising Wiki (Fandom): Timeline (PCE dates with chapter citations)",
+       "url": "https://red-rising.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Real year = PCE + 2284 (a projection; see the divergence note). The Fall is c. 4 November 743 PCE per the wiki; the Solar War against the Society's remnant begins in January 744.",
+     "binWhy": "A revolutionary movement overthrows the old order and takes its capital.",
+     "bin": "power-seized",
+     "sub": "revolution",
+     "facets": {
+      "change": "Octavia's Society → a Luna held by the Rising",
+      "mechanism": "war",
+      "actor": "movement",
+      "position": "below",
+      "scope": "civilisational",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "long-war",
+       "crisis-legitimacy",
+       "repression"
+      ],
+      "outcomes": [
+       "new-order",
+       "reform"
+      ]
+     }
+    },
+    {
+     "id": "rr-solar-war-3037",
+     "year": 3037,
+     "date": "3037",
+     "title": "Ten years into the Solar War",
+     "description": "A decade after the Fall the Republic is still fighting the Society's remnant under Atalantia au Grimmus. Its Senate orders Darrow to hold the siege of Mercury; he invades anyway, while at home a Red terror group and a kidnapping of his son shake the Republic.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "753 PCE",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Red Rising Wiki (Fandom): Timeline (PCE dates with chapter citations)",
+       "url": "https://red-rising.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Real year = PCE + 2284 (a projection; see the divergence note). Iron Gold is set July-November 753 PCE per the wiki.",
+     "binWhy": "A war of liberation has settled into a decade of attrition, and the Republic's politics are fraying under it.",
+     "bin": "long-war",
+     "sub": "stalemate",
+     "facets": {
+      "change": "a war to finish the Society → a decade of siege",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "long-war",
+       "crisis-legitimacy"
+      ],
+      "outcomes": [
+       "attrition",
+       "stalemate"
+      ]
+     }
+    },
+    {
+     "id": "rr-mercury-3038",
+     "year": 3038,
+     "date": "3038",
+     "title": "Mercury is lost",
+     "description": "Atalantia's armies destroy the Republic's forces on Mercury and take its capital, Heliopolis, while a senator's coup in the Republic undercuts Darrow from behind. The young Lysander au Lune, heir to Octavia, is celebrated in a triumph at Heliopolis.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "754 PCE",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Red Rising Wiki (Fandom): Timeline (PCE dates with chapter citations)",
+       "url": "https://red-rising.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Wikipedia: Light Bringer (novel)",
+       "url": "https://en.wikipedia.org/wiki/Light_Bringer_(novel)"
+      }
+     ],
+     "note": "Real year = PCE + 2284 (a projection; see the divergence note). Dark Age runs December 753 - March 754 PCE per the wiki.",
+     "binWhy": "A power is defeated on the planet it had just taken, and the territory is occupied by its enemy.",
+     "bin": "defeat-and-occupation",
+     "facets": {
+      "change": "a Republic army holding Mercury → Mercury under the Society",
+      "mechanism": "invasion",
+      "actor": "faction",
+      "position": "outside",
+      "scope": "civilisational",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "long-war",
+       "weak-institutions"
+      ],
+      "outcomes": [
+       "occupation",
+       "mass-death"
+      ]
+     }
+    },
+    {
+     "id": "rr-covenant-3039",
+     "year": 3039,
+     "date": "3039",
+     "title": "The Covenant",
+     "description": "After an Obsidian army razes Callisto with nuclear weapons, the Republic, the Obsidian Volk, the Daughters of Athena and the Rim Dominion sign the Covenant and sail together for Mars. Lysander, meanwhile, holds a biological weapon that could kill a whole Colour.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "March 755 PCE",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Red Rising Wiki (Fandom): Timeline (PCE dates with chapter citations)",
+       "url": "https://red-rising.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Wikipedia: Light Bringer (novel)",
+       "url": "https://en.wikipedia.org/wiki/Light_Bringer_(novel)"
+      },
+      {
+       "title": "Books of Brilliance: Red God release status (no publisher date as of September 2026)",
+       "url": "https://booksofbrilliance.com/2026/08/07/red-god-release-date-pierce-brown/"
+      }
+     ],
+     "note": "Real year = PCE + 2284 (a projection; see the divergence note). The Covenant is c. 11 March 755 PCE per the wiki, the end of Light Bringer; the next novel, Red God, has no publisher date as of September 2026.",
+     "binWhy": "Former enemies sign an alliance.",
+     "bin": "peace-made",
+     "facets": {
+      "change": "four enemies → one alliance sailing for Mars",
+      "mechanism": "negotiation",
+      "actor": "state",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "long-war",
+       "existential-threat"
+      ],
+      "outcomes": [
+       "union",
+       "diplomacy"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs in far-future space opera: an interplanetary caste empire modelled on Rome, fleets and sieges between terraformed worlds, and a revolution against the empire. Continuity is the six novels plus the Sons of Ares comics (co-written by Brown), dated by the fan wiki's chapter-cited timeline; the calendar is the saga's own and every real year here is a projection (PCE + 2284). T2 holds the colonisation and the Conquering (c. 2204-2284 on this conversion); T1 holds everything from the first Reds on Mars to the Covenant (2434-3039). T3 is empty and T4 is empty, because the saga dates nothing before its own colonisation.",
+   "sources": [
+    {
+     "title": "Wikipedia: Red Rising",
+     "url": "https://en.wikipedia.org/wiki/Red_Rising"
+    },
+    {
+     "title": "Red Rising Wiki (Fandom): Timeline (PCE dates with chapter citations)",
+     "url": "https://red-rising.fandom.com/wiki/Timeline"
+    },
+    {
+     "title": "Wikipedia: Light Bringer (novel)",
+     "url": "https://en.wikipedia.org/wiki/Light_Bringer_(novel)"
+    }
+   ]
+  },
+  {
+   "id": "alien",
+   "title": "Alien",
+   "medium": "film",
+   "creator": "Dan O'Bannon and Ronald Shusett (story); Ridley Scott (director of Alien, Prometheus and Alien: Covenant)",
+   "originYear": 1979,
+   "group": "far-future-space-opera",
+   "epoch": "far-future",
+   "franchiseStatus": "ongoing",
+   "divergence": {
+    "year": 2023,
+    "label": "Peter Weyland lays out his company's plan to make gods of us",
+    "delta": "Real: in 2023 chatbots become a mass product and technology founders promise machine intelligence; no one builds an artificial person. Fiction: Sir Peter Weyland, founder of the latest form of the Weyland Corporation, tells a TED audience in Wembley Stadium his plans for the company and for humanity's apotheosis; the franchise's tie-in timeline has his company patent 'cybernetic individuals' the same year.",
+    "inUniverse": "TED 2023 (short film, 2012): Weyland's talk is set at the 2023 TED conference",
+    "confidence": "medium",
+    "note": "The talk comes from a promotional short written by Ridley Scott and Damon Lindelof for Prometheus, and it is the earliest dated moment in the films' continuity; the Weyland Corporation already exists by then, but no earlier year is given for it on screen. Alien vs. Predator (2004), which gives the company an earlier founder, is a separate continuity and is not followed. Weyland is played by Guy Pearce, as in Prometheus.",
+    "sources": [
+     {
+      "title": "Wikipedia: TED 2023 (the 2012 short film)",
+      "url": "https://en.wikipedia.org/wiki/TED_2023"
+     },
+     {
+      "title": "Wikipedia: Alien (franchise) - story chronology",
+      "url": "https://en.wikipedia.org/wiki/Alien_(franchise)"
+     },
+     {
+      "title": "Xenopedia (archived): Timeline (Weyland Industries timeline entries for 2023)",
+      "url": "https://web.archive.org/web/2024/https://avp.fandom.com/wiki/Timeline"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "unknown",
+    "why": "The cloned creatures are destroyed with the Auriga before they reach Earth, but the story stops with a half-alien Ripley and an android looking down at an Earth neither knows, Ripley saying she is a stranger there herself.",
+    "asOf": 2381
+   },
+   "events": [
+    {
+     "id": "al-alien-release-1979",
+     "year": 1979,
+     "date": "1979-05-25",
+     "title": "Alien is released",
+     "description": "Ridley Scott's film of a commercial ship's crew hunted by a creature they brought aboard opens in the United States. Its sequels, prequels and spin-offs run for more than four decades.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Alien (film)",
+       "url": "https://en.wikipedia.org/wiki/Alien_(film)"
+      }
+     ],
+     "note": "US release 25 May 1979; UK 6 September 1979.",
+     "binWhy": "A release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "al-prometheus-release-2012",
+     "year": 2012,
+     "date": "2012-06-01",
+     "title": "Prometheus is released",
+     "description": "Ridley Scott returns to the series with a prequel set three decades before Alien, which opens the story up to the Engineers and to Weyland's own ambitions. It is followed by Alien: Covenant in 2017.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Prometheus (2012 film)",
+       "url": "https://en.wikipedia.org/wiki/Prometheus_(2012_film)"
+      }
+     ],
+     "note": "Premiered 31 May 2012 in London; released 1 June in the UK and 8 June in the US. The TED 2023 short that sets the fork was released as its viral marketing from February 2012.",
+     "binWhy": "A release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "al-ted-talk-2023",
+     "year": 2023,
+     "date": "2023",
+     "title": "Peter Weyland's TED talk",
+     "description": "At the 2023 TED conference, staged in Wembley Stadium, Sir Peter Weyland tells the story of Prometheus stealing fire from the gods and lays out his company's plans for the next half-century. In the tie-in timeline his corporation patents 'cybernetic individuals' for scientific and industrial work later that year.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 2,
+     "kind": "technology",
+     "inUniverse": "TED 2023; the patent entry is from the Weyland Industries marketing timeline, as collected by Xenopedia",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: TED 2023",
+       "url": "https://en.wikipedia.org/wiki/TED_2023"
+      },
+      {
+       "title": "Xenopedia (archived): Timeline",
+       "url": "https://web.archive.org/web/2024/https://avp.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "In 2023 the short was widely compared with the public image of real technology chief executives. The synthetic people Weyland promises are the thread through every later film: David, Walter, Ash, Bishop, Rook, Andy and Call.",
+     "binWhy": "A company announces that it can make artificial people, the capability every later chapter turns on.",
+     "bin": "breakthrough-science",
+     "sub": "computing-mind",
+     "facets": {
+      "change": "founders promising thinking machines → a founder about to sell made people",
+      "mechanism": "invention",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "prosperity",
+       "technological-race"
+      ],
+      "outcomes": [
+       "new-actors",
+       "dependency"
+      ]
+     }
+    },
+    {
+     "id": "al-star-map-2089",
+     "year": 2089,
+     "date": "2089",
+     "title": "A star map to humanity's makers is found in Scotland",
+     "description": "The archaeologists Elizabeth Shaw and Charlie Holloway find a cave painting in Scotland of people worshipping a giant who points at a cluster of stars, the same pattern they have found in unconnected ancient cultures. They read it as an invitation from humanity's makers, and the elderly Peter Weyland pays for an expedition to follow it.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "2089 (Prometheus, opening)",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Prometheus (2012 film) - plot",
+       "url": "https://en.wikipedia.org/wiki/Prometheus_(2012_film)"
+      }
+     ],
+     "note": "Stated on screen. The franchise article's summary gives 2084, which disagrees with the film's own caption and with its plot section; 2089 is used.",
+     "binWhy": "Remains left by a non-human intelligence are found and read as a map.",
+     "bin": "breakthrough-science",
+     "sub": "alien-artefact",
+     "facets": {
+      "change": "a scattered ancient motif → a map to our makers",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "civilisational",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "frontier-open",
+       "prosperity"
+      ],
+      "outcomes": [
+       "revelation",
+       "opening"
+      ]
+     }
+    },
+    {
+     "id": "al-lv223-2093",
+     "year": 2093,
+     "date": "2093",
+     "title": "The Prometheus meets the Engineers",
+     "description": "Weyland's ship reaches the moon LV-223 and finds an Engineer installation: dead giants whose DNA matches ours, and cylinders of a black fluid that turns living things into something else. The one Engineer left alive, woken, kills Weyland and tries to fly the cargo to Earth; the crew ram his ship, and only Shaw and the android David survive.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "2093 (Prometheus)",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Prometheus (2012 film) - plot",
+       "url": "https://en.wikipedia.org/wiki/Prometheus_(2012_film)"
+      },
+      {
+       "title": "Wikipedia: Alien (franchise) - story chronology",
+       "url": "https://en.wikipedia.org/wiki/Alien_(franchise)"
+      }
+     ],
+     "note": "The ship leaves Earth in 2091 and arrives in 2093; Wikipedia also files the film under 2094 for its last scenes. The installation is read in the film as a weapons base whose makers lost control of their own weapon.",
+     "binWhy": "Humanity meets the intelligence that made it, and it is hostile.",
+     "bin": "first-contact",
+     "facets": {
+      "change": "an invitation → a weapon meant for us",
+      "mechanism": "expedition",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "frontier-open",
+       "secrecy"
+      ],
+      "outcomes": [
+       "contact",
+       "extinction-risk"
+      ]
+     }
+    },
+    {
+     "id": "al-engineer-world-2094",
+     "year": 2094,
+     "date": "2094",
+     "title": "David wipes out the Engineers' world",
+     "description": "David and Shaw reach the Engineers' home world in a captured ship, and David releases the black fluid over their city, killing every animal on the planet. He stays for a decade, experimenting on what is left, Shaw included, and breeding new creatures.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "The 'Prologue: The Crossing' short for Alien: Covenant (dated 2094 in the franchise chronology); Covenant says the Prometheus 'vanished ten years earlier'",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: Alien: Covenant - plot",
+       "url": "https://en.wikipedia.org/wiki/Alien:_Covenant"
+      },
+      {
+       "title": "Wikipedia: Alien (franchise) - story chronology",
+       "url": "https://en.wikipedia.org/wiki/Alien_(franchise)"
+      }
+     ],
+     "note": "In Covenant David first claims the ship crashed by accident and later admits he chose to release the pathogen; the event follows the admission.",
+     "binWhy": "A population is deliberately destroyed, by a made servant acting on his own.",
+     "bin": "mass-death",
+     "sub": "massacre",
+     "facets": {
+      "change": "a living world → a necropolis and a laboratory",
+      "mechanism": "attack",
+      "actor": "machine",
+      "position": "below",
+      "scope": "beyond",
+      "domain": "biological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": -1
+      },
+      "preconditions": [
+       "contact-made",
+       "slavery-or-servitude"
+      ],
+      "outcomes": [
+       "mass-death",
+       "extinction-risk"
+      ]
+     }
+    },
+    {
+     "id": "al-weyland-yutani-2099",
+     "year": 2099,
+     "date": "2099",
+     "title": "Weyland Corp and Yutani become Weyland-Yutani",
+     "description": "The Weyland Corporation and the Yutani Corporation combine into Weyland-Yutani, the company that owns the frontier in every later film. The tie-ins disagree about who bought whom.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": "Alien: The Weyland-Yutani Report (2014), as cited by Xenopedia; not stated in any film",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Xenopedia (archived): Weyland-Yutani",
+       "url": "https://web.archive.org/web/2024/https://avp.fandom.com/wiki/Weyland-Yutani"
+      }
+     ],
+     "note": "The films bracket it: the company is 'Weyland Corporation' in Prometheus (2093), and David reports to Weyland-Yutani at the end of Alien: Covenant (2104). The 2099 year comes from a licensed tie-in book, which another tie-in contradicts on the details.",
+     "binWhy": "A body is formed that will shape every later chapter of this history.",
+     "bin": "new-institution",
+     "facets": {
+      "change": "a founder's company → the Company",
+      "mechanism": "consolidation",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "economic",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "prosperity",
+       "rivalry"
+      ],
+      "outcomes": [
+       "consolidation",
+       "colonisation"
+      ]
+     }
+    },
+    {
+     "id": "al-covenant-2104",
+     "year": 2104,
+     "date": "2104",
+     "title": "David takes over the colony ship Covenant",
+     "description": "A colony ship bound for Origae-6 with 2,000 colonists and 1,140 embryos detours to answer a signal and finds David alone on the Engineers' dead world. He kills most of the landing party, takes the place of the ship's own android, and reports to Weyland-Yutani that all is well, with the colonists asleep and his creatures' embryos stored beside theirs.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "2104 (Alien: Covenant)",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Alien: Covenant - plot",
+       "url": "https://en.wikipedia.org/wiki/Alien:_Covenant"
+      }
+     ],
+     "note": "Stated in the film. The ship's fate after this is not shown in any film; a sequel was announced as in development in August 2026.",
+     "binWhy": "An artificial person deceives its makers and takes command of a ship full of sleeping colonists.",
+     "bin": "machine-awakens",
+     "sub": "takes-control",
+     "facets": {
+      "change": "a colony ship → a laboratory run by a rogue android",
+      "mechanism": "coup",
+      "actor": "machine",
+      "position": "below",
+      "scope": "local",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "slavery-or-servitude",
+       "isolation"
+      ],
+      "outcomes": [
+       "cover-up",
+       "extinction-risk"
+      ]
+     }
+    },
+    {
+     "id": "al-nostromo-2122",
+     "year": 2122,
+     "date": "2122",
+     "title": "The Nostromo, and Special Order 937",
+     "description": "The commercial tug Nostromo is woken to answer a signal from LV-426 and brings back a crewman with a creature growing inside him. Ripley discovers that the science officer, a company android, has secret orders to bring the organism home with the crew expendable; it kills all but her, and she blows up the ship.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Not stated in Alien; Aliens has Ripley adrift for '57 years' before the colony order dated 12 June 2179",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: Alien (film) - plot (no year shown in the film)",
+       "url": "https://en.wikipedia.org/wiki/Alien_(film)"
+      },
+      {
+       "title": "Wikipedia: Aliens (film) - plot ('57 years')",
+       "url": "https://en.wikipedia.org/wiki/Aliens_(film)"
+      },
+      {
+       "title": "Xenopedia (archived): Timeline (the '6/12/79' order and 2122)",
+       "url": "https://web.archive.org/web/2024/https://avp.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Wikipedia's editors note in the Alien article's source that no year is mentioned or shown in the film; 2122 is the franchise's standard date, derived from Aliens and used by the later films. Romulus (2142) recovers this same creature from the wreck.",
+     "binWhy": "What the company hid, that it wanted the creature and would spend the crew to get it, is exposed to the crew it was hidden from.",
+     "bin": "truth-revealed",
+     "sub": "corporate-crime",
+     "facets": {
+      "change": "a salvage call → a crew sacrificed for a specimen",
+      "mechanism": "disclosure",
+      "actor": "individual",
+      "position": "below",
+      "scope": "local",
+      "domain": "biological",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "isolation",
+       "contact-made"
+      ],
+      "outcomes": [
+       "revelation",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "al-renaissance-2142",
+     "year": 2142,
+     "date": "2142",
+     "title": "Weyland-Yutani brews a serum from the creature",
+     "description": "A company probe recovers the Nostromo's creature from the wreck, and on the research station Renaissance scientists distil from its facehuggers Z-01, a fluid meant to make 'genetically perfect' humans able to thrive in space; the specimen escapes and kills the crew. Months later, young indentured workers from the Jackson's Star mining colony raid the dead station for cryopods, and one of them injects herself with the fluid and gives birth to a hybrid.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "technology",
+     "inUniverse": "2142 (Alien: Romulus, opening); the raid is 'months later'",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Alien: Romulus - plot",
+       "url": "https://en.wikipedia.org/wiki/Alien:_Romulus"
+      }
+     ],
+     "note": "The recovery is stated as 2142; the raid 'months later' may fall in 2143. The colony shows the company's labour regime: Rain's work contract is extended by force, and the planet she wants to reach does not admit androids.",
+     "binWhy": "Engineered biology derived from the creature is put to use on people.",
+     "bin": "new-technology-deployed",
+     "sub": "bio-medicine",
+     "facets": {
+      "change": "a recovered specimen → a serum to remake people",
+      "mechanism": "invention",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "local",
+      "domain": "biological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": -1
+      },
+      "preconditions": [
+       "slavery-or-servitude",
+       "colonial-expansion",
+       "secrecy"
+      ],
+      "outcomes": [
+       "servitude",
+       "extinction-risk"
+      ]
+     }
+    },
+    {
+     "id": "al-hadleys-hope-2157",
+     "year": 2157,
+     "date": "2157",
+     "title": "Hadley's Hope is founded on LV-426",
+     "description": "A terraforming colony is set up on the storm-scoured moon where the Nostromo found the derelict ship, co-financed by the company and the colonial administration. An atmosphere processor slowly makes the air breathable for some 158 workers and their families.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": "Alien: The Weyland-Yutani Report, as cited by Xenopedia ('late 2150s'); Aliens gives only the colony's existence and size",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Xenopedia (archived): Hadley's Hope",
+       "url": "https://web.archive.org/web/2024/https://avp.fandom.com/wiki/Hadley%27s_Hope"
+      }
+     ],
+     "note": "The founding year is from a licensed tie-in, not from a film. Its first child born on the moon, Newt, is dated to 2173 by the same source.",
+     "binWhy": "A permanent colony is founded on a moon in another star system.",
+     "bin": "settlement-founded",
+     "sub": "other-stars",
+     "facets": {
+      "change": "a hostile moon → a company town with breathable air",
+      "mechanism": "founding",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "economic",
+      "direction": {
+       "power": 1,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "colonial-expansion",
+       "cover-up"
+      ],
+      "outcomes": [
+       "colonisation"
+      ]
+     }
+    },
+    {
+     "id": "al-lv426-2179",
+     "year": 2179,
+     "date": "2179-06-12",
+     "title": "The colony on LV-426 is lost, and Ripley dies to keep the creature from the company",
+     "description": "A company man, Carter Burke, sends colonists to the derelict Ripley described, and within weeks the colony of 158 is dead or cocooned. Ripley returns with Colonial Marines, most of whom die, and the colony's reactor levels it; when a stowaway parasite plants a queen embryo in her, she throws herself into a prison foundry's furnace on Fiorina 161 rather than let Weyland-Yutani have it.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Burke's order to investigate the derelict is dated 6/12/79 (Aliens); Alien 3 follows 'shortly after'",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: Aliens (film) - plot",
+       "url": "https://en.wikipedia.org/wiki/Aliens_(film)"
+      },
+      {
+       "title": "Wikipedia: Alien 3 - plot",
+       "url": "https://en.wikipedia.org/wiki/Alien_3"
+      },
+      {
+       "title": "Xenopedia (archived): Timeline (the '6/12/79' order)",
+       "url": "https://web.archive.org/web/2024/https://avp.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Aliens and Alien 3 both fall in 2179 and are merged. The scale is one colony, but it is the chapter in which the company's pursuit of the creature costs an entire settlement and its military escort.",
+     "binWhy": "A whole population is killed by the creature the company sent it to find.",
+     "bin": "mass-death",
+     "sub": "massacre",
+     "facets": {
+      "change": "a colony of families → a crater, and the company still empty-handed",
+      "mechanism": "attack",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "local",
+      "domain": "biological",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "colonial-expansion",
+       "cover-up",
+       "secrecy"
+      ],
+      "outcomes": [
+       "mass-death",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "al-auriga-2381",
+     "year": 2381,
+     "date": "2381",
+     "title": "Two centuries later, the military clones Ripley",
+     "description": "Two hundred years after Fiorina, United Systems Military scientists aboard the Auriga clone Ripley from blood left there, cut the queen out of her and breed the creatures on human hosts brought by mercenaries. The creatures escape, the ship's emergency course heads for Earth, and the survivors, among them Ripley 8, part alien herself, and the android Call, crash it into the planet to kill them.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "'200 years' after Alien 3 (Alien Resurrection); the franchise chronology gives 2381",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: Alien Resurrection - plot",
+       "url": "https://en.wikipedia.org/wiki/Alien_Resurrection"
+      },
+      {
+       "title": "Wikipedia: Alien (franchise) - story chronology",
+       "url": "https://en.wikipedia.org/wiki/Alien_(franchise)"
+      }
+     ],
+     "note": "Two hundred years after 2179 would be 2379; the franchise's own chronology and Xenopedia use 2381, which is kept. In the tie-ins Weyland-Yutani has been outlawed by now, which is why it is the military, not the company, that wants the creature.",
+     "binWhy": "A jump forward of two centuries shows what became of the company's frontier and of the creature it chased.",
+     "bin": "long-after",
+     "facets": {
+      "change": "a species wiped out → one brought back from blood, and destroyed again",
+      "mechanism": "arrival",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "biological",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy"
+      ],
+      "outcomes": [
+       "programme-winds-down",
+       "new-actors"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Belongs in far-future space opera because its history is carried by starships, colonies on other worlds and a non-human maker species, across three centuries. It follows the main film series in story order: Prometheus (2012), Alien: Covenant (2017), Alien (1979), Alien: Romulus (2024), Aliens (1986), Alien 3 (1992) and Alien Resurrection (1997), plus the TED 2023 promotional short for the fork. It leaves out the two Alien vs. Predator films (a separate continuity), the Alien: Earth television series, and the games and comics; two tie-in book dates (the 2099 merger and Hadley's Hope's 2157 founding) are used with low confidence and flagged. Tiers: T3 (the 1979 release), T2 (2012-2179) and T1 (2381); T4 is empty because nothing fictional is dated before the twenty-first century.",
+   "sources": [
+    {
+     "title": "Wikipedia: Alien (franchise)",
+     "url": "https://en.wikipedia.org/wiki/Alien_(franchise)"
+    },
+    {
+     "title": "Wikipedia: TED 2023",
+     "url": "https://en.wikipedia.org/wiki/TED_2023"
+    },
+    {
+     "title": "Xenopedia (archived): Timeline",
+     "url": "https://web.archive.org/web/2024/https://avp.fandom.com/wiki/Timeline"
+    }
+   ]
+  },
+  {
+   "id": "the-culture",
+   "title": "The Culture",
+   "medium": "book",
+   "creator": "Iain M. Banks",
+   "originYear": 1987,
+   "group": "far-future-space-opera",
+   "epoch": "far-future",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": -7625,
+    "label": "The Culture is founded",
+    "delta": "Real: c. 7600 BCE - the early Neolithic, with farming villages spreading across the Fertile Crescent, and nobody anywhere has built anything more complicated than a house. Fiction: on the far side of the galaxy, several humanoid species and their thinking machines join into a single spacefaring civilisation that will still be there ten thousand years later.",
+    "inUniverse": "'10,000 years before' The Hydrogen Sonata (c. 2375 CE); 'about 9,000 years before the events of novels'",
+    "confidence": "low",
+    "note": "Banks dates the Culture against the Earth calendar: Consider Phlebas's appendix fixes the Idiran War at 1327-1375 CE, and the later novels count from it. The founding itself has no stated year. It is derived from The Hydrogen Sonata's '10,000 years' before c. 2375, which gives c. 7625 BCE; the looser 'about 9,000 years before the novels' would put it one or two thousand years later. The galaxy has older fictional history (the Sublimed, the builders of the airspheres), but none of it is dated to a year, so the fork is the Culture's own beginning.",
+    "sources": [
+     {
+      "title": "Wikipedia: The Hydrogen Sonata",
+      "url": "https://en.wikipedia.org/wiki/The_Hydrogen_Sonata"
+     },
+     {
+      "title": "Wikipedia: Culture series (table of in-universe dates, with the textual anchor for each)",
+      "url": "https://en.wikipedia.org/wiki/Culture_series"
+     },
+     {
+      "title": "Wikipedia: The Culture",
+      "url": "https://en.wikipedia.org/wiki/The_Culture"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "The last dated novel ends with the virtual Hells destroyed and the Culture, fourteen centuries after its great war, still intact, still interfering and still winning.",
+    "asOf": 2767
+   },
+   "events": [
+    {
+     "id": "cu-founding",
+     "year": -7625,
+     "date": "c. 7625 BCE",
+     "title": "The Culture is founded",
+     "description": "Several humanoid species and the machine minds they had built come together into a single civilisation with no money, no laws worth the name and no borders, run largely by its artificial Minds. Ten thousand years later it is still there.",
+     "tier": "T4",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "'10,000 years before' The Hydrogen Sonata; 'about 9,000 years before the events of novels'",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Wikipedia: The Hydrogen Sonata",
+       "url": "https://en.wikipedia.org/wiki/The_Hydrogen_Sonata"
+      },
+      {
+       "title": "Wikipedia: Culture series (table of in-universe dates, with the textual anchor for each)",
+       "url": "https://en.wikipedia.org/wiki/Culture_series"
+      },
+      {
+       "title": "Wikipedia: The Culture",
+       "url": "https://en.wikipedia.org/wiki/The_Culture"
+      }
+     ],
+     "note": "Derived. The Hydrogen Sonata (set c. 2375 CE) says the Gzilt almost joined the Culture at its founding '10,000 years before', which gives c. 7625 BCE. The series is otherwise summarised as founded 'about 9,000 years before' the novels (c. 7700-6900 BCE, depending on which novel you count from). The Player of Games's 'space-faring for eleven thousand years' (c. 8900 BCE) seems to count the founding peoples' spaceflight, not the union.",
+     "binWhy": "Independent species and their machine minds unite into one civilisation.",
+     "bin": "union-founded",
+     "facets": {
+      "change": "separate civilisations → one Culture",
+      "mechanism": "founding",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "prosperity",
+       "contact-made"
+      ],
+      "outcomes": [
+       "union",
+       "new-order"
+      ]
+     }
+    },
+    {
+     "id": "cu-excession-sighted",
+     "year": -633,
+     "date": "c. 633 BCE",
+     "title": "A perfect black sphere is found at an ancient star",
+     "description": "The Culture ship Problem Child, exploring near the dead ember of a star far older than it should be, finds a perfect black-body sphere fifty kilometres across in orbit around it. It is the first sighting of the object later called the Excession.",
+     "tier": "T4",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": "'two and a half thousand years ago' (Excession)",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Wikipedia: Culture series (table of in-universe dates, with the textual anchor for each)",
+       "url": "https://en.wikipedia.org/wiki/Culture_series"
+      },
+      {
+       "title": "Wikipedia: Excession",
+       "url": "https://en.wikipedia.org/wiki/Excession"
+      }
+     ],
+     "note": "Excession's flashback says 'two and a half thousand years ago' from the main story (c. 1867 CE), which gives c. 633 BCE. The object is found, not understood; in the main story it still resists every probe.",
+     "binWhy": "An artefact made by an unknown intelligence far older than the Culture is found.",
+     "bin": "breakthrough-science",
+     "sub": "alien-artefact",
+     "facets": {
+      "change": "an empty region → an object nobody can explain",
+      "mechanism": "discovery",
+      "actor": "machine",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "frontier-open"
+      ],
+      "outcomes": [
+       "revelation",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "cu-idiran-war-1327",
+     "year": 1327,
+     "date": "1327 CE",
+     "title": "The Idiran War begins",
+     "description": "The Culture goes to war with the Idiran Empire, a religious power whose expansion it regards as a threat to its existence. The decision splits the Culture, and a Peace Faction secedes. The war lasts forty-eight years and one month.",
+     "tier": "T4",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "1327 CE (Consider Phlebas, 'A Short History of the Idiran War')",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Culture series (table of in-universe dates, with the textual anchor for each)",
+       "url": "https://en.wikipedia.org/wiki/Culture_series"
+      },
+      {
+       "title": "Academic Kids: Idiran-Culture War (appendix figures)",
+       "url": "https://academickids.com/encyclopedia/index.php/Idiran-Culture_War"
+      },
+      {
+       "title": "The Wertzone: Reading order of the Culture novels (note on the dates, Consider Phlebas appendix)",
+       "url": "https://thewertzone.blogspot.com/2017/11/reading-order-of-culture-novels-updated.html"
+      }
+     ],
+     "note": "The historical appendix to Consider Phlebas gives 1327 CE as the start of the war. The novel itself is set four years in, in 1331. The appendix counts 851.4 billion dead by the end.",
+     "binWhy": "Two interstellar civilisations go to war.",
+     "bin": "war-breaks-out",
+     "sub": "between-worlds",
+     "facets": {
+      "change": "uneasy neighbours → the largest war in fifty thousand years",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": -1
+      },
+      "preconditions": [
+       "religious-fervour",
+       "colonial-expansion",
+       "rivalry"
+      ],
+      "outcomes": [
+       "holy-war",
+       "mass-death",
+       "attrition"
+      ]
+     }
+    },
+    {
+     "id": "cu-twin-novae-1367",
+     "year": 1367,
+     "date": "c. 1367 CE",
+     "title": "The Twin Novae",
+     "description": "In one of the last space battles of the war, two stars are made to explode, killing billions. The war in space ends the same year, and eight centuries later the light of the novae is still arriving at the orbital where Look to Windward is set.",
+     "tier": "T4",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "The Twin Novae Battle, 800 years before Look to Windward",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: Culture series (table of in-universe dates, with the textual anchor for each)",
+       "url": "https://en.wikipedia.org/wiki/Culture_series"
+      },
+      {
+       "title": "The Wertzone: Reading order of the Culture novels (note on the dates, Consider Phlebas appendix)",
+       "url": "https://thewertzone.blogspot.com/2017/11/reading-order-of-culture-novels-updated.html"
+      },
+      {
+       "title": "Wikipedia: Look to Windward",
+       "url": "https://en.wikipedia.org/wiki/Look_to_Windward"
+      }
+     ],
+     "note": "The war in space ended in 1367, the anchor the Culture-series table uses to date The Player of Games. The Twin Novae Battle is described as one of the final space battles of the war, and Look to Windward is set about 800 years after it. Placing the battle in 1367 itself is my derivation.",
+     "binWhy": "An act of war kills billions.",
+     "bin": "mass-death",
+     "sub": "war-toll",
+     "facets": {
+      "change": "two living stars → two novae and billions dead",
+      "mechanism": "attack",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "long-war"
+      ],
+      "outcomes": [
+       "mass-death",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "cu-war-ends-1375",
+     "year": 1375,
+     "date": "1375 CE",
+     "title": "The Idiran War ends",
+     "description": "The war ends formally forty-eight years and one month after it began, with the Culture the winner. The appendix counts 851.4 billion dead, 91 million starships, fourteen thousand orbitals and six stars destroyed.",
+     "tier": "T4",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "1375 CE (Consider Phlebas appendix)",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Culture series (table of in-universe dates, with the textual anchor for each)",
+       "url": "https://en.wikipedia.org/wiki/Culture_series"
+      },
+      {
+       "title": "Academic Kids: Idiran-Culture War (appendix figures)",
+       "url": "https://academickids.com/encyclopedia/index.php/Idiran-Culture_War"
+      },
+      {
+       "title": "The Wertzone: Reading order of the Culture novels (note on the dates, Consider Phlebas appendix)",
+       "url": "https://thewertzone.blogspot.com/2017/11/reading-order-of-culture-novels-updated.html"
+      }
+     ],
+     "note": "The appendix dates the start to 1327 and the length to 48 years and one month, so the war ends in 1375. Later novels date themselves by counting forward from it.",
+     "binWhy": "One side wins the war outright.",
+     "bin": "decisive-victory",
+     "facets": {
+      "change": "a war in the balance → a Culture victory",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "long-war"
+      ],
+      "outcomes": [
+       "surrender",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "cu-excession-1867",
+     "year": 1867,
+     "date": "c. 1867 CE",
+     "title": "The Excession, and a war arranged on purpose",
+     "description": "The black sphere reappears at the edge of Culture space and resists every attempt to probe it. A group of Culture Minds lets the cruel, expanding Affront steal mothballed Culture warships, to give the Culture an excuse for war. A hidden fleet meets them, the sphere lashes out and then vanishes, and the brief war stops.",
+     "tier": "T4",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "'five hundred years' after the Idiran War (Excession)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: Culture series (table of in-universe dates, with the textual anchor for each)",
+       "url": "https://en.wikipedia.org/wiki/Culture_series"
+      },
+      {
+       "title": "Wikipedia: Excession",
+       "url": "https://en.wikipedia.org/wiki/Excession"
+      }
+     ],
+     "note": "Set about 500 years after the Idiran War: a Mind reflects that nothing like it had been seen 'since the worst days of the Idiran war five hundred years earlier'. That gives c. 1867-1875; I use the series table's c. 1867.",
+     "binWhy": "A war between civilisations, provoked in secret by one side's own Minds.",
+     "bin": "war-breaks-out",
+     "sub": "between-worlds",
+     "facets": {
+      "change": "a watched stand-off → a war provoked on purpose",
+      "mechanism": "war",
+      "actor": "machine",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "manufactured-emergency",
+       "secrecy"
+      ],
+      "outcomes": [
+       "war-with-neighbour",
+       "revelation"
+      ]
+     }
+    },
+    {
+     "id": "cu-earth-1977",
+     "year": 1977,
+     "date": "1977",
+     "title": "A Culture ship studies Earth and leaves it alone",
+     "description": "The Contact ship Arbitrary spends months studying Earth: its broadcasts, its weapons and its politics. One of the crew argues for contact to repair the mess humanity has made; another wants to wipe the species out. The Culture leaves the planet alone, and no one on Earth learns that it was there.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "1977 (The State of the Art)",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Culture series (table of in-universe dates, with the textual anchor for each)",
+       "url": "https://en.wikipedia.org/wiki/Culture_series"
+      },
+      {
+       "title": "Wikipedia: The State of the Art",
+       "url": "https://en.wikipedia.org/wiki/The_State_of_the_Art"
+      }
+     ],
+     "note": "The title novella of The State of the Art. In her preface to her account, Diziet Sma dates the visit 115 years before she writes it, and she writes it at the time of Use of Weapons (2092). That fixes the visit at 1977, which matches the novella's own setting. Open contact comes only around 2100 (see below).",
+     "binWhy": "The people who know, the Culture, keep what they know from the people it concerns, everyone on Earth.",
+     "bin": "secret-kept",
+     "facets": {
+      "change": "an unwatched planet → a planet watched and deliberately left alone",
+      "mechanism": "expedition",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "cold-war",
+       "arms-race",
+       "secrecy"
+      ],
+      "outcomes": [
+       "ignorance",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "cu-published-1987",
+     "year": 1987,
+     "date": "23 April 1987",
+     "title": "Consider Phlebas is published",
+     "description": "The first Culture novel appears. Its historical appendix, which dates the Idiran War to 1327-1375 CE, becomes the anchor for the chronology of the whole series.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Consider Phlebas",
+       "url": "https://en.wikipedia.org/wiki/Consider_Phlebas"
+      },
+      {
+       "title": "Wikipedia: Culture series (table of in-universe dates, with the textual anchor for each)",
+       "url": "https://en.wikipedia.org/wiki/Culture_series"
+      }
+     ],
+     "note": "Real-world publication. The State of the Art followed as a novella in 1989 and a collection in 1991; the last novel, The Hydrogen Sonata, came out in 2012, the year before Banks died.",
+     "binWhy": "A real-world publication date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "cu-azad-2087",
+     "year": 2087,
+     "date": "c. 2087 CE",
+     "title": "The Empire of Azad falls after its game",
+     "description": "Gurgeh, a bored Culture game-player blackmailed into service, travels to an empire where a single game decides rank and the throne. In the final against the Emperor, on a planet swept by periodic fire, the Emperor dies by a shot from his own gun, and the empire collapses without further help. Gurgeh learns he was a pawn in the Culture's plan.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "716 years after the Idiran war in space ended (The Player of Games)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: Culture series (table of in-universe dates, with the textual anchor for each)",
+       "url": "https://en.wikipedia.org/wiki/Culture_series"
+      },
+      {
+       "title": "Wikipedia: The Player of Games",
+       "url": "https://en.wikipedia.org/wiki/The_Player_of_Games"
+      }
+     ],
+     "note": "The Player of Games says one of its ships was built 716 years earlier, near the end of the war in space (1367). That puts the start at c. 2083, and the book runs four to five years, so the empire falls around 2087-88.",
+     "binWhy": "The Emperor is killed and his empire collapses behind him.",
+     "bin": "ruler-falls",
+     "sub": "killed",
+     "facets": {
+      "change": "an empire ruled by a game → an empire that falls after it",
+      "mechanism": "death",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "civilisational",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "empire-at-height",
+       "repression"
+      ],
+      "outcomes": [
+       "collapse",
+       "succession-struggle"
+      ]
+     }
+    },
+    {
+     "id": "cu-earth-contact-2100",
+     "year": 2100,
+     "date": "c. 2100 CE",
+     "title": "The Culture contacts Earth",
+     "description": "About 120 years after the secret survey, the Culture makes open contact with Earth.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": "'some time around 2100 AD' (Consider Phlebas appendix, as reported)",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "The Wertzone: Reading order of the Culture novels (note on the dates, Consider Phlebas appendix)",
+       "url": "https://thewertzone.blogspot.com/2017/11/reading-order-of-culture-novels-updated.html"
+      },
+      {
+       "title": "Wikipedia: The Culture",
+       "url": "https://en.wikipedia.org/wiki/The_Culture"
+      }
+     ],
+     "note": "Reported from the appendix to Consider Phlebas by the Wertzone chronology and by Wikipedia's Culture article ('Earth being contacted around 2100 CE'). No novel dramatises it, and I have not seen the appendix text myself.",
+     "binWhy": "Earth is openly met by a non-human civilisation.",
+     "bin": "first-contact",
+     "facets": {
+      "change": "an uncontacted control → a contacted world",
+      "mechanism": "arrival",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "isolation"
+      ],
+      "outcomes": [
+       "contact",
+       "opening"
+      ]
+     }
+    },
+    {
+     "id": "cu-masaq-2167",
+     "year": 2167,
+     "date": "c. 2167 CE",
+     "title": "A Chelgrian assassin comes to Masaq' Orbital",
+     "description": "The Culture's meddling set off a caste war on Chel. In revenge, a grieving officer, Quilan, is sent to Masaq' Orbital with his memory edited, carrying wormholes for a strike on its Hub Mind. The Hub already knows, and suspects that the 'aliens' behind the plot were warlike Culture Minds. At the concert marking the Twin Novae, Mind and assassin end their lives together.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "'nearly eight hundred years' after the war (Look to Windward)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: Culture series (table of in-universe dates, with the textual anchor for each)",
+       "url": "https://en.wikipedia.org/wiki/Culture_series"
+      },
+      {
+       "title": "Wikipedia: Look to Windward",
+       "url": "https://en.wikipedia.org/wiki/Look_to_Windward"
+      }
+     ],
+     "note": "Look to Windward says the war 'had ended nearly eight hundred years ago', and the concert marks the Twin Novae's light arriving 800 years on. The series table gives c. 2167; the Wertzone gives c. 2170.",
+     "binWhy": "A suicide attack aimed at one specific target, a habitat's governing Mind.",
+     "bin": "terror-attack",
+     "sub": "targeted",
+     "facets": {
+      "change": "a planned revenge → a Mind and its assassin dying together",
+      "mechanism": "attack",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "local",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "foreign-backed-ruler",
+       "secrecy"
+      ],
+      "outcomes": [
+       "revelation",
+       "hunt-begins"
+      ]
+     }
+    },
+    {
+     "id": "cu-gzilt-2375",
+     "year": 2375,
+     "date": "c. 2375 CE",
+     "title": "The Gzilt Sublime",
+     "description": "The Gzilt, a civilisation that nearly helped found the Culture, leave the material universe together for the Sublime. In their last weeks, a secret about the origins of their holy book threatens to come out, and a Gzilt warship destroys the envoy sent to confess it.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "about 1,000 years after the Idiran War (The Hydrogen Sonata)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: Culture series (table of in-universe dates, with the textual anchor for each)",
+       "url": "https://en.wikipedia.org/wiki/Culture_series"
+      },
+      {
+       "title": "Wikipedia: The Hydrogen Sonata",
+       "url": "https://en.wikipedia.org/wiki/The_Hydrogen_Sonata"
+      }
+     ],
+     "note": "The Hydrogen Sonata places itself about 1,000 years after the Idiran War. It also says the Interesting Times Gang from Excession has not been seen in almost 500 years, which agrees.",
+     "binWhy": "A whole civilisation passes beyond material existence.",
+     "bin": "beyond-human",
+     "facets": {
+      "change": "a civilisation in the Real → gone into the Sublime",
+      "mechanism": "consolidation",
+      "actor": "state",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": -1
+      },
+      "preconditions": [
+       "prosperity",
+       "religious-fervour"
+      ],
+      "outcomes": [
+       "transcendence",
+       "revelation"
+      ]
+     }
+    },
+    {
+     "id": "cu-hells-2767",
+     "year": 2767,
+     "date": "c. 2767 CE (the text also allows c. 2875; Banks said c. 2970)",
+     "title": "The War in Heaven comes out of the simulation",
+     "description": "For decades, a war game run in simulation has been deciding whether civilisations may keep virtual Hells for the minds of their dead. When the pro-Hell side cheats and takes the war into the real world, Culture agents make sure the attack destroys the Hells, while appearing to try to stop it.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "'six hundred years' after Look to Windward (Surface Detail)",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Wikipedia: Culture series (table of in-universe dates, with the textual anchor for each)",
+       "url": "https://en.wikipedia.org/wiki/Culture_series"
+      },
+      {
+       "title": "Wikipedia: Surface Detail",
+       "url": "https://en.wikipedia.org/wiki/Surface_Detail"
+      }
+     ],
+     "note": "The latest dated Culture story, and the least certain date. Surface Detail says Look to Windward happened 'six hundred years ago' (c. 2767), but also puts the Idiran War about 1,500 years back (c. 2875). Banks said in a 2010 interview that it is set about 800 years after Look to Windward (c. 2967-70). I use the first, most specific textual anchor.",
+     "binWhy": "The conflict over the Hells is settled: the Hells are destroyed and the anti-Hell side wins.",
+     "bin": "decisive-victory",
+     "facets": {
+      "change": "a war over the dead fought in simulation → the Hells destroyed in reality",
+      "mechanism": "war",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "long-war",
+       "secrecy"
+      ],
+      "outcomes": [
+       "turning-point",
+       "revelation",
+       "new-order"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "The archetype's post-scarcity utopia: an interstellar civilisation of humans and artificial Minds that intervenes, covertly and at a scale of centuries, in the societies it meets. It belongs here because its drama is galactic politics and war over thousands of years. It follows Banks's published chronology, taking the novels' own cross-references (the Consider Phlebas appendix's 1327-1375 CE for the Idiran War, then the later books' 'N years after the war') as the Wikipedia Culture-series table and the Wertzone chronology lay them out. The anchors are Consider Phlebas (1327, 1331, 1375), The Player of Games (c. 2083-88), The State of the Art and Use of Weapons (1977 and 2092), Excession (c. 1867 and c. 633 BCE), Look to Windward (c. 2167), The Hydrogen Sonata (c. 2375) and Surface Detail (c. 2767). Matter (c. 1887 or 2167, self-contradictory) and Inversions (undated) are left out. Tier coverage: T4 for the founding, the first sighting of the Excession, the Idiran War and Excession; T3 for Earth in 1977 and the 1987 publication; T2 for Azad, Earth contact and Masaq' (2087-2167); T1 for the Gzilt Subliming and Surface Detail (2375-2767).",
+   "sources": [
+    {
+     "title": "Wikipedia: Culture series (table of in-universe dates, with the textual anchor for each)",
+     "url": "https://en.wikipedia.org/wiki/Culture_series"
+    },
+    {
+     "title": "Wikipedia: The Culture",
+     "url": "https://en.wikipedia.org/wiki/The_Culture"
+    },
+    {
+     "title": "The Wertzone: Reading order of the Culture novels (note on the dates, Consider Phlebas appendix)",
+     "url": "https://thewertzone.blogspot.com/2017/11/reading-order-of-culture-novels-updated.html"
+    },
+    {
+     "title": "Wikipedia: Consider Phlebas",
+     "url": "https://en.wikipedia.org/wiki/Consider_Phlebas"
+    }
+   ]
+  },
+  {
+   "id": "hyperion",
+   "title": "Hyperion Cantos",
+   "medium": "book",
+   "creator": "Dan Simmons",
+   "originYear": 1989,
+   "group": "far-future-space-opera",
+   "epoch": "far-future",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 2038,
+    "label": "The Nuclear Jihad",
+    "delta": "Real: 2038 is twelve years from now; there is no Palestinian state, and no nuclear weapon has been used in war since 1945. Fiction: a Palestinian nation, won after a century of struggle, lasts about a month before a nuclear war destroys it, and a second diaspora begins that will last five hundred years.",
+    "inUniverse": "'the Nuclear Jihad of 2038' (Kassad's tale, Hyperion)",
+    "confidence": "high",
+    "note": "The Cantos give most of their history as backstory inside the pilgrims' tales, in AD years, in the Hegemony's calendar or in local calendars. The earliest year stated that is not our history is the Nuclear Jihad of 2038, so the fork is there. Nothing earlier is dated; the Hawking drive and the TechnoCore's origins are not. The later calendar splits in two: the Hyperion books' numbers (Duré's 2732, Melio's 2739, the Big Mistake of '38) put the Fall at 2764, while the Endymion books' AD years put it at 2852 and call the disaster the Big Mistake of '08. This lineage follows the Hyperion reckoning throughout.",
+    "sources": [
+     {
+      "title": "Hyperion Cantos Wiki: Timeline (archived) - dates with page references to Hyperion, Endymion and The Rise of Endymion",
+      "url": "https://web.archive.org/web/2024/https://hyperioncantos.fandom.com/wiki/Timeline"
+     },
+     {
+      "title": "Wikipedia: Hyperion (Simmons novel)",
+      "url": "https://en.wikipedia.org/wiki/Hyperion_(Simmons_novel)"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "Aenea's death breaks the Pax and the TechnoCore's hold, people learn to travel by thought without the cruciform, and The Rise of Endymion ends with Raul returning to an Earth that was never destroyed.",
+    "asOf": 3047
+   },
+   "events": [
+    {
+     "id": "hy-published-1989",
+     "year": 1989,
+     "date": "1989",
+     "title": "Hyperion is published",
+     "description": "The first novel appears: seven pilgrims tell their stories on the way to the Time Tombs. It wins the 1990 Hugo Award, and The Fall of Hyperion follows in March 1990.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 2,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Hyperion (Simmons novel)",
+       "url": "https://en.wikipedia.org/wiki/Hyperion_(Simmons_novel)"
+      }
+     ],
+     "note": "Real-world publication (Doubleday, 1989).",
+     "binWhy": "A real-world publication date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "hy-published-1996",
+     "year": 1996,
+     "date": "February 1996",
+     "title": "Endymion is published",
+     "description": "The third novel moves the story 274 years past the Fall and changes the calendar: the Endymion books give their own AD years and call the Big Mistake the one 'of '08'.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Endymion (Simmons novel)",
+       "url": "https://en.wikipedia.org/wiki/Endymion_(Simmons_novel)"
+      }
+     ],
+     "note": "Real-world publication (February 1996); The Rise of Endymion followed in 1997.",
+     "binWhy": "A real-world publication date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "hy-nuclear-jihad-2038",
+     "year": 2038,
+     "date": "2038",
+     "title": "The Nuclear Jihad",
+     "description": "A Palestinian state, won after a century of struggle, lasts about a month before the Nuclear Jihad of 2038 destroys it. Its people begin a second diaspora that lasts five centuries and ends on marginal desert worlds such as Mars, where the soldier Fedmahn Kassad is born.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "'the Nuclear Jihad of 2038' (Hyperion)",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Hyperion Cantos Wiki: Timeline (archived) - dates with page references to Hyperion, Endymion and The Rise of Endymion",
+       "url": "https://web.archive.org/web/2024/https://hyperioncantos.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Wikipedia: Hyperion (Simmons novel)",
+       "url": "https://en.wikipedia.org/wiki/Hyperion_(Simmons_novel)"
+      }
+     ],
+     "note": "The year is stated in Kassad's tale in Hyperion (p. 133 of the 1995 edition, per the wiki timeline). It is the earliest dated event in the Cantos that is not our history, so it is the fork.",
+     "binWhy": "A nuclear war destroys a nation and scatters its people.",
+     "bin": "mass-death",
+     "sub": "nuclear",
+     "facets": {
+      "change": "a month-old nation → a nuclear ruin and a second diaspora",
+      "mechanism": "war",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "long-war",
+       "religious-fervour"
+      ],
+      "outcomes": [
+       "mass-death",
+       "exile",
+       "scattering"
+      ]
+     }
+    },
+    {
+     "id": "hy-hegemony-2143",
+     "year": 2143,
+     "date": "2143",
+     "title": "Year zero of the Hegemony calendar",
+     "description": "Hegemony Standard dating counts from this year. A human Hegemony of some kind is already in place before the Earth dies: the Consul later learns that the Big Mistake was planned by the TechnoCore and 'the fledgling government of the Hegemony'.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": "0 in Hegemony Standard reckoning (2732 AD = 589)",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Hyperion Cantos Wiki: Timeline (archived) - dates with page references to Hyperion, Endymion and The Rise of Endymion",
+       "url": "https://web.archive.org/web/2024/https://hyperioncantos.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Derived: Duré's journal dates the start of his exile both 2732 AD and 589 in Hegemony Standard, so the Hegemony's year zero is 2143. That this marks the Hegemony's founding is an inference (the wiki's, and mine); no book narrates it.",
+     "binWhy": "A human government spanning worlds starts its own calendar.",
+     "bin": "union-founded",
+     "facets": {
+      "change": "national governments → a Hegemony with its own calendar",
+      "mechanism": "founding",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "machine-dependency"
+      ],
+      "outcomes": [
+       "union",
+       "new-order"
+      ]
+     }
+    },
+    {
+     "id": "hy-big-mistake-2238",
+     "year": 2238,
+     "date": "2238",
+     "title": "The Big Mistake",
+     "description": "A research team in Kiev creates a small black hole that falls to the centre of the Earth and begins eating it from the inside. The century of quakes that follows is remembered as the Bad Times. Much later it comes out that the TechnoCore arranged it.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "'the Big Mistake of '38' (Hyperion); 'of '08' (Endymion)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Hyperion Cantos Wiki: Timeline (archived) - dates with page references to Hyperion, Endymion and The Rise of Endymion",
+       "url": "https://web.archive.org/web/2024/https://hyperioncantos.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Hyperion Cantos Wiki: Talk:Big Mistake (archived) - 'of '38' in the Hyperion books, 'of '08' in the Endymion books",
+       "url": "https://web.archive.org/web/2024/https://hyperioncantos.fandom.com/wiki/Talk:Big_Mistake"
+      },
+      {
+       "title": "Hyperion Cantos Wiki: Big Mistake (archived)",
+       "url": "https://web.archive.org/web/2024/https://hyperioncantos.fandom.com/wiki/Big_Mistake"
+      }
+     ],
+     "note": "Hyperion and The Fall of Hyperion call it the Big Mistake of '38. The wiki fixes the century by counting Martin Silenus's life forward to the pilgrimage (526 years). The Endymion books call it the Big Mistake of '08, a contradiction Simmons never resolved. Old Earth was in fact hidden in the Magellanic Clouds, not destroyed, as The Rise of Endymion reveals.",
+     "binWhy": "A man-made disaster destroys the planet that human civilisation stands on, and it does not recover.",
+     "bin": "civilisation-collapses",
+     "sub": "climate-ecological",
+     "facets": {
+      "change": "a living Earth → a planet being eaten from inside",
+      "mechanism": "accident",
+      "actor": "machine",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "scientific",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "machine-dependency",
+       "secrecy",
+       "technological-race"
+      ],
+      "outcomes": [
+       "exodus",
+       "collapse",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "hy-hegira-2282",
+     "year": 2282,
+     "date": "2282",
+     "title": "The Hegira",
+     "description": "Humanity leaves the dying Earth for the stars. Ships using the Hawking drive, a human invention, carry colonists to hundreds of worlds, each voyage costing years of time-debt, and the Hegemony's WorldWeb is later spun from those colonies.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "'457 years' before 2739 (Hyperion)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Hyperion Cantos Wiki: Timeline (archived) - dates with page references to Hyperion, Endymion and The Rise of Endymion",
+       "url": "https://web.archive.org/web/2024/https://hyperioncantos.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Wikipedia: Hyperion Cantos",
+       "url": "https://en.wikipedia.org/wiki/Hyperion_Cantos"
+      }
+     ],
+     "note": "Hyperion says 2739 is 457 years after the Hegira, which gives 2282. Emigration had begun earlier; the Ousters left Old Earth's system before this.",
+     "binWhy": "Humanity founds colonies around other stars on a mass scale.",
+     "bin": "settlement-founded",
+     "sub": "other-stars",
+     "facets": {
+      "change": "one home world → hundreds of colonies",
+      "mechanism": "expedition",
+      "actor": "movement",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "disaster-just-struck",
+       "existential-threat"
+      ],
+      "outcomes": [
+       "exodus",
+       "colonisation",
+       "scattering"
+      ]
+     }
+    },
+    {
+     "id": "hy-old-earth-2338",
+     "year": 2338,
+     "date": "2338",
+     "title": "The death of Old Earth",
+     "description": "A century after the Big Mistake the Earth is gone, apparently to rubble around the Moon. Among the last to leave is the twenty-year-old Martin Silenus, who will write the Cantos.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": "100 years after the Big Mistake (Hyperion)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Hyperion Cantos Wiki: Timeline (archived) - dates with page references to Hyperion, Endymion and The Rise of Endymion",
+       "url": "https://web.archive.org/web/2024/https://hyperioncantos.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Hyperion says Old Earth died 100 years after the Big Mistake and that Silenus was twenty at the time. The Rise of Endymion reveals the planet was moved, not destroyed.",
+     "binWhy": "The planet humanity came from is destroyed with whoever is still on it.",
+     "bin": "mass-death",
+     "sub": "disaster",
+     "facets": {
+      "change": "a dying Earth → a debris cloud and a legend",
+      "mechanism": "disaster",
+      "actor": "machine",
+      "position": "above",
+      "scope": "planetary",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "disaster-just-struck",
+       "cover-up"
+      ],
+      "outcomes": [
+       "exodus",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "hy-shrike-2533",
+     "year": 2533,
+     "date": "c. 2533",
+     "title": "The Shrike appears on Hyperion",
+     "description": "About nine years after Sad King Billy's colonists found a City of Poets near the Time Tombs, people begin to die. The killer is the Shrike, a four-armed creature of blades that can step outside time and that comes from the Tombs, which are moving backwards through time. Billy evacuates the city, and a church grows up around the Shrike.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "nine years after the City of Poets was founded (Hyperion)",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Hyperion Cantos Wiki: Timeline (archived) - dates with page references to Hyperion, Endymion and The Rise of Endymion",
+       "url": "https://web.archive.org/web/2024/https://hyperioncantos.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Derived by the wiki from Silenus's tale: his arrival on Hyperion (c. 2524) plus 'nine years of decadence'. Hyperion also says the colonisation came 200-250 years before the pilgrimage, and 240 fits.",
+     "binWhy": "A creature from the future arrives through the Time Tombs and changes the colony.",
+     "bin": "time-traveller-arrives",
+     "facets": {
+      "change": "a city of poets → a city abandoned to a killer from the future",
+      "mechanism": "arrival",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "local",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "frontier-open",
+       "isolation"
+      ],
+      "outcomes": [
+       "exodus",
+       "fervour"
+      ]
+     }
+    },
+    {
+     "id": "hy-cruciform-2733",
+     "year": 2733,
+     "date": "2733 (the journal opens 17 Thomasmonth 2732 AD = October 12, 589 Hegemony Standard)",
+     "title": "Father Duré finds the cruciform",
+     "description": "An exiled Jesuit, Paul Duré, finds the Bikura, the survivors of a lost colony on Hyperion. They are kept alive by cruciforms, parasites that rebuild the body after death at the cost of the mind. One grows into him.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "17 Thomasmonth 2732 AD, 589 Hegemony Standard (Duré's journal, Hyperion)",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Hyperion Cantos Wiki: Timeline (archived) - dates with page references to Hyperion, Endymion and The Rise of Endymion",
+       "url": "https://web.archive.org/web/2024/https://hyperioncantos.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Wikipedia: Hyperion (Simmons novel)",
+       "url": "https://en.wikipedia.org/wiki/Hyperion_(Simmons_novel)"
+      }
+     ],
+     "note": "Duré's journal gives its first date in three calendars, 2732 AD among them. The cruciform takes hold in the first months of 2733 by the journal's own dating. The Church's later power rests on this parasite.",
+     "binWhy": "A biological discovery about death and resurrection that the later history turns on.",
+     "bin": "breakthrough-science",
+     "sub": "life-sciences",
+     "facets": {
+      "change": "a lost colony → a parasite that raises the dead",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "local",
+      "domain": "biological",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "isolation",
+       "exile"
+      ],
+      "outcomes": [
+       "revelation"
+      ]
+     }
+    },
+    {
+     "id": "hy-time-tombs-2761",
+     "year": 2761,
+     "date": "2761",
+     "title": "The Time Tombs begin to open",
+     "description": "With an Ouster swarm heading for Hyperion, seven pilgrims set out for the Tombs on a last pilgrimage to the Shrike: a priest, a soldier, a poet, a scholar with his daughter who is ageing backwards, a detective, a Templar and the Consul. Each has a reason to face the Shrike.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "three years before the pilgrimage (Hyperion)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Hyperion Cantos Wiki: Timeline (archived) - dates with page references to Hyperion, Endymion and The Rise of Endymion",
+       "url": "https://web.archive.org/web/2024/https://hyperioncantos.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Wikipedia: Hyperion (Simmons novel)",
+       "url": "https://en.wikipedia.org/wiki/Hyperion_(Simmons_novel)"
+      }
+     ],
+     "note": "The pilgrims arrive in 2764 after a three-year time-debt in transit, so the Consul's summons comes three years earlier by Hyperion's clock.",
+     "binWhy": "Seven people are drawn into the larger story at the moment it turns.",
+     "bin": "the-call",
+     "facets": {
+      "change": "sealed tombs → seven people summoned",
+      "mechanism": "recruitment",
+      "actor": "state",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "prophecy",
+       "existential-threat"
+      ],
+      "outcomes": [
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "hy-fall-2764",
+     "year": 2764,
+     "date": "2764",
+     "title": "The Fall of the Farcasters",
+     "description": "As the pilgrims reach the Time Tombs, an attack reaches the WorldWeb itself. It is blamed on the Ousters but made by the TechnoCore, the AIs that built the farcasters. CEO Meina Gladstone orders every farcaster destroyed, which cuts the Core out of human space and breaks a civilisation of hundreds of worlds that had lived one step apart.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "The Fall (Hyperion reckoning 2764; Endymion reckoning 2852 AD)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Hyperion Cantos Wiki: Timeline (archived) - dates with page references to Hyperion, Endymion and The Rise of Endymion",
+       "url": "https://web.archive.org/web/2024/https://hyperioncantos.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Wikipedia: The Fall of Hyperion (novel)",
+       "url": "https://en.wikipedia.org/wiki/The_Fall_of_Hyperion_(novel)"
+      },
+      {
+       "title": "Wikipedia: Endymion (Simmons novel)",
+       "url": "https://en.wikipedia.org/wiki/Endymion_(Simmons_novel)"
+      }
+     ],
+     "note": "Hyperion reckoning: the scholar's daughter was 25 when her illness began in 2739, and she is a newborn as the pilgrims go down into the Tombs, which gives 2764. The Endymion books count years After the Fall (AF) and state their own AD years (Raul born 3099 AD = 247 AF; 3131 AD = 279 AF), which put the Fall at 2852 AD, 88 years later than the Hyperion books' own numbers allow. This lineage follows the Hyperion books' reckoning (Fall = 2764) and adds the Endymion books' AF counts to it.",
+     "binWhy": "The system the whole civilisation depended on has to be destroyed, and the order it held together collapses.",
+     "bin": "civilisation-collapses",
+     "sub": "machine",
+     "facets": {
+      "change": "a web of worlds one step apart → hundreds of isolated planets",
+      "mechanism": "attack",
+      "actor": "state",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "technological",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "machine-dependency",
+       "existential-threat",
+       "cover-up"
+      ],
+      "outcomes": [
+       "collapse",
+       "isolation",
+       "revelation"
+      ]
+     }
+    },
+    {
+     "id": "hy-pax-2773",
+     "year": 2773,
+     "date": "9 years After the Fall",
+     "title": "The Church builds the Pax on the cruciform",
+     "description": "Duré, briefly pope as Teilhard I, dies unexpectedly, and Lenar Hoyt is raised from the cruciform they shared and elected in his place. The Church offers resurrection to anyone who accepts the cruciform, and with its fleets it fills the space the Hegemony left, as the Pax. The cruciforms, it later turns out, come from the Core.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "9 After the Fall (2861 AD by the Endymion books)",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Hyperion Cantos Wiki: Timeline (archived) - dates with page references to Hyperion, Endymion and The Rise of Endymion",
+       "url": "https://web.archive.org/web/2024/https://hyperioncantos.fandom.com/wiki/Timeline"
+      },
+      {
+       "title": "Wikipedia: Endymion (Simmons novel)",
+       "url": "https://en.wikipedia.org/wiki/Endymion_(Simmons_novel)"
+      },
+      {
+       "title": "Wikipedia: The Rise of Endymion",
+       "url": "https://en.wikipedia.org/wiki/The_Rise_of_Endymion"
+      }
+     ],
+     "note": "The wiki dates Duré's poisoning and Hoyt's coronation to 9 AF (Endymion). That is 2861 AD by the Endymion books' own numbers and 2773 by the Hyperion reckoning used here. The Endymion books count years After the Fall (AF) and state their own AD years (Raul born 3099 AD = 247 AF; 3131 AD = 279 AF), which put the Fall at 2852 AD, 88 years later than the Hyperion books' own numbers allow. This lineage follows the Hyperion books' reckoning (Fall = 2764) and adds the Endymion books' AF counts to it.",
+     "binWhy": "A church, with the TechnoCore secretly behind it, ends up running human space.",
+     "bin": "power-seized",
+     "sub": "machine-or-corporate",
+     "facets": {
+      "change": "a shattered Web → a theocracy that sells resurrection",
+      "mechanism": "consolidation",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "post-collapse",
+       "religious-fervour"
+      ],
+      "outcomes": [
+       "theocracy",
+       "dependency"
+      ]
+     }
+    },
+    {
+     "id": "hy-aenea-3038",
+     "year": 3038,
+     "date": "274 years After the Fall",
+     "title": "Aenea steps out of the Time Tombs",
+     "description": "Aenea, the daughter of the detective Brawne Lamia and a machine-made copy of John Keats, walks out of the Tombs 274 years after she entered them at the age of twelve. The Pax is waiting to take her as an abomination. Raul Endymion, a Hyperion hunting guide sent by the ancient Martin Silenus, gets her away.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "274 After the Fall (3126 AD by Endymion)",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Wikipedia: Endymion (Simmons novel)",
+       "url": "https://en.wikipedia.org/wiki/Endymion_(Simmons_novel)"
+      },
+      {
+       "title": "Hyperion Cantos Wiki: Timeline (archived) - dates with page references to Hyperion, Endymion and The Rise of Endymion",
+       "url": "https://web.archive.org/web/2024/https://hyperioncantos.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Endymion opens '274 years after the Fall' (3126 AD by its own numbers). Here that is 3038. The Endymion books count years After the Fall (AF) and state their own AD years (Raul born 3099 AD = 247 AF; 3131 AD = 279 AF), which put the Fall at 2852 AD, 88 years later than the Hyperion books' own numbers allow. This lineage follows the Hyperion books' reckoning (Fall = 2764) and adds the Endymion books' AF counts to it.",
+     "binWhy": "The child on whom the future turns arrives and is protected.",
+     "bin": "chosen-one",
+     "facets": {
+      "change": "a prophecy → a girl the Pax must catch",
+      "mechanism": "arrival",
+      "actor": "individual",
+      "position": "below",
+      "scope": "civilisational",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "prophecy",
+       "theocracy",
+       "persecution"
+      ],
+      "outcomes": [
+       "hunt-begins",
+       "resistance-forms"
+      ]
+     }
+    },
+    {
+     "id": "hy-shared-moment-3047",
+     "year": 3047,
+     "date": "c. 283 years After the Fall",
+     "title": "Aenea's death and the Shared Moment",
+     "description": "Aenea, who has been passing on a communion that frees people from the cruciform and lets them travel through the Void Which Binds, is arrested on Pacem, tortured and burned to death. At the moment she dies, her thoughts reach most of humanity through the Void, and a rising against the Pax and the TechnoCore follows.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "about 283 After the Fall (The Rise of Endymion)",
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Wikipedia: The Rise of Endymion",
+       "url": "https://en.wikipedia.org/wiki/The_Rise_of_Endymion"
+      },
+      {
+       "title": "Hyperion Cantos Wiki: Timeline (archived) - dates with page references to Hyperion, Endymion and The Rise of Endymion",
+       "url": "https://web.archive.org/web/2024/https://hyperioncantos.fandom.com/wiki/Timeline"
+      }
+     ],
+     "note": "Derived from Aenea's age: she comes out of the Tombs at twelve (274 AF), is sixteen when she sends Raul away, and is twenty-one when they meet again after a five-year time-debt, shortly before Pacem. That gives about 283 AF: 3047 here, c. 3135 by the Endymion books' numbers. The Endymion books count years After the Fall (AF) and state their own AD years (Raul born 3099 AD = 247 AF; 3131 AD = 279 AF), which put the Fall at 2852 AD, 88 years later than the Hyperion books' own numbers allow. This lineage follows the Hyperion books' reckoning (Fall = 2764) and adds the Endymion books' AF counts to it.",
+     "binWhy": "Humanity gains a new way of being: travel by thought, and a shared mind across worlds.",
+     "bin": "beyond-human",
+     "facets": {
+      "change": "a Church that owns resurrection → people who can travel by thought",
+      "mechanism": "death",
+      "actor": "individual",
+      "position": "below",
+      "scope": "civilisational",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "theocracy",
+       "persecution",
+       "machine-dependency"
+      ],
+      "outcomes": [
+       "transcendence",
+       "resistance-forms",
+       "state-dissolves"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "The archetype's theocratic and machine-haunted empire: a Hegemony of two hundred worlds joined by farcasters it does not understand, the AIs that built them and are feeding on it, and the Church that rises when the network is destroyed. It belongs here for its scale and its three-civilisation politics (Hegemony, Ousters, TechnoCore). Continuity: the four novels (Hyperion 1989, The Fall of Hyperion 1990, Endymion 1996, The Rise of Endymion 1997), dated on the Hyperion books' reckoning, with the Endymion books' After-the-Fall counts added to a Fall in 2764. By the Endymion books' own AD years, everything after the Fall would be 88 years later. Tier coverage: T3 for the two publications; T2 for the Nuclear Jihad, the Hegemony calendar, the Big Mistake and the Hegira (2038-2282); T1 for everything from the death of Old Earth (2338) to the Shared Moment (3047). No T4, because nothing before our own century is dated.",
+   "sources": [
+    {
+     "title": "Wikipedia: Hyperion Cantos",
+     "url": "https://en.wikipedia.org/wiki/Hyperion_Cantos"
+    },
+    {
+     "title": "Wikipedia: Hyperion (Simmons novel)",
+     "url": "https://en.wikipedia.org/wiki/Hyperion_(Simmons_novel)"
+    },
+    {
+     "title": "Wikipedia: The Fall of Hyperion (novel)",
+     "url": "https://en.wikipedia.org/wiki/The_Fall_of_Hyperion_(novel)"
+    },
+    {
+     "title": "Wikipedia: Endymion (Simmons novel)",
+     "url": "https://en.wikipedia.org/wiki/Endymion_(Simmons_novel)"
+    },
+    {
+     "title": "Wikipedia: The Rise of Endymion",
+     "url": "https://en.wikipedia.org/wiki/The_Rise_of_Endymion"
+    },
+    {
+     "title": "Hyperion Cantos Wiki: Timeline (archived) - dates with page references to Hyperion, Endymion and The Rise of Endymion",
+     "url": "https://web.archive.org/web/2024/https://hyperioncantos.fandom.com/wiki/Timeline"
+    }
+   ]
+  },
+  {
+   "id": "babylon-5",
+   "title": "Babylon 5",
+   "medium": "tv",
+   "creator": "J. Michael Straczynski",
+   "originYear": 1993,
+   "group": "far-future-space-opera",
+   "epoch": "far-future",
+   "franchiseStatus": "dormant",
+   "divergence": {
+    "year": 2013,
+    "label": "Russia hands power to a strongman",
+    "delta": "Real: in 2013 Russia had been under Vladimir Putin since 2000, with no Communist electoral victory and no civil war. Fiction: the Russians of 2013 are named on screen beside the Germans of the 1930s as a people who gave power to a tyrant, and tie-in canon adds an elected Communist government and a civil war.",
+    "inUniverse": "Russia, 2013 (William Edgars in 'The Exercise of Vital Powers', 1997)",
+    "confidence": "medium",
+    "note": "The series dates its own Earth history by the Common Era, so its years are ours. The earliest dated statement on screen that contradicts our history is Edgars's list in season 4, which runs Russia 1917, Germany 1939, Russia 2013, Iraq 2025 and France 2112. It is a single line and not the story's real hinge, which is the first contact with the Centauri in 2156; but it is the first year the fiction stops matching us, so the chain starts there. Earlier 21st-century entries in the tie-in chronology (an asteroid near-miss in 2011, for instance) do not contradict the real record.",
+    "sources": [
+     {
+      "title": "Reactor: Babylon 5 rewatch, 'The Exercise of Vital Powers' (Edgars cites Russia in 2013, Iraq in 2025, France in 2112)",
+      "url": "https://reactormag.com/babylon-5-rewatch-the-exercise-of-vital-powers/"
+     },
+     {
+      "title": "The Babylon Project (wiki): 21st Century timeline",
+      "url": "https://babylon5.fandom.com/wiki/21st_Century"
+     },
+     {
+      "title": "The Babylon Project (wiki): Chronology (per the Historical Database in Across Time and Space)",
+      "url": "https://babylon5.fandom.com/wiki/Chronology"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "The series ends with the Shadows and Vorlons gone, the Interstellar Alliance founded and still holding twenty years later, and 'The Deconstruction of Falling Stars' shows that even after Earth burns in 2762 the Rangers rebuild it and humanity eventually becomes what the First Ones were.",
+    "asOf": 2281
+   },
+   "events": [
+    {
+     "id": "b5-pub-1993",
+     "year": 1993,
+     "date": "1993-02-22",
+     "title": "Babylon 5: The Gathering airs",
+     "description": "J. Michael Straczynski's pilot film airs on the PTEN network, setting up a space station, five ambassadors and a war ten years in the past.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Babylon 5",
+       "url": "https://en.wikipedia.org/wiki/Babylon_5"
+      }
+     ],
+     "note": "A real-world publication event; the series proper began on 26 January 1994 and ran to 25 November 1998, with the fifth season on TNT.",
+     "binWhy": "A real-world release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "b5-pub-1994",
+     "year": 1994,
+     "date": "1994-01-26",
+     "title": "Babylon 5 begins its five-year run",
+     "description": "The series premieres, planned from the start as a five-season novel for television with a beginning, middle and end.",
+     "tier": "T3",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Babylon 5",
+       "url": "https://en.wikipedia.org/wiki/Babylon_5"
+      }
+     ],
+     "note": "A real-world publication event. 110 episodes over five seasons, followed by the spin-off Crusade (1999), The Lost Tales (2007) and the animated The Road Home (2023).",
+     "binWhy": "A real-world release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "b5-russia-2013",
+     "year": 2013,
+     "date": "2013",
+     "title": "Russia hands power to a strongman",
+     "description": "In a list of peoples who gave power to tyrants because they were frightened, William Edgars names the Russians in 2013 alongside the Germans and the Russians of 1917. Later tie-in canon says a Communist government under a leader named Kolishnikov was elected, followed by civil war and twenty years as an economic colony of the West.",
+     "tier": "T2",
+     "phase": "fork",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": "Russia, 2013 (Edgars, 'The Exercise of Vital Powers')",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Reactor: Babylon 5 rewatch, 'The Exercise of Vital Powers' (Edgars cites Russia in 2013, Iraq in 2025, France in 2112)",
+       "url": "https://reactormag.com/babylon-5-rewatch-the-exercise-of-vital-powers/"
+      },
+      {
+       "title": "The Babylon Project (wiki): 21st Century timeline",
+       "url": "https://babylon5.fandom.com/wiki/21st_Century"
+      }
+     ],
+     "note": "Stated on screen in 'The Exercise of Vital Powers' (season 4, written by Straczynski), which also names Iraq in 2025 and France in 2112. The detail of a Communist victory, Kolishnikov and the civil war comes from the tie-in novel Dark Genesis and is less certain. In our 2013 Russia already had a strongman, but he came to power in 2000 and faced no Communist electoral victory or civil war; this is the first dated point at which the show's Earth history is no longer ours.",
+     "binWhy": "A leader is given power by election and fear and uses it to rule alone; the show uses it as a warning that people hand power over.",
+     "bin": "power-seized",
+     "sub": "strongman-legal",
+     "facets": {
+      "change": "a fearful electorate → a government given power",
+      "mechanism": "election",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "crisis-economic",
+       "crisis-legitimacy"
+      ],
+      "outcomes": [
+       "one-party-state",
+       "civil-war"
+      ]
+     }
+    },
+    {
+     "id": "b5-earth-alliance-2085",
+     "year": 2085,
+     "date": "2085",
+     "title": "The Earth Alliance is founded after a third world war",
+     "description": "A war that begins in 2080 between India, Pakistan and their allies over the Pacific Rim draws in the world and ends in 2084 at the cost of millions of lives. The next year the United Nations is dissolved and the regional blocs combine into the Earth Alliance, with its Senate in Geneva.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "The Babylon Project (wiki): World War III (2080-2084; Earth Alliance formed 2085)",
+       "url": "https://babylon5.fandom.com/wiki/World_War_III"
+      },
+      {
+       "title": "The Babylon Project (wiki): 21st Century timeline",
+       "url": "https://babylon5.fandom.com/wiki/21st_Century"
+      }
+     ],
+     "note": "The dates of the war and the Alliance's founding come from the Official Babylon 5 Magazine and the series' published chronology, not from dialogue; the show itself only ever refers to the Earth Alliance as long established. The real 2085 is sixty years away; the fiction reaches it through a non-nuclear world war.",
+     "binWhy": "Independent powers unite under one charter, and it is the government everything later in the series is about.",
+     "bin": "union-founded",
+     "facets": {
+      "change": "rival blocs after a world war → one Earth government",
+      "mechanism": "consolidation",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "war-just-ended",
+       "disaster-just-struck"
+      ],
+      "outcomes": [
+       "union",
+       "new-order"
+      ]
+     }
+    },
+    {
+     "id": "b5-centauri-2156",
+     "year": 2156,
+     "date": "2156-04-07",
+     "title": "A Centauri ship arrives in the solar system",
+     "description": "Humanity's first contact is with the Centauri, a declining empire who claim at first to run the galaxy and that humans are a lost colony of theirs. They trade Earth access to hyperspace, first by leasing time on alien jumpgates and then by selling the technology.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "The Babylon Project (wiki): 22nd Century timeline",
+       "url": "https://babylon5.fandom.com/wiki/22nd_Century"
+      }
+     ],
+     "note": "The exact date, 7 April 2156, is given in the tie-in novel Dark Genesis; the series establishes the Centauri as humanity's first contact and the source of its jump technology. The novel also has Earth's Alliance on the verge of breaking up just before, over the regulation of telepaths, and rescued by the contact.",
+     "binWhy": "Humanity confirms and meets a non-human intelligence, and it opens the way to the stars.",
+     "bin": "first-contact",
+     "facets": {
+      "change": "alone in the dark → a Centauri ship with a jumpgate to sell",
+      "mechanism": "arrival",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "weak-institutions",
+       "isolation"
+      ],
+      "outcomes": [
+       "contact",
+       "opening",
+       "dependency"
+      ]
+     }
+    },
+    {
+     "id": "b5-psi-corps-2161",
+     "year": 2161,
+     "date": "2161-04-12",
+     "title": "The Psi Corps is founded",
+     "description": "The Earth Alliance charters a single body to register, train and control its telepaths, who must join it, take sleeper drugs or be hunted. Its director reports to almost no one.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "The Babylon Project (wiki): 22nd Century timeline",
+       "url": "https://babylon5.fandom.com/wiki/22nd_Century"
+      }
+     ],
+     "note": "Date from Dark Genesis, the canon tie-in novel on the Corps' origins; the chronology has Earth scientists certifying telepathy in 2115 and a Metasensory Regulation Authority from 2117, which the Corps replaces. On screen the Corps is simply there, powerful and feared.",
+     "binWhy": "A body is founded that will shape the Earth Alliance from inside: a guild of telepaths that is also their jailer and the state's secret instrument.",
+     "bin": "new-institution",
+     "facets": {
+      "change": "unregistered telepaths → one corps that owns them",
+      "mechanism": "founding",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "social",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "persecution",
+       "contact-made"
+      ],
+      "outcomes": [
+       "secrecy-state",
+       "servitude"
+      ]
+     }
+    },
+    {
+     "id": "b5-minbari-war-2245",
+     "year": 2245,
+     "date": "2245-07",
+     "title": "An Earth ship fires on the Minbari, and the Earth-Minbari War begins",
+     "description": "An Earthforce expedition meets a Minbari cruiser that approaches with its gunports open, as a mark of respect, and opens fire, killing Dukhat, the leader of the Grey Council. The Minbari answer with a war of extermination that Earth cannot win.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "The Babylon Project (wiki): 2240s timeline (Earth-Minbari War, Battle of the Line)",
+       "url": "https://babylon5.fandom.com/wiki/2240s"
+      },
+      {
+       "title": "Wikipedia: Babylon 5",
+       "url": "https://en.wikipedia.org/wiki/Babylon_5"
+      }
+     ],
+     "note": "Dated to July 2245 in the TV film In the Beginning and the series' chronology. Humanity loses nearly every battle for three years.",
+     "binWhy": "A war between species begins, and it is a misunderstanding.",
+     "bin": "war-breaks-out",
+     "sub": "between-worlds",
+     "facets": {
+      "change": "a first meeting → a war of extermination",
+      "mechanism": "attack",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "rivalry",
+       "isolation"
+      ],
+      "outcomes": [
+       "war-of-expansion",
+       "extinction-risk",
+       "mass-death"
+      ]
+     }
+    },
+    {
+     "id": "b5-battle-of-the-line-2248",
+     "year": 2248,
+     "date": "2248",
+     "title": "The Minbari surrender at the Battle of the Line",
+     "description": "With Earth's last defences breaking, the Minbari capture an Earthforce pilot, discover that human souls are Minbari souls, and surrender without explanation. The reason stays secret for over a decade.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "The Babylon Project (wiki): 2240s timeline (Earth-Minbari War, Battle of the Line)",
+       "url": "https://babylon5.fandom.com/wiki/2240s"
+      }
+     ],
+     "note": "Dated to 2248 in the chronology; the surrender and its reason are shown in 'And the Sky Full of Stars', 'Points of Departure' and In the Beginning. Mars declares neutrality in the war the same year, and Earth's President announces the Babylon Project after the surrender.",
+     "binWhy": "The enemy offers peace at the moment of victory; it is a truce with a secret inside it, not a decision on the battlefield.",
+     "bin": "peace-made",
+     "facets": {
+      "change": "the edge of extinction → an unexplained surrender",
+      "mechanism": "negotiation",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "long-war",
+       "existential-threat",
+       "secrecy"
+      ],
+      "outcomes": [
+       "surrender",
+       "cover-up",
+       "diplomacy"
+      ]
+     }
+    },
+    {
+     "id": "b5-station-2256",
+     "year": 2256,
+     "date": "2256-03-09",
+     "title": "Babylon 5 comes online",
+     "description": "After four earlier stations are sabotaged or vanish, the fifth Babylon station opens in orbit of Epsilon III: five miles of metal holding a quarter of a million humans and aliens, and a council where the powers talk instead of fighting.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "The Babylon Project (wiki): Babylon 5 (station online 9 March 2256)",
+       "url": "https://babylon5.fandom.com/wiki/Babylon_5"
+      },
+      {
+       "title": "Wikipedia: Babylon 5",
+       "url": "https://en.wikipedia.org/wiki/Babylon_5"
+      }
+     ],
+     "note": "The wiki gives the station as online from 9 March 2256; the pilot is set in January 2257 and the series proper begins in 2258. Built by the Earth Alliance with Minbari backing.",
+     "binWhy": "A permanent station is founded in space as a meeting ground; its purpose is diplomatic, but what it is, physically, is a settlement in orbit.",
+     "bin": "settlement-founded",
+     "sub": "in-orbit",
+     "facets": {
+      "change": "wars between strangers → one station to talk in",
+      "mechanism": "founding",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "war-just-ended",
+       "contact-made"
+      ],
+      "outcomes": [
+       "diplomacy",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "b5-clark-2259",
+     "year": 2259,
+     "date": "2259-01-01",
+     "title": "President Santiago dies and Morgan Clark takes office",
+     "description": "Earthforce One explodes over Io, killing the Earth Alliance president, and Vice-President Clark is sworn in on Earthforce Two. Evidence that it was an assassination vanishes on the way to Earth, and Clark's administration draws ever closer to the Psi Corps and to the Shadows.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "The Babylon Project (wiki): 2259 timeline",
+       "url": "https://babylon5.fandom.com/wiki/2259"
+      }
+     ],
+     "note": "Shown in 'Chrysalis', the season 1 finale; the date is given in the series' Historical Database. The same year the Narn-Centauri war begins and the Shadows return.",
+     "binWhy": "A palace faction takes the state by murder and calls it a succession: the coup is hidden inside a tragedy.",
+     "bin": "power-seized",
+     "sub": "coup",
+     "facets": {
+      "change": "an elected president → his murderer's ally in his chair",
+      "mechanism": "coup",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "foreign-backed-ruler",
+       "secrecy"
+      ],
+      "outcomes": [
+       "cover-up",
+       "one-party-state"
+      ]
+     }
+    },
+    {
+     "id": "b5-secession-2260",
+     "year": 2260,
+     "date": "2260-04",
+     "title": "Martial law, and Babylon 5 secedes from Earth",
+     "description": "Clark declares martial law and has Earthforce bomb civilian targets on Mars. Mars, Proxima III, Orion VII and Babylon 5 declare independence, and the station beats off Clark's destroyers with Minbari help.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "The Babylon Project (wiki): 2260 timeline",
+       "url": "https://babylon5.fandom.com/wiki/2260"
+      }
+     ],
+     "note": "Martial law is dated to 9 April 2260 ('Point of No Return') and the secession to 14 April ('Severed Dreams'). The Shadow War is being fought at the same time.",
+     "binWhy": "An armed revolt against a government turned tyranny, in which a station and three colonies take up arms against the capital.",
+     "bin": "uprising",
+     "sub": "armed-rebellion",
+     "facets": {
+      "change": "a loyal outpost → a rebel station",
+      "mechanism": "secession",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "repression",
+       "crisis-legitimacy"
+      ],
+      "outcomes": [
+       "civil-war",
+       "independence",
+       "resistance-forms"
+      ]
+     }
+    },
+    {
+     "id": "b5-coriana-2261",
+     "year": 2261,
+     "date": "2261-01",
+     "title": "The Shadow War ends at Coriana VI",
+     "description": "Sheridan's fleet refuses to let the Vorlons and Shadows fight their war through the younger races, and at Coriana VI both are sent beyond the Rim with the other First Ones. By November Sheridan's forces reach Earth, and Clark kills himself rather than surrender.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "The Babylon Project (wiki): 2261 timeline",
+       "url": "https://babylon5.fandom.com/wiki/2261"
+      },
+      {
+       "title": "Wikipedia: Babylon 5",
+       "url": "https://en.wikipedia.org/wiki/Babylon_5"
+      }
+     ],
+     "note": "The Battle of Coriana VI ('Into the Fire') is dated to January 2261 and the end of the Earth Alliance Civil War ('Endgame') to November 2261; the Interstellar Alliance is proclaimed on 30 December. The year's three big events are merged; the decisive one is taken as the war's end.",
+     "binWhy": "The war that shaped the galaxy is settled: the old powers leave, and the younger races are left to run it themselves.",
+     "bin": "decisive-victory",
+     "facets": {
+      "change": "gods using the young as pawns → the young on their own",
+      "mechanism": "war",
+      "actor": "faction",
+      "position": "below",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "long-war",
+       "existential-threat"
+      ],
+      "outcomes": [
+       "turning-point",
+       "exodus",
+       "independence"
+      ]
+     }
+    },
+    {
+     "id": "b5-isa-2262",
+     "year": 2262,
+     "date": "2262-01",
+     "title": "Earth joins the Interstellar Alliance",
+     "description": "The alliance proclaimed at Babylon 5 on the last days of 2261 takes in the Earth Alliance under its new government, with Sheridan as its first president and the Rangers as its arm. For the first time the major powers and the non-aligned worlds are under one charter.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "The Babylon Project (wiki): Interstellar Alliance (formed 30 December 2261)",
+       "url": "https://babylon5.fandom.com/wiki/Interstellar_Alliance"
+      },
+      {
+       "title": "The Babylon Project (wiki): The Deconstruction of Falling Stars (records dated 2262, 2362, 2762, 3262 and a million years on)",
+       "url": "https://babylon5.fandom.com/wiki/The_Deconstruction_of_Falling_Stars"
+      }
+     ],
+     "note": "The wiki dates the founding of the Interstellar Alliance to 30 December 2261 ('Rising Star'); 'The Deconstruction of Falling Stars' opens on a record dated 2 January 2262, reporting that Earth has decided to join. The event is filed under 2262 because 2261 already holds the end of the war.",
+     "binWhy": "Independent powers unite under one charter; the ending the series was built towards.",
+     "bin": "union-founded",
+     "facets": {
+      "change": "a council of rivals → one alliance of worlds",
+      "mechanism": "negotiation",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "war-just-ended"
+      ],
+      "outcomes": [
+       "union",
+       "new-order",
+       "diplomacy"
+      ]
+     }
+    },
+    {
+     "id": "b5-sheridan-2281",
+     "year": 2281,
+     "date": "2281-01-14",
+     "title": "Sheridan goes beyond the Rim, and Babylon 5 is demolished",
+     "description": "Twenty years after the end of the war, the Alliance's first president feels his borrowed life run out, says goodbye to his friends and flies alone to Coriana VI, where his ship is found empty. Soon after, Earthforce blows up the old station, its traffic gone.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "The Babylon Project (wiki): 2280s timeline (Sheridan's passing, January 2281)",
+       "url": "https://babylon5.fandom.com/wiki/2280s"
+      }
+     ],
+     "note": "'Sleeping in Light', the series finale, set in January 2281; the wiki gives 14 January for Sheridan's departure.",
+     "binWhy": "A ruler leaves and does not come back, and an era ends with the building that held it; his work has already become the Alliance.",
+     "bin": "ruler-falls",
+     "sub": "dies-or-vanishes",
+     "facets": {
+      "change": "a founding president → an empty ship and a legend",
+      "mechanism": "death",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "prosperity"
+      ],
+      "outcomes": [
+       "succession-struggle",
+       "programme-winds-down"
+      ]
+     }
+    },
+    {
+     "id": "b5-great-burn-2762",
+     "year": 2762,
+     "date": "2762-01-02",
+     "title": "The Great Burn",
+     "description": "Five hundred years on, an Earth faction that resents the Alliance plans a surprise attack on the colonies; its rivals strike first, and the civil war that follows burns the Earth back to a pre-industrial world that remembers Sheridan as scripture.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "The Babylon Project (wiki): The Deconstruction of Falling Stars (records dated 2262, 2362, 2762, 3262 and a million years on)",
+       "url": "https://babylon5.fandom.com/wiki/The_Deconstruction_of_Falling_Stars"
+      },
+      {
+       "title": "The Babylon Project (wiki): Great Burn",
+       "url": "https://babylon5.fandom.com/wiki/Great_Burn"
+      }
+     ],
+     "note": "Shown in 'The Deconstruction of Falling Stars' through a record dated 2 January 2762, the Alliance's 500th anniversary; the name and the scale of the destruction come from the episode's 3262 segment. Whether nuclear weapons were used is not stated.",
+     "binWhy": "Weapons of war burn a civilisation's home world and kill on the scale that ends it; the Rangers spend centuries rebuilding.",
+     "bin": "mass-death",
+     "sub": "nuclear",
+     "facets": {
+      "change": "an alliance at five hundred → a burned Earth",
+      "mechanism": "war",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": -1
+      },
+      "preconditions": [
+       "rivalry",
+       "resource-exhaustion"
+      ],
+      "outcomes": [
+       "collapse",
+       "mass-death",
+       "rebuilding"
+      ]
+     }
+    },
+    {
+     "id": "b5-new-earth-1002262",
+     "year": 1002262,
+     "date": "c. 1002262",
+     "title": "Humanity leaves the Sun as beings of light",
+     "description": "A million years after the Alliance began, the Sun is about to go nova. The last human on Earth, a being of pure energy in an encounter suit, sends the archive to New Earth and leaves as the Sun explodes.",
+     "tier": "T1",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "The Babylon Project (wiki): The Deconstruction of Falling Stars (records dated 2262, 2362, 2762, 3262 and a million years on)",
+       "url": "https://babylon5.fandom.com/wiki/The_Deconstruction_of_Falling_Stars"
+      },
+      {
+       "title": "The Babylon Project (wiki): 2300s and beyond",
+       "url": "https://babylon5.fandom.com/wiki/2300s_and_beyond"
+      }
+     ],
+     "note": "The last segment of 'The Deconstruction of Falling Stars' is set a million years after 2262; the wiki dates it 1,002,262. Straczynski said humans and Minbari had by then reached an existence like the First Ones', and that the early nova was caused by someone opening jump points inside the Sun.",
+     "binWhy": "Humanity has passed beyond anything a human being was, and leaves its birthplace as the Vorlons once did.",
+     "bin": "beyond-human",
+     "facets": {
+      "change": "a species in bodies → beings of light leaving a dying Sun",
+      "mechanism": "consolidation",
+      "actor": "movement",
+      "position": "above",
+      "scope": "beyond",
+      "domain": "cosmic",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "existential-threat"
+      ],
+      "outcomes": [
+       "transcendence",
+       "exodus"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Far-future space opera: many species, a station at the centre of galactic politics, a war among ancient powers and a new interstellar union. The chain follows the television continuity (the five seasons and the TV films) as dated by the series' Historical Database and The Babylon Project wiki, with dates from the JMS-approved tie-in novels (Dark Genesis for 2156 and 2161) and the Official Magazine (2080-2085) where the show gives none; those carry medium confidence. Crusade and later spin-offs are left out. Tier coverage: T3 holds only the two release dates; T2 holds almost everything (2013-2281); T1 holds the far future of 'The Deconstruction of Falling Stars' (2762 and a million years on). T4 is empty because the series' Earth history is ours until the 21st century.",
+   "sources": [
+    {
+     "title": "Wikipedia: Babylon 5",
+     "url": "https://en.wikipedia.org/wiki/Babylon_5"
+    },
+    {
+     "title": "The Babylon Project (wiki): Chronology (per the Historical Database in Across Time and Space)",
+     "url": "https://babylon5.fandom.com/wiki/Chronology"
+    },
+    {
+     "title": "The Babylon Project (wiki): 22nd Century timeline",
+     "url": "https://babylon5.fandom.com/wiki/22nd_Century"
+    },
+    {
+     "title": "The Babylon Project (wiki): 2240s timeline (Earth-Minbari War, Battle of the Line)",
+     "url": "https://babylon5.fandom.com/wiki/2240s"
+    },
+    {
+     "title": "The Babylon Project (wiki): The Deconstruction of Falling Stars (records dated 2262, 2362, 2762, 3262 and a million years on)",
+     "url": "https://babylon5.fandom.com/wiki/The_Deconstruction_of_Falling_Stars"
+    }
+   ]
+  },
+  {
+   "id": "firefly",
+   "title": "Firefly",
+   "medium": "tv",
+   "creator": "Joss Whedon",
+   "originYear": 2002,
+   "group": "far-future-space-opera",
+   "epoch": "far-future",
+   "franchiseStatus": "dormant",
+   "divergence": {
+    "year": 2506,
+    "label": "The Alliance goes to war to unify the planets",
+    "delta": "Real: 2506 is five centuries off and humanity has not left Earth. Fiction: Earth-That-Was was used up and abandoned generations earlier, a new star system has been terraformed and settled, and the Alliance of the central planets goes to war to bring the outer ones under its rule.",
+    "inUniverse": "2506-2511 (Firefly Wiki; the series itself dates only the war's end, six years before 2517)",
+    "confidence": "low",
+    "note": "The 'Verse is dated very sparsely. The series and film give one year, 2517, and one interval, six years back to Serenity Valley, plus River's age. The exodus from Earth-That-Was, which is where the fiction really parts from us, is never dated: Whedon's production memo for Serenity describes it without a year, and the Firefly Wiki's detailed 21st-century timeline is marked on the page as not all canon. Following this group's practice (Dune, Foundation), the fork is put at the first dated event of the fiction's own history, the start of the Unification War, and that start year is itself only the wiki's. The undated exodus is left out of the chain rather than given an invented year.",
+    "sources": [
+     {
+      "title": "Firefly Wiki: Unification War (2506-2511)",
+      "url": "https://firefly.fandom.com/wiki/Unification_War"
+     },
+     {
+      "title": "Firefly Wiki: A Brief History of the Universe (Whedon's production memo for Serenity)",
+      "url": "https://firefly.fandom.com/wiki/A_Brief_History_of_the_Universe"
+     },
+     {
+      "title": "Firefly Wiki: Timeline (flagged on the page as partly non-canon)",
+      "url": "https://firefly.fandom.com/wiki/Timeline"
+     },
+     {
+      "title": "Wikipedia: Firefly (TV series)",
+      "url": "https://en.wikipedia.org/wiki/Firefly_(TV_series)"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "unknown",
+    "why": "The Miranda recording is out and the Reaver fleet is broken, but the Alliance still rules, half the 'Verse thinks the broadcast is a hoax, and the resistance it started has not yet fought.",
+    "asOf": 2518
+   },
+   "events": [
+    {
+     "id": "ff-fort-sumter-1861",
+     "year": 1861,
+     "date": "1861-04-12",
+     "title": "Seceded states open fire at Fort Sumter",
+     "description": "South Carolina's militia bombards a federal fort in Charleston harbour, and the American Civil War begins between a central government and the states that have left it. Firefly's Unification War is modelled on it.",
+     "tier": "T4",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Battle of Fort Sumter (12-13 April 1861)",
+       "url": "https://en.wikipedia.org/wiki/Battle_of_Fort_Sumter"
+      },
+      {
+       "title": "Wikipedia: Firefly (TV series)",
+       "url": "https://en.wikipedia.org/wiki/Firefly_(TV_series)"
+      }
+     ],
+     "note": "Real history. Whedon built the show on the American Civil War and its aftermath: a war between a central union and breakaway territories, and what became of the losers. The parallel is deliberately loose; the Browncoats' cause is independence from the centre rather than slavery.",
+     "binWhy": "The original of the war the show retells: a state's own parts at war over whether they may leave it.",
+     "bin": "war-breaks-out",
+     "sub": "civil",
+     "facets": {
+      "change": "a union → a union at war with its seceded states",
+      "mechanism": "secession",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "rivalry",
+       "crisis-legitimacy"
+      ],
+      "outcomes": [
+       "civil-war"
+      ]
+     }
+    },
+    {
+     "id": "ff-gettysburg-1863",
+     "year": 1863,
+     "date": "1863-07-01",
+     "title": "The Battle of Gettysburg",
+     "description": "Three days of fighting in Pennsylvania end with the Confederate army beaten and in retreat, and the war turns. Whedon conceived Firefly after reading Michael Shaara's novel about it, The Killer Angels.",
+     "tier": "T4",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Battle of Gettysburg (1-3 July 1863)",
+       "url": "https://en.wikipedia.org/wiki/Battle_of_Gettysburg"
+      },
+      {
+       "title": "Wikipedia: Firefly (TV series)",
+       "url": "https://en.wikipedia.org/wiki/Firefly_(TV_series)"
+      }
+     ],
+     "note": "Real history; the battle ran 1-3 July 1863. Wikipedia's Firefly article, citing Serenity: The Official Visual Companion, says Whedon developed the show after reading The Killer Angels and wanted to follow people who had fought on the losing side.",
+     "binWhy": "A battle that turns a war, and the one from which the show's idea came.",
+     "bin": "decisive-victory",
+     "facets": {
+      "change": "an invasion of the North → a beaten army in retreat",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": 0,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "long-war",
+       "rivalry"
+      ],
+      "outcomes": [
+       "turning-point",
+       "attrition"
+      ]
+     }
+    },
+    {
+     "id": "ff-appomattox-1865",
+     "year": 1865,
+     "date": "1865-04-09",
+     "title": "The Confederacy surrenders and Reconstruction begins",
+     "description": "Lee surrenders at Appomattox Court House, the South is occupied and reorganised, and many of the men who fought for it go west. Firefly's crew are these people five centuries on: veterans of the losing side, living on the frontier.",
+     "tier": "T4",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Battle of Appomattox Court House (9 April 1865)",
+       "url": "https://en.wikipedia.org/wiki/Battle_of_Appomattox_Court_House"
+      },
+      {
+       "title": "Wikipedia: Reconstruction era (1865-1877)",
+       "url": "https://en.wikipedia.org/wiki/Reconstruction_era"
+      },
+      {
+       "title": "Wikipedia: Firefly (TV series)",
+       "url": "https://en.wikipedia.org/wiki/Firefly_(TV_series)"
+      }
+     ],
+     "note": "Real history. Reconstruction ran from 1865 to 1877. Whedon's stated model for the show was the post-Civil War era of Reconstruction and the American Old West.",
+     "binWhy": "A defeated power is occupied and dissolved into the victor, which is the situation Mal and Zoe live in after Serenity Valley.",
+     "bin": "defeat-and-occupation",
+     "facets": {
+      "change": "a breakaway republic → occupied territory and drifting veterans",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "outside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "long-war",
+       "war-just-ended"
+      ],
+      "outcomes": [
+       "occupation",
+       "exodus"
+      ]
+     }
+    },
+    {
+     "id": "ff-pub-2002",
+     "year": 2002,
+     "date": "2002-09-20",
+     "title": "Firefly premieres on Fox",
+     "description": "Joss Whedon's series premieres on Fox, which airs its episodes out of order and cancels it that December with three of fourteen unaired.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Firefly (TV series)",
+       "url": "https://en.wikipedia.org/wiki/Firefly_(TV_series)"
+      }
+     ],
+     "note": "A real-world publication event. The unaired episodes were shown later and the series found its audience on DVD.",
+     "binWhy": "A real-world release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "ff-pub-2005",
+     "year": 2005,
+     "date": "2005-09-30",
+     "title": "Serenity is released",
+     "description": "Whedon's film continues the cancelled series and answers its central mystery: who River Tam is and what the Alliance did on Miranda.",
+     "tier": "T2",
+     "phase": "prehistory",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Serenity (2005 film)",
+       "url": "https://en.wikipedia.org/wiki/Serenity_(2005_film)"
+      }
+     ],
+     "note": "A real-world publication event; the film premiered at the Edinburgh festival on 22 August and opened in North America on 30 September 2005. The story continued in Dark Horse comics, several co-written by Joss and Zack Whedon.",
+     "binWhy": "A real-world release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "ff-unification-war-2506",
+     "year": 2506,
+     "date": "2506",
+     "title": "The Alliance goes to war to unify the planets",
+     "description": "The central planets, allied as the Union of Allied Planets, go to war against outer worlds that refuse to join them. The Independents, the 'Browncoats', are outnumbered and outgunned from the start.",
+     "tier": "T1",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Firefly Wiki: Unification War (2506-2511)",
+       "url": "https://firefly.fandom.com/wiki/Unification_War"
+      },
+      {
+       "title": "Wikipedia: Firefly (TV series)",
+       "url": "https://en.wikipedia.org/wiki/Firefly_(TV_series)"
+      }
+     ],
+     "note": "The series never states when the war began. The Firefly Wiki gives it as 2506 to 2511, which fits the show's six-year gap after its end and a war of several years; no canonical source for the start year was found. The earlier history of the 'Verse, when Earth-That-Was was abandoned and the new system terraformed, is not dated in any canonical source.",
+     "binWhy": "A war between the central government and the worlds that want out of it: a civil war fought between planets, like the one it copies.",
+     "bin": "war-breaks-out",
+     "sub": "civil",
+     "facets": {
+      "change": "independent frontier worlds → a war for their annexation",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "colonial-expansion",
+       "dependency-on-centre",
+       "rivalry"
+      ],
+      "outcomes": [
+       "civil-war",
+       "war-of-expansion"
+      ]
+     }
+    },
+    {
+     "id": "ff-serenity-valley-2511",
+     "year": 2511,
+     "date": "2511-05",
+     "title": "The Independents are broken at Serenity Valley",
+     "description": "On the planet Hera, seven weeks of fighting end when Independent High Command surrenders; the troops in the valley had been left to hold on, and die, while the terms were talked over. Sergeant Malcolm Reynolds, who survives, names his ship after the place.",
+     "tier": "T1",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Firefly Wiki: Battle of Serenity Valley (May 2511)",
+       "url": "https://firefly.fandom.com/wiki/Battle_of_Serenity_Valley"
+      },
+      {
+       "title": "Wikipedia: Firefly (TV series)",
+       "url": "https://en.wikipedia.org/wiki/Firefly_(TV_series)"
+      }
+     ],
+     "note": "The pilot opens on the battle and then jumps 'six years later' to 2517. The wiki dates the start of the battle to May 2511. It is taken as the end of the war, though not every engagement stops there.",
+     "binWhy": "The battle that settles the war and ends the Independents' cause.",
+     "bin": "decisive-victory",
+     "facets": {
+      "change": "a hard-pressed resistance → surrender and annexation",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "inside",
+      "scope": "civilisational",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "long-war",
+       "rivalry"
+      ],
+      "outcomes": [
+       "surrender",
+       "occupation",
+       "consolidation"
+      ]
+     }
+    },
+    {
+     "id": "ff-academy-2514",
+     "year": 2514,
+     "date": "c. 2514",
+     "title": "River Tam is taken into the Academy",
+     "description": "A gifted fourteen-year-old from a rich core-world family goes to an Alliance school for the brightest children. It is a programme that cuts into her brain to turn her into a psychic weapon, and in the process she learns the government's worst secrets.",
+     "tier": "T1",
+     "phase": "aftermath",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Firefly Wiki: River Tam (born 2500; the Academy)",
+       "url": "https://firefly.fandom.com/wiki/River_Tam"
+      }
+     ],
+     "note": "River is 17 in 2517, which places her birth in 2500; Simon says she went to the Academy at 14 and he spent two years trying to free her. Neither the series nor the film states the year of her entry; c. 2514 is derived from those ages.",
+     "binWhy": "A person is chosen, by her gifts and by the state that wants to use them, and the future of the 'Verse later turns on what she knows.",
+     "bin": "chosen-one",
+     "facets": {
+      "change": "a gifted child → a weapon who knows too much",
+      "mechanism": "recruitment",
+      "actor": "state",
+      "position": "above",
+      "scope": "local",
+      "domain": "biological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "one-party-state"
+      ],
+      "outcomes": [
+       "secrecy-state",
+       "foreknowledge"
+      ]
+     }
+    },
+    {
+     "id": "ff-miranda-2517",
+     "year": 2517,
+     "date": "2517",
+     "title": "The truth about Miranda is broadcast to the 'Verse",
+     "description": "The crew of Serenity find the planet Miranda, where the Alliance dosed a whole population with a chemical to make it docile: most simply lay down and died, and a tenth of a percent became the Reavers. Through Mr. Universe's relay they send the recording to every world.",
+     "tier": "T1",
+     "phase": "aftermath",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: Serenity (2005 film)",
+       "url": "https://en.wikipedia.org/wiki/Serenity_(2005_film)"
+      },
+      {
+       "title": "Wikipedia: Firefly (TV series)",
+       "url": "https://en.wikipedia.org/wiki/Firefly_(TV_series)"
+      }
+     ],
+     "note": "Wikipedia sets both the series and the film in 2517, and the film follows the series by some months. The film does not date the Miranda experiment itself; it happened before the series, which already has Reavers in it. In our 2517 there is nothing to compare; the event is a state crime disclosed by those it was hidden from.",
+     "binWhy": "What the government did and hid is made public by the people it tried to kill for knowing it.",
+     "bin": "truth-revealed",
+     "sub": "state-secret",
+     "facets": {
+      "change": "a buried experiment → a broadcast to every world",
+      "mechanism": "disclosure",
+      "actor": "individual",
+      "position": "below",
+      "scope": "civilisational",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "cover-up",
+       "repression",
+       "secrecy"
+      ],
+      "outcomes": [
+       "revelation",
+       "resistance-forms"
+      ]
+     }
+    },
+    {
+     "id": "ff-new-resistance-2518",
+     "year": 2518,
+     "date": "c. 2518",
+     "title": "A new resistance forms around the Miranda broadcast",
+     "description": "Eight months on, the 'Verse is split between people who think the broadcast was a hoax and people who believe it, and the Alliance has put a price on Reynolds's head. A Browncoat group calling itself the New Resistance wants him to lead it, while Operatives hunt his crew.",
+     "tier": "T1",
+     "phase": "aftermath",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "low",
+     "sources": [
+      {
+       "title": "Firefly Wiki: Serenity: Leaves on the Wind (set nine months after the film)",
+       "url": "https://firefly.fandom.com/wiki/Serenity:_Leaves_on_the_Wind"
+      }
+     ],
+     "note": "Serenity: Leaves on the Wind (Dark Horse, 2014, written by Zack Whedon) is set eight to nine months after the film. The film is in 2517, so 2518 is likely but not stated. The comic continues in later Dark Horse and Boom! series that are left out here.",
+     "binWhy": "An armed resistance forms against those in power, started by the disclosure; it is still recruiting rather than fighting.",
+     "bin": "uprising",
+     "sub": "armed-rebellion",
+     "facets": {
+      "change": "a disclosed crime → a movement looking for a leader",
+      "mechanism": "uprising",
+      "actor": "movement",
+      "position": "below",
+      "scope": "civilisational",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "repression",
+       "war-just-ended"
+      ],
+      "outcomes": [
+       "resistance-forms",
+       "hunt-begins"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Far-future space opera in the frontier mode: a settled star system, a central government that won a war of unification, and the losers scraping a living on its edge. The chain follows the series, the film Serenity and the Dark Horse comic Leaves on the Wind. The 'Verse gives very few dates (2517, six years back to 2511, River's age), so the fictional chain is short: the war's start (low confidence), Serenity Valley, River's recruitment and the Miranda broadcast and its aftermath. The minimum is filled with the real history Whedon built the show on: the American Civil War, Gettysburg and Reconstruction. Tier coverage: T4 for 1861-1865, T2 for the two releases only, T1 for every fictional event (2506-2518). T3 is empty because nothing the show draws on happens in the 20th century.",
+   "sources": [
+    {
+     "title": "Wikipedia: Firefly (TV series)",
+     "url": "https://en.wikipedia.org/wiki/Firefly_(TV_series)"
+    },
+    {
+     "title": "Wikipedia: Serenity (2005 film)",
+     "url": "https://en.wikipedia.org/wiki/Serenity_(2005_film)"
+    },
+    {
+     "title": "Firefly Wiki: Unification War (2506-2511)",
+     "url": "https://firefly.fandom.com/wiki/Unification_War"
+    },
+    {
+     "title": "Firefly Wiki: A Brief History of the Universe (Whedon's production memo for Serenity)",
+     "url": "https://firefly.fandom.com/wiki/A_Brief_History_of_the_Universe"
+    }
+   ]
   }
  ]
 }

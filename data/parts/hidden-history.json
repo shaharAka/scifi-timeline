@@ -4495,6 +4495,2394 @@
      "url": "https://umbrellaacademy.fandom.com/wiki/Netflix_Timeline"
     }
    ]
+  },
+  {
+   "id": "back-to-the-future",
+   "title": "Back to the Future",
+   "medium": "film",
+   "creator": "Robert Zemeckis and Bob Gale",
+   "originYear": 1985,
+   "group": "hidden-history",
+   "epoch": "present",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 1885,
+    "label": "Doc Brown is stranded in 1885 Hill Valley",
+    "delta": "Real: 1885 - the Central Pacific has joined the Sierra towns to San Francisco and a county seat in the foothills might be building a courthouse with a clock. Fiction: the town's blacksmith is a physicist from 1985 building an ice machine, a teenager calling himself Clint Eastwood outdraws Buford Tannen, and the ravine the schoolteacher Clara Clayton should have died in is named after a man who never existed.",
+    "inUniverse": "Doc is sent to 1885 by lightning on 12 November 1955; Marty follows to 2 September 1885 (Part III)",
+    "confidence": "high",
+    "note": "Time travel means the fork is chosen by calendar, not by the order the films tell it. In the timeline the trilogy ends on, the earliest year that differs from ours is 1885, when Doc and Marty are in the Old West; 1955 and 1985 follow. Hill Valley is fictional throughout, and none of the national history changes in the final timeline, which is why the fork is a local one.",
+    "sources": [
+     {
+      "title": "Wikipedia: Back to the Future Part III",
+      "url": "https://en.wikipedia.org/wiki/Back_to_the_Future_Part_III"
+     },
+     {
+      "title": "Wikipedia: Hill Valley (Back to the Future) - fictional history as shown in the films",
+      "url": "https://en.wikipedia.org/wiki/Hill_Valley_(Back_to_the_Future)"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "The almanac is burned, Clara lives, Marty avoids the crash that would have ruined his life, and the fax announcing his firing goes blank because, as Doc says, the future has not been written yet.",
+    "asOf": 1985
+   },
+   "events": [
+    {
+     "id": "bttf-1885",
+     "year": 1885,
+     "date": "1885-09",
+     "title": "A stranded time traveller in Hill Valley, and Eastwood Ravine",
+     "description": "Doc Brown, thrown back from 1955 by a lightning strike, is living in the new railroad town of Hill Valley as a blacksmith when Marty arrives on 2 September under the name Clint Eastwood. Doc saves the schoolteacher Clara Clayton from the ravine that killed her in the original history, the outlaw Buford Tannen is arrested, and a locomotive pushing the DeLorean goes off the unfinished bridge, so the gorge is named Eastwood Ravine; Doc stays with Clara.",
+     "tier": "T4",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Marty travels from 12 November 1955 to 2 September 1885; the duel Doc's tombstone predicted falls six days after Doc's letter, in the first week of September. In the original history the ravine was renamed Clayton Ravine after Clara's death, around the time the bridge was finished in the summer of 1886.",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Back to the Future Part III",
+       "url": "https://en.wikipedia.org/wiki/Back_to_the_Future_Part_III"
+      },
+      {
+       "title": "Wikipedia: Hill Valley (Back to the Future) - fictional history as shown in the films",
+       "url": "https://en.wikipedia.org/wiki/Hill_Valley_(Back_to_the_Future)"
+      }
+     ],
+     "note": "The month is stated on screen; the day of the duel and the train is derived from the tombstone ('six days after writing the letter'), so the date is given to the month. Hill Valley is fictional: in our 1885 the Sierra Nevada foothills had railroad towns, courthouse clocks and outlaws, and no one from the future. This is the first calendar year in which the films' final timeline differs from ours, which is why it is the fork.",
+     "binWhy": "People from 1955 and 1985 arrive in the Old West and change who lives and what a ravine is called.",
+     "bin": "time-traveller-arrives",
+     "facets": {
+      "change": "a schoolteacher who dies in a ravine → a stranded inventor who marries her",
+      "mechanism": "arrival",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "time-loop",
+       "frontier-open"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "bttf-1955",
+     "year": 1955,
+     "date": "1955-11-12",
+     "title": "A visitor from 1985 remakes a family, and lightning stops the clock",
+     "description": "On 5 November 1955, the day Doc Brown conceives the flux capacitor, Marty McFly arrives from 1985 in Doc's DeLorean, accidentally takes his father's place in his mother's affections, and then engineers their first kiss at the school dance. At 10:04 pm on 12 November lightning strikes the courthouse clock and Doc channels it to send Marty home; the clock is never repaired, and the same night a second Marty takes back the sports almanac an old Biff Tannen brought from 2015 and burns it.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Marty arrives 5 November 1955; the lightning strike is Saturday 12 November at 10:04 pm. Part II and Part III return to the same night: old Biff hands his younger self the almanac, the second Marty recovers and burns it, and lightning throws the flying DeLorean and Doc back to 1885. Marty also runs down one of Old Man Peabody's twin pines, which is why the mall is called Lone Pine Mall in 1985.",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Back to the Future",
+       "url": "https://en.wikipedia.org/wiki/Back_to_the_Future"
+      },
+      {
+       "title": "Wikipedia: Back to the Future Part II",
+       "url": "https://en.wikipedia.org/wiki/Back_to_the_Future_Part_II"
+      },
+      {
+       "title": "Wikipedia: Hill Valley (Back to the Future) - fictional history as shown in the films",
+       "url": "https://en.wikipedia.org/wiki/Hill_Valley_(Back_to_the_Future)"
+      },
+      {
+       "title": "Wikipedia: Biff Tannen (the almanac timeline: 1958 first million, 1973 murder)",
+       "url": "https://en.wikipedia.org/wiki/Biff_Tannen"
+      }
+     ],
+     "note": "Dates stated on screen. The almanac branch (Doc calls its 1985 '1985A') would have made Biff a millionaire from a horse-race bet on his 21st birthday in 1958, had George McFly murdered on 15 March 1973, legalised gambling in 1979 and kept Nixon in office and the Vietnam War going into the 1980s; the almanac is burned on the night it is handed over, so none of that happens in the timeline the films end on and it is not charted. In our 1955 Hill Valley's real-world equivalents had a courthouse square, a Texaco and a Studebaker dealer, and nobody from 1985.",
+     "binWhy": "A man from the future arrives, rewrites his parents' meeting and leaves by lightning.",
+     "bin": "time-traveller-arrives",
+     "facets": {
+      "change": "a bullied father and a bully's future → a confident father and a burned almanac",
+      "mechanism": "arrival",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "time-loop",
+       "secrecy"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "bttf-1985",
+     "year": 1985,
+     "date": "1985-10-26",
+     "title": "The first time machine is switched on, and destroyed",
+     "description": "In the Twin Pines Mall car park Doc Brown sends his dog Einstein a minute into the future in a DeLorean powered by plutonium he swindled from Libyan terrorists, who arrive and shoot him; a bulletproof vest and Marty's warning letter save him. By the next day the machine has been to 1955, 2015 and 1885, and on 27 October a freight train destroys it; Doc reappears in a steam-locomotive time machine with Clara and their children and leaves again.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Marty returns on 26 October to a family transformed: his father is a successful science-fiction author and Biff waxes his cars. Part III ends on 27 October, when Marty declines a street race with Needles and so avoids the crash that ruined his future.",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Back to the Future",
+       "url": "https://en.wikipedia.org/wiki/Back_to_the_Future"
+      },
+      {
+       "title": "Wikipedia: Back to the Future Part III",
+       "url": "https://en.wikipedia.org/wiki/Back_to_the_Future_Part_III"
+      },
+      {
+       "title": "Wikipedia: Emmett Brown",
+       "url": "https://en.wikipedia.org/wiki/Emmett_Brown"
+      }
+     ],
+     "note": "Dates stated on screen. In our 1985 the DeLorean Motor Company had been bankrupt for three years, and Libya was a US adversary that would be bombed the following April; nobody built a working time machine in a California garage. The film's first release, 3 July 1985, falls in this year, which is why the publications recorded here are the two sequels.",
+     "binWhy": "A time machine is built, tested and used; the world never learns it existed.",
+     "bin": "new-technology-deployed",
+     "sub": "transport-space",
+     "facets": {
+      "change": "a garage inventor's thirty-year theory → a working time machine, then wreckage",
+      "mechanism": "invention",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "local",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "time-loop"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "programme-winds-down"
+      ]
+     }
+    },
+    {
+     "id": "bttf-pub-1989",
+     "year": 1989,
+     "date": "1989-11-22",
+     "title": "Back to the Future Part II is released",
+     "description": "The first sequel opens in the United States, carrying the story to 2015 and to the alternate 1985 of the almanac.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Back to the Future Part II",
+       "url": "https://en.wikipedia.org/wiki/Back_to_the_Future_Part_II"
+      }
+     ],
+     "note": "The original film was released on 3 July 1985, a year this lineage already gives to the time machine's switch-on; the two sequels stand in as its publication markers.",
+     "binWhy": "The original release; not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "bttf-pub-1990",
+     "year": 1990,
+     "date": "1990-05-25",
+     "title": "Back to the Future Part III is released",
+     "description": "The last film of the trilogy opens, set mostly in 1885 and ending in 1985.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Back to the Future Part III",
+       "url": "https://en.wikipedia.org/wiki/Back_to_the_Future_Part_III"
+      }
+     ],
+     "note": "Released six months after Part II; the two sequels were shot back to back.",
+     "binWhy": "The original release; not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "bttf-2015",
+     "year": 2015,
+     "date": "2015-10-21",
+     "title": "Travellers from 1985 in Hill Valley 2015",
+     "description": "Doc, Marty and Jennifer arrive from 1985 to keep Marty's son out of a robbery; Marty, standing in for him, provokes a hoverboard chase that ends with Biff's grandson Griff and his gang arrested. The old courthouse is a shopping mall with its clock still stopped at 10:04, and an elderly Biff steals the time machine for an afternoon to take the almanac back to 1955.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Wednesday 21 October 2015. Jennifer, left asleep, overhears that her future husband's life was wrecked by a car accident and that he is fired that day; the fax announcing the firing goes blank on 27 October 1985 when Marty avoids the race.",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: Back to the Future Part II",
+       "url": "https://en.wikipedia.org/wiki/Back_to_the_Future_Part_II"
+      },
+      {
+       "title": "Wikipedia: Hill Valley (Back to the Future) - fictional history as shown in the films",
+       "url": "https://en.wikipedia.org/wiki/Hill_Valley_(Back_to_the_Future)"
+      }
+     ],
+     "note": "The date is stated on screen. Confidence is medium because the films end by telling us this future is no longer fixed: Doc says the blank fax means the future has not been written yet. The visit itself stays on the calendar, since the travellers left from a 1985 that the final timeline keeps. Our 2015 had self-balancing 'hoverboards' with wheels and no flying DeLoreans.",
+     "binWhy": "People from 1985 arrive in 2015 and change what happens to a family there.",
+     "bin": "time-traveller-arrives",
+     "facets": {
+      "change": "a family's ruin on schedule → a future visited, altered and left unwritten",
+      "mechanism": "arrival",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "time-loop"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "turning-point"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Filed under hidden history rather than the suggested alternate past, because this lineage follows the timeline the trilogy ends on, and in that timeline nothing in the public record changes: a small-town inventor builds a time machine that nobody outside two families ever learns about, and it is destroyed within two days of its first test. The alternate past the films are famous for, Biff's 1985A, exists only between an old man handing over an almanac and a teenager burning it the same night, so it is described in the 1955 note, not charted; the original timeline (Clara dead in Clayton Ravine, George McFly bullied into middle age) is likewise noted where it is overwritten. Each event sits at the calendar date it happens, with the final timeline's version of it. Tiers: T4 holds 1885, T3 runs from 1955 to the 1990 release, T2 holds the 2015 visit; T1 is empty because the films go no further than 2015.",
+   "sources": [
+    {
+     "title": "Wikipedia: Back to the Future",
+     "url": "https://en.wikipedia.org/wiki/Back_to_the_Future"
+    },
+    {
+     "title": "Wikipedia: Back to the Future Part II",
+     "url": "https://en.wikipedia.org/wiki/Back_to_the_Future_Part_II"
+    },
+    {
+     "title": "Wikipedia: Back to the Future Part III",
+     "url": "https://en.wikipedia.org/wiki/Back_to_the_Future_Part_III"
+    },
+    {
+     "title": "Wikipedia: Hill Valley (Back to the Future) - fictional history as shown in the films",
+     "url": "https://en.wikipedia.org/wiki/Hill_Valley_(Back_to_the_Future)"
+    }
+   ]
+  },
+  {
+   "id": "heroes",
+   "title": "Heroes",
+   "medium": "tv",
+   "creator": "Tim Kring",
+   "originYear": 2006,
+   "group": "hidden-history",
+   "epoch": "present",
+   "franchiseStatus": "dormant",
+   "divergence": {
+    "year": 1671,
+    "label": "Hiro Nakamura becomes the legend of Takezo Kensei",
+    "delta": "Real: 1671 - Japan is closed to the world under the Tokugawa, and its famous swordsmen are historical men like Musashi. Fiction: a legend of a samurai hero named Takezo Kensei is being created by a time traveller from 2006, and the man the legend is named after, an English mercenary who cannot be killed, begins a life that will last into the twenty-first century.",
+    "inUniverse": "Subtitles place Hiro outside Kyoto in 1671 ('Four Months Later...', season 2)",
+    "confidence": "high",
+    "note": "The series' hidden history implies people with abilities have always existed (Adam Monroe is four centuries old by 2007), but 1671 is the first year the show dates. The fork is chosen by calendar, not by broadcast order: Hiro reaches 1671 from November 2006.",
+    "sources": [
+     {
+      "title": "Wikipedia: Four Months Later... (subtitles place Hiro outside Kyoto in 1671; season 1 finale in November 2006, this episode in March 2007)",
+      "url": "https://en.wikipedia.org/wiki/Four_Months_Later..."
+     }
+    ]
+   },
+   "ending": {
+    "valence": "unknown",
+    "why": "The series ends at the moment Claire shows the world that people with abilities exist, and it never shows how the world answers.",
+    "asOf": 2010
+   },
+   "events": [
+    {
+     "id": "heroes-1671",
+     "year": 1671,
+     "date": "1671",
+     "title": "A man from 2006 becomes the legend of Takezo Kensei",
+     "description": "Hiro Nakamura, a Tokyo office worker who can bend space and time, lands outside Kyoto in 1671 and finds that the samurai hero of the stories he grew up on is a drunken English mercenary. Hiro ends up performing the legend himself; the real Kensei, whose body heals any wound, turns against him and lives on for three centuries, reappearing in the present as Adam Monroe.",
+     "tier": "T4",
+     "phase": "fork",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Hiro is sent back at the end of the first season, in November 2006, and his 1671 story runs through season two; the on-screen subtitles give the year.",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Four Months Later... (subtitles place Hiro outside Kyoto in 1671; season 1 finale in November 2006, this episode in March 2007)",
+       "url": "https://en.wikipedia.org/wiki/Four_Months_Later..."
+      },
+      {
+       "title": "Wikipedia: Heroes season 2 (the 1977 flashbacks to the Company's founders)",
+       "url": "https://en.wikipedia.org/wiki/Heroes_season_2"
+      }
+     ],
+     "note": "The year is stated in subtitles. The Kensei legend is fiction inside the fiction: in our 1671 Japan is under the Tokugawa shogunate and there is no Takezo Kensei. This is the earliest dated moment at which the series' history leaves ours, so it is the fork.",
+     "binWhy": "A time traveller arrives in feudal Japan and writes the legend he was raised on.",
+     "bin": "time-traveller-arrives",
+     "facets": {
+      "change": "a folk hero who never was → a legend performed by a visitor and an immortal left behind",
+      "mechanism": "arrival",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "time-loop",
+       "prophecy"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "heroes-1961",
+     "year": 1961,
+     "date": "1961",
+     "title": "The Coyote Sands camp",
+     "description": "The US government holds children and adults with abilities at Coyote Sands, a desert relocation centre run as a medical study. When one girl, Alice Shaw, refuses treatment and loses control of her power over the weather, the storm turns into a riot in which most of the camp is killed; her sister Angela and three boys who escaped decide to found a company that will do terrible things to keep people like them hidden.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Shown in the episode '1961' (2009), when Angela takes her family back to the abandoned site. The three boys are Charles Deveaux, Bob Bishop and Daniel Linderman.",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: 1961 (Heroes)",
+       "url": "https://en.wikipedia.org/wiki/1961_(Heroes)"
+      }
+     ],
+     "note": "The year is the episode's title. In our 1961 there were Cold War medical and psychological studies run in secret by US agencies, and there was no camp for people with powers; the fiction's version ends in a massacre that never enters any record.",
+     "binWhy": "A government confines people for what they are, and it ends in their deaths.",
+     "bin": "crackdown",
+     "sub": "persecution",
+     "facets": {
+      "change": "children with abilities → inmates, then the dead of a covered-up riot",
+      "mechanism": "attack",
+      "actor": "state",
+      "position": "above",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "cold-war",
+       "secrecy",
+       "segregation"
+      ],
+      "outcomes": [
+       "mass-death",
+       "cover-up",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "heroes-1977",
+     "year": 1977,
+     "date": "1977",
+     "title": "The Company is founded",
+     "description": "Twelve people with abilities, among them the Coyote Sands survivors, form a secret organisation behind a paper-company front, Primatech, to find, tag, hide and if necessary imprison their own kind. Its founders research and weaponise the Shanti virus, which kills people with abilities, lock the worst strain away, and lock up one of their own, the immortal Adam Monroe.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Season two's flashbacks are set in 1977; in 2007 characters say the Company was formed thirty years earlier.",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: Heroes season 2 (the 1977 flashbacks to the Company's founders)",
+       "url": "https://en.wikipedia.org/wiki/Heroes_season_2"
+      },
+      {
+       "title": "Heroes Wiki: The Company ('formed thirty years ago', 1977)",
+       "url": "https://heroeswiki.ddns.net/wiki/The_Company"
+      }
+     ],
+     "note": "The year comes from the season two flashbacks and the 'thirty years ago' line, not from an on-screen founding date, so confidence is medium. The Coyote Sands survivors resolved to found it in 1961; the organisation as the series shows it exists by 1977.",
+     "binWhy": "A secret organisation is founded that will manage the hidden population for thirty years.",
+     "bin": "new-institution",
+     "facets": {
+      "change": "survivors of a camp → a secret agency that tags, hides and cages its own kind",
+      "mechanism": "founding",
+      "actor": "faction",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "persecution",
+       "secrecy",
+       "hidden-society"
+      ],
+      "outcomes": [
+       "secrecy-state",
+       "cover-up",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "heroes-2006",
+     "year": 2006,
+     "date": "2006-10",
+     "title": "The eclipse, and the bomb that goes off in the sky",
+     "description": "Around a solar eclipse, ordinary people around the world, a cheerleader in Odessa, Texas, a Tokyo office worker, a New York nurse, a congressional candidate, find they have abilities, while a painter paints New York destroyed by a nuclear explosion. In November, at Kirby Plaza, the nurse Peter Petrelli loses control of an absorbed radioactive power, and his brother Nathan, just elected to Congress, flies him into the sky, where he explodes above the city.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Heroes Wiki puts the eclipse of the pilot 'Genesis' in October 2006; the finale at Kirby Plaza is in November 2006. Nathan's election was fixed by Daniel Linderman.",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Genesis (Heroes)",
+       "url": "https://en.wikipedia.org/wiki/Genesis_(Heroes)"
+      },
+      {
+       "title": "Wikipedia: Heroes season 1",
+       "url": "https://en.wikipedia.org/wiki/Heroes_season_1"
+      },
+      {
+       "title": "Wikipedia: Four Months Later... (subtitles place Hiro outside Kyoto in 1671; season 1 finale in November 2006, this episode in March 2007)",
+       "url": "https://en.wikipedia.org/wiki/Four_Months_Later..."
+      },
+      {
+       "title": "Heroes Wiki: Timeline index (the eclipse, October 2006)",
+       "url": "https://heroeswiki.ddns.net/wiki/Timeline"
+      }
+     ],
+     "note": "The season-one finale is placed in November 2006 by the next season's 'four months later', and the eclipse precedes it by weeks. Our 2006 had no such eclipse and no explosion over Manhattan; the fiction's world goes on without the public learning what the flash was.",
+     "binWhy": "Ordinary people discover they belong to a hidden story and are drawn into stopping a disaster.",
+     "bin": "the-call",
+     "facets": {
+      "change": "private lives → a hidden population waking up, and a bomb averted",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "below",
+      "scope": "planetary",
+      "domain": "biological",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "hidden-society",
+       "secrecy",
+       "prophecy"
+      ],
+      "outcomes": [
+       "new-actors",
+       "foreknowledge",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "heroes-2007",
+     "year": 2007,
+     "date": "2007",
+     "title": "The government rounds up the evolved",
+     "description": "In March a weaponised strain of the Shanti virus is destroyed at the Company's Odessa facility before it can be released, and Nathan Petrelli is shot as he is about to tell a press conference that he can fly. Weeks later, with the Company's headquarters burned, Nathan, now a senator, tells the President, and a federal unit under Emile Danko, run from Building 26, hunts and detains people with abilities, until Sylar kills Nathan and, his mind rewritten, takes his place.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Volume Two is set in March 2007 ('Four Months Later...'); Volume Three follows directly from the shooting, and Volume Four's round-up begins about two months after it.",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: Powerless (Heroes)",
+       "url": "https://en.wikipedia.org/wiki/Powerless_(Heroes)"
+      },
+      {
+       "title": "Wikipedia: Heroes season 3 (Villains and Fugitives)",
+       "url": "https://en.wikipedia.org/wiki/Heroes_season_3"
+      },
+      {
+       "title": "Wikipedia: A Clear and Present Danger (Heroes)",
+       "url": "https://en.wikipedia.org/wiki/A_Clear_and_Present_Danger"
+      },
+      {
+       "title": "Heroes Wiki: Timeline (March 2007; April 2007 - December 2014)",
+       "url": "https://heroeswiki.ddns.net/wiki/Timeline:April_2007-December_2014"
+      }
+     ],
+     "note": "Heroes Wiki dates Volume Four to May and June 2007, which agrees with the show's own 'two months' gap after Volume Three; the dates are fan-derived, not on screen, so confidence is medium. The series was broadcast a year and more behind its story: Volume Four aired in 2009.",
+     "binWhy": "The state bans, hunts and detains a group for what they are.",
+     "bin": "crackdown",
+     "sub": "persecution",
+     "facets": {
+      "change": "a secret the Company kept → a secret the government hunts",
+      "mechanism": "law",
+      "actor": "state",
+      "position": "above",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "existential-threat",
+       "hidden-society"
+      ],
+      "outcomes": [
+       "hunt-begins",
+       "suppression",
+       "resistance-forms"
+      ]
+     }
+    },
+    {
+     "id": "heroes-2010",
+     "year": 2010,
+     "date": "2010-12-07",
+     "title": "A cheerleader jumps off a Ferris wheel in front of the cameras",
+     "description": "After the heroes stop the carnival leader Samuel Sullivan from exposing people with abilities by killing thousands in Central Park, Claire Bennet decides to stop hiding. She climbs a Ferris wheel at the carnival in front of reporters and photographers, jumps, and gets up.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "The last scene of the series ('Brave New World'), which opens a Volume Six that was never made.",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: Brave New World (Heroes)",
+       "url": "https://en.wikipedia.org/wiki/Brave_New_World_(Heroes)"
+      },
+      {
+       "title": "Wikipedia: An Invisible Thread (Volume Five begins six weeks later)",
+       "url": "https://en.wikipedia.org/wiki/An_Invisible_Thread"
+      },
+      {
+       "title": "Heroes Wiki: Revelation of evolved humans (dated 7 December 2010)",
+       "url": "https://heroeswiki.ddns.net/wiki/Revelation_of_evolved_humans"
+      }
+     ],
+     "note": "Heroes Wiki dates the reveal to 7 December 2010, consistent with the same wiki's dating of the Odessa summit bombing, the event Heroes Reborn opens after, to 13 June 2014. The original series' own chronology is looser: 'Once Upon a Time in Texas' sends Hiro three years back to October 2006 early in the same volume, which would put its start in autumn 2009. The finale aired on 8 February 2010.",
+     "binWhy": "The public learns that people with abilities exist.",
+     "bin": "truth-revealed",
+     "sub": "hidden-world",
+     "facets": {
+      "change": "a secret kept for three centuries → a regeneration on live television",
+      "mechanism": "disclosure",
+      "actor": "individual",
+      "position": "below",
+      "scope": "planetary",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "hidden-society",
+       "secrecy",
+       "persecution"
+      ],
+      "outcomes": [
+       "revelation",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "heroes-pub-2015",
+     "year": 2015,
+     "date": "2015-09-24",
+     "title": "Heroes Reborn premieres on NBC",
+     "description": "A thirteen-episode continuation begins, set after a 2014 terrorist attack in Odessa that the government blames on people with abilities.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Heroes (American TV series)",
+       "url": "https://en.wikipedia.org/wiki/Heroes_(American_TV_series)"
+      },
+      {
+       "title": "Wikipedia: Heroes Reborn (miniseries)",
+       "url": "https://en.wikipedia.org/wiki/Heroes_Reborn_(miniseries)"
+      }
+     ],
+     "note": "The original series ran on NBC from 25 September 2006 to 8 February 2010, but both years are occupied by story events here, so the continuation stands in as the publication marker. This lineage follows the 2006-2010 series only; Reborn's events are not charted.",
+     "binWhy": "The original release; not a moment in the story.",
+     "bin": null,
+     "facets": null
+    }
+   ],
+   "groupingNote": "A hidden history in the X-Files mould with superheroes in place of aliens: people with abilities have lived among us for centuries, a secret company founded by survivors of a government camp keeps them off the record, and the story is the record breaking open. This lineage follows the NBC series (2006-2010) only; Heroes Reborn (2015) is used just as a publication marker, and the averted futures the series visits, such as 'Five Years Gone', are not charted. Events sit at the calendar date they happen, in the version the characters leave behind. The series' in-universe dates after 2007 are loose, and the choices are explained in each note. Tiers: T4 holds 1671, T3 1961 and 1977, T2 2006 to 2015; T1 is empty because the series never goes beyond its own decade.",
+   "sources": [
+    {
+     "title": "Wikipedia: Heroes (American TV series)",
+     "url": "https://en.wikipedia.org/wiki/Heroes_(American_TV_series)"
+    },
+    {
+     "title": "Wikipedia: Heroes season 1",
+     "url": "https://en.wikipedia.org/wiki/Heroes_season_1"
+    },
+    {
+     "title": "Wikipedia: Heroes season 3 (Villains and Fugitives)",
+     "url": "https://en.wikipedia.org/wiki/Heroes_season_3"
+    },
+    {
+     "title": "Heroes Wiki: Timeline (March 2007; April 2007 - December 2014)",
+     "url": "https://heroeswiki.ddns.net/wiki/Timeline:April_2007-December_2014"
+    }
+   ]
+  },
+  {
+   "id": "lost",
+   "title": "Lost",
+   "medium": "tv",
+   "creator": "J. J. Abrams, Damon Lindelof and Jeffrey Lieber",
+   "originYear": 2004,
+   "group": "hidden-history",
+   "epoch": "present",
+   "franchiseStatus": "concluded",
+   "divergence": {
+    "year": 1867,
+    "label": "The Black Rock wrecks on an island that is on no map",
+    "delta": "Real: 1867 - the Atlantic slave trade is in its last illegal years and the Pacific is being charted island by island. Fiction: one island, which moves and cannot be found without its own bearings, takes a slave ship out of the sea, and its guardian recruits the only survivor to serve him for ever.",
+    "inUniverse": "Richard's origins begin in 1867 ('Ab Aeterno', season 6)",
+    "confidence": "high",
+    "note": "The Island's hidden history is far older: Jacob and the Man in Black were born there in antiquity and an Egyptian-style statue stood on the shore, but the series gives no date for any of it. 1867 is the earliest year it states, so it is used as the fork.",
+    "sources": [
+     {
+      "title": "Wikipedia: Ab Aeterno (Richard's origins in 1867; the Black Rock)",
+      "url": "https://en.wikipedia.org/wiki/Ab_Aeterno"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "The Man in Black is dead, the light at the Island's heart is restored with Hurley as its protector, and the survivors who could leave fly home.",
+    "asOf": 2007
+   },
+   "events": [
+    {
+     "id": "lo-1867",
+     "year": 1867,
+     "date": "1867",
+     "title": "The Black Rock is thrown onto the Island",
+     "description": "A ship carrying captives from Tenerife to the New World is swept by a storm and a great wave across an uncharted Pacific island, smashing a giant statue and coming to rest in the jungle. A smoke-like creature kills the crew; the one surviving captive, Ricardo, a condemned man from Tenerife, is offered eternal life by the Island's guardian, Jacob, in exchange for serving as his go-between, and becomes the ageless Richard Alpert.",
+     "tier": "T4",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Richard's story is told in 'Ab Aeterno' (2010). The man who frees him, the Man in Black, and Jacob have been on the Island since antiquity; that story ('Across the Sea') carries no date.",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Ab Aeterno (Richard's origins in 1867; the Black Rock)",
+       "url": "https://en.wikipedia.org/wiki/Ab_Aeterno"
+      }
+     ],
+     "note": "The year is stated in the episode. In our 1867 the Atlantic slave trade was in its last, illegal years; the fiction's ship vanishes into a place that is on no chart and is never found. This is the first dated year in which the Island's hidden history touches ours, so it is the fork.",
+     "binWhy": "An ordinary condemned man is drawn into the Island's hidden war and made its servant.",
+     "bin": "the-call",
+     "facets": {
+      "change": "a slave ship bound for the Americas → a wreck in the jungle and an ageless go-between",
+      "mechanism": "accident",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "slavery-or-servitude",
+       "isolation"
+      ],
+      "outcomes": [
+       "new-actors",
+       "servitude"
+      ]
+     }
+    },
+    {
+     "id": "lo-1954",
+     "year": 1954,
+     "date": "1954",
+     "title": "A hydrogen bomb reaches the Island, and is buried",
+     "description": "A US Army unit brings a hydrogen bomb, called Jughead, to the Island to test it; the Others, the Island's native community, kill the soldiers and keep the bomb. On the advice of a physicist who has come back in time from 2004, they bury it, and it lies under the Island, leaking radiation, for twenty-three years.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Survivors of Flight 815 skipping through time, among them Locke, Sawyer, Juliet and Daniel Faraday, witness it; a young Charles Widmore is one of the Others.",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Jughead (Lost) - the 1954 hydrogen bomb",
+       "url": "https://en.wikipedia.org/wiki/Jughead_(Lost)"
+      }
+     ],
+     "note": "The year is stated in the episode, and the bomb is said to have been scheduled for the Castle Yankee test in 1954. Castle was a real series of hydrogen-bomb tests in the Pacific that spring; in the fiction one bomb from it never reached the test site, and the loss was never made public.",
+     "binWhy": "A weapon is lost to the record and hidden underground by those who hold it.",
+     "bin": "secret-kept",
+     "facets": {
+      "change": "a test weapon on the way to Bikini → a bomb buried under a hidden island",
+      "mechanism": "attack",
+      "actor": "faction",
+      "position": "outside",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "arms-race",
+       "cold-war",
+       "hidden-society"
+      ],
+      "outcomes": [
+       "secrecy-state",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "lo-1970",
+     "year": 1970,
+     "date": "1970",
+     "title": "The DHARMA Initiative is founded",
+     "description": "Two University of Michigan doctoral candidates, Gerald and Karen DeGroot, with money from the industrialist Alvar Hanso, set up a communal research compound on the Island to study meteorology, psychology, parapsychology, zoology, electromagnetism and 'utopian social' science. It fights the Island's natives, whom it calls the Hostiles, until a truce draws a line across the Island.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Told in the Swan station's orientation film ('Orientation', 2005), recorded by Dr Pierre Chang under the name Marvin Candle. The purpose revealed in an alternate-reality game, changing the numbers of an equation that predicts human extinction, is outside the show and not used here.",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Dharma Initiative (founded 1970; the Incident 1977; Rousseau 1988; the Purge 1992)",
+       "url": "https://en.wikipedia.org/wiki/Dharma_Initiative"
+      }
+     ],
+     "note": "The founding year is stated in the orientation film. In our 1970 communes and fringe-science institutes flourished, and none had a secret island in the Pacific.",
+     "binWhy": "A secret research body is founded that will build stations over the Island's anomalies.",
+     "bin": "new-institution",
+     "facets": {
+      "change": "an island known only to its natives → a funded research colony with bunkers",
+      "mechanism": "founding",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "local",
+      "domain": "scientific",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "hidden-society",
+       "frontier-open",
+       "secrecy"
+      ],
+      "outcomes": [
+       "colonisation",
+       "new-actors",
+       "rivalry"
+      ]
+     }
+    },
+    {
+     "id": "lo-1974",
+     "year": 1974,
+     "date": "1974",
+     "title": "Castaways from 2004 are stranded in 1974 and join DHARMA",
+     "description": "When Locke turns a frozen wheel beneath the Island, the survivors of Flight 815 left behind stop skipping through time and are stranded in 1974. Sawyer, Juliet, Jin and Miles pass themselves off as new DHARMA recruits; Sawyer, as 'LaFleur', becomes head of security, and three years later Jack, Kate and Hurley arrive from 2007 to join them.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Shown in season five ('LaFleur'). The time jumps began at the end of 2004, when Ben Linus turned the wheel to move the Island.",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Dharma Initiative (founded 1970; the Incident 1977; Rousseau 1988; the Purge 1992)",
+       "url": "https://en.wikipedia.org/wiki/Dharma_Initiative"
+      }
+     ],
+     "note": "The year is stated on screen. The rule of the series is 'whatever happened, happened': the castaways were always part of DHARMA's history, so their arrival changes nothing that the Island's record did not already contain.",
+     "binWhy": "People from the future arrive and take places in the Island's past.",
+     "bin": "time-traveller-arrives",
+     "facets": {
+      "change": "castaways lost in time → DHARMA's head of security and his team",
+      "mechanism": "arrival",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "time-loop",
+       "time-lost",
+       "isolation"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "lo-1977",
+     "year": 1977,
+     "date": "1977-07",
+     "title": "The Incident",
+     "description": "Drilling for the Swan station in Hostile territory, DHARMA breaks into a vast pocket of electromagnetic energy, which drags every metal object into the shaft. The castaways detonate the buried bomb's plutonium core in the hope of cancelling the future; instead the Swan is built over the site as a plug, the Island is evacuated, and a code must be entered every 108 minutes to discharge the energy.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Season five finale ('The Incident', 2009). The Swan orientation film, recorded in 1980, warns that the station's computer must never be used for anything else.",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Dharma Initiative (founded 1970; the Incident 1977; Rousseau 1988; the Purge 1992)",
+       "url": "https://en.wikipedia.org/wiki/Dharma_Initiative"
+      },
+      {
+       "title": "Wikipedia: The Incident (Lost)",
+       "url": "https://en.wikipedia.org/wiki/The_Incident_(Lost)"
+      }
+     ],
+     "note": "The month, July 1977, is established in the episode 'The Incident'. The series presents the detonation as the cause of the Incident rather than its prevention: history is not changed. Our 1977 has no such anomaly; the button in the Swan becomes the hidden ritual on which, the series says, the world depends.",
+     "binWhy": "A research team breaches a pocket of unknown energy and has to contain it.",
+     "bin": "breakthrough-science",
+     "sub": "physics-energy",
+     "facets": {
+      "change": "an electromagnetism laboratory → a plugged anomaly and a button pressed every 108 minutes",
+      "mechanism": "accident",
+      "actor": "corporation",
+      "position": "inside",
+      "scope": "local",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "technological-race",
+       "secrecy",
+       "time-loop"
+      ],
+      "outcomes": [
+       "secrecy-state",
+       "dependency",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "lo-1988",
+     "year": 1988,
+     "date": "1988",
+     "title": "A French science expedition is shipwrecked on the Island",
+     "description": "A research vessel carrying Danielle Rousseau and her colleagues wrecks on the Island; her team does not survive, her infant daughter Alex is taken by Ben Linus to be raised among the Others, and her distress call from DHARMA's radio tower repeats unanswered for sixteen years.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Rousseau's recording is first heard in the pilot; her story is told across the first and fifth seasons.",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Dharma Initiative (founded 1970; the Incident 1977; Rousseau 1988; the Purge 1992)",
+       "url": "https://en.wikipedia.org/wiki/Dharma_Initiative"
+      },
+      {
+       "title": "Wikipedia: Lost (TV series)",
+       "url": "https://en.wikipedia.org/wiki/Lost_(TV_series)"
+      }
+     ],
+     "note": "The year is derived from the series (sixteen years before the 2004 crash) and stated by Wikipedia's DHARMA article. By then many DHARMA stations had been abandoned after accidents dated on the Swan's blast-door map to 1984, 1985 and 1987.",
+     "binWhy": "An expedition goes into territory no chart shows, and does not come back.",
+     "bin": "voyage-into-unknown",
+     "sub": "earth-expedition",
+     "facets": {
+      "change": "a scientific cruise → a lone survivor and a looped distress call",
+      "mechanism": "expedition",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "local",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "isolation",
+       "hidden-society"
+      ],
+      "outcomes": [
+       "isolation",
+       "exile"
+      ]
+     }
+    },
+    {
+     "id": "lo-1992",
+     "year": 1992,
+     "date": "1992",
+     "title": "The Purge",
+     "description": "Ben Linus, raised in DHARMA as a boy, helps the Others release poison gas at DHARMA's barracks, killing the Initiative's members; the bodies are buried in a mass grave and the Others move into their houses. The same year Charles Widmore, the Others' leader, is exiled from the Island.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Shown in 'The Man Behind the Curtain' (2007). Two DHARMA workers in Guam go on sending supply drops to the Island for more than twenty years.",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Dharma Initiative (founded 1970; the Incident 1977; Rousseau 1988; the Purge 1992)",
+       "url": "https://en.wikipedia.org/wiki/Dharma_Initiative"
+      },
+      {
+       "title": "Wikipedia: Charles Widmore (the fake wreckage; exile in 1992)",
+       "url": "https://en.wikipedia.org/wiki/Charles_Widmore"
+      }
+     ],
+     "note": "The year is stated by the series and in Wikipedia's articles on DHARMA and Widmore. In our 1992 no research colony disappeared in the Pacific; in the fiction nobody outside the Island is told either.",
+     "binWhy": "A community is deliberately killed and buried in a mass grave.",
+     "bin": "mass-death",
+     "sub": "massacre",
+     "facets": {
+      "change": "a research colony living beside a truce line → a mass grave and new owners",
+      "mechanism": "attack",
+      "actor": "faction",
+      "position": "outside",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "rivalry",
+       "isolation",
+       "hidden-society"
+      ],
+      "outcomes": [
+       "mass-death",
+       "succession-struggle",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "lo-2004",
+     "year": 2004,
+     "date": "2004-09-22",
+     "title": "Oceanic Flight 815 breaks up over the Island",
+     "description": "When Desmond Hume, the man pushing the Swan's button, fails to enter the code in time, the discharge brings down Oceanic Airlines Flight 815 from Sydney to Los Angeles, and dozens of survivors find themselves on the beach of an island no rescue will reach. Charles Widmore plants a fake wreck of the plane in the Sunda Trench, and the world is told everyone aboard died.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "The crash is 22 September 2004, the same date as the series premiere; the survivors' story fills seasons one to four.",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Lost season 6 (the crash of 22 September 2004)",
+       "url": "https://en.wikipedia.org/wiki/Lost_season_6"
+      },
+      {
+       "title": "Wikipedia: Pilot (Lost)",
+       "url": "https://en.wikipedia.org/wiki/Pilot_(Lost)"
+      },
+      {
+       "title": "Wikipedia: Charles Widmore (the fake wreckage; exile in 1992)",
+       "url": "https://en.wikipedia.org/wiki/Charles_Widmore"
+      }
+     ],
+     "note": "Date stated by the series. Our 2004 had no Oceanic Airlines, a fictional carrier used by film and television since 1965; the fake wreckage is the public record in the fiction, and the truth is kept by Widmore.",
+     "binWhy": "Ordinary passengers are pulled into the Island's hidden struggle.",
+     "bin": "the-call",
+     "facets": {
+      "change": "a scheduled flight → castaways on an island the world believes they died near",
+      "mechanism": "accident",
+      "actor": "nature",
+      "position": "outside",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "hidden-society",
+       "global-travel",
+       "secrecy"
+      ],
+      "outcomes": [
+       "isolation",
+       "cover-up",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "lo-2005",
+     "year": 2005,
+     "date": "2005-01",
+     "title": "The Oceanic Six come home and lie",
+     "description": "Rescued on 30 December 2004, six survivors of Flight 815 are dropped near the island of Sumba to fit the story of the fake wreck and arrive in Honolulu in January 2005. At a press conference they say they are the only living survivors and that Kate gave birth to Claire's son on the island, to protect the people left behind.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "Season four finale ('There's No Place Like Home', 2008); the Six are Jack, Kate, Sayid, Sun, Hurley and the infant Aaron.",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: There's No Place Like Home (Lost) - rescue on 30 December 2004, return in January 2005",
+       "url": "https://en.wikipedia.org/wiki/There%27s_No_Place_Like_Home_(Lost)"
+      }
+     ],
+     "note": "Dates stated by the series. The lie becomes the public record of the crash; the survivors' guilt about it drives their return in 2007.",
+     "binWhy": "Those who know the truth hide it from the public in the official story.",
+     "bin": "secret-kept",
+     "facets": {
+      "change": "a rescue that could expose the Island → a cover story told at a press conference",
+      "mechanism": "disclosure",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "cover-up",
+       "secrecy"
+      ],
+      "outcomes": [
+       "cover-up",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "lo-2007",
+     "year": 2007,
+     "date": "2007",
+     "title": "Jacob is killed, and the Island passes to new protectors",
+     "description": "The Oceanic Six return aboard Ajira Airways Flight 316, and Ben Linus, manipulated by the Man in Black wearing John Locke's body, kills Jacob, the Island's guardian. Jack Shephard takes Jacob's place, kills the Man in Black with Kate's help and dies restoring the light at the Island's heart; Hurley becomes protector with Ben as his second, and the Ajira plane flies the rest home.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Seasons five and six; the finale 'The End' (2010). The 'flash-sideways' world of season six is revealed as a place outside time where the dead gather, and is not charted.",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Ab Aeterno (Richard's origins in 1867; the Black Rock)",
+       "url": "https://en.wikipedia.org/wiki/Ab_Aeterno"
+      },
+      {
+       "title": "Wikipedia: The End (Lost)",
+       "url": "https://en.wikipedia.org/wiki/The_End_(Lost)"
+      },
+      {
+       "title": "Wikipedia: Lost (TV series)",
+       "url": "https://en.wikipedia.org/wiki/Lost_(TV_series)"
+      }
+     ],
+     "note": "The year is stated by the series ('Ab Aeterno' opens in 2007, after Jacob's death). Nothing in our 2007 or in the fiction's public record reflects it.",
+     "binWhy": "The ruler of the Island is killed and the succession is fought over and settled.",
+     "bin": "ruler-falls",
+     "sub": "killed",
+     "facets": {
+      "change": "an immortal guardian → a guardian killed, two successors, and one who lets people leave",
+      "mechanism": "death",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "hidden-society",
+       "prophecy",
+       "long-war"
+      ],
+      "outcomes": [
+       "succession-struggle",
+       "new-order",
+       "exodus"
+      ]
+     }
+    },
+    {
+     "id": "lo-pub-2010",
+     "year": 2010,
+     "date": "2010-05-23",
+     "title": "The Lost finale airs on ABC",
+     "description": "The sixth season ends the series with the two-and-a-half-hour episode 'The End'.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Lost (TV series)",
+       "url": "https://en.wikipedia.org/wiki/Lost_(TV_series)"
+      },
+      {
+       "title": "Wikipedia: The End (Lost)",
+       "url": "https://en.wikipedia.org/wiki/The_End_(Lost)"
+      }
+     ],
+     "note": "The series premiered on 22 September 2004, the date of the crash, which already occupies that year here; the finale stands in as its publication marker.",
+     "binWhy": "The original release; not a moment in the story.",
+     "bin": null,
+     "facets": null
+    }
+   ],
+   "groupingNote": "A hidden history: the public record of Lost is a missing ship, a lost bomb, a forgotten research charity and an airliner said to have crashed in the Sunda Trench, and underneath each is one island with its own guardians, a research colony and a war between two immortals. The series' time travel follows a single fixed history ('whatever happened, happened'), so every event sits at the calendar date it happens, including the castaways' years in the 1970s; the rule is the order in which the Island's record, not the viewer's, is written. The afterlife 'flash-sideways' world of season six sits outside time and is not charted. Tiers: T4 holds 1867, T3 runs from 1954 to 1992 and T2 from 2004 to the 2010 finale; T1 is empty because the story ends in 2007.",
+   "sources": [
+    {
+     "title": "Wikipedia: Lost (TV series)",
+     "url": "https://en.wikipedia.org/wiki/Lost_(TV_series)"
+    },
+    {
+     "title": "Wikipedia: Dharma Initiative (founded 1970; the Incident 1977; Rousseau 1988; the Purge 1992)",
+     "url": "https://en.wikipedia.org/wiki/Dharma_Initiative"
+    },
+    {
+     "title": "Wikipedia: The End (Lost)",
+     "url": "https://en.wikipedia.org/wiki/The_End_(Lost)"
+    }
+   ]
+  },
+  {
+   "id": "quantum-leap",
+   "title": "Quantum Leap",
+   "medium": "tv",
+   "creator": "Donald P. Bellisario",
+   "originYear": 1989,
+   "group": "hidden-history",
+   "epoch": "present",
+   "franchiseStatus": "dormant",
+   "divergence": {
+    "year": 1862,
+    "label": "A leaper from the future reaches the Civil War",
+    "delta": "Real: September 1862 - the Union has just fought Antietam and slaves are escaping north by the Underground Railroad. Fiction: the Union captain helping one of them is being worn, for a few days, by his own great-grandson from the late twentieth century, who arranges the escape, the captain's marriage and the surname of Martin Luther King Jr.'s great-grandfather.",
+    "inUniverse": "Leap date 20 September 1862, Mansfield County, Virginia ('The Leap Between the States', 1993)",
+    "confidence": "high",
+    "note": "The series has no single moment where history visibly forks: Sam's leaps are secret, and in public matters his corrections produce the record we know. The fork is therefore the earliest calendar date any leap reaches, which is 1862. Sam's own life, and the project that sends him, begin much later (1953 and 1989).",
+    "sources": [
+     {
+      "title": "Wikipedia: Quantum Leap season 5 (leap dates)",
+      "url": "https://en.wikipedia.org/wiki/Quantum_Leap_season_5"
+     },
+     {
+      "title": "Al's Place episode guide: The Leap Between the States",
+      "url": "https://quantumleap-alsplace.com/episodeguide/leapbetweenthestates.htm"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "Every leap charted leaves the record put right, Jacqueline Kennedy surviving Dallas and Marilyn Monroe making The Misfits, and the last one gives Al back his wife; the cost is Sam, who never returns home.",
+    "asOf": 1999
+   },
+   "events": [
+    {
+     "id": "ql-1862",
+     "year": 1862,
+     "date": "1862-09-20",
+     "title": "A leaper from the future in the Civil War",
+     "description": "Sam Beckett leaps into his own great-grandfather, Captain John Beckett, a Union officer in Virginia, outside his own lifetime. He helps an escaped slave, Isaac, and a family get away on the Underground Railroad and makes sure his great-grandfather wins the woman he is meant to marry; Isaac takes the surname King and becomes the great-grandfather of Martin Luther King Jr.",
+     "tier": "T4",
+     "phase": "fork",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "'The Leap Between the States' (1993). Al explains the leap by genetic similarity between Sam and his ancestor; it is the second time Sam leaps outside his own lifetime.",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Quantum Leap season 5 (leap dates)",
+       "url": "https://en.wikipedia.org/wiki/Quantum_Leap_season_5"
+      },
+      {
+       "title": "Al's Place episode guide: The Leap Between the States",
+       "url": "https://quantumleap-alsplace.com/episodeguide/leapbetweenthestates.htm"
+      }
+     ],
+     "note": "The date is stated on screen. The King genealogy is the episode's invention: Martin Luther King Jr.'s real great-grandparents were not named King by a Union officer's intervention. It is the earliest calendar date any leap reaches, so it is the fork, even though it was one of the last episodes made.",
+     "binWhy": "A man from the future arrives and changes who survives and who is born.",
+     "bin": "time-traveller-arrives",
+     "facets": {
+      "change": "a family line and a runaway's name → both arranged by a visitor from the future",
+      "mechanism": "arrival",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "time-loop",
+       "slavery-or-servitude",
+       "long-war"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "exodus"
+      ]
+     }
+    },
+    {
+     "id": "ql-1953",
+     "year": 1953,
+     "date": "1953-08-08",
+     "title": "Sam Beckett is born, and learns that he chose to leap",
+     "description": "At the hour of his own birth, Sam leaps as himself into a miners' bar in Cokeburg, Pennsylvania, where a bartender named Al, whose nature the series leaves open, tells him that he has been leaping himself through time all along, and could go home. Sam chooses to go on putting right what once went wrong, and first leaps to 1969 to tell Al's wife that her husband, missing in Vietnam, is alive.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "Sam is born at 12:30 pm on 8 August 1953 in Elk Ridge, Indiana; 'Mirror Image' (1993), the final episode, is set in Cokeburg at that hour. The second leap is to 3 April 1969, San Diego.",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Sam Beckett (born 8 August 1953; Project Quantum Leap 1989; first leap 1995)",
+       "url": "https://en.wikipedia.org/wiki/Sam_Beckett"
+      },
+      {
+       "title": "Wikipedia: Quantum Leap season 5 (leap dates)",
+       "url": "https://en.wikipedia.org/wiki/Quantum_Leap_season_5"
+      },
+      {
+       "title": "Al's Place episode guide: Mirror Image",
+       "url": "https://quantumleap-alsplace.com/episodeguide/mirrorimage.htm"
+      }
+     ],
+     "note": "Dates stated on screen and in Wikipedia's biography of the character. The episode's closing cards say that Beth never remarried, that she and Al have four daughters, and that Sam never returned home.",
+     "binWhy": "The man on whom every correction turns is born on the day he chooses his path.",
+     "bin": "chosen-one",
+     "facets": {
+      "change": "a lost scientist hoping to go home → a man who chooses to keep leaping",
+      "mechanism": "birth",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "local",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "time-loop",
+       "prophecy"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "transcendence"
+      ]
+     }
+    },
+    {
+     "id": "ql-1956",
+     "year": 1956,
+     "date": "1956-09-13",
+     "title": "The first leap: a test pilot survives Mach 3",
+     "description": "Sam's first leap puts him in the body of Air Force test pilot Tom Stratton, who in the original history died on 14 September 1956 trying to take the X-2 past Mach 3, after which his wife lost their baby. Sam flies the plane past Mach 3 and ejects; Tom lives and his daughter is born healthy.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "'Genesis' (1989), the pilot. Sam's memory is 'Swiss-cheesed' by the leap, and Al appears as a hologram only Sam can see.",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Quantum Leap season 1 (leap dates)",
+       "url": "https://en.wikipedia.org/wiki/Quantum_Leap_season_1"
+      },
+      {
+       "title": "Al's Place episode guide: Genesis",
+       "url": "https://quantumleap-alsplace.com/episodeguide/genesis.htm"
+      },
+      {
+       "title": "Wikipedia: Bell X-2 (Mel Apt, first past Mach 3, killed 27 September 1956)",
+       "url": "https://en.wikipedia.org/wiki/Bell_X-2"
+      }
+     ],
+     "note": "Dates from the episode. In our history the X-2 first passed Mach 3 on 27 September 1956 with Captain Mel Apt at the controls, and Apt was killed when the aircraft tumbled out of control; the fiction replaces him with a pilot who lives.",
+     "binWhy": "A man from the future arrives and changes whether a man dies.",
+     "bin": "time-traveller-arrives",
+     "facets": {
+      "change": "a pilot killed at Mach 3 → a pilot who ejects and lives",
+      "mechanism": "arrival",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "local",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 1
+      },
+      "preconditions": [
+       "time-loop",
+       "arms-race"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "ql-1960",
+     "year": 1960,
+     "date": "1960-04-04",
+     "title": "Marilyn Monroe does not die in 1960",
+     "description": "Leaping into Marilyn Monroe's chauffeur, Sam learns that in the original history she died of an overdose that night. He keeps her alive and persuades her to finish her next film, which she names The Misfits after something he says; she dies in August 1962, as in our history.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "'Goodbye Norma Jean' (1993).",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Quantum Leap season 5 (leap dates)",
+       "url": "https://en.wikipedia.org/wiki/Quantum_Leap_season_5"
+      },
+      {
+       "title": "Al's Place episode guide: Goodbye Norma Jean",
+       "url": "https://quantumleap-alsplace.com/episodeguide/goodbyenormajean.htm"
+      }
+     ],
+     "note": "The date is stated on screen. This is one of the leaps that changes the public record, and the change produces our record: the series' conceit is that the history we know is the corrected one.",
+     "binWhy": "A man from the future arrives and changes when a famous woman dies.",
+     "bin": "time-traveller-arrives",
+     "facets": {
+      "change": "a star dead in 1960 → a star who lives to make The Misfits",
+      "mechanism": "arrival",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "national",
+      "domain": "social",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "time-loop"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "ql-1963",
+     "year": 1963,
+     "date": "1963-11-22",
+     "title": "Dallas: the President dies, and Jacqueline Kennedy does not",
+     "description": "Sam leaps repeatedly into Lee Harvey Oswald between 1957 and 1963, his mind merging with Oswald's, and cannot stop the shooting in Dallas. At the last moment he leaps into Secret Service agent Clint Hill, jumps onto the presidential car and shields Jacqueline Kennedy, who in the original history was killed too.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "'Lee Harvey Oswald' (1992), two parts, with leaps to Atsugi (1957), Tustin (1959), Moscow (1959), Dallas and New Orleans (1963). The episode takes the lone-gunman view: 'There is no conspiracy. I'm acting alone.'",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Quantum Leap season 5 (leap dates)",
+       "url": "https://en.wikipedia.org/wiki/Quantum_Leap_season_5"
+      },
+      {
+       "title": "Al's Place episode guide: Lee Harvey Oswald",
+       "url": "https://quantumleap-alsplace.com/episodeguide/leeharveyoswald.htm"
+      }
+     ],
+     "note": "Dates stated on screen. Al reveals the original history only at the end: 'the first time... Oswald killed Jackie, too.' The public record after the leap is ours, including Clint Hill's real leap onto the car.",
+     "binWhy": "The President is assassinated; the time traveller saves the First Lady.",
+     "bin": "terror-attack",
+     "sub": "targeted",
+     "facets": {
+      "change": "a President and his wife killed → a President killed and his wife saved",
+      "mechanism": "attack",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "cold-war",
+       "time-loop"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "turning-point"
+      ]
+     }
+    },
+    {
+     "id": "ql-1970",
+     "year": 1970,
+     "date": "1970-04-07",
+     "title": "Vietnam: Sam saves his brother, and Al stays a prisoner",
+     "description": "Sam leaps into a member of his brother Tom's Navy SEAL platoon on the day before Tom was killed in the original history, uncovers the scout who is leading them into an ambush, and saves him. A photographer who would have survived and won a Pulitzer is killed instead, and because her photograph is never taken, Al's own release as a prisoner of war moves from 1973 to 1975.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "'The Leap Home, Part II - Vietnam' (1990). Part I is set on Thanksgiving 1969 in Elk Ridge, when Sam is sixteen.",
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Quantum Leap season 3 (leap dates)",
+       "url": "https://en.wikipedia.org/wiki/Quantum_Leap_season_3"
+      },
+      {
+       "title": "Al's Place episode guide: The Leap Home, Part II - Vietnam",
+       "url": "https://quantumleap-alsplace.com/episodeguide/leaphome2vietnam.htm"
+      }
+     ],
+     "note": "Dates from the episode. In our history American prisoners were repatriated in 1973; Al's fictional two extra years are the price of Sam's change.",
+     "binWhy": "A man from the future arrives in a war and changes who comes home.",
+     "bin": "time-traveller-arrives",
+     "facets": {
+      "change": "a brother killed in an ambush → a brother saved and a friend left in a prison camp",
+      "mechanism": "arrival",
+      "actor": "individual",
+      "position": "outside",
+      "scope": "local",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "long-war",
+       "time-loop"
+      ],
+      "outcomes": [
+       "foreknowledge",
+       "attrition"
+      ]
+     }
+    },
+    {
+     "id": "ql-1989",
+     "year": 1989,
+     "date": "1989",
+     "title": "Project Quantum Leap is founded",
+     "description": "Sam Beckett and Al Calavicci start a government-funded time-travel project based on the string theory of time Sam developed at MIT, in a largely underground complex at Stallion's Gate, New Mexico. It will cost 43 billion dollars before anyone steps into its accelerator.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": "The project's team includes the programmer Gooshie, the psychiatrist Verbena Beeks and the director Donna Eleese, who becomes Sam's wife only because one of his leaps changes her past.",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: Sam Beckett (born 8 August 1953; Project Quantum Leap 1989; first leap 1995)",
+       "url": "https://en.wikipedia.org/wiki/Sam_Beckett"
+      },
+      {
+       "title": "Wikipedia: Quantum Leap (1989 TV series)",
+       "url": "https://en.wikipedia.org/wiki/Quantum_Leap_(1989_TV_series)"
+      }
+     ],
+     "note": "The year comes from Wikipedia's in-universe biography ('a few months later in 1989'), which is assembled from episodes rather than stated in one; confidence medium. The series premiered on 26 March 1989, so the premiere is not recorded as a separate event.",
+     "binWhy": "A secret project is founded that will send a man into the past.",
+     "bin": "new-institution",
+     "facets": {
+      "change": "a theory from MIT → a classified time-travel project in the desert",
+      "mechanism": "founding",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "scientific",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "technological-race"
+      ],
+      "outcomes": [
+       "secrecy-state",
+       "new-actors"
+      ]
+     }
+    },
+    {
+     "id": "ql-pub-1993",
+     "year": 1993,
+     "date": "1993-05-05",
+     "title": "Quantum Leap ends on NBC",
+     "description": "The fifth season closes with 'Mirror Image', written as a possible series finale, and two title cards are added when the show is not renewed.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Quantum Leap (1989 TV series)",
+       "url": "https://en.wikipedia.org/wiki/Quantum_Leap_(1989_TV_series)"
+      }
+     ],
+     "note": "The series premiered on 26 March 1989, a year this lineage gives to the project's founding; the finale stands in as its publication marker.",
+     "binWhy": "The original release; not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "ql-1995",
+     "year": 1995,
+     "date": "1995",
+     "title": "Sam steps into the accelerator",
+     "description": "With the government threatening to cut the project's funding, Sam Beckett steps into the Quantum Leap accelerator himself without telling anyone, and vanishes: his mind is thrown back into other people's lives, starting in 1956, while his body is replaced at the project by whoever he leaps into. From then on the project's work is keeping him alive through Al and the computer Ziggy.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "The project's 'present' moves on as the series runs: by the fourth season it is 1999, when 'The Leap Back' brings Sam home to Stallion's Gate for a single day (18 September 1999) before he leaps again.",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Wikipedia: Sam Beckett (born 8 August 1953; Project Quantum Leap 1989; first leap 1995)",
+       "url": "https://en.wikipedia.org/wiki/Sam_Beckett"
+      },
+      {
+       "title": "Wikipedia: Quantum Leap (1989 TV series)",
+       "url": "https://en.wikipedia.org/wiki/Quantum_Leap_(1989_TV_series)"
+      },
+      {
+       "title": "Wikipedia: Quantum Leap season 4 ('The Leap Back': 18 September 1999 at Stallion's Gate)",
+       "url": "https://en.wikipedia.org/wiki/Quantum_Leap_season_4"
+      }
+     ],
+     "note": "The year 1995 is the one given by Wikipedia's biography; the series itself first places Sam's leap only 'in the very near future', and later seasons move the project's present on to 1999, so confidence is medium. Our 1995 had no time-travel programme; the fiction's is a secret one.",
+     "binWhy": "A new machine is switched on and sends a man into the past.",
+     "bin": "new-technology-deployed",
+     "sub": "transport-space",
+     "facets": {
+      "change": "a project about to lose its funding → a man lost in time and a project that exists to find him",
+      "mechanism": "invention",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "national",
+      "domain": "technological",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "crisis-economic"
+      ],
+      "outcomes": [
+       "time-lost",
+       "foreknowledge"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "A hidden history of a peculiar kind: a secret government project sends one man into the past to repair it, and the joke at its heart is that the history we know is the repaired version. Each leap is placed at the calendar date Sam arrives, not in broadcast order, and each event records the history left after the leap, with the 'original' history Al reports (Jacqueline Kennedy dead in Dallas, Marilyn Monroe dead in 1960, Tom Beckett dead in Vietnam) in the notes. That is the order in which the public record changes: most leaps alter private lives only, and the few that touch the public record are the ones charted. The project's own present moves from 1995, when Sam first leaps, to 1999 by the fourth season. This follows the 1989-1993 series; the 2022 revival is not used. Tiers: T4 holds 1862 and T3 everything from 1953 to 1999; T2 and T1 are empty because the series' present never passes 1999.",
+   "sources": [
+    {
+     "title": "Wikipedia: Quantum Leap (1989 TV series)",
+     "url": "https://en.wikipedia.org/wiki/Quantum_Leap_(1989_TV_series)"
+    },
+    {
+     "title": "Wikipedia: Sam Beckett (born 8 August 1953; Project Quantum Leap 1989; first leap 1995)",
+     "url": "https://en.wikipedia.org/wiki/Sam_Beckett"
+    },
+    {
+     "title": "Wikipedia: Quantum Leap season 5 (leap dates)",
+     "url": "https://en.wikipedia.org/wiki/Quantum_Leap_season_5"
+    }
+   ]
+  },
+  {
+   "id": "stargate",
+   "title": "Stargate",
+   "medium": "tv",
+   "creator": "Roland Emmerich and Dean Devlin (film); Brad Wright and Jonathan Glassner (Stargate SG-1)",
+   "originYear": 1994,
+   "group": "hidden-history",
+   "epoch": "present",
+   "franchiseStatus": "dormant",
+   "divergence": {
+    "year": -3000,
+    "label": "Egypt rises against Ra and buries the Stargate",
+    "delta": "Real: around 3000 BCE Egypt is unified under its first kings, among them Narmer, with no gods more real than their priests. Fiction: Egypt has been ruled by an alien in a human body who ships its people through a gate to other worlds, and the rising that ends his rule buries the gate at Giza.",
+    "inUniverse": "3000 BC ('Moebius', SG-1 season 8); c. 2995 BC for the revolt (Stargate Wiki)",
+    "confidence": "medium",
+    "note": "In a secret history the fork is the first fictional thing, however early. The earliest thing the screen dates is SG-1's trip to 3000 BC in 'Moebius', where Ra still rules Egypt and the rebellion under Narmer follows a few years later. The fiction is older than that: the Ancients built the gate network and lived on Earth millions of years ago, and Ra arrived before 3000 BC, but the screen gives neither a year (licensed role-playing books give 9177 BC for Ra), so they are described here and left out of the chain. Everything on the surface after 3000 BCE is our history; the secret lies underneath it.",
+    "sources": [
+     {
+      "title": "Stargate Wiki: Tau'ri Rebellion (around 2995 BC)",
+      "url": "https://stargate.fandom.com/wiki/Tau%27ri_Rebellion"
+     },
+     {
+      "title": "Stargate Wiki: Moebius, Part 1 (SG-1 travel to 3000 B.C.)",
+      "url": "https://stargate.fandom.com/wiki/Moebius,_Part_1"
+     },
+     {
+      "title": "Wikipedia: Stargate (film)",
+      "url": "https://en.wikipedia.org/wiki/Stargate_(film)"
+     }
+    ]
+   },
+   "ending": {
+    "valence": "optimistic",
+    "why": "By the end of SG-1 the Goa'uld are broken, the Jaffa free, the Ori destroyed and Earth defended by a fleet of its own, and the only thing not won is the public's right to know.",
+    "asOf": 2007
+   },
+   "events": [
+    {
+     "id": "sg-tauri-rebellion-3000bce",
+     "year": -3000,
+     "date": "c. 3000 BCE",
+     "title": "Egypt rises against Ra and buries the Stargate",
+     "description": "The alien Ra, who has ruled Egypt as its sun god in a stolen human body and shipped humans through the Stargate as slaves, is driven off the planet by a revolt. The rebels bury the gate at Giza under cover stones inscribed with its secret.",
+     "tier": "T4",
+     "phase": "fork",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": "3000 BC ('Moebius'); c. 2995 BC (Stargate Wiki)",
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Stargate Wiki: Tau'ri Rebellion (around 2995 BC)",
+       "url": "https://stargate.fandom.com/wiki/Tau%27ri_Rebellion"
+      },
+      {
+       "title": "Stargate Wiki: Moebius, Part 1 (SG-1 travel to 3000 B.C.)",
+       "url": "https://stargate.fandom.com/wiki/Moebius,_Part_1"
+      },
+      {
+       "title": "Stargate Wiki: Ra",
+       "url": "https://stargate.fandom.com/wiki/Ra"
+      },
+      {
+       "title": "Wikipedia: Stargate (film)",
+       "url": "https://en.wikipedia.org/wiki/Stargate_(film)"
+      }
+     ],
+     "note": "The film says only that Ra came during the Ancient Egyptian period and that a rebellion buried the gate. SG-1's 'Moebius' (2005) sends the team to 3000 BC, where Ra still rules; the wiki dates the successful revolt, under the future pharaoh Narmer, to around 2995 BC. Narmer is a real early king of Egypt, of about this date; in our history he unified Egypt, not overthrew an alien. Ra's arrival is earlier still, dated only in licensed role-playing material (9177 BC), and is not given a year here.",
+     "binWhy": "Humans held as the property of a false god rise against him and win; the first free act in the story's history.",
+     "bin": "uprising",
+     "sub": "revolt-of-the-owned",
+     "facets": {
+      "change": "a god-king with a Stargate → a buried gate and a free Egypt",
+      "mechanism": "uprising",
+      "actor": "movement",
+      "position": "below",
+      "scope": "national",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": -1,
+       "capability": -1,
+       "population": 0
+      },
+      "preconditions": [
+       "slavery-or-servitude",
+       "theocracy",
+       "occupation"
+      ],
+      "outcomes": [
+       "independence",
+       "cover-up",
+       "isolation"
+      ]
+     }
+    },
+    {
+     "id": "sg-giza-1928",
+     "year": 1928,
+     "date": "1928",
+     "title": "Professor Langford unearths the Stargate at Giza",
+     "description": "An archaeologist digging near the pyramids finds cover stones inscribed in hieroglyphs and, beneath them, a great metal ring. His daughter Catherine pockets an amulet from the dig that will be needed seventy years later.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Stargate Wiki: Discovery of the Stargate (1928)",
+       "url": "https://stargate.fandom.com/wiki/Discovery_of_the_Stargate"
+      },
+      {
+       "title": "Wikipedia: Stargate (film)",
+       "url": "https://en.wikipedia.org/wiki/Stargate_(film)"
+      }
+     ],
+     "note": "The film's opening, captioned 1928. In our 1928 the notable Egyptian finds were Tutankhamun's tomb goods, excavated by Howard Carter from 1922; nothing like a gate was found. SG-1 adds that the gate was shipped to the United States in 1939, before the war.",
+     "binWhy": "An artefact of a non-human intelligence is found; for decades nobody knows what it does.",
+     "bin": "breakthrough-science",
+     "sub": "alien-artefact",
+     "facets": {
+      "change": "a buried ring → an unexplained artefact in American hands",
+      "mechanism": "discovery",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "national",
+      "domain": "scientific",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "taboo"
+      ],
+      "outcomes": [
+       "secrecy-state",
+       "foreknowledge"
+      ]
+     }
+    },
+    {
+     "id": "sg-littlefield-1945",
+     "year": 1945,
+     "date": "1945",
+     "title": "The Stargate opens, and Ernest Littlefield goes through",
+     "description": "In a secret American experiment the gate is dialled and a wormhole forms; Catherine Langford's fiance steps through and is stranded on a distant world for more than fifty years. He is given up for dead and the programme is shut down.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Stargate Wiki: The Torment of Tantalus (the 1945 experiments)",
+       "url": "https://stargate.fandom.com/wiki/The_Torment_of_Tantalus"
+      },
+      {
+       "title": "Stargate Wiki: Discovery of the Stargate (1928)",
+       "url": "https://stargate.fandom.com/wiki/Discovery_of_the_Stargate"
+      }
+     ],
+     "note": "Shown in 'The Torment of Tantalus' (SG-1 season 1, 1997), as archival film of experiments in 1945. The episode's point is that the gate worked before anyone understood it. In our 1945 the United States' secret programme was the atomic bomb.",
+     "binWhy": "A passage to another world is opened for the first time, and closed again at once.",
+     "bin": "gateway-opens",
+     "facets": {
+      "change": "a dead ring → a wormhole and a man lost through it",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "scientific",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "long-war"
+      ],
+      "outcomes": [
+       "cover-up",
+       "secrecy-state"
+      ]
+     }
+    },
+    {
+     "id": "sg-pub-1994",
+     "year": 1994,
+     "date": "1994-10-28",
+     "title": "Stargate is released",
+     "description": "Roland Emmerich and Dean Devlin's film opens in the United States; its success leads to the television series Stargate SG-1 in 1997.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "publication",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Wikipedia: Stargate (film)",
+       "url": "https://en.wikipedia.org/wiki/Stargate_(film)"
+      },
+      {
+       "title": "Wikipedia: Stargate SG-1",
+       "url": "https://en.wikipedia.org/wiki/Stargate_SG-1"
+      }
+     ],
+     "note": "A real-world publication event. SG-1 premiered on Showtime on 27 July 1997 and ran for ten seasons until 2007 (the last five on Sci Fi), with two DVD films in 2008.",
+     "binWhy": "A real-world release date, not a moment in the story.",
+     "bin": null,
+     "facets": null
+    },
+    {
+     "id": "sg-abydos-1996",
+     "year": 1996,
+     "date": "1996",
+     "title": "O'Neil's team goes through the gate and meets Ra",
+     "description": "An Egyptologist decodes the gate's symbols and a military team dials a planet called Abydos, where humans mine for a god. Ra is real, alien and wearing a human body; the team frees his slaves and kills him with the nuclear bomb they brought to destroy the gate.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Stargate Wiki: Children of the Gods (one year after the Abydos mission)",
+       "url": "https://stargate.fandom.com/wiki/Children_of_the_Gods"
+      },
+      {
+       "title": "Wikipedia: Stargate (film)",
+       "url": "https://en.wikipedia.org/wiki/Stargate_(film)"
+      }
+     ],
+     "note": "The film takes place in its release year, 1994. SG-1 dates it differently: 'Children of the Gods' (1997) opens one year after the Abydos mission, so in the series continuity followed here it happened in 1996. The film's own scenes are the source for what happened.",
+     "binWhy": "Humanity meets a non-human intelligence face to face, secretly, on another world.",
+     "bin": "first-contact",
+     "facets": {
+      "change": "a gate nobody could use → a dead god on another world",
+      "mechanism": "expedition",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": 1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "slavery-or-servitude"
+      ],
+      "outcomes": [
+       "contact",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "sg-sgc-1997",
+     "year": 1997,
+     "date": "1997-02-10",
+     "title": "Stargate Command is founded after Apophis comes through",
+     "description": "The Goa'uld Apophis comes through the mothballed gate, kills four guards and abducts a woman. The Air Force reopens the programme under Cheyenne Mountain as Stargate Command and sends teams through to explore other worlds and defend Earth, in complete secrecy.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Stargate Wiki: Stargate Command (founded 10 February 1997)",
+       "url": "https://stargate.fandom.com/wiki/Stargate_Command"
+      },
+      {
+       "title": "Stargate Wiki: Children of the Gods (one year after the Abydos mission)",
+       "url": "https://stargate.fandom.com/wiki/Children_of_the_Gods"
+      }
+     ],
+     "note": "The pilot 'Children of the Gods' aired on 27 July 1997; the SGC's founding date of 10 February 1997 is given in the episode 'Politics'. The real Cheyenne Mountain is a NORAD complex; the show's fiction is what lies below it.",
+     "binWhy": "A body is founded that will shape the world in secret: a military command for a war only a few hundred people know is being fought.",
+     "bin": "new-institution",
+     "facets": {
+      "change": "a closed project → a secret command for a secret war",
+      "mechanism": "founding",
+      "actor": "state",
+      "position": "inside",
+      "scope": "national",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "existential-threat",
+       "secrecy",
+       "contact-made"
+      ],
+      "outcomes": [
+       "secrecy-state",
+       "hunt-begins"
+      ]
+     }
+    },
+    {
+     "id": "sg-protected-planets-1999",
+     "year": 1999,
+     "date": "1999",
+     "title": "Earth is placed under the Protected Planets Treaty",
+     "description": "The Asgard, an ancient ally, have Earth added to the treaty that bars the Goa'uld from attacking certain human worlds. The System Lords agree, and the SGC keeps its gate.",
+     "tier": "T3",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Stargate Wiki: Fair Game (the Protected Planets Treaty summit)",
+       "url": "https://stargate.fandom.com/wiki/Fair_Game"
+      },
+      {
+       "title": "Stargate Wiki: Protected Planets Treaty",
+       "url": "https://stargate.fandom.com/wiki/Protected_Planets_Treaty"
+      }
+     ],
+     "note": "Shown in 'Fair Game' (season 3), which aired in July 1999; the treaty itself predates Earth's inclusion by millennia. The Asgard admit to O'Neill that they are bluffing about how far they can enforce it.",
+     "binWhy": "An alliance and a truce: a powerful race puts Earth under its protection and its enemies sign.",
+     "bin": "peace-made",
+     "facets": {
+      "change": "an unprotected planet → a treaty world",
+      "mechanism": "negotiation",
+      "actor": "outsider",
+      "position": "outside",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "existential-threat",
+       "contact-made"
+      ],
+      "outcomes": [
+       "diplomacy",
+       "collaboration"
+      ]
+     }
+    },
+    {
+     "id": "sg-prometheus-2002",
+     "year": 2002,
+     "date": "2002",
+     "title": "Earth builds its first interstellar warship",
+     "description": "Reverse-engineering alien technology, the United States completes the Prometheus, a battlecruiser that can travel through hyperspace. It is the first thing humanity has built that can reach another star without a gate.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Stargate Wiki: Prometheus (completed 2002)",
+       "url": "https://stargate.fandom.com/wiki/Prometheus"
+      }
+     ],
+     "note": "The Stargate Wiki dates Prometheus's completion to 2002 (SG-1 season 6); it was underpowered at first and was hijacked by rogue agents in its first year. In our 2002 no crewed craft had left low Earth orbit since 1972.",
+     "binWhy": "A new vehicle changes what the society can do: a starship of its own.",
+     "bin": "new-technology-deployed",
+     "sub": "transport-space",
+     "facets": {
+      "change": "travel only by gate → a starship of Earth's own",
+      "mechanism": "invention",
+      "actor": "state",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "technological",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "technological-race",
+       "secrecy"
+      ],
+      "outcomes": [
+       "arms-race",
+       "state-powers"
+      ]
+     }
+    },
+    {
+     "id": "sg-disclosure-2003",
+     "year": 2003,
+     "date": "2003",
+     "title": "The secret is widened to the great powers",
+     "description": "The United States briefs China, Britain and France on the Stargate programme, joining Russia, which already knew, and the ships it has built. The allies argue over control, and then agree to keep the secret from the public; an international oversight body follows in 2004.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 1,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "medium",
+     "sources": [
+      {
+       "title": "Stargate Wiki: Disclosure",
+       "url": "https://stargate.fandom.com/wiki/Disclosure"
+      },
+      {
+       "title": "Stargate Wiki: International Oversight Advisory (founded 2004)",
+       "url": "https://stargate.fandom.com/wiki/International_Oversight_Advisory"
+      }
+     ],
+     "note": "'Disclosure' (season 6) aired in 2003. The International Oversight Advisory is dated to 2004 by the wiki.",
+     "binWhy": "Knowledge is shared among those who hold power and kept, by agreement, from everyone else.",
+     "bin": "secret-kept",
+     "facets": {
+      "change": "an American secret → a secret of the great powers",
+      "mechanism": "negotiation",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "political",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "secrecy",
+       "rivalry"
+      ],
+      "outcomes": [
+       "secrecy-state",
+       "cover-up",
+       "collaboration"
+      ]
+     }
+    },
+    {
+     "id": "sg-antarctica-2004",
+     "year": 2004,
+     "date": "2004",
+     "title": "Anubis's fleet is destroyed over Antarctica",
+     "description": "With the Goa'uld Anubis attacking Earth, O'Neill uses a weapon left by the Ancients in an outpost under the Antarctic ice, and it wipes out the fleet in minutes. The outpost also points the way to the lost city of Atlantis.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 3,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Stargate Wiki: Battle of Antarctica (2004)",
+       "url": "https://stargate.fandom.com/wiki/Battle_of_Antarctica"
+      }
+     ],
+     "note": "The two-part 'Lost City' (season 7 finale, 2004). The battle is fought above Antarctica and over the Earth's cities, and the public is told nothing.",
+     "binWhy": "A battle that settles the war with the Goa'uld's strongest lord and saves the planet.",
+     "bin": "decisive-victory",
+     "facets": {
+      "change": "an invasion fleet overhead → an empty sky",
+      "mechanism": "war",
+      "actor": "state",
+      "position": "inside",
+      "scope": "planetary",
+      "domain": "military",
+      "direction": {
+       "power": 0,
+       "openness": 0,
+       "capability": 1,
+       "population": 0
+      },
+      "preconditions": [
+       "existential-threat",
+       "secrecy"
+      ],
+      "outcomes": [
+       "turning-point",
+       "cover-up"
+      ]
+     }
+    },
+    {
+     "id": "sg-dakara-2005",
+     "year": 2005,
+     "date": "2005",
+     "title": "The Jaffa free themselves at Dakara",
+     "description": "The Jaffa, bred for thousands of years as the Goa'uld's soldiers and servants, rise across the galaxy, take the holy world of Dakara and use an Ancient device to destroy the Replicators. The Goa'uld empire falls, and a Free Jaffa Nation is proclaimed.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Stargate Wiki: Battle of Dakara (2005)",
+       "url": "https://stargate.fandom.com/wiki/Battle_of_Dakara"
+      }
+     ],
+     "note": "'Reckoning' (season 8), aired early 2005; the wiki dates the battle to 2005.",
+     "binWhy": "The owned rise against their owners and win: the slave-soldiers of false gods take their freedom.",
+     "bin": "uprising",
+     "sub": "revolt-of-the-owned",
+     "facets": {
+      "change": "a slave army → a free nation",
+      "mechanism": "uprising",
+      "actor": "movement",
+      "position": "below",
+      "scope": "beyond",
+      "domain": "political",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "slavery-or-servitude",
+       "theocracy"
+      ],
+      "outcomes": [
+       "independence",
+       "new-actors",
+       "state-dissolves"
+      ]
+     }
+    },
+    {
+     "id": "sg-ori-crusade-2006",
+     "year": 2006,
+     "date": "2006",
+     "title": "The Ori crusade reaches the Milky Way",
+     "description": "Ascended beings from another galaxy, worshipped as gods, send their fleet through a supergate to convert or destroy the Milky Way. The first battle, at P3Y-229, is a rout of the Earth, Asgard and Jaffa ships sent to stop them.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Stargate Wiki: Battle of P3Y-229 (2006)",
+       "url": "https://stargate.fandom.com/wiki/Battle_of_P3Y-229"
+      }
+     ],
+     "note": "'Camelot' (season 9 finale, 2006) and the season 10 opener; the wiki dates the battle to 2006.",
+     "binWhy": "A war between civilisations begins: a crusade from another galaxy.",
+     "bin": "war-breaks-out",
+     "sub": "between-worlds",
+     "facets": {
+      "change": "rumours of the Ori → their fleet through the supergate",
+      "mechanism": "invasion",
+      "actor": "outsider",
+      "position": "above",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": 1,
+       "openness": -1,
+       "capability": 0,
+       "population": -1
+      },
+      "preconditions": [
+       "religious-fervour",
+       "existential-threat"
+      ],
+      "outcomes": [
+       "holy-war",
+       "war-of-expansion"
+      ]
+     }
+    },
+    {
+     "id": "sg-fall-of-ori-2007",
+     "year": 2007,
+     "date": "2007",
+     "title": "The Ori are destroyed",
+     "description": "Working from the knowledge of the Ancient Merlin, Daniel Jackson gets a weapon to the Ori that kills them, and the Ark of Truth later shows their followers that their gods were lying. The crusade collapses without its gods.",
+     "tier": "T2",
+     "phase": "deep",
+     "importance": 2,
+     "kind": "event",
+     "inUniverse": null,
+     "confidence": "high",
+     "sources": [
+      {
+       "title": "Stargate Wiki: Fall of the Ori (2007)",
+       "url": "https://stargate.fandom.com/wiki/Fall_of_the_Ori"
+      },
+      {
+       "title": "Wikipedia: Stargate: The Ark of Truth",
+       "url": "https://en.wikipedia.org/wiki/Stargate:_The_Ark_of_Truth"
+      }
+     ],
+     "note": "'The Shroud' (season 10, 2007) destroys the Ori; the Ark of Truth, the DVD film released on 11 March 2008, ends the crusade. The wiki dates the fall to 2007.",
+     "binWhy": "The war with the Ori is settled at its source.",
+     "bin": "decisive-victory",
+     "facets": {
+      "change": "gods leading a crusade → a crusade without gods",
+      "mechanism": "attack",
+      "actor": "individual",
+      "position": "inside",
+      "scope": "beyond",
+      "domain": "military",
+      "direction": {
+       "power": -1,
+       "openness": 1,
+       "capability": 0,
+       "population": 0
+      },
+      "preconditions": [
+       "religious-fervour",
+       "existential-threat",
+       "long-war"
+      ],
+      "outcomes": [
+       "turning-point",
+       "revelation"
+      ]
+     }
+    }
+   ],
+   "groupingNote": "Hidden history: every public fact of the 20th century stands, and a secret programme under Cheyenne Mountain fights an interstellar war behind it. The chain follows the film and Stargate SG-1 as one continuity, with SG-1's dating where the two disagree (the Abydos mission in 1996, not the film's 1994). Stargate Atlantis and Universe, which share the continuity, are left out. Tier coverage: T4 for the fork (c. 3000 BCE), T3 for 1928-1999, T2 for 2002-2007. T1 is empty: the secret war ends in the present, and the series never looks far forward.",
+   "sources": [
+    {
+     "title": "Wikipedia: Stargate (film)",
+     "url": "https://en.wikipedia.org/wiki/Stargate_(film)"
+    },
+    {
+     "title": "Wikipedia: Stargate SG-1",
+     "url": "https://en.wikipedia.org/wiki/Stargate_SG-1"
+    },
+    {
+     "title": "Stargate Wiki: Discovery of the Stargate (1928)",
+     "url": "https://stargate.fandom.com/wiki/Discovery_of_the_Stargate"
+    },
+    {
+     "title": "Stargate Wiki: Stargate Command (founded 10 February 1997)",
+     "url": "https://stargate.fandom.com/wiki/Stargate_Command"
+    }
+   ]
   }
  ]
 }

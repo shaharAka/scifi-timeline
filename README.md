@@ -2,7 +2,7 @@
 
 An animated dashboard that puts fictional histories on the **real-world calendar**,
 shows where each one stops agreeing with us, and lets you step inside any of the
-ninety-three worlds, and ask which one we are living in.
+138 worlds, and ask which one we are living in.
 
 Open **`timeline.html`** directly in a browser. No server, no dependencies — the
 page carries its own copy of the data so it works from `file://`.
@@ -77,15 +77,15 @@ The chart is a tree on a shared real-time axis:
   there rather than silently missing.
 
 Franchises are grouped by **how they break with our history**, not by genre.
-93 lineages, 889 events:
+138 lineages, 1291 events:
 
 | Archetype | The break | Members | Divergence |
 |---|---|---|---|
-| **Hidden History** | A secret runs underneath the present day | The X-Files, Men in Black, Harry Potter, Buffy the Vampire Slayer, His Dark Materials, The Three-Body Problem, Stranger Things, Fringe, Dark, The Umbrella Academy | 1,558–1,997 |
-| **Alternate Past** | An explicit counterfactual in the 19th or 20th century | The Man in the High Castle, Watchmen, Fatherland, The Terminator, For All Mankind, Threads, District 9, The War of the Worlds, Nineteen Eighty-Four, Brave New World, V for Vendetta, The Plot Against America, Metal Gear, 11/22/63 | 1,907–1,984 |
-| **Post-Industrial Collapse** | Civilisation ends in one generation | A Canticle for Leibowitz, Planet of the Apes, Mad Max, Twelve Monkeys, Fallout, The Matrix, Parable of the Sower, Station Eleven, Horizon Zero Dawn, Snowpiercer, The Road, Waterworld, Soylent Green, Seveneves, The Last of Us, 28 Days Later, The Stand, I Am Legend, Oryx and Crake (the MaddAddam trilogy), The Hunger Games, World War Z | 1,962–2,090 |
-| **Near-Future Branch** | A discovery inside our own century | Blade Runner, Contact, Neuromancer, 2001: A Space Odyssey, Children of Men, Interstellar, The Expanse, The Handmaid's Tale, The Ministry for the Future, Cyberpunk 2077, Half-Life, Deus Ex, Westworld, Detroit: Become Human, Ready Player One, Ex Machina, Her, Person of Interest, Ghost in the Shell: Stand Alone Complex, The Day After Tomorrow, Don't Look Up, Years and Years, Minority Report, Gattaca, Elysium, I, Robot, Altered Carbon, Colossus (The Forbin Project), WarGames, The Creator, The Martian, Red Mars (the Mars trilogy), Moon, Project Hail Mary, Avatar, Arrival, Independence Day, Ender's Game, Starship Troopers, The Peripheral | 1,947–2,115 |
-| **Far-Future Space Opera** | A galactic civilisation millennia downstream | Star Trek, Star Wars, Dune, Foundation, Warhammer 40,000, Mass Effect, Battlestar Galactica, Halo | 151,994 BCE–35,000 CE |
+| **Hidden History** | A secret runs underneath the present day | The X-Files, Men in Black, Harry Potter, Buffy the Vampire Slayer, His Dark Materials, The Three-Body Problem, Stranger Things, Fringe, Dark, The Umbrella Academy, Back to the Future, Heroes, Lost, Quantum Leap, Stargate | 3,000 BCE–1,997 |
+| **Alternate Past** | An explicit counterfactual in the 19th or 20th century | The Man in the High Castle, Watchmen, Fatherland, The Terminator, For All Mankind, Threads, District 9, The War of the Worlds, Nineteen Eighty-Four, Brave New World, V for Vendetta, The Plot Against America, Metal Gear, 11/22/63, Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb, Fail-Safe, On the Beach, The Day After, SS-GB | 1,907–1,984 |
+| **Post-Industrial Collapse** | Civilisation ends in one generation | A Canticle for Leibowitz, Planet of the Apes, Mad Max, Twelve Monkeys, Fallout, The Matrix, Parable of the Sower, Station Eleven, Horizon Zero Dawn, Snowpiercer, The Road, Waterworld, Soylent Green, Seveneves, The Last of Us, 28 Days Later, The Stand, I Am Legend, Oryx and Crake (the MaddAddam trilogy), The Hunger Games, World War Z, Silo (Wool, Shift, Dust), WALL-E, I Am Mother | 1,962–2,090 |
+| **Near-Future Branch** | A discovery inside our own century | Blade Runner, Contact, Neuromancer, 2001: A Space Odyssey, Children of Men, Interstellar, The Expanse, The Handmaid's Tale, The Ministry for the Future, Cyberpunk 2077, Half-Life, Deus Ex, Westworld, Detroit: Become Human, Ready Player One, Ex Machina, Her, Person of Interest, Ghost in the Shell: Stand Alone Complex, The Day After Tomorrow, Don't Look Up, Years and Years, Minority Report, Gattaca, Elysium, I, Robot, Altered Carbon, Colossus (The Forbin Project), WarGames, The Creator, The Martian, Red Mars (the Mars trilogy), Moon, Project Hail Mary, Avatar, Arrival, Independence Day, Ender's Game, Starship Troopers, The Peripheral, The Mandibles: A Family, 2029-2047, Civil War, The Boys, Ghost Fleet, 2034: A Novel of the Next World War, Leave the World Behind, Jericho, The Last Ship, Transcendence, Humans, Pantheon, RoboCop, Contagion, The Andromeda Strain, Deep Impact, Greenland, 2012, Snow Crash, The Diamond Age, Accelerando, Looper, New York 2140, The Water Knife, Geostorm, Rendezvous with Rama, Childhood's End | 1,939–2,115 |
+| **Far-Future Space Opera** | A galactic civilisation millennia downstream | Star Trek, Star Wars, Dune, Foundation, Warhammer 40,000, Mass Effect, Battlestar Galactica, Halo, Red Rising, Alien, The Culture, Hyperion Cantos, Babylon 5, Firefly | 151,994 BCE–35,000 CE |
 
 The grouping is the answer to "can they be grouped": yes, and the real-time axis
 makes the groups separate cleanly. Hidden-history branches cluster over the last
@@ -123,7 +123,7 @@ fiction's future and our present occupy the same instant.
 ## Reading the axis
 
 The dataset spans roughly 2 billion BCE (The Expanse's ring builders) to 48,000
-CE (Foundation's Second Empire) — 889 events across 93 lineages. A linear axis
+CE (Foundation's Second Empire) — 1291 events across 138 lineages. A linear axis
 would erase the present day, so the axis is **warped** (a symmetric-log scale,
 `WARP = 110` in `timeline.html`): it stretches the years around now and
 compresses the deep past and deep future. It stays continuous and monotonic — no

@@ -62,10 +62,7 @@ function matchNews(item){
     renderFutures(item, null);
     return 0;
   }
-  var worlds = {};
-  DATA.lineages.forEach(function(l){
-    (l.events || []).forEach(function(e){ if(e.bin === binId) worlds[l.id] = true; });
-  });
+  var worlds = worldsThroughBin(binId);
   litBin = binId;
   litWorlds = worlds;
   renderChart();
@@ -126,8 +123,11 @@ function matchMoment(e, label){
 function worldsThroughBin(binId){
   var worlds = {};
   if(!binId) return worlds;
+  /* from the fork on only: the real history a world carries before its fork
+     (Pearl Harbor in Ghost Fleet) is ours, not a step the story took */
   DATA.lineages.forEach(function(l){
-    (l.events || []).forEach(function(x){ if(x.bin === binId) worlds[l.id] = true; });
+    var dv = l.divergence ? l.divergence.year : -Infinity;
+    (l.events || []).forEach(function(x){ if(x.bin === binId && x.year >= dv) worlds[l.id] = true; });
   });
   return worlds;
 }

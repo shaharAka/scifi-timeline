@@ -16,8 +16,8 @@ the entry point and it tells you what to trust and what will bite you.
   present, compared for what followed, in what order, what differed and what
   repeated. The tree chart, the Order view and the bins all serve that use.
   More worlds will keep being added, so everything is built to take them.
-- **State (2026-09-26):** all three test suites green. 5 archetypes, 93
-  lineages, 889 events, 67+2 sub-kinds under 16 kinds (see `data/SCHEMA.md`,
+- **State (2026-09-26):** all three test suites green. 5 archetypes, 138
+  lineages, 1291 events, 67+2 sub-kinds under 16 kinds (see `data/SCHEMA.md`,
   Sub-kinds). The Ranking tab (`94-ranking.js`) ranks every story
   against our road thread by thread and replays the leader; ten worlds were
   added through `tools/world-brief.py` and `tools/check-world.py`.

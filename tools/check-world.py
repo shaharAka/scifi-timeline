@@ -8,7 +8,7 @@
 FILE is {"group", "lineage", "dossier"} as tools/world-brief.py asks for.
 Exit 1 if anything would fail the build or break the drawer.
 """
-import json, sys, glob, os, re
+import json, re, sys, glob, os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WORLDS_FILE = os.path.join(ROOT, "data", "parts", "worlds", "present-day.json")
 
@@ -38,6 +38,17 @@ def main():
     for k in ("id","title","medium","creator","originYear","group","epoch","franchiseStatus","divergence","ending","events","groupingNote"):
         if l.get(k) in (None, "", [], {}): P("lineage missing %s" % k)
     if l["id"] in existing: P("lineage id %s already exists" % l["id"])
+    # the build rejects an event id whose leading token names another world
+    # (its id, the id without punctuation, or without vowels: "hl" is Halo)
+    owners = {}
+    for oid in existing:
+        flat = re.sub(r"[^a-z0-9]", "", oid.lower())
+        for cand in {oid, flat, re.sub(r"[aeiou]", "", flat)}:
+            if len(cand) >= 2: owners.setdefault(cand, set()).add(oid)
+    for e in l.get("events") or []:
+        head = re.split(r"[-_]", str(e.get("id", "")).lower())[0]
+        if head in owners and l["id"] not in owners[head]:
+            P("event id %s starts with %r, which the build reads as %s; use another prefix" % (e.get("id"), head, sorted(owners[head])))
     if l.get("group") != g: P("lineage.group != group")
     dv = l["divergence"]["year"]
     ev = l["events"]; ys = [e["year"] for e in ev]
