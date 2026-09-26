@@ -521,6 +521,7 @@ function publishTimeline(lay, nx){
     pickerTodayHtml:function(){ return pickerTodayHtml(MP.model || momentsModel()); },
     rank:function(upto, add){ return rkRank(MP.model || momentsModel(), upto, add); },
     rankHistory:function(){ return rkHistory(MP.model || momentsModel()); },
+    answerHtml:function(){ return rkAnswerHtml(MP.model || momentsModel()); },
     rankCard:function(kind){ return rkCardHtml(MP.model || momentsModel(), kind); },
     rankRace:function(o){ return rkRaceSvg(MP.model || momentsModel(), o); },
     rankWhatIf:function(){ var M = MP.model || momentsModel(); return rkWhatIf(M, rkRank(M)); },

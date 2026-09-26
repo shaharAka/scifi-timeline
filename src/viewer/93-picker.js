@@ -80,22 +80,12 @@ function pkEndingsBar(M, title){
 /* --- Today --------------------------------------------------------------------- */
 function pickerTodayHtml(M){
   var news = mpNewsList(), R = rkRank(M), prev = R.upto > 1 ? rkRank(M, R.upto - 1) : null;
-  var html = '<header class="pk-hello"><h1>Which stories are on our road?</h1>'
-    + '<p>' + M.list.length + ' science-fiction worlds, each pinned to our calendar, each walking its own chain of events to an ending. Read today’s news against them.</p></header>'
-    + '<div class="pk-cols"><div class="pk-main">';
+  /* a reader from a post lands here: the same answer the post gave, first */
+  var html = rkAnswerHtml(M) + '<div class="pk-cols"><div class="pk-main">';
   if(news.length) html += pkNewsCard(news[0], true);
-  var top = R.rows[0];
-  if(top){
-    var nx = top.at >= 0 ? top.st.seq[top.at + 1] : null, was = prev && prev.rows[0].st !== top.st ? prev.rows[0].st : null;
-    html += '<button class="rk-card ' + top.st.ending.valence + '" data-go="rank">' + pkThumb(top.st.id, "rk-cthumb")
-      + '<span class="rk-cbody"><span class="rk-top-k">Which story are we in? · top candidate' + (was ? ', taking over from ' + esc(was.l.title) : '') + '</span>'
-      + '<span class="rk-ctitle">' + esc(top.st.l.title) + ' <b>' + rkPct(top.share) + '</b></span>'
-      + '<span class="pk-rline">' + esc(rkLine(R, top)) + (nx ? '; there, next: ' + esc(nx.e.title) : '') + '</span>'
-      + '<span class="pk-news-go">See all ' + R.rows.length + ' stories ranked →</span></span></button>';
-  }
-  var near = R.rows.slice(1, 7).filter(function(r){ return rkPairs(R, r).length; });
+  var near = R.rows.slice(5, 11).filter(function(r){ return rkPairs(R, r).length; });
   if(near.length){
-    html += '<section class="pk-sec"><h3 class="pk-sh">Close behind</h3><div class="pk-rail">'
+    html += '<section class="pk-sec"><h3 class="pk-sh">Further down the ranking</h3><div class="pk-rail">'
       + near.map(function(r){
         return '<button class="pk-tile" data-world="' + esc(r.st.id) + '">' + pkThumb(r.st.id, "pk-tthumb")
           + '<span class="pk-ttitle">' + r.rank + '. ' + esc(r.st.l.title) + ' ' + rkMove(r, prev) + '</span>' + pkBadge(r.st)

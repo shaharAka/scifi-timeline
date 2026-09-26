@@ -110,8 +110,12 @@ function welcomeInit(){
   var phone = typeof pickerInit === "function" && pickerInit();
   if(phone) linked = typeof location !== "undefined" && /^#(news|world|kind)=/.test(location.hash || "");
   else try{ linked = applyHash(); }catch(e){ linked = false; }
-  /* no modal on a phone: its Today screen explains itself */
-  if(!linked && !welcomeSeen() && !phone) showWelcome();
+  /* no modal where the app shell runs: its Today screen opens on the answer
+     and explains itself, and a modal would cover exactly what a reader coming
+     from a post came to see. pickerInit returns true on a phone only, so ask
+     the shell directly. */
+  var shell = typeof pickerActive === "function" && pickerActive();
+  if(!linked && !welcomeSeen() && !phone && !shell) showWelcome();
   var again = document.getElementById("about-intro");
   if(again) again.onclick = function(){ setPanel(""); showWelcome(); };
 }

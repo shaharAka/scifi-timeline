@@ -425,6 +425,16 @@ Four rules follow from that, and they are the owner's:
   leader, a solid column where the lead changed; a story that drops out simply
   leaves the chart and is named underneath. It sits under the hero on a phone
   and tops the side column on a wide screen.
+- **The post and the page say the same thing** (`rkAnswer`). A poster must be
+  readable in two seconds, so it carries only: the question, the closest
+  story, its match as a percentage and as a multiple of the average story, the
+  steps it shares with us in plain words (from one thread, so "in the same
+  order" is true), the news that pushed us closest (of the shared moments, the
+  one after which its share rose most), how it ends, four runners-up, one line
+  on what the atlas is, and the address. Today opens on exactly that block, so
+  a reader arriving from a post sees the post's answer first, then can read
+  the story or the full ranking. The first-visit popup no longer shows where
+  the app shell runs, since it would cover that answer.
 - **Posting is a snapshot.** `#card=post` (1080×1350, the portrait size a
   feed shows largest) and `#card=og` (1200×630) are fixed-size posters of the
   live ranking: the leader's plate, its share, the race and each thread's
