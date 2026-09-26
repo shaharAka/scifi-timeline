@@ -744,49 +744,102 @@ body.card-mode{overflow:hidden}
 .rkc-og .rkc-end{font-size:25px;margin-top:16px}
 .rkc-og .rkc-foot{margin-top:auto;font-size:18px;color:rgba(255,255,255,.6)}
 
-/* the answer: what a reader lands on, the poster made tappable */
-.ans{margin:0 0 8px}
-.ans-head h1{font-size:28px;line-height:1.12;margin:2px 0 6px;letter-spacing:-.02em;color:var(--ink-0)}
-.ans-about{font-size:14.5px;line-height:1.5;color:var(--ink-3);margin:0 0 12px}
-.ans-hero{position:relative;display:block;width:100%;height:250px;padding:0;border:0;border-radius:16px 16px 0 0;overflow:hidden;font:inherit;text-align:left;cursor:pointer;background:#0d131b;color:#fff}
-.ans-hero img{display:block;width:100%;height:100%;object-fit:cover}
-.ans-hero.none{height:auto}
-.ans-t{position:absolute;left:0;right:0;bottom:0;padding:40px 16px 14px;display:flex;flex-direction:column;gap:3px;background:linear-gradient(rgba(8,12,18,0),rgba(8,12,18,.65) 40%,rgba(8,12,18,.92))}
-.ans-hero.none .ans-t{position:static}
-.ans-k{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:750;opacity:.8}
-.ans-title{font-size:34px;line-height:1.05;font-weight:800;letter-spacing:-.025em}
-.ans-pct{font-size:15px;font-weight:700;color:#ffd27a;font-variant-numeric:tabular-nums}
-.ans-body{background:var(--surface);border:1px solid var(--line-1);border-top:0;border-radius:0 0 16px 16px;padding:14px 16px 16px}
-.ans-same{font-size:13.5px;color:var(--ink-3)}
-.ans-steps{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:6px 0 0}
-.ans-steps span{font-size:15px;font-weight:700;color:#10161f;background:#ffd27a;border-radius:999px;padding:5px 12px}
-.ans-steps i{font-style:normal;color:var(--ink-3)}
-.ans-push{display:flex;flex-direction:column;gap:2px;width:100%;text-align:left;font:inherit;cursor:pointer;margin:14px 0 0;padding:10px 12px;border:0;border-left:4px solid #e0a52a;background:var(--bg-2);border-radius:0 10px 10px 0;color:var(--ink-1)}
-.ans-pk{font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:750;color:var(--ink-3)}
-.ans-ph{font-size:15.5px;font-weight:680;color:var(--ink-0);line-height:1.35}
-.ans-pd{font-size:12.5px;color:var(--ink-3)}
-.ans-end{font-size:18px;font-weight:750;margin:14px 0 12px}
-.ans-end.pessimistic{color:var(--bad)}.ans-end.optimistic{color:var(--ok)}.ans-end.unknown{color:var(--ink-2)}
-.ans-acts{display:flex;flex-direction:column;gap:8px}
-.ans-rh{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3);font-weight:750;margin:18px 0 8px}
-.ans-runs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
-.ans-run{display:flex;flex-direction:column;gap:4px;font:inherit;text-align:left;background:none;border:0;padding:0;cursor:pointer;color:var(--ink-1);min-width:0}
-.ans-rimg{display:block;width:100%;height:58px;border-radius:8px;object-fit:cover;background:var(--bg-2)}
-.ans-rimg.none{display:flex;align-items:center;justify-content:center}
-.ans-run b{font-size:12.5px;font-weight:650;line-height:1.2;color:var(--ink-0)}
-.ans-run em{font-style:normal;font-size:11.5px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+/* the post poster: an editorial page */
+.rkc.pp{width:1080px;height:1350px;box-sizing:border-box;padding:64px 72px 60px;background:#f3efe6;color:#161512;display:flex;flex-direction:column;
+  font-family:ui-sans-serif,-apple-system,"Helvetica Neue",Arial,sans-serif}
+.pp-mast{display:flex;justify-content:space-between;font-size:19px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding-bottom:14px;border-bottom:3px solid #161512}
+.pp-ask{font-family:"Iowan Old Style",Charter,Georgia,serif;font-weight:500;font-size:60px;line-height:1.08;letter-spacing:-.01em;margin:40px 0 0;color:#161512}
+.pp-ans{font-family:"Iowan Old Style",Charter,Georgia,serif;font-weight:700;font-size:118px;line-height:1;letter-spacing:-.025em;margin:18px 0 0}
+.pp-sub{font-size:27px;line-height:1.4;margin:18px 0 0;color:#4a453d}
+.pp-sub b{color:#161512}
+.pp-table{margin-top:40px;border-top:1px solid #161512}
+.pp-row{display:grid;grid-template-columns:1fr 150px 1fr;gap:18px;align-items:start;padding:16px 0;border-bottom:1px solid rgba(22,21,18,.25)}
+.pp-hd{padding:12px 0;font-size:17px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#6b6459}
+.pp-hd div:last-child{text-align:right}
+.pp-us,.pp-them{display:flex;flex-direction:column;gap:4px}
+.pp-them{text-align:right}
+.pp-d{font-size:18px;font-weight:600;color:#6b6459;font-variant-numeric:tabular-nums}
+.pp-t{font-family:"Iowan Old Style",Charter,Georgia,serif;font-size:29px;line-height:1.2}
+.pp-k{font-family:"Iowan Old Style",Charter,Georgia,serif;font-style:italic;font-size:22px;line-height:1.2;text-align:center;color:#6b6459;padding-top:26px}
+.pp-push{font-size:16px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;color:#b8321f;margin-top:2px}
+.pp-next .pp-t{color:#161512}
+.pp-next{border-bottom:0}
+.pp-q{font-family:"Iowan Old Style",Charter,Georgia,serif;font-size:44px;color:#b3aa9b;padding-top:10px}
+.pp-end{font-family:"Iowan Old Style",Charter,Georgia,serif;font-size:40px;font-weight:700;margin:22px 0 0}
+.pp-end.pessimistic{color:#b8321f}.pp-end.optimistic{color:#1f6b45}.pp-end.unknown{color:#4a453d}
+.pp-foot{margin-top:auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;padding-top:22px;border-top:3px solid #161512}
+.pp-rh{font-size:17px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#6b6459;margin-bottom:8px}
+.pp-runs ol{list-style:none;margin:0;padding:0}
+.pp-runs li{display:flex;gap:12px;align-items:baseline;font-size:23px;line-height:1.55}
+.pp-n{width:20px;color:#6b6459;font-variant-numeric:tabular-nums}
+.pp-rt{flex:1}
+.pp-rp{color:#6b6459;font-variant-numeric:tabular-nums}
+.pp-about p{font-size:19px;line-height:1.45;color:#4a453d;margin:0 0 12px}
+.pp-about b{font-size:21px}
+
+.rkc.ppo{width:1200px;height:630px;box-sizing:border-box;padding:44px 60px 40px;background:#f3efe6;color:#161512;display:flex;flex-direction:column;
+  font-family:ui-sans-serif,-apple-system,"Helvetica Neue",Arial,sans-serif}
+.ppo .pp-mast{font-size:16px}
+.ppo-ask{font-family:"Iowan Old Style",Charter,Georgia,serif;font-size:44px;line-height:1.1;margin-top:30px}
+.ppo-ans{font-family:"Iowan Old Style",Charter,Georgia,serif;font-weight:700;font-size:96px;line-height:1;letter-spacing:-.025em;margin-top:10px}
+.ppo-sub{font-size:24px;line-height:1.45;margin:16px 0 0;color:#4a453d}
+.ppo-sub b{color:#161512}.ppo-sub i{font-family:"Iowan Old Style",Charter,Georgia,serif;color:#161512}
+.ppo .pp-end{font-size:32px;margin-top:14px}
+.ppo-foot{margin-top:auto;padding-top:14px;border-top:3px solid #161512;font-size:20px;font-weight:700}
+.pp-us .pp-q + .pp-d{margin-top:-4px}
+
+/* the answer: what a reader lands on, in the poster's editorial voice */
+.ed{--ed-serif:"Iowan Old Style",Charter,Georgia,"Times New Roman",serif;background:var(--paper,var(--surface));border:1px solid var(--line-1);border-radius:14px;padding:18px 18px 20px;margin:0 0 8px;color:var(--ink-0)}
+.ed button{font:inherit;color:inherit;background:none;border:0;padding:0;text-align:inherit;cursor:pointer}
+.ed-mast{display:flex;justify-content:space-between;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding-bottom:8px;border-bottom:2px solid var(--ink-0)}
+.ed-ask{font-family:var(--ed-serif);font-weight:500;font-size:27px;line-height:1.12;margin:16px 0 0;letter-spacing:-.005em}
+.ed .ed-ans{display:block;font-family:var(--ed-serif);font-weight:700;font-size:46px;line-height:1.02;letter-spacing:-.02em;margin:8px 0 0}
+.ed-sub{font-size:15px;line-height:1.45;margin:8px 0 0;color:var(--ink-2)}
+.ed-sub b{color:var(--ink-0)}
+.ed-table{margin-top:18px;border-top:1px solid var(--ink-0)}
+.ed-row{display:grid;grid-template-columns:1fr;gap:4px;padding:12px 0;border-bottom:1px solid var(--line-2)}
+.ed-hd{display:none}
+.ed-us,.ed-them{display:flex;flex-direction:column;gap:2px}
+.ed-them{padding-left:14px;border-left:2px solid var(--line-2)}
+.ed-d{font-size:12.5px;font-weight:600;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.ed-t{font-family:var(--ed-serif);font-size:17.5px;line-height:1.3}
+.ed-k{font-family:var(--ed-serif);font-style:italic;font-size:14px;color:var(--ink-3);padding:2px 0 2px 14px}
+.ed-k:before{content:"\2193  "}
+.ed-push{font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;font-weight:750;color:var(--bad);margin-top:2px}
+.ed-next{border-bottom:0}
+.ed-q{font-family:var(--ed-serif);font-size:26px;line-height:1;color:var(--ink-4)}
+.ed-end{font-family:var(--ed-serif);font-size:24px;font-weight:700;margin:14px 0 14px}
+.ed-end.pessimistic{color:var(--bad)}.ed-end.optimistic{color:var(--ok)}.ed-end.unknown{color:var(--ink-2)}
+.ed-acts{display:flex;flex-direction:column;gap:8px}
+.ed .pk-btn{border:1px solid var(--line-2);border-radius:10px;padding:12px 14px;text-align:center;background:var(--surface)}
+.ed .pk-btn.primary{background:var(--ink-0);border-color:var(--ink-0);color:var(--surface)}
+.ed-foot{margin-top:18px;padding-top:12px;border-top:2px solid var(--ink-0);display:grid;gap:12px}
+.ed-rh{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--ink-3);margin-bottom:4px}
+.ed-runs{list-style:none;margin:0;padding:0}
+.ed-runs button{display:flex;gap:10px;align-items:baseline;width:100%;font-size:15px;line-height:1.3;padding:6px 0;min-height:36px}
+.ed-n{width:16px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.ed-rt{flex:1}
+.ed-rp{color:var(--ink-3);font-variant-numeric:tabular-nums}
+.ed-about{font-size:13.5px;line-height:1.5;color:var(--ink-3);margin:0}
 @media (min-width:720px){
-  body.shell .ans{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:0;margin:0 0 28px;border-radius:18px;overflow:hidden;border:1px solid var(--line-1);background:var(--surface)}
-  body.shell .ans-head{grid-column:1 / -1;padding:24px 28px 8px;background:var(--bg)}
-  body.shell .ans-head h1{font-size:40px}
-  body.shell .ans-about{font-size:16px;max-width:760px}
-  body.shell .ans-hero{height:100%;min-height:420px;border-radius:0}
-  body.shell .ans-title{font-size:52px}
-  body.shell .ans-pct{font-size:18px}
-  body.shell .ans-body{border:0;border-radius:0;padding:24px 26px}
-  body.shell .ans-acts{flex-direction:row;flex-wrap:wrap}
-  body.shell .ans-acts .pk-btn{flex:1 1 auto}
-  body.shell .ans-rimg{height:70px}
+  body.shell .ed{padding:30px 36px 32px;margin:0 0 30px}
+  body.shell .ed-mast{font-size:13px}
+  body.shell .ed-ask{font-size:40px;margin-top:22px}
+  body.shell .ed .ed-ans{font-size:84px;margin-top:10px}
+  body.shell .ed-sub{font-size:18px}
+  body.shell .ed-row{grid-template-columns:1fr 150px 1fr;gap:18px;align-items:start;padding:14px 0}
+  body.shell .ed-hd{display:grid;padding:10px 0;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--ink-3)}
+  body.shell .ed-hd div:last-child,body.shell .ed-them{text-align:right}
+  body.shell .ed-them{padding-left:0;border-left:0;align-items:flex-end}
+  body.shell .ed-t{font-size:22px}
+  body.shell .ed-k{text-align:center;padding:20px 0 0;font-size:16px}
+  body.shell .ed-k:before{content:""}
+  body.shell .ed-in{display:none}
+  body.shell .ed-end{font-size:30px}
+  body.shell .ed-acts{flex-direction:row}
+  body.shell .ed-acts .pk-btn{flex:1 1 0}
+  body.shell .ed-foot{grid-template-columns:1fr 1fr;gap:40px}
+  body.shell .ed-about{font-size:15px}
 }
 
 /* --- wide screens: the same screens, laid out for width ------------------------------ */

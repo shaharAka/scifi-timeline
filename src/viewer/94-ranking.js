@@ -513,10 +513,14 @@ function rkPlainSteps(R, r, n){
     if(!best || ex.length > best.ex.length || (ex.length === best.ex.length && x.fit > best.fit)) best = { t:t, ex:ex, fit:x.fit };
   });
   if(!best || !best.ex.length) return { words:[], ordered:false };
-  var words = [], seen = {};
-  best.ex.forEach(function(p){ var w = rkPlain(best.t.q[p[0]]); if(!seen[w]){ seen[w] = true; words.push(w); } });
-  words = words.slice(-(n || 3));
-  return { words:words, ordered:words.length >= 2, thread:best.t };
+  var words = [], seen = {}, rows = [];
+  best.ex.forEach(function(p){
+    var w = rkPlain(best.t.q[p[0]]);
+    if(!seen[w]){ seen[w] = true; words.push(w); rows.push({ word:w, ours:best.t.qr[p[0]], theirs:r.st.seq[p[1]], j:p[1] }); }
+  });
+  words = words.slice(-(n || 3)); rows = rows.slice(-(n || 3));
+  var last = rows[rows.length - 1], next = last ? r.st.seq[last.j + 1] : null;
+  return { words:words, rows:rows, next:next, ordered:words.length >= 2, thread:best.t };
 }
 /* --- the answer ----------------------------------------------------------------------
    One reading, told the same way on the poster and on the page a reader lands
@@ -541,7 +545,7 @@ function rkAnswer(M){
   pushed = pushed || anyBest;
   if(pushed && pushed.e.newsId && typeof mpNewsByKey === "function") pushed.news = mpNewsByKey(pushed.e.newsId);
   var end = st.ending.valence;
-  return { R:R, top:top, st:st, steps:sp.words, ordered:sp.ordered, pushed:pushed,
+  return { R:R, top:top, st:st, steps:sp.words, rows:sp.rows, next:sp.next, ordered:sp.ordered, pushed:pushed,
            pct:rkPct(top.share), times:rkTimes(R, top), n:R.rows.length, end:end,
            endTxt:end === "optimistic" ? "it ends well" : end === "pessimistic" ? "it ends badly" : "the ending is still open",
            runners:R.rows.slice(1, 5), asOf:fmtNewsDate(rkToday()) };
@@ -555,25 +559,32 @@ function rkStepsHtml(A, cls){
     + '<div class="' + cls + '-steps">' + A.steps.map(function(w){ return '<span>' + esc(w) + '</span>'; }).join('<i>→</i>') + '</div>';
 }
 
-/* the page a reader lands on: the poster, readable and tappable */
+/* the page a reader lands on: the poster, in the same editorial voice, tappable */
 function rkAnswerHtml(M){
   var A = rkAnswer(M); if(!A) return "";
-  var l = A.st.l, art = typeof artFor === "function" ? artFor(l.id) : null, p = A.pushed;
-  return '<section class="ans">'
-    + '<div class="ans-head"><h1>' + esc(RK_ASK) + '</h1><p class="ans-about">' + esc(rkAbout(A.n)) + '</p></div>'
-    + '<button class="ans-hero' + (art && art.lg ? '' : ' none') + '" data-world="' + esc(l.id) + '">' + (art && art.lg ? '<img src="' + esc(art.lg) + '" alt="" decoding="async">' : '')
-    + '<span class="ans-t"><span class="ans-k">The closest match, as of ' + esc(A.asOf) + '</span><span class="ans-title">' + esc(l.title) + '</span>'
-    + '<span class="ans-pct">' + esc(rkMatchLine(A)) + '</span></span></button>'
-    + '<div class="ans-body">' + rkStepsHtml(A, "ans")
-    + (p ? '<button class="ans-push" ' + (p.news ? 'data-news="' + esc(mpNewsKey(p.news)) + '"' : 'data-beat="' + esc(p.e.id) + '"') + '><span class="ans-pk">The news that pushed us closest</span>'
-        + '<span class="ans-ph">' + esc(p.news ? p.news.headline : p.e.title) + '</span><span class="ans-pd">' + esc(rkWhen(p.e)) + '</span></button>' : '')
-    + '<div class="ans-end ' + A.end + '">In the story, ' + esc(A.endTxt) + '.</div>'
-    + '<div class="ans-acts"><button class="pk-btn primary" data-world="' + esc(l.id) + '">Read the story of ' + esc(l.title) + '</button>'
+  var l = A.st.l, p = A.pushed;
+  var rows = A.rows.map(function(x){
+    var isPush = p && x.ours.e.id === p.e.id;
+    return '<div class="ed-row"><button class="ed-us" data-beat="' + esc(x.ours.e.id) + '"><span class="ed-d">' + esc(rkWhen(x.ours.e)) + '</span><span class="ed-t">' + esc(x.ours.e.title) + '</span>'
+      + (isPush ? '<span class="ed-push">the news that pushed us closest</span>' : '') + '</button>'
+      + '<div class="ed-k">' + esc(x.word) + '</div>'
+      + '<button class="ed-them" data-world="' + esc(l.id) + '"><span class="ed-d">' + esc(fmtYearFull(x.theirs.e.year)) + '<span class="ed-in"> \u00b7 in ' + esc(l.title) + '</span></span><span class="ed-t">' + esc(x.theirs.e.title) + '</span></button></div>';
+  }).join("");
+  var nx = A.next ? '<div class="ed-row ed-next"><div class="ed-us"><span class="ed-q">?</span><span class="ed-d">next for us?</span></div><div class="ed-k">then</div>'
+      + '<button class="ed-them" data-world="' + esc(l.id) + '"><span class="ed-d">' + esc(fmtYearFull(A.next.e.year)) + '<span class="ed-in"> \u00b7 in ' + esc(l.title) + '</span></span><span class="ed-t">' + esc(A.next.e.title) + '</span></button></div>' : '';
+  return '<section class="ans ed">'
+    + '<div class="ed-mast"><span>Where We Are Now</span><span>' + esc(A.asOf) + '</span></div>'
+    + '<h1 class="ed-ask">' + esc(RK_ASK) + '</h1>'
+    + '<button class="ed-ans" data-world="' + esc(l.id) + '">' + esc(l.title) + '</button>'
+    + '<p class="ed-sub">The closest of ' + A.n + ' stories: <b>' + esc(A.pct) + '</b> of the match' + (A.times ? ', ' + esc(A.times.replace(" an average story’s share", " the average story")) : '') + '.</p>'
+    + (A.rows.length ? '<div class="ed-table"><div class="ed-row ed-hd"><div>Our world</div><div></div><div>' + esc(l.title) + '</div></div>' + rows + nx + '</div>' : '')
+    + '<p class="ed-end ' + A.end + '">In the story, ' + esc(A.endTxt) + '.</p>'
+    + '<div class="ed-acts"><button class="pk-btn primary" data-world="' + esc(l.id) + '">Read the story of ' + esc(l.title) + '</button>'
     + '<button class="pk-btn" data-go="rank">Why it fits, and all ' + A.n + ' ranked</button></div>'
-    + (A.runners.length ? '<div class="ans-rh">Close behind</div><div class="ans-runs">' + A.runners.map(function(r){
-        return '<button class="ans-run" data-world="' + esc(r.st.id) + '">' + pkThumb(r.st.id, "ans-rimg") + '<b>' + esc(r.st.l.title) + '</b><em>' + rkPct(r.share) + '</em></button>';
-      }).join("") + '</div>' : '')
-    + '</div></section>';
+    + '<div class="ed-foot"><div><div class="ed-rh">Next closest</div><ol class="ed-runs">' + A.runners.map(function(r){
+        return '<li><button data-world="' + esc(r.st.id) + '"><span class="ed-n">' + r.rank + '</span><span class="ed-rt">' + esc(r.st.l.title) + '</span><span class="ed-rp">' + rkPct(r.share) + '</span></button></li>';
+      }).join("") + '</ol></div><p class="ed-about">' + esc(rkAbout(A.n)) + '</p></div>'
+    + '</section>';
 }
 
 function rkCardHtml(M, kind){
@@ -583,25 +594,42 @@ function rkCardHtml(M, kind){
   var ends = '<div class="rkc-end ' + A.end + '">In the story, ' + esc(A.endTxt) + '.</div>';
   var push = p ? '<div class="rkc-push"><span>The news that pushed us closest</span><b>' + esc(p.e.title) + '</b><em>' + esc(rkWhen(p.e)) + '</em></div>' : '';
   if(kind === "og"){
-    return '<div class="rkc rkc-og">' + img + '<div class="rkc-shade"></div>'
-      + '<div class="rkc-in"><div class="rkc-ask">' + esc(RK_ASK) + '</div><div class="rkc-title">' + esc(l.title) + '</div>'
-      + '<div class="rkc-pct">' + esc(rkMatchLine(A)) + '</div>'
-      + rkStepsHtml(A, "rkc") + ends
-      + '<div class="rkc-foot">Where We Are Now · ' + site + '</div></div></div>';
+    return '<div class="rkc ppo"><div class="pp-mast"><span>Where We Are Now</span><span>' + esc(fmtNewsDate(rkToday())) + '</span></div>'
+      + '<div class="ppo-ask">' + esc(RK_ASK) + '</div><div class="ppo-ans">' + esc(l.title) + '</div>'
+      + '<p class="ppo-sub">The closest of ' + A.n + ' stories: <b>' + esc(A.pct) + '</b> of the match.'
+      + (A.steps.length ? ' Like us: <i>' + esc(A.steps.join(", then ")) + '</i>.' : '') + '</p>'
+      + '<p class="pp-end ' + A.end + '">In the story, ' + esc(A.endTxt) + '.</p>'
+      + '<div class="ppo-foot">' + site + '</div></div>';
   }
-  var runners = A.runners.map(function(r){
-    var a = typeof artFor === "function" ? artFor(r.st.id) : null;
-    return '<div class="rkc-run">' + (a && a.sm ? '<img src="' + esc(a.sm) + '" alt="">' : '<span class="rkc-noimg"></span>') + '<b>' + esc(r.st.l.title) + '</b><em>' + rkPct(r.share) + '</em></div>';
+  return rkPosterHtml(A, site);
+}
+/* The post poster reads like a newspaper graphic, not a template: paper,
+   a serif headline, and the one thing only this atlas can show, our moments
+   set against the story's moments, row by row, then what the story did next. */
+function rkShort(t, n){ t = String(t || ""); return t.length > n ? t.slice(0, n - 1).replace(/[\s,;:]+\S*$/, "") + "…" : t; }
+function rkPosterHtml(A, site){
+  var l = A.st.l, p = A.pushed;
+  var head = '<div class="pp-mast"><span>Where We Are Now</span><span>' + esc(fmtNewsDate(rkToday())) + '</span></div>';
+  var rows = A.rows.map(function(x){
+    var isPush = p && x.ours.e.id === p.e.id;
+    return '<div class="pp-row"><div class="pp-us"><span class="pp-d">' + esc(rkWhen(x.ours.e)) + '</span><span class="pp-t">' + esc(rkShort(x.ours.e.title, 72)) + '</span>'
+      + (isPush ? '<span class="pp-push">the news that pushed us closest</span>' : '') + '</div>'
+      + '<div class="pp-k">' + esc(x.word) + '</div>'
+      + '<div class="pp-them"><span class="pp-d">' + esc(fmtYearFull(x.theirs.e.year)) + '</span><span class="pp-t">' + esc(rkShort(x.theirs.e.title, 72)) + '</span></div></div>';
   }).join("");
-  return '<div class="rkc rkc-post">' + img + '<div class="rkc-shade"></div>'
-    + '<div class="rkc-top"><div class="rkc-ask">' + esc(RK_ASK) + '</div><div class="rkc-date">' + esc(fmtNewsDate(rkToday())) + '</div></div>'
-    + '<div class="rkc-main"><div class="rkc-lbl">The closest match, of ' + A.n + ' stories:</div>'
-    + '<div class="rkc-title">' + esc(l.title) + '</div>'
-    + '<div class="rkc-pct">' + esc(rkMatchLine(A)) + '</div>'
-    + rkStepsHtml(A, "rkc") + push + ends
-    + '<div class="rkc-rh">Close behind</div><div class="rkc-runs">' + runners + '</div>'
-    + '<div class="rkc-about">' + esc(rkAbout(A.n)) + '</div>'
-    + '<div class="rkc-foot">' + site + '</div></div></div>';
+  var nx = A.next ? '<div class="pp-row pp-next"><div class="pp-us"><span class="pp-q">?</span><span class="pp-d">next for us?</span></div><div class="pp-k">then</div>'
+      + '<div class="pp-them"><span class="pp-d">' + esc(fmtYearFull(A.next.e.year)) + '</span><span class="pp-t">' + esc(rkShort(A.next.e.title, 72)) + '</span></div></div>' : '';
+  var runners = A.runners.map(function(r){
+    return '<li><span class="pp-n">' + r.rank + '</span><span class="pp-rt">' + esc(r.st.l.title) + '</span><span class="pp-rp">' + rkPct(r.share) + '</span></li>';
+  }).join("");
+  return '<div class="rkc pp">' + head
+    + '<h1 class="pp-ask">' + esc(RK_ASK) + '</h1>'
+    + '<div class="pp-ans">' + esc(l.title) + '</div>'
+    + '<p class="pp-sub">The closest of ' + A.n + ' stories: <b>' + esc(A.pct) + '</b> of the match' + (A.times ? ', ' + esc(A.times.replace(" an average story’s share", " the average story")) : '') + '.</p>'
+    + (A.rows.length ? '<div class="pp-table"><div class="pp-row pp-hd"><div>Our world</div><div></div><div>' + esc(l.title) + '</div></div>' + rows + nx + '</div>' : '')
+    + '<p class="pp-end ' + A.end + '">In the story, ' + esc(A.endTxt) + '.</p>'
+    + '<div class="pp-foot"><div class="pp-runs"><div class="pp-rh">Next closest</div><ol>' + runners + '</ol></div>'
+    + '<div class="pp-about"><p>' + esc(rkAbout(A.n)) + '</p><b>' + esc(site) + '</b></div></div></div>';
 }
 function rkShowCard(kind){
   var M = pickerModel(), id = "rk-card-host", host = document.getElementById(id);

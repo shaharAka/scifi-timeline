@@ -939,16 +939,16 @@ attempt("ranking", () => {
   /* the poster cards and the race: the leader named, a line per story drawn */
   const post = String(t.rankCard("post")), og = String(t.rankCard("og"));
   const title = top.st.l.title.replace(/&/g, "&amp;").replace(/'/g, "&#39;");
-  check(post.includes(title) && post.includes("rkc-runs") && post.includes("In the story,"), "the post card does not show the leader, its ending and the runners-up");
+  check(post.includes(title) && post.includes("pp-runs") && post.includes("In the story,"), "the post card does not show the leader, its ending and the runners-up");
   check(!/of the fit/.test(post), "the post card uses the ranking's jargon; it is for people scrolling past");
-  check(og.includes(title) && og.includes("rkc-og"), "the link-preview card does not show the leader");
+  check(og.includes(title) && og.includes("ppo"), "the link-preview card does not show the leader");
   /* a reader from a post lands on the same answer the post gave */
   const answer = String(t.answerHtml());
-  check(today.indexOf('<section class="ans">') === 0, "Today does not open on the answer");
+  check(today.indexOf('<section class="ans ed">') === 0, "Today does not open on the answer");
   check(answer.includes(title) && post.includes(title), "the landing answer and the poster name different stories");
-  check(/The news that pushed us closest/.test(post) && /The news that pushed us closest/.test(answer), "the news that pushed us is missing from the poster or the landing page");
+  check(/the news that pushed us closest/i.test(post) && /the news that pushed us closest/i.test(answer), "the news that pushed us is missing from the poster or the landing page");
   check(/lines up real events against/.test(post) && /lines up real events against/.test(answer), "the one-line explanation of the atlas is missing");
-  check(/% match/.test(post) && /% match/.test(answer), "the match percentage is missing");
+  check(/%<\/b> of the match/.test(post) && /%<\/b> of the match/.test(answer), "the match percentage is missing");
   const race = String(t.rankRace({ w:600, h:260 }));
   check((race.match(/<path /g) || []).length >= 3, "the race draws fewer than three lines");
   soft(`ranking: ${top.st.l.title} leads with ${(top.share * 100).toFixed(0)}% over ${R.threads.map((th) => th.spec.short).join(" / ")}; ${hist.filter((h, i) => i && hist[i - 1].top.st !== h.top.st).length} lead changes over the last ${hist.length} moments`);
