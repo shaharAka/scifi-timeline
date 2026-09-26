@@ -30,7 +30,7 @@
 
 var RK_TLEN = 5;        /* how many of a thread's recent steps are matched */
 var RK_DECAY = 0.8;     /* each older step of a thread counts this much of the one after it */
-var RK_SIT = 0.25;      /* weight of situation likeness (facets) against chain order */
+var RK_SIT = 0.15;      /* weight of situation likeness (facets) against chain order */
 var RK_TEMP = 0.06;     /* softmax temperature: lower spreads the leader further ahead */
 var RK_REPLAY = 10;     /* how many of our past moments the leader is replayed over */
 var RK_HALF = 3;        /* a thread that has not moved for this many years counts half */
@@ -42,6 +42,17 @@ var RK_TAIL = -0.35;    /* each of a thread's steps after the story's last match
    story has it); RK_COMMON is the floor, so even the commonest step counts a
    little and order still matters. */
 var RK_COMMON = 0.2;
+/* The ranking is ONE chain: our last RK_LEN moments, every thread together,
+   in the order they happened. A story's steps count only where they come in
+   the same order as ours (a subsequence: either side may have steps between),
+   so "a war, then the leader killed, then AI" and "AI, then a war" are
+   different roads. Skipping one of our steps is free, because no story walks
+   every thread we do; skipping one of the story's costs a little; our steps
+   after the story's last match cost RK_CHAIN_TAIL, so the present counts. */
+var RK_LEN = 20;            /* our last 20 moments: since the end of the Cold War */
+var RK_CHAIN_DECAY = 0.93;  /* each older step counts this much of the next: the present counts more, the past still counts */
+var RK_CHAIN_STORYGAP = 0;  /* a story may take any number of steps between ours */
+var RK_CHAIN_TAIL = -0.05;  /* a little for each of our steps after the story's last match */
 var RK_CACHE = { key:null, out:{} };
 
 var RK_THREADS = [
@@ -125,14 +136,19 @@ function rkRoad(M){
   return out;
 }
 
-function rkFit(q, w, b){
+function rkFit(q, w, b, o){
+  o = o || {};
+  var OG = o.ourGap != null ? o.ourGap : CH_GAP, SG = o.storyGap != null ? o.storyGap : CH_GAP * 0.5, TL = o.tail != null ? o.tail : RK_TAIL;
   var n = q.length, m = b.length, i, j, H = [];
   for(i = 0; i <= n; i++){ H.push(new Array(m + 1)); for(j = 0; j <= m; j++) H[i][j] = 0; }
   for(i = 1; i <= n; i++){
     for(j = 1; j <= m; j++){
-      var d = H[i - 1][j - 1] + w[i - 1] * rkScore(q[i - 1], b[j - 1]);
-      var u = H[i - 1][j] + w[i - 1] * CH_GAP;       /* one of our steps the story lacks */
-      var l = H[i][j - 1] + w[i - 1] * CH_GAP * 0.5; /* a step of the story's we skipped: cheaper, stories compress and stretch */
+      var sc0 = rkScore(q[i - 1], b[j - 1]);
+      /* noMismatch: a chain pairs only the same kind (a near miss by sub-kind
+         still counts, partly); two different kinds are skipped, never paired */
+      var d = (o.noMismatch && rkBin(q[i - 1]) !== rkBin(b[j - 1])) ? -Infinity : H[i - 1][j - 1] + w[i - 1] * sc0;
+      var u = H[i - 1][j] + w[i - 1] * OG;   /* one of our steps the story lacks */
+      var l = H[i][j - 1] + w[i - 1] * SG;   /* a step of the story's we skipped: stories compress and stretch */
       H[i][j] = Math.max(0, d, u, l);
     }
   }
@@ -140,11 +156,11 @@ function rkFit(q, w, b){
      our steps after that match costs RK_TAIL, so a story that has nothing like
      where we are now cannot lead on how it matched our past */
   var best = 0, bi = 0, bj = 0, tail = [0];
-  for(i = n; i >= 1; i--) tail[n - i + 1] = tail[n - i] + w[i - 1] * RK_TAIL;
+  for(i = n; i >= 1; i--) tail[n - i + 1] = tail[n - i] + w[i - 1] * TL;
   for(i = 1; i <= n; i++){
     for(j = 1; j <= m; j++){
       var sc = rkScore(q[i - 1], b[j - 1]);
-      if(sc <= 0) continue;
+      if(sc <= 0 || (o.noMismatch && rkBin(q[i - 1]) !== rkBin(b[j - 1]))) continue;
       var v = H[i - 1][j - 1] + w[i - 1] * sc + tail[n - i];
       if(v > best){ best = v; bi = i; bj = j; }
     }
@@ -154,8 +170,9 @@ function rkFit(q, w, b){
   if(bi){ pairs.push([i - 1, j - 1]); i--; j--; }
   while(i > 0 && j > 0 && H[i][j] > 0){
     var here = H[i][j];
-    if(Math.abs(here - (H[i - 1][j - 1] + w[i - 1] * rkScore(q[i - 1], b[j - 1]))) < 1e-9){ pairs.push([i - 1, j - 1]); i--; j--; }
-    else if(Math.abs(here - (H[i - 1][j] + w[i - 1] * CH_GAP)) < 1e-9) i--;
+    var diag = (o.noMismatch && rkBin(q[i - 1]) !== rkBin(b[j - 1])) ? -Infinity : H[i - 1][j - 1] + w[i - 1] * rkScore(q[i - 1], b[j - 1]);
+    if(Math.abs(here - diag) < 1e-9){ pairs.push([i - 1, j - 1]); i--; j--; }
+    else if(Math.abs(here - (H[i - 1][j] + w[i - 1] * OG)) < 1e-9) i--;
     else j--;
   }
   pairs.reverse();
@@ -207,17 +224,23 @@ function rkRank(M, upto, add){
     var lastY = qr.length ? qr[qr.length - 1].e.year : -Infinity;
     return { id:t.id, spec:t, qr:qr, q:q, w:w, weight:qr.length ? Math.pow(0.5, Math.max(0, nowY - lastY) / RK_HALF) : 0, rows:[] };
   }).filter(function(t){ return t.q.length; });
-  var tw = 0; threads.forEach(function(t){ tw += t.weight; });
+  /* the one chain: every thread together, repeats of a step collapsed */
+  var cqr = [];
+  mine.forEach(function(r){ if(cqr.length && cqr[cqr.length - 1].tok === r.tok) cqr[cqr.length - 1] = r; else cqr.push(r); });
+  cqr = cqr.slice(-RK_LEN);
+  var cq = cqr.map(function(r){ return r.tok; });
+  var cw = cq.map(function(tok, i){ return Math.pow(RK_CHAIN_DECAY, cq.length - 1 - i) * (RK_COMMON + (1 - RK_COMMON) * rkSpecific(M, tok)); });
+  var chain = { qr:cqr, q:cq, w:cw };
   var rows = M.strands.map(function(st){
-    var per = {}, fit = 0, at = -1;
+    var toks = rkToks(st), per = {};
+    var f = rkFit(cq, cw, toks, { ourGap:0, storyGap:RK_CHAIN_STORYGAP, tail:RK_CHAIN_TAIL, noMismatch:true }), sit = rkSituation(cqr.slice(-3), st);
+    /* the threads, for the page's thread-by-thread view only */
     threads.forEach(function(t){
-      var f = rkFit(t.q, t.w, rkToks(st)), sit = rkSituation(t.qr, st);
-      var x = { st:st, thread:t, fit:(1 - RK_SIT) * f.norm + RK_SIT * sit, chain:f.norm, sit:sit, pairs:f.pairs, at:f.at };
+      var tf = rkFit(t.q, t.w, toks), tsit = rkSituation(t.qr, st);
+      var x = { st:st, thread:t, fit:(1 - RK_SIT) * tf.norm + RK_SIT * tsit, chain:tf.norm, sit:tsit, pairs:tf.pairs, at:tf.at };
       per[t.id] = x; t.rows.push(x);
-      fit += t.weight * x.fit;
-      if(f.at > at) at = f.at;
     });
-    return { st:st, fit:tw ? fit / tw : 0, per:per, at:at };
+    return { st:st, fit:(1 - RK_SIT) * f.norm + RK_SIT * sit, chain:f.norm, sit:sit, pairs:f.pairs, at:f.at, per:per };
   });
   rkSoftmax(rows, "fit", "share");
   rows.sort(function(a, b){ return b.fit - a.fit || a.st.l.title.localeCompare(b.st.l.title); });
@@ -226,19 +249,18 @@ function rkRank(M, upto, add){
     rkSoftmax(t.rows, "fit", "share");
     t.rows.sort(function(a, b){ return b.fit - a.fit || a.st.l.title.localeCompare(b.st.l.title); });
   });
-  var out = { rows:rows, threads:threads, road:road, mine:mine, upto:upto, add:add || null, last:mine[mine.length - 1] || null };
+  var out = { rows:rows, threads:threads, chain:chain, road:road, mine:mine, upto:upto, add:add || null, last:mine[mine.length - 1] || null };
   RK_CACHE.out[key] = out;
   return out;
 }
 function rkRankOf(R, id){ var o = null; R.rows.forEach(function(r){ if(r.st.id === id) o = r; }); return o; }
 /* every matched pair of a story, over all threads, as {thread, ours, theirs, same} */
 function rkPairs(R, r){
-  var out = [];
-  R.threads.forEach(function(t){
-    var x = r.per[t.id]; if(!x) return;
-    x.pairs.forEach(function(p){ out.push({ thread:t, ours:t.qr[p[0]], theirs:r.st.seq[p[1]], same:t.q[p[0]] === rkToks(r.st)[p[1]], kin:rkBin(t.q[p[0]]) === r.st.kinds[p[1]] }); });
+  var C = R.chain, toks = rkToks(r.st);
+  return r.pairs.map(function(p){
+    var ours = C.qr[p[0]];
+    return { ours:ours, theirs:r.st.seq[p[1]], j:p[1], thread:rkThreadSpec(ours.thread), same:C.q[p[0]] === toks[p[1]], kin:rkBin(C.q[p[0]]) === r.st.kinds[p[1]] };
   });
-  return out;
 }
 
 /* the leader after each of our last moments */
@@ -295,20 +317,15 @@ function rkMove(r, prev){
 
 /* the leader explained: our steps beside its steps, thread by thread */
 function rkWhyHtml(R, r){
-  var html = '';
-  R.threads.forEach(function(t){
-    var x = r.per[t.id]; if(!x || !x.pairs.length) return;
-    var pos = t.rows.indexOf(x) + 1;
-    html += '<div class="rk-th"><span class="rk-thl">' + esc(t.spec.label) + '</span><span class="rk-thn">#' + pos + ' of ' + t.rows.length + ' on this thread</span></div><ol class="rk-pairs">';
-    x.pairs.forEach(function(p){
-      var ours = t.qr[p[0]], theirs = r.st.seq[p[1]], ttok = rkToks(r.st)[p[1]], same = ours.tok === ttok;
-      html += '<li class="' + (same ? 'same' : 'near') + '"><div class="rk-us"><span class="pk-yr">' + esc(rkWhen(ours.e)) + '</span><span>' + esc(ours.e.title) + '</span></div>'
-        + '<div class="rk-k"><button class="pk-kindtag btn" data-kind="' + esc(theirs.bin) + '">' + esc(rkLabel(ours.tok)) + (same ? '' : ' ≈ ' + esc(ours.kind === theirs.bin ? (rkSubLabel(theirs.bin, theirs.e.sub) || mpLabel(theirs.bin)) : rkLabel(ttok))) + '</button></div>'
-        + '<div class="rk-them"><span class="pk-yr">' + esc(fmtYearFull(theirs.e.year)) + '</span><span>' + esc(theirs.e.title) + '</span></div></li>';
-    });
-    html += '</ol>';
-  });
-  return html || '<p class="mp-none">It shares no step with our recent road.</p>';
+  /* the matched chain, in order: each of our moments beside the story's */
+  var ps = rkPairs(R, r);
+  if(!ps.length) return '<p class="mp-none">It shares no step with our recent road.</p>';
+  return '<p class="pk-small">In order, top to bottom, for us and for the story.</p><ol class="rk-pairs">' + ps.map(function(p){
+    var ours = p.ours, theirs = p.theirs, ttok = rkToks(r.st)[p.j], same = p.same;
+    return '<li class="' + (same ? 'same' : 'near') + '"><div class="rk-us"><span class="pk-yr">' + esc(rkWhen(ours.e)) + '</span><span>' + esc(ours.e.title) + '</span></div>'
+      + '<div class="rk-k"><button class="pk-kindtag btn" data-kind="' + esc(theirs.bin) + '">' + esc(rkLabel(ours.tok)) + (same ? '' : ' ≈ ' + esc(ours.kind === theirs.bin ? (rkSubLabel(theirs.bin, theirs.e.sub) || mpLabel(theirs.bin)) : rkLabel(ttok))) + '</button></div>'
+      + '<div class="rk-them"><span class="pk-yr">' + esc(fmtYearFull(theirs.e.year)) + '</span><span>' + esc(theirs.e.title) + '</span></div></li>';
+  }).join("") + '</ol>';
 }
 function rkNextHtml(r, n){
   var rest = r.at >= 0 ? r.st.seq.slice(r.at + 1, r.at + 1 + (n || 3)) : [];
@@ -326,7 +343,7 @@ function rkNextHtml(r, n){
 /* a short sentence for a story's fit, for Today and for sharing */
 function rkLine(R, r){
   var ps = rkPairs(R, r), same = ps.filter(function(p){ return p.same; }).length, th = {};
-  ps.forEach(function(p){ th[p.thread.id] = p.thread.spec.short; });
+  ps.forEach(function(p){ if(p.thread) th[p.thread.id] = p.thread.short; });
   var names = Object.keys(th).map(function(k){ return th[k]; });
   if(!ps.length) return "walks a different road from ours";
   return same + (same === 1 ? ' of our recent moments' : ' of our recent moments') + ' in the same order' + (ps.length > same ? ' and ' + (ps.length - same) + ' nearly alike' : '')
@@ -527,17 +544,16 @@ function rkPlain(tok){ var w = RK_PLAIN[tok] || RK_PLAIN[rkBin(tok)] || rkLabel(
    the story shares the most exact steps with us; `ordered` says whether that
    gave at least two, which is what makes "same order" true. */
 function rkPlainSteps(R, r, n){
-  var best = null;
-  R.threads.forEach(function(t){
-    var x = r.per[t.id]; if(!x) return;
-    var ex = x.pairs.filter(function(p){ return t.q[p[0]] === rkToks(r.st)[p[1]]; });
-    if(!best || ex.length > best.ex.length || (ex.length === best.ex.length && x.fit > best.fit)) best = { t:t, ex:ex, fit:x.fit };
+  /* the exact steps of the matched chain, in order */
+  var words = [], rows = [], seen = {};
+  rkPairs(R, r).forEach(function(p){
+    if(!p.same) return;
+    var w = rkPlain(p.ours.tok);
+    if(!seen[w]){ seen[w] = true; words.push(w); rows.push({ word:w, ours:p.ours, theirs:p.theirs, j:p.j }); }
   });
-  if(!best || !best.ex.length) return { words:[], ordered:false };
-  var words = [], seen = {};
-  best.ex.forEach(function(p){ var w = rkPlain(best.t.q[p[0]]); if(!seen[w]){ seen[w] = true; words.push(w); } });
-  words = words.slice(-(n || 3));
-  return { words:words, ordered:words.length >= 2, thread:best.t };
+  words = words.slice(-(n || 3)); rows = rows.slice(-(n || 3));
+  var last = rows[rows.length - 1], next = last ? r.st.seq[last.j + 1] : null;
+  return { words:words, rows:rows, next:next, ordered:words.length >= 2 };
 }
 /* --- the answer ----------------------------------------------------------------------
    One reading, told the same way on the poster and on the page a reader lands
@@ -566,7 +582,7 @@ function rkAnswer(M){
      many, which is what makes the lead worth believing or not */
   var ev = [], seenTok = {};
   rkPairs(R, top).forEach(function(p){ if(p.same && !seenTok[p.ours.tok]){ seenTok[p.ours.tok] = true; ev.push({ tok:p.ours.tok, word:rkPlain(p.ours.tok), ours:p.ours, theirs:p.theirs, count:rkStoriesWith(M, p.ours.tok) }); } });
-  ev.sort(function(a, b){ return a.count - b.count; });
+  /* kept in the chain's order: the order is the evidence */
   var shared = ev.length, rivalMax = 0, rivals = 0;
   R.rows.forEach(function(r){
     if(r === top) return;
@@ -587,19 +603,22 @@ function rkMatchLine(A){ return A.pct + " match · #1 of " + A.n + " stories"; }
 function rkEvidenceLine(A){
   var t = A.st.l.title, n = A.shared;
   if(!n) return "";
-  var head = (n === 1 ? "One of our recent moments happens" : n + " of our recent moments happen") + " in " + t + ".";
-  var tail = A.rivals ? " " + A.rivals + " other " + (A.rivals === 1 ? "story matches" : "stories match") + " as many."
-           : " No other story has more than " + A.rivalMax + ".";
+  var since = A.R.chain && A.R.chain.qr.length ? A.R.chain.qr[0].e.year : null;
+  var head = (since ? "Since " + since + ", " : "") + (n === 1 ? "one of our moments happens in " + t + "."
+           : n + " of our moments happen in " + t + ", in the same order.");
+  head = head.charAt(0).toUpperCase() + head.slice(1);
+  var tail = A.rivals ? " " + A.rivals + " other " + (A.rivals === 1 ? "story matches" : "stories match") + " as many in order."
+           : " No other story has more than " + A.rivalMax + " in order.";
   return head + tail;
 }
 function rkEvidenceHtml(A, cls){
   if(!A.evidence.length) return "";
-  return '<div class="' + cls + '-same">' + esc(rkEvidenceLine(A)) + '</div><ul class="' + cls + '-ev">'
+  return '<div class="' + cls + '-same">' + esc(rkEvidenceLine(A)) + '</div><ol class="' + cls + '-ev">'
     + A.evidence.map(function(x){
       var w = x.word.charAt(0).toUpperCase() + x.word.slice(1);
-      return '<li><b>' + esc(w) + '</b><span>' + esc(rkWhen(x.ours.e)) + ' for us \u00b7 ' + esc(fmtYearFull(x.theirs.e.year)) + ' in the story</span>'
+      return '<li><b><i>' + (A.evidence.indexOf(x) + 1) + '</i>' + esc(w) + '</b><span>' + esc(rkWhen(x.ours.e)) + ' for us \u00b7 ' + esc(fmtYearFull(x.theirs.e.year)) + ' in the story</span>'
         + '<em>' + (x.count <= 1 ? 'the only story with it' : 'in ' + x.count + ' of ' + A.n + ' stories') + '</em></li>';
-    }).join("") + '</ul>';
+    }).join("") + '</ol>';
 }
 function rkStepsHtml(A, cls){
   if(!A.steps.length) return "";

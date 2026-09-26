@@ -420,6 +420,16 @@ Four rules follow from that, and they are the owner's:
   stories spread out instead of tying. With that many stories a leader holds
   a few per cent, so the leader is also read as a multiple of an average
   story's share.
+- **The ranking matches one chain, in order.** Our last `RK_LEN` (20) moments,
+  every thread together, are aligned against each story's chain as a
+  subsequence: a step counts only where it comes in the same order for us and
+  in the story, either side may have steps in between, and two different kinds
+  are never paired. (An earlier version added up threads matched separately,
+  which let steps count out of order; the test suite now checks every matched
+  chain runs forward on both sides.) With that rule the atlas is honest about
+  how rare a real match is: since 1991 one story repeats 4 of our steps in
+  order, none repeats 3, and most share one or none. The threads remain on the
+  ranking page as a view, not as the score.
 - **A rare shared step is evidence; a common one is not.** Each of our steps
   is weighted by how few stories pass through it (`rkSpecific`, log-scaled,
   with a floor `RK_COMMON` so order still counts): "a regional war" happens in

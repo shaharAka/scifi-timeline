@@ -951,7 +951,15 @@ attempt("ranking", () => {
   check(/% match/.test(post) && /% match/.test(answer), "the match percentage is missing");
   /* the evidence is every step shared exactly, with how many stories have it,
      and a line on whether any rival matches as many */
-  check(/of our recent moment/.test(post) && /(No other story has more than|other stor(y|ies) match)/.test(post), "the poster does not say how strong the match is");
+  check(/of our moments? happen/.test(post) && /(No other story has more than|other stor(y|ies) match)/.test(post), "the poster does not say how strong the match is");
+  /* a chain, not a bag of steps: every pair the ranking matched comes in the
+     same order for us and in the story */
+  R.rows.slice(0, 20).forEach((r) => {
+    for (let k = 1; k < r.pairs.length; k++) {
+      const a = r.pairs[k - 1], b = r.pairs[k];
+      check(b[0] > a[0] && b[1] > a[1], `${r.st.id}: matched steps are not in the same order for us and in the story`);
+    }
+  });
   check(/in \d+ of \d+ stories|the only story with it/.test(post), "the poster does not say how rare each shared step is");
   const race = String(t.rankRace({ w:600, h:260 }));
   check((race.match(/<path /g) || []).length >= 3, "the race draws fewer than three lines");
