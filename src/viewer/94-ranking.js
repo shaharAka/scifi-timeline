@@ -835,7 +835,7 @@ function rkAfterHead(E, n){
    stories that walked most of them, each with a dot for every step it shares */
 function rkChainHtml(M, n){
   var C = rkChainOf(M, n);
-  var rows = C.rows.filter(function(r){ return r.pairs.length >= 2; }).slice(0, 5);
+  var rows = C.rows.filter(function(r){ return r.pairs.length >= 2; }).slice(0, 6);
   if(C.steps.length < 3 || !rows.length) return "";
   var html = '<div class="ach"><h3 class="aft-rh">Our chain: ' + C.steps.length + ' steps, in order</h3><ol class="ach-steps">'
     + C.steps.map(function(s2, i){ var w = rkPlain(s2.tok); return '<li><i>' + (i + 1) + '</i><b>' + esc(w.charAt(0).toUpperCase() + w.slice(1)) + '</b><span>' + esc(rkMonthYear(s2.e)) + ' \u00b7 ' + esc(s2.e.title) + '</span></li>'; }).join("")
@@ -845,9 +845,9 @@ function rkChainHtml(M, n){
     var nx = r.next ? rkPlain(rkTok(r.next.bin, r.next.e.sub)) : null;
     html += '<li data-world="' + esc(r.st.id) + '">' + pkThumb(r.st.id, "ach-img") + '<div class="ach-b"><b>' + esc(r.st.l.title) + '</b>'
       + '<span class="ach-dots">' + C.steps.map(function(_, i){ return '<i class="' + (have[i] || "no") + '">' + (i + 1) + '</i>'; }).join("") + '</span>'
-      + '<span class="ach-t">' + r.pairs.length + ' of ' + C.steps.length + ' steps \u00b7 then: ' + esc(r.next ? r.next.e.title : "the story ends") + ' \u00b7 <em class="' + r.st.ending.valence + '">' + esc(r.st.ending.label.toLowerCase()) + '</em></span></div></li>';
+      + '<span class="ach-t">' + r.pairs.length + ' of ' + C.steps.length + ' steps' + (r.reaches ? '' : ', stops at step ' + (r.stopAt + 1)) + ' \u00b7 then: ' + esc(r.next ? r.next.e.title : "the story ends") + ' \u00b7 <em class="' + r.st.ending.valence + '">' + esc(r.st.ending.label.toLowerCase()) + '</em></span></div></li>';
   });
-  return html + '</ol><p class="aft-e">\u25cf the same step \u00a0 \u25cb a similar one \u00a0\u00b7\u00a0 ' + C.n + ' stories reached the last step.</p></div>';
+  return html + '</ol><p class="aft-e">\u25cf the same step \u00a0 \u25cb a similar one \u00a0\u00b7\u00a0 ' + esc(rkChainCounts(C)) + '</p></div>';
 }
 
 /* the landing page: the newest headline, its chain, and what came next */
@@ -952,19 +952,29 @@ function rkChainOf(M, n){
     }
     return out.reverse();
   }
-  var rows = [];
+  /* each story: the most of our chain it walks in order, wherever it stops.
+     A chain that reaches today's step is preferred at equal length; one that
+     stops short says where its road went instead. */
+  var rows = [], reach = 0, dist = {};
   M.strands.forEach(function(st){
-    var toks = rkToks(st), story = st.kinds.map(function(k, j){ return { bin:k, tok:toks[j] }; }), best = null;
-    story.forEach(function(x, k){
-      if(x.bin !== last.bin) return;
-      var p = lcs(pre, story.slice(0, k)).concat([[steps.length - 1, k]]);
-      var ex = p.filter(function(q){ return steps[q[0]].tok === story[q[1]].tok; }).length;
-      if(!best || p.length > best.pairs.length || (p.length === best.pairs.length && ex > best.exact)) best = { st:st, pairs:p, exact:ex, k:k };
-    });
-    if(best){ best.next = st.seq[best.k + 1] || null; rows.push(best); }
+    var toks = rkToks(st), story = st.kinds.map(function(k, j){ return { bin:k, tok:toks[j] }; });
+    var p = lcs(steps, story);
+    if(st.kinds.indexOf(last.bin) >= 0) reach++;
+    dist[p.length] = (dist[p.length] || 0) + 1;
+    if(!p.length) return;
+    var ends = p[p.length - 1][0] === steps.length - 1;
+    var ex = p.filter(function(q){ return steps[q[0]].tok === story[q[1]].tok; }).length;
+    var k = p[p.length - 1][1];
+    rows.push({ st:st, pairs:p, exact:ex, k:k, reaches:ends, stopAt:p[p.length - 1][0], next:st.seq[k + 1] || null });
   });
-  rows.sort(function(a, b){ return b.pairs.length - a.pairs.length || b.exact - a.exact || a.st.l.title.localeCompare(b.st.l.title); });
-  return { steps:steps, rows:rows, n:rows.length, N:M.strands.length };
+  rows.sort(function(a, b){ return b.pairs.length - a.pairs.length || (b.reaches - a.reaches) || b.exact - a.exact || a.st.l.title.localeCompare(b.st.l.title); });
+  return { steps:steps, rows:rows, n:reach, N:M.strands.length, dist:dist };
+}
+/* "Of 143 stories: 1 walked 5 of our steps, 1 walked 4, 12 walked 3." */
+function rkChainCounts(C){
+  var ks = Object.keys(C.dist).map(Number).filter(function(k){ return k >= 3; }).sort(function(a, b){ return b - a; });
+  if(!ks.length) return "Of " + C.N + " stories, none walked more than two of our steps in order.";
+  return "Of " + C.N + " stories: " + ks.map(function(k, i){ return C.dist[k] + " walked " + k + (i ? "" : " of our steps"); }).join(", ") + ", in order.";
 }
 function rkMonthYear(e){ var d = String(e.date || e.year); return /^\d{4}-\d{2}/.test(d) ? RK_MON[parseInt(d.slice(5, 7), 10) - 1] + " " + d.slice(0, 4) : String(e.year); }
 
@@ -973,7 +983,7 @@ function rkMonthYear(e){ var d = String(e.date || e.year); return /^\d{4}-\d{2}/
 function rkChainPosterHtml(M, site){
   var n = rkAfterNews(M); if(!n) return "";
   var C = rkChainOf(M, n);
-  var cols = C.rows.filter(function(r){ return r.pairs.length >= 2; }).slice(0, 4);
+  var cols = C.rows.filter(function(r){ return r.pairs.length >= 2; }).slice(0, 5);
   if(C.steps.length < 3 || !cols.length) return rkAfterPosterHtml(M, site);
   var steps = C.steps.slice(-8), off = C.steps.length - steps.length;
   var labelW = 400, colW = Math.floor((960 - labelW) / cols.length), rowH = Math.min(84, Math.floor(620 / steps.length)), H = steps.length * rowH + 10;
@@ -989,6 +999,7 @@ function rkChainPosterHtml(M, site){
     var x = labelW + c * colW + colW / 2, pts = [], col = hue[r.st.ending.valence];
     r.pairs.forEach(function(q){ var i = q[0] - off; if(i >= 0) pts.push({ y:i * rowH + 8 + rowH / 2 - 4, exact:C.steps[q[0]].tok === rkToks(r.st)[q[1]], year:r.st.seq[q[1]].e.year }); });
     for(var k = 1; k < pts.length; k++) svg += '<line x1="' + x + '" y1="' + pts[k - 1].y + '" x2="' + x + '" y2="' + pts[k].y + '" stroke="' + col + '" stroke-width="5" stroke-linecap="round"/>';
+    if(!r.reaches && pts.length) svg += '<line x1="' + x + '" y1="' + (pts[pts.length - 1].y + 18) + '" x2="' + x + '" y2="' + (H - 6) + '" stroke="' + col + '" stroke-width="3" stroke-dasharray="3 9" stroke-linecap="round" opacity=".6"/>';
     pts.forEach(function(p){
       svg += p.exact ? '<circle cx="' + x + '" cy="' + p.y + '" r="15" fill="' + col + '"/>'
                      : '<circle cx="' + x + '" cy="' + p.y + '" r="13" fill="#f8fbfd" stroke="' + col + '" stroke-width="5"/>';
@@ -999,7 +1010,8 @@ function rkChainPosterHtml(M, site){
   var heads = cols.map(function(r){
     var a = typeof artFor === "function" ? artFor(r.st.id) : null;
     return '<div class="pc-head ' + r.st.ending.valence + '" style="width:' + colW + 'px">' + (a && a.sm ? '<img src="' + esc(a.sm) + '" alt="">' : '<span class="pc-noimg"></span>')
-      + '<b>' + esc(r.st.l.title.split(":")[0]) + '</b><em>' + r.pairs.length + ' of ' + C.steps.length + ' steps</em></div>';
+      + '<b>' + esc(r.st.l.title.split(":")[0]) + '</b><em>' + r.pairs.length + ' of ' + C.steps.length + ' steps</em>'
+      + (r.reaches ? '' : '<i class="pc-short">stops at step ' + (r.stopAt + 1) + '</i>') + '</div>';
   }).join("");
   var nexts = cols.map(function(r){
     var w = r.next ? rkPlain(rkTok(r.next.bin, r.next.e.sub)) : null;
@@ -1011,6 +1023,6 @@ function rkChainPosterHtml(M, site){
     + '<div class="pc-n">' + C.steps.length + ' steps, in order. These stories walked the most of it:</div>'
     + '<div class="pc-top"><div class="pc-lbl" style="width:' + labelW + 'px"><span>' + (C.steps.length > steps.length ? 'last ' + steps.length + ' of ' + C.steps.length + ' steps' : 'our steps') + '</span></div>' + heads + '</div>'
     + svg
-    + '<div class="pc-top"><div class="pc-lbl" style="width:' + labelW + 'px"><span>' + esc(C.n + " stories reached the last step; " + cols.length + " walked the most of the way") + '</span></div>' + nexts + '</div>'
+    + '<div class="pc-top"><div class="pc-lbl" style="width:' + labelW + 'px"><span>' + esc(rkChainCounts(C)) + '</span></div>' + nexts + '</div>'
     + '<div class="pf-foot"><span>● the same step   ○ a similar one</span><b>' + esc(site) + '</b></div></div>';
 }
