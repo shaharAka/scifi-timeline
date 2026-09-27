@@ -331,6 +331,8 @@ def load_news(lineage_ids):
                 item["sub"] = it["sub"]
         if it.get("id"):
             item["id"] = str(it["id"])
+        if it.get("storyline"):
+            item["storyline"] = str(it["storyline"])
         out.append(item)
     out.sort(key=lambda x: x["date"], reverse=True)
     return out

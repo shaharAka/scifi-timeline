@@ -705,7 +705,8 @@ function rkAnswerHtml(M){
 
 function rkCardHtml(M, kind){
   var site0 = "shaharaka.github.io/scifi-timeline";
-  if(kind === "post") return rkAfterPosterHtml(M, site0);
+  if(kind === "post") return rkChainPosterHtml(M, site0);
+  if(kind === "post-next") return rkAfterPosterHtml(M, site0);
   if(kind === "og") return rkAfterOgHtml(M, site0);
   if(kind === "rank") kind = "post-light";
   var A = rkAnswer(M), st = A.st, l = st.l, art = typeof artFor === "function" ? artFor(l.id) : null, p = A.pushed;
@@ -830,14 +831,34 @@ function rkAfterHead(E, n){
     + (E.level === "kind" && E.sub ? " (as " + mpLabel(E.bin).toLowerCase() + ", of any kind)" : "") + "." };
 }
 
-/* the landing page: the newest headline, read forward through the stories */
+/* the chain behind the headline, for the landing page: our steps, then the
+   stories that walked most of them, each with a dot for every step it shares */
+function rkChainHtml(M, n){
+  var C = rkChainOf(M, n);
+  var rows = C.rows.filter(function(r){ return r.pairs.length >= 2; }).slice(0, 5);
+  if(C.steps.length < 3 || !rows.length) return "";
+  var html = '<div class="ach"><h3 class="aft-rh">Our chain: ' + C.steps.length + ' steps, in order</h3><ol class="ach-steps">'
+    + C.steps.map(function(s2, i){ var w = rkPlain(s2.tok); return '<li><i>' + (i + 1) + '</i><b>' + esc(w.charAt(0).toUpperCase() + w.slice(1)) + '</b><span>' + esc(rkMonthYear(s2.e)) + ' \u00b7 ' + esc(s2.e.title) + '</span></li>'; }).join("")
+    + '</ol><h3 class="aft-rh">The stories that walked the most of it</h3><ol class="ach-rows">';
+  rows.forEach(function(r){
+    var have = {}; r.pairs.forEach(function(q){ have[q[0]] = C.steps[q[0]].tok === rkToks(r.st)[q[1]] ? "same" : "near"; });
+    var nx = r.next ? rkPlain(rkTok(r.next.bin, r.next.e.sub)) : null;
+    html += '<li data-world="' + esc(r.st.id) + '">' + pkThumb(r.st.id, "ach-img") + '<div class="ach-b"><b>' + esc(r.st.l.title) + '</b>'
+      + '<span class="ach-dots">' + C.steps.map(function(_, i){ return '<i class="' + (have[i] || "no") + '">' + (i + 1) + '</i>'; }).join("") + '</span>'
+      + '<span class="ach-t">' + r.pairs.length + ' of ' + C.steps.length + ' steps \u00b7 then: ' + esc(r.next ? r.next.e.title : "the story ends") + ' \u00b7 <em class="' + r.st.ending.valence + '">' + esc(r.st.ending.label.toLowerCase()) + '</em></span></div></li>';
+  });
+  return html + '</ol><p class="aft-e">\u25cf the same step \u00a0 \u25cb a similar one \u00a0\u00b7\u00a0 ' + C.n + ' stories reached the last step.</p></div>';
+}
+
+/* the landing page: the newest headline, its chain, and what came next */
 function rkAfterHtml(M){
   var n = rkAfterNews(M); if(!n) return "";
   var E = rkAfter(M, n.bin, n.sub), H = rkAfterHead(E, n);
-  var R = rkRank(M), top = R.rows[0];
+  var R = rkRank(M), top = R.rows[0], chain = rkChainHtml(M, n);
   return '<section class="aft">'
     + '<div class="aft-k">In the news · ' + esc(fmtNewsDate(n.date)) + '</div>'
     + '<button class="aft-h" data-news="' + esc(mpNewsKey(n)) + '">' + esc(n.headline) + '</button>'
+    + (chain ? '<div class="aft-card">' + chain + '</div>' : '')
     + '<div class="aft-card"><div class="aft-w">' + esc(H.w) + '</div><p class="aft-n">' + esc(H.line) + '</p>'
     + (E.n ? rkEndsBar(E, "aft") + '<p class="aft-e">' + esc(rkEndsLine(E)) + '</p>' : '')
     + (E.n ? '<h3 class="aft-rh">What came next in each</h3><ol class="aft-list">' + E.rows.map(function(r){ return rkAfterRow(r, "aft", true); }).join("") + '</ol>' : '')
@@ -896,4 +917,100 @@ function rkAfterOgHtml(M, site){
         return '<div class="pfo-p ' + r.st.ending.valence + '">' + (a && a.sm ? '<img src="' + esc(a.sm) + '" alt="">' : '') + '<span>' + esc(r.st.l.title) + '</span></div>';
       }).join("") + '</div>'
     + '<div class="pf-foot"><span>What happened next in each</span><b>' + esc(site) + '</b></div></div>';
+}
+
+/* --- the chain behind a headline ----------------------------------------------------
+   A headline is the latest step of a storyline (real events tagged with the
+   same `storyline`, e.g. the Iran war from the Twelve-Day War to the
+   stalemate). The stories are matched against that chain in order: for each
+   story, the longest run of the chain's steps it repeats in the same order,
+   ending at the headline's step, matched by kind (a ceasefire is peace made);
+   a step whose sub-kind also agrees is an exact match, otherwise a similar
+   one. This is a count of stories, not a claim that we are in one. */
+function rkChainOf(M, n){
+  var steps = [];
+  (M.realEv || []).forEach(function(e){
+    if(!e.bin || !n.storyline || e.storyline !== n.storyline) return;
+    var t = rkTok(e.bin, e.sub);
+    if(steps.length && steps[steps.length - 1].tok === t) steps[steps.length - 1] = { tok:t, bin:e.bin, e:e };
+    else steps.push({ tok:t, bin:e.bin, e:e });
+  });
+  if(!steps.length) steps = [{ tok:rkTok(n.bin, n.sub), bin:n.bin, e:{ title:n.headline, date:n.date, year:parseInt(String(n.date).slice(0, 4), 10) } }];
+  var last = steps[steps.length - 1], pre = steps.slice(0, -1);
+  function lcs(a, b){
+    var N = a.length, K = b.length, H = [], i, j;
+    for(i = 0; i <= N; i++){ H.push(new Array(K + 1)); for(j = 0; j <= K; j++) H[i][j] = 0; }
+    for(i = 1; i <= N; i++) for(j = 1; j <= K; j++){
+      var hit = a[i - 1].bin === b[j - 1].bin ? (a[i - 1].tok === b[j - 1].tok ? 1.001 : 1) : -1;
+      H[i][j] = Math.max(hit > 0 ? H[i - 1][j - 1] + hit : -1, H[i - 1][j], H[i][j - 1]);
+    }
+    var out = []; i = N; j = K;
+    while(i > 0 && j > 0){
+      var hit2 = a[i - 1].bin === b[j - 1].bin ? (a[i - 1].tok === b[j - 1].tok ? 1.001 : 1) : -1;
+      if(hit2 > 0 && Math.abs(H[i][j] - (H[i - 1][j - 1] + hit2)) < 1e-9){ out.push([i - 1, j - 1]); i--; j--; }
+      else if(H[i - 1][j] >= H[i][j - 1]) i--; else j--;
+    }
+    return out.reverse();
+  }
+  var rows = [];
+  M.strands.forEach(function(st){
+    var toks = rkToks(st), story = st.kinds.map(function(k, j){ return { bin:k, tok:toks[j] }; }), best = null;
+    story.forEach(function(x, k){
+      if(x.bin !== last.bin) return;
+      var p = lcs(pre, story.slice(0, k)).concat([[steps.length - 1, k]]);
+      var ex = p.filter(function(q){ return steps[q[0]].tok === story[q[1]].tok; }).length;
+      if(!best || p.length > best.pairs.length || (p.length === best.pairs.length && ex > best.exact)) best = { st:st, pairs:p, exact:ex, k:k };
+    });
+    if(best){ best.next = st.seq[best.k + 1] || null; rows.push(best); }
+  });
+  rows.sort(function(a, b){ return b.pairs.length - a.pairs.length || b.exact - a.exact || a.st.l.title.localeCompare(b.st.l.title); });
+  return { steps:steps, rows:rows, n:rows.length, N:M.strands.length };
+}
+function rkMonthYear(e){ var d = String(e.date || e.year); return /^\d{4}-\d{2}/.test(d) ? RK_MON[parseInt(d.slice(5, 7), 10) - 1] + " " + d.slice(0, 4) : String(e.year); }
+
+/* the chain poster: our chain down the left, the stories that walked most of
+   it across the top, a dot where each has the step, in order */
+function rkChainPosterHtml(M, site){
+  var n = rkAfterNews(M); if(!n) return "";
+  var C = rkChainOf(M, n);
+  var cols = C.rows.filter(function(r){ return r.pairs.length >= 2; }).slice(0, 4);
+  if(C.steps.length < 3 || !cols.length) return rkAfterPosterHtml(M, site);
+  var steps = C.steps.slice(-8), off = C.steps.length - steps.length;
+  var labelW = 400, colW = Math.floor((960 - labelW) / cols.length), rowH = Math.min(84, Math.floor(620 / steps.length)), H = steps.length * rowH + 10;
+  var svg = '<svg class="pc-grid" viewBox="0 0 960 ' + H + '" width="960" height="' + H + '" aria-hidden="true">';
+  steps.forEach(function(s, i){
+    var y = i * rowH + 8, w = rkPlain(s.tok); w = w.charAt(0).toUpperCase() + w.slice(1);
+    if(i % 2 === 0) svg += '<rect x="0" y="' + (y - 4) + '" width="960" height="' + rowH + '" rx="10" fill="#e4eaf1" opacity=".55"/>';
+    svg += '<text x="14" y="' + (y + 28) + '" font-size="25" font-weight="750" fill="#101c28">' + esc(w) + '</text>'
+      + '<text x="14" y="' + (y + 50) + '" font-size="17" fill="#74879a">' + esc(rkMonthYear(s.e)) + ' · ' + esc(rkShortTitle(s.e.title, 38)) + '</text>';
+  });
+  var hue = { optimistic:"#1f7a55", pessimistic:"#a03a34", unknown:"#74879a" };
+  cols.forEach(function(r, c){
+    var x = labelW + c * colW + colW / 2, pts = [], col = hue[r.st.ending.valence];
+    r.pairs.forEach(function(q){ var i = q[0] - off; if(i >= 0) pts.push({ y:i * rowH + 8 + rowH / 2 - 4, exact:C.steps[q[0]].tok === rkToks(r.st)[q[1]], year:r.st.seq[q[1]].e.year }); });
+    for(var k = 1; k < pts.length; k++) svg += '<line x1="' + x + '" y1="' + pts[k - 1].y + '" x2="' + x + '" y2="' + pts[k].y + '" stroke="' + col + '" stroke-width="5" stroke-linecap="round"/>';
+    pts.forEach(function(p){
+      svg += p.exact ? '<circle cx="' + x + '" cy="' + p.y + '" r="15" fill="' + col + '"/>'
+                     : '<circle cx="' + x + '" cy="' + p.y + '" r="13" fill="#f8fbfd" stroke="' + col + '" stroke-width="5"/>';
+      svg += '<text x="' + (x + 21) + '" y="' + (p.y + 6) + '" font-size="15" fill="#74879a">' + esc(fmtYearFull(p.year)) + '</text>';
+    });
+  });
+  svg += '</svg>';
+  var heads = cols.map(function(r){
+    var a = typeof artFor === "function" ? artFor(r.st.id) : null;
+    return '<div class="pc-head ' + r.st.ending.valence + '" style="width:' + colW + 'px">' + (a && a.sm ? '<img src="' + esc(a.sm) + '" alt="">' : '<span class="pc-noimg"></span>')
+      + '<b>' + esc(r.st.l.title.split(":")[0]) + '</b><em>' + r.pairs.length + ' of ' + C.steps.length + ' steps</em></div>';
+  }).join("");
+  var nexts = cols.map(function(r){
+    var w = r.next ? rkPlain(rkTok(r.next.bin, r.next.e.sub)) : null;
+    return '<div class="pc-next ' + r.st.ending.valence + '" style="width:' + colW + 'px"><span>then</span><b>' + esc(w ? w.charAt(0).toUpperCase() + w.slice(1) : "The story ends") + '</b><em>' + esc(r.st.ending.label) + '</em></div>';
+  }).join("");
+  return '<div class="rkc pc">'
+    + '<div class="pf-k">In the news · ' + esc(fmtNewsDate(n.date)) + '</div>'
+    + '<div class="pc-h">Our chain: ' + esc(rkShortHead(n.headline)) + '</div>'
+    + '<div class="pc-n">' + C.steps.length + ' steps, in order. These stories walked the most of it:</div>'
+    + '<div class="pc-top"><div class="pc-lbl" style="width:' + labelW + 'px"><span>' + (C.steps.length > steps.length ? 'last ' + steps.length + ' of ' + C.steps.length + ' steps' : 'our steps') + '</span></div>' + heads + '</div>'
+    + svg
+    + '<div class="pc-top"><div class="pc-lbl" style="width:' + labelW + 'px"><span>' + esc(C.n + " stories reached the last step; " + cols.length + " walked the most of the way") + '</span></div>' + nexts + '</div>'
+    + '<div class="pf-foot"><span>● the same step   ○ a similar one</span><b>' + esc(site) + '</b></div></div>';
 }

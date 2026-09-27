@@ -836,6 +836,26 @@ body.card-mode{overflow:hidden}
   body.shell .aft-acts .pk-btn{flex:1 1 0}
 }
 
+.aft-card + .aft-card{margin-top:12px}
+.ach .aft-rh:first-child{margin-top:0}
+.ach-steps{list-style:none;margin:0;padding:0;border-left:3px solid var(--line-2);margin-left:10px}
+.ach-steps li{position:relative;padding:6px 0 6px 18px}
+.ach-steps li i{position:absolute;left:-13px;top:7px;width:22px;height:22px;border-radius:50%;background:var(--ink-0);color:var(--surface);font-style:normal;font-size:12px;font-weight:750;display:flex;align-items:center;justify-content:center}
+.ach-steps b{display:block;font-size:15.5px;color:var(--ink-0)}
+.ach-steps span{font-size:12.5px;color:var(--ink-3)}
+.ach-rows{list-style:none;margin:0;padding:0}
+.ach-rows li{display:flex;gap:10px;padding:10px 0;border-top:1px solid var(--line-1);cursor:pointer}
+.ach-img{flex:none;width:56px;height:56px;border-radius:8px;object-fit:cover}
+.ach-b{display:flex;flex-direction:column;gap:4px;min-width:0}
+.ach-b b{font-size:15.5px;color:var(--ink-0)}
+.ach-dots{display:flex;gap:4px;flex-wrap:wrap}
+.ach-dots i{width:20px;height:20px;border-radius:50%;font-style:normal;font-size:10.5px;font-weight:750;display:flex;align-items:center;justify-content:center;border:2px solid var(--line-2);color:var(--ink-4)}
+.ach-dots i.same{background:var(--ink-0);border-color:var(--ink-0);color:var(--surface)}
+.ach-dots i.near{border-color:var(--ink-0);color:var(--ink-0)}
+.ach-t{font-size:12.5px;color:var(--ink-2);line-height:1.4}
+.ach-t em{font-style:normal;font-weight:700}
+.ach-t em.pessimistic{color:var(--bad)}.ach-t em.optimistic{color:var(--ok)}.ach-t em.unknown{color:var(--ink-3)}
+
 /* what came next: the posters (light, the app's colours) */
 .rkc.pa{width:1080px;height:1350px;box-sizing:border-box;padding:56px 60px 44px;background:#eef2f6;color:#101c28;display:flex;flex-direction:column;font-family:var(--font-sans)}
 .pa-k{font-size:24px;font-weight:700;color:#1d5c9e}
@@ -893,6 +913,25 @@ body.card-mode{overflow:hidden}
 .pfo-p img{display:block;width:100%;height:100%;object-fit:cover}
 .pfo-p span{position:absolute;left:0;right:0;bottom:0;padding:20px 8px 7px;font-size:16px;font-weight:750;color:#fff;line-height:1.15;background:linear-gradient(transparent,rgba(8,12,18,.85))}
 .pfo .pf-foot{font-size:19px}
+
+/* the chain poster */
+.rkc.pc{width:1080px;height:1350px;box-sizing:border-box;padding:56px 60px 40px;background:#eef2f6;color:#101c28;display:flex;flex-direction:column;font-family:var(--font-sans)}
+.pc-h{font-size:58px;line-height:1.05;font-weight:850;letter-spacing:-.03em;margin-top:8px}
+.pc-n{font-size:27px;color:#22323f;margin:12px 0 22px}
+.pc-top{display:flex;align-items:flex-start;width:960px}
+.pc-lbl{flex:none;padding:0 14px 12px;font-size:18px;color:#74879a;font-weight:600;align-self:flex-end}
+.pc-head{flex:none;display:flex;flex-direction:column;align-items:center;gap:6px;padding:0 6px 10px;box-sizing:border-box;text-align:center}
+.pc-head img,.pc-noimg{display:block;width:100%;height:92px;object-fit:cover;border-radius:12px;background:#d2dbe4;border-bottom:6px solid #74879a}
+.pc-head.optimistic img{border-bottom-color:#1f7a55}.pc-head.pessimistic img{border-bottom-color:#a03a34}
+.pc-head b{font-size:19px;line-height:1.15;min-height:44px;display:flex;align-items:center}
+.pc-head em{font-style:normal;font-size:16px;color:#4a5c6b;font-weight:650}
+.pc-grid{display:block}
+.pc-next{flex:none;display:flex;flex-direction:column;align-items:center;gap:3px;padding:12px 6px 0;box-sizing:border-box;text-align:center}
+.pc-next span{font-size:15px;color:#74879a}
+.pc-next b{font-size:18px;line-height:1.2}
+.pc-next em{font-style:normal;font-size:15px;font-weight:700;color:#74879a}
+.pc-next.optimistic em{color:#1f7a55}.pc-next.pessimistic em{color:#a03a34}
+.pc .pf-foot{font-size:20px}
 
 /* the answer: what a reader lands on, the poster made tappable */
 .ans{margin:0 0 8px}

@@ -30,7 +30,8 @@
         "for-all-mankind"
       ],
       "bin": "long-war",
-      "sub": "stalemate"
+      "sub": "stalemate",
+      "storyline": "iran-war"
     },
     {
       "id": "gemini-breakout-2026",

@@ -420,6 +420,17 @@ Four rules follow from that, and they are the owner's:
   stories spread out instead of tying. With that many stories a leader holds
   a few per cent, so the leader is also read as a multiple of an average
   story's share.
+- **The chain behind a headline** (`rkChainOf`). Real events that belong to
+  one storyline carry the same `storyline` tag (the Iran war, from the
+  Twelve-Day War to the stalemate), and a news item names its storyline. The
+  post and the landing page show that chain as numbered steps and align the
+  stories against it: for each story, the longest run of the chain's steps it
+  repeats in the same order, ending at the headline's step, matched by kind,
+  with the sub-kind marking a step as the same (filled dot) or similar (ring).
+  The poster is that alignment: our steps down the side, the stories that
+  walked most of it across the top, a dot per shared step joined into each
+  story's own chain, and what came next in each underneath. Without a
+  storyline the post falls back to the fork (`#card=post-next`).
 - **What came next leads; the ranking follows** (`rkAfter`). Tested against
   chance (each story's in-order match against the same story shuffled), no
   story follows our real history beyond chance once that history is sampled

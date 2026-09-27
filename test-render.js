@@ -942,10 +942,14 @@ attempt("ranking", () => {
   /* the post leads with what came next after the newest headline; the ranking
      has a poster of its own */
   const rankCard = String(t.rankCard("rank"));
-  check(/\d+ sci-fi stories went through this/.test(post) && post.includes("pf-cols") && post.includes("pf-plate"), "the post card does not show the stories that saw this, by how they ended");
+  /* the post is the chain behind the headline, aligned against the stories
+     that walked most of it; with no chain it falls back to the fork */
+  check((post.includes("pc-grid") && /steps, in order/.test(post)) || (post.includes("pf-cols") && /sci-fi stories went through this/.test(post)), "the post card shows neither the chain nor the fork");
+  const fork = String(t.rankCard("post-next"));
+  check(fork.includes("pf-cols") && fork.includes("pf-plate"), "the fork card does not show the stories by how they ended");
   check(rankCard.includes(title) && (rankCard.includes("rkl-runs") || rankCard.includes("rkc-runs")) && rankCard.includes("Spoiler:"), "the ranking card does not show the leader, its ending and the runners-up");
   check(!/of the fit/.test(post) && !/of the fit/.test(rankCard), "the post card uses the ranking's jargon; it is for people scrolling past");
-  check(/has happened in/.test(og), "the link-preview card does not say how many stories saw the headline");
+  check(/sci-fi stories went through this/.test(og), "the link-preview card does not say how many stories saw the headline");
   /* a reader from a post lands on the same answer the post gave */
   const answer = String(t.answerHtml());
   check(today.indexOf('<section class="aft">') === 0, "Today does not open on the newest headline read forward");

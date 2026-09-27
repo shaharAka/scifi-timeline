@@ -48147,7 +48147,8 @@
      "title": "Wikipedia: Twelve-Day War",
      "url": "https://en.wikipedia.org/wiki/Twelve-Day_War"
     }
-   ]
+   ],
+   "storyline": "iran-war"
   },
   {
    "id": "real-twelve-day-ceasefire-2025",
@@ -48192,7 +48193,8 @@
      "title": "Wikipedia: Twelve-Day War",
      "url": "https://en.wikipedia.org/wiki/Twelve-Day_War"
     }
-   ]
+   ],
+   "storyline": "iran-war"
   },
   {
    "id": "real-armenia-azerbaijan-2025",
@@ -48642,7 +48644,8 @@
      "title": "Wikipedia: 2025–2026 Iranian protests",
      "url": "https://en.wikipedia.org/wiki/2025–2026_Iranian_protests"
     }
-   ]
+   ],
+   "storyline": "iran-war"
   },
   {
    "id": "real-maduro-2026",
@@ -48734,7 +48737,8 @@
      "title": "Wikipedia: 2025–2026 Iranian protests",
      "url": "https://en.wikipedia.org/wiki/2025–2026_Iranian_protests"
     }
-   ]
+   ],
+   "storyline": "iran-war"
   },
   {
    "id": "real-epstein-2026",
@@ -48875,7 +48879,8 @@
      "war-with-neighbour",
      "stalemate"
     ]
-   }
+   },
+   "storyline": "iran-war"
   },
   {
    "id": "real-khamenei-2026",
@@ -48916,7 +48921,8 @@
      "succession-struggle",
      "radicalisation"
     ]
-   }
+   },
+   "storyline": "iran-war"
   },
   {
    "id": "real-mythos-2026",
@@ -49008,7 +49014,8 @@
      "title": "Wikipedia: 2026 Iran war ceasefire",
      "url": "https://en.wikipedia.org/wiki/2026_Iran_war_ceasefire"
     }
-   ]
+   ],
+   "storyline": "iran-war"
   },
   {
    "id": "real-artemis-ii-2026",
@@ -49324,7 +49331,8 @@
      "stalemate",
      "attrition"
     ]
-   }
+   },
+   "storyline": "iran-war"
   }
  ]
 }
